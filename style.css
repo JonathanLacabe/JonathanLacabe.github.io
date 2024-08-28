@@ -51,9 +51,9 @@ rainbow {
 
 .wrapper {
     background-color: white;
-    width: 80%;
+    width: 80%;/*Change to 81 depending on the spirit of the time*/
     margin: auto;
-    margin-top: 1%;
+    margin-top: -2%;
     padding: 2em;
 }
 

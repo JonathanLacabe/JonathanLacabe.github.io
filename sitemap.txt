@@ -1,0 +1,36 @@
+All pages as of August 26 2024.
+
+Home                                                 - https://humanknowledge.neocities.org/
+
+Physics                                              - https://humanknowledge.neocities.org/Physics/physics
+~List of Physics Equations                           - https://humanknowledge.neocities.org/Physics/physicseq
+-Newtonian Mechanics                                 - https://humanknowledge.neocities.org/Physics/Mechanics
+--Full Newtonian Mechanics                           - https://humanknowledge.neocities.org/Physics/MechanicsFull
+--Velocity, Speed, Acceleration                      - https://humanknowledge.neocities.org/Physics/mechanics/velspaccel
+--Free Fall                                          - https://humanknowledge.neocities.org/Physics/mechanics/freefall
+--Vectors and Projectile Motion                      - https://humanknowledge.neocities.org/Physics/mechanics/vectors
+
+-Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
+
+Mathematics                                          - https://humanknowledge.neocities.org/math/mathematics
+~Mathematical Symbols                                - https://humanknowledge.neocities.org/math/mathsymbols
+~List of Math Equations                              - https://humanknowledge.neocities.org/math/matheq
+-Algebra 2                                           - https://humanknowledge.neocities.org/math/algebraII
+--Full Algebra 2                                     - https://humanknowledge.neocities.org/math/algebraIIFull
+--Quadratic Translation                              - https://humanknowledge.neocities.org/math/algebraII/quadtranslation
+--Factoring Pt. 1                                    - https://humanknowledge.neocities.org/math/algebraII/factoring
+--Long Division                                      - https://humanknowledge.neocities.org/math/algebraII/longdivision
+--Factoring Pt. 2                                    - https://humanknowledge.neocities.org/math/algebraII/factoring2
+--Rules of Exponents                                 - https://humanknowledge.neocities.org/math/algebraII/exponentrules
+
+-Precalulus                                          - https://humanknowledge.neocities.org/math/precalculus
+-Single-Variable Calculus                            - https://humanknowledge.neocities.org/math/singlevarcalculus
+
+Cryptography                                         - https://humanknowledge.neocities.org/cryptography/cryptography
+
+Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
+~Electrical Symbols                                  - https://humanknowledge.neocities.org/engineering/electrik/symbols
+
+Nuclear Engineering                                  - https://humanknowledge.neocities.org/engineering/nuclear
+
+Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics

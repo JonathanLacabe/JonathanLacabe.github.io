@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Long Division (Algebra II)</title>
+    <link href="https://humanknowledge.neocities.org/style.css" rel="stylesheet" />
+  </head>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="https://humanknowledge.neocities.org/">Home</a><br>
+		  <a href="https://humanknowledge.neocities.org/sitemap.txt">Sitemap</a><br>
+		  <hr><!-- [[ Add philosophy for site eventually! -->
+		  <a href="https://humanknowledge.neocities.org/Physics/physics.html">Physics</a><br>
+		  <a href="https://humanknowledge.neocities.org/math/mathematics.html">Math</a><br>
+		  <a href="https://humanknowledge.neocities.org/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/electric.html">Electric</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/nuclear.html">Nuclear</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="https://humanknowledge.neocities.org/astronomy/astronomy.html">Astronomy</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Long Division (Algebra II)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Long Division in Algebra II. <br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h2>IV. Long Division.</h2>
+	    </header>
+	    <article><br>
+	    <strong><font color="#006400">Dividend</font></strong>: What is being divided from, goes inside. See Rule 49.<br>
+	    <strong><font color="#006400">Divisor</font></strong>: What is the factor finder, goes outside. See Rule 49.<br>
+	    <strong><font color="#006400">Synthetic Division</font></strong>: A shortcut in Long division. See Rule 50.<br>
+	    <strong><font color="#006400">Subtract</font></strong>: Adding the opposite.<br><br><br>
+	    
+	    <strong><font color="red">Rule 49.</font></strong> <strong>Long Division</strong> is mainly a continous pattern involving Elimination that goes on until it cannot. Firstly, in terms of equations such as 251 ÷ 12, 12 is the Divisor (what is divided in terms of, the factor finder) and 251 is the dividend (what is being divided from). The values are to be placed in a manner showing <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>, with a space available on top for the answer. In a Polynomial Long Divison problem such as <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">x² - 3x - 2 </span><span style="border-top: 1px black solid; ">&thinsp;&thinsp;4x⁴ + 0x³ + 0x² + 5x - 4&thinsp;</span>, the following will be done: If the Dividend does not perfectly descend in degrees, add zeroes for those missing in the box. <br><br>The first actual step is to compare first terms: how many times does the first term of the divisor go into the first term of the dividend, or x² going into 4x⁴. x² goes in 4x² times, and therefore that variable goes atop the ^2 degree in the answer section above the box. 4x² is then distributed to every term in the dividend, the result going under the divisor. 4x⁴ - 12x³ - 8x². Then, to apply Elimination method between this result and the Dividend, flip the sign for every variable in the result, allowing the two equations to be summed. Draw a line under the original result and put out the sum. Remember to place the terms in their respective degree sections. Then, find how many times the first term goes into the first of the bottom result, repeating the entire process and adding more variables to the answer section above the box. The process ends when the first term of the divisor can no longer fit in the first term of the result, at which point the final part of long division begins.<br><br>
+	    Take the remainder and made a division equation with the remainder being over the divisor. Add this to the answer that has become above the box, and that's the answer. There is another type of Long Division that is much shorts, see in rule 50.
+	    <br><br><br>
+	    <strong><font color="red">Rule 50.</font></strong> A shortcut can be used in Long Division when the divisor has an exponent of one - This is known as <strong>synthetic division</strong>. For example, take the equation (-x³ + 3x² + x) ÷ (x - 2). The degree of the divisor (x - 2) is 1. Take the base equation of the divisor and apply a simple x-isolation: x - 2 = 0, x = 2. This number will serve as Continuous Coefficient. Create a graph that looks like this: ┗━━━. Make sure there is space on the bottom. Place the Continuous Coefficient at the top left of the shape: ²┗━━━. Then, in descending order, plug in the coefficients of each variable of the dividend to the top of the shape:<br><br>
+	    2┃-1 3 1 0<br>
+	    &nbsp;┃<br>
+	    &nbsp;┗━━━━━━━━━<br>
+	    <br>
+	    This is every degree down to the single, so if any variable exponent below the degree is missing, plug in zero for its place in the shape. Keep all negatives. The main method is to apply a long division-esque repeating pattern, deriving from each previous rendition. First, bring the first coefficient down below the shape:<br><br>
+	    2┃-1 3 1 0<br>
+	    &nbsp;┃<br>
+	    &nbsp;┗━━━━━━━━━<br>
+	    &nbsp;&nbsp;-1
+	    <br>
+	    <br>Then, multiply that lower number by the continuous coefficient, plugging that new number below the second top coefficient. Sum this new number with the second top coefficient and place the result appropriately below:<br><br>
+	    2┃-1 3 1 0<br>
+	    &nbsp;┃&nbsp;&nbsp;-2<br>
+	    &nbsp;┗━━━━━━━━━<br>
+	    &nbsp;&nbsp;-1
+	    <br>
+	    <br>Then, repeat the cycle, multiplying the new result by the continuous coefficient and placing that number below the next upper coefficient, summing the result and repeat. Continue until you reach the final coefficient. When you have the final sum, put a box around it to separate the number from the others:<br><br>
+	    2┃-1 3 1 0<br>
+	    &nbsp;┃&nbsp;&nbsp;-2 2 6<br>
+	    &nbsp;┗━━━━━━━━━<br>
+	    &nbsp;&nbsp;-1 1 3 6
+	    <br>
+	    <br>The values on the bottom, other than the one in the box, can be applied to create an answer. Count how many non-box lower values there are (in this case 3). Minus this number by one. That is what the highest degree will be. With this knowledge, plug in the values as coefficients to x-bases of descending degrees: -x² + x + 3. The value in the box, 6, is the remainder, and will be divided by the divisor, (6 / (x-2)). Add this to the previously found series of values & you have the answer: -x² + x + 3 + (6 / (x-2)).<br><br>
+	    
+	    There are many applications of Synthetic Division outside of purely being a shortcut for long division, including factorization: take the question "Complete the factorization of P(x) = 3x³ - 4x² - 59x + 20, given that one factor is (x - 5)", for example. By stating that one factor is x - 5, it becomes clear that the only passage forward is by synthetic division, finding a resultant equation through dividing by x - 5. When you carry out the necessary synthetic division, you obtain the result of 3x² + 11x - 4. Through the power of imagination, you can slightly change this result to 3x² + 12x - x - 4 in order to obtain this simple factorization: 3x(x + 4) - 1(x + 4), which, as described Rule 22, is changeable to (3x - 1)(x + 4). Thus, the full factorization incorporating what we knew from the start would be (x - 5)(3x - 1)(x + 4).
+	    <br><br><br>
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+	   
+	    <strong><font color="red">Rule 51.</font></strong> In the Elimination method (as seen in Long Division) minusing the second equation is actually just adding the opposite, making the first variable negative even if others are made positive. That is "Subtraction" in Elimation.<br><br><br>
+	  </article>
+
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="https://humanknowledge.neocities.org/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="https://humanknowledge.neocities.org/eff.png" width=90%></a>
+		<a href="https://archive.org/"><img src="https://humanknowledge.neocities.org/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="https://humanknowledge.neocities.org/math/algebraII.html">Algebra II</a></strong><br>
+        <article><strong><a href="https://humanknowledge.neocities.org/math/algebraIIFull">Complete Algebra II</a></strong></article>
+        <br>
+        <article><strong><a href="https://humanknowledge.neocities.org/math/algebraII/quadtranslation">Quadratic Translation</a></strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/factoring">Factoring Pt. 1</a></strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/polyfunctions">Polynomial Functions</a></strong> → <strong>Long Division</strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/factoring2">Factoring Pt. 2</a></strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/exponentrules">Rules of Exponents</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: August 27 2024</span><br>
+      	<span class="tiny">Jonathan Lacabe 2024</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="https://humanknowledge.neocities.org/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

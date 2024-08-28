@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Polynomial Functions (Algebra II)</title>
+    <link href="https://humanknowledge.neocities.org/style.css" rel="stylesheet" />
+  </head>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="https://humanknowledge.neocities.org/">Home</a><br>
+		  <a href="https://humanknowledge.neocities.org/sitemap.txt">Sitemap</a><br>
+		  <hr><!-- [[ Add philosophy for site eventually! -->
+		  <a href="https://humanknowledge.neocities.org/Physics/physics.html">Physics</a><br>
+		  <a href="https://humanknowledge.neocities.org/math/mathematics.html">Math</a><br>
+		  <a href="https://humanknowledge.neocities.org/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/electric.html">Electric</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/nuclear.html">Nuclear</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="https://humanknowledge.neocities.org/astronomy/astronomy.html">Astronomy</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Polynomial Functions (Algebra II)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Polynomial Functions in Algebra II (though notes that may relate to polynomial functions that are better included in a different section, such as in <a href="https://humanknowledge.neocities.org/math/algebraII/quadtranslation.html">Quadratic Translation</a>, <a href="https://humanknowledge.neocities.org/math/algebraII/factoring.html">Factoring</a>, or any of the other sections of <a href="https://humanknowledge.neocities.org/math/algebraII.html">Algebra II</a> may located there, so check the <a href="https://humanknowledge.neocities.org/math/algebraIIFull">complete notes</a> for anything you don't see in here.). <br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h2>III. Polynomial Functions.</h2>
+	    </header>
+	    <article><br>
+	    <font color="blue"><strong>Intro to Polynomials:</strong></font><br>
+	    An expression consisting of variables and coefficients that involves only addition, subtraction and multiplication, with <u>non-negative</u> integer exponents. x² - 2zx + 3y, x² + 3, and 1.33ˣ + 5x are all polynomials.<br><br>
+	    Some of the lower numbered Polynomial functions have names reflecting their highest degree, as shown in the section titled "Types of Polynomial Functions" (ctrl-f).<br><br>
+	    Anything involving a radical (any kind of root, square or otherwise) or negative exponent is inherently not a polynomial by not being either a non-negative number or a integer.<br><br>
+	    
+	    x⁶ - 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> + 3x² - 5 is NOT a polynomial. There is a non-integer exponent.
+	    <br>
+	    x⁶ - <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">2</span></span>x + 3x² - 5 IS a polynomial. Everything is correct.
+	    
+	    <br><br><br>
+	    
+	    <font color="blue"><strong>Types of Polynomial Functions:</strong></font><br><br>
+	    <strong>Constant</strong> = f(x) = a₀ = f(x) = -14<br>
+	    <strong>Linear</strong> = f(x) = a₁x + a₀ = f(x) = 5x - 7<br>
+	    <strong>Quadratic</strong> = a₂x² + a₁x + a₀ = f(x) = 2x² + x - 9<br>
+	    <strong>Cubic</strong> = f(x) = a₃x³ + a₂x² + a₁x + a₀ = f(x) = x³ - x² + 3x<br>
+	    <strong>Quartic</strong> = f(x) = a₄x⁴ + a₃x³ + a₂x² + a₁x + a₀ = f(x) = x⁴ + 2x - 1<br>
+	    <br><br>
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  the roof is &#x302;   -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
+	    <strong><font color="#006400">Standard Form</font></strong>: Exponents are in descending order.<br><br><br>
+	    
+	    <strong><font color="red">Rule 37.</font></strong> Inequalities are Quadratic Equations that are not equal to 0 or y, but rather are >, &lt;, ≥, ≤ to them. For the inequalities in terms of 0, an answer can be determined without the use of a graph, although the answer represents where thee quation is true on the graph. The first thing to be done in an inequality-in-regard-to-zero type equation is to pretend that the equation is, in fact, equal to zero. <br>x² - 3x - 4 &lt; x² - 3x - 4 = 0<br> Therefore, the Factoring X-Method can be done (see rule 23). Create the double groupings, very important. (x - 4)(x + 1) &lt; 0. x = 4, x = -1. Then to fully visualize the value of x (> 0 or &lt; 0)<br> in relation to the X-intercepts found, make a number line with them: <br><br>
+	    &lt;━━━━╋━━━━━━╋━━━&gt;
+	    <br>&nbsp;&nbsp;&thinsp;&thinsp;&nbsp;-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;4<br><br>
+	    Then, plug in 0 for x in the double groupings you already created - (0 - 4)(0 + 1) &lt; 0. See if the answer would be negative or not. plug in the sign of the answer to the part of the line where the number was plugged in, is:<br>
+	    <br>&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;+<br>
+	    &lt;━━━━╋━━━━━━╋━━━&gt;<br>
+	    &nbsp;&nbsp;&thinsp;&thinsp;&nbsp;-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;4
+	    <br><br>
+	    There is a constant pattern of negative-positive-negative-positive, so every other section of the number line can be plugged in just from one known sign. Then, you must finally acknowledge whether the original question is less or greater to zero - this gives the answer. Based on the relationhship between the number line positive-negative pattern and the greater or lesser than nature of zero. If > 0, then you are looking for parts of the number line where it is positive and vice versa for &lt; 0. This is the case even if there are ≥ 0 and ≤ 0 in play, just replicate that sign in the answer. If the space on the line graph where the 0 attribute (whether negative or positive) is contiguous and contained within one section, so can the answer: -1 &lt; x &lt; 4. The answer means to set the limits for the space in which x is true according to the equation. If the equation was ≤ 0, then the answer would be -1 ≤ x ≤ 4, little difference. If the space for where x is true is noncontiguous however, such as<br><br>
+      &nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;+<br>
+	    &lt;━━━━╋━━━━━━╋━━━&gt;<br>
+	    <br><br>
+	     where x > 0, there is a special answer template. For the example if > , the answer would x &lt; -1 OR x > 4. These are two separate equations unified as one answer. The x &lt; _ or x > _ is the base template. X will always come first in the equation.
+	    
+	    <br><br><br>
+	    
+	    <strong><font color="red">Rule 38.</font></strong> when a questions uses the > 0 format on a number other than 0, such as 3x² - 13x + 10 > 0. Applicable anywhere. All the base algebraic properties, such as flipping the signs, still apply.<br><br><br>
+	    <strong><font color="red">Rule 39.</font></strong> For Quadratic Inequalities in which the equation is unequal to y or f(x), there are special answers regarding graphing. The methodry for finding the x-intercepts is the same as for 0-type inequalities in Rule 37, but the way the graph is shown is the real way to convey what answers are true. The functions are summed up in the chart below (ALSO FIND Y-INTERCEPTS!):<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/math/img/quadraticInequalitiesGraph1.png"><img src="https://humanknowledge.neocities.org/math/img/quadraticInequalitiesGraph1.png" alt="The graphs of the four different quadratic inequalities, determined by greater than or lesser than symbols and if 'or equal to' is applied. Courtesy of Tiger Algebra." width=52%/></a></div>
+	    <span class="tiny"><em>The graphs of the four different quadratic inequalities, determined by greater than or lesser than symbols and if 'or equal to' is applied. Courtesy of <a href="https://www.tiger-algebra.com/en/terms-and-topics/quadratic-inequalities/">Tiger Algebra</a>.</em></span><br>
+	    <br> If the line is linear, the same rules apply. y > means the area above the dotten line is true, while y &lt; means the area below the line is true.
+	    <br><br><br>
+	    
+	    <strong><font color="red">Rule 40.</font></strong> If there are multiple equations for y inequalities on the graph at the same time, such as y &lt; -x² + 2x -3, then the space in which they overlap is the only true part of the graph:<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/math/img/overlap.png"><img src="https://humanknowledge.neocities.org/math/img/overlap.png" alt="Two inequalities that overlap in the graph. Courtesy of Dummies." width=30%/></a></div>
+	    <span class="tiny"><em>Two inequalities that overlap in the graph. Courtesy of <a href="https://www.dummies.com/article/academics-the-arts/math/algebra/graph-an-area-where-inequalities-overlap-138672/">Dummies</a>.</em></span><br><br>This is true even if a non-equal to equation (dotted line) is used.
+	    <br><br><br>
+	    <strong><font color="red">Rule 41.</font></strong> Any inequality for y or zero can be reversed in format by placing the variable at the front or the end. E.g., y > x² + 3 = x² + 3 &lt; y. Reversing the 'than' sign is all that is needed.<br><br><br>
+	    
+	    <strong><font color="#006400">Degree</font></strong>: Highest exponent in an equation.<br>
+	    <strong><font color="#006400">Leading Coefficient</font></strong>: The coefficient with the highest degree attached.<br><br><br>
+	    
+	    <strong><font color="red">Rule 42.</font></strong> For equations involving xⁿ exponents, for Quadratic equations and those above with exponents higher than 2, there are two very important pieces of vocabulary: Degree and leading coefficient. To find these, first sort your Polynomial equation in a descending format, with the highest exponent coming first and so forth. This should be done in any circumstance. The degree is the highest exponent in the equation, the one that comes first. in  x³ - x² + 3x, the degree is three. Secondly, the Leading Coefficient is the coefficient attached to the variable with the highest degree, at the very front of the equation. There are various names for equations with different highest degrees, to the third being Cubic,, to the fourth being Quartic, etc. A detailed template of the different types of equations can be seen in the Other Important information section "Types of Polynomial Functions" (ctrl-f). For these equations to be functions, the Base needs to be x-variable, with exponent n (> 0).<br><br><br>
+	    <strong><font color="red">Rule 43.</font></strong> There are several rules for Polynomial functions. For one, exponents cannot be negative - they can only be positive integers. 3ˣ, therefore, cannot be considered a polynomial. The base must be x for an exponent to be attached. To be a polynomial, the exponent has to be ≥ 0 integers. There are no rules for what the coefficients can be, only exponents and bases can have issues.<br><br><br>
+	    <strong><font color="red">Rule 44.</font></strong> For all polynomial functions, the end behaviors (where x and y stretch out to infinity) can be quickly known from the knowledge of two factors: the degree and Leading Coefficient. Consult Rule 42 as to whether the Degree is even or odd and whether the leading coefficient is negative or positive. An even coefficient creates a Parabola-Shaped graph and odd one creates a graph that increases concave-down to the origin, and the concave up increases to infinity. Negative and positive Leading Coefficients invert the graphs, turning the parabolar even graph upside down and the odd graph vice versa. For a more detailed chart, see the infographic titled "End Behavior of Polynomial Functions".<br><br> What is in the middle of the graph can only be determined by either <br>#1. the Decreasing/Increasing characteristics for y and x, or<br>
+	    #2. Plugging in numbers for x to find various coordinates. For #1, see Rule 45. For #2, see Rule 46. The end behavior of a Polynomial Function is representative of where x and y will progresss going into their respective infinities:<br><br>
+	    <br>
+	    -, +&nbsp;&thinsp;&hairsp;┃&nbsp;+, +<br>
+	    ━━━━━━╋━━━━━━<br>
+	    -, -&nbsp;&thinsp;&hairsp;┃&nbsp;+, -<br>
+	    <br><br>
+	    <font color="blue"><strong>End Behavior of Polynomial Functions:</strong></font><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/math/img/Endbehaviors.jpg"><img src="https://humanknowledge.neocities.org/math/img/Endbehaviors.jpg" alt="The End Behaviors of Polynomial Functions, with acknowledgment of the center behavior being different depending on the exponent. Courtesy of Libretexts" width=40%/></a></div>
+	    <span class="tiny"><em>The End Behaviors of Polynomial Functions, with acknowledgment of the center behavior being different depending on the exponent. Courtesy of <a href="https://math.libretexts.org/Courses/Fresno_City_College/Math_3A%3A_College_Algebra_-_Fresno_City_College/04%3A_Polynomial_and_Rational_Functions/4.02%3A_Graphs_of_Polynomial_Functions">Libretexts</a></em></span>
+	    <br><br><br>
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  ÷,   the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>-->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+	    
+	    <strong><font color="red">Rule 45.</font></strong> When you get several lines of information stating where f(x) is increasing, decreasing, >0, and &lt;0, you must convert this info into line chart form before it can be in Graph form. Example: f(x) is increasing when x &lt; 0 and x > 4. This refers to continuity templates as described in Rule 37. The line chart in this case would be:<br>
+	    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dec.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc.<br>
+	    &lt;━━━━━━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━━━&gt;<br>
+	    &nbsp;&nbsp;&thinsp;&nbsp;&hairsp;&nbsp;&nbsp;&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4
+	    <br><br>
+	    For above/below zero: f(x) > 0 when -2 &lt; x &lt; 3 and x > 5. f(x) &lt; 0 when x &lt; -2 and 3 &lt; x &lt; 5. THe line chart in this case would be: <br>
+	    <br>&nbsp;&nbsp;&nbsp;Below&nbsp;&nbsp;&nbsp;&nbsp;Above&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;Below&nbsp;&nbsp;&nbsp;Above<br>
+	    &lt;━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━╋━━━━━━━━&gt;<br>
+	    &nbsp;&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&hairsp;&nbsp;&nbsp;&nbsp;-2
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;3
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;&thinsp;5<br>
+	    <br><br>
+	    The next step would be to place the lines on top of eachother accordingly:<br>
+	    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dec.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc.<br>
+	    &lt;━━━━━━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━━━&gt;<br>
+	    &nbsp;&nbsp;&thinsp;&nbsp;&hairsp;&nbsp;&nbsp;&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<br>
+	    <br>&nbsp;&nbsp;&nbsp;Below&nbsp;&nbsp;&nbsp;&nbsp;Above&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;Below&nbsp;&nbsp;&nbsp;Above<br>
+	    &lt;━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━╋━━━━━━━━&gt;<br>
+	    &nbsp;&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&hairsp;&nbsp;&nbsp;&nbsp;-2
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;3
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;&thinsp;5
+	    <br><br>
+	    If there are five sections of the line for above and below zero, the degree is definitely even. Next, simply transcribe each segment of the graph as shown on the line: <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/math/img/graph2.png"><img src="https://humanknowledge.neocities.org/math/img/graph2.png" alt="The graph determined by the information gathered in rule 45." width=35%/></a></div>
+	    <span class="tiny"><em>The graph determined by the information gathered in rule 45.</em></span>
+	    <br><br><br>
+	    <strong><font color="red">Rule 46.</font></strong> This method for finding the middle section is relatively simple: just plug in various numbers for x in the equation to get coordinates. It is recommended to use all numbers -2 to 2, as that should be enough to create an accurate graph. More # can be used if necessary. Once the coordinates have been gotten, find the end behavior from the equation to make sure the coordinates are connected correctly. Plug in the coordinates to the graph and connect them correctly.<br><br><br>
+	    <strong><font color="red">Rule 47.</font></strong> When a question is asking to divide a from b, the question is asking for b ÷ a. This is the case for questions of the type in both subtraction and division. For Long Division, b goes outside the box whilst a goes inside: <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">a </span><span style="border-top: 1px black solid; ">&thinsp;b&thinsp;</span>.<br><br><br>
+	    <strong><font color="red">Rule 48.</font></strong> For equations with three groups, such as (x + 2)(x - 1)(x - 3), multiply the first two equations first, and then multiply the result by the third group. Ex: (x² + x - 2)(x - 3). Further multiplied is x³ - 2x² - 5x + 6.<br><br><br>
+	  </article>
+
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="https://humanknowledge.neocities.org/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="https://humanknowledge.neocities.org/eff.png" width=90%></a>
+		<a href="https://archive.org/"><img src="https://humanknowledge.neocities.org/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="https://humanknowledge.neocities.org/math/algebraII.html">Algebra II</a></strong><br>
+        <article><strong><a href="https://humanknowledge.neocities.org/math/algebraIIFull">Complete Algebra II</a></strong></article>
+        <br>
+        <article><strong><a href="https://humanknowledge.neocities.org/math/algebraII/quadtranslation">Quadratic Translation</a></strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/factoring">Factoring Pt. 1</a></strong> → <strong>Polynomial Functions</strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/longdivision">Long Division</a></strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/factoring2">Factoring Pt. 2</a></strong> → <strong><a href="https://humanknowledge.neocities.org/math/algebraII/exponentrules">Rules of Exponents</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: August 27 2024</span><br>
+      	<span class="tiny">Jonathan Lacabe 2024</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="https://humanknowledge.neocities.org/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

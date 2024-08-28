@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Velocity, Speed, Acceleration Summary</title>
+    <link href="https://humanknowledge.neocities.org/style.css" rel="stylesheet" />
+  </head>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="https://humanknowledge.neocities.org/">Home</a><br>
+		  <a href="https://humanknowledge.neocities.org/sitemap.txt">Sitemap</a><br>
+		  <hr><!-- [[ Add philosophy for site eventually! -->
+		  <a href="https://humanknowledge.neocities.org/Physics/physics.html">Physics</a><br>
+		  <a href="https://humanknowledge.neocities.org/math/mathematics.html">Math</a><br>
+		  <a href="https://humanknowledge.neocities.org/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/electric.html">Electric</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/nuclear.html">Nuclear</a><br>
+		  <a href="https://humanknowledge.neocities.org/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="https://humanknowledge.neocities.org/astronomy/astronomy.html">Astronomy</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Velocity, Speed, Acceleration (Newtonian Mechanics)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Velocity, Speed, and Acceleration in Newtonian Mechanics. <br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Basics">I.I Basics of Mechanics.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#VSA">I.III Displacement and V.S.A.</a>
+        </div>
+        
+      </div>
+      <div class="toc-container">
+      
+      <div class="toc-column">
+          <a href="#Accuracy">I.II Accuracy & Uncertainty.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#UAM">I.IV Uniformly Accelerated Motion.</a>
+        </div>
+        
+        
+      </div>
+
+	  <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="Velocity">I. Velocity, Speed, Acceleration.</span></h2>
+	    <h3><span class="mw-headline" id="Basics">I.I Basics of Mechanics.</span></h3>
+	  </header>
+	  <article>
+	  <font color="blue"><strong>The Bare Minimum:</strong></font><br>
+	  Physics is based on measurement of physical quantities: Having some expertise in dimensional analysis is crucial to be able to convert from one unit of measurement to another. There are several different systems of measurements which measure the same types of quantities, the two biggest systems being the Metric System and the Imperial System. For example, length is measured in the metric system in 'meters', while the imperial unit for length is 'feet'. Dimensional Analysis is conducted using <strong>conversion factors</strong>, which are just the ratio of units equivalent to what you are trying to convert to. For example, <br><br>(2 min) x (60 sec/1 min)<br><br> has (60 sec/1 min) as the conversion factor, converting from minutes to seconds. The conversion factor is the raetion being multiplied regardless of the coefficient of the original unit, as shown in how two minutes, 40 minutes, and 542 minutes will all have the same conversion factor when converting into seconds.
+	  <br><br><br>
+	  
+	  <strong><font color="red">P. Rule 1.</font></strong> <strong>1)</strong> All Non-zero digits are significant.<br>
+	  <strong>2)</strong> Zeros between significant digits are significant.<br>
+	  <strong>3)</strong> Zeros to the left of nonzero digits are not significant.<br>
+	  <strong>4)</strong> Zeros at the end of a number are significant only if there is a decimal point present.<br><br>
+	  For Example:<br>
+	  1200 with 3 significant figures: 1.20 x 10³<br>
+	  0.002 with 3 significant figures: 2.00 x 10⁻³
+	  <br><br><br>
+	  <strong><font color="red">P. Rule 2.</font></strong> <strong><u>THE ARCANE ROUNDING RULE</u></strong> - If the number ends in a perfect 5, you round to the even number.<br>
+	  <br>For Example:<br>
+	  275 with 2 Significant figures: 280
+	  1030 x 5.1 = 5300<br><br><br>
+	  
+	  <font color="blue"><strong>A.M.U.:</strong></font><br>
+	  An additional unit of measurement (derived from the kg) which is specific to atoms is the <strong>Atomic Mass Unit</strong>, found as the atomic mass of each element in relation to that of Carbon-12. For those familiar with stoichiometry, the amu can converted to moles and atoms easily.
+	  <br><br><br>
+	  
+	  <font color="blue"><strong>Dimensions:</strong></font><br><br>
+	    ┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓<br>
+	    ┃Base Dimensions&thinsp;&hairsp;&hairsp;┃&nbsp;&thinsp;S.I. Unit&nbsp;&thinsp;&hairsp;&hairsp;┃Imperial System&thinsp;&hairsp;┃<br>
+	    ┣━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━┫<br>
+	    ┃&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;length&nbsp;&thinsp;&hairsp;&hairsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;&nbsp;&thinsp;meter&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;┃&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&nbsp;&nbsp;foot&hairsp;&nbsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;┃<br>
+	    ┣━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━┫<br>
+	    ┃&nbsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;mass&hairsp;&hairsp;&nbsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;kilogram&nbsp;&thinsp;&thinsp;&hairsp;&hairsp;┃&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&nbsp;slug&nbsp;&nbsp;&hairsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;┃<br>
+	    ┣━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━┫<br>
+	    ┃&nbsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;time&hairsp;&hairsp;&nbsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;&thinsp;&thinsp;seconds&nbsp;&thinsp;&thinsp;&thinsp;&hairsp;&hairsp;┃&nbsp;&nbsp;&nbsp;&nbsp;seconds&thinsp;&hairsp;&nbsp;&nbsp;&nbsp;&nbsp;┃<br>
+	    ┗━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━┛<br>&nbsp;&thinsp;&hairsp;<!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &-->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    
+	    <br><br>
+	    <font color="blue"><strong>Density:</strong></font><br>
+	    The density d of a material is the mass per unit volume:<br><br> <strong>d = (m / V)</strong><br><br>The majority of the time, one will see a density listed in Kilograms (or another metric weight) per cubic meter (or another length, such as cm³). The density of water, for example, is 1.00 grams per cm³. 
+	    <br><br><br>
+	    
+	    <font color="blue"><strong>Vertical Scaling:</strong></font><br>
+	    When you have a problem such as that shown below (ignore the problem itself - it is done through integration if you must know), the "<strong>vertical scaling</strong>" is just referring to what the given value (v<sub>s</sub>) is as each y-value is multiplied by a constant, creating a ratio between the new and old scales. The old scale will almost always be a scaling of 1:1, e.g. the normal graph, and the new scale (as depicted in the image) has a ratio of 2:1 with the old graph, demonstrated by how v<sub>s</sub> is four units upward, meaning each unit is two. The exact same process can be applied to the x-axis, resulting in <strong>Horizontal Scaling</strong>.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/vertscale.png"><img src="https://humanknowledge.neocities.org/Physics/img/vertscale.png" alt="A physics problem involving vertical scaling." width=25%/></a></div><br><br>
+	    
+	    <strong><font color="red">P. Rule 3.</font></strong> When you have squared or cubed units, you put the exponent on the outside of the individual component, given both units of the type share the same exponent: 12 mm² → m²&nbsp; = &nbsp;12 mm² × ((1 m) / (1000 mm))²<br><br><br>
+	    
+	    <strong><font color="#006400">Tangent Line</font></strong>: A straight line that touches a curve at a point but does not cross the curve.<br><br><br>
+	    
+	    <font color="blue"><strong>Final Example:</strong></font><br>
+	    Here is a beginning problem that should be common sense to any beginning physicist well-versed in dimensional analysis:<br><br>
+	    <em>Iron has a density of 7.87 g/cm³, and the mass of an iron atom is 9.27 × 10⁻²⁶ kg. If the atoms are spherical and tightly packed, <br>(a) what is the volume of an iron atom and <br>(b) what is the distance between the centers of adjacent atoms?</em><br><br>
+	    Of course, you always want all of your measurements to be in the same units, so we will first convert the grams to kilograms and cubic centimeters to cubic meters:<br><br>
+	    d = (7.87 g/cm³) × (1 kg / 1000 g) × (100 cm / 1 hr)³<br>d = 7.87 × 10³ kg/m³<br><br>Now lets move on to finding the volume of the iron atom. For this, we need to remember our previous knowns of density, mass, and volume: d = (m / V) Thus, our first step must be to isolate the volume since we already know the density and mass.
+	    <br><br> (9.27 × 10⁻²⁶ kg) / (7.87 × 10³ kg/m³)<br><br>This gives us a result of 1.18 × 10⁻²⁹ m³ the volume of an iron atom.<br>Next, for part b, we need to find the distance between the centers of adjacent atoms. Using critical thinking, we can determine that this distance is in fact the diameter of the atom, which we can reverse engineer by isolating the radius from the volume equation of a sphere:<br><br>Volume of sphere = (4/3) × π × r³.<br> r = <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">(3V / 4π)</span></span><br><br>Plugging in the known volume from answer a), we find that the radius is equal 1.41 × 10⁻¹⁰ meters. Since we are looking for the diameter, we multiply this distance by two and get <strong>2.82 × 10⁻¹⁰ meters</strong>.
+	    <br><br>
+	    </article><hr>
+	    <header class="articleHeader">
+	      <h3><span class="mw-headline" id="Accuracy">I.II Accuracy & Uncertainty.</span></h3>
+	    </header>
+	    <article>
+	  
+	    <strong><font color="#006400">Accuracy</font></strong>: How close your observed (or measured) values are to the accepted value.<br><br>
+	    
+	    <strong><font color="#006400">Precision</font></strong>: How close your observed (or measured) values are to one another.<br><br>
+	    <br>
+	    
+	    
+	    <strong><font color="red">P. Rule 4.</font></strong> High Accuracy also includes taking the average of all of the instances, so if a bullseye looks like this: <br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/Untitled.png"><img src="https://humanknowledge.neocities.org/Physics/img/Untitled.png" alt="A target with four hits shown medium-distance from the x, forming a high accuracy average." width=25%/></a></div>
+	    <span class="tiny"><em>A target with four hits shown medium-distance from the x, forming a high accuracy average.</em></span><br><br>
+	    it would be high accuracy.
+	    <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 5.</font></strong> If there is one measurement that can't be compared to any other measurements, precision cannot be determined.<br><br><br>
+	    
+	    <font color="blue"><strong>Error Equations:</strong></font><br>
+	    Relative Error measures Accuracy:<br><br>
+	    Er = ((O - A) / A)  ×  100<br>
+	    A = <strong>Accepted Value</strong> <br>
+	    Er = <strong>Relative Error</strong> <br>
+	    O = <strong>Observed Error</strong> <br>
+	    &nbsp;&thinsp;&hairsp;<!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆ -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    
+	    <br><br>
+	    
+	    <strong><font color="#006400">Estimated Uncertainty</font></strong>: The estimated quantifiable range to which a measurement can be within. When giving the result of a measurement, state the estimated uncertainty. 8.8 ± 0.1 cm.<br><br>
+	    
+	    <strong><font color="#006400">Percent Uncertainty</font></strong>: The ratio between the estimated uncertainty and the measured value, made into a percentage: ((0.1) / (88)) × 100% ≈ 1%.<br><br>
+	    <br>
+	    	    
+	    <strong><font color="red">P. Rule 6.</font></strong> When you want to find the approximate uncertainty of something, such as that of a circle when given the radius, you use the main area formula, in this case πr², to first find the ideal area. If r = 3.8 × 10⁴ cm, then A = 4.5 × 10⁹ cm². From there, if no uncertainty number is given, assume 0.1 of the original units, 0.1 × 10⁴ cm. From there, find area again from the original for ±0.1. Find the difference in the areas, divide by 2, and use it as the uncertainty of the ideal area: (4.5 ± 0.26) × 10⁹ cm².<br><br>
+	    
+	    
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="VSA">I.III Displacement and V.S.A.</span></h3>
+	    </header>
+	    <article>
+	    <strong><font color="#006400">Magnitude</font></strong>: The amount without direction.<br><br>
+	    <strong><font color="#006400">Displacement</font></strong>: 
+	    
+	    The straight-line distance between initial and final points, also including direction. <strong>∆x</strong> is the symbol for displacement and change in position, known as position<sub>final</sub> - position<sub>initial</sub>. Can be negative, positive, in feet, meters, or anything.<br><br>
+	    Displacement is a VECTOR (see section III, on vectors). It has both x and y distance, even though it is written as ∆x ("delta-x"), which is in reference to POSITION, not just the x value. <br><br>Using <span class="vecteur"><strong>d</strong></span> as displacement, <span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>, <span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>). This equation describes displacement in terms of its component vectors on the x-axis and y-axis. These component vector indicate the direction and magnitude of the displacement (also, the equation effectively uses unit vectors - see Rule 23). In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, this is the first step. You must find the components in the x and y directions first to find the displacement, which is the hypotenuse of the right triangle formed by the x and y component vectors (see Rules 20 & 21). <br><br>If you want to find the magnitude of the displacement, the exact straight-line distance between any two points can be found with the following equation: <br>
+	    |<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span><br> Use this equation when you are prompted to find the distance or the <em>magnitude</em> the displacement - the direction can be determined by the component vectors themselves, as demonstrated in Rule 22.<br><br>
+	    NOTE THAT THE DISPLACEMENT EQUATION AND SEEING DISPLACEMENT AS A VECTOR IS NOT NECESSARY IF THE OBJECT IS ONLY MOVING ALONG THE X-AXIS. If the position is only moving along the x-axis, then you only need to subtract y<sub>final</sub> by y<sub>initial</sub> to find displacement. If the equation is in 2D, then you want to use the equation as stated.
+	    <br><br><br>
+	    <font color="blue"><strong>Important Note</strong></font>: When used in different context, the 'Average Rate of Change' can mean different things:<br><br>
+      When used with f(x): Average Rate of Change = <strong>Average Velocity</strong> = (Displacement / change in time).<br><br>
+      When used with f'(x): Average Rate of Change = <strong>Average Acceleration</strong> = (Change in Velocity / change in time).<br><br>
+	    Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.
+	    <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 7.</font></strong> <strong>Cartesian Coordinates</strong>: (x, y).<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/cartesian.png"><img src="https://humanknowledge.neocities.org/Physics/img/cartesian.png" alt="A graph with random cartesian coordinates." width=25%/></a></div>
+	    <span class="tiny"><em>A graph with random cartesian coordinates. Courtesy of <a href="https://gissimplified.in/what-is-cartesian-coordinate-system/">GIS</a>.</em></span><br><br>
+	    <strong>Relative Coordinates</strong>: (Left, Right).<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/relative.png"><img src="https://humanknowledge.neocities.org/Physics/img/relative.png" alt="A graph with relative directions like right and back superimposed over them." width=25%/></a></div>
+	    <strong>Cardinal Direction</strong>: (North, West)<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/cardinal.jpg"><img src="https://humanknowledge.neocities.org/Physics/img/cardinal.jpg" alt="A compass, with each of the cardinal directions." width=25%/></a></div>
+	    You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0. The distance traveled will always be greater or equal to the magnitude of displacement.<br><br><br> 
+	    
+	    <strong><font color="#006400">Velocity</font></strong>: V = (∆x / ∆t) = (change in position) / (change in time) = (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
+	    Thus, velocity has both magnitude and direction.<br><br>
+	    <br>
+	    <strong><font color="red">P. Rule 8.</font></strong> ALWAYS convert into the standard S.I. Units unless told otherwise.<br><br><br>
+	    
+	    <strong><font color="red">P. Rule 9.</font></strong> <strong>Speed</strong> = (total distance) / (time). MAGNITUDE ONLY. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. <br><br><br>
+	    
+	    <strong><font color="#006400">Slope</font></strong>: slope = m = (rise)/(run) = (∆y / ∆x) = (change in position / change in time) = VELOCITY. See "The Truth About Velocity & Displacement" for further elaboration. The slope of a position as a function of the time graph is the velocity. The slope of a velocity vs. time graph is acceleration.<br><br>
+	    <strong><font color="#006400">Acceleration</font></strong>: a = (∆v / ∆t) = (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
+	    Since velocity is in meters over seconds, then acceleration is in (meters over seconds) over seconds, which is equal to meters over second². Acceleration, as a function of velocity, has both magnitude and direction.<br><br><br>
+	    
+	    <strong><font color="red">P. Rule 10.</font></strong> The object is speeding up whenever velocity and acceleration are in the same direction (e..g are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.<br><br><br>
+	    
+	    <strong><font color="blue"><u>The Truth About Velocity & Displacement</u></font></strong>: <br>
+	     In your reading of Velocity and Slope, you have no doubt read these two truths:<br><br>
+	     <strong>Velocity = ∆x / ∆t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Displacement / Change in Time)<br>
+	     Slope = ∆y / ∆x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Change in Y / Change in X)<br>
+	     Velocity = Slope</strong>
+	     <br><br>
+	    The '∆x' of slope is not referring to displacement, but rather the change in the x position. This is constant cause of confusion, but know that in the majority of cases unless expressly obvious otherwise, '∆x' is in reference to displacement, the change in position.<br>
+	    Here are the two equations shown as equivalent:<br><br>
+	    ∆x<sub>1</sub>&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;∆y<br>
+	    ━━&nbsp;&nbsp;=&nbsp;&nbsp;&thinsp;━━<br>
+	    ∆t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hairsp;∆x<sub>2</sub><br><br>
+	    
+	    Since the two equations are known to be equivalent, we known that the ∆x<sub>1</sub> of displacement and ∆x<sub>2</sub> of slope are not the same, as if we were to cancel out the ∆x of the right side by multiplying it by both sides, we would find that ∆x² / ∆t is equal to ∆y, which is total nonsense. The key to understanding how this statement is true (and how the ∆x is referring to two things simultaneously) is to realize that both equations are stating the same ratio, just in terms of different graphs.<br>
+	    
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/directions.jpg"><img src="https://humanknowledge.neocities.org/Physics/img/directions.jpg" alt="A graph of the slope of a line in terms of y and x. Courtesy of Texas Gateway." width=33%/></a></div>
+	    <span class="tiny"><em>A graph of the slope of a line in terms of y and x. Courtesy of <a href="https://www.texasgateway.org/resource/23-position-vs-time-graphs">Texas Gateway</a>.</em></span><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="https://humanknowledge.neocities.org/Physics/img/position.jpg"><img src="https://humanknowledge.neocities.org/Physics/img/position.jpg" alt="A graph of position versus time, identical to the graph above. Courtesy of Texas Gateway." width=33%/></a></div>
+	    <span class="tiny"><em>A graph of position versus time, identical to the graph above. Courtesy of <a href="https://www.texasgateway.org/resource/23-position-vs-time-graphs">Texas Gateway</a>.</em></span><br><br>
+	    
+	    
+	    The equations are both output/input, and so they produce velocity. If the graphs were from the standpoint of velocity, then they would produce acceleration (see the "Important Note").
+	    
+	    <br><br>
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="UAM">I.IV Uniformly Accelerated Motion.</span></h3>
+	    </header>
+	    <article>
+	    
+	    <font color="blue"><strong>U.A.M. Basics:</strong></font><br>
+	    A signifier that indicates that an object is moving with an acceleration that is constant. E.g., in calculus terms, the object has a position represented by an equation with an exponent no higher than two (a quadratic) in its time graph. U.A.M. allows the physicist to use 5 special equations not allowed otherwise:<br><br>
+	    
+	    1. Velocity Final is equal to velocity initial plus the acceleration multiplied by the change in time:<br>
+	    <strong>V<sub>F</sub> = V<sub>i</sub> + (a × ∆t).<br><br></strong>
+      2. Displacement is equal to velocity initial multiplied by the change in time, plus 1/2 multiplied by acceleration and the change in time squared:<br>
+	    <strong>∆x = (V<sub>i</sub> × ∆t) + (1/2 × a × ∆t²)<br><br></strong>
+      3. Velocity final squared is equal to velocity initial squared plus two multiplied by the acceleration and the displacement:<br>
+	    <strong>V<sub>F</sub>² = V<sub>i</sub>² + (2 × a × ∆x)<br><br></strong>
+      4. The change in position is equal to one half times the quantity of velocity final plus velocity initial:<br>
+	    <strong>∆x = (1/2) × (V<sub>F</sub> + V<sub>i</sub>) × ∆t</strong><br><br>
+	    <strong>V<sub>F</sub></strong> = Velocity final<br>
+	    <strong>V<sub>i</sub></strong> = Velocity initial<br>
+	    <strong>a</strong> = Acceleration<br>
+	    <strong>∆t</strong> = Change in time<br>
+	    <strong>∆x</strong> = Displacement (or change in position)<br>
+	    <strong>YOU CAN CHANGE DISPLACEMENT TO BE CHANGE IN Y IF YOU NEED TO, SUCH AS IN FREE FALL EQUATIONS.</strong><br><br>
+	    Additionally, there are some lame 'alternate' versions of these equations that are useful for deriving and integrating the equations:<br>
+	    v = v<sub>0</sub> + at<br>
+	    x = x<sub>0</sub> + v<sub>0</sub>t + (1/2) × at²<br>
+	    v² = v<sub>0</sub>² + 2a(x - x<sub>0</sub>)<br>
+	    x = x<sub>0</sub> + (1/2) × (v + v<sub>0</sub>) × t<br>
+	    
+    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆ -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    
+	    <br><br>
+	    
+	    <strong><font color="red">P. Rule 11.</font></strong> There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy physics student. The highest exponent in the position equation must be 2 or below for U.A.M. to be active. If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion. These are also referred to as the <strong>kinematic equations</strong>, the equations that govern motion (when ignoring thing like drag/air resistance - see Section III.III for that). For motion in two dimensions, see Section III.II.<br><br><br>
+	    
+	    <font color="blue"><strong>Memorization tools for U.A.M. Equations:</strong></font><br>
+	    I believe the best way to memorize new information is to associate it with something that we have already memorized, something that we subconciously reinforce through human nature: music. Everyone has hundreds of melodies memorized, so finding one that would match the rhythm and meter of the equation (and there is meter) is not too terribly difficult. Of course, fast music is most of the time unfit for memorizing an equation, of which a slower recitation and melody are much easier to perfectly and quickly recall.<br><br>
+	    
+	    <strong>1.</strong> To the theme of Funiculì, Funiculà (<a href="https://youtu.be/XW0W7j04iRQ?t=40">Slower part</a>):<br>
+	    Vf equals vi + a times change in t.<br><br>	    
+	    <strong>2.</strong> To the theme of Funiculì, Funiculà (<a href="https://youtu.be/XW0W7j04iRQ?t=1">Faster Part</a>):<br>
+	    Change in, x equals, vi times change in t. plus one, half times, a, change in t squared.<br>
+	    vi times change in t equals vi times the change in t!<br>
+	    vi times change in t plus one half times a change in t, squared,<br>
+      vi times change in t plus one half times a change-in-t squared.<br><br>	
+	    <strong>3.</strong> To the theme of <a href="https://www.youtube.com/watch?v=ePRZC_OulYc">Mozart's Dies Irae</a>:<br>
+	    Vf squared equals, (da da da da) vi squared plus, (da da da da) 2 times a times, change in x equals vi SQUARED plus 2a change in time.
+	    <br><br>
+	   <strong>4.</strong> To the theme of Satie's <a href="https://www.youtube.com/watch?v=6ceAkkpsui8">Gnossienne No. 5</a><br>
+	   Delta x, ~~~~  equals one slash two, ~~~~~~~~~~~~~~~ times velocity final plus vi, times change, in time...
+	   <br>
+    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆ -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    
+	    <br><br>
+	    
+	    <strong><font color="red">P. Rule 12.</font></strong> Acceleration refers to the change in meters per seconds <em>per second</em>, When a ball is rolling on an incline, it will start at 0 m/s in velocity and after 1 second get to 2 m/s, and with each passing second the velocity increases by 2 m/s. Finding the position for those times is just as simple as using the second U.A.M. equation, which in this case leaves you with each change in position equaling the change in time squared.<br><br><br>
+	    <strong><font color="red">P. Rule 13.</font></strong> Order of Magnitude estimates are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only tohe power of ten, adding one if rounding up.<em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.<br><br><br>
+	    
+	    <font color="blue"><strong>Esoteric U.A.M. Problem:</strong></font><br>
+	    A use of the U.A.M. equations that is not immediately apparent:<br><br> <em>Two trains, each having a speed of 30 km/h, are headed at each other on the same straight track. A bird that can fly 60 km/h flies off the front of one train when they are 60 km apart and heads directly for the other train. On reaching the other train, the (crazy) bird flies directly back to the first train, and so forth. What is the total distance the bird travels before the trains collide?</em><br><br>
+	    
+	    This question has several traits that force the physicist to utilize critical thinking skills instead of plugging in numbers into formulas mindlessly, which one may get in the habit of if asked too many uninspired questions. <br><br>
+	    For one, velocity cannot replace speed in most circumstances due to the inherent differences of velocity being straight-line difference and speed being the total distance traveled, but there is one exception: If the object (or objects, in this case) travel in a straight-line, which is to say in one dimension, then the speed is equal to the velocity and they are interchangeable.<br><br>
+	    The specific parameters of the problem make it easier to solve: image the trains as being simple objects with directionless speed (as stated in the problem), for example. From the perspective of the conductor of the first train, the second train is going 60 kilometers per hour. We can replace the entire two train scenario (which has perfect symmetry and identical U.A.M. variables) and replace it with a single moving object - the trains are individually moving 30 km/hr towards eachother at a starting distance of 60 km from eachother - this is equal to a single train moving at 60 km/hr toward a brick wall 60 km away. Mathematically, these conclusions can be derived as follows:<br><br>
+	    
+	    Speed<sub>Total</sub> = Speed<sub>1</sub> + Speed<sub>2</sub><br>
+	    Speed<sub>Total</sub> = 30 km/hr + 30 km/hr<br>
+	    Speed<sub>Total</sub> = 60 km/hr
+	    
+	    <br><br>
+	    Thus, in this question, V<sub>iT</sub> and V<sub>FT</sub> are in reference to the single moving train, are all equal to 60 km/hr. Additionally, the change in x has been changed to 60 km, and considering the doubled speed of the single train, this works out perfectly with the original scenario. Since there are three known variables, we can find the other two.<br>
+	    <br>For this question only, it seems more logical to remain in km/hr instead of converting into m/s as is the usual.<br><br>
+	    We will first try to get the acceleration out of the train's U.A.M. equations - each equation has acceleration, so we need it to get to what we really want - the change in time.<br><br>
+	    V<sub>F1</sub>² = V<sub>i1</sub>² + 2 × a × ∆x<br>
+	    (60 km/hr)² = (60 km/hr)² + 2 × a × 60 km.<br>
+	    0 = 2 × a × 60 km.<br>
+	    a = 0<br><br>
+	    This simplifies things significantly. Thus, for the second equation, which has two parts, both with the change in time, and the second with acceleration as a multiplier, is best suited for this scenario, as it can directly reveal the change in time.<br><br>
+	    ∆x = V<sub>i1</sub> × ∆t + (1 / 2) × a × (∆t)²<br>
+	    60 km = (60 km/hr) × ∆t<br>
+	    ∆t = 1<br><br>
+	    
+	    This is also very useful. If we were to consider the flying bird, we would find that it is flying at the same speed as the train and would thus go 60 km/hr for one hour before crashing into the wall, which is clearly equal to 1 hours worth of flight and thus 60 km of flight distance.
+	    <br> Utilizing vector addition (rule 18) would not work, because the directions would cause the train velocities to cancel out.
+    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    <br><br><br>
+	    
+	    
+	    <strong><font color="#006400">Instantaneous Velocity</font></strong>: The velocity at a specific point in time. The Velocity<sub>final</sub> and Velocity<sub>initial</sub> from the U.A.M. equations are instantaneous velocities because they represent the object's velocity at a specific point in time.<br><br>
+	    <strong><font color="#006400">Average Velocity</font></strong>: The velocity over a time period. The velocity definition, change in position over change in time, is an average velocity itself.<br><br><br>
+	    <strong><font color="red">P. Rule 14.</font></strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5</sub>, specifies an interval on the graph to find the velocity of.<br><br><br><br>
+	    
+	    ALL OF THE INFORMATION ABOUT DERIVATIVES WILL APPLY IN THE NEXT SECTION. MAKE SURE YOU KNOW AT LEAST THE DERIVATIVE PART OF <a href="https://humanknowledge.neocities.org/math/singlevarcalculus.html">SINGLE-VARIABLE CALCULUS</a> BEFORE CONTINUING ONTO FREE FALL.<br><br>
+	  </article>
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="https://humanknowledge.neocities.org/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="https://humanknowledge.neocities.org/eff.png" width=90%></a>
+		<a href="https://archive.org/"><img src="https://humanknowledge.neocities.org/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+      <br>
+      <article><strong><a href = "https://humanknowledge.neocities.org/Physics/MechanicsFull" >Complete Newtonian Mechanics</a></strong></article>
+        <br>
+        <article><strong>Velocity, Speed, Acceleration</strong> → <strong><a href="https://humanknowledge.neocities.org/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="https://humanknowledge.neocities.org/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: August 27 2024</span><br>
+      	<span class="tiny">Jonathan Lacabe 2024</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="https://humanknowledge.neocities.org/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

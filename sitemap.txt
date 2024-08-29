@@ -1,4 +1,4 @@
-All pages as of August 28 2024.
+All pages as of August 29 2024.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -40,6 +40,7 @@ Astronomy                                            - https://humanknowledge.ne
 
 Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
 ~Electrical Symbols                                  - https://humanknowledge.neocities.org/engineering/electrik/symbols
+~List of Physics Equations                           - https://humanknowledge.neocities.org/Physics/physicseq
 
 
 Nuclear Engineering                                  - https://humanknowledge.neocities.org/engineering/nuclear

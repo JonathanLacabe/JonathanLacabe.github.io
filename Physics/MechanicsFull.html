@@ -53,7 +53,7 @@
 	  </header>
 	  <hr>
 	  <article>
-	    <p>This is the first part of my complete notes for Classical Mechanics, covering topics of Kinematics such as Velocity, Speed, Acceleration, Free Fall, Projectile Motion, Range, and more. Due to the large scale of this topic, I have to split even the complete notes into multiple parts.<br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	    <p>This is the first part of my complete notes for Classical Mechanics, covering topics of Kinematics such as Velocity, Speed, Acceleration, Free Fall, Projectile Motion, Range, and more. Due to the large scale of this topic, I have had to split even the complete notes into multiple parts.<br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
 	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
 	  
@@ -110,7 +110,10 @@
 
       <div class="toc-container">
         <div class="toc-column">
-          <a href="#RangeBasics">IV.I Range Basics.</a>
+          <a href="#RangeBasics">IV.I Basics of Range.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#Frames">IV.II Frames of Reference.</a>
         </div>
       </div>
       
@@ -455,14 +458,14 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <span class="tiny"><em>A graph with the cardinal directions at 45° filled in.</em></span><br><br>
 	    <br>
 	    
-	    <strong><font color="red">P. Rule 20.</font></strong> Complex vector problems oftentimes entail vector decomposition, where one may have to use trigonometry in order to find the sides of the vector triangle. Take this North of East vector for example:<br>
+	    <strong><font color="red">P. Rule 20.</font></strong> Complex vector problems oftentimes entail <strong>vector decomposition</strong>, where one may have to use trigonometry in order to find the sides of the vector triangle. Take this North of East vector for example:<br>
 	    <span class="vecteur"><strong>d</strong></span> = 90.0 cm @ 32° N of E.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/examplevector.gif"><img src="/Physics/img/vectors/examplevector.gif" alt="A graph with a vector d and its component vectors labeled." width=25%/></a></div>
 	    The vector <span class="vecteur"><strong>d</strong></span> has two component vectors, <span class="vecteur"><strong>d<sub>x</sub></strong></span> and <span class="vecteur"><strong>d<sub>y</sub></strong></span>.
 	    <br><br>sinθ = (O / H) = (<span class="vecteur"><strong>d<sub>y</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>y</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>sinθ = 90sin(32) = 47.693 ≈ 48cm.<br><br>
 	    
 	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
-	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem.
+	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.
 	    
 	    <br><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈-->
@@ -635,14 +638,14 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    
 	    </article>
 	    <header class="articleHeader"><hr><hr>
-	    <h2><span class="mw-headline" id="Range">IV. Range.</span></h2>
-	    <h3><span class="mw-headline" id="RangeBasics">IV.I Range Basics.</span></h3>
+	    <h2><span class="mw-headline" id="Range">IV. Range & Relative Motion.</span></h2>
+	    <h3><span class="mw-headline" id="RangeBasics">IV.I Basics of Range.</span></h3>
 	  </header>
 	  <article>
 	    <strong><font color="#006400">Range</font></strong>: The horizontal displacement of an object in projectile motion when the overall displacement in the Y direction of the object equals zero. READ: The Horizontal Displacement.
 <br><br><br>
-	    <strong><font color="red">P. Rule 35.</font></strong> Here is the 'Range' equation, giving you the horizontal displacement (which, you should note, is not written with a Δx, as that would displacement as a whole). There are specific characteristics of a question that will allow you to use the range equation, in the same manner as the U.A.M. equations. If a question explicitly says that an object in projectile motion is landing at the same height which it was thrown (or something to that effect), then the range equation can be used as the displacement in the y direction is zero.<br><strong>
-	    Range = (V<sub>i</sub>² × sin(2θ<sub>i</sub>)) / g</strong><br><br>
+	    <strong><font color="red">P. Rule 35.</font></strong> Here is the 'Range' equation, giving you the horizontal displacement (which, you should note, is not written with a Δx, as that would displacement as a whole). There are specific characteristics of a question that will allow you to use the range equation, in the same manner as the U.A.M. equations. If a question explicitly says that an object in projectile motion is landing at the same height which it was thrown (or something to that effect), then the range equation can be used as the displacement in the y direction is zero.<br><br>
+	    <strong>Range = (V<sub>i</sub>² × sin(2θ<sub>i</sub>)) / g</strong><br><br>
 	    <strong>R</strong> = Range = Δx<br>
 	    <strong>V<sub>i</sub></strong> = ||V<sub>i</sub>|| (Magnitude of Vi)<br>
 	    <strong>θ<sub>i</sub></strong> = Initial Angle or Launch Angle<br>
@@ -653,71 +656,35 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    
 	    <br><br><br>
 	    <font color="blue"><strong>Memorization tool for Range:</strong></font><br>
-	    I believe the best way to memorize new information is to associate it with something that we have already memorized that we subconsciously reinforce through repetition: music. Everyone has already memorized hundreds of melodies, so finding one that would match the rhythm and meter of the equation (and there is meter) is not too terribly difficult. Of course, fast music is most of the time unfit for memorizing an equation, of which a slower recitation and melody are much easier to perfectly and quickly recall.<br><br><!-- I am going to plug this in everywhere there is an equation to be memorized.-->
+	    I believe the best way to memorize new information is to associate it with something that we have already memorized that we subconsciously reinforce through repetition: music. Everyone has already memorized hundreds of melodies, so finding one that would match the rhythm and meter of the equation (and there is meter) is not too terribly difficult. <br><br><!-- I am going to plug this in everywhere there is an equation to be memorized.-->
 	    <strong>1.</strong> To the theme of <a href="https://youtu.be/cWc7vYjgnTs?t=66">Nessun Dorma</a>:<br>
-	    Velocity initial squared, times sine 2 theta, initial, divided by gravity...<br><br>
+	    Velocity initial squared, times sine 2 theta, initial, divided by gravity...
+	    <br><br>
+	    
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Frames">IV.II Frames of Reference.</span></h3>
+	    </header>
+	    <article>
+	    <strong><font color="#006400">Relative Motion</font></strong>: The TRUTH of perspective. Velocity measurements depend on the frame of reference from which they are taken. The motion of the person taking the measurements will affect the interpretation of the motion of the object being observed. For example: If you were skateboarding and threw a ball up in the air, from your perspective it would move straight up and down, but from a still bystander, the ball would move parabolically, matching your velocity in the x-direction. Thus, we must conclude <strong>All motion is relative to a frame of reference</strong>.
+<br><br><br>
+
+	    <strong><font color="red">P. Rule 36.</font></strong> Relative motion is done with vectors. Imagine a van and a motorcycle driving side by side: the velocity of the van relative to Earth is 24 mi/hr in the East direction. The velocity of the motorcycle relative to the Earth is 13 mi/hr in the East direction. These values would be written thusly: <br><br><span class="vecteur"><strong>V<sub>vE</sub></strong></span> = 24 mi/hr E<br><span class="vecteur"><strong>V<sub>mE</sub></strong></span> = 13 mi/hr E<br><br> In order to find the velocity of the van with respect to the motorcycle, we must use <span class="vecteur"><strong>V<sub>vm</sub></strong></span> as the term. This value will be the difference between the two vectors.
+	    <br><br><span class="vecteur"><strong>V<sub>vE</sub></strong></span> = <span class="vecteur"><strong>V<sub>mE</sub></strong></span> + <span class="vecteur"><strong>V<sub>vm</sub></strong></span><br> <span class="vecteur"><strong>V<sub>vm</sub></strong></span> = <span class="vecteur"><strong>V<sub>vE</sub></strong></span> - <span class="vecteur"><strong>V<sub>mE</sub></strong></span><br>
+	    <span class="vecteur"><strong>V<sub>vm</sub></strong></span> = 24 mi/hr E - 13 mi/hr E<br><span class="vecteur"><strong>V<sub>vm</sub></strong></span> = 11 mi/hr E<br><br>You may notice that by taking the negative of the vector, we are in effect reversing its direction. This can be represented by switching the order of the subscripts.<br><br>-<span class="vecteur"><strong>V<sub>mE</sub></strong></span> = <span class="vecteur"><strong>V<sub>Em</sub></strong></span><br>= -13 mi/hr E <br>= 13 mi/hr W<br><br>Therefore, from the point of view of the motorcycle, it would appear that the Earth is moving westward at 13 mi/hr. Finally, in order to solve the velocity of the motorcycle with respect to the van, we simply need to take the negative of the already known value of the motorcycle with respect to van:<br><br><span class="vecteur"><strong>V<sub>mv</sub></strong></span> = -<span class="vecteur"><strong>V<sub>vm</sub></strong></span><br>=-11 mi/hr E<br>11 mi/hr W<br><br>Thus, the van, which is moving faster than the motorcycle, would see the motorcycle as moving backwards (west) as 11 mi/hr.
 	    <br><br><br>
-	    <!--<strong><font color="red">P. Rule 36.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 37.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 38.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 39.</font></strong> <br><br><br>
-	    
-	    <strong><font color="red">P. Rule 40.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 41.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 42.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 43.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 44.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 45.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 46.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 47.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 48.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 49.</font></strong> <br><br><br>
-	    
-	    <strong><font color="red">P. Rule 50.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 51.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 52.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 53.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 54.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 55.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 56.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 57.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 58.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 59.</font></strong> <br><br><br>
-	    
-	    <strong><font color="red">P. Rule 60.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 61.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 62.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 63.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 64.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 65.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 66.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 67.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 68.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 69.</font></strong> <br><br><br>
-	    
-	    <strong><font color="red">P. Rule 70.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 71.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 72.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 73.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 74.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 75.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 76.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 77.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 78.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 79.</font></strong> <br><br><br>
-	    
-	    <strong><font color="red">P. Rule 80.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 81.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 82.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 83.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 84.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 85.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 86.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 87.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 88.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 89.</font></strong> <br><br><br>
-	    
-	    -->
+	    <strong><font color="red">P. Rule 37.</font></strong> There is a trick that can be used in all relative motion subscripts: any time you <u>sum</u> two relative motion velocities and they share a common subscript on the inside or the outside, that subscript will cancel out in a specific way. Using the example from Rule 36, we can understand what this specifically means:<br><br>
+	    <span class="vecteur"><strong>V<sub>vm</sub></strong></span> = <span class="vecteur"><strong>V<sub>vE</sub></strong></span> + <span class="vecteur"><strong>V<sub>Em</sub></strong></span><br><br>The "E" (Earth) on the inside of the two velocities will cancel out, and because the common subscript was on the inside, the subscripts will combine forwardly into vm.<br><br>
+	    <span class="vecteur"><strong>V<sub>vE</sub></strong></span> = <span class="vecteur"><strong>V<sub>mE</sub></strong></span> + <span class="vecteur"><strong>V<sub>vm</sub></strong></span>
+	    <br><br>
+	    With this equation, because the common subscript is on the outside, the resultant subscripts are presented backwardly. Of course, you can switch the order of the terms to make the common subscript be on the inside and get the same answer, but knowledge of these tricks either way will be very helpful.
+	    <br><br><br><br><br>
+	    <font color="blue"><strong>KINEMATICS POSTMORTEM</strong></font><br>
+	   We have now come to the end of Kinematics (at least, what I will consider 'Kinematics' in my notes), our studies in Vector Addition, Projectile Motion, Relative Motion, and everything else. Let us review the similarities between the vector decompositions of the various motions: The core principle behind decomposition is that <u>when a vector is not directly in the x or y direction, break the vector in its components</u>. Why do we do this?<br><br>
+	   <strong>Vector Addition:</strong> We create components in order to make a right triangle so we can use the Pythagorean Theorem and the Trigonometric functions.       
+	    <br><br><strong>Projectile Motion</strong>: We resolve the initial velocity into components because we use different equations in the X and Y directions for projectile motion. We use the equation for constant velocity in the X direction (because acceleration is zero), and in the Y direction we use the U.A.M. equations for free fall.
+	    <br><br><strong>Relative Motion</strong>: Same as Vector Addition, decompose to make a right triangle.<br><br>
+	    For ever and ever, you will use vectors and vector decomposition in your daily life, because if you are not living as a physicist, are you truly living?
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
@@ -753,7 +720,7 @@ Because the question asked for the distance, we need to find the magnitude of th
       <footer class="site">
         <br>
         <strong><a href="/Physics/Mechanics.html">Classical Mechanics</a></strong><br>
-        <article><strong>Pt. 1: Kinematics</strong></article>
+        <article><strong>Pt. 1: Kinematics</strong> → <strong><a href="/Physics/MechanicsFull2">Pt. 2: Dynamics</a></strong></article>
         <br>
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>

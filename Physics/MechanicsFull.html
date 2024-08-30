@@ -404,7 +404,7 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <h3><span class="mw-headline" id="VectorBasics">III.I Vector Basics.</span></h3>
 	  </header>
 	  <article>
-	    <strong><font color="#006400">Vector</font></strong>: A quantity having both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum.
+	    <strong><font color="#006400">Vector</font></strong>: A quantity having both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum. Vectors cannot be negative - their magnitude must always be positive by the virtue of their existence. Their direction is what can make them seem 'negative', meaning that they are in the opposite direction of another vector, potentially resulting in a smaller resultant vector (Rule 18). It is all relative.
 	    <br><br>
 	    <strong><font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density.
 	    <br><br>
@@ -412,8 +412,8 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 
 
 	    <br>
-	    <strong><font color="red">P. Rule 18.</font></strong> Introductory Tip-to-Tail Vector Addition:<br>
-	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (Rule 20) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
+	    <strong><font color="red">P. Rule 18.</font></strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
+	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. This tells you the <strong>resultant vector</strong>.<br><br> If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (Rule 20) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
 	    Here are two vectors utilizing the vector symbols:<br><br>
 	    <span class="vecteur"><strong>A</strong></span> = 49 (mm/s) North<br>
 	    <span class="vecteur"><strong>B</strong></span> = 42 (mm/s) East <br>
@@ -584,8 +584,7 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    
 	    <br><br><br>
 	    <strong><font color="red">P. Rule 33.</font></strong> Some general tricks that keep one's ducks in line when doing physakz: When you discover the value of a new variable, always immediately check whether the sign is correct.<br><br>1. Your object is falling? The velocity is going to be negative.<br>2. You found negative time? Time travel doesn't exist yet. Go back and find your error somewhere, which probably has to do with possibility 1.<br><br>Additionally, sometimes, specifically when you are finding time in the 2nd U.A.M. equation (where time is squared), you will need to use the quadratic formula. Try to figure any possible way in which you avoid using it, whether using a different formula or whatever. If you have to, you have to, but use your common sense in determining which answer applies to your problem, if only one.<br><br><br>
-	    <!--<strong><font color="red">P. Rule 34.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 35.</font></strong> <br><br><br>
+	    <!--<strong><font color="red">P. Rule 35.</font></strong> <br><br><br>
 	    <strong><font color="red">P. Rule 36.</font></strong> <br><br><br>
 	    <strong><font color="red">P. Rule 37.</font></strong> <br><br><br>
 	    <strong><font color="red">P. Rule 38.</font></strong> <br><br><br>
@@ -660,7 +659,7 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    
 	    <strong><font color="#006400">Free Body Diagram</font></strong>: A graphic used to visualize the various forces working on an object at a particular instant. <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/Free_body_diagram2.svg">Example</a>.<br><br><br>
 	    
-	    <strong><font color="blue">My Treatise on Drag:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
+	    <strong><font color="red">Rule 34. My Treatise on Drag:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
 	    While the force of gravity acts straight down on the object based on its center of mass, the force of drag acts opposite to the direction of the velocity of the object:
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dragGraph.png"><img src="/Physics/img/dragGraph.png" alt="A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of Flipping Physics." width=29%/></a></div>
 	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>The force of drag is (generally - this will be discussed more later) defined by the following equation:<br><br><strong>F<sub>drag</sub> = (1/2) × ρ × V² × D × A</strong><br><br> <strong>ρ</strong> (rho) = Density of the medium<br><strong>V</strong> = Velocity of the object<br><strong>D</strong> = Drag Coefficient<br><strong>A</strong> = Cross Sectional Area<br><br><strong>A</strong>: The cross-sectional area of the object is the area of the object normal to the direction of it's travel. E.g., when the object is moving directly towards you, what object do you see?<br>Take the object to be a ball, for the sake of discussion. <br><br><strong>A<sub>circle</sub> = πr²</strong><br> Additionally, let's assume that the radius and mass of the ball are 0.031835 meters and 0.14529 kg, respectively, and that the velocity V<sub>ix</sub> in the first 1/100th of a second is 4.469444 m/s. <br><br>
@@ -719,10 +718,10 @@ Because the question asked for the distance, we need to find the magnitude of th
         <strong><a href="/Physics/Mechanics.html">Classical Mechanics</a></strong><br>
         <article><strong>Pt. 1: Kinematics</strong></article>
         <br>
-        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 28 2024</span><br>
+      	<span class="tiny">Last Change: August 29 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

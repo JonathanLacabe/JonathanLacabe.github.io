@@ -55,31 +55,306 @@
 	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
       <div class="toc-container">
         <div class="toc-column">
-          <a href="#Basics">I.I Basics of Mechanics.</a>
+          <a href="#VectorBasics">III.I Vector Basics.</a>
         </div>
         <div class="toc-column">
-          <a href="#VSA">I.III Displacement and V.S.A.</a>
+          <a href="#Drag">III.III Drag.</a>
         </div>
-        
       </div>
-      <div class="toc-container">
       
-      <div class="toc-column">
-          <a href="#Accuracy">I.II Accuracy & Uncertainty.</a>
-        </div>
+      <div class="toc-container">
         <div class="toc-column">
-          <a href="#UAM">I.IV Uniformly Accelerated Motion.</a>
+          <a href="#Projectile">III.II Projectile Motion.</a>
         </div>
-        
-        
       </div>
 
 	  <header class="articleHeader"><hr>
-	    <h2><span class="mw-headline" id="Velocity">I. Velocity, Speed, Acceleration.</span></h2>
-	    <h3><span class="mw-headline" id="Basics">I.I Basics of Mechanics.</span></h3>
+	    <h2><span class="mw-headline" id="Vectors">III. Vectors and Projectile Motion</span></h2>
+	    <h3><span class="mw-headline" id="VectorBasics">III.I Vector Basics.</span></h3>
 	  </header>
 	  <article>
-I move the stuff here from the mechanics full page.
+	    <strong><font color="#006400">Vector</font></strong>: A quantity having both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum. Vectors cannot be negative - their magnitude must always be positive by the virtue of their existence. Their direction is what can make them seem 'negative', meaning that they are in the opposite direction of another vector, potentially resulting in a smaller resultant vector (Rule 18). It is all relative.
+	    <br><br>
+	    <strong><font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density.
+	    <br><br>
+
+
+
+	    <br>
+	    <strong><font color="red">P. Rule 18.</font></strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
+	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. This tells you the <strong>resultant vector</strong>.<br><br> If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (Rule 20) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
+	    Here are two vectors utilizing the vector symbols:<br><br>
+	    <span class="vecteur"><strong>A</strong></span> = 49 (mm/s) North<br>
+	    <span class="vecteur"><strong>B</strong></span> = 42 (mm/s) East <br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/firstone.gif"><img src="/Physics/img/vectors/firstone.gif" alt="An empty graph with two vectors being added and their resultant vector." width=30%/></a></div>
+	    In order to solve for the resultant vector, some geometry would need to be performed:<br>
+	    a² + b² = c²<br><span class="vecteur"><strong>R</strong></span>² = <span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²<br><span class="vecteur"><strong>R</strong></span> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;"><span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²</span></span><br>
+	    = 65 mm/s.<br><br>
+	    Since a vector has direction, we need to find it trigonometrically:<br>
+	    tanθ = (O / A) = (<span class="vecteur"><strong>B</strong></span> / <span class="vecteur"><strong>A</strong></span>) = (42 / 49)<br>
+	    θ = tan⁻¹(42/49) = 40.601° = East of North (see rule 19).<br>
+	    Thus, the object is moving at a resultant vector of 65 mm/s East of North.<br><br><br>
+	    
+	    <font color="blue"><strong>Vector subtraction:</strong></font><br>
+	    Vector subtraction is similar to addition. <span class="vecteur"><strong>A</strong></span> - <span class="vecteur"><strong>B</strong></span> = <span class="vecteur"><strong>A</strong></span> + (-<span class="vecteur"><strong>B</strong></span>). Thus, all that would need to be done for vector subtraction is to put <span class="vecteur"><strong>B</strong></span> in the opposite direction and discover the resultant vector from there. This, indeed, can be a different resultant vector from vector addition - gander:
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/subtraction.png"><img src="/Physics/img/vectors/subtraction.png" alt="An illustration of the differences between vector addition and subtraction. Courtesy of Sciencing." width=40%/></a></div>
+	    <span class="tiny"><em>An illustration of the differences between vector addition and subtraction. Courtesy of <a href="https://sciencing.com/how-to-add-subtract-vectors-w-diagrams-13720223.html">Sciencing</a>.</em></span>
+	    <br><br>
+	    <br><br>
+	    
+	    <strong><font color="red">P. Rule 19.</font></strong> Cardinal directions in Vectors are as follows:<br>
+	    
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/cardinaldirections.png"><img src="/Physics/img/vectors/cardinaldirections.png" alt="A graph with most of the cardinal directions of vectors filled in. Courtesy of Flipping Physics." width=30%/></a></div>
+	    <span class="tiny"><em>A graph with most of the cardinal directions of vectors filled in. Courtesy of <a href="https://www.flippingphysics.com/cardinal-directions.html">Flipping Physics</a>.</em></span><br><br>
+	    
+	    Additionally, the cardinal directions at perfect 45° angles would be as follows:<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/angles.png"><img src="/Physics/img/vectors/angles.png" alt="A graph with the cardinal directions at 45° filled in." width=30%/></a></div>
+	    <span class="tiny"><em>A graph with the cardinal directions at 45° filled in.</em></span><br><br>
+	    <br>
+	    
+	    <strong><font color="red">P. Rule 20.</font></strong> Complex vector problems oftentimes entail vector decomposition, where one may have to use trigonometry in order to find the sides of the vector triangle. Take this North of East vector for example:<br>
+	    <span class="vecteur"><strong>d</strong></span> = 90.0 cm @ 32° N of E.<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/examplevector.gif"><img src="/Physics/img/vectors/examplevector.gif" alt="A graph with a vector d and its component vectors labeled." width=25%/></a></div>
+	    The vector <span class="vecteur"><strong>d</strong></span> has two component vectors, <span class="vecteur"><strong>d<sub>x</sub></strong></span> and <span class="vecteur"><strong>d<sub>y</sub></strong></span>.
+	    <br><br>sinθ = (O / H) = (<span class="vecteur"><strong>d<sub>y</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>y</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>sinθ = 90sin(32) = 47.693 ≈ 48cm.<br><br>
+	    
+	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
+	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem.
+	    
+	    <br><br><br>
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈-->
+	    <strong><font color="red">P. Rule 21.</font> The Associative Property of Vector Addition</strong>:<br><br>
+	    <span class="vecteur"><strong>A</strong></span> + (<span class="vecteur"><strong>B</strong></span> + <span class="vecteur"><strong>C</strong></span>) = (<span class="vecteur"><strong>A</strong></span> + <span class="vecteur"><strong>B</strong></span>) + <span class="vecteur"><strong>C</strong></span>.<br>
+	    This property, in conjunction with vector decomposition, is very useful when doing vector problems such as the following: <br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector1.gif"><img src="/Physics/img/vectors/vector1.gif" alt="The initial vector, going from 60 cm West, to 50 cm North, to 40 cm SouthWest." width=30%/></a></div>
+	    <span class="tiny"><em>The initial vector, going from 60 cm West, to 50 cm North, to 40 cm SouthWest.</em></span><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector2.gif"><img src="/Physics/img/vectors/vector2.gif" alt="Through the transposition of the associative property, two sides of the right triangle (of which the hypotenuse is displacement) have been found in terms of vector decompositions." width=30%/></a></div>
+	    <span class="tiny"><em>Through the transposition of the associative property, two sides of the right triangle (of which the hypotenuse is displacement) have been found in terms of vector decompositions.</em></span><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector3.gif"><img src="/Physics/img/vectors/vector3.gif" alt="The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the pythagorean theorem." width=30%/></a></div>
+	    <span class="tiny"><em>The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the pythagorean theorem.</em></span><br><br>
+    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    <br><br>
+	    
+	    
+	    <strong><font color="red">P. Rule 22.</font></strong> <strong>UNIT VECTORS:</strong><br>
+	    Unit vectors are vectors with a magnitude of 1 unit in an absolute direction, without any decomposable angle. They are written differently than normal vectors, with a roof symbol on top rather than an arrow:<br><br>
+	    <strong>i&#x302;</strong> = <strong>x&#x302;</strong> = 1 unit in the x direction.<br>
+	    <strong>j&#x302;</strong> = <strong>y&#x302;</strong> = 1 unit in the y direction.<br>
+	    <strong>k&#x302;</strong> = <strong>z&#x302;</strong> = 1 unit in the z direction.<br><br>
+	    <span class="vecteur"><strong>V<sub>ix</sub></strong></span> ≈ [31.7i&#x302; + 14.8j&#x302;] m/s ≈ 35.0 m/s @ 25.0° above horizontal.<br>
+	    This way of writing is simply the pre-decomposed way of writing a vector.<br>
+	    <br><br>If you have to go from an already decomposed roof form to the exact same form as an answer, it is easy as hell:<br>
+	    <span class="vecteur"><strong>A</strong></span> = [2.0<strong>i&#x302;</strong> + 2.0<strong>j&#x302;</strong>]m<br><span class="vecteur"><strong>B</strong></span> = [1.0<strong>i&#x302;</strong> - 3.0<strong>j&#x302;</strong>]m<br><span class="vecteur"><strong>C</strong></span> = [4.0<strong>i&#x302;</strong> + 4.0<strong>j&#x302;</strong>]m<br><br><span class="vecteur"><strong>R</strong></span> = <span class="vecteur"><strong>A</strong></span> + <span class="vecteur"><strong>B</strong></span> + <span class="vecteur"><strong>C</strong></span> = [7.0i&#x302; + 3.0j&#x302;]m<br><br>
+	    Note that given the component vectors, reconstruction of a direction for the whole vector is possible (obviously), though unless the angle is a perfect 45°, you will only get a general idea of where it is pointing, since 25° North of East is the same as 65° East of North.
+	    
+	    <br><br><br>
+
+<strong><font color="red">P. Rule 23.</font></strong> When the questions asks to find the distance between two vectors, you can use a simple mechanic:<br> Create your own vector that has its tail on the tip of the first vector and its tip on the tip of the second vector, call it ∆<span class="vecteur"><strong>r</strong></span>.<br><br>
+	    <span class="vecteur"><strong>r<sub>1</sub></strong></span> + ∆<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span><br>
+	    
+	    ∆<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> - <span class="vecteur"><strong>r<sub>1</sub></strong></span>
+	    <br><br>
+	    You do not have to move any of the given vectors, you can simply create one that serves the middle an already connected vector would have served in its place. Then, find the displacement (length) of that vector by using the strategies taught in rules 19 and 20. The vectors may look similar to this:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/pablo1.png"><img src="/Physics/img/vectors/pablo1.png" alt="A graph with two vectors with no other information." width=18%/></a></div>
+	    <span class="tiny"><em>A graph with two vectors with no other information. Courtesy of <a href="https://www.flippingphysics.com/r-position-velocity-acceleration.html">Flipping Physics</a>.</em></span><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/PABLO2.png"><img src="/Physics/img/vectors/PABLO2.png" alt="A graph with two vectors with no other information, except now with the connecting vector created." width=18%/></a></div>
+	    <span class="tiny"><em>A graph with two vectors with no other information, except now with the connecting vector created. Courtesy of <a href="https://www.flippingphysics.com/r-position-velocity-acceleration.html">Flipping Physics</a>.</em></span><br><br>
+	    
+	    From this point, you can either find the answer in terms of unit vectors or in terms of magnitude in direction. Of course, unit vectors will always be faster and simpler. Here is an example problem carried out to fruition using unit vectors:<br>
+	    <p><span class="vecteur"><strong>r<sub>1</sub></strong></span> = 15.0m @ 55.0° <strong>E</strong> of <strong>N</strong><br><span class="vecteur"><strong>r<sub>2</sub></strong></span> = 25.0m @ 45.0° <strong>N</strong> of <strong>E</strong></p>
+
+THE UNIT VECTOR DECOMPOSITION OF THE <strong>FIRST</strong> VECTOR:
+<p><span class="vecteur"><strong>r<sub>1</sub></strong></span> = [r<sub>1</sub>sinθ<sub>1</sub><strong>i&#x302;</strong> + r<sub>1</sub>cosθ<sub>1</sub><strong>j&#x302;</strong>] <br>= [(15)sin(55)<strong>i&#x302;</strong> + (15)cos(55)<strong>j&#x302;</strong>]m <br>= [12.2872<strong>i&#x302;</strong> + 8.60365<strong>j&#x302;</strong>]m</p>
+THE UNIT VECTOR DECOMPOSITION OF THE <strong>SECOND</strong> VECTOR:
+<p><span class="vecteur"><strong>r<sub>2</sub></strong></span> = [r<sub>2</sub>cosθ<sub>2</sub><strong>i&#x302;</strong> + r<sub>2</sub>sinθ<sub>2</sub><strong>j&#x302;</strong>] <br>= [(25)cos(45)<strong>i&#x302;</strong> + (25)sin(45)<strong>j&#x302;</strong>]m <br>= [17.6777<strong>i&#x302;</strong> + 17.6777<strong>j&#x302;</strong>]m</p>
+
+
+<p>Δ<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> − <span class="vecteur"><strong>r<sub>1</sub></strong></span> = [12.2872<strong>i&#x302;</strong> + 8.60365<strong>j&#x302;</strong>] − [17.6777<strong>i&#x302;</strong> + 17.6777<strong>j&#x302;</strong>]<br>
+= Δ<span class="vecteur"><strong>r</strong></span> = [5.39040<strong>i&#x302;</strong> + 9.07405<strong>j&#x302;</strong>]m<br><br>
+
+Because change in r is also change in position, this vector is also the displacement between the two original vectors: <br>
+Δ<span class="vecteur"><strong>r</strong></span> ≈ [5.39<strong>i&#x302;</strong> + 9.07<strong>j&#x302;</strong>]m</p>
+
+Because the question asked for the distance, we need to find the magnitude of the displacement using that specific equation; see the definition of displacement in section I.III for a better understanding of what is being done here.
+
+<p>|Δ<span class="vecteur"><strong>r</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(5.39040)² + (9.07405)²</span></span></p>
+<p>|Δ<span class="vecteur"><strong>r</strong></span>| = 10.5544 ≈ 10.6m</p>
+
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
+	    
+	    <br><br><!--Convert this text into html (without any color, make everything black) with the following prerequisites: Every instance of a vector symbol will represented as such: 'r' with a subscript 1 with a vector symbol will be <span class="vecteur"><strong>r<sub>1</sub></strong></span>. A hat symbol, such as i hat, will be represented as such: "<strong>i&#x302;</strong>". Every instance of '⇒' replace with a <br>. If there is a square root anywhere, replace it like this: if the inside of the radical is 10, it should be <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">10</span></span>. If there are roots/radicals to altering powers, such as (x)^1/3, then you figure out a way to represent it that looks correct. 
+-->
+	    <strong><font color="red">P. Rule 24.</font></strong> The r position vector, <span class="vecteur"><strong>r</strong></span>, is used to identify the location of an object in multiple dimensions.<br><br>
+<span class="vecteur"><strong>r</strong></span> = x<strong>i&#x302;</strong> + y<strong>j&#x302;</strong> + z<strong>k&#x302;</strong> identifies the location of an object in 3-dimensional space.<br><br>
+<span class="vecteur"><strong>&#916;r</strong></span> = <span class="vecteur"><strong>r<sub>f</sub></strong></span> - <span class="vecteur"><strong>r<sub>i</sub></strong></span> is the displacement of an object in 3-dimensional space.<br><br>
+<span class="vecteur"><strong>&#916;r</strong></span>/<span class="vecteur"><strong>&#916;t</strong></span> = <span class="vecteur"><strong>v</strong></span><sub>average</sub> & <span class="vecteur"><strong>dr</strong></span>/dt = <span class="vecteur"><strong>v</strong></span><sub>instantaneous</sub><br>
+<span class="vecteur"><strong>&#916;v</strong></span>/<span class="vecteur"><strong>&#916;t</strong></span> = <span class="vecteur"><strong>a</strong></span><sub>average</sub> & <span class="vecteur"><strong>dv</strong></span>/dt = <span class="vecteur"><strong>a</strong></span><sub>instantaneous</sub>
+<br><br>
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Projectile">III.II Projectile Motion.</span></h3>
+	    </header>
+	    <article>
+	    
+	    <strong><font color="red">P. Rule 25.</font></strong> <strong>Projectile Motion</strong> - A specialization of Free Fall in which the object is moving in multiple dimensions. Thus, this movement has all of the properties of free fall in place:<br>
+	    - The only force acting on it is the Force of Gravity.<br>
+	    - It is not touching any other objects.<br>
+	    - There is no air resistance (the object is falling in a vacuum).<br>
+	    - The object has Uniformly Accelerated Motion, and thus can have all of the U.A.M. equations applied.
+	    <br><br>
+	    When solving a problem like this, you would need to separate your known variables in the x and y directions. The equations that describe the motions of an object in projectile motion are different in the x direction and the y direction. Various things placed in their appropriate columns include:
+	    <br><br>
+	    X-direction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;&hairsp;&hairsp;&hairsp;┃&nbsp;Y-Direction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+	    ━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━━━━━<br>
+	    a<sub>x</sub> = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;┃&nbsp;Free-Fall<br>
+	    Constant Velocity&thinsp;┃&nbsp;a<sub>y</sub> = -g = -9.81(m/s²)<br>
+	    V<sub>x</sub> = (∆x / ∆t)&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;┃&nbsp;U.A.M.<br>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;┃&nbsp;<br>
+	    <br>&nbsp;&nbsp;(<u>Needs 2 Var.</u>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>Needs 3 Var.</u>)<br><br>
+	    In projectile motion, the object will not accelerate to the left or to the right, it will have a constant velocity only. The localized gravity here on Earth makes it only give the y direction of a falling object acceleration.<br><br> If you were to drop an object straight downward, the constant velocity would be zero as it would not move in the x or y direction whatsoever. It would also not be in projectile motion, as it is only moving in one dimension.<br> If the object were to be thrown however, the object would have a non-zero constant velocity and would be in projectile motion.<br><br><br>
+	    
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≠  ≤,  ≥   the roof is &#x302;   -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
+	    
+	    
+	    <strong><font color="red">P. Rule 26.</font></strong> - <strong>Differing equations</strong> for free fall in the X-direction and Y-directions:<br>
+	    <h3>X-DIRECTION:</h3>
+	    Since the acceleration for projectile motion in the x-direction is always zero, and every U.A.M. equation has acceleration, after plugging in zero for acceleration for each one we are left with only two equations:<br><br>1. <strong>V<sub>F</sub> = V<sub>i</sub></strong><br>
+	    The first equation simplifies the velocity of x in projectile motion to a single variable, V<sub>x</sub>, which we already intuitively knew.<br><br>
+	    
+	    <strong>2. ∆x = V<sub>i</sub> × ∆t</strong><br><br>
+	    Substituting in V<sub>x</sub>, as discovered in the first equation, gives us the following:<br><br>
+	    <strong>∆x = V<sub>x</sub> × ∆t</strong><br><br>
+	    Upon further inspection, one should be able to identify this equation as merely being the standard velocity equation:
+	    V<sub>x</sub> = (∆x / ∆t)<br><br>
+	    Thus, the velocity equation itself must be the one used when calculating movement in the x direction during projectile motion. Since there are only 3 variables, you would need to know 2 variables to discover the other 1.<br>
+	    <h3>Y-DIRECTION:</h3>
+	    For the y direction, the equations are the same as they have always been - all four U.A.M. equations are in play with acceleration as -9.81 m/s², and you need three variables to find the other two. This simplifies the process.<br><br><br>
+	    
+	    <strong><font color="red">P. Rule 27.</font></strong> The only U.A.M. variable that is a scalar is change in time (∆t). If you solve for the change in time in the y or x direction, you can use it for the other direction. This is because ∆t is independent of direction as a scalar.<br><br><br>
+	    
+	    <strong><font color="red">P. Rule 28.</font></strong> When you need to find the final velocity of an object in projectile motion, you need to find the velocity in the y direction and the velocity in the x direction. Then, you must realize that since you have the x and y components of an objects movement, that you have the decomposed vector and now need to find the vector itself, the hypotenuse of the triangle through the pythagorean theorem.<br><br>NEVER FORGET to find the direction at the end - you just have to do the sin inverse (or cosine inverse depending on which theta you need, though the theta should always be on the tail of the vector/hypotenuse) using the x and y decomposed vectors. This will give you the angle that, if you don't have any particular directions to work off at the beginning, can just be said to 'in front of the negative y-axis' if the object is moving rightward and downward, changing this as needed. <br>Remember that angles also must follow sig. fig. rules no matter what. <br>Vectors always require direction in addition to magnitude, a + or - will not do.<br><br><br>
+	    <strong><font color="red">P. Rule 29.</font></strong> As an object falls, the magnitude of the velocity increases and the direction of the velocity points farther and farther down. The velocity vector arrows increase in length as the object falls, because the magnitude of the object's velocity keeps increasing.<br><br><br>
+	    
+	    <strong><font color="red">P. Rule 30.</font></strong> Any U.A.M. variable that is a vector (everything other than time) can be decomposed to find its x and y-direction component vectors. This is most useful when you need to find the movement of an object in both directions during projectile motion. For example, if an object were to be launched with an initial speed of 3.25 m/s at an angle of 61.7°, you can easily find the initial velocity in the x-direction and y-direction by using the decomposition tricks of Rule 20.<br><br><br>
+	    
+	    <strong><font color="red">P. Rule 31.</font></strong> When doing calculations with unit vectors, as could be done in the previous question, the 2nd U.A.M. equation (and all others, for that matter) can be easily converted into a more useful form:<br><br>
+	    <strong><span class="vecteur">r</span><sub>F</sub> = <span class="vecteur">r</span><sub>i</sub> + <span class="vecteur">V</span><sub>i</sub> × t + (1/2) × <span class="vecteur">a</span> × t²</strong><br>
+	    <br>Of course, this equation was created by recognizing <strong><span class="vecteur">r</span></strong> as being the displacement (∆x), and splitting it into its final and initial forms and moving the initial to the right side, as can be done for ∆x or acceleration at any time. Whereas before we were not writing the vector symbols in the U.A.M. equations, we are taking specific note of their vector status now. <br><br>'<span class="vecteur">r</span>' is a <strong>displacement vector</strong>, representing the change in position of the object - see Rule 24 for more uses of it. <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are <strong>position vectors</strong>, in that they describe the object's location at specific points in time, each being the sum of its components in the x and y directions (and potentially z direction in 3D space). <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are of course representative of the initial and final positions of the object, respectively. The displacement vector <strong><span class="vecteur">r</span></strong> indicates the direct path and distance between these two positions.<br><br>
+	    Recall that when you are working in unit vectors, U.A.M. equations are done with the x and y component vectors of each vector. For example, <span class="vecteur"><strong>V<sub>i</sub></strong></span> can have the value [1.32i&#x302; + 4.24j&#x302;] (or anything of the sort) plugged in to any equation. These form a more fun equation to solve, because you are plugging in the x and y forms simultaneously into the equation (for an example and a neat trick, see Rule 32). 
+	    <br><br><strong><u><font style="font-size:140%;">EXTREMELY IMPORTANT, READ THIS</font></u></strong>: <br>You can easily get very confused when you draw the curved trajectory of an object in projectile motion, and then you draw a vector with a straight line. No, the vector you drew for whichever variable is not saying that the object moved in that same straight line. That is not what vectors mean - vectors represent direction and magnitude, not the actual path of motion. If you have the initial velocity for an object and you draw the vector to find the x and y components, you are only drawing a visualization of a position vector, (as described above), of how much the velocity or whatever is directed horizontally or vertically. <br>The vector right triangle is not the actual trajectory of the object on a graph. <br>The vector right triangle is not the actual trajectory of the object on a graph.
+	    
+	    <br><br><br>
+	    <strong><font color="red">P. Rule 32.</font></strong> There is something very beautiful that is the result of the independence of the x and y-directions - Say you have plugged in the unit vectors for each of the variables in the 2nd U.A.M. equation (in the same fashion as Rule 31), and you get the following: <br><br> [0.93i&#x302; + yj&#x302;] = [0i&#x302; + 0j&#x302;] + [1.54079i&#x302; + 2.86155j&#x302;]t + (1/2) × [-9.81j&#x302;]t²<br>0.93i&#x302; + yj&#x302; = 1.54079ti&#x302; + 2.86155tj&#x302; - 4.905t²j&#x302;<br><br>
+	    What I will now do, will be one of the miraculous things you have ever seen in your life, and something you shall remember until your dying days: Because x-direction and y-direction are independent, we can isolate the x-direction by removing everything else:<br><br>0.93 = 1.54079t<br><br> From here, the process is simple, isolating time and whatnot (which, as we learned in the revelations of Rule 27, is a directionless scalar quantity that can be used in both the x and y directions). Of course, we can repeat this process by isolating the y-direction, where we can now plug in the newly found time.
+	    
+	    <br><br><br>
+	    <strong><font color="red">P. Rule 33.</font></strong> Some general tricks that keep one's ducks in line when doing physakz: When you discover the value of a new variable, always immediately check whether the sign is correct.<br><br>1. Your object is falling? The velocity is going to be negative.<br>2. You found negative time? Time travel doesn't exist yet. Go back and find your error somewhere, which probably has to do with possibility 1.<br><br>Additionally, sometimes, specifically when you are finding time in the 2nd U.A.M. equation (where time is squared), you will need to use the quadratic formula. Try to figure any possible way in which you avoid using it, whether using a different formula or whatever. If you have to, you have to, but use your common sense in determining which answer applies to your problem, if only one.<br><br><br>
+	    <!--<strong><font color="red">P. Rule 35.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 36.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 37.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 38.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 39.</font></strong> <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 40.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 41.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 42.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 43.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 44.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 45.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 46.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 47.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 48.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 49.</font></strong> <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 50.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 51.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 52.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 53.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 54.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 55.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 56.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 57.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 58.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 59.</font></strong> <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 60.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 61.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 62.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 63.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 64.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 65.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 66.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 67.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 68.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 69.</font></strong> <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 70.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 71.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 72.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 73.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 74.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 75.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 76.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 77.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 78.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 79.</font></strong> <br><br><br>
+	    
+	    <strong><font color="red">P. Rule 80.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 81.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 82.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 83.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 84.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 85.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 86.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 87.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 88.</font></strong> <br><br><br>
+	    <strong><font color="red">P. Rule 89.</font></strong> <br><br><br>
+	    
+	    -->
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Drag">III.III Drag.</span></h3>
+	    </header>
+	    <article>
+	    
+	    <strong><font color="#006400">Free Body Diagram</font></strong>: A graphic used to visualize the various forces working on an object at a particular instant. <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/Free_body_diagram2.svg">Example</a>.<br><br><br>
+	    
+	    <strong><font color="red">Rule 34. My Treatise on Drag:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
+	    While the force of gravity acts straight down on the object based on its center of mass, the force of drag acts opposite to the direction of the velocity of the object:
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dragGraph.png"><img src="/Physics/img/dragGraph.png" alt="A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of Flipping Physics." width=29%/></a></div>
+	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>The force of drag is (generally - this will be discussed more later) defined by the following equation:<br><br><strong>F<sub>drag</sub> = (1/2) × ρ × V² × D × A</strong><br><br> <strong>ρ</strong> (rho) = Density of the medium<br><strong>V</strong> = Velocity of the object<br><strong>D</strong> = Drag Coefficient<br><strong>A</strong> = Cross Sectional Area<br><br><strong>A</strong>: The cross-sectional area of the object is the area of the object normal to the direction of it's travel. E.g., when the object is moving directly towards you, what object do you see?<br>Take the object to be a ball, for the sake of discussion. <br><br><strong>A<sub>circle</sub> = πr²</strong><br> Additionally, let's assume that the radius and mass of the ball are 0.031835 meters and 0.14529 kg, respectively, and that the velocity V<sub>ix</sub> in the first 1/100th of a second is 4.469444 m/s. <br><br>
+	    <strong>D</strong>: The drag coefficient is a number which aerodynamicists use to model all of the complex dependencies of drag on shape, inclination, and some flow conditions. Essentially, it the number determined through experiment that helps determine an object's drag. Thus, the coefficient will change depending on the shape of the object, the type of fluid flow around the object, and the object's speed.<br>
+	    The drag coefficient for a smooth sphere is 0.5, conveniently.<br><br>
+	    
+	    <strong>ρ</strong>: The medium in which the object is traveling is of course air, and the density of air can fluctuate due to temperature and pressure differences. The generalized air density we will use is 1.275 kg/m³. <br><br>
+	    <strong>V</strong>: Since we know we will be working with the force in the x-direction, we can use V<sub>i</sub> and V<sub>F</sub> interchangeably with V<sub>T</sub>. As the velocity of the object changes, the drag coefficient will change with it, changing the net force (as shown in the free body diagram) of the ball, and changing the ball's acceleration. Summarized, <br><br> 
+	    <strong>∆V → ∆F<sub>net</sub> → ∆a.</strong><br>
+	    &thinsp;&thinsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;&hairsp;&hairsp;↓<br>
+	    &thinsp;&thinsp;┗━━━━━━━━━━━━━┛<br><br>
+	    Clearly, the acceleration is not constant throughout this interaction, and so the object would not be in U.A.M.<br>However, the mathematician <strong>Leonhard Euler</strong> devised a trick to emulate U.A.M. by splitting the motion of the object into many short-lasting parts, such as 1/100th of a second, under which the acceleration is approximately constant. This is similar to the concept of Riemann sums being used to find the area under the curves, with the more subdivisions, the more accuracy. Let us do some preliminary work to find the net force in the x-direction before utilizing Euler's method:<br>
+	    <h3 style="font-size:135%;">&Sigma;&hairsp;F<sub>x</sub> = -F<sub>drag x</sub> = m × a<sub>x</sub><br>a<sub>x</sub> = -((1/2) × ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × A)<br>a<sub>x</sub> = -(ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × (πr²)) / 2m<br>a<sub>x</sub> = -(1.275 × (4.4694)² × 0.5 × (π × (0.031835)²))&nbsp;&nbsp;/&nbsp;&nbsp;2 × (0.14529)<br>a<sub>x</sub> = -0.13953 m/s²
+	    <br>
+	    </h3>
+	    There is only one force in the x-direction, the drag, which is of course going in the opposite direction of the object in the x-direction and so is negative. This is the net force of the ball, and by <u>Newton's Second Law of Motion</u> (see Rule [[[[[[[[[), we know that the net force is equal to the mass of the ball times the acceleration in the x-direction. Continuing onward, we can substitute in the drag equation to be equal to mass times acceleration. From there, the algebra is simple, and you just need to plug in all of your variables to find the answer.<br><br>
+	    As a result, we have found the acceleration in the x-direction, which DOES NOT EXIST in projectile motion. Since you now know acceleration, Velocity initial, and change in time (1/100 sec), you find 4.6805 m/s as your velocity final. Therefore, compared to the Velocity initial of this 0.01 second period of 4.4694, the velocity in the x-direction (which we took to be constant) has decreased by 1.4 thousandths of a meter per second, accounting for air resistance in our calculations and contrary to what the standard U.A.M. equations for projectile motion would suggest.<br><br>
+	    ∆x = x<sub>F</sub> - x<sub>i</sub> = V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>x<sub>F</sub> = x<sub>i</sub> + V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>
+	    x = (0)+(4.4694) × (0.01) + (1/2) × (-0.13953) × (0.01)²<br>
+	    = 0.04469 meters<br><br>
+	    <!--$$\sum_{n=0}^n {b_n}$$-->
+	    <br>
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	  </article>
 	</div>
 	
@@ -108,12 +383,12 @@ I move the stuff here from the mechanics full page.
       <footer class="site">
       <br>
       <strong><a href="/Physics/Mechanics.html">Classical Mechanics</a></strong><br>
-        <article><strong><a href="/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong></article>
+        <article><strong><a href="https://humanknowledge.neocities.org/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong></article>
         <br>
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong>Vectors and Projectile Motion</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 28 2024</span><br>
+      	<span class="tiny">Last Change: August 29 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

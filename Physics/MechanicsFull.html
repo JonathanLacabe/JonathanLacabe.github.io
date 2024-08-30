@@ -105,6 +105,16 @@
         </div>
       </div>
       <br>
+      
+      <article><center><a href="#Range">IV. Range & Relative Motion</a></center></article>
+
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#RangeBasics">IV.I Range Basics.</a>
+        </div>
+      </div>
+      
+      <br>
 
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Velocity">I. Velocity, Speed, Acceleration.</span></h2>
@@ -584,8 +594,63 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    
 	    <br><br><br>
 	    <strong><font color="red">P. Rule 33.</font></strong> Some general tricks that keep one's ducks in line when doing physakz: When you discover the value of a new variable, always immediately check whether the sign is correct.<br><br>1. Your object is falling? The velocity is going to be negative.<br>2. You found negative time? Time travel doesn't exist yet. Go back and find your error somewhere, which probably has to do with possibility 1.<br><br>Additionally, sometimes, specifically when you are finding time in the 2nd U.A.M. equation (where time is squared), you will need to use the quadratic formula. Try to figure any possible way in which you avoid using it, whether using a different formula or whatever. If you have to, you have to, but use your common sense in determining which answer applies to your problem, if only one.<br><br><br>
-	    <!--<strong><font color="red">P. Rule 35.</font></strong> <br><br><br>
-	    <strong><font color="red">P. Rule 36.</font></strong> <br><br><br>
+	    
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Drag">III.III Drag.</span></h3>
+	    </header>
+	    <article>
+	    
+	    <strong><font color="#006400">Free Body Diagram</font></strong>: A graphic used to visualize the various forces working on an object at a particular instant. <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/Free_body_diagram2.svg">Example</a>.<br><br><br>
+	    
+	    <strong><font color="red">Rule 34. My Treatise on Drag:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
+	    While the force of gravity acts straight down on the object based on its center of mass, the force of drag acts opposite to the direction of the velocity of the object:
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dragGraph.png"><img src="/Physics/img/dragGraph.png" alt="A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of Flipping Physics." width=29%/></a></div>
+	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>The force of drag is (generally - this will be discussed more later) defined by the following equation:<br><br><strong>F<sub>drag</sub> = (1/2) × ρ × V² × D × A</strong><br><br> <strong>ρ</strong> (rho) = Density of the medium<br><strong>V</strong> = Velocity of the object<br><strong>D</strong> = Drag Coefficient<br><strong>A</strong> = Cross Sectional Area<br><br><strong>A</strong>: The cross-sectional area of the object is the area of the object normal to the direction of it's travel. E.g., when the object is moving directly towards you, what object do you see?<br>Take the object to be a ball, for the sake of discussion. <br><br><strong>A<sub>circle</sub> = πr²</strong><br> Additionally, let's assume that the radius and mass of the ball are 0.031835 meters and 0.14529 kg, respectively, and that the velocity V<sub>ix</sub> in the first 1/100th of a second is 4.469444 m/s. <br><br>
+	    <strong>D</strong>: The drag coefficient is a number which aerodynamicists use to model all of the complex dependencies of drag on shape, inclination, and some flow conditions. Essentially, it the number determined through experiment that helps determine an object's drag. Thus, the coefficient will change depending on the shape of the object, the type of fluid flow around the object, and the object's speed.<br>
+	    The drag coefficient for a smooth sphere is 0.5, conveniently.<br><br>
+	    
+	    <strong>ρ</strong>: The medium in which the object is traveling is of course air, and the density of air can fluctuate due to temperature and pressure differences. The generalized air density we will use is 1.275 kg/m³. <br><br>
+	    <strong>V</strong>: Since we know we will be working with the force in the x-direction, we can use V<sub>i</sub> and V<sub>F</sub> interchangeably with V<sub>T</sub>. As the velocity of the object changes, the drag coefficient will change with it, changing the net force (as shown in the free body diagram) of the ball, and changing the ball's acceleration. Summarized, <br><br> 
+	    <strong>∆V → ∆F<sub>net</sub> → ∆a.</strong><br>
+	    &thinsp;&thinsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;&hairsp;&hairsp;↓<br>
+	    &thinsp;&thinsp;┗━━━━━━━━━━━━━┛<br><br>
+	    Clearly, the acceleration is not constant throughout this interaction, and so the object would not be in U.A.M.<br>However, the mathematician <strong>Leonhard Euler</strong> devised a trick to emulate U.A.M. by splitting the motion of the object into many short-lasting parts, such as 1/100th of a second, under which the acceleration is approximately constant. This is similar to the concept of Riemann sums being used to find the area under the curves, with the more subdivisions, the more accuracy. Let us do some preliminary work to find the net force in the x-direction before utilizing Euler's method:<br>
+	    <h3 style="font-size:135%;">&Sigma;&hairsp;F<sub>x</sub> = -F<sub>drag x</sub> = m × a<sub>x</sub><br>a<sub>x</sub> = -((1/2) × ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × A)<br>a<sub>x</sub> = -(ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × (πr²)) / 2m<br>a<sub>x</sub> = -(1.275 × (4.4694)² × 0.5 × (π × (0.031835)²))&nbsp;&nbsp;/&nbsp;&nbsp;2 × (0.14529)<br>a<sub>x</sub> = -0.13953 m/s²
+	    <br>
+	    </h3>
+	    There is only one force in the x-direction, the drag, which is of course going in the opposite direction of the object in the x-direction and so is negative. This is the net force of the ball, and by <u>Newton's Second Law of Motion</u> (see Rule [[[[[[[[[), we know that the net force is equal to the mass of the ball times the acceleration in the x-direction. Continuing onward, we can substitute in the drag equation to be equal to mass times acceleration. From there, the algebra is simple, and you just need to plug in all of your variables to find the answer.<br><br>
+	    As a result, we have found the acceleration in the x-direction, which DOES NOT EXIST in projectile motion. Since you now know acceleration, Velocity initial, and change in time (1/100 sec), you find 4.6805 m/s as your velocity final. Therefore, compared to the Velocity initial of this 0.01 second period of 4.4694, the velocity in the x-direction (which we took to be constant) has decreased by 1.4 thousandths of a meter per second, accounting for air resistance in our calculations and contrary to what the standard U.A.M. equations for projectile motion would suggest.<br><br>
+	    ∆x = x<sub>F</sub> - x<sub>i</sub> = V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>x<sub>F</sub> = x<sub>i</sub> + V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>
+	    x = (0)+(4.4694) × (0.01) + (1/2) × (-0.13953) × (0.01)²<br>
+	    = 0.04469 meters<br><br>
+	    <!--$$\sum_{n=0}^n {b_n}$$-->
+	    <br>
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+	    
+	    </article>
+	    <header class="articleHeader"><hr><hr>
+	    <h2><span class="mw-headline" id="Range">IV. Range.</span></h2>
+	    <h3><span class="mw-headline" id="RangeBasics">IV.I Range Basics.</span></h3>
+	  </header>
+	  <article>
+	    <strong><font color="#006400">Range</font></strong>: The horizontal displacement of an object in projectile motion when the overall displacement in the Y direction of the object equals zero. READ: The Horizontal Displacement.
+<br><br><br>
+	    <strong><font color="red">P. Rule 35.</font></strong> Range. <br><strong>
+	    Range = (V<sub>i</sub>² × sin(2θ<sub>i</sub>)) / g</strong><br><br>
+	    <strong>R</strong> = Range = Δx<br>
+	    <strong>V<sub>i</sub></strong> = ||V<sub>i</sub>|| (Magnitude of Vi)<br>
+	    <strong>θ<sub>i</sub></strong> = Initial Angle or Launch Angle<br>
+	    <strong>g</strong> = Acceleration due to gravity on Earth, POSITIVE 9.81 m/s²
+	    <br><br>Because both the magnitude and direction of the initial velocity vectors are present in the equation, the initial velocity does not need to be resolved into its components for use in the equation.<br><br>
+	    <strong>g</strong>: In projectile motion, a<sub>y</sub> = -g<br>g = +9.81 m/s²<br> a<sub>y</sub> = -9.81 m/s²<br>Given this information, we know that the value in the bottom of the equation is not the negative acceleration we are accustomed to, but rather the positive acceleration due to gravity on planet Earth, 9.81 m/s².<br><br>
+	    <strong>θ<sub>i</sub></strong>: The sine of any angle can never be greater than one. Therefore, the maximum range an angle can have (given the magnitude of the velocity initial is constant, which is should considering this is the x-direction) is discoverable through simply setting the sine value of the equation equal to one:<br>1 = sin(2θ<sub>i</sub>)<br>2θ<sub>i</sub> = sin⁻¹(1) = 90°<br>θ<sub>i</sub> = (90° / 2) = 45°. Therefore, a launch angle of 45° will give us the maximum range of an object given a constant magnitude of the initial velocity. Any angle other than 45° will give a smaller range.
+	    
+	    <br><br><br>
+	    <!--<strong><font color="red">P. Rule 36.</font></strong> <br><br><br>
 	    <strong><font color="red">P. Rule 37.</font></strong> <br><br><br>
 	    <strong><font color="red">P. Rule 38.</font></strong> <br><br><br>
 	    <strong><font color="red">P. Rule 39.</font></strong> <br><br><br>
@@ -649,41 +714,6 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
-	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
-	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    </article>
-	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="Drag">III.III Drag.</span></h3>
-	    </header>
-	    <article>
-	    
-	    <strong><font color="#006400">Free Body Diagram</font></strong>: A graphic used to visualize the various forces working on an object at a particular instant. <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/Free_body_diagram2.svg">Example</a>.<br><br><br>
-	    
-	    <strong><font color="red">Rule 34. My Treatise on Drag:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
-	    While the force of gravity acts straight down on the object based on its center of mass, the force of drag acts opposite to the direction of the velocity of the object:
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dragGraph.png"><img src="/Physics/img/dragGraph.png" alt="A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of Flipping Physics." width=29%/></a></div>
-	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>The force of drag is (generally - this will be discussed more later) defined by the following equation:<br><br><strong>F<sub>drag</sub> = (1/2) × ρ × V² × D × A</strong><br><br> <strong>ρ</strong> (rho) = Density of the medium<br><strong>V</strong> = Velocity of the object<br><strong>D</strong> = Drag Coefficient<br><strong>A</strong> = Cross Sectional Area<br><br><strong>A</strong>: The cross-sectional area of the object is the area of the object normal to the direction of it's travel. E.g., when the object is moving directly towards you, what object do you see?<br>Take the object to be a ball, for the sake of discussion. <br><br><strong>A<sub>circle</sub> = πr²</strong><br> Additionally, let's assume that the radius and mass of the ball are 0.031835 meters and 0.14529 kg, respectively, and that the velocity V<sub>ix</sub> in the first 1/100th of a second is 4.469444 m/s. <br><br>
-	    <strong>D</strong>: The drag coefficient is a number which aerodynamicists use to model all of the complex dependencies of drag on shape, inclination, and some flow conditions. Essentially, it the number determined through experiment that helps determine an object's drag. Thus, the coefficient will change depending on the shape of the object, the type of fluid flow around the object, and the object's speed.<br>
-	    The drag coefficient for a smooth sphere is 0.5, conveniently.<br><br>
-	    
-	    <strong>ρ</strong>: The medium in which the object is traveling is of course air, and the density of air can fluctuate due to temperature and pressure differences. The generalized air density we will use is 1.275 kg/m³. <br><br>
-	    <strong>V</strong>: Since we know we will be working with the force in the x-direction, we can use V<sub>i</sub> and V<sub>F</sub> interchangeably with V<sub>T</sub>. As the velocity of the object changes, the drag coefficient will change with it, changing the net force (as shown in the free body diagram) of the ball, and changing the ball's acceleration. Summarized, <br><br> 
-	    <strong>∆V → ∆F<sub>net</sub> → ∆a.</strong><br>
-	    &thinsp;&thinsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;&hairsp;&hairsp;↓<br>
-	    &thinsp;&thinsp;┗━━━━━━━━━━━━━┛<br><br>
-	    Clearly, the acceleration is not constant throughout this interaction, and so the object would not be in U.A.M.<br>However, the mathematician <strong>Leonhard Euler</strong> devised a trick to emulate U.A.M. by splitting the motion of the object into many short-lasting parts, such as 1/100th of a second, under which the acceleration is approximately constant. This is similar to the concept of Riemann sums being used to find the area under the curves, with the more subdivisions, the more accuracy. Let us do some preliminary work to find the net force in the x-direction before utilizing Euler's method:<br>
-	    <h3 style="font-size:135%;">&Sigma;&hairsp;F<sub>x</sub> = -F<sub>drag x</sub> = m × a<sub>x</sub><br>a<sub>x</sub> = -((1/2) × ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × A)<br>a<sub>x</sub> = -(ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × (πr²)) / 2m<br>a<sub>x</sub> = -(1.275 × (4.4694)² × 0.5 × (π × (0.031835)²))&nbsp;&nbsp;/&nbsp;&nbsp;2 × (0.14529)<br>a<sub>x</sub> = -0.13953 m/s²
-	    <br>
-	    </h3>
-	    There is only one force in the x-direction, the drag, which is of course going in the opposite direction of the object in the x-direction and so is negative. This is the net force of the ball, and by <u>Newton's Second Law of Motion</u> (see Rule [[[[[[[[[), we know that the net force is equal to the mass of the ball times the acceleration in the x-direction. Continuing onward, we can substitute in the drag equation to be equal to mass times acceleration. From there, the algebra is simple, and you just need to plug in all of your variables to find the answer.<br><br>
-	    As a result, we have found the acceleration in the x-direction, which DOES NOT EXIST in projectile motion. Since you now know acceleration, Velocity initial, and change in time (1/100 sec), you find 4.6805 m/s as your velocity final. Therefore, compared to the Velocity initial of this 0.01 second period of 4.4694, the velocity in the x-direction (which we took to be constant) has decreased by 1.4 thousandths of a meter per second, accounting for air resistance in our calculations and contrary to what the standard U.A.M. equations for projectile motion would suggest.<br><br>
-	    ∆x = x<sub>F</sub> - x<sub>i</sub> = V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>x<sub>F</sub> = x<sub>i</sub> + V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>
-	    x = (0)+(4.4694) × (0.01) + (1/2) × (-0.13953) × (0.01)²<br>
-	    = 0.04469 meters<br><br>
-	    <!--$$\sum_{n=0}^n {b_n}$$-->
-	    <br>
-	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
-	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	  </article>

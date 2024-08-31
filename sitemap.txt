@@ -1,4 +1,4 @@
-All pages as of August 29 2024.
+All pages as of August 31 2024.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -8,9 +8,11 @@ Physics                                              - https://humanknowledge.ne
 -Classical Mechanics                                 - https://humanknowledge.neocities.org/Physics/Mechanics
 --Classical Mechanics Table of Contents              - https://humanknowledge.neocities.org/Physics/toc
 --Full Classical Mechanics, Part 1: Kinematics       - https://humanknowledge.neocities.org/Physics/MechanicsFull
---Velocity, Speed, Acceleration                      - https://humanknowledge.neocities.org/Physics/mechanics/velspaccel
---Free Fall                                          - https://humanknowledge.neocities.org/Physics/mechanics/freefall
---Vectors and Projectile Motion                      - https://humanknowledge.neocities.org/Physics/mechanics/vectors
+--Full Classical Mechanics, Part 2: Dynamics         - https://humanknowledge.neocities.org/Physics/MechanicsFull2
+---Velocity, Speed, Acceleration                     - https://humanknowledge.neocities.org/Physics/mechanics/velspaccel
+---Free Fall                                         - https://humanknowledge.neocities.org/Physics/mechanics/freefall
+---Vectors and Projectile Motion                     - https://humanknowledge.neocities.org/Physics/mechanics/vectors
+---Range & Relative Motion                           - https://humanknowledge.neocities.org/Physics/mechanics/range
 
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
 
@@ -21,11 +23,11 @@ Mathematics                                          - https://humanknowledge.ne
 
 -Algebra 2                                           - https://humanknowledge.neocities.org/math/algebraII
 --Full Algebra 2                                     - https://humanknowledge.neocities.org/math/algebraIIFull
---Quadratic Translation                              - https://humanknowledge.neocities.org/math/algebraII/quadtranslation
---Factoring Pt. 1                                    - https://humanknowledge.neocities.org/math/algebraII/factoring
---Long Division                                      - https://humanknowledge.neocities.org/math/algebraII/longdivision
---Factoring Pt. 2                                    - https://humanknowledge.neocities.org/math/algebraII/factoring2
---Rules of Exponents                                 - https://humanknowledge.neocities.org/math/algebraII/exponentrules
+---Quadratic Translation                             - https://humanknowledge.neocities.org/math/algebraII/quadtranslation
+---Factoring Pt. 1                                   - https://humanknowledge.neocities.org/math/algebraII/factoring
+---Long Division                                     - https://humanknowledge.neocities.org/math/algebraII/longdivision
+---Factoring Pt. 2                                   - https://humanknowledge.neocities.org/math/algebraII/factoring2
+---Rules of Exponents                                - https://humanknowledge.neocities.org/math/algebraII/exponentrules
 
 -Precalulus                                          - https://humanknowledge.neocities.org/math/precalculus
 
@@ -35,15 +37,16 @@ Mathematics                                          - https://humanknowledge.ne
 Cryptography                                         - https://humanknowledge.neocities.org/cryptography/cryptography
 
 
+Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
+~Electrical Symbols                                  - https://humanknowledge.neocities.org/engineering/electrik/symbols
+~List of Electrical Engineering Equations            - https://humanknowledge.neocities.org/engineering/electrik/electriceq
+
+
 Astronomy                                            - https://humanknowledge.neocities.org/astronomy/astronomy
 
 
-Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
-~Electrical Symbols                                  - https://humanknowledge.neocities.org/engineering/electrik/symbols
-~List of Physics Equations                           - https://humanknowledge.neocities.org/Physics/physicseq
+Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics
 
 
 Nuclear Engineering                                  - https://humanknowledge.neocities.org/engineering/nuclear
 
-
-Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics

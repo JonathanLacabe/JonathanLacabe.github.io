@@ -95,13 +95,16 @@
           <a href="#VectorBasics">III.I Vector Basics.</a>
         </div>
         <div class="toc-column">
-          <a href="#Drag">III.III Drag.</a>
+          <a href="#Rotation">III.III Rotation & Multiplication.</a>
         </div>
       </div>
       
       <div class="toc-container">
         <div class="toc-column">
           <a href="#Projectile">III.II Projectile Motion.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#Drag">III.IV Drag.</a>
         </div>
       </div>
       <br>
@@ -418,12 +421,11 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <h3><span class="mw-headline" id="VectorBasics">III.I Vector Basics.</span></h3>
 	  </header>
 	  <article>
+	  
 	    <strong><font color="#006400">Vector</font></strong>: A quantity having both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum. Vectors cannot be negative - their magnitude must always be positive by the virtue of their existence. Their direction is what can make them seem 'negative', meaning that they are in the opposite direction of another vector, potentially resulting in a smaller resultant vector (Rule 18). It is all relative.
 	    <br><br>
 	    <strong><font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density.
 	    <br><br>
-
-
 
 	    <br>
 	    <strong><font color="red">P. Rule 18.</font></strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
@@ -435,12 +437,13 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    In order to solve for the resultant vector, some geometry would need to be performed:<br>
 	    a² + b² = c²<br>
 	    <span class="vecteur"><strong>C</strong></span>² = <span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²<br>
-	    <span class="vecteur"><strong>C</strong></span> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;"><span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²</span></span><br>
-	    = 65 mm/s.<br><br>
+	    ||<span class="vecteur"><strong>C</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;"><span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²</span></span><br>
+	    ||<span class="vecteur"><strong>C</strong></span>|| = 65 mm/s.<br><br>
 	    Since a vector has direction, we need to find it trigonometrically:<br>
 	    tanθ = (O / A) = (<span class="vecteur"><strong>B</strong></span> / <span class="vecteur"><strong>A</strong></span>) = (42 / 49)<br>
 	    θ = tan⁻¹(42/49) = 40.601° = East of North (see rule 19).<br>
 	    Thus, the object is moving at a resultant vector of 65 mm/s East of North.<br><br><br>
+	    
 	    
 	    <font color="blue"><strong>Vector subtraction:</strong></font><br>
 	    Vector subtraction is similar to addition. <span class="vecteur"><strong>A</strong></span> - <span class="vecteur"><strong>B</strong></span> = <span class="vecteur"><strong>A</strong></span> + (-<span class="vecteur"><strong>B</strong></span>). Thus, all that would need to be done for vector subtraction is to put <span class="vecteur"><strong>B</strong></span> in the opposite direction and discover the resultant vector from there. This, indeed, can be a different resultant vector from vector addition - gander:
@@ -466,7 +469,7 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <br><br>sinθ = (O / H) = (<span class="vecteur"><strong>d<sub>y</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>y</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>sinθ = 90sin(32) = 47.693 ≈ 48cm.<br><br>
 	    
 	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
-	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.
+	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.<br><br> The COMPONENTS of a VECTOR are <strong>ALSO VECTORS</strong>. There are just in a single direction, represented in unit vectors like so: [0i&#x302; + 5j&#x302;] or [5i&#x302; + 0j&#x302;] (see Rule 22).
 	    
 	    <br><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈-->
@@ -481,7 +484,7 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <span class="tiny"><em>The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the pythagorean theorem.</em></span><br><br>
     <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
-	    <br><br>
+	    <br>
 	    
 	    
 	    <strong><font color="red">P. Rule 22.</font></strong> <strong>UNIT VECTORS:</strong><br>
@@ -525,8 +528,8 @@ Because change in r is also change in position, this vector is also the displace
 
 Because the question asked for the distance, we need to find the magnitude of the displacement using that specific equation; see the definition of displacement in section I.III for a better understanding of what is being done here.
 
-<p>|Δ<span class="vecteur"><strong>r</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(5.39040)² + (9.07405)²</span></span></p>
-<p>|Δ<span class="vecteur"><strong>r</strong></span>| = 10.5544 ≈ 10.6m</p>
+<p>||Δ<span class="vecteur"><strong>r</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(5.39040)² + (9.07405)²</span></span></p>
+<p>||Δ<span class="vecteur"><strong>r</strong></span>|| = 10.5544 ≈ 10.6m</p>
 
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
@@ -601,9 +604,125 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    <br><br><br>
 	    <strong><font color="red">P. Rule 33.</font></strong> Some general tricks that keep one's ducks in line when doing physakz: When you discover the value of a new variable, always immediately check whether the sign is correct.<br><br>1. Your object is falling? The velocity is going to be negative.<br>2. You found negative time? Time travel doesn't exist yet. Go back and find your error somewhere, which probably has to do with possibility 1.<br><br>Additionally, sometimes, specifically when you are finding time in the 2nd U.A.M. equation (where time is squared), you will need to use the quadratic formula. Try to figure any possible way in which you avoid using it, whether using a different formula or whatever. If you have to, you have to, but use your common sense in determining which answer applies to your problem, if only one.<br><br><br>
 	    
+	    
 	    </article>
 	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="Drag">III.III Drag.</span></h3>
+	      <h3><span class="mw-headline" id="Rotation">III.III Rotation & Multiplication.</span></h3>
+	    </header>
+	    <article>
+	    These are just some neat tricks with vectors that always come in handy.<br><br>
+	    
+	    
+	    <font color="blue"><strong>Vector Rotation:</strong></font><br>
+	    The coordinate system you are familiar with has the x and y axes parallel to the sides of the page. When you have a vector (lets name it <span class="vecteur"><strong>a</strong></span><!--THE CHRISTENING OF THE VECTOR-->) on this natural coordinate system, the components of the vectors are going to parallel to the sides of the page as well. 
+	    <br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/coordinatevector.png"><img src="/Physics/img/vectors/coordinatevector.png" alt="The vector a with its component vectors and the angle theta." width=26%/></a></div>
+	    <span class="tiny"><em>The vector <span class="vecteur"><strong>a</strong></span> with its component vectors and the angle theta.</em></span><br><br>
+	    
+	    If you were to rotate the axes (but not the vector <span class="vecteur"><strong>a</strong></span>)  through an angle ϕ as shown below, the components would have new values, <span class="vecteur"><strong>a'<sub>x</sub></strong></span> and <span class="vecteur"><strong>a'<sub>y</sub></strong></span>. Since there are an infinite number of choices of ϕ, there are an infinite number of different pairs of components for <span class="vecteur"><strong>a</strong></span>:<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/tiltedvector.png"><img src="/Physics/img/vectors/tiltedvector.png" alt="The coordinate axes of vector a having been tilted and afforded new component vectors." width=36%/></a></div>
+	    <span class="tiny"><em>The coordinate axes of vector <span class="vecteur"><strong>a</strong></span> having been tilted and afforded new component vectors.</em></span><br><br>
+||<span class="vecteur"><strong>a</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(<span class="vecteur"><strong>aₓ</strong></span>)² + (<span class="vecteur"><strong>aᵧ</strong></span>)²</span></span><br><br>
+||<span class="vecteur"><strong>a</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(<span class="vecteur"><strong>a'ₓ</strong></span>)² + (<span class="vecteur"><strong>a'ᵧ</strong></span>)²</span></span><br><br>
+Also,<br><br>
+θ = θ′ + ϕ<br><br>The relations among vector do not depend on the location of the origin nor on the orientation of the axes.
+	    <br><br><br>
+	    <h3><strong>==Multiplying Vectors==</strong></h3>
+
+There are three types of vector muliplication. The first type is multiplying a vector by a scalar, which gives a vector. The other two multiply a vector by a vector, of which you have two choices: Taking the 'dot product' of two vectors gives a scalar answer, while taking the 'cross product' gives a new vector that is perpendicular to the original two, the direction of which can be determined using the right-hand rule.<br><br>
+The best way to understand the difference between dot product and cross product beyond their scalar/vector nature is to consider when their products are minimized or maximized (described in each section). As a simple memorization tool, always remember that <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>a</strong></span> = (|<span class="vecteur"><strong>a</strong></span>|)², or the magnitude of <span class="vecteur"><strong>a</strong></span> squared, while <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>a</strong></span> = 0. The reasons for this are obvious once you analyze each multiplication tool in full.<br> 
+<br><br>
+
+
+<font color="blue"><strong>Multiplying a Vector by a Scalar:</strong></font><br><br>
+The product of the scalar <em>s</em> and a vector <span class="vecteur"><strong>v</strong></span> is a new vector whose magnitude is sv, and whose direction is the same as that of <span class="vecteur"><strong>v</strong></span> if <em>s</em> is positive, and opposite that of <span class="vecteur"><strong>v</strong></span> if <em>s</em> is negative. To divide <span class="vecteur"><strong>v</strong></span> by <em>s</em>, multiply <span class="vecteur"><strong>v</strong></span> by 1/<em>s</em>.
+<br><br><br>
+
+<font color="blue"><strong>Multiplying a Vector by a Vector:</strong></font><br><br>
+<u><strong>DOT PRODUCT:</strong></u><br><br>
+Simply put, in only two dimensions, <br><br>
+<span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = abcosϕ
+<br><br>a and b being the magnitudes of <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>, respectively. <br><strong>ϕ</strong> represents the angle <u>between</u> <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>. 
+
+<br><br>The value given by Dot Product is a scalar, and you can see this through how each term on the right side of the equation is a directionless scalar value. If the angle ϕ between two vectors is 0°, the component of one vector along the other is maximum, and so also is the dot product of the vectors. If, instead, ϕ is 90°, the component of one vector along the other is zero, and so is the dot product. <strong>READ</strong>: If the vectors are parallel, dot product is maximized, and if vectors are perpendicular, the result is zero. Cross product is the opposite.<br><br>
+
+VERY IMPORTANT: The commutative law applies to the dot product. Thus, <br>
+<span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span>
+= <span class="vecteur"><strong>b</strong></span> · <span class="vecteur"><strong>a</strong></span>
+<br>
+This is not true with cross product.<br><br>
+<strong>Triple Vectors</strong> - 
+If either or both of the vectors are 3-dimensional, you must utilize unit-vector notation. In this state, their dot product would be <br><br>
+<span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = (<span class="vecteur"><strong>aₓ</strong></span>i&#x302; + <span class="vecteur"><strong>aᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>a<sub>z</sub></strong></span>k&#x302;) · (<span class="vecteur"><strong>bₓ</strong></span>i&#x302; + <span class="vecteur"><strong>bᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>b<sub>z</sub></strong></span>k&#x302;)<br><br>
+
+<span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = 
+
+<span class="vecteur"><strong>aₓ</strong></span><span class="vecteur"><strong>bₓ</strong></span> + <span class="vecteur"><strong>aᵧ</strong></span><span class="vecteur"><strong>bᵧ</strong></span> + <span class="vecteur"><strong>a<sub>z</sub></strong></span><span class="vecteur"><strong>b<sub>z</sub></strong></span>
+
+<br><br> This will give THE EXACT SAME ANSWER as the original equation if you are only using two-dimensions, and will save you a lot of time if you are very lazy. Ignore the fact that we are not really 'distributing' the terms as you normally do with the distributive law. Unit Vectors are unique.
+<br><br><br>
+
+
+<u><strong>CROSS PRODUCT:</strong></u><br><br>
+Determining the magnitude of the resultant vector is easy - determining the angle/direction of the resultant vector is easy with extra steps.<br><br>Finding the magnitude for vector product is similar to that of dot product: <br><br>
+<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = <span class="vecteur"><strong>c</strong></span><br>
+<span class="vecteur"><strong>c</strong></span> = absinϕ
+<br><br> Of course, a and b are the magnitudes of <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>, respectively. <br><strong>ϕ</strong> represents the angle <u>between</u> <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>. 
+
+<br><br>The value given by Cross Product is a vector, so the direction must be calculated in addition to the magnitude.
+
+ If <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span> are parallel or antiparallel, <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = 0. The magnitude of <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>, which can be written as |<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>|, is maximum when <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span> are perpendicular to each other.
+
+<strong>READ</strong>: If the vector is parallel, the resultant magnitude is 0, and if it is perpendicular, the result is maximized. Dot product is the opposite.<br><br>
+
+VERY IMPORTANT: The commutative law <u>DOES NOT</u> apply to the scalar product. Thus, <br><br>
+<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>
+≠ <span class="vecteur"><strong>b</strong></span> × <span class="vecteur"><strong>a</strong></span>
+<br><br>
+Instead, <br><br>
+<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>
+= -(<span class="vecteur"><strong>b</strong></span> × <span class="vecteur"><strong>a</strong></span>)
+This is the opposite of the dot product.<br><br>
+
+The direction of cross product is pointing in the n&#x302; direction, where n&#x302; ⊥ a&#x302; and n&#x302; ⊥ b&#x302;.
+You can easily determine the direction of a cross product, perpendicular to the two vectors, using the <strong>"Right-hand Rule"</strong>:<br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Right-hand_rule_for_cross_product.png"><img src="/Physics/img/Right-hand_rule_for_cross_product.png" alt="A demonstration of the right hand rule. Courtesy of Wikimedia." width=36%/></a></div>
+	    <span class="tiny"><em>A demonstration of the right hand rule. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Right-hand_rule_for_cross_product.png">Wikimedia</a>.</em></span><br><br>
+
+You can use this system for visualizing the x, y, and z directions as well. The Right-hand uses a right coordinate system, as opposed to a left coordinate system, which would necessitate using the left hand. These systems are merely different visualizations of the x-y-z plane.<br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/handrules.png"><img src="/Physics/img/vectors/handrules.png" alt="The difference between the Left and Right-hand Rules, and how to visualize them on the x-y-z plane." width=36%/></a></div>
+	    <span class="tiny"><em>The difference between the Left and Right-hand Rules, and how to visualize them on the x-y-z plane.</em></span><br><br>
+
+
+
+<strong>Triple Vectors</strong> - 
+If either or both of the vectors are 3-dimensional, you must utilize unit-vector notation. In this state, their cross product would be <br><br>
+
+<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = (<span class="vecteur"><strong>aₓ</strong></span>i&#x302; + <span class="vecteur"><strong>aᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>a<sub>z</sub></strong></span>k&#x302;) · (<span class="vecteur"><strong>bₓ</strong></span>i&#x302; + <span class="vecteur"><strong>bᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>b<sub>z</sub></strong></span>k&#x302;)
+
+<br><br>But we do not simplify to isolate every x, y, and z coefficient as we did with Dot Product. Instead, we are going to use a matrix ([[[[[[[[). <br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/MATRIX.png"><img src="/Physics/img/MATRIX.png" alt="A matrix in which the vector components of a and b are multiplied and subtracted from one another." width=66%/></a></div>
+	    <span class="tiny"><em>A matrix in which the vector components of a and b are multiplied and subtracted from one another.</em></span>
+<br><br>
+Starting from the unit vectors on top, the variables in green are multiplied, and those in red are subtracted from the ones in green, all within the specific unit vector they are attached to. Thus, from this matrix (WHICH SHOULD EASILY BE SET TO MEMORY FOR FUTURE REFERENCE) we can discern the following equation:<br><br>
+<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = 
+
+(<span class="vecteur"><strong>aᵧ</strong></span><span class="vecteur"><strong>b<sub>z</sub></strong></span> - <span class="vecteur"><strong>bᵧ</strong></span><span class="vecteur"><strong>a<sub>z</sub></strong></span>)i&#x302; 
+
++ (<span class="vecteur"><strong>a<sub>z</sub></strong></span><span class="vecteur"><strong>bₓ</strong></span> - <span class="vecteur"><strong>b<sub>z</sub></strong></span><span class="vecteur"><strong>aₓ</strong></span>)j&#x302; 
+
++ (<span class="vecteur"><strong>aₓ</strong></span><span class="vecteur"><strong>bᵧ</strong></span> - <span class="vecteur"><strong>bₓ</strong></span><span class="vecteur"><strong>aᵧ</strong></span>)k&#x302;
+<!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+
+<br><br><br>
+
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Drag">III.IV Drag.</span></h3>
 	    </header>
 	    <article>
 	    
@@ -643,7 +762,7 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    <h3><span class="mw-headline" id="RangeBasics">IV.I Basics of Range.</span></h3>
 	  </header>
 	  <article>
-	    <strong><font color="#006400">Range</font></strong>: The horizontal displacement of an object in projectile motion when the overall displacement in the Y direction of the object equals zero. READ: The Horizontal Displacement.
+	    <strong><font color="#006400">Range</font></strong>: The horizontal displacement of an object in projectile motion when the overall displacement in the Y direction of the object equals zero. <strong>READ</strong>: The Horizontal Displacement.
 <br><br><br>
 	    <strong><font color="red">P. Rule 35.</font></strong> Here is the 'Range' equation, giving you the horizontal displacement (which, you should note, is not written with a Δx, as that would displacement as a whole). There are specific characteristics of a question that will allow you to use the range equation, in the same manner as the U.A.M. equations. If a question explicitly says that an object in projectile motion is landing at the same height which it was thrown (or something to that effect), then the range equation can be used as the displacement in the y direction is zero.<br><br>
 	    <strong>Range = (V<sub>i</sub>² × sin(2θ<sub>i</sub>)) / g</strong><br><br>
@@ -726,7 +845,7 @@ Because the question asked for the distance, we need to find the magnitude of th
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: September 6 2024</span><br>
+      	<span class="tiny">Last Change: September 7 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

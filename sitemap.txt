@@ -1,4 +1,4 @@
-All pages as of August 31 2024.
+All pages as of September 12 2024.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -13,6 +13,7 @@ Physics                                              - https://humanknowledge.ne
 ---Free Fall                                         - https://humanknowledge.neocities.org/Physics/mechanics/freefall
 ---Vectors and Projectile Motion                     - https://humanknowledge.neocities.org/Physics/mechanics/vectors
 ---Range & Relative Motion                           - https://humanknowledge.neocities.org/Physics/mechanics/range
+---Rotational Motion                                 - https://humanknowledge.neocities.org/Physics/mechanics/rotational
 
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
 
@@ -30,6 +31,8 @@ Mathematics                                          - https://humanknowledge.ne
 ---Rules of Exponents                                - https://humanknowledge.neocities.org/math/algebraII/exponentrules
 
 -Precalulus                                          - https://humanknowledge.neocities.org/math/precalculus
+--Full Precalulus                                    - https://humanknowledge.neocities.org/math/precalculusfull
+---Rational Equations                                - https://humanknowledge.neocities.org/math/precalculus/rational
 
 -Single-Variable Calculus                            - https://humanknowledge.neocities.org/math/singlevarcalculus
 
@@ -43,10 +46,17 @@ Electrical Engineering                               - https://humanknowledge.ne
 
 
 Astronomy                                            - https://humanknowledge.neocities.org/astronomy/astronomy
+-Classical Astronomy                                 - https://humanknowledge.neocities.org/astronomy/classical
+--Full Classical Astronomy                           - https://humanknowledge.neocities.org/astronomy/classicalFull
+---Introduction/General Terms                        - https://humanknowledge.neocities.org/astronomy/classical/intro
+---Ancient Astronomy                                 - https://humanknowledge.neocities.org/astronomy/classical/ancient
+---Astr-"ology"                                      - https://humanknowledge.neocities.org/astronomy/classical/pseudoscience
+---Origin of Modern Astronomy                        - https://humanknowledge.neocities.org/astronomy/classical/modern
 
 
 Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics
 
 
 Nuclear Engineering                                  - https://humanknowledge.neocities.org/engineering/nuclear
+
 

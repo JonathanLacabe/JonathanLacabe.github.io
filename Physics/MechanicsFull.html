@@ -744,14 +744,18 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    <strong><font color="red">Rule 34. My Treatise on Drag:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
 	    The force of drag always acts opposite to the direction of the velocity of the object:
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dragGraph.png"><img src="/Physics/img/dragGraph.png" alt="A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of Flipping Physics." width=29%/></a></div>
-	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>The force of drag is (generally - this will be discussed more later) defined by the following equation:<br><br>
+	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>
+	    
+	    There are several equations for drag, each with their own specifications. The equation known simply as the "drag equation" is most commonly used, and is as follows:<br><br>
 	    <strong>F<sub>drag</sub> = (1/2) × ρ × V² × D × A</strong><br><br> 
 	    <strong>ρ</strong> (rho) = Density of the medium<br>
 	    <strong>V</strong> = Velocity of the object<br>
 	    <strong>D</strong> = Drag Coefficient<br>
 	    <strong>A</strong> = Cross Sectional Area<br><br>
-	    <strong>A</strong>: The cross-sectional area of the object is the area of the object normal to the direction of it's travel. E.g., when the object is moving directly towards you, what object do you see?<br><br><br>
+	    <strong>A</strong>: The cross-sectional area of the object is the area of the object normal to the direction of it's travel. E.g., when the object is moving directly towards you, what object do you see?<br><br>
 	    
+	    Immediately note that F<sub>drag</sub> is a scalar. Other equations, like the linear drag equation, will result in a vector. 
+	    <br><br><br>
 	    
 	    <strong><u>Analysis:</u></strong><br><br><br>
 	    
@@ -783,12 +787,36 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    <font color="blue"><strong>TERMINAL VELOCITY:</strong></font><br>
 	    <!--Blessed be the 30th of September, when I realized how balanced forces will only result in there being no acceleration, not that the object would not move. Thanks be to the cat of Page 131 for this enlightenment.-->
 	    "The speed at which a falling body will cease accelerating and begin moving at a constant speed downward, as a result of the effects of drag."<br><br>
-	    As a body falls, the drag force gradually increases in magnitude (from zero) as the speed of the body increases. If the body falls long enough, the force of drag will eventually equal to the force of gravity. <br><br>Though the forces will cancel eachother out, this does not mean that the object will stop moving (see Rule 76 for the Third Law of Motion) - it only means that the object will have no acceleration, and that it will be in equilibrium, in the sense that the velocity will be constant. <br><br>From this point onward, the body will fall at a constant speed, known as the terminal velocity <span class="vecteur"><strong>V<sub>T</sub></strong></span>.<br>
+	    As a body falls, the drag force gradually increases in magnitude (from zero) as the speed of the body increases. If the body falls long enough, the force of drag will eventually equal to the force of gravity, ideally. In the real world, the force of gravity will never exactly equal the force of drag, of course, but the acceleration will become small enough that it will be negligible for any calculations. <br><br>Though the forces will cancel eachother out, this does not mean that the object will stop moving (see Rule 76 for the Third Law of Motion) - it only means that the object will have no acceleration, and that it will be in equilibrium, in the sense that the velocity will be constant. <br><br>From this point onward, the body will fall at a constant speed, known as the terminal velocity <span class="vecteur"><strong>V<sub>T</sub></strong></span>.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/terminalcat.png"><img src="/Physics/img/terminalcat.png" alt="The fall of a cat, and the drag force that will eventually bring it to terminal velocity." width=40%/></a></div>
-	    <span class="tiny"><em>The fall of a cat, and the drag force that will eventually bring it to terminal velocity.</em></span><br><br>
+	    <span class="tiny"><em>The fall of a cat, and the drag force that will eventually bring it to terminal velocity.</em></span><br><br><br>
 	    
-	    
-	    <br>
+	    <font color="blue"><strong>LINEAR DRAG:</strong></font><br>
+	    There is a simpler, more memorizable equation for drag that THEY don't want you to know about. It is known as the Linear Drag Equation, and it can only be used for "small objects moving at slow speeds":<br><br>
+
+<strong><span class="vecteur">F<sub>drag</sub></span> = -b × <span class="vecteur"><strong>v</strong></span></strong><br><br> 
+<strong>b</strong> = Proportionality constant<br>
+<strong>v</strong> = Velocity of the object<br><br>
+
+A "<strong>Proportionality constant</strong>" is just the ratio between two quantities, and here it has the units kg/s.<br><br>
+
+ While the traditional "drag equation" as elaborated previously results in a scalar, this new drag equation results in a vector.<br><br>
+ The negative in the equation means that the drag force has the opposite direction of the velocity of the object. Thus, when the object is moving upward on Earth, the force of drag is downward, and when the ball begins falling downward, the force of drag moves upward.<br><br><br>
+ 
+ <font color="blue"><strong>DRAG ANALYSIS:</strong></font><br>
+      As an object moves upward, the acceleration will <u>decrease</u> to -g, because of the following sequence of events:<br><br>
+      The object will have a downward acceleration and drag force.<br><br>
+      Because of the downward acceleartion, the speed of the object will decrease.<br><br>
+      Because the speed of the object is decreasing, the magnitude of the drag force will decrease as well, because the drag force is proportional to the square of the velocity.<br><br>
+      As the magnitude of the drag force decreases, the magnitude of the net force will decrease as well (as the net force is composed of the acceleration and drag force, which are acting in the same direction here).<br><br>
+      Thus, because the net force of the object is decreasing, the acceleration is going to decrease, and when the object is at the top of the parabolar path, it will have an acceleration of -g, and will temporarily have a speed of 0 in the y direction.<br><br>
+When the object moves down, of course, the drag force will grow in the opposite direction of gravity as the objects falls.<br><br>
+Thus, although the speed of the ball is increasing, the magnitude of the net force will be decreasing, seeing how the acceleration and force of drag will increasingly cancel out as the object picks up speed.<br><br>
+Finally, because the magnitude of the net force is decreasing, this means the acceleration is decreasing, and it will be continue decreasing until it reaches zero (or near-zero, at which point the object will be in Terminal Velocity.<br><br><br>
+
+<u>What this means:</u><br><br>
+Because the average acceleration on the way up is lower than the average acceleration on the way down, as has just been proven, and given the object lands at the same height is was thrown (e.g. ∆y is the same going up and going down), then if the only two forces acting on the object are drag and gravity, then <br><strong>The time it takes for the object to go up a distance will LESS than the time it takes to go down the same distance</strong>.
+	    <br><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
@@ -921,7 +949,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    
 	    <strong><a href="#Rule48"><span class="mw-headline" id="Rule48">#</span></a> <font color="red">P. Rule 48.</font></strong> We can extrapolate the known information about circular centripetal acceleration to apply to any curved path an object may follow, and therefore <u>any object moving on a curved path will experience a centripetal acceleration.</u><br><br><br>
 	    
-	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">P. Rule 49.</font></strong> The whole idea of centripetal acceleration and tangential velocity and acceleration and everything else in rotational motion is that all the equations use all the same variables, and you can connect what you have to what you need by repeatedly plugging in numbers into equations. For example, to find centripetal acceleration (equation below), you tangential velocity, which you need the average angular velocity for, and so on. To really instill this into your brain, stare at the <a href="/Physics/physicseq#V-I">equations</a> for rotational motion until you imagine them every time you see a rotating circle.<br><br><br><!--The dumbass rule, a containment rule for . The worst rule yet in all of physics, as of the time of writing.-->
+	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">P. Rule 49.</font></strong> The whole idea of centripetal acceleration and tangential velocity and acceleration and everything else in rotational motion is that all the equations use all the same variables, and you can connect what you have to what you need by repeatedly plugging in numbers into equations. For example, to find centripetal acceleration (equation below), you tangential velocity, which you need the average angular velocity for, and so on. To really instill this into your brain, stare at the <a href="/Physics/physicseq#V-I">equations</a> for rotational motion until you imagine them every time you see a rotating circle.<br><br><br><!--The worst rule yet in all of physics, as of the time of writing.-->
 	    
 	    <strong><a href="#Rule50"><span class="mw-headline" id="Rule50">#</span></a> <font color="red">P. Rule 50.</font></strong> <a href ="/Physics/MechanicsFull2#Rule70">Newton's Second Law</a> (Rule 70) states that net force equals mass times acceleration, or &Sigma;<span class="vecteur"><strong>F</strong></span> = m × <span class="vecteur"><strong>a</strong></span>. Since we determined in Rule 48 that every object moving on a curved path will have centripetal acceleration, we can apply centripetal acceleration to Newton's Second Law and end up with the equation for <strong>Centripetal Force</strong>:<br><br>
 <strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = m × <span class="vecteur"><strong>a<sub>c</sub></strong></span></strong><br><br>
@@ -931,7 +959,14 @@ There are several important rules for comprehending centripetal force:<br><br>
 <strong>3) In is positive, and out is negative</strong>. When you sum the forces in the inward direction, the in direction is positive, while the out direction is negative.
 <br><br><br>
 	    
-	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">P. Rule 51.</font></strong> <br><br><br>
+	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">P. Rule 51.</font></strong> <strong>Time Constant:</strong><br><br>
+	    
+The time constant, τ, is a means of determining the time it takes for an exponential equation to get to a percent of its maximum value, calculated similarly to a half-life. The first time constant is 63.2%, which is a universal constant that must be remembered. It is the result of 1-1/e, exactly. This number comes up with some frequency in physics. <br><br>
+
+Thus, since the first time constant is 63.2% of the time it takes to reach terminal velocity, then 2τ will be the 86.5%, because it increased by 63.2% of the percent remaining until 100%. 3τ will be 95%, and so on and so on. Every increase in the time constant will make the velocity 63.2% closer to terminal velocity. Thus, it will take 6.91τ for the velocity to be 99.9% of the terminal velocity.<br><br>
+Objects that encounter more air resistance and meet their terminal velocity faster, like coffee filters, will have a small time constant, while an object like a baseball will have a larger time constant.
+	    
+	    <br><br><br>
 	    
 	    <strong><a href="#Rule52"><span class="mw-headline" id="Rule52">#</span></a> <font color="red">P. Rule 52.</font></strong> <br><br><br>
 	    
@@ -982,7 +1017,7 @@ There are several important rules for comprehending centripetal force:<br><br>
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong>  → <strong><a href="/Physics/mechanics/force">Force</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: September 30 2024</span><br>
+      	<span class="tiny">Last Change: October 6 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

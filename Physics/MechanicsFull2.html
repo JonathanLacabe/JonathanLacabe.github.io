@@ -21,7 +21,9 @@
         font-size: 1.2em;
       }
       </style>
-
+<script src=
+"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
@@ -385,15 +387,41 @@ We can immediately determine the net force in the x-direction from the applied f
 	    <h3><span class="mw-headline" id="Work">VII.I Basics of Work.</span></h3>
 	  </header>
 	  <article>
-	  <strong><font color="#006400">Work</font></strong>: SCALAR. The energy transferred to or from an object through the application of a force that caused displacement in the object.<br><br>
+	  <strong><font color="#006400">Work</font></strong>: SCALAR. The energy transferred to or from an object through the application of a force that caused displacement in the object. The equation for work done by a <u>constant force</u> is as follows:<br><br>
 <strong>W = F × d × cos(θ)</strong><br><br>
+
+With reference to vector, this equation can also be represented as so:<br><br>
+
+<strong>W = F × ∆<span class="vecteur"><strong>r</strong></span> × cos(θ)</strong><br><br>
+
 <strong>F</strong> = The magnitude of the Force doing work on the object.<br>
 <strong>d</strong> = The magnitude of the Displacement of the force.<br>
+<strong>∆<span class="vecteur"><strong>r</strong></span></strong> = The change in position of an object in three dimensional space, using unit vectors.<br>
 <strong>θ</strong> = Angle between F & d.<br><br>
 Work is in the unit of "Newton Meters", referred to as <strong>Joules</strong>.<br><br><br>
 	  
 	  <strong><a href="#Rule83"><span class="mw-headline" id="Rule83">#</span></a> <font color="red">P. Rule 83.</font></strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.<br><br><br>
-	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  μ ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	  
+	  <strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">P. Rule 84.</font></strong> <strong>Work with the Dot Product:</strong><br><br>
+	  
+	  <strong>W = <span class="vecteur"><strong>F</strong></span> · ∆<span class="vecteur"><strong>r</strong></span></strong><br><br>
+	  As before, the dot product is the magnitude of one vector times the magnitude of the tip-to-tail placement of the second vector onto the first vector. This can be referred to as the "projection" of the second vector onto the first vector.
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">P. Rule 85.</font></strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
+$$W = \int_{x_i}^{x_f} F_x \, dx$$
+Use with discretion.
+	  <br><br><br>
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Spring">VII.II Spring Force.</span></h3> 
+	    </header>
+	    <article>
+	    
+	    
+	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &   ·  ±  ×  π  ∆  μ ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
@@ -403,10 +431,6 @@ Work is in the unit of "Newton Meters", referred to as <strong>Joules</strong>.<
 	    
 	    
 	    
-	    
-	    
-	    <strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">P. Rule 84.</font></strong> <br><br><br>
-	    <strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">P. Rule 85.</font></strong> <br><br><br>
 	    <strong><a href="#Rule86"><span class="mw-headline" id="Rule86">#</span></a> <font color="red">P. Rule 86.</font></strong> <br><br><br>
 	    <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> <br><br><br>
 	    <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <br><br><br>
@@ -490,7 +514,7 @@ Work is in the unit of "Newton Meters", referred to as <strong>Joules</strong>.<
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: October 6 2024</span><br>
+      	<span class="tiny">Last Change: October 7 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

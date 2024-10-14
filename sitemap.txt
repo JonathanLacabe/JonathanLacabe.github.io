@@ -1,4 +1,4 @@
-All pages as of September 12 2024.
+All pages as of October 13 2024.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -14,6 +14,8 @@ Physics                                              - https://humanknowledge.ne
 ---Vectors and Projectile Motion                     - https://humanknowledge.neocities.org/Physics/mechanics/vectors
 ---Range & Relative Motion                           - https://humanknowledge.neocities.org/Physics/mechanics/range
 ---Rotational Motion                                 - https://humanknowledge.neocities.org/Physics/mechanics/rotational
+---Force                                             - https://humanknowledge.neocities.org/Physics/mechanics/force
+---Energy and Work                                   - https://humanknowledge.neocities.org/Physics/mechanics/energy
 
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
 

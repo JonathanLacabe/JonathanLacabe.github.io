@@ -1,4 +1,4 @@
-All pages as of October 13 2024.
+All pages as of November 4 2024.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -20,6 +20,7 @@ Physics                                              - https://humanknowledge.ne
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
 
 
+
 Mathematics                                          - https://humanknowledge.neocities.org/math/mathematics
 ~Mathematical Symbols                                - https://humanknowledge.neocities.org/math/mathsymbols
 ~List of Math Equations                              - https://humanknowledge.neocities.org/math/matheq
@@ -39,7 +40,9 @@ Mathematics                                          - https://humanknowledge.ne
 -Single-Variable Calculus                            - https://humanknowledge.neocities.org/math/singlevarcalculus
 
 
+
 Cryptography                                         - https://humanknowledge.neocities.org/cryptography/cryptography
+
 
 
 Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
@@ -47,16 +50,19 @@ Electrical Engineering                               - https://humanknowledge.ne
 ~List of Electrical Engineering Equations            - https://humanknowledge.neocities.org/engineering/electrik/electriceq
 
 
+
 Astronomy                                            - https://humanknowledge.neocities.org/astronomy/astronomy
 -Classical Astronomy                                 - https://humanknowledge.neocities.org/astronomy/classical
 --Full Classical Astronomy                           - https://humanknowledge.neocities.org/astronomy/classicalFull
 ---Introduction/General Terms                        - https://humanknowledge.neocities.org/astronomy/classical/intro
 ---Ancient Astronomy                                 - https://humanknowledge.neocities.org/astronomy/classical/ancient
----Astr-"ology"                                      - https://humanknowledge.neocities.org/astronomy/classical/pseudoscience
+---Astrology                                         - https://humanknowledge.neocities.org/astronomy/classical/pseudoscience
 ---Origin of Modern Astronomy                        - https://humanknowledge.neocities.org/astronomy/classical/modern
 
 
+
 Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics
+
 
 
 Nuclear Engineering                                  - https://humanknowledge.neocities.org/engineering/nuclear

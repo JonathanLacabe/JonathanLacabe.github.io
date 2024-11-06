@@ -23,10 +23,14 @@
       </style>
 <script src=
 "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+    jax: ["input/TeX","output/HTML-CSS"],
+    displayAlign: "left"
+});
 </script>
-<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
-      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      	<span><em>Art by Shoaib Pasha.</em></span><hr>
       </header>
 
       <div class="inner">
@@ -92,7 +96,7 @@
           <a href="#Work">VII.I Basics of Work.</a>
         </div>
         <div class="toc-column">
-          <a href="#KineticPotential">VII.III Mechanical Energy.</a>
+          <a href="#ConservForces">VII.IV Conservative Forces.</a>
         </div>
       </div>
       
@@ -101,7 +105,16 @@
           <a href="#Power">VII.II Power.</a>
         </div>
         <div class="toc-column">
-          <a href="#ConservForces">VII.IV Conservative Forces.</a>
+          <a href="#EnergySystems">VII.V Energy Systems.</a>
+        </div>
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#KineticPotential">VII.III Mechanical Energy.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#EnergyWells">VII.VI Energy Wells.</a>
         </div>
       </div>
 
@@ -513,7 +526,7 @@ The 'net work' is the sum of the individual works of each force - if you want, y
 	  <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.<br><br><br>
 	  
 	  <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
-$$W = \int_{x_i}^{x_f} F_x \, dx$$
+$$W = \int_{x_i}^{x_f} F_x \, dx$$<br>
 Use with discretion. Whenever you see force with a variable, you must immediately recognize that it is a non-constant force, and that it will need to be integrated.
 	  <br><br><br>
 	  
@@ -534,7 +547,7 @@ Gravity acts separately than the other forces with respect to work. Instead of u
 	  <u>Equation</u>: Consider the following equations in the same vein as how one may consider velocity.<br><br>
 
 <strong>(dW / dt)</strong> - The time derivative of work.<br><br>
-<strong><span class="vecteur"><strong>F</strong></span> · <span class="vecteur"><strong>v</strong></span></strong> - An alternative definition, only valid for constant forces.<br><br>
+<strong><span class="vecteur"><strong>F</strong></span> · <span class="vecteur"><strong>v</strong></span></strong> - Alternate definition: if you use instantaneous velocity, you will get Instantaneous Power, and if you use average velocity, you will get Average Power. Only valid for constant forces.<br><br>
 <strong>(W / ∆t)</strong> - Average power.<br><br>
 
 	  <u>Definition</u>:
@@ -543,13 +556,17 @@ Gravity acts separately than the other forces with respect to work. Instead of u
 
 <br><br><br>
 
+<strong><a href="#Horsepower"><span class="mw-headline" id="Horsepower">#</span></a> <font color="#006400">Horsepower</font></strong>: The amount of power that can be done by one horse. It is about 746 watts.
+
+<br><br><br>
+
+
 </article>
 	    <header class="articleHeader"><hr>
 	      <h3><span class="mw-headline" id="KineticPotential">VII.III Mechanical Energy.</span></h3> 
 	    </header>
 	    <article>
-<strong><a href="#Energy1"><span class="mw-headline" id="Energy1">#</span></a> <font color="#006400">Energy</font></strong>: Energy is a number that
-we associate with a system of one or more objects. If a force changes one of the objects by, say, making it move, then the energy number changes.<br><br><br>
+<strong><a href="#Energy1"><span class="mw-headline" id="Energy1">#</span></a> <font color="#006400">Energy</font></strong>: Energy is a number that we associate with a system of one or more objects. If a force changes one of the objects by, say, making it move, then the energy number changes.<br><br><br>
 
 <strong><a href="#MechEnergy1"><span class="mw-headline" id="MechEnergy1">#</span></a> <font color="#006400">Mechanical Energy</font></strong>: The sum of the potential and kinetic energy. All forms of potential energy are recognized under the tent of 'potential energy', including gravitational and elastic potential energy. Within an isolated system (where no outside force can interfere with the energy of the system), mechanical energy will remain constant, known as the Conservation of Mechanical Energy.<br><br><br>
 
@@ -690,7 +707,7 @@ As you should see, the Conservation of Energy equation is a mere special case of
   With non-constant forces, the following equation can be used: <br><br>
 <strong>F<sub>x</sub> = -(dU / dx)</strong><br><br>
 Additionally, you can integrate both sides to get the following form:<br><br>
-$$\int_{x_i}^{x_f} F_x \, dx = -∆U$$
+$$\int_{x_i}^{x_f} F_x \, dx = -∆U$$<br><br>
 Both equations are applicable in different circumstances, being the same equation represented in different ways.
   
   <br><br><br>
@@ -717,7 +734,7 @@ If a force does not have these two equivalent properties, it is a nonconservativ
 
 </article>
 	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="Energy Systems">VII.V Energy Systems.</span></h3> 
+	      <h3><span class="mw-headline" id="EnergySystems">VII.V Energy Systems.</span></h3> 
 	    </header>
 	    <article>
   
@@ -755,7 +772,7 @@ Change in internal energy of a system is caused by the work done by nonconservat
 When you rub your hands together, the kinetic energy of the motion of your hands is converted into internal energy in your hands, via work done by friction.<br><br>
 <strong>∆E<sub>internal</sub> = -W<sub>nonconservative</sub></strong><br><br>and, where there is no work performed by a force applied,<br><br> <strong>W<sub>nonconservative</sub> = ∆ME</strong>
 
-<br><br><br>
+<br><br><br><br>
 
 
 <strong><a href="#Rule100"><span class="mw-headline" id="Rule100">#</span></a> <font color="red">P. Rule <u>100</u>. <!--celebration! woo~~~~!--></font></strong> <strong>Energy Transfer Equation Cheatsheet:</strong> <br><br>
@@ -767,9 +784,9 @@ When you rub your hands together, the kinetic energy of the motion of your hands
 
 <strong>W<sub>conservative force</sub> = -∆U</strong><br><br>
 
-<strong>F<sub>x</sub> = -(dU / dx)</strong><br><br>
+<strong>F<sub>conservative</sub> = -(dU / dx)</strong><br><br>
 
-<strong>$$\int_{x_i}^{x_f} F_x \, dx = -∆U$$</strong><br><br>
+<strong>$$\int_{x_i}^{x_f} F_x \, dx = -∆U$$</strong><br>
 
 <strong>∆E<sub>system</sub> = &Sigma; T</strong><br><br>
 
@@ -781,7 +798,7 @@ When you rub your hands together, the kinetic energy of the motion of your hands
 
 <strong>W<sub>nonconservative</sub> = ∆ME</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;(when W<sub>Fa</sub> = 0)
 
-<br><br><br>
+<br><br><br><br>
 
 	    <strong><a href="#Rule101"><span class="mw-headline" id="Rule101">#</span></a> <font color="red">P. Rule 101.</font></strong> Identifying what forces are external and internal are very important to using the energy system equations: When the force is external, represent it using work, and if the force is internal, represent it using Potential Energy. See Rule 102 for how to determine whether a force is internal or external.<br><br><br>
 	    
@@ -794,11 +811,47 @@ Suppose you have a system containing objects A and B, and a second system contai
 In the first case, quantities such as momentum and total energy will be conserved because the force was internal. This does not hold true in the second case, because the force was external.<br><br><br>
 	    
 	    
-	    
 	    <strong><a href="#Rule103"><span class="mw-headline" id="Rule103">#</span></a> <font color="red">P. Rule 103.</font></strong> Gravitational energy only exists when you have at least two objects in your system: When the Earth is not part of the system, and there is only one object in the system, then the system cannot have gravitational potential energy. Thus, the work done by the force of gravity will be an external force when the system is not declared to include the Earth, or whatever planet the event is occurring on.<br><br>
 
 Newton's third law force pairs are always internal forces. When a system includes an object and the Earth, the force of gravity of the object acting on the block, and the force of gravity of the object acting on the earth, are equal in magnitude and opposite in direction. This does NOT mean that the force normal and force of gravity go together; Force Normal is <u>always</u> an external force.<br><br><br>
-	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &   ·  ±  ×  π  ∆  μ ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+
+
+<strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">P. Rule 104.</font></strong> Know that instead of just summing the forces in one direction at a time, you can sum all of them at once in unit vector form, where you assign each of the forces <strong>i&#x302;</strong>, -<strong>i&#x302;</strong>, <strong>j&#x302;</strong>, or -<strong>j&#x302;</strong> depending on their direction. If the force is not squarely in a unit vector direction (e.g., it is at an angle not cleanly divisible by 90), then just incorporate both <strong>i&#x302;</strong> & <strong>j&#x302;</strong> into one force. Know that you should also write acceleration in it unit vector form if you can. Once you have an equation in this unit vector form, you can once again isolate the x and y direction vectors to solve for any missing variables. <br><br><br>
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="EnergyWells">VII.VI Energy Wells.</span></h3> 
+	    </header>
+	    <article>
+
+<strong><font color="blue"><a href="#EnergyTransferMeans"><span class="mw-headline" id="FormsOfEquilibrium">#</span></a> Forms of Equilibrium:</font></strong><br>
+There are three types of equilibrium an object can be in as it remains in a gravitational field. These three types arise from the different ways in which the object’s potential energy can change when the object undergoes a displacement. For each direction, if the change in potential energy equals zero, the object is in translational equilibrium in that direction.
+
+  <ol>
+<li><strong>Neutral Equilibrium</strong>: The potential energy is constant. A displacement in any direction will not change the object's potential energy, and when the object is displaced, it will not experience any force that will increase its displacement nor bring it back to its original position.<br><u>Example:</u> A ball rolling back and forth on a level surface will be in neutral equilibrium because its gravitational potential energy will remain constant regardless of its position.<br><br>
+  <em>The graph of the gravitational potential energy of the ball (with respect to position) will be a horizontal line because the g.p.e. is constant.</em>
+
+</li><br>
+
+<li><strong>Stable Equilibrium</strong>: The potential energy is at a minimum. Displacing the object to either side will raise its potential energy, resulting in a (gravitational) force that moves the object back towards its original position. Since displacing the object will raise its potential energy, any force that would displace the object from its original position must do work on it to do so.<br> <u>Example</u>: A tiltable water bottle will be in stable equilibrium because its gravitational potential energy increases as its position moves away from the equilibrium position. As the water bottle is tilted, the center of mass will go up as the position goes away from equilibrium. The water bottle will naturally return back to the equilibrium position when it loses gravitational potential energy.<br><br>
+<em>The graph will look akin to an energy well (see [[[[[), with the equilibrium position in the center of the well.</em>
+
+</li><br>
+
+<li><strong>Unstable Equilibrium</strong>: The potential energy is at a maximum. Displacing the object to either side will lower its potential energy, resulting in a (gravitational) force moving the object further from its original position. Since displacing the object lowers its potential energy, gravity does the work necessary to displace the object from its original position. <br> 
+<u>Example</u>: Something easily toppleable, like a pen, will be in an unstable equilibrium because its gravitational potential energy decreases as it moves away from the equilibrium position, because the center of mass of the pen goes down as the pen gets displaced from the equilibrium. The pen will naturally move away from the equilibrium position when it loses gravitational potential energy.<br><br>
+<em>The graph will look akin to an energy 'mountain' of sorts, with the equilibrium position at the peak, making it very easy for the object to go from potential energy to kinetic energy.</em>
+
+</li><br>
+
+  </ol>
+
+
+When you rub your hands together, the kinetic energy of the motion of your hands is converted into internal energy in your hands, via work done by friction.
+
+<br><br><br>
+
+	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½   ·  ±  ×  π  ∆  μ ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
@@ -808,9 +861,6 @@ Newton's third law force pairs are always internal forces. When a system include
 	    
 	    
 	    
-	    
-	    
-	    <strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">P. Rule 104.</font></strong> <br><br><br>
 	    <strong><a href="#Rule105"><span class="mw-headline" id="Rule105">#</span></a> <font color="red">P. Rule 105.</font></strong> <br><br><br>
 	    <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">P. Rule 106.</font></strong> <br><br><br>
 	    <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">P. Rule 107.</font></strong> <br><br><br>
@@ -928,7 +978,7 @@ Newton's third law force pairs are always internal forces. When a system include
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 3 2024</span><br>
+      	<span class="tiny">Last Change: November 5 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>
@@ -936,3 +986,5 @@ Newton's third law force pairs are always internal forces. When a system include
       </div>
    </body>
 </html>
+
+<!--You can ignore reality, but you can't ignore the consequences of ignoring reality.-->

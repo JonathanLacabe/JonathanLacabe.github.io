@@ -42,11 +42,396 @@
 	    <p>These are my complete notes for Energy and Work in Classical Mechanics. <br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
 	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
+      <article><center><a href="#EWork">VII. Energy and Work</a></center></article>
+        
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Work">VII.I Basics of Work.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#ConservForces">VII.IV Conservative Forces.</a>
+        </div>
+      </div>
       
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Power">VII.II Power.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#EnergySystems">VII.V Energy Systems.</a>
+        </div>
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#KineticPotential">VII.III Mechanical Energy.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#EnergyWells">VII.VI Energy Wells.</a>
+        </div>
+      </div>
+
         <!--down on you-->
 	  <hr>
-	  <header class="articleHeader"><hr>
-	    I'm working on it this very second.
+	    <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="EWork">VII. Energy and Work</span></h2>
+	    <h3><span class="mw-headline" id="Work">VII.I Basics of Work.</span></h3>
+	  </header>
+	  <article>
+	  <strong><a href="#Work1"><span class="mw-headline" id="Work1">#</span></a> <font color="#006400">Work</font></strong>: SCALAR.<br><br>
+	   <u>Units</u>: "Newton-Meters", known as <strong>Joules</strong>.<br><br>
+	  
+	  <u>Equation</u>:<br>
+	  These are for work done under a <u>constant force</u>. If the force is not constant, see Rule 88.<br><br>
+	  <strong>W = <span class="vecteur"><strong>F</strong></span> × d × cos(θ)</strong> &nbsp;&nbsp;&nbsp;&nbsp;- General<br>
+	  <strong>W = <span class="vecteur"><strong>F</strong></span> × ∆<span class="vecteur"><strong>r</strong></span> × cos(θ)</strong>&nbsp;&nbsp;&nbsp; - With respect to vectors <br>
+	  <strong>W = <span class="vecteur"><strong>F</strong></span> · ∆<span class="vecteur"><strong>r</strong></span></strong>&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - With respect to the Dot Product <br>
+	  <strong>W = ∆KE</strong> &nbsp;&nbsp;&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- With respect to the Kinetic Energy <br><br>
+	  
+	  <span class="vecteur"><strong>F</strong></span> = The magnitude of the Force doing work on the object.<br>
+<strong>d</strong> = The magnitude of the Displacement of the force.<br>
+<strong>∆<span class="vecteur"><strong>r</strong></span></strong> = The change in position of an object in three dimensional space, using unit vectors.<br>
+<strong>θ</strong> = Angle between <span class="vecteur"><strong>F</strong></span> & d. Always use a positive number.
+	  
+	  <br><br>
+	  
+	  <u>Definition</u>: The energy transferred to or from an object through the application of a force that caused displacement in the object. Because work is based on <u>displacement</u>, it is completely independent of the path of an object.<br><br>
+Work is a result of the dot product between Force and displacement. As before, the dot product is the magnitude of one vector times the magnitude of the tip-to-tail placement of the second vector onto the first vector. People may refer to this as the "projection" of the second vector onto the first vector.<br><br>
+The 'net work' is the sum of the individual works of each force - if you want, you can combine all of the forces into the net force using vector decomposition and then recomposition, and then get the work from there.
+<br><br><br>
+	  
+	  <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.<br><br><br>
+	  
+	  <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
+$$W = \int_{x_i}^{x_f} F_x \, dx$$<br>
+Use with discretion. Whenever you see force with a variable, you must immediately recognize that it is a non-constant force, and that it will need to be integrated.
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">P. Rule 89.</font></strong><br>
+Gravity acts separately than the other forces with respect to work. Instead of using the total displacement and having θ act respective to it, the displacement for gravitational work is only vertical displacement, because gravity works strictly in the vertical direction, a quality other forces do not share. This is a result of gravity being a conservative force - see section VII.IV for more information.
+
+<br><br><br>
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="Power">VII.II Power.</span></h3> 
+	    </header>
+	    <article>
+	    
+<strong><a href="#Power1"><span class="mw-headline" id="Power1">#</span></a> <font color="#006400">Power</font></strong>: SCALAR.<br>
+	   <u>Units</u>: (Joules / Seconds), known as <strong>Watts</strong>.<br><br>
+	  
+	  <u>Equation</u>: Consider the following equations in the same vein as how one may consider velocity.<br><br>
+
+<strong>(dW / dt)</strong> - The time derivative of work.<br><br>
+<strong><span class="vecteur"><strong>F</strong></span> · <span class="vecteur"><strong>v</strong></span></strong> - Alternate definition: if you use instantaneous velocity, you will get Instantaneous Power, and if you use average velocity, you will get Average Power. Only valid for constant forces.<br><br>
+<strong>(W / ∆t)</strong> - Average power.<br><br>
+
+	  <u>Definition</u>:
+	  
+	  The <u>rate</u> of doing or work or of transferring energy. It is the derivative of work.
+
+<br><br><br>
+
+<strong><a href="#Horsepower"><span class="mw-headline" id="Horsepower">#</span></a> <font color="#006400">Horsepower</font></strong>: The amount of power that can be done by one horse. It is about 746 watts.
+
+<br><br><br>
+
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="KineticPotential">VII.III Mechanical Energy.</span></h3> 
+	    </header>
+	    <article>
+<strong><a href="#Energy1"><span class="mw-headline" id="Energy1">#</span></a> <font color="#006400">Energy</font></strong>: Energy is a number that we associate with a system of one or more objects. If a force changes one of the objects by, say, making it move, then the energy number changes.<br><br><br>
+
+<strong><a href="#MechEnergy1"><span class="mw-headline" id="MechEnergy1">#</span></a> <font color="#006400">Mechanical Energy</font></strong>: The sum of the potential and kinetic energy. All forms of potential energy are recognized under the tent of 'potential energy', including gravitational and elastic potential energy. Within an isolated system (where no outside force can interfere with the energy of the system), mechanical energy will remain constant, known as the Conservation of Mechanical Energy.<br><br><br>
+
+<strong><a href="#ConservationEnergy"><span class="mw-headline" id="ConservationEnergy">#</span></a> <font color="#006400">Conservation of energy</font></strong>: Energy can be transformed from one type to another (from potential to kinetic or vice versa) and transferred from one object to another, but the total amount is always the same. E.g., ME<sub>i</sub> = ME<sub>f</sub>.<br><br> For example, when you drop a ball, at the point of release the energy will be completely potential (specifically gravitational potential) and no kinetic. As the ball falls, that energy will be converted into kinetic energy perfectly so that the total amount of energy always stays the same, and when the ball hits the ground, there will be no potential energy left, and all of the mechanical energy will be kinetic energy.<br><br>
+
+This law holds only within an ISOLATED system, with no outside forces interfering with the energy of the system. An isolated system is "a physical system so far removed from other systems that it does not interact with them". Thus, mechanical energy is conserved as long as it is not converted to heat, light, or sound energy via work done by friction or whatnot, and no energy is added or removed from the system via work done by a force applied. Thus, W<sub>Friction</sub> = 0, and W<sub>Fa</sub> = 0.<br><br> There is no real situation in which a system is isolated, because of air resistance and whatnot, but it can get fairly closed - a pendulum will move back and forth to points very close to the previous height it reached, but always slightly less. 
+
+<br><br><br>
+
+
+<strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">P. Rule 90.</font></strong> Kinetic Energy: SCALAR.<br>
+	   <u>Units</u>: Joules.<br><br>
+	  
+	  <u>Equation</u>: The equation for it is <a href="/Physics/img/kineticintegration.png">derived from the non-constant work equation</a>:<br><br>
+
+<strong>KE = (1/2) × m × v²</strong><br><br>
+<strong>m</strong> = Mass<br>
+<strong>v</strong> = Velocity<br><br>
+	  
+	  <u>Definition</u>:
+
+The energy associated with the motion of the object. It can never be negative.
+
+<br><br><br>
+
+<strong><a href="#RigidBody"><span class="mw-headline" id="RigidBody">#</span></a> <font color="#006400">Rigid Body</font></strong>: A solid object that does not deform or change shape when external forces are applied. Thus, a spring is not a rigid body, due to the Elastic Limit.<br><br><br>
+
+<strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">P. Rule 91.</font></strong> Work–Kinetic energy theorem: Kinetic Energy and Work are both measurements of energy in Joules. An increase in the kinetic energy of a rigid body is caused by an equal amount of positive work done on the body by the net force acting on that body. Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the net force.
+
+<br><br> Despite what the elites will tell you, there IS an assumption built into this theorem: the constancy of mass/inertia. An example where the Work-Energy Theorem fails (due to this assumption) is in rocket mechanics because such systems' masses change with time.
+
+<br><br><br>
+
+<strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">P. Rule 92.</font></strong> When dealing with a graph of the force acting on an object moving over a displacement, that would be the exact situation in which you can sum the area underneath the curve in order to find work: When the force is not a constant, integrating a Force vs. Displacement graph will give you work.<br><br>
+From this graph, you can determine a lot of things, including the 1. greatest and lowest kinetic energy, the 2. greatest and lowest speed of the object, and the 3. points at which it is at zero speed.<br><br>
+ALWAYS remember that Work is just the change in Kinetic Energy, so you must always sum the areas beginning at ∆<span class="vecteur"><strong>r</strong></span> = 0. In other words, the first limit of integration, no matter what the second is (e.g. what point you pick on the graph), is zero.<br><br>
+<strong>1.</strong> By the Work–Kinetic energy theorem (Rule 91), the kinetic energy is greatest where the work is greatest and thus inversely is lowest where the work is lowest, and thus the point on the graph where there is the greatest area of positive work (when the area of the force over the displacement is summed through integration) would be the point at which the kinetic area is greatest. The point on the graph with the greatest area of NEGATIVE work (summed negative force) will have the lowest kinetic energy.<br><br>
+
+<strong>2.</strong> By simple deduction from the equation for Kinetic Energy ((1/2) × m × v²), the higher the kinetic energy, the higher the speed, and so the highest speed/velocity will be at the point at which kinetic energy is greatest, and the lowest speed/velocity will be at the point at which kinetic energy is lowest.<br><br>
+
+<strong>3.</strong> The speed/velocity will be at zero when the kinetic energy will be at zero, which will be when the work is zero, which will be when the areas of the positive work and negative work cancel out. 
+
+<br><br><br>
+
+<strong><a href="#PotentialEnergy1"><span class="mw-headline" id="PotentialEnergy1">#</span></a> <font color="#006400">Potential Energy</font></strong>: The energy stored in an object that has the potential to turn into different types of energy, such as kinetic energy.<br><br><br>
+
+<strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">P. Rule 93.</font></strong> Gravitational Potential Energy: SCALAR.<br>
+	   <u>Units</u>: Joules.<br><br>
+	  
+	  <u>Equation</u>: PE<sub>g</sub> = m × g × h<br><br>
+	  Occasionally, PE<sub>g</sub> will be represented as U<sub>g</sub>.<br><br>
+	  <strong>m</strong> = Mass of the object<br>
+    <strong>g</strong> = Acceleration due to gravity<br>
+    <strong>h</strong> = Vertical height above the horizontal zero line.<br><br>
+
+	  <u>Definition</u>: The energy stored in an object due to that object's elevation. When an object is dropped from a height, the potential energy will become kinetic energy as the object falls.<br><br>
+	  
+	  h is the vertical displacement between an object's center of mass and the horizontal zero line, which is determined by the individual. Typically, the horizontal zero line will be placed at either the ground or the lowest position an object will be.<br><br>
+
+If you were to place the horizontal zero line above the object, h would be negative, and if the horizontal zero line were below the object, h would be positive. If the horizontal zero line were to be placed on the center of mass of the object, h (and thus PE<sub>g</sub>) would equal to zero.<br><br>
+
+
+ Because m and g are always positive, it is h that determines the sign of the gravitational potential energy.
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">P. Rule 94.</font></strong> Elastic Potential Energy: SCALAR.<br>
+	   <u>Units</u>: Joules.<br><br>
+	  
+	  <u>Equation</u>: PE<sub>e</sub> = 1/2 × k × ∆x² (SAME EQUATION AS SPRING WORK)<br><br>
+	  Occasionally, PE<sub>e</sub> will be represented as U<sub>e</sub>.<br><br>
+	  
+	  <strong>k</strong> = Spring constant (Newtons / meters, see Rule 83).<br>
+    <strong>x</strong> = Displacement from equilibrium position (or rest position)<br><br>
+
+	  <u>Definition</u>: The energy stored in an object due to the temporary deformation of that object (e.g., elasticity before the elastic limit, the restoring force trying to bring it back to equilibrium). Most commonly, springs are the objects with elastic potential energy, though any object that is able to deform slightly and regain its initial shape has it as well. For example, a slighlty deflated ball will have elastic potential energy when it hits the ground and compresses slightly before reforming.<br><br>
+	  
+	  
+	  
+	  When a spring is elongated or compressed, the elastic potential energy can be converted into kinetic energy and gravitational potential energy.<br><br>
+	  Remember that the spring constant is directly proportional to the amount of force it takes to compress or elongate a spring. Because the spring constant is always positive, and because the displacement is squared, elastic potential energy is always positive.
+	  
+	  <br><br><br>
+
+
+    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">P. Rule 95.</font></strong> The usage of the conservation of mechanical energy as a means of problem solving can come in unexpected ways. In the places where it is applicable, such as the movement of something through gravity (while ignoring air resistance), the formation of the full conservation equation (incorporating all of the component energies) can be useful:<br><br>
+    ME<sub>i</sub> = ME<sub>f</sub><br>
+    KE<sub>i</sub> + PE<sub>gi</sub> + PE<sub>ei</sub> = KE<sub>f</sub> + PE<sub>gf</sub> + PE<sub>ef</sub><br>
+    <br>
+    1/2 × m × v<sub>i</sub>² + m × g × h<sub>i</sub> + 1/2 × k × x<sub>i</sub>² = <br>1/2 × m × v<sub>f</sub>² + m × g × h<sub>f</sub> + 1/2 × k × x<sub>f</sub>²<br><br>
+    
+    Whatever can be canceled out will simplify the equation, and it will be useful in a variety of circumstances.
+    
+    <br><br><br>
+    
+	    
+	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">P. Rule 96.</font></strong> <strong>The signs of the individual works of the mechanical energies:</strong><br><br>
+	    
+	    <u>When Expanding</u>, the work done by the force of a spring is positive, because the spring converts all the initial elastic potential energy into kinetic energy.<br><br>
+
+<u>When Compressing</u>, the work done by the force of a spring is negative because the spring force opposes the direction of compression, converting kinetic energy into elastic potential energy.<br><br>
+
+The work done by the force of kinetic friction is negative because it converts kinetic energy to heat and sound energy.<br><br>
+
+<u>When Moving Upward</u>, the work done by the force of gravity is negative because it converts kinetic energy into gravitational potential energy as the object moves against the gravitational force.<br><br>
+
+<u>When Moving Downward</u>, the work done by the force of gravity is positive because it converts gravitational potential energy into kinetic energy as the object moves in the direction of the gravitational force.<br><br>
+
+End of story.<br><br><br>
+	    
+	    
+	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">P. Rule 97.</font></strong> When the work by the force applied to an object is equal to zero (W<sub>Fa</sub> = 0), the work done by friction is equal to the change in mechanical energy.<br><br>
+W<sub>f</sub> = ∆ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(when W<sub>Fa</sub> = 0)<br>
+F<sub>f</sub> × d × cos(θ) = ME<sub>f</sub> - ME<sub>i</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;(when W<sub>Fa</sub> = 0)<br><br>
+As you should see, the Conservation of Energy equation is a mere special case of this friction work equation, occuring when friction is equal to zero (because ME<sub>i</sub> can be moved to the other side).
+
+<br><br><br>
+
+<strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">P. Rule 98.</font></strong> When a question tries to sneak past you that the 'mass' of an object is in Newtons (or another force-based unit), like stating that a "67 N ball" was dropped, the "Newtons" is simply referring to the weight of the ball, e.g. the force of gravity acting on the ball. Incorporating this into your calculations, you can calculate the mass by finding the net force in y-direction (or whichever direction the normal force is in, tilted axes or otherwise) and isolating m as needed.<br><br><br>
+
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ConservForces">VII.IV Conservative Forces.</span></h3> 
+	    </header>
+	    <article>
+
+<strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">P. Rule 99.</font></strong> <strong>Conservative Force</strong>: A force in which the work done on an object is the same regardless of the path taken by the object. Conservative forces can return the kinetic energy back to the system after taking it away, conserving the mechanical energy - hence, conservative forces. It thus follows that nonconservative forces cannot have the conservation of energy laws applied. Examples of conservative forces include the following:<br>
+  <ol>
+<li>Force of Gravity</li>
+<li>Spring Force</li>
+<li>Electromagnetic Force</li>
+<li>Magnetic Force</li>
+
+</ol>
+  The work done by a conservative force equals the negative of the change in potential energy of the object which is associated with that force.<br><br><strong>W<sub>conservative force</sub> = -∆U</strong><br><br>
+  The work done on the object by the force of gravity as the object goes down a distance h is always the same, no matter the angle of any incline the object may slide on.<br><br>
+  With non-constant forces, the following equation can be used: <br><br>
+<strong>F<sub>x</sub> = -(dU / dx)</strong><br><br>
+Additionally, you can integrate both sides to get the following form:<br><br>
+$$\int_{x_i}^{x_f} F_x \, dx = -∆U$$<br><br>
+Both equations are applicable in different circumstances, being the same equation represented in different ways.
+  
+  <br><br><br>
+  
+  <strong><a href="#NonConservativeForce"><span class="mw-headline" id="NonConservativeForce">#</span></a> <font color="#006400">Nonconservative Force</font></strong>: A force in which the work done on an object depends on the path taken by the object. Examples include the following:<br>
+  <ol>
+<li>Force of Friction</li>
+<li>Air Resistance</li>
+<li>Tension</li>
+
+</ol>
+For friction, when an object moves along a longer path, this results in more energy being converted into heat and sound, thus creating more work.
+  <br><br><br>
+  
+  <strong><font color="blue"><a href="#ConservativeProperties"><span class="mw-headline" id="ConservativeProperties">#</span></a> Properties of Conservative Forces:</font></strong><br>
+All conservative forces have the following two equivalent properties:
+  <ol>
+<li>The work done by a conservative force on an object moving between any two points is independent of the path taken by the object.</li>
+<li>The work done by a conservative force on an object moving through any closed path equals zero (a closed path is a path where the initial and final points are the same location).</li>
+  </ol>
+If a force does not have these two equivalent properties, it is a nonconservative force.
+<br><br><br>
+
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="EnergySystems">VII.V Energy Systems.</span></h3> 
+	    </header>
+	    <article>
+  
+  <strong><a href="#EnergyTransfer"><span class="mw-headline" id="EnergyTransfer">#</span></a> <font color="#006400">Energy Transfer</font></strong>: The process of moving energy from one place to another, or changing its form. It can be defined by the following simple equation:<br><br>
+  <strong>∆E<sub>system</sub> = &Sigma; T</strong><br><br>
+  
+  <strong>∆E<sub>system</sub></strong> &nbsp;= Change in energy of the system<br>
+<strong>&Sigma; T</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hairsp;= Sum of the energy transferred into or out of the system<br><br>
+  
+  
+  This equation states that the change in energy of the system equals the net energy transferred into or out of the system.
+  <br><br><br>
+  
+  
+  <strong><font color="blue"><a href="#EnergyTransferMeans"><span class="mw-headline" id="EnergyTransferMeans">#</span></a> Modes of Transferring Energy: </font></strong><br>
+Energy can be transferred into or out of a system via:
+
+  <ol>
+<li><strong>Mechanical Waves</strong>: Sound waves are energy being transferred from one system to another through a disturbance of a medium, whether that medium be air or even water.</li><br>
+
+<li><strong>Work</strong>: A force applied can transfer energy to a system by doing work on the system.</li><br>
+
+<li><strong>Heat</strong>: Heat is a way to transfer energy from one system to another via a difference in temperature.</li><br>
+
+<li><strong>Electricity</strong>: Electrical current can transfer energy from one system to another, like how an electric motor can convert electric potential energy to kinetic energy in a rotating power drill.</li><br>
+
+<li><strong>Radiation</strong>: Electromagnetic waves like visible light, ultraviolet light, radio waves, and microwaves can add energy to a system.</li>
+  </ol>
+In introductory mechanics, the key source of energy transfer is purely Work. In all circumstances in which only work is causing energy transfer on a system, the energy transfer equation can be altered as so:<br><br>
+<strong>∆E<sub>system</sub> = W<sub>Fa</sub></strong><br><br>
+Furthermore,<br><br>
+<strong>W<sub>Fa</sub> = ∆ME + ∆E<sub>internal</sub></strong><br><br>
+Change in internal energy of a system is caused by the work done by nonconservative forces like friction. E.g., the work done by nonconservative forces on a system converts mechanical energy into internal energy of the system.<br><br>
+
+When you rub your hands together, the kinetic energy of the motion of your hands is converted into internal energy in your hands, via work done by friction.<br><br>
+<strong>∆E<sub>internal</sub> = -W<sub>nonconservative</sub></strong><br><br>and, where there is no work performed by a force applied,<br><br> <strong>W<sub>nonconservative</sub> = ∆ME</strong>
+
+<br><br><br><br>
+
+
+<strong><a href="#Rule100"><span class="mw-headline" id="Rule100">#</span></a> <font color="red">P. Rule <u>100</u>. <!--celebration! woo~~~~!--></font></strong> <strong>Energy Transfer Equation Cheatsheet:</strong> <br><br>
+
+1. <strong> ∆ME = ∆KE + ∆U</strong><br><br>
+
+2. <strong>W<sub>f</sub> = ∆ME</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(when W<sub>Fa</sub> = 0)<br>
+3. <strong>F<sub>f</sub> × d × cos(θ) = ME<sub>f</sub> - ME<sub>i</sub></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;(when W<sub>Fa</sub> = 0)<br><br>
+
+4. <strong>W<sub>conservative force</sub> = -∆U</strong><br><br>
+
+5. <strong>F<sub>conservative</sub> = -(dU / dx)</strong><br><br>
+
+6. <strong>$$\int_{x_i}^{x_f} F_x \, dx = -∆U$$</strong><br>
+
+7. <strong>∆E<sub>system</sub> = &Sigma; T</strong><br><br>
+
+8. <strong>∆E<sub>system</sub> = W<sub>Fa</sub></strong><br><br>
+
+9. <strong>W<sub>Fa</sub> = ∆ME + ∆E<sub>internal</sub></strong><br><br>
+
+10. <strong>∆E<sub>internal</sub> = -W<sub>nonconservative</sub></strong><br><br>
+
+11. <strong>W<sub>nonconservative</sub> = ∆ME</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;(when W<sub>Fa</sub> = 0)
+
+<br><br><br><br>
+
+	    <strong><a href="#Rule101"><span class="mw-headline" id="Rule101">#</span></a> <font color="red">P. Rule 101.</font></strong> Identifying what forces are external and internal are very important to using the energy system equations: When the force is external, represent it using work, and if the force is internal, represent it using Potential Energy. See Rule 102 for how to determine whether a force is internal or external.<br><br><br>
+	    
+	    
+	    <strong><a href="#Rule102"><span class="mw-headline" id="Rule102">#</span></a> <font color="red">P. Rule 102.</font></strong> Defining what forces acting on a system are external and internal is not as bad as you may think:<br><br>
+
+
+Suppose you have a system containing objects A and B, and a second system containing objects C and D. Any force object A exerts on B (or vice versa) is internal, because it is a force resulting from the interaction of two objects defined to be a part of the same system. If C or D exerted a force on A or B (or A or B exerted on C or D), the force is external, because the interaction involves objects that are and aren't in the system.<br><br> 
+
+In the first case, quantities such as momentum and total energy will be conserved because the force was internal. This does not hold true in the second case, because the force was external.<br><br><br>
+	    
+	    
+	    <strong><a href="#Rule103"><span class="mw-headline" id="Rule103">#</span></a> <font color="red">P. Rule 103.</font></strong> Gravitational energy only exists when you have at least two objects in your system: When the Earth is not part of the system, and there is only one object in the system, then the system cannot have gravitational potential energy. Thus, the work done by the force of gravity will be an external force when the system is not declared to include the Earth, or whatever planet the event is occurring on.<br><br>
+
+Newton's third law force pairs are always internal forces. When a system includes an object and the Earth, the force of gravity of the object acting on the block, and the force of gravity of the object acting on the earth, are equal in magnitude and opposite in direction. This does NOT mean that the force normal and force of gravity go together; Force Normal is <u>always</u> an external force.<br><br><br>
+
+
+<strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">P. Rule 104.</font></strong> Know that instead of just summing the forces in one direction at a time, you can sum all of them at once in unit vector form, where you assign each of the forces <strong>i&#x302;</strong>, -<strong>i&#x302;</strong>, <strong>j&#x302;</strong>, or -<strong>j&#x302;</strong> depending on their direction. If the force is not squarely in a unit vector direction (e.g., it is at an angle not cleanly divisible by 90), then just incorporate both <strong>i&#x302;</strong> & <strong>j&#x302;</strong> into one force. Know that you should also write acceleration in it unit vector form if you can. Once you have an equation in this unit vector form, you can once again isolate the x and y direction vectors to solve for any missing variables. <br><br><br>
+
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="EnergyWells">VII.VI Energy Wells.</span></h3> 
+	    </header>
+	    <article>
+
+<strong><font color="blue"><a href="#EnergyTransferMeans"><span class="mw-headline" id="FormsOfEquilibrium">#</span></a> Forms of Equilibrium:</font></strong><br>
+There are three types of equilibrium an object can be in as it remains in a gravitational field. These three types arise from the different ways in which the object’s potential energy can change when the object undergoes a displacement. For each direction, if the change in potential energy equals zero, the object is in translational equilibrium in that direction.
+
+  <ol>
+<li><strong>Neutral Equilibrium</strong>: The potential energy is constant. A displacement in any direction will not change the object's potential energy, and when the object is displaced, it will not experience any force that will increase its displacement nor bring it back to its original position.<br><u>Example:</u> A ball rolling back and forth on a level surface will be in neutral equilibrium because its gravitational potential energy will remain constant regardless of its position.<br><br>
+  <em>The graph of the gravitational potential energy of the ball (with respect to position) will be a horizontal line because the g.p.e. is constant.</em>
+
+</li><br>
+
+<li><strong>Stable Equilibrium</strong>: The potential energy is at a minimum. Displacing the object to either side will raise its potential energy, resulting in a (gravitational) force that moves the object back towards its original position. Since displacing the object will raise its potential energy, any force that would displace the object from its original position must do work on it to do so.<br> <u>Example</u>: A tiltable water bottle will be in stable equilibrium because its gravitational potential energy increases as its position moves away from the equilibrium position. As the water bottle is tilted, the center of mass will go up as the position goes away from equilibrium. The water bottle will naturally return back to the equilibrium position when it loses gravitational potential energy.<br><br>
+<em>The graph will look akin to an energy well, with the equilibrium position in the center of the well.</em>
+
+</li><br>
+
+<li><strong>Unstable Equilibrium</strong>: The potential energy is at a maximum. Displacing the object to either side will lower its potential energy, resulting in a (gravitational) force moving the object further from its original position. Since displacing the object lowers its potential energy, gravity does the work necessary to displace the object from its original position. <br> 
+<u>Example</u>: Something easily toppleable, like a pen, will be in an unstable equilibrium because its gravitational potential energy decreases as it moves away from the equilibrium position, because the center of mass of the pen goes down as the pen gets displaced from the equilibrium. The pen will naturally move away from the equilibrium position when it loses gravitational potential energy.<br><br>
+<em>The graph will look akin to an energy 'mountain' of sorts, with the equilibrium position at the peak, making it very easy for the object to go from potential energy to kinetic energy.</em>
+
+</li><br>
+
+  </ol>
+
+<br>
+
+<strong><a href="#PotentialEnergyCurveDef"><span class="mw-headline" id="PotentialEnergyCurveDef">#</span></a> <font color="#006400">Potential Energy Curves</font></strong>: Acknowledge Equation 5 of Rule 100, which is the derivation of Equation 6.<br><br>
+
+If U(x) is given on a graph, then at any value of x, the force F(x) is the negative of the slope of the curve there and the kinetic energy of the particle is given by <strong>KE = E<sub>mec</sub> - U(x)</strong>, where E<sub>mec</sub> c is the mechanical energy of the system. <br><br>
+
+A <strong>turning point</strong> is a point x at which the particle reverses its motion (there, K = 0). The particle is in <strong>equilibrium</strong> at points where the slope of the U(x) curve is zero (there, F(x) = 0). 
+	    
+	  </article>
 	</div>
 	
 	<div class="General links">
@@ -74,12 +459,12 @@
       <footer class="site">
       <br>
       <strong><a href="/Physics/Mechanics.html">Classical Mechanics</a></strong><br>
-        <article><strong><a href="/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong> → <strong><a href="/Physics/MechanicsFull2">Pt. 2: Dynamics</a></strong></article>
+        <article><strong><a href="/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong> → <strong><a href="/Physics/MechanicsFull2">Pt. 2: Dynamics</a></strong> → <strong><a href="/Physics/MechanicsFull3">Pt. 3: Dynamics (cont.)</a></strong></article>
         <br>
-        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong>Energy and Work</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong>Energy and Work</strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 6 2024</span><br>
+      	<span class="tiny">Last Change: November 7 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

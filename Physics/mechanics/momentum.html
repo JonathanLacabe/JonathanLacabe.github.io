@@ -21,7 +21,7 @@
 		<div class="cont">
 		  <a href="/index.html">Home</a><br>
 		  <a href="/sitemap.txt">Sitemap</a><br>
-		  <hr><!-- [[ Add philosophy for site eventually! -->
+		  <hr>
 		  <a href="/Physics/physics.html">Physics</a><br>
 		  <a href="/math/mathematics.html">Math</a><br>
 		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
@@ -29,6 +29,13 @@
 		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
 		  <a href="/engineering/aeronautics.html">Aero.</a><br>
 		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
 		</div>
 	</nav>
 	
@@ -39,10 +46,254 @@
 	  </header>
 	  <hr>
 	  <article>
-	    <p>These are my complete notes for Momentum & Center of Mass in Classical Mechanics. <br><br>I color-coded my notes according to their meaning - All numbered notes (which I call rules) are red, and include examples and the basis for understanding a topic. Definitions are written in green, and other important information (such as large-scale drawings that are better visualized than explained) was written in blue. All of this information is preserved on this page, with logical flow and breaks. I use ascii line drawings sparingly - If I can convey information or a graph using an image online, I will do so.<br><br>All of the knowledge present in these notes are filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	    <p>These are my complete notes for Momentum & Center of Mass in Classical Mechanics. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
+	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#CenterOfMass">VIII.I Center of Mass.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#MomentumBasics">VIII.II Momentum Basics.</a>
+        </div>
+        
+      </div>
+<hr>
 	  
-<hr>Working on it tirelessly right now.
+	  <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="MomentumEtCOM">VIII. Momentum & Center of Mass</span></h2>
+	    <h3><span class="mw-headline" id="CenterOfMass">VIII.I Center of Mass.</span></h3>
+	  </header>
+	  <article>
+	  
+	  <strong><font color="#006400"><a href="#CenterDef"><span class="mw-headline" id="CenterDef">#</span></a> Center of Mass</font></strong>: Mass-weighted average position of all mass of an object. An object with a constant density and symmetrical shape, the center of mass is directly in the center of the object.<br><br><br>
+	  
+	  <strong><a href="#Rule105"><span class="mw-headline" id="Rule105">#</span></a> <font color="red">P. Rule 105.</font></strong> EVERYTHING moves in the parabolar shape as it is thrown in the air. The motion of irregularly shaped objects, like a hammer, seems to be much more complicated. However, you must see through the propaganda and see that the hammer rotates around its center of mass, and the motion of the center of mass of the hammer still follows a parabola just like a ball or something else with a symmetrical shape/constant density. Evidence:<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Hammers.png"><img src="/Physics/img/Hammers.png" alt="Diagram of the dynamic motion of a hammer. The colored line represents the parabolic curve as the hammer falls under the influence of gravity." width=52%/></a></div>
+	    <span class="tiny"><em>Diagram of the dynamic motion of a hammer. The colored line represents the parabolic curve as the hammer falls under the influence of gravity.</em></span><br><br>
+	    Regardless of any rotation an object may be experiencing (as depicted with the hammer), you can consider the force of gravity to be acting directly on the center of mass. This holds true for all objects in projectile motion.
+	  
+	  <br><br><br>
+	  
+	    <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">P. Rule 106.</font></strong> Expanding on the concept of Rule 105, <u>systems</u> of objects also have their own center of mass (discerned through the location and individual masses/densities of all of the objects) that follows the same old parabolar projectile motion path. This is in spite of the fact that the balls are all moving relative to one another.
+	    <br><br><br>
+	    
+	  <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">P. Rule 107.</font></strong> When the object is in a constant gravitational field, the center of mass is the same as the center of gravity. We generalize Earth to have a constant gravitational acceleration (9.81 m/s²), even though that number actually varies at different locations on Earth (see <a href="/Physics/MechanicsFull#Rule15">Rule 15</a>).<br><br><br>
+	  
+	  <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">P. Rule 108.</font></strong> The center of mass of an object is not necessarily always located on the object itself - think of a donut, for example. Constant density + constant shape = center of mass in the geometric center, regardless of if there is anything in the center.<br><br><br>
+	  
+	  <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">P. Rule 109.</font></strong> When you apply a force somewhere to the sides of the center of mass of the system, the applied force will rotate the system. If you apply a force to an object at, or directly toward, its center of mass (which is the case in practically every problem you will have to deal with), the force applied will not cause the object to rotationally accelerate - the force will only cause a linear acceleration of the object.<br><br> 
+Note that even though many problems state that a force is pushing at an angle, 99% of the time that force is still being directed on the center of mass, just from a new angle of attack.<br><br><br>
+
+<strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">P. Rule 110.</font></strong> When hung or tipped, the force of gravity will pull directly upon the center of mass of the object to bring the center of mass back to its lowest point. When you tip one of those untippable cups, the center of mass is getting raised in the air (because it was already very low), and so the force of gravity will naturally pull downward on the center of mass, as a result causing the cup to stand upright again. <br><br><br>
+	  
+	  <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">P. Rule 111.</font></strong> There is a trick you can use to determine the center of mass of a flat object in reality: simply hang the object up by one end and place tape vertically, from where the object is hung to the bottom. Then, turn the object and repeat the process. Where the two lines of tape intersect is where the enter of mass will be. <br><br><br>
+	  
+	  <strong><font color="#006400"><a href="#PointObjectDef"><span class="mw-headline" id="PointObjectDef">#</span></a> Point Object/Point Particle</font></strong>: An object small enough that its size and shape are irrelevant - it can just be considered to be a dot in space, possibly with a mysterious mass associated with it as well.<br><br><br>
+	  
+	  <strong><font color="#006400"><a href="#CentroidDef"><span class="mw-headline" id="CentroidDef">#</span></a> Centroid</font></strong>: The unweighted, geometric center of a system. If there are two objects in a system, and one is 1000x the mass of the second, the centroid will still be directly in the middle between them. Thus, the centroid is the ignoramus's center of mass.<br><br><br>
+	  
+	  <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">P. Rule 112.</font></strong> Calculating the center of mass of a system is lightwork. First, collect the mass and positions in the cartesian plane of each individual object of the system. This system works best with point objects. A general equation for the center of a system is flexible to work with any number of points, but must be solved separately for the x, y, and z directions of the points, as follows:<br><br>
+<strong><span class="vecteur"><strong>x</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub>x<sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
+<strong><span class="vecteur"><strong>y</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub>y<sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
+<strong><span class="vecteur"><strong>z</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub>z<sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
+
+This equation is described variously as the "system of particles" equation, or simply the "particle system" equation. Each of the known "positions" of the particles are with respect to a zero reference point (usually the origin, though it can differ depending on the problem, requiring the individual to perform extra calculations).<br><br>
+A revolutionary, modern super-equation fit for the 21st century has recently been invented to combined ALL THREE directions in three-dimensional space into a single, efficient, all-use equation. It is as follows:<br><br>
+    <strong><span class="vecteur"><strong>r</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub><span class="vecteur"><strong>r</strong></span><sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
+	  Since <span class="vecteur"><strong>r</strong></span> contains all three of the directions (<span class="vecteur"><strong>x</strong></span><strong>i&#x302;</strong> + <span class="vecteur"><strong>y</strong></span><strong>j&#x302;</strong> + <span class="vecteur"><strong>z</strong></span><strong>k&#x302;</strong>), it returns the exact center of mass three-dimensionally.<br><br>
+	  Going further, as a true testament to the progress of science, scientists have discovered that taking the derivative of this super-equation will result in a system-velocity equation, which describes the velocity of the center of mass of a system of particles:<br><br>
+	  <strong><span class="vecteur"><strong>v</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub><span class="vecteur"><strong>v</strong></span><sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong>
+	  
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">P. Rule 113.</font></strong> In order to find the change in position of the center of mass of a system, you must use the center of mass equation for the initial position, and then for the final position, and subtract former from the ladder, in the delta "change in" tradition.<br><br><br>
+	  
+	  <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">P. Rule 114.</font></strong> On method of finding the center of mass of irregular objects is to split the object into multiple, normally shaped objects (like square, rectangles, triangles, and other basic shapes) that can be used in a system of particles type problem, as described in Rule 112. <br><br><br>
+	  
+	  
+	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">P. Rule 115.</font></strong> If you are not given mass in a problem with multiple objects, do not fear: When all the pieces of the object (or all of the parts of a system) have the same density and thickness, the center of mass equation can be altered as follows:<br><br>
+
+<strong>x<sub>com</sub> = (A<sub>1</sub>x<sub>1</sub> + A<sub>2</sub>x<sub>2</sub> + ...) / (A<sub>1</sub> + A<sub>2</sub> + ...)</strong>
+<br><br><br>
+
+
+This is derived through the following means:<br><br><strong>ρ<sub>1</sub> = ρ<sub>2</sub></strong><br>
+<strong>(m<sub>1</sub> / ∀<sub>1</sub>) = (m<sub>2</sub> / ∀<sub>2</sub>)
+</strong><br>
+<strong>(m<sub>1</sub> / (A<sub>1</sub> × t)) = (m<sub>2</sub> / (A<sub>2</sub> × t))
+</strong><br>
+<strong>(m<sub>1</sub> / A<sub>1</sub>) = (m<sub>2</sub> / A<sub>2</sub>)
+</strong><br>
+<strong>m<sub>1</sub> = (A<sub>1</sub> / A<sub>2</sub>) × m<sub>2</sub>
+</strong><br><br>
+
+From there, you can just plug in that value into the center of mass equation, causing every term to have the same mass. Thus, the mass can be canceled out, and now only the area of each object is needed to complete the problem.<br><br><br>
+	  
+	  <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">P. Rule 116.</font></strong> If the object has a hole in it, you can calculate the center of mass by imagining the hole and the object it is part of as being separate particles, calculating the center of mass for each individually. From there, you can use the classic 'system of particles' equation (see Rule 112). However - be careful to instead SUBTRACT the terms relating to the hole in the equation instead of adding them, in order to account for the center of mass being shifted away from the part of the object with the hole.<br><br><br>
+	  
+	  <strong><font color="#006400"><a href="#UniformDef"><span class="mw-headline" id="UniformDef">#</span></a> Uniform</font></strong>: When applied in the context of all of this center of mass nonsense, it means that the object has constant density.<br><br><br>
+	  
+	  <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">P. Rule 117.</font></strong> It is possible, more efficient, and fairly easy to use calculus in order to calculate the center of mass, deriving the equation for it from the density equation and the system of particles equation.<br><br>
+	  First, the summation of all of the particles in the system must be made to account for an infinite amount of particles, the mass of which will each approach zero as they get more numerous and more representative of actual particles. This can be represented as follows:<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/comlimit.png"><img src="/Physics/img/comlimit.png" alt="The integral for determining the center of mass of a system." width=27%/></a></div>
+	    <span class="tiny"><em>The integral for determining the center of mass of a system.</em></span><br><br>
+	  Each infinitesimally small particle can be called "dm", and the whole expression can be written as the following integral:<br><br>
+	  $$x_{cm} = \frac{1}{m_{\text{total}}} \int x \, dm$$
+	  <br>
+	  This is the universal equation for density, but note that finding what equality will turn dm into dx in the first step every time the equation is used. Determining the mass through whatever means necessary is also very important.<br><br>
+	  Basic example: Assume a triangle with the thickness <em>t</em> and a uniform volumetric mass density <em>p</em>, with a base <em>a</em> and a height <em>b</em>. Since we cannot directly take the integral of x with respect to mass, we will first use the density equation to determine relationship between x-direction and mass. Since dm (each rectangle subdivision of the object) and the object itself have the same density,<br><br>
+<strong>ρ = (m<sub>total</sub> / V<sub>total</sub>) = (dm / dV)<br>dm = ρdV</strong>
+<br><br>
+And now, since the volume of the dm box is equal to length × width × height, a new value for dV can also be determined.<br><br>
+<strong>dV = y × t × dx</strong><br><br>
+Now,<br><br>
+<strong>dm = ρ × y × t × dx</strong><br><br>
+
+From there, the original (m<sub>total</sub> / V<sub>total</sub>) version of density can be recalled and fully expanded while being set equal to the fully fleshed out second side of the equation:<br><br>
+<strong>(m<sub>total</sub> / V<sub>total</sub>) = (m<sub>total</sub> / ½abt) = (2m<sub>total</sub> / abt)<br>
+dm = ρ × y × t × dx<br> = (2m<sub>total</sub> / abt) × y × t × dx<br>
+=(2ym<sub>total</sub> / ab) × dx
+</strong><br><br>
+
+FINALLY,<br>
+$$x_{cm} = \frac{1}{m_{\text{total}}} \int_0^a x \left( \frac{2ym_{\text{total}} }{ab} \right) \, dx$$
+<br>
+Moving out all of the constants, you get:<br>
+	  $$x_{cm} = \frac{2}{ab} \int_0^a xy \, dx$$
+	  Still, the y must be replaced with something else in order to take the integral, and so the basic slope formula can be used for this purpose:<br><br>
+<strong>y = mx + y<sub>0</sub><br>
+y = (b/a) × x
+</strong><br>
+$$x_{cm} = \frac{2}{ab} \int_0^a x \left( \frac{b}{a} x \right) \, dx$$
+	  =<br>
+	  $$x_{cm} = \frac{2}{a^2} \int_0^a x^2 \, dx$$
+<br>
+Solving this problem out, you get (2/3) × a.
+	  
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">P. Rule 118.</font></strong> Despite what you have been indoctrinated into believing in school, there are actually THREE (3) types of density relating to mass.
+	  
+	  <ol>
+      <li><strong>Volumetric Mass Density</strong>: ρ = (m / V). Defined by Wikipedia as "a substance's mass per unit of volume". Note that there are actually other types of volumetric density, <!--that THEY don't want you to know about-->such as <em>volumetric weight density</em> & <em>volumetric charge density</em>. </li><br>
+
+      <li><strong>Surface Mass Density</strong>: σ = m / A.</li><br>
+
+      <li><strong>Linear Mass Density</strong>: λ = m / L. The amount of mass per unit length.</li><br>
+  </ol>
+  ALWAYS remember that these are all representative of the AVERAGE density (for each type), and that to make each density in its instantaneous form, just use the instantaneous form of each variable of the equation (for example: instantaneous linear mass density has the formula dm / dL).
+	  
+	  <br><br><br>
+	  
+	  
+	  <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">P. Rule 119.</font></strong> Internal forces will occur when particles within the system collide with one another. However, those internal forces form a Newton's 3rd Law force pair and cancel one another out. Thus,<br><br><strong>&Sigma;<span class="vecteur"><strong>F</strong></span><sub>internal</sub> = 0</strong><br><br>
+	  Thus, even when a collisions occurs with the system, if there is no net external force acting on the system, the acceleration will be zero and thus the velocity (and linear momentum) of the center of mass of the system will remain constant.
+	  
+	  <br><br><br>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="MomentumBasics">VIII.II Momentum Basics.</span></h3>
+	    </header>
+	    <article>
+	  
+	  <strong><a href="#MomentumDef"><span class="mw-headline" id="MomentumDef">#</span></a> <font color="#006400">Momentum</font></strong>: VECTOR.<br>
+	   <u>Units</u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br>
+	  
+	  <u>Equation</u>: <strong><span class="vecteur"><strong>p</strong></span> = m × <span class="vecteur"><strong>v</strong></span></strong><br><br>
+	  
+	  <strong>p</strong> = Momentum.<br>
+	  <strong>m</strong> = Mass.<br>
+    <strong>v</strong> = Velocity.<br><br>
+
+	  <u>Definition</u>: "Inertia in Motion", the property of an object in motion to remain in the state of motion. Is always in the same direction as the velocity.<br><br>
+	  Note that when you are calculating momentum, you calculate momentum in reference to individual objects of a system, not forces. This is why in conservation of momentum you only include the objects of the system in your calculations.
+	  
+	  <br><br><br>
+	    
+	    <strong><font color="blue"><a href="#MomentumLaw"><span class="mw-headline" id="MomentumLaw">#</span></a> NEW VERSION(S) OF THE 2ND LAW OF MOTION:</font></strong><br><br>
+<strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = (∆<span class="vecteur"><strong>p</strong></span> / ∆<span class="vecteur"><strong>t</strong></span>)</strong> (Average)<br><br>
+<strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = (d<span class="vecteur"><strong>p</strong></span> / dt)</strong> (Instantaneous)<br><br>
+  This equation is derived from the original 2nd law and from the momentum equation. It is so obvious I will not bother to reproduce the proof here. If you need to derive it, think very hard for a few seconds.<br><br>
+  The original version of the 2nd law of motion, with its m × <span class="vecteur"><strong>a</strong></span> and whatnot, <u>assumes</u> that mass is constant. However, in our modern day and age, we cannot settle for this. These equations enable mass to change - rockets, for example, will lose mass as they expel fuel, and still the momentum version of the 2nd law will remain perfectly usable.
+  <!-- https://www.youtube.com/watch?v=10yrPDf92hY-->
+<br><br><br><br>
+
+<strong><a href="#ImpulseDef"><span class="mw-headline" id="ImpulseDef">#</span></a> <font color="#006400">Impulse</font></strong>: VECTOR.<br>
+	   <u>Units</u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br><br>
+	  
+	  <u>Equation</u>: <strong><span class="vecteur"><strong>J</strong></span> = ∆<span class="vecteur"><strong>p</strong></span></strong><br><br>
+	  
+	  <span class="vecteur"><strong>J</strong></span> = Impulse.<br>
+	  <span class="vecteur"><strong>p</strong></span> = Momentum.<br><br><br>
+
+<u>Alt. Equation</u>: $$\vec{J} = \int_{t_i}^{t_f} \sum \vec{F} \, dt$$
+(Derived from the instantaneous definition of the <a href="">new version of the 2nd law of motion</a>).<br><br>
+	  
+	  <span class="vecteur"><strong>J</strong></span> = Impulse.<br>
+	  <span class="vecteur"><strong>F</strong></span> = Force.<br>
+	  <strong>t<sub>i</sub></strong> = Time Initial.<br>
+	  <strong>t<sub>f</sub></strong> = Time Final.<br><br><br>
+	  
+	  <u>Alt. Alt. Equation</u>: <strong><span class="vecteur"><strong>J</strong></span> = <span class="vecteur"><strong>F</strong></span><sub>avg</sub> × ∆t</strong> (used for approximations)<br><br>
+    <span class="vecteur"><strong>J</strong></span> = Impulse.<br>
+	  <strong><span class="vecteur">F</span><sub>avg</sub></strong> = Average Force.<br>
+	  <strong>∆t = Change in Time.</strong><br><br><br><br>
+
+	  <u>Definition</u>: Just another way of referring to the change in momentum, in a cooler way.
+	  
+	  <br><br><br><br><br>
+
+<strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">P. Rule 120.</font></strong> <strong>Impulse Approximation:</strong><br>During collisions with short time intervals, the force of impact is much larger than all the other forces, therefore all other forces can be considered to be negligible when compared to the impact force and the net force is approximately equal to the force of impact.<br><br>
+tl;dr: With collisions that have short ∆t, &Sigma;<span class="vecteur"><strong>F</strong></span> ≈ <span class="vecteur"><strong>F</strong></span><sub>impact</sub><br><br>
+The shorter the time length, the more accurate this approximation gets.
+
+<br><br><br>
+
+<strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">P. Rule 121.</font></strong> With respect to impulse, consider time and force to be inversely proportional to eachother. Because the impulse of a collision will be constant, if there is a shorter time length of the collision, the Force will be higher, and if the collision occurs over a longer period of time, then the force will be smaller, since either way they need to equal the same constant (impulse) when multiplied.<br><br><br>
+
+<strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">P. Rule 122.</font></strong> <strong>Conservation of Momentum:</strong><br><br>A system is "isolated" when the net force on the system is zero. Momentum is conserved in all isolated systems:<br><br>
+&Sigma;<span class="vecteur"><strong>p</strong></span><sub>i</sub> = &Sigma;<span class="vecteur"><strong>p</strong></span><sub>f</sub><br><br>
+As you can see, this equation accounts for changes in the mass of a system, so long as there is a proportional change in the velocity that will result in momentum being conserved. The initial point is assumed to be right before the collision or explosion, and the final point is assumed to be right after.<br><br>
+Momentum is conserved during all collisions and explosions. In physics terms, an explosion is essentially just a collision in reverse.<br><br>
+
+REMEMBER: Conservation of momentum can be done in individual directions or combined - finding values using a conservation equation isolated to a particular direction can be very useful and necessary at times.<br><br>
+
+
+For example: when you stand on a skateboard and you are holding a ball, the system consists of you, the skateboard, and the ball. You start off with an initial momentum of zero, because you are not moving. When you throw that ball in one direction, the ball obtains a velocity, which means it patently does not have a momentum of zero. In order for the net momentum of the system to be zero (since one part of the system is moving), the other part of the system must move in the opposite direction (with the same force, of course) so that the total momentum of the system will cancel out and remain zero. This follows both the 3rd law of motion and ensures the conservation of momentum.
+<br><br><br>
+
+<strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">P. Rule 123.</font></strong> <strong>TYPES OF COLLISIONS:</strong><BR><br>
+Momentum is conserved in all of these, because they are all collisions.<br>
+<ol>
+<li><strong>Elastic Collision</strong>: A collision in which the total kinetic energy of a system of the two colliding bodies is unchanged by the collision, conserving the kinetic energy of the system. Generally, the objects "bounce" off of one another in these types of collisions. </li><br>
+
+<li><strong>Inelastic Collision</strong>: A collision in which kinetic energy is <strong><u>NOT</u></strong> conserved. In these collisions, some energy is converted from kinetic energy to other forms of energy, like thermal, light, or sound energy (think friction). Inelastic collisions cause objects to deform, cauusing the kinetic energy to turn into thermal energy.</li><br>
+
+<li><strong>Perfectly (or 'completely') Inelastic Collision</strong>: The objects stick to one another upon colliding. This is scenario with the greatest possible loss of kinetic energy. However, this does not necessarily mean that the objects will stop moving - if you throw a ball into a box on a skateboard, that will be a perfectly inelastic collision even though the skateboard and the entire system will begin moving (due to the conservation of momentum, assuming that the ball is apart of the system). </li><br>
+
+  </ol>
+All real-world bounces are inelastic, but on the atomic level, there are many elastic collisions.
+
+
+<br><br><br>
+
+<strong><font color="blue"><a href="#THELASTWORD"><span class="mw-headline" id="THELASTWORD">#</span></a> THE LAST WORD:</font></strong><br><br>
+        The Equation of Conservation of Energy requires a minimum of two objects. Of course, this does not mean that these objects must remain constant throughout the problem - you could possibly have a single object in the beginning that could explode into three objects, resulting in one object on the left side of the equation and three on the right side. Or, possibly, you could have a Perfect Inelastic Collision occur, resulting in two objects on the left side and one object on the right. 
+        
+        <br><br>The Force of Impact equation (the alt. 2nd law of motion equation) and the Impulse equations each only allow for one object. 
+        <br><br>
+        It is easy to forget the point of Physics is to have FUN! Playing around with the variables is a great way to relieve stress.<br><br>
+        </article>
 	</div>
 	
 	<div class="General links">
@@ -63,7 +314,7 @@
 		<hr>
 		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
 		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
-		<a href="https://archive.org/"><img src="/_other/internetarchive.gif" width=60%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
 	</div>
       
 </div>
@@ -75,7 +326,7 @@
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong>Momentum & Center of Mass</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 7 2024</span><br>
+      	<span class="tiny">Last Change: November 24 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

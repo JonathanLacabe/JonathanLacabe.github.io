@@ -2,8 +2,11 @@ All changes to any page on the Human Knowledge project will described here. For 
 
 
 
+November 24 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics. 
+Rules Added: Physics, Classical Mechanics - Rule 53, 54.
+
 November 24 2024: Finished these internal pages: Color Coding. About (for the most part - it is now in a 'working' version available to the public).
-Furthermore, I changed the front page logo from one that said "J. Lacabe" to one that says "Human Knowledge", since this is not my personal blog. I left the original "J. Lacabe" image on the About page, for perpetuity.
+Furthermore, I changed the front page logo from one that said "J. Lacabe" to one that says "Human Knowledge", since this is not my personal blog. I left the original "J. Lacabe" image on the About page, for perpetuity. Additionally, every page on the site received an edit to account for the new internal pages, including sidebar additions and changed beginning paragraphs for the pages that reference color coding for the notes.
 
 November 23 2024: Began forming what would become the About, FAQ, Color Coding, and Recent Changes pages. This all spawned from my need to create a page explaining the new WoO system, which reawoke my desire to create an FAQ page, and from there the ideas began forming. The individual pages were created, but they were not completed in any form.
 

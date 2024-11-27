@@ -1,8 +1,13 @@
+CHANGE LOG
+
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
 
-November 24 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics. 
+November 26 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics, particularly in Rotational Motion. Added Disclaimer to the Special Thanks section of the About page, alongside other edits. 
+Rules Added: Physics, Classical Mechanics - Rule 55 (finished the Rotational Motion section), 124.
+
+November 25 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics. 
 Rules Added: Physics, Classical Mechanics - Rule 53, 54.
 
 November 24 2024: Finished these internal pages: Color Coding. About (for the most part - it is now in a 'working' version available to the public).

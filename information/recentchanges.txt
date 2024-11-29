@@ -4,6 +4,9 @@ All changes to any page on the Human Knowledge project will described here. For 
 
 
 
+November 28 2024: Total efforts toward torque.
+Rules Added: Physics, Classical Mechanics - Rule 130, 131, 132, 133, 134, 135, 136.
+
 November 27 2024: Edited the About page further, adding "Flipping Physics" to the Special Thanks register and trimming one of the answers in the FAQ. Much work was done today in Rotational Dynamics of Classical Mechanics, particularly in the Torque section.
 Rules Added: Physics, Classical Mechanics - Rule 125, 126, 127, 128, 129.
 

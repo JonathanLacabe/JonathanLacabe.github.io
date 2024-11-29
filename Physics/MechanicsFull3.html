@@ -376,7 +376,9 @@ In essence, this is saying that as the distance from the axis of rotation increa
       
       In all rigid objects with a constant shape, the angular velocity of each particle is the same, and so there is no need for the n subscript to be applied to the ω. Thus, when removing all constants from the equation, you are left with what is known as the <strong>Moment of Inertia</strong>, represented as the letter I:
       $$I = \sum_{n=1} m_n\,\, r_n^2$$
-      Now, the <strong>Rotational Kinetic Energy</strong> equation has been created: <strong>(1/2) × I × ω²</strong>. The old Translational Kinetic Energy equation ((1/2) × m × v²) was only concerned with the motion of the center of mass of the object, and now, we can use the rotational KE to determine the energy of objects that are merely spinning.
+      Now, the <strong>Rotational Kinetic Energy</strong> equation has been created: <strong>(1/2) × I × ω²</strong>. The old Translational Kinetic Energy equation ((1/2) × m × v²) was only concerned with the motion of the center of mass of the object, and now, we can use the rotational KE to determine the energy of objects that are merely spinning.<br><br>
+      
+      During all conservation of mechanical energy problems, you must account for both Translational and Rotational Kinetic Energy. An object can be in rotational and translational motion at the same time, occurring when both the center of mass of the object is moving through space, and the object itself is in centripetal motion, such as when the object is rolling.
       
       <br><br><br>
       
@@ -396,7 +398,9 @@ In essence, this is saying that as the distance from the axis of rotation increa
         
         Thin hollow sphere, about its center of mass: <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I = (2/3) × M × R²</strong><br><br><br>
         
-        Note that in all where length is irrelevant to the moment of inertia, such as with the cylinders, an object of that type of any length will have the same moment of inertia, from a ring to a mile-long tube.
+        Note that in all where length is irrelevant to the moment of inertia, such as with the cylinders, an object of that type of any length will have the same moment of inertia, from a ring to a mile-long tube.<br><br>
+        
+        Derivations: <a href="https://www.youtube.com/watch?v=9LMFjhSOVzY">[1]</a> <a href="https://www.youtube.com/watch?v=1-IGPxoWofQ">[2]</a> <a href="https://www.youtube.com/watch?v=iNQKpcv3ZFU">[3]</a>
         
 <br><br><br>
       
@@ -450,7 +454,7 @@ Through the forces of trigonometry, the moment arm is equal to <strong><span cla
       
       <br><br><br>
       
-      <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">P. Rule 126.</font></strong> The sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
+      <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">P. Rule 126.</font></strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
       When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity and the normal force can be set to zero since they have an <span class="vecteur">r</span> of 0.
       
       <br><br><br>
@@ -476,7 +480,10 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
       
       <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">P. Rule 128.</font></strong> In all situations, if there are objects that are on top of other objects, and you are including the bottom objects in your force summation, then you do not need to include the force normals of the objects on top, only their forces of gravity. This is because the weight of the top objects will just contribute to the force normal of the bottom object.<br><br>
       
-      Secondly, ALWAYS include ALL of the objects in the summation of the torques, including the objects on bottom and on top and anything in between. When determining if the torques are positive or not, don't forget you need to use the old right hand rule to figure it out, using the forces as your guide.
+      Secondly, ALWAYS include ALL of the objects in the summation of the torques, including the objects on bottom and on top and anything in between. When determining if the torques are positive or not, don't forget you need to use the old right hand rule to figure it out, using the forces as your guide. Draw out the free-body diagram and draw the arrows on the forces to make it easier on yourself.<br><br>
+      
+      
+      Don't forget the principle of single direction in all pulley problems, as delineated in Rule 78. The direction you decide the torque to be moving in will change how you conduct force summations for any hanging objects, summing with regard to the direction that you decided would be positive, whether it be the clockwise or counter-clockwise movement of the pulley. Thus, for an object on the side of the pulley that would denote positive movement (whatever you decided that means) would have the force of gravity as a negative force, while a hanging object on the other side would have gravity as a positive.
       
       <br><br><br><!--homework rules: rules that were created when actually out in the field appliying the base knowledge of the previous, lecture rules, into practice, thus gaining actually useful insight into how problems relating to a concept will generally work. For the student, homework rules will be much more valuable, but for the reviewer before the test, the lecture rules are what you want to look at. -->
       
@@ -484,10 +491,94 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
       <br><br> 1. You can set the axis of rotation all the way to the end of the main object (the saw or meterstick or whichever similar object), which can best be done in circumstances where the force normal has already been determined (whether through the y-direction force summation or other means). 
       <br><br>2. You can set the axis of rotation to be at an exact point, whether one you want to find (such as a point whose <span class="vecteur">r</span> value you are trying to find) or one you want to remove all together in order to isolate another variable (in situations which you have two unknown variables, and placing the axis of rotation upon one point will remove that variable, allowing the other one to be solved).<br><br><br><!--Homework rule-->
       
+      <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">P. Rule 130.</font></strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3#InertiasEx">basic rotational inertias</a>.<br><br><br>
+      
+      <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">P. Rule 131.</font></strong> <strong>Parallel Axis Theorem</strong>:<br><br>
+      <strong>I<sub>parallel</sub> = I<sub>COM</sub> + M × D²</strong><br><br>
+
+<strong>I<sub>parallel</sub></strong> = The moment of inertia parallel to an axis through center of mass.<br>
+<strong>I<sub>COM</sub></strong> = The moment of inertia <u>going directly through</u> an axis through center of mass.<br>
+<strong>M</strong> = The total mass of the rigid body.<br>
+<strong>D²</strong> = The distance from the center of mass to the new axis.<br><br>
+
+
+This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3#InertiasEx">Basic Rotational Inertias</a>" from the first).
+      
+      <br><br><br>
+      
+      <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">P. Rule 132.</font></strong> Do not forget how to correlate rotational and linear acceleration/velocity - you learned this before.<br><br>On a pulley system in which a string pull downward upon the circular pulley, pulling into centripetal motion, the pulley will be accelerating (angularly) at a proportional rate to the string (linearly), since the string can only move downward as the pulley/circular object moves with it. In these circumstances, remember that the string is moving at a tangential acceleration, which already has a proportionality defined for it:<br><br><strong>a<sub>t</sub> = r × α.</strong><br><br> Tangential Velocity is practically the same thing as well, just with angular velocity instead of acceleration.<br><br>
+      
+      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq#V-I">here</a>.<br><br><br>
+      
+      <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">P. Rule 133.</font></strong> <strong>Negligible friction</strong>: Though a pulley can be stated to have "negligible friction", if this were actually true, any strings/wire upon it would just slide off and the pulley would never rotate. The meaning of "negligible friction" when stated with regard to a pulley is that the <strong>Axle</strong> of the pulley, the center rotatinal axis, has negligible friction - the surface of the pulley still has the necessary friction to interact with the string, enough so that the acceleration of the pulley and the string are proportional to one another, as explicated in Rule 132.<br><br><br>
+      
+      <strong><font color="#006400"><a href="#CycloidDef"><span class="mw-headline" id="CycloidDef">#</span></a> Cycloid</font></strong>: A curve traced by a point on a circle rolling in a straight line.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Cycloid_animated.gif"><img src="/Physics/img/Cycloid_animated.gif" alt="Cycloid. Courtesy of Wikimedia." width=44%/></a></div>
+	    <span class="tiny"><em>Cycloid. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Cycloid_animated.gif">Wikimedia</a>.</em></span><br>
+      
+      <br><br><br>
+      
+      <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">P. Rule 134.</font></strong> All objects that roll without slipping, such as cylinders and all good tires, have a total kinetic energy that equals the sum of the translational and rotational kinetic energies of the object:<br><br><strong>KE<sub>total</sub> = KE<sub>T</sub> + KE<sub>R</sub></strong><br><br>
+      
+      <strong>KE<sub>total</sub> = (½ × m × v²) + (½ × I × ω²)</strong><br><br>
+
+      The acceleration of all objects that roll without slipping only relies on three determinants: the force of gravity, the incline angle, and the coefficient of the moment of inertia. The lower the fraction for the rotational inertia equation (where both gravity and the incline are constant), the lower the percentage of the initial gravitational potential energy that will be converted into rotational kinetic energy as the object rolls without sliding. Thus, more of the potential energy will be converted directly into translational kinetic energy, and thus the object will have a higher final velocity, thus moving down the incline faster.
+<br><br>
+For example, if a hollow sphere and a solid sphere (the radius of each being negligible) were both to begin rolling down an incline at the same time, the solid sphere would reach the bottom first since it has a smaller moment of inertia than the hollow sphere: 2/5 &lt; 2/3.
+
+
+
+
+      <br><br><br>
       
       
+      <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">P. Rule 135.</font></strong> The acceleration and velocities of the center of masses of objects that roll without slipping (translational, obviously) also have their own equations, totally identical to their tangential equivalents:<br><br>
+
+<strong>v<sub>com</sub> = R × ω</strong><br>
+<strong>a<sub>com</sub> = R × α</strong><br><br>
+
+Thus, very importantly, in these circumstances, the angular and linear accelerations/velocities will be in the same direction. If you are not getting that when you solve the problem, change the positive direction of the torque.<br><br>
+
+The equation for the distance travelled by the center of mass of the rolling object is similar to the arc length equation:<br><br>
+
+<strong>∆x<sub>com</sub> = R × ∆θ</strong>
+
+<br><br><br>
+<!--slave to future self: your future self is uninterested in the level of hard work you had to do in the past to reach your results, it only cares about the end result. Your future self does not care about how you wanted to stay in bed past your alarm, he needs to have the results of the person who didn't.-->
+
+<strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a><!--IVE TRIED NOTHING EVERYTHING WORKS--> <font color="red">P. Rule 136.</font></strong><strong> Angular Momentum:</strong> VECTOR.<br><br>
+
+	   <u>Units</u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br>
+	  
+	  <u>Equation</u>: (For Rigid Objects with Shape)<br><br> <strong><span class="vecteur"><strong>L</strong></span> = I × <span class="vecteur"><strong>ω</strong></span></strong>
+	  
+	  <br><br>
+	  
+	  <strong><span class="vecteur"><strong>L</strong></span></strong> = Angular Momentum, represented with an 'L' instead of rho.<br>
+<strong>I</strong> = Moment of Inertia.<br>
+<strong><span class="vecteur"><strong>ω</strong></span></strong> = Angular Velocity.<br><br>
+
+	  <u>Definition</u>: "Rotational Inertia in Motion", the property of an object in centripetal motion to remain in the state of centripetal motion.
+	  
+	  <br><br>
+	  Notice that since angular momentum and angular velocity are directly proportional vectors, they must be in the same direction. Furthermore, <span class="vecteur"><strong>L</strong></span> has an inherent axis of rotation that must be identified every time, like torque and rotational inertia.
+
+	  <br><br><br>
+
+<strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">P. Rule 137.</font></strong> <strong>Conservation of Angular Momentum:</strong>
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
       
-	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
@@ -496,14 +587,6 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
 	    
 	    
 	    
-	    <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">P. Rule 130.</font></strong> <br><br><br>
-	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">P. Rule 131.</font></strong> <br><br><br>
-	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">P. Rule 132.</font></strong> <br><br><br>
-	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">P. Rule 133.</font></strong> <br><br><br>
-	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">P. Rule 134.</font></strong> <br><br><br>
-	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">P. Rule 135.</font></strong> <br><br><br>
-	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">P. Rule 136.</font></strong> <br><br><br>
-	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">P. Rule 137.</font></strong> <br><br><br>
 	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">P. Rule 138.</font></strong> <br><br><br>
 	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">P. Rule 139.</font></strong> <br><br><br>
 	    
@@ -607,7 +690,7 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 27 2024</span><br>
+      	<span class="tiny">Last Change: November 28 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

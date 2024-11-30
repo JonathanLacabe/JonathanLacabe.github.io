@@ -4,6 +4,9 @@ All changes to any page on the Human Knowledge project will described here. For 
 
 
 
+November 29 2024: Finished torque, and some Quality of life changes to make myself easier to understand. Created the page for Gravitation and linked it everywhere.
+Rules Added: Physics, Classical Mechanics - Rule 137, 138, 139, 140.
+
 November 28 2024: Total efforts toward torque.
 Rules Added: Physics, Classical Mechanics - Rule 130, 131, 132, 133, 134, 135, 136.
 

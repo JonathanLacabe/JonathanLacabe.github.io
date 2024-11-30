@@ -52,11 +52,19 @@
 	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
       <div class="toc-container">
         <div class="toc-column">
-          <a href="#AngularVel">[[[[[[[[[[[[[[[[</a>
+          <a href="#MomentOfInertia">IX.I Moment of Inertia.</a>
         </div>
         <div class="toc-column">
-          <a href="#Centripetal">[[[[[[[[[[[[[[[[[[[.</a>
+          <a href="#AngMomentum">IX.III Angular Momentum.</a>
         </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Torque">IX.II Torque.</a>
+        </div>
+        
       </div>
 	  <hr>
 	  <header class="articleHeader"><hr>
@@ -86,7 +94,8 @@ A BICYCLE will be in both Translational and Rotational motion when it is in use.
 	  <strong>r</strong> = The distance each particle is from the axis of rotation (the center of the rotation).<br><br><br>
 
 	  <u>Definition</u>: Also known as <strong>Rotational Mass</strong> or <strong>Rotational Inertia</strong>. A measure of resistance to <u>Angular Acceleration</u>, as opposed to Inertial mass, which is a measure of an object's resistance to acceleration in general. The full derivation of the formula (and how it connects into Rotational Kinetic Energy) is outlined in Rule 124.<br><br>
-In essence, this is saying that as the distance from the axis of rotation increases, so will the moment of inertia. For example - if you have a broom and you try to rotate it from the brush, it will not be too difficult since most of the mass is located by the brush, but if you were to try to rotate the broom from the top of the handle, it will be much more difficult as the bulk of the mass has dramatically increased in its distance from the center of the rotation.
+	  The moment of inertia of an entire system is just the summation of all of the individual moments of inertias of the objects within the system - remember that.<br><br>
+In essence, the equations states that as the distance from the axis of rotation increases, so will the moment of inertia. For example - if you have a broom and you try to rotate it from the brush, it will not be too difficult since most of the mass is located by the brush, but if you were to try to rotate the broom from the top of the handle, it will be much more difficult as the bulk of the mass has dramatically increased in its distance from the center of the rotation.
 	  
 	  <br><br><br>
 	  
@@ -175,9 +184,10 @@ Understand that the direction of the <span class="vecteur"><strong>r</strong></s
 Imagine that <span class="vecteur"><strong>r</strong></span> and <span class="vecteur"><strong>F</strong></span> are two sides of a right triangle. The third side, which will never be the hypotenuse, is a component of the <span class="vecteur"><strong>r</strong></span> position vector. The third side will thus be perpendicular to the force, and, as the perpendicular component of <span class="vecteur"><strong>r</strong></span>, is known as the <strong>"moment arm"</strong> or the <strong>"lever arm"</strong>.<br><br>
 When θ is 90 degrees (a perpendicular force), then <span class="vecteur"><strong>r</strong></span> and the moment arm are equal in magnitude, and the Force is the hypotenuse.<br><br>
 
-Through the forces of trigonometry, the moment arm is equal to <strong><span class="vecteur"><strong>r</strong></span> × sinθ</strong>, since the sine of any supplementary angles (θ<sub>1</sub> and θ<sub>2</sub> in the figure) will produce the same value, as one can demonstrate using the sine curve.<br><br>
+Through the forces of trigonometry, the moment arm is equal to <strong><span class="vecteur"><strong>r</strong></span> × sinθ</strong>, since the sine of any supplementary angles (θ<sub>1</sub> and θ<sub>2</sub> in the figure) will produce the same value, as one can demonstrate using the sine curve. <br><br>
+This is something that you are guaranteed to do during a problem at some point: use the moment arm to simplify an equation involving a moving particle into just constants. The angular momentum for a moving particle equation, r × m × v × sinθ (see Rule 138), can be simplified very quickly into y × m × v, y being the moment arm perpendicular to the distance between the particle and the center of mass, and to the force. This can be done through pure trigonometry, since <strong>y = r × sinθ</strong>.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/momentarm.png"><img src="/Physics/img/momentarm.png" alt="An example of how the moment arm can be constructed using the line of action of the force, and the position vector. Courtesy of Flipping Physics." width=44%/></a></div>
-	    <span class="tiny"><em>An example of how the moment arm can be constructed using the line of action of the force, and the position vector. Courtesy of <a href="https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0278_lecture_notes_-_torque_introduction.pdf">Flipping Physics</a>.</em></span><br><br>
+	    <span class="tiny"><em>An example of how the moment arm can be constructed using the line of action of the force, and the position vector. Courtesy of <a href="https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0278_lecture_notes_-_torque_introduction.pdf">Flipping Physics</a>.</em></span>
       
       <br><br><br>
       
@@ -253,9 +263,6 @@ This theorem is an easy way to determine the moment of inertia of a rigid body, 
 <br><br>
 For example, if a hollow sphere and a solid sphere (the radius of each being negligible) were both to begin rolling down an incline at the same time, the solid sphere would reach the bottom first since it has a smaller moment of inertia than the hollow sphere: 2/5 &lt; 2/3.
 
-
-
-
       <br><br><br>
       
       
@@ -273,6 +280,12 @@ The equation for the distance travelled by the center of mass of the rolling obj
 <br><br><br>
 <!--slave to future self: your future self is uninterested in the level of hard work you had to do in the past to reach your results, it only cares about the end result. Your future self does not care about how you wanted to stay in bed past your alarm, he needs to have the results of the person who didn't.-->
 
+</article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="AngMomentum">IX.III Angular Momentum.</span></h3>
+	    </header>
+	    <article>
+
 <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a><!--IVE TRIED NOTHING EVERYTHING WORKS--> <font color="red">P. Rule 136.</font></strong><strong> Angular Momentum:</strong> VECTOR.<br><br>
 
 	   <u>Units</u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br>
@@ -288,18 +301,53 @@ The equation for the distance travelled by the center of mass of the rolling obj
 	  <u>Definition</u>: "Rotational Inertia in Motion", the property of an object in centripetal motion to remain in the state of centripetal motion.
 	  
 	  <br><br>
-	  Notice that since angular momentum and angular velocity are directly proportional vectors, they must be in the same direction. Furthermore, <span class="vecteur"><strong>L</strong></span> has an inherent axis of rotation that must be identified every time, like torque and rotational inertia.
+	  Notice that since angular momentum and angular velocity are directly proportional vectors, they must be in the same direction. Determine direction using the rotational right hand rule. Furthermore, <span class="vecteur"><strong>L</strong></span> has an inherent axis of rotation that must be identified every time, like torque and rotational inertia. <a href="https://www.youtube.com/watch?v=feZnNrF2wc4">Watch this</a> for the derivation of the equation.
 
 	  <br><br><br>
 
-<strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">P. Rule 137.</font></strong> <strong>Conservation of Angular Momentum:</strong>
+<strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">P. Rule 137.</font></strong> <strong>Conservation of Angular Momentum:</strong><br><br>
 
+<strong>&Sigma;<span class="vecteur"><strong>L</strong></span><sub>i</sub> = &Sigma;<span class="vecteur"><strong>L</strong></span><sub>f</sub></strong><br><br>
 
+Expanded, this is the following:<br><br>
 
+<strong>I<sub>i</sub> × <span class="vecteur"><strong>ω</strong></span><sub>i</sub> = I<sub>f</sub> × <span class="vecteur"><strong>ω</strong></span><sub>f</sub></strong><br><br>
 
+Add as many additional angular momentums into the equation as there are objects in the system.<br><br> 
+The conservation of angular momentum equation can be easily derived from a special case of the net external torque equation:<br><br>
+<strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span><sub>external</sub> = (∆<span class="vecteur"><strong>L</strong></span><sub>system</sub> / ∆t)</strong><br><br>
 
+Thus, if the object is not in centripetal motion at the beginning of the event (initial torque = 0), then if angular momentum is conserved, it will continue to have 0 centripetal motion at the end. If an external force causes centripetal motion to be created, then angular momentum is not conserved. Remember Rules 102 & 103 for determining what forces are external or not.<br><br>
+
+General Example: When a figure skater pulls their arms inward during a performance, they will speed up. This is because they are reducing the distance of some amount of mass from their center of mass, thus decreasing the moment of inertia and causing the angular velocity to increase so that angular momentum is conserved.
 
 <br><br><br>
+
+
+<strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">P. Rule 138.</font></strong> In the SPECIFIC CASE of a point particle moving in a circle (centripetal motion), the following attributes are applicable to the particle:<br><br>
+<strong>1. </strong>Translational and Rotational Kinetic Energy will return the same value (only in these circumstances!). Choose either depending on what variables you have.<br><br><br>
+<strong>2. </strong>The angular momentum of the particle can be calculated using both the 'rigid object with shape' momentum equation (I × ω) and the translational point-particle momentum equation:
+
+ <span class="vecteur"><strong>L</strong></span><sub>particle</sub> = <strong>r × m × v × sinθ</strong>.<br><br>
+
+<strong>r</strong> - The vector from axis of rotation to center of mass of particle.<br>
+<strong>m</strong> - The mass of the point particle.<br>
+<strong>v</strong> - The linear velocity of the point particle.<br>
+<strong>θ</strong> - The angle between the DIRECTIONS r and v, like torque.<br><br>
+This equation can additionally be used for all translationally moving point particles (which, indeed, have angular momentum insofar as how it could translate to another object obtaining that angular momentum following a collision).<br><br><br>
+
+Attribute #1 is also applicable for ellipses, though not #2.
+<br><br><br>
+
+<strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">P. Rule 139.</font></strong> When a questions asks just for the "acceleration" of an object or a system, it is general principle to find the linear acceleration, unless the question specifically asks for the angular quantity.<br><br><br><!--vital rule. rule inflation is not a thing.-->
+
+
+	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">P. Rule 140.</font></strong> <strong>Pulleys with Mass</strong>:<br><br>
+Cruelly, Pulleys have now been invented with mass.<br><br>
+Where as before, the force of tension (magnitude) applied on each side of the pully was the same, this is not the case in pulleys with mass: These pulleys will have rotational inertia due to their mass, and thus will resist angular acceleration, making the two forces of tension acting on either side of the pulley not necesarilly having the same magnitude.<br><br>
+
+In all problems where the pulley has mass, just incorporate it as another one of the objects you are findings the torques/angular momentum of, and summing the force normal & gravity of the pulley.
+<br><br>
 	  
 	  </article>
 	</div>
@@ -331,10 +379,10 @@ The equation for the distance travelled by the center of mass of the rolling obj
       <strong><a href="/Physics/Mechanics.html">Classical Mechanics</a></strong><br>
         <article><strong><a href="/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong> → <strong><a href="/Physics/MechanicsFull2">Pt. 2: Dynamics</a></strong> → <strong><a href="/Physics/MechanicsFull3">Pt. 3: Dynamics (cont.)</a></strong></article>
         <br>
-        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong>Rotational Dynamics</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong>Rotational Dynamics</strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 28 2024</span><br>
+      	<span class="tiny">Last Change: November 29 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -4,6 +4,9 @@ All changes to any page on the Human Knowledge project will described here. For 
 
 
 
+November 30 2024: Changes, fixes, and elaborations to Classical Mechanics IX.
+Rules Added: Physics, Classical Mechanics - None, just lots of revisions.
+
 November 29 2024: Finished torque, and some Quality of life changes to make myself easier to understand. Created the page for Gravitation and linked it everywhere.
 Rules Added: Physics, Classical Mechanics - Rule 137, 138, 139, 140.
 

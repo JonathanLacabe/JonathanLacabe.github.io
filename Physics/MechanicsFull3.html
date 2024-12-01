@@ -378,8 +378,11 @@ A BICYCLE will be in both Translational and Rotational motion when it is in use.
 	  <strong>r</strong> = The distance each particle is from the axis of rotation (the center of the rotation).<br><br><br>
 
 	  <u>Definition</u>: Also known as <strong>Rotational Mass</strong> or <strong>Rotational Inertia</strong>. A measure of resistance to <u>Angular Acceleration</u>, as opposed to Inertial mass, which is a measure of an object's resistance to acceleration in general. The full derivation of the formula (and how it connects into Rotational Kinetic Energy) is outlined in Rule 124.<br><br>
-	  The moment of inertia of an entire system is just the summation of all of the individual moments of inertias of the objects within the system - remember that.<br><br>
-In essence, the equations states that as the distance from the axis of rotation increases, so will the moment of inertia. For example - if you have a broom and you try to rotate it from the brush, it will not be too difficult since most of the mass is located by the brush, but if you were to try to rotate the broom from the top of the handle, it will be much more difficult as the bulk of the mass has dramatically increased in its distance from the center of the rotation.
+	  The moment of inertia of an entire system is just the summation of all of the individual moments of inertias of the objects within the system. To sum rotational inertias, literally just add them all together. Even if they are of different types: if a system contains a particle and a thin rod, then add the particle rotational inertia equation to the already known thin rod rotational inertia. Note: This is only so long as the inertias are calculated around the same axis of rotation.<br><br>
+	  
+	  If you ever need to find the rotational inertia of a non-particle that doesn't have a <a href="/Physics/MechanicsFull3#InertiasEx">generalized inertia already known</a>, then you need to use either the rotational kinetic energy equation (if you know the value (see Rule 124)), or the net torque equation (which is equal to I × <span class="vecteur">α</span>, see Rule 127).<br><br>
+	  
+In essence, the equations for moment of inertia state that as the distance from the axis of rotation increases, so will the moment of inertia. For example - if you have a broom and you try to rotate it from the brush, it will not be too difficult since most of the mass is located by the brush, but if you were to try to rotate the broom from the top of the handle, it will be much more difficult as the bulk of the mass has dramatically increased in its distance from the center of the rotation.
 	  
 	  <br><br><br>
 	  
@@ -412,11 +415,13 @@ In essence, the equations states that as the distance from the axis of rotation 
         
         Thin hollow cylinder (hoop), about its long cylindrical axis: <strong>I = MR²</strong><br><br>
         
-        Solid cylinder, about its long cylindrical axis: <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I = (1/2) × M × R²</strong><br><br>
+        Solid cylinder/disk, about its long cylindrical axis: <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I = (1/2) × M × R²</strong><br><br>
         
         Solid sphere, about its center of mass: <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I = (2/5) × M × R²</strong><br><br>
         
-        Thin hollow sphere, about its center of mass: <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I = (2/3) × M × R²</strong><br><br><br>
+        Thin hollow sphere/shell, about its center of mass: <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I = (2/3) × M × R²</strong><br><br>
+        
+        Solid slab/block, about its center of mass (perp.): <strong>&nbsp;&nbsp;&nbsp;I = <a href="/Physics/img/slabinertia.png">(1/12) × M × (a² + b²)</a></strong><br><br><br>
         
         Note that in all where length is irrelevant to the moment of inertia, such as with the cylinders, an object of that type of any length will have the same moment of inertia, from a ring to a mile-long tube.<br><br>
         
@@ -438,8 +443,8 @@ In essence, the equations states that as the distance from the axis of rotation 
 	  <br><br><br>
 	  
 	  <strong><span class="vecteur"><strong>&tau;</strong></span></strong> = Torque.<br><br>
-	  <strong><span class="vecteur"><strong>r</strong></span></strong> = The force causing the torque.<br><br>
-	  <strong><span class="vecteur"><strong>F</strong></span></strong> = The position vector from the axis of rotation to the point the force is applied to the object, with the magnitude being the base distance. Also known as the "moment arm" or the "lever arm" (see definition).<br><br>
+	  <strong><span class="vecteur"><strong>F</strong></span></strong> = The magnitude of the force causing the torque.<br><br>
+	  <strong><span class="vecteur"><strong>r</strong></span></strong> = The magnitude of the position vector from the axis of rotation to the point the force is applied to the object, the magnitude being the base distance. Thus, the farther the distance from the AOR that the force is applied, the greater the <span class="vecteur">r</span>.<br><br>
 	  <strong>θ</strong> = The angle between the direction of <span class="vecteur"><strong>r</strong></span> and the direction of <span class="vecteur"><strong>F</strong></span>.<br><br><br>
 
 	  <u>Definition</u>: The ability of a force to cause an <u>angular acceleration</u> in an object. Just as translational motion is caused by a net <em>force</em> (the ability to cause an acceleration in an object), <em>rotational</em> motion is caused by a net <strong>torque</strong>. Of course, torque is caused by a force.<br><br>
@@ -476,23 +481,25 @@ This is something that you are guaranteed to do during a problem at some point: 
       <br><br><br>
       
       <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">P. Rule 126.</font></strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
-      When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity and the normal force can be set to zero since they have an <span class="vecteur">r</span> of 0.
+      When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity and the normal force can be set to zero since they have an <span class="vecteur">r</span> of 0.<br><br>
+      
+      If a question is directly asking to find "the net force", just sum the torques without setting it equal to I × <span class="vecteur">α</span>, as shown in Rule 127.
       
       <br><br><br>
       
       <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">P. Rule 127.</font></strong> <strong>Rotational Form of Newton's Second Law:</strong><br><br>
-      <strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span> = I × <span class="vecteur"><strong>α</strong></span></strong>. <br><br>The sum of the torque is equal to the moment of inertia times the angular acceleration. The angular acceleration is directly proportional to the magnitude of the net torque,and is inversely proportional to the moment of inertia. <br><br>
-In order to use this equation, you must identify the objects with torque, the axis of rotation of them, and which direction is positive torque. 
+      <strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span> = I × <span class="vecteur"><strong>α</strong></span></strong>. <br><br>The sum of the torque is equal to the moment of inertia times the angular acceleration. The angular acceleration is directly proportional to the magnitude of the net torque, and is inversely proportional to the moment of inertia. <br><br>
       
+        In order to use this equation, you must identify the objects with torque, the axis of rotation of them, and which direction is positive torque. 
       
-      <br><br><br><br>
+      <br><br><br>
       
       <strong><font color="#006400"><a href="#RotateEquilibriumDef"><span class="mw-headline" id="RotateEquilibriumDef">#</span></a> Rotational Equilibrium</font></strong>: When, as a result of a net zero torque (which in turn causes zero angular acceleration), the object remains at rest or at a constant angular velocity.
 
 <br><br>
 This is just like Translational Equilibrium, which is when a net force of zero on an object (and thus zero acceleration) results in the object being either at rest or at a constant velocity.<br><br>
 
-Note that it is impossible for the rotational inertia to be equal to zero so long as there is any mass located away from the axis of rotation, which is in all rela circumstances.<br><br><br>
+Note that it is impossible for the rotational inertia to be equal to zero so long as there is any mass located away from the axis of rotation, which is in all real circumstances.<br><br><br>
       
       <strong><font color="#006400"><a href="#StaticEquilibriumDef"><span class="mw-headline" id="StaticEquilibriumDef">#</span></a> Static Equilibrium</font></strong>: A state in which an object is at rest and not rotating. Thus, the object is in both Translation and Rotational Equilibrium at the same time. Additionally, the net torque of <u>any</u> axis of rotation will equal zero.<br><br>
       The ability to use both torque and regular force equations can be super useful, especially with the ability to place the axis of rotation on any spot (and thus nullifying any forces acting on that spot in the torque equations, since the <span class="vecteur">r</span> for that force would be zero).
@@ -520,7 +527,7 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
 <strong>I<sub>parallel</sub></strong> = The moment of inertia parallel to an axis through center of mass.<br>
 <strong>I<sub>COM</sub></strong> = The moment of inertia <u>going directly through</u> an axis through center of mass.<br>
 <strong>M</strong> = The total mass of the rigid body.<br>
-<strong>D²</strong> = The distance from the center of mass to the new axis.<br><br>
+<strong>D²</strong> = The distance from the center of mass to the new axis. This is NOT the distance from the old axis of rotation to the new one, it is the distance from the center of mass<u></u>.<br><br>
 
 
 This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3#InertiasEx">Basic Rotational Inertias</a>" from the first).
@@ -545,7 +552,9 @@ This theorem is an easy way to determine the moment of inertia of a rigid body, 
 
       The acceleration of all objects that roll without slipping only relies on three determinants: the force of gravity, the incline angle, and the coefficient of the moment of inertia. The lower the fraction for the rotational inertia equation (where both gravity and the incline are constant), the lower the percentage of the initial gravitational potential energy that will be converted into rotational kinetic energy as the object rolls without sliding. Thus, more of the potential energy will be converted directly into translational kinetic energy, and thus the object will have a higher final velocity, thus moving down the incline faster.
 <br><br>
-For example, if a hollow sphere and a solid sphere (the radius of each being negligible) were both to begin rolling down an incline at the same time, the solid sphere would reach the bottom first since it has a smaller moment of inertia than the hollow sphere: 2/5 &lt; 2/3.
+For example, if a hollow sphere and a solid sphere (the radius of each being negligible) were both to begin rolling down an incline at the same time, the solid sphere would reach the bottom first since it has a smaller moment of inertia than the hollow sphere: 2/5 &lt; 2/3.<br><br>
+
+If you do not know either component variable of rotational inertia (either mass & length or mass & radius), then it can be better <u>not</u> to substitute in the equation for rotational inertia into the problem, to leave I as only one unknown in the rotational kinetic energy equation. Sometimes, problems will tell you the specificities for a known moment of inertia ("a thin rod that rotates around one end"), but they will only serve as red herrings when no information as to the components of inertial mass is given, and so isolating the variable <em>I</em> itself and solving it outright will be the correct solution.<br><br> Do not fall into the dogma of having to substitute every possible equation in at all times - solving something on a higher level first can help you in many different ways.
 
       <br><br><br>
       
@@ -623,11 +632,11 @@ This equation can additionally be used for all translationally moving point part
 Attribute #1 is also applicable for ellipses, though not #2.
 <br><br><br>
 
-<strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">P. Rule 139.</font></strong> When a questions asks just for the "acceleration" of an object or a system, it is general principle to find the linear acceleration, unless the question specifically asks for the angular quantity.<br><br><br><!--vital rule. rule inflation is not a thing.-->
+<strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">P. Rule 139.</font></strong> When a questions asks just for the "acceleration", "velocity", or "speed" of an object or a system, it is general principle to find the linear quanity, unless the question specifically asks for the angular version.<br><br><br><!--vital rule. came up during the homework as well.-->
 
 
 	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">P. Rule 140.</font></strong> <strong>Pulleys with Mass</strong>:<br><br>
-Cruelly, Pulleys have now been invented with mass.<br><br>
+Pulleys with mass have rotational inertia. Pulleys without mass do not have rotational inertia.<br><br>
 Where as before, the force of tension (magnitude) applied on each side of the pully was the same, this is not the case in pulleys with mass: These pulleys will have rotational inertia due to their mass, and thus will resist angular acceleration, making the two forces of tension acting on either side of the pulley not necesarilly having the same magnitude.<br><br>
 
 In all problems where the pulley has mass, just incorporate it as another one of the objects you are findings the torques/angular momentum of, and summing the force normal & gravity of the pulley.
@@ -761,7 +770,7 @@ In all problems where the pulley has mass, just incorporate it as another one of
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 29 2024</span><br>
+      	<span class="tiny">Last Change: November 30 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

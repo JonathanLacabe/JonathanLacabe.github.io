@@ -10,6 +10,19 @@
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
 
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -197,7 +210,7 @@ This is something that you are guaranteed to do during a problem at some point: 
       <br><br><br>
       
       <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">P. Rule 126.</font></strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
-      When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity and the normal force can be set to zero since they have an <span class="vecteur">r</span> of 0.<br><br>
+      When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity can be set to zero since it has an <span class="vecteur">r</span> of 0. You must be careful not to place the normal force as being located at the center of mass of the object - that is an old oversight that must be corrected - See Rule 141.<br><br>
       
       If a question is directly asking to find "the net force", just sum the torques without setting it equal to I × <span class="vecteur">α</span>, as shown in Rule 127.
       
@@ -356,7 +369,12 @@ Pulleys with mass have rotational inertia. Pulleys without mass do not have rota
 Where as before, the force of tension (magnitude) applied on each side of the pully was the same, this is not the case in pulleys with mass: These pulleys will have rotational inertia due to their mass, and thus will resist angular acceleration, making the two forces of tension acting on either side of the pulley not necesarilly having the same magnitude.<br><br>
 
 In all problems where the pulley has mass, just incorporate it as another one of the objects you are findings the torques/angular momentum of, and summing the force normal & gravity of the pulley.
-<br><br>
+<br><br><br>
+
+<strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">P. Rule 141.</font></strong> In torque problems, you must always draw the normal force as originating at the point of contact, from the surface the object is resting on. <br><br>
+In the past, the normal force has been drawn as having the center of mass of the object as its origin - this is a simplification, a falsehood that is done purely in problems where such an oversight does not matter.<br><br>
+
+In problems involving Torque however, the location of the origin of the forces matters significantly, due to how torque is calculated. If the axis of rotation of an object is placed along the center of mass, then all torques acting at the center of mass are equal to 0 since they have a radius of 0 (see Rule 126). By placing the normal force on the center of mass of the object, you would be incorrectly excluding it from all torque summations in all situations where the axis of rotation is upon the center of mass.<br><br>
 
 </article>
 	</div>
@@ -391,7 +409,7 @@ In all problems where the pulley has mass, just incorporate it as another one of
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong>Rotational Dynamics</strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: November 30 2024</span><br>
+      	<span class="tiny">Last Change: December 1 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

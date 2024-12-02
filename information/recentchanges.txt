@@ -4,6 +4,9 @@ All changes to any page on the Human Knowledge project will described here. For 
 
 
 
+December 1 2024: Made some minor revisions and additions in order to remove missing references ('[' symbols) from Rule 68. Furthermore, I fixed an issue that was causing mathJax (used extensively in the Physics pages) to not load correctly on the GitHub mirror. All Physics pages were changed to reflect this fix, as well as some math pages.
+Rules Added: Physics, Classical Mechanics - Rule 141.
+
 November 30 2024: Changes, fixes, and elaborations to Classical Mechanics IX.
 Rules Added: Physics, Classical Mechanics - None, just lots of revisions.
 

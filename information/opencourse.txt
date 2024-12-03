@@ -1,13 +1,12 @@
 All of the MIT OpenCourseWare courses I have studied in their entirety. Soon (within the next few years), this page should be incorporative of all science courses MIT has to offer.
 
 
-Math:
-18.01 - Single Variable Calculus - Fall 2006
-
-
-Physics:
+Physics (8):
 8.01 - Physics I: Classical Mechanics - Fall 1999
 
+
+Math (18):
+18.01 - Single Variable Calculus - Fall 2006
 
 
 

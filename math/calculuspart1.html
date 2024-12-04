@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Differential Calculus Summary (Full)</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
+  </head>
+<body>
+<style>
+rainbow {
+  margin-top: 0px;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Differential Calculus (Complete)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Differential Calculus, covering such topics as Limits, Squeeze Theorem, Velocity, Acceleration, and Position, the Power Rule, Chain Rule, Quotient Rule, Particle Motion, Continuity, Optimization, Related Rates, and more. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <article><center><strong>Table Of Contents</strong></center></article>
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Limits">?. Limits.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#PCI">[[[[[[[[[</a>
+        </div>
+
+      </div>
+      
+	  <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="Limits">?. Limits.</span></h2>
+	  </header>
+	  <article><br>
+	      <strong><a href="#AverageRatesDef"><span class="mw-headline" id="AverageRatesDef">#</span></a> <font color="#006400">Average Rates/Speed</font></strong>: Average Speed is found by dividing the distance covered by the elapsed time.
+	    <br><br><br>
+	      
+	      <strong><a href="#LimitDef"><span class="mw-headline" id="LimitDef">#</span></a> <font color="#006400">Limit</font></strong>: The value a function approaches as it becomes closer to a specified point - thus, not necessarily actually being <em>at</em> that point, but rather as close to it as possible with being on it. If a function is continuous near that point, the limit equals the function's value; otherwise, it will describe the behavior of the function even if undefined at that point.
+	    <br><br><br>
+	    
+	    
+	    <strong><font color="blue"><a href="#LimitProperties"><span class="mw-headline" id="LimitProperties">#</span></a> Properties of Limits:</font></strong><br><br>
+        Similar to Logarithms, Limits have their internal rules that can applied at any time.<br><br>
+        
+        
+        
+        
+        
+<br><br><br>
+	     
+	     
+	     
+	     <!--Continue onward through the rest of the nonlinear inequalities and checking inverses, and then when you get to Logarithms create a new section.-->
+	     
+	    <!--
+	    
+	    <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">Rule 106.</font></strong> <br><br><br>
+	    <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">Rule 107.</font></strong> <br><br><br>
+	    <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">Rule 108.</font></strong> <br><br><br>
+	    <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">Rule 109.</font></strong> <br><br><br>
+	    
+	    <strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">Rule 110.</font></strong> <br><br><br>
+	    <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">Rule 111.</font></strong> <br><br><br>
+	    <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">Rule 112.</font></strong> <br><br><br>
+	    <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">Rule 113.</font></strong> <br><br><br>
+	    <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">Rule 114.</font></strong> <br><br><br>
+	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">Rule 115.</font></strong> <br><br><br>
+	    <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">Rule 116.</font></strong> <br><br><br>
+	    <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">Rule 117.</font></strong> <br><br><br>
+	    <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">Rule 118.</font></strong> <br><br><br>
+	    <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">Rule 119.</font></strong> <br><br><br>
+	    
+	    <strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">Rule 120.</font></strong> <br><br><br>
+	    <strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">Rule 121.</font></strong> <br><br><br>
+	    <strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">Rule 122.</font></strong> <br><br><br>
+	    <strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">Rule 123.</font></strong> <br><br><br>
+	    <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">Rule 124.</font></strong> <br><br><br>
+	    <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">Rule 125.</font></strong> <br><br><br>
+	    <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">Rule 126.</font></strong> <br><br><br>
+	    <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">Rule 127.</font></strong> <br><br><br>
+	    <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">Rule 128.</font></strong> <br><br><br>
+	    <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">Rule 129.</font></strong> <br><br><br>
+	    
+	    <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">Rule 130.</font></strong> <br><br><br>
+	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">Rule 131.</font></strong> <br><br><br>
+	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">Rule 132.</font></strong> <br><br><br>
+	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">Rule 133.</font></strong> <br><br><br>
+	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">Rule 134.</font></strong> <br><br><br>
+	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">Rule 135.</font></strong> <br><br><br>
+	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> <br><br><br>
+	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> <br><br><br>
+	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> <br><br><br>
+	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> <br><br><br>
+	    
+	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">Rule 140.</font></strong> <br><br><br>
+	    <strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">Rule 141.</font></strong> <br><br><br>
+	    <strong><a href="#Rule142"><span class="mw-headline" id="Rule142">#</span></a> <font color="red">Rule 142.</font></strong> <br><br><br>
+	    <strong><a href="#Rule143"><span class="mw-headline" id="Rule143">#</span></a> <font color="red">Rule 143.</font></strong> <br><br><br>
+	    <strong><a href="#Rule144"><span class="mw-headline" id="Rule144">#</span></a> <font color="red">Rule 144.</font></strong> <br><br><br>
+	    <strong><a href="#Rule145"><span class="mw-headline" id="Rule145">#</span></a> <font color="red">Rule 145.</font></strong> <br><br><br>
+	    <strong><a href="#Rule146"><span class="mw-headline" id="Rule146">#</span></a> <font color="red">Rule 146.</font></strong> <br><br><br>
+	    <strong><a href="#Rule147"><span class="mw-headline" id="Rule147">#</span></a> <font color="red">Rule 147.</font></strong> <br><br><br>
+	    <strong><a href="#Rule148"><span class="mw-headline" id="Rule148">#</span></a> <font color="red">Rule 148.</font></strong> <br><br><br>
+	    <strong><a href="#Rule149"><span class="mw-headline" id="Rule149">#</span></a> <font color="red">Rule 149.</font></strong> <br><br><br>
+	    
+	    -->
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ∞  ∪  ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  ∘  ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+	    <!--
+	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">Rule 10.</font></strong> <br><br><br>
+	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">Rule 11.</font></strong> <br><br><br>
+	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">Rule 12.</font></strong> <br><br><br>
+	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">Rule 13.</font></strong> <br><br><br>
+	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">Rule 14.</font></strong> <br><br><br>
+	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">Rule 15.</font></strong> <br><br><br>
+	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">Rule 16.</font></strong> <br><br><br>
+	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">Rule 17.</font></strong> <br><br><br>
+	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">Rule 18.</font></strong> <br><br><br>
+	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">Rule 19.</font></strong> <br><br><br>
+	    -->
+	  </article>
+	  
+	  
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
+        <article><strong>Differential Calculus</strong> → <strong><a href="/math/calculuspart2">Integral Calculus</a></strong></article>
+        <br>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: December 3 2024</span><br>
+      	<span class="tiny">Jonathan Lacabe 2024</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

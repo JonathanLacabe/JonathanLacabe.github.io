@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+December 5 2024: Work on the Calculus page, largely.
+Rules Added: Mathematics, Single Variable Calculus - Rule 106, 107, 108.
 
 December 4 2024: Some additions to the Math Symbols page.
 

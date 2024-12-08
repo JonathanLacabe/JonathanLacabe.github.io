@@ -1,4 +1,4 @@
-All pages as of November 4 2024.
+All pages as of December 6 2024.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -9,6 +9,7 @@ Physics                                              - https://humanknowledge.ne
 --Classical Mechanics Table of Contents              - https://humanknowledge.neocities.org/Physics/toc
 --Full Classical Mechanics, Part 1: Kinematics       - https://humanknowledge.neocities.org/Physics/MechanicsFull
 --Full Classical Mechanics, Part 2: Dynamics         - https://humanknowledge.neocities.org/Physics/MechanicsFull2
+--Full Classical Mechanics, Part 3: Dynamics (cont.) - https://humanknowledge.neocities.org/Physics/MechanicsFull3
 ---Velocity, Speed, Acceleration                     - https://humanknowledge.neocities.org/Physics/mechanics/velspaccel
 ---Free Fall                                         - https://humanknowledge.neocities.org/Physics/mechanics/freefall
 ---Vectors and Projectile Motion                     - https://humanknowledge.neocities.org/Physics/mechanics/vectors
@@ -16,6 +17,9 @@ Physics                                              - https://humanknowledge.ne
 ---Rotational Motion                                 - https://humanknowledge.neocities.org/Physics/mechanics/rotational
 ---Force                                             - https://humanknowledge.neocities.org/Physics/mechanics/force
 ---Energy and Work                                   - https://humanknowledge.neocities.org/Physics/mechanics/energy
+---Momentum & Center of Mass                         - https://humanknowledge.neocities.org/Physics/mechanics/momentum
+---Rotational Dynamics                               - https://humanknowledge.neocities.org/Physics/mechanics/rotationaldynamics
+---Gravitation                                       - https://humanknowledge.neocities.org/Physics/mechanics/gravitation
 
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
 
@@ -29,6 +33,7 @@ Mathematics                                          - https://humanknowledge.ne
 --Full Algebra 2                                     - https://humanknowledge.neocities.org/math/algebraIIFull
 ---Quadratic Translation                             - https://humanknowledge.neocities.org/math/algebraII/quadtranslation
 ---Factoring Pt. 1                                   - https://humanknowledge.neocities.org/math/algebraII/factoring
+---Polynomial Functions                              - https://humanknowledge.neocities.org/math/algebraII/polyfunctions
 ---Long Division                                     - https://humanknowledge.neocities.org/math/algebraII/longdivision
 ---Factoring Pt. 2                                   - https://humanknowledge.neocities.org/math/algebraII/factoring2
 ---Rules of Exponents                                - https://humanknowledge.neocities.org/math/algebraII/exponentrules
@@ -36,8 +41,13 @@ Mathematics                                          - https://humanknowledge.ne
 -Precalulus                                          - https://humanknowledge.neocities.org/math/precalculus
 --Full Precalulus                                    - https://humanknowledge.neocities.org/math/precalculusfull
 ---Rational Equations                                - https://humanknowledge.neocities.org/math/precalculus/rational
+---Domain and Symmetricality                         - https://humanknowledge.neocities.org/math/precalculus/symmetricality
+---Parents, Composition, and Inverse                 - https://humanknowledge.neocities.org/math/precalculus/pci
 
 -Single-Variable Calculus                            - https://humanknowledge.neocities.org/math/singlevarcalculus
+--Full Differential Calculus                         - https://humanknowledge.neocities.org/math/calculuspart1
+--Full Integral Calculus                             - https://humanknowledge.neocities.org/math/calculuspart2
+---Limits                                            - https://humanknowledge.neocities.org/math/singlevarcalculus/limits
 
 
 

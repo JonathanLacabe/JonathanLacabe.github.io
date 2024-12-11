@@ -3,11 +3,18 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-December 8 2024: Astronomy-focused day.
-Rules Added: Astronomy, Classical Astronomy - Rule 
+
+December 10 2024: 
+Rules Added: Astronomy, Classical Astronomy - Rule .
+
+December 9 2024: More work on Astronomy - this is my plan until Wednesday. A small amount of work was also done in Calculus as well.
+Rules Added: Astronomy, Classical Astronomy - Rule 35, 36, 37, 38, 39, 40, 41.
+Rules Added: Mathematics, Single Variable Calculus - Rule 113, 114, 115.
+
+December 8 2024: Astronomy-focused day. Everything in Astronomy was updated, fixing all sorts of inconsistencies, types, irregularities, and beyond. I can now comprehend it much better, which is most important.
 
 December 6 2024: Further work on Calculus. Additionally, every page on the website was updated to incorporate the new Art page, which should be the last major site-wide update until the summer plan (or until I think of something else). The Sitemap was also updated for the first time in a while.
-Rules Added: Mathematics, Single Variable Calculus - Rule 109, 110.
+Rules Added: Mathematics, Single Variable Calculus - Rule 109, 110, 111, 112.
 
 December 5 2024: Work on the Calculus page, largely.
 Rules Added: Mathematics, Single Variable Calculus - Rule 106, 107, 108.

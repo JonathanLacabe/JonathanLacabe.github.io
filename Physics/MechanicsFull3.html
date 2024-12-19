@@ -174,13 +174,13 @@ A revolutionary, modern super-equation fit for the 21st century has recently bee
 	  <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">P. Rule 114.</font></strong> On method of finding the center of mass of irregular objects is to split the object into multiple, normally shaped objects (like squares, rectangles, triangles, and other basic shapes) that can be used in a system of particles type problem, as described in Rule 112. <br><br><br>
 	  
 	  
-	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">P. Rule 115.</font></strong> If you don't know mass in a problem with multiple objects, do not fear: When all the pieces of the object (or all of the parts of a system) have the same density and thickness, the center of mass equation can be altered as follows:<br><br>
+	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">P. Rule 115.</font></strong> If you don't know mass in a problem with multiple objects, do not fear: When all the pieces of the object (or all of the parts of a system) have the same density and thickness, the center of mass equation can be altered as follows, utilizing area instead:<br><br>
 
 <strong>x<sub>com</sub> = (A<sub>1</sub>x<sub>1</sub> + A<sub>2</sub>x<sub>2</sub> + ...) / (A<sub>1</sub> + A<sub>2</sub> + ...)</strong>
 <br><br><br>
 
 
-This is derived through the following means:<br><br><strong>ρ<sub>1</sub> = ρ<sub>2</sub></strong><br>
+This is derived through the following means, with ρ being volumetric mass density:<br><br><strong>ρ<sub>1</sub> = ρ<sub>2</sub></strong><br>
 <strong>(m<sub>1</sub> / ∀<sub>1</sub>) = (m<sub>2</sub> / ∀<sub>2</sub>)
 </strong><br>
 <strong>(m<sub>1</sub> / (A<sub>1</sub> × t)) = (m<sub>2</sub> / (A<sub>2</sub> × t))
@@ -203,8 +203,8 @@ From there, you can just plug in that value into the center of mass equation, ca
 	  Each infinitesimally small particle can be called "dm", and the whole expression can be written as the following integral:<br><br>
 	  $$x_{cm} = \frac{1}{m_{\text{total}}} \int x \, dm$$
 	  <br>
-	  This is the universal equation for density, but note that finding what equality will turn dm into dx in the first step every time the equation is used. Determining the mass through whatever means necessary is also very important.<br><br>
-	  Basic example: Assume a triangle with the thickness <em>t</em> and a uniform volumetric mass density <em>p</em>, with a base <em>a</em> and a height <em>b</em>. Since we cannot directly take the integral of x with respect to mass, we will first use the density equation to determine relationship between x-direction and mass. Since dm (each rectangle subdivision of the object) and the object itself have the same density,<br><br>
+	  This is the universal equation for density, but note that finding what equality will turn dm into dx in the first step every time the equation is used. Determining the mass through whatever means necessary is also very important.<br><br><br>
+	  <strong>Basic example</strong>:<br>Assume a triangle with the thickness <em>t</em> and a uniform volumetric mass density <em>p</em>, with a base <em>a</em> and a height <em>b</em>. Since we cannot directly take the integral of x with respect to mass, we will first use the density equation to determine relationship between x-direction and mass. Since dm (each rectangle subdivision of the object) and the object itself have the same density,<br><br>
 <strong>ρ = (m<sub>total</sub> / V<sub>total</sub>) = (dm / dV)<br>dm = ρdV</strong>
 <br><br>
 And now, since the volume of the dm box is equal to length × width × height, a new value for dV can also be determined.<br><br>
@@ -282,7 +282,7 @@ Solving this problem out, you get (2/3) × a.
 	  <br><br><br>
 	    
 	    <strong><font color="blue"><a href="#MomentumLaw"><span class="mw-headline" id="MomentumLaw">#</span></a> NEW VERSION(S) OF THE 2ND LAW OF MOTION:</font></strong><br><br>
-<strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = (∆<span class="vecteur"><strong>p</strong></span> / ∆<span class="vecteur"><strong>t</strong></span>)</strong> (Average)<br><br>
+<strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = (∆<span class="vecteur"><strong>p</strong></span> / ∆t)</strong> (Average)<br><br>
 <strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = (d<span class="vecteur"><strong>p</strong></span> / dt)</strong> (Instantaneous)<br><br>
   This equation is derived from the original 2nd law and from the momentum equation. It is so obvious I will not bother to reproduce the proof here. If you need to derive it, think very hard for a few seconds.<br><br>
   The original version of the 2nd law of motion, with its m × <span class="vecteur"><strong>a</strong></span> and whatnot, <u>assumes</u> that mass is constant. However, in our modern day and age, we cannot settle for this. These equations enable mass to change - rockets, for example, will lose mass as they expel fuel, and still the momentum version of the 2nd law will remain perfectly usable.
@@ -298,7 +298,7 @@ Solving this problem out, you get (2/3) × a.
 	  <span class="vecteur"><strong>p</strong></span> = Momentum.<br><br><br>
 
 <u>Alt. Equation</u>: $$\vec{J} = \int_{t_i}^{t_f} \sum \vec{F} \, dt$$
-(Derived from the instantaneous definition of the <a href="">new version of the 2nd law of motion</a>).<br><br>
+(Derived from the instantaneous definition of the <a href="/Physics/mechanics/momentum#MomentumLaw">new version of the 2nd law of motion</a>).<br><br>
 	  
 	  <span class="vecteur"><strong>J</strong></span> = Impulse.<br>
 	  <span class="vecteur"><strong>F</strong></span> = Force.<br>
@@ -382,7 +382,8 @@ A BICYCLE will be in both Translational and Rotational motion when it is in use.
 	  <br>
 	  <strong>I</strong> = Moment of Inertia.<br>
 	  <strong>m</strong> = The mass of each particle.<br>
-	  <strong>r</strong> = The distance each particle is from the axis of rotation (the center of the rotation).<br><br><br>
+	  <strong>r</strong> = The distance each particle is from the axis of rotation (the center of the rotation).<br>
+	  <strong>dm</strong> = Each infinitesimally small particle composing the object.<br><br><br>
 
 	  <u>Definition</u>: Also known as <strong>Rotational Mass</strong> or <strong>Rotational Inertia</strong>. A measure of resistance to <u>Angular Acceleration</u>, as opposed to Inertial mass, which is a measure of an object's resistance to acceleration in general. The full derivation of the formula (and how it connects into Rotational Kinetic Energy) is outlined in Rule 124.<br><br>
 	  The moment of inertia of an entire system is just the summation of all of the individual moments of inertias of the objects within the system. To sum rotational inertias, literally just add them all together. Even if they are of different types: if a system contains a particle and a thin rod, then add the particle rotational inertia equation to the already known thin rod rotational inertia. Note: This is only so long as the inertias are calculated around the same axis of rotation.<br><br>
@@ -534,7 +535,7 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
 <strong>I<sub>parallel</sub></strong> = The moment of inertia parallel to an axis through center of mass.<br>
 <strong>I<sub>COM</sub></strong> = The moment of inertia <u>going directly through</u> an axis through center of mass.<br>
 <strong>M</strong> = The total mass of the rigid body.<br>
-<strong>D²</strong> = The distance from the center of mass to the new axis. This is NOT the distance from the old axis of rotation to the new one, it is the distance from the center of mass<u></u>.<br><br>
+<strong>D</strong> = The distance from the center of mass to the new axis. This is NOT the distance from the old axis of rotation to the new one, it is the distance from the center of mass<u></u>.<br><br>
 
 
 This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3#InertiasEx">Basic Rotational Inertias</a>" from the first).
@@ -590,7 +591,8 @@ The equation for the distance travelled by the center of mass of the rolling obj
 
 	   <u>Units</u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br>
 	  
-	  <u>Equation</u>: (For Rigid Objects with Shape)<br><br> <strong><span class="vecteur"><strong>L</strong></span> = I × <span class="vecteur"><strong>ω</strong></span></strong>
+	  <u>Equation</u>: (For Rigid Objects with Shape)<br><br> 
+	  <strong><span class="vecteur"><strong>L</strong></span> = I × <span class="vecteur"><strong>ω</strong></span></strong>
 	  
 	  <br><br>
 	  
@@ -706,7 +708,7 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 <u>The Semiminor Axis</u> (b) – Half of the minor axis.<br>
 <u>Eccentricity</u> (e) – the distance between the two focal points, F1 and F2, divided by the length of the major axis.<br>
 <u>(ae)</u> – the distance between one of the focal points and the centre of the ellipse (the length of the Semimajor axis multiplied by the eccentricity). Courtesy of the <a href="https://thescienceandmathszone.com/keplers-laws/">Science & Math Zone</a>.</em></span><br><br><br>
-	  The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. The equation for eccentricity can be derived as <strong>e = (c / a)</strong>, where a is the semimajor axis and c is the distance between the center of the ellipse to the foci.<br><br>
+	  The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. The equation for eccentricity can be derived as <strong>e = (c / a)</strong>, where a is the length of the semimajor axis and c is the distance between the center of the ellipse to the foci.<br><br>
 	  
 	  If the eccentricity is zero, then the foci will be in the same spot and the ellipse will be a circle. Thus, in elliptical terms, a circle is an ellipse of zero eccentricity with the Semimajor axis as the radius. <br><br>The greater the eccentricity, the more elongated the ellipse, up to a maximum eccentricity of 1.0, which is just a flat line. The size and shape of an ellipse are completely specified by its Semimajor axis and its Eccentricity. 
 	  <br><br><br>
@@ -734,9 +736,14 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 	  <strong>Law of Planetary Motion #3 - Law of Periods</strong>
 	  <br>
 	  <em>"The square of the orbital period of any planet is proportional to the cube of the semimajor axis of the elliptical orbit; in other words, T² ∝ a³."</em><br><br>
+	  There are two equations: <br>The <strong>First Equation</strong> is best used when comparing two bodies orbiting the same central object, like the Earth and an Asteroid. The ratio can be set up as (T<sub>Asteroid</sub> / T<sub>Earth</sub>)² = (r<sub>Asteroid</sub> / r<sub>Earth</sub>)³, for example. In such cases, put the new object in the numerator on both sides, as to ease isolation.
+	  <br><br>The <strong>Second Equation</strong> is preferable when the orbital period or distance of the reference orbit is unknown, or if the central mass being orbited changes. <br><br>
 	  
-	  <strong>T² ∝ a³</strong><br>
-	  <strong>T² = (4π² / GM) × a³</strong><br><br>
+	  E.g., the 1st equation is best suited when the orbited mass already has a reference orbit that can be used (and 3/4th of the variables are known), and the 2nd equation for all other circumstances.
+	  <br><br>
+	  
+	  1. <strong>T² ∝ a³</strong><br>
+	  2. <strong>T² = (4π² / GM) × a³</strong><br><br>
 	  
 	  <strong>T</strong> - The "Orbital Period", or the time it takes the orbit to record one revolution around the Primary. Measured in Earth-years.<br>
 	  <strong>a</strong> - The Semimajor Axis, as described in Rule 143. This is the average distance between the orbiting object and the primary, and is measured in AU.<br>
@@ -1055,7 +1062,7 @@ Using a <a href="/Physics/img/shellderivation.png">simple derivation</a>, a revo
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 17 2024</span><br>
+      	<span class="tiny">Last Change: December 18 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

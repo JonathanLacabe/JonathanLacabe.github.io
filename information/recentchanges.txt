@@ -3,6 +3,11 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+
+
+December 19 2024.
+Additionally, I updated the art page to include Astronomy.
+
 December 18 2024. Adding equations to the Physics equations page, as well as general reformating of the page to make it easier to quickly find equations and definitions. Minor edits to some physics pages naturally came of this as I inspected some rules and noticed typos/minor errors. Furthermore, Astronomy finally received its logo, after a month of deliberations with the mastermind artist of his generation, Shoaib Pasha.
 
 December 16 2024. Updating of many more Physics pages as I finish the homework for Gravitation.

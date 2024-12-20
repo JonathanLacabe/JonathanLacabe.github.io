@@ -115,7 +115,7 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 <u>The Semiminor Axis</u> (b) – Half of the minor axis.<br>
 <u>Eccentricity</u> (e) – the distance between the two focal points, F1 and F2, divided by the length of the major axis.<br>
 <u>(ae)</u> – the distance between one of the focal points and the centre of the ellipse (the length of the Semimajor axis multiplied by the eccentricity). Courtesy of the <a href="https://thescienceandmathszone.com/keplers-laws/">Science & Math Zone</a>.</em></span><br><br><br>
-	  The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. The equation for eccentricity can be derived as <strong>e = (c / a)</strong>, where a is the semimajor axis and c is the distance between the center of the ellipse to the foci.<br><br>
+	  The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. The equation for eccentricity can be derived as <strong>e = (c / a)</strong>, where a is the length of the semimajor axis and c is the distance between the center of the ellipse to the foci.<br><br>
 	  
 	  If the eccentricity is zero, then the foci will be in the same spot and the ellipse will be a circle. Thus, in elliptical terms, a circle is an ellipse of zero eccentricity with the Semimajor axis as the radius. <br><br>The greater the eccentricity, the more elongated the ellipse, up to a maximum eccentricity of 1.0, which is just a flat line. The size and shape of an ellipse are completely specified by its Semimajor axis and its Eccentricity. 
 	  <br><br><br>
@@ -143,9 +143,14 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 	  <strong>Law of Planetary Motion #3 - Law of Periods</strong>
 	  <br>
 	  <em>"The square of the orbital period of any planet is proportional to the cube of the semimajor axis of the elliptical orbit; in other words, T² ∝ a³."</em><br><br>
+	  There are two equations: <br>The <strong>First Equation</strong> is best used when comparing two bodies orbiting the same central object, like the Earth and an Asteroid. The ratio can be set up as (T<sub>Asteroid</sub> / T<sub>Earth</sub>)² = (r<sub>Asteroid</sub> / r<sub>Earth</sub>)³, for example. In such cases, put the new object in the numerator on both sides, as to ease isolation.
+	  <br><br>The <strong>Second Equation</strong> is preferable when the orbital period or distance of the reference orbit is unknown, or if the central mass being orbited changes. <br><br>
 	  
-	  <strong>T² ∝ a³</strong><br>
-	  <strong>T² = (4π² / GM) × a³</strong><br><br>
+	  E.g., the 1st equation is best suited when the orbited mass already has a reference orbit that can be used (and 3/4th of the variables are known), and the 2nd equation for all other circumstances.
+	  <br><br>
+	  
+	  1. <strong>T² ∝ a³</strong><br>
+	  2. <strong>T² = (4π² / GM) × a³</strong><br><br>
 	  
 	  <strong>T</strong> - The "Orbital Period", or the time it takes the orbit to record one revolution around the Primary. Measured in Earth-years.<br>
 	  <strong>a</strong> - The Semimajor Axis, as described in Rule 143. This is the average distance between the orbiting object and the primary, and is measured in AU.<br>
@@ -190,7 +195,12 @@ There are two equations that can be used to determine the total number of g-Forc
 
 <strong>Vertical # of g-Forces:</strong> (F<sub>N</sub> / F<sub>gEarth</sub>)<br><br>
 
-<strong>Horizontal # of g-Forces:</strong> (a<sub>x</sub> / g<sub>Earth</sub>)
+<strong>Horizontal # of g-Forces:</strong> (a<sub>x</sub> / g<sub>Earth</sub>)<br><br>
+
+<strong>F<sub>N</sub></strong> = The Normal Force an object has, such as that produced by rocket fuel when launching upward.<br>
+<strong>F<sub>gEarth</sub></strong> = The gravitational force caused by the Earth.<br>
+<strong>a<sub>x</sub></strong> = Acceleration of an object in the x-direction.<br>
+<strong>g<sub>Earth</sub></strong> = The acceleration due to gravity of the Earth.
 
 <br><br><br>
 	  
@@ -214,7 +224,7 @@ In a constant gravitational field, any object will produce the gravitational acc
 	  	  The non-constant gravitational field equation, which can be used for the gravitational field of any object, is:<br><br>
 <strong>g = (G × m<sub>o</sub>) / r²</strong><br><br>
 
-<strong>g</strong> = The Gravitational Field.<br>
+<strong>g</strong> = The Gravitational Field, e.g. the gravitational attraction a mass exerts on the surrounding area. For non-constant fields (all real ones as distance increases from the mass), the field refers to the force experienced by an object (at any location) due to the gravitational pull of the mass. It is measured in N/kg, which simplifies to m/s².<br>
 <strong>G</strong> = The Universal Gravitational Constant, or 6.67 x 10⁻¹¹ (N × m²) / (kg²).<br>
 <strong>m<sub>o</sub></strong> = Mass of the object.<br>
 <strong>r</strong> = The distance between the centers of mass of the two objects, not the radius (unless it is by circumstance).
@@ -255,7 +265,12 @@ $$ v_{\text{escape}} = \sqrt{\frac{2 G m_p}{R_p}} $$
 
 $$ v_{\text{escape}} = \sqrt{2 a_p R} $$
 
-Choose whichever based on the variables you have. The first equation is derived <a href="/Physics/img/escapederivation.png">as so</a>.
+<strong>G</strong> = The Universal Gravitational Constant, or 6.67 x 10⁻¹¹ (N × m²) / (kg²).<br>
+<strong>m<sub>p</sub></strong> = Mass of the planet.<br>
+<strong>R<sub>p</sub></strong> = The <u>Radius</u> of the planet.<br>
+<strong>a<sub>p</sub></strong> = The acceleration due to the gravitational pull of the planet on the body.<br><br>
+
+Choose whichever based on the variables you have. The first equation is derived <a href="/Physics/img/escapederivation.png">as so</a>. The second is more of a generalization, most applicable on the surface of a planet.
 <br><br><br>
 	  
 	  <strong><a href="#Rule150"><span class="mw-headline" id="Rule150">#</span></a> <font color="red">P. Rule 150.</font></strong> The <strong>Principle of Superposition</strong> dictates the net gravitational force of one particle in a system of particles. The basic idea is that the gravitational forces acting on that specific particle, are individually computed from each of the other particles, and from there are summed.<br><br>
@@ -352,7 +367,7 @@ Using a <a href="/Physics/img/shellderivation.png">simple derivation</a>, a revo
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong>Gravitation</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 17 2024</span><br>
+      	<span class="tiny">Last Change: December 19 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

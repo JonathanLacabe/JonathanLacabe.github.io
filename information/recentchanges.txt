@@ -4,6 +4,8 @@ All changes to any page on the Human Knowledge project will described here. For 
 
 
 
+December 21 2024. I remove the Cryptographic Classification page, as I realized that there was too little material to warrant it being an entire section of Cryptography, since it almost immediately leads into Symmetric Cryptography anyway. Furthermore, I updated all the physics pages to incorporate oscillations, which I intend to do after a solid foundation of Cryptography has been established.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 1, 2, 3, 4, 5, 6.
 
 December 20 2024. Work on the Human Knowledge Project can be a slow-moving bureaucracy, but once the pages and all the miscellania done to improve the general look and quality-of-life of users on the website (such as the humorous and/or inspirational quotes under each section), real work is relatively steady. Work on Cryptography had begun. The main pages have been created, and the art for Cryptography has already been created as well. Furthermore, the "Aerospace Engineering" logo was created in advance of the page actually being created, making today extremely productive in terms of Project Art.
 

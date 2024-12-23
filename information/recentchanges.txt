@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+December 22 2024:
+Rules Added: Cryptography, Symmetric Cryptography - Rule 7, 8.
 
 December 21 2024. I remove the Cryptographic Classification page, as I realized that there was too little material to warrant it being an entire section of Cryptography, since it almost immediately leads into Symmetric Cryptography anyway. Furthermore, I updated all the physics pages to incorporate oscillations, which I intend to do after a solid foundation of Cryptography has been established.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 1, 2, 3, 4, 5, 6.

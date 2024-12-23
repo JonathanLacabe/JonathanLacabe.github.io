@@ -209,7 +209,7 @@ In order for Bob to not simply decrypt the ciphertext immediately using the decr
 	    
 <br><br><br>
 
-<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy, was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>. <a href="https://www.schneier.com/blog/archives/2011/04/schneiers_law.html">Schneier's Law</a>, again.<br><br>
+<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
 
 
 This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br>
@@ -231,14 +231,22 @@ In Practice: Never use an untested Crypto algorithm! Furthermore, never roll you
 	    </header>
 	    <article>
 	    
-<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule [[[[) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
-In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack.<br><br><br>
+<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
 
 <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis." width=66%/></a></div>
 	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis.</em></span><br><br><br>
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both type have their own strengths and weaknesses.
+<br><br><br>
+
+<strong><a href="#SocialEngineeringDef"><span class="mw-headline" id="SocialEngineeringDef">#</span></a> <font color="#006400">Social Engineering</font></strong>: Bypassing the protections of a cryptosystem by going directly after the humans that have access to the secret key. Obtaining the key can range from kidnapping and forcing them to tell the key/password, to a simple phishing scheme over the phone or through email.
+<br><br><br>
+
+<strong><a href="#ImplementationAttacksDef"><span class="mw-headline" id="ImplementationAttacksDef">#</span></a> <font color="#006400">Implementation Attacks</font></strong>: Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important relation relating to the key.<br><br>
+For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a signal processing technique can be used to recover the key. The run time behavior can also indicate information regarding the key, which is why many cryptographers ensure constant run times in embedded cryptosystems.<br><br>
+These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
 <br><br><br>
 	    
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
@@ -248,14 +256,19 @@ In order for a cryptosystem to be considered secure, it must be resistant agains
 
 The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
 <br><br>
-As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. Of course, it is possible for a key to produce a false-positive, as seen in the One-Time Pad algorithm (Rule [[[[[[).<br><br>
+As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
+	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span><br><br> 
 
-Mathematically, a brute-force search (which respect to the key) is defined as follows:<br><br>
+<br> Mathematically, a brute-force search (which respect to the key) is defined as follows:<br><br>
 <em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
 
 If the equality holds, a possible correct key is found; if not, proceed with the next key.
 </em>
 
+<br><br><br>
+
+<strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to current cryptographic systems and antiquated ones still in use, as it becomes cheaper and faster to break them.
 <br><br><br>
 
 
@@ -301,10 +314,7 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
 <br><br><br>
 	    
 	    
-	    
-	    
-	    
-	    rule[[[[
+	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> 
 	    
 	    <strong>Substitution Cipher</strong><br><br>
 A historical cipher, operating purely on letters, in which every plaintext letter is replaced by a fixed ciphertext letter. It is just scrambling the letters, nothing more.<br><br>
@@ -313,9 +323,29 @@ The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext
 
 Since the different letters of the English alphabet have different frequencies, Letter Frequency Analysis can be conducted as an attack on the substitution cipher, making it rather simple. This is an example of a situation in which an Analytical Attack is most effective.
 	    
-	    
+	    <br><br><br>
 	  
-	  
+	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
+
+Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
+
+Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (see below), in effect wrapping the number around the modulus in relation to how much greater the number is from the closest (smaller) multiple of the modulus. <br><br>
+For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
+
+The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.<br><br>
+
+Mathematically, modular arithmetic is defined as follows:<br><br>
+<em>Let (a, r, m) ∈ Z (where Z is a set of all integers) and m > 0.<br><br>
+If m divides (a − r), then <strong>a ≡ r mod m</strong>
+</em><BR><BR>
+<strong>a</strong> = The chosen number.<br>
+<strong>r</strong> = The remainder.<br>
+<strong>m</strong> = The modulus, the highest possible number in the set.<br><br>
+
+
+
+
+<br><br><br>
 	  
 	  
 
@@ -330,8 +360,8 @@ Since the different letters of the English alphabet have different frequencies, 
 	    <!--
 	    
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> <br><br><br>
-	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <br><br><br>
+	    
+	    
 	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong> <br><br><br>
 	    
 	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <br><br><br>
@@ -499,7 +529,7 @@ Since the different letters of the English alphabet have different frequencies, 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 21 2024</span><br>
+      	<span class="tiny">Last Change: December 22 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

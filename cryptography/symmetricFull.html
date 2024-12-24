@@ -84,9 +84,6 @@ rainbow {
         
       </div>
       
-      
-      
-      
       <div class="toc-container">
         <div class="toc-column">
           <a href="#SymmetricBasics">I.II Symmetric Crypto. Basics.</a>
@@ -99,39 +96,36 @@ rainbow {
       
       
       
-      <article><center><a href="#Historical">II. Historical Ciphers.</a></center></article>
+      <article><center><a href="#Historical">II. Historical Ciphers & Modular Arithmetic.</a></center></article>
         
       <div class="toc-container">
         <div class="toc-column">
           <a href="#Substitution">II.I Substitution Cipher.</a>
         </div>
-        <!--
-        <div class="toc-column">
-          <a href="#Historical">I.III Historical Ciphers.</a>
-        </div>
-        -->
         
+        <div class="toc-column">
+          <a href="#IntegerRings">II.III Integer Rings.</a>
+        </div>
+ 
       </div>
       
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#ModularArithmetic">II.II Modular Arithmetic Basics.</a>
+        </div><!--
+        <div class="toc-column">
+          <a href="#Exponents">VI. Rules of Exponents.</a>
+        </div>
+        -->
+      </div>
       
       
       
       <br>
       
       
-      <!--
-      <div class="toc-container">
-        <div class="toc-column">
-          <a href="#Polynomial">III. Polynomial Functions.</a>
-        </div>
-        <div class="toc-column">
-          <a href="#Exponents">VI. Rules of Exponents.</a>
-        </div>
-        
-      </div>
       
-      
-      -->
       
       <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Introductions">I. Introductions</span></h2>
@@ -280,7 +274,7 @@ There is no 'equation' for Analytical Attacks, because they are specific and uni
 
 
 
-</article>
+    </article>
 	    <header class="articleHeader"><hr>
 	      <h3><span class="mw-headline" id="GenericAttacks">I.IV Generic Analytical Attacks.</span></h3>
 	    </header>
@@ -304,7 +298,7 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
 
 </article>
 	    <header class="articleHeader"><hr><hr>
-	    <h2><span class="mw-headline" id="Historical">II. Historical Ciphers.</span></h2>
+	    <h2><span class="mw-headline" id="Historical">II. Historical Ciphers & Modular Arithmetic.</span></h2>
 	    <h3><span class="mw-headline" id="Substitution">II.I Substitution Cipher.</span></h3>
 	  </header>
 	  <article>
@@ -324,34 +318,187 @@ The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext
 Since the different letters of the English alphabet have different frequencies, Letter Frequency Analysis can be conducted as an attack on the substitution cipher, making it rather simple. This is an example of a situation in which an Analytical Attack is most effective.
 	    
 	    <br><br><br>
+	    
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ModularArithmetic">II.II Modular Arithmetic Basics.</span></h3>
+	    </header>
+	    <article>
 	  
 	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
 
 Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
 
-Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (see below), in effect wrapping the number around the modulus in relation to how much greater the number is from the closest (smaller) multiple of the modulus. <br><br>
+Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or remainder operator, see below), in effect wrapping the number around the modulus in relation to how much greater the number is from the closest (smaller) multiple of the modulus. <br><br>
 For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
 
 The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.<br><br>
 
-Mathematically, modular arithmetic is defined as follows:<br><br>
-<em>Let (a, r, m) ∈ Z (where Z is a set of all integers) and m > 0.<br><br>
-If m divides (a − r), then <strong>a ≡ r mod m</strong>
-</em><BR><BR>
+Mathematically, modular arithmetic is defined as follows:<br><br><br>
+<em>(a, r, m) ∈ <strong>ℤ</strong><br>
+m > 0<br><br>
+If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
+</em><BR><BR><br>
+<strong>ℤ</strong> = The set of all integers.<br>
 <strong>a</strong> = The chosen number.<br>
 <strong>r</strong> = The remainder.<br>
-<strong>m</strong> = The modulus, the highest possible number in the set.<br><br>
+<strong>m</strong> = The modulus, the highest possible number in the set.<br>
+<strong>'mod'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
+<br><br><br>
+	  
+	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
+	  To find the remainder when m and a are large, burdensome numbers, there is an exact, algorithmic definition:<br><br><br>
+
+<em>
+(a, m) ∈ <strong>ℤ</strong><br>
+0 ≤ r &lt; m <br><br>
+a = q × m + r<br>
+Thus, a - r = q × m<br><br>
+<strong>m|(a − r)</strong>
+</em><BR><BR><br>
+This is precisely the same as what was discovered before, and q is not in any of the final equations - all that matters is the remainder.<br><Br>
+
+<strong>ℤ</strong> = The set of all integers.<br>
+<strong>a</strong> = The chosen number.<br>
+<strong>q</strong> = The quotient, which produces a multiple of the modulus.<br>
+<strong>r</strong> = The remainder.<br>
+<strong>m</strong> = The modulus, the highest possible number in the set.
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
+
+While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. This is because, while the remainders may not exactly be the difference between 'a' (12) and the <u>highest</u> multiple of m lesser than a (9), they all still return true in the formula of Rule 8:<br><br>
+
+12 ≡ 3 mod 9, 3 is a valid remainder since 9|(12−3)<br>
+12 ≡ 21 mod 9, 21 is a valid remainder since 9|(12−21)<br>
+12 ≡ −6 mod 9, −6 is a valid remainder since 9|(12−(−6))<br><br>
+
+The set of all values that behave 'equivalently' for a particular modulus, in that they can be simplified down to the smallest possible positive number for r, form what is known as an <strong>Equivalence Class</strong>, an infinite set/series of values.<br><br>
+
+For 3 mod 9, the equivalence class of r values is an infinite set, a partial series of which is as follows:<br>
+{..., -24, -15, -6, 3, 12, 21, 30, ...}<br><br>
+
+If any of these values were to be substituted in for r (3) in 3 mod 9, it would be equivalent, the same value, because of the mod operator.<br><br>
+
+Note: There are 'm' equivalence classes for each possible remainder (0 through m-1), which collectively contain all possible integers. The difference between any two neighboring values in an equivalence class will be the modulus, as shown above.
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
+	  Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions in mathematical operations that use the modulus operator can be performed, simplifying them.<br><br>
+
+Take (13 × 16) - 8, with modulus 5. While the full number can be computed (200) and an answer derived from there (0 mod 5), that is lame and time-consuming. A much cooler, faster, 21st century means of solving the problem is to substitute in for each term the simplest member of their respective equivalence classes:<br><br>
+
+13 mod 5 has a remainder of 3, and so 3 is the simplest term.<br>
+16 mod 5 has a remainder of 1, and so 1 is the simplest term.<br>
+8 mod 5 has a remainder of 3, and so 3 is the simplest term.<br><br>
+
+Therefore, the same calculation can be performed with simply (3 × 1) - 3, which returns 0 mod 5, the same answer as before, but found much easier-ly.<br><br><br>
+
+Note that this substitution trick does <u>not</u> equally extend to all mathematical operations. Exponentials, for example, cannot be simplified with the modulus:<br><br>
+For the problem 3⁸ mod 7, the exponent '8' cannot be simplfied down to 1 mod 7, and the entire problem to 3 mod 7. Exponents simply cannot have the substitution performed.<br><br>
+For all exponentials, simplification into smaller components (using the 2nd Holy Property of Exponents, Math Rule 66 ([[[[[)) must be performed to simplify. For ex.: 3⁸ = (3²)⁴ = (9)⁴ = (2)⁴ = 16 mod 7 = <strong>2 mod 7</strong>, which is the answer.<br><br><br>
+
+<strong>Operations where equivalence class substitutions are allowed:</strong><Br><br>
+Multiplication<br>
+Addition<br>
+Substraction<br><br>
+<strong>Operations where equivalence class substitutions are banned:</strong><br><br>
+Exponentials<br>
+Division
+	  
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
+	  
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="IntegerRings">II.III Integer Rings.</span></h3>
+	    </header>
+	    <article>
+	    
+	    <strong><a href="#IntegerRingDef"><span class="mw-headline" id="IntegerRingDef">#</span></a> <font color="#006400">Integer Ring</font></strong>: A set of elements which can have basic arithmetic operations performed upon them, such as addition and multiplication, so that the natural properties expected of addition and multiplication all hold. There are ring definitions/interpretations of polynomials, matrixes, and modular arithmetic (Rule 13). Rings are a fundamental part of Ring Theory, a field of Abstract algebra. ([[[[[[)
+      <br><br><br>
+	    
+	  
+	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> 
+	    <strong>Algebraic Modular Arithmetic</strong>:<br><br>
+
+Modular Arithmetic can be defined in the form of an integer ring:<br><br><br>
+<em>
+The integer ring <strong>ℤ</strong><sub>m</sub> consists of the following characteristics:<br><br>
+<strong>1.</strong> The set <strong>ℤ</strong><sub>m</sub> = {0, 1, ..., m-1}<br><br>
+<strong>2.</strong> Two arithmetic operators, "+" and "×", hold for all (a, b, c, d) ∈ <strong>ℤ</strong><sub>m</sub> that:<br>
+&nbsp;&nbsp;<strong>i)</strong>&nbsp; a + b ≡ c mod m<br>
+&nbsp;&nbsp;<strong>ii)</strong> a × b ≡ d mod m
+</em><br><br><br>
+
+There are many overshadowing rules that every ring has to fulfill, seen in the section "RULES OF THE RING" below.
+	    <br><br><br>
+	  
+	  <div title="You WILL accept these as true. You WON'T try to figure out how they were derived."><strong><font color="blue"><a href="#RingRules"><span class="mw-headline" id="RingRules">#</span></a> RULES OF THE RING:</font></strong></div><br>
+  These following rules hold true for all integer rings in general, not just modular arithmetic.<br><br>
+  <ol>
+
+<li> The ring should be closed: if any two numbers from the set are multiplied or added together, the result must be in the ring. This is ensured by the modulus operator.</li><br>
+
+<li> Addition and multiplication are associative properties: For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a + (b + c) = (a + b) + c, and a × (b × c) = (a × b) × c.</li><br><br>
+
+<strong>Addition:</strong><br><br><br>
+
+<li> Addition is commutative for all (a, b) ∈ <strong>ℤ</strong><sub>m</sub>: a + b = b + a.</li>
+<br>
+
+<li>There is an <strong>additive neutral element</strong>, 0. For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a + 0 ≡ a mod m</strong>.</li>
+<br>
+<!--ajj- backpack playing in my head all day-->
+
+<li>The <strong>additive inverse</strong> always exists: for any element a in the ring, there is always a negative element '-a' such that <strong>a + (-a) ≡ 0 mod m</strong>, the neutral element.</li>
+<br><br>
+
+<strong>Multiplication</strong>:<br><br><br>
+
+<li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m.</strong></li><br>
+
+<li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in Rules 14 & 15.<br><br>
+If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
+<br>
 
 
+<li> The distributive property holds for all ring operations. For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a × (b + c) = (a × b) + (a × c).</li>
 
+</ol>
 
 <br><br><br>
 	  
+	  <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
+<br><br>
+
+If gcd(a, m) = 1, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br>
+If gcd(a, m) ≠ 1, then there does NOT exist a⁻¹.
+	  <br><br><br>
+	  
+	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described above):<br><br>
+
+<strong>a × a⁻¹ ≡ 1 mod m</strong>
+<br><br>
+
+Though the multiplicative inverse of a is literally shown as a⁻¹, it is almost never the actual reciprocal of a. The reason for this is simple: All reciprocals other than -1 and 1 are not integers, and are thus not included in the set.<br><br>
+
+Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is not included in the set. A different inverse must be found specific to the modulus; if the modulus were 3, then an inverse of '2' would work:<br><br>
+<strong>2 × 2 ≡ 1 mod 3</strong>
+	    <br><br><br>
+	  
+	  
+	  
 	  
 
-	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ ° ≠ ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
+	    <!--<div title="me inm">bango</div> secret text for hovering over-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	    
@@ -360,16 +507,6 @@ If m divides (a − r), then <strong>a ≡ r mod m</strong>
 	    <!--
 	    
 	    
-	    
-	    
-	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <br><br><br>
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> <br><br><br>
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> <br><br><br>
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> <br><br><br>
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> <br><br><br>
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> <br><br><br>
 	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">P. Rule 16.</font></strong> <br><br><br>
 	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">P. Rule 17.</font></strong> <br><br><br>
 	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">P. Rule 18.</font></strong> <br><br><br>
@@ -526,10 +663,10 @@ If m divides (a − r), then <strong>a ≡ r mod m</strong>
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong>Complete Symmetric Cryptography</strong></article>
         <br>
-        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 22 2024</span><br>
+      	<span class="tiny">Last Change: December 23 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

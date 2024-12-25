@@ -104,7 +104,7 @@ rainbow {
         </div>
         
         <div class="toc-column">
-          <a href="#IntegerRings">II.III Integer Rings.</a>
+          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
         </div>
  
       </div>
@@ -113,16 +113,43 @@ rainbow {
       <div class="toc-container">
         <div class="toc-column">
           <a href="#ModularArithmetic">II.II Modular Arithmetic Basics.</a>
+        </div><!---->
+        <div class="toc-column">
+          <a href="#AffineCipher">II.V Affine Cipher.</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#IntegerRings">II.III Integer Rings.</a>
         </div><!--
         <div class="toc-column">
-          <a href="#Exponents">VI. Rules of Exponents.</a>
+          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
+        </div>-->
+        
+      </div>
+      
+      <br>
+      
+      
+      
+      <article><center><a href="#StreamCiphers">III. Stream Ciphers.</a></center></article>
+        
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#StreamIntro">III.I Intro to Stream Ciphers.</a>
+        </div>
+        <!--
+        <div class="toc-column">
+          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
         </div>
         -->
       </div>
       
       
-      
       <br>
+      
       
       
       
@@ -132,12 +159,15 @@ rainbow {
 	    <h3><span class="mw-headline" id="Terminology">I.I Classification & Terminology.</span></h3>
 	  </header>
 	  <article><br>
+	  
 	    <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification Hierarchy of the major components of Cryptology. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
 	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
 	    
 	    
-	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.
+	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
+	    
+	    All IT Security follows the <strong>CIA Triad</strong>: Confidentiality, Integrity and Availability of information. Security is largely focused on attackers, while system safety & reliability is focused on protecting against random technical failures.
 <br><br><br>
 
 <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
@@ -156,7 +186,7 @@ rainbow {
 <br><br><br>
 
 
-<strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">P. Rule 1.</font></strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br><br>
+<strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">C. Rule 1.</font></strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br><br>
 
 <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmission from interception is the goal of cryptography.
 <br><br><br>
@@ -173,7 +203,7 @@ rainbow {
 	    <article>
 	    
 	  
-	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">P. Rule 2.</font></strong> Symmetric Cryptography
+	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">C. Rule 2.</font></strong> Symmetric Cryptography
 	  
 	  
 	  <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
@@ -198,12 +228,12 @@ In order for Bob to not simply decrypt the ciphertext immediately using the decr
 
 <strong>K</strong> = The Key fed into the encryption and decryption functions.<br><br>
 	    
-<strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong> of the algorithm: If it produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
+<strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong>/<strong>key length</strong> of the algorithm: If it produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
 	    
 	    
 <br><br><br>
 
-<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
+<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
 
 
 This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br>
@@ -225,7 +255,7 @@ In Practice: Never use an untested Crypto algorithm! Furthermore, never roll you
 	    </header>
 	    <article>
 	    
-<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
 In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
 
 <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
@@ -246,27 +276,31 @@ These attacks are most relevant when the attacker has physical access to a piece
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
 <br><br><br>
 
-<strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">P. Rule 5.</font></strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
+<strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">C. Rule 5.</font></strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
+
+If the equality holds, a possible correct key is found; if not, proceed with the next key.
+</em>
+<br><br><br>
+
+<strong><u>Explanation:</u></strong><br><br>
 
 The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
 <br><br>
 As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
-	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span><br><br> 
-
-<br> Mathematically, a brute-force search (which respect to the key) is defined as follows:<br><br>
-<em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
-
-If the equality holds, a possible correct key is found; if not, proceed with the next key.
-</em>
+	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span>
 
 <br><br><br>
 
-<strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to current cryptographic systems and antiquated ones still in use, as it becomes cheaper and faster to break them.
+<strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.
 <br><br><br>
 
 
-<strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">P. Rule 6.</font></strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
+<strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">C. Rule 6.</font></strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
 The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
 There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
@@ -308,14 +342,16 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
 <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> 
+	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">C. Rule 7.</font></strong> 
 	    
 	    <strong>Substitution Cipher</strong><br><br>
 A historical cipher, operating purely on letters, in which every plaintext letter is replaced by a fixed ciphertext letter. It is just scrambling the letters, nothing more.<br><br>
 
 The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext letter decreases the remaining number of possible letters. Thus, a brute-force attack would be out of the question for modern computers.<br><br>
 
-Since the different letters of the English alphabet have different frequencies, Letter Frequency Analysis can be conducted as an attack on the substitution cipher, making it rather simple. This is an example of a situation in which an Analytical Attack is most effective.
+Since the different letters of the English alphabet have different frequencies, and these frequencies are preserved even after scrambling (just different letters will <em>have</em> the frequencies), <strong>Letter Frequency Analysis</strong> can be conducted as an attack on the substitution cipher, making it rather simple.<br><br>
+
+This is an example of a cipher/algorithm in which an Analytical Attack is most effective.
 	    
 	    <br><br><br>
 	    
@@ -325,16 +361,9 @@ Since the different letters of the English alphabet have different frequencies, 
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
+	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">C. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
 
-Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
-
-Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or remainder operator, see below), in effect wrapping the number around the modulus in relation to how much greater the number is from the closest (smaller) multiple of the modulus. <br><br>
-For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
-
-The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.<br><br>
-
-Mathematically, modular arithmetic is defined as follows:<br><br><br>
+<strong><u>Mathematical Definition</u></strong>:<br><br>
 <em>(a, r, m) ∈ <strong>ℤ</strong><br>
 m > 0<br><br>
 If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
@@ -345,27 +374,41 @@ If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
 <strong>m</strong> = The modulus, the highest possible number in the set.<br>
 <strong>'mod'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
 <br><br><br>
+
+<strong><u>Explanation:</u></strong><br><br>
+
+Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
+
+Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or remainder operator, see below), in effect 'wrapping' the number around the modulus, with respect to the difference between the number and any multiple of the modulus, known as the <em>remainder</em>.<br><br>
+
+The <em>preferred</em> multiple for finding the remainder (indeed, the exact one that would be found by division (see two paragraphs below)) is the greatest one lower than the number, but any will work - see Rule 10, Equivalence Classes.<br><br>
+For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
+
+The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.
+
+<br><br><br>
 	  
-	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
+	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">C. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
 	  To find the remainder when m and a are large, burdensome numbers, there is an exact, algorithmic definition:<br><br><br>
 
+<strong><u>Mathematical Definition</u></strong>:<br><br>
 <em>
 (a, m) ∈ <strong>ℤ</strong><br>
 0 ≤ r &lt; m <br><br>
 a = q × m + r<br>
 Thus, a - r = q × m<br><br>
 <strong>m|(a − r)</strong>
-</em><BR><BR><br>
-This is precisely the same as what was discovered before, and q is not in any of the final equations - all that matters is the remainder.<br><Br>
+</em><BR><br><Br>
 
 <strong>ℤ</strong> = The set of all integers.<br>
 <strong>a</strong> = The chosen number.<br>
 <strong>q</strong> = The quotient, which produces a multiple of the modulus.<br>
 <strong>r</strong> = The remainder.<br>
-<strong>m</strong> = The modulus, the highest possible number in the set.
+<strong>m</strong> = The modulus, the highest possible number in the set.<BR><br>
+The final equation is precisely the same as what was discovered before, and q is not involved whatsoever - all that matters is the remainder.
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
+	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">C. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
 
 While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. This is because, while the remainders may not exactly be the difference between 'a' (12) and the <u>highest</u> multiple of m lesser than a (9), they all still return true in the formula of Rule 8:<br><br>
 
@@ -384,7 +427,7 @@ Note: There are 'm' equivalence classes for each possible remainder (0 through m
 	  
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
+	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">C. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
 	  Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions in mathematical operations that use the modulus operator can be performed, simplifying them.<br><br>
 
 Take (13 × 16) - 8, with modulus 5. While the full number can be computed (200) and an answer derived from there (0 mod 5), that is lame and time-consuming. A much cooler, faster, 21st century means of solving the problem is to substitute in for each term the simplest member of their respective equivalence classes:<br><br>
@@ -410,7 +453,7 @@ Division
 	  
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
+	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">C. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
 	  
 	  
 	  </article>
@@ -423,7 +466,7 @@ Division
       <br><br><br>
 	    
 	  
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> 
+	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">C. Rule 13.</font></strong> 
 	    <strong>Algebraic Modular Arithmetic</strong>:<br><br>
 
 Modular Arithmetic can be defined in the form of an integer ring:<br><br><br>
@@ -471,16 +514,18 @@ If there exists an inverse for a, then, a rare usage of division in the modular 
 
 </ol>
 
-<br><br><br>
+<br><br>
 	  
-	  <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
+	  <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">C. Rule 14.</font></strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
 <br><br>
 
-If gcd(a, m) = 1, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br>
-If gcd(a, m) ≠ 1, then there does NOT exist a⁻¹.
+If <strong>gcd(a, m) = 1</strong>, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br><br>
+If <strong>gcd(a, m) ≠ 1</strong>, then there does <u>NOT</u> exist a⁻¹.<br><br>
+If m is prime, then gcd(a, m) will always equal to 1, for all nonzero 'a' values, and thus every 'a' value will have an inverse in those rings. The inverse of an integer completely depends on the ring, and thus the modulus.
+
 	  <br><br><br>
 	  
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described above):<br><br>
+	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">C. Rule 15.</font></strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in Rule of the Ring #7):<br><br>
 
 <strong>a × a⁻¹ ≡ 1 mod m</strong>
 <br><br>
@@ -490,8 +535,114 @@ Though the multiplicative inverse of a is literally shown as a⁻¹, it is almos
 Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is not included in the set. A different inverse must be found specific to the modulus; if the modulus were 3, then an inverse of '2' would work:<br><br>
 <strong>2 × 2 ≡ 1 mod 3</strong>
 	    <br><br><br>
+	    
+	    
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ShiftCipher">II.IV Shift/Caesar Cipher.</span></h3>
+	    </header>
+	    <article>
+	    
+	  
+	  <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">C. Rule 16.</font></strong> <strong>Shift Cipher:</strong><br><br>
 	  
 	  
+	  <strong><u>Mathematical Definition</u></strong>:<br><br>
+	  
+	  <em>
+(x, y, k) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ (x + k) mod 26</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (y - k) mod 26</strong>
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key fed into the encryption and decryption functions.<br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+	  <br><br><br>
+	  
+	  <strong><u>Explanation:</u></strong><br><br>
+	  
+	  A simplified form or special case of the Substitution cipher, the <strong>Shift Cipher</strong> (or <strong>Caesar Cipher</strong>) merely shifts every plaintext letter however many so positions rightward in the alphabet, wrapping around when it reaches the end (modular arithmetic!). This is occasionally known as the "ROT" Cipher, and the most well-known example is <a href="https://rot13.com/">ROT13</a>, which shifts rightward precisely halfway through the alphabet.<br><br>
+
+As a generic example, with a key of 1, some shifts would be as follows:<br><br>
+a -> b<br>
+b -> c<br>
+...<br>
+z -> a<br><br>
+As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the ring <strong>ℤ</strong><sub>26</sub> (26 - k) (since the set begins at 0), the shift returns to the front of the alphabet.<br><br>
+
+It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (explained in Rule 7) and brute-force attacks (Rule 5).
+
+<br><br><br>
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="AffineCipher">II.V Affine Cipher.</span></h3>
+	    </header>
+	    <article>
+	  
+	  <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Affine Cipher:</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(x, y, a, b) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ ((a × x) + b) mod 26</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (a⁻¹ × (y - b)) mod 26</strong>
+
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key fed into the encryption and decryption functions.<br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+
+<br><br><br>
+
+
+<strong><u>Explanation:</u></strong><br><br>
+
+The <strong>Affine Cipher</strong> is an attempted improvement of the shift cipher, done by complicating the encryption function through the addition of multiple parameters, but is still extremely easy to break. The affine cipher is performed by splitting the key into two parts:<br><br>
+
+<strong>K = (a, b)</strong><br><br>
+
+The number of possible b values in the system is 26, as it is merely the shift parameter (as shown in the definition equations).<br><br>
+
+The number of possible a values is limited by the condition explicated in Rule 14, with m = 26: only when gcd(a, 26) = 1 is 'a' an inverse, and thus contributive to the number of possible values. Counting all possible values of a (1, 3, 5, 7, 9, ...), all odd numbers 1-26 other than 13, produces an end result of 12 possible 'a' values.<br><br>
+
+The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to break using a brute-force attack (Rule 5).<br><br> 
+
+Furthermore, letter frequency also remains preserved (since any of a particular character (plaintext) will always be converted to another specific character (ciphertext), despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
+
+Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule [[[[).
+<br><br><br>
+	  
+	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
+	  
+	  <br><br><br>
+	  
+	  
+	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
+<br><br><br>
+	  
+	  
+	  
+	  
+	  </article>
+	    <header class="articleHeader"><hr><hr>
+	    <h2><span class="mw-headline" id="StreamCiphers">III. Stream Ciphers.</span></h2>
+	    <h3><span class="mw-headline" id="StreamIntro">III.I Introduction to Stream Ciphers.</span></h3>
+	  </header>
+	  <article>
 	  
 	  
 
@@ -506,128 +657,122 @@ Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is 
 	    
 	    <!--
 	    
+	    <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">C. Rule 20.</font></strong> <br><br><br>
+	    <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">C. Rule 21.</font></strong> <br><br><br>
+	    <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> <br><br><br>
+	    <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">C. Rule 23.</font></strong> <br><br><br>
+	    <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">C. Rule 24.</font></strong> <br><br><br>
+	    <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">C. Rule 25.</font></strong> <br><br><br>
+	    <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">C. Rule 26.</font></strong> <br><br><br>
+	    <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">C. Rule 27.</font></strong> <br><br><br>
+	    <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">C. Rule 28.</font></strong> <br><br><br>
+	    <strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">C. Rule 29.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">P. Rule 16.</font></strong> <br><br><br>
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">P. Rule 17.</font></strong> <br><br><br>
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">P. Rule 18.</font></strong> <br><br><br>
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">P. Rule 19.</font></strong> <br><br><br>
+	    <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> <br><br><br>
+	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> <br><br><br>
+	    <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">C. Rule 32.</font></strong> <br><br><br>
+	    <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">C. Rule 33.</font></strong> <br><br><br>
+	    <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">C. Rule 34.</font></strong> <br><br><br>
+	    <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">C. Rule 35.</font></strong> <br><br><br>
+	    <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">C. Rule 36.</font></strong> <br><br><br>
+	    <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">C. Rule 37.</font></strong> <br><br><br>
+	    <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">C. Rule 38.</font></strong> <br><br><br>
+	    <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">C. Rule 39.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">P. Rule 20.</font></strong> <br><br><br>
-	    <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">P. Rule 21.</font></strong> <br><br><br>
-	    <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">P. Rule 22.</font></strong> <br><br><br>
-	    <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">P. Rule 23.</font></strong> <br><br><br>
-	    <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">P. Rule 24.</font></strong> <br><br><br>
-	    <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">P. Rule 25.</font></strong> <br><br><br>
-	    <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">P. Rule 26.</font></strong> <br><br><br>
-	    <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">P. Rule 27.</font></strong> <br><br><br>
-	    <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">P. Rule 28.</font></strong> <br><br><br>
-	    <strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">P. Rule 29.</font></strong> <br><br><br>
+	    <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">C. Rule 40.</font></strong> <br><br><br>
+	    <strong><a href="#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">C. Rule 41.</font></strong> <br><br><br>
+	    <strong><a href="#Rule42"><span class="mw-headline" id="Rule42">#</span></a> <font color="red">C. Rule 42.</font></strong> <br><br><br>
+	    <strong><a href="#Rule43"><span class="mw-headline" id="Rule43">#</span></a> <font color="red">C. Rule 43.</font></strong> <br><br><br>
+	    <strong><a href="#Rule44"><span class="mw-headline" id="Rule44">#</span></a> <font color="red">C. Rule 44.</font></strong> <br><br><br>
+	    <strong><a href="#Rule45"><span class="mw-headline" id="Rule45">#</span></a> <font color="red">C. Rule 45.</font></strong> <br><br><br>
+	    <strong><a href="#Rule46"><span class="mw-headline" id="Rule46">#</span></a> <font color="red">C. Rule 46.</font></strong> <br><br><br>
+	    <strong><a href="#Rule47"><span class="mw-headline" id="Rule47">#</span></a> <font color="red">C. Rule 47.</font></strong> <br><br><br>
+	    <strong><a href="#Rule48"><span class="mw-headline" id="Rule48">#</span></a> <font color="red">C. Rule 48.</font></strong> <br><br><br>
+	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">C. Rule 49.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">P. Rule 30.</font></strong> <br><br><br>
-	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">P. Rule 31.</font></strong> <br><br><br>
-	    <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">P. Rule 32.</font></strong> <br><br><br>
-	    <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">P. Rule 33.</font></strong> <br><br><br>
-	    <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">P. Rule 34.</font></strong> <br><br><br>
-	    <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">P. Rule 35.</font></strong> <br><br><br>
-	    <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">P. Rule 36.</font></strong> <br><br><br>
-	    <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">P. Rule 37.</font></strong> <br><br><br>
-	    <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">P. Rule 38.</font></strong> <br><br><br>
-	    <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">P. Rule 39.</font></strong> <br><br><br>
+	    <strong><a href="#Rule50"><span class="mw-headline" id="Rule50">#</span></a> <font color="red">C. Rule 50.</font></strong> <br><br><br>
+	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">C. Rule 51.</font></strong> <br><br><br>
+	    <strong><a href="#Rule52"><span class="mw-headline" id="Rule52">#</span></a> <font color="red">C. Rule 52.</font></strong> <br><br><br>
+	    <strong><a href="#Rule53"><span class="mw-headline" id="Rule53">#</span></a> <font color="red">C. Rule 53.</font></strong> <br><br><br>
+	    <strong><a href="#Rule54"><span class="mw-headline" id="Rule54">#</span></a> <font color="red">C. Rule 54.</font></strong> <br><br><br>
+	    <strong><a href="#Rule55"><span class="mw-headline" id="Rule55">#</span></a> <font color="red">C. Rule 55.</font></strong> <br><br><br>
+	    <strong><a href="#Rule56"><span class="mw-headline" id="Rule56">#</span></a> <font color="red">C. Rule 56.</font></strong> <br><br><br>
+	    <strong><a href="#Rule57"><span class="mw-headline" id="Rule57">#</span></a> <font color="red">C. Rule 57.</font></strong> <br><br><br>
+	    <strong><a href="#Rule58"><span class="mw-headline" id="Rule58">#</span></a> <font color="red">C. Rule 58.</font></strong> <br><br><br>
+	    <strong><a href="#Rule59"><span class="mw-headline" id="Rule59">#</span></a> <font color="red">C. Rule 59.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">P. Rule 40.</font></strong> <br><br><br>
-	    <strong><a href="#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">P. Rule 41.</font></strong> <br><br><br>
-	    <strong><a href="#Rule42"><span class="mw-headline" id="Rule42">#</span></a> <font color="red">P. Rule 42.</font></strong> <br><br><br>
-	    <strong><a href="#Rule43"><span class="mw-headline" id="Rule43">#</span></a> <font color="red">P. Rule 43.</font></strong> <br><br><br>
-	    <strong><a href="#Rule44"><span class="mw-headline" id="Rule44">#</span></a> <font color="red">P. Rule 44.</font></strong> <br><br><br>
-	    <strong><a href="#Rule45"><span class="mw-headline" id="Rule45">#</span></a> <font color="red">P. Rule 45.</font></strong> <br><br><br>
-	    <strong><a href="#Rule46"><span class="mw-headline" id="Rule46">#</span></a> <font color="red">P. Rule 46.</font></strong> <br><br><br>
-	    <strong><a href="#Rule47"><span class="mw-headline" id="Rule47">#</span></a> <font color="red">P. Rule 47.</font></strong> <br><br><br>
-	    <strong><a href="#Rule48"><span class="mw-headline" id="Rule48">#</span></a> <font color="red">P. Rule 48.</font></strong> <br><br><br>
-	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">P. Rule 49.</font></strong> <br><br><br>
+	    <strong><a href="#Rule60"><span class="mw-headline" id="Rule60">#</span></a> <font color="red">C. Rule 60.</font></strong> <br><br><br>
+	    <strong><a href="#Rule61"><span class="mw-headline" id="Rule61">#</span></a> <font color="red">C. Rule 61.</font></strong> <br><br><br>
+	    <strong><a href="#Rule62"><span class="mw-headline" id="Rule62">#</span></a> <font color="red">C. Rule 62.</font></strong> <br><br><br>
+	    <strong><a href="#Rule63"><span class="mw-headline" id="Rule63">#</span></a> <font color="red">C. Rule 63.</font></strong> <br><br><br>
+	    <strong><a href="#Rule64"><span class="mw-headline" id="Rule64">#</span></a> <font color="red">C. Rule 64.</font></strong> <br><br><br>
+	    <strong><a href="#Rule65"><span class="mw-headline" id="Rule65">#</span></a> <font color="red">C. Rule 65.</font></strong> <br><br><br>
+	    <strong><a href="#Rule66"><span class="mw-headline" id="Rule66">#</span></a> <font color="red">C. Rule 66.</font></strong> <br><br><br>
+	    <strong><a href="#Rule67"><span class="mw-headline" id="Rule67">#</span></a> <font color="red">C. Rule 67.</font></strong> <br><br><br>
+	    <strong><a href="#Rule68"><span class="mw-headline" id="Rule68">#</span></a> <font color="red">C. Rule 68.</font></strong> <br><br><br>
+	    <strong><a href="#Rule69"><span class="mw-headline" id="Rule69">#</span></a> <font color="red">C. Rule 69.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule50"><span class="mw-headline" id="Rule50">#</span></a> <font color="red">P. Rule 50.</font></strong> <br><br><br>
-	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">P. Rule 51.</font></strong> <br><br><br>
-	    <strong><a href="#Rule52"><span class="mw-headline" id="Rule52">#</span></a> <font color="red">P. Rule 52.</font></strong> <br><br><br>
-	    <strong><a href="#Rule53"><span class="mw-headline" id="Rule53">#</span></a> <font color="red">P. Rule 53.</font></strong> <br><br><br>
-	    <strong><a href="#Rule54"><span class="mw-headline" id="Rule54">#</span></a> <font color="red">P. Rule 54.</font></strong> <br><br><br>
-	    <strong><a href="#Rule55"><span class="mw-headline" id="Rule55">#</span></a> <font color="red">P. Rule 55.</font></strong> <br><br><br>
-	    <strong><a href="#Rule56"><span class="mw-headline" id="Rule56">#</span></a> <font color="red">P. Rule 56.</font></strong> <br><br><br>
-	    <strong><a href="#Rule57"><span class="mw-headline" id="Rule57">#</span></a> <font color="red">P. Rule 57.</font></strong> <br><br><br>
-	    <strong><a href="#Rule58"><span class="mw-headline" id="Rule58">#</span></a> <font color="red">P. Rule 58.</font></strong> <br><br><br>
-	    <strong><a href="#Rule59"><span class="mw-headline" id="Rule59">#</span></a> <font color="red">P. Rule 59.</font></strong> <br><br><br>
+	    <strong><a href="#Rule70"><span class="mw-headline" id="Rule70">#</span></a> <font color="red">C. Rule 70.</font></strong> <br><br><br>
+	    <strong><a href="#Rule71"><span class="mw-headline" id="Rule71">#</span></a> <font color="red">C. Rule 71.</font></strong> <br><br><br>
+	    <strong><a href="#Rule72"><span class="mw-headline" id="Rule72">#</span></a> <font color="red">C. Rule 72.</font></strong> <br><br><br>
+	    <strong><a href="#Rule73"><span class="mw-headline" id="Rule73">#</span></a> <font color="red">C. Rule 73.</font></strong> <br><br><br>
+	    <strong><a href="#Rule74"><span class="mw-headline" id="Rule74">#</span></a> <font color="red">C. Rule 74.</font></strong> <br><br><br>
+	    <strong><a href="#Rule75"><span class="mw-headline" id="Rule75">#</span></a> <font color="red">C. Rule 75.</font></strong> <br><br><br>
+	    <strong><a href="#Rule76"><span class="mw-headline" id="Rule76">#</span></a> <font color="red">C. Rule 76.</font></strong> <br><br><br>
+	    <strong><a href="#Rule77"><span class="mw-headline" id="Rule77">#</span></a> <font color="red">C. Rule 77.</font></strong> <br><br><br>
+	    <strong><a href="#Rule78"><span class="mw-headline" id="Rule78">#</span></a> <font color="red">C. Rule 78.</font></strong> <br><br><br>
+	    <strong><a href="#Rule79"><span class="mw-headline" id="Rule79">#</span></a> <font color="red">C. Rule 79.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule60"><span class="mw-headline" id="Rule60">#</span></a> <font color="red">P. Rule 60.</font></strong> <br><br><br>
-	    <strong><a href="#Rule61"><span class="mw-headline" id="Rule61">#</span></a> <font color="red">P. Rule 61.</font></strong> <br><br><br>
-	    <strong><a href="#Rule62"><span class="mw-headline" id="Rule62">#</span></a> <font color="red">P. Rule 62.</font></strong> <br><br><br>
-	    <strong><a href="#Rule63"><span class="mw-headline" id="Rule63">#</span></a> <font color="red">P. Rule 63.</font></strong> <br><br><br>
-	    <strong><a href="#Rule64"><span class="mw-headline" id="Rule64">#</span></a> <font color="red">P. Rule 64.</font></strong> <br><br><br>
-	    <strong><a href="#Rule65"><span class="mw-headline" id="Rule65">#</span></a> <font color="red">P. Rule 65.</font></strong> <br><br><br>
-	    <strong><a href="#Rule66"><span class="mw-headline" id="Rule66">#</span></a> <font color="red">P. Rule 66.</font></strong> <br><br><br>
-	    <strong><a href="#Rule67"><span class="mw-headline" id="Rule67">#</span></a> <font color="red">P. Rule 67.</font></strong> <br><br><br>
-	    <strong><a href="#Rule68"><span class="mw-headline" id="Rule68">#</span></a> <font color="red">P. Rule 68.</font></strong> <br><br><br>
-	    <strong><a href="#Rule69"><span class="mw-headline" id="Rule69">#</span></a> <font color="red">P. Rule 69.</font></strong> <br><br><br>
+	    <strong><a href="#Rule80"><span class="mw-headline" id="Rule80">#</span></a> <font color="red">C. Rule 80.</font></strong> <br><br><br>
+	    <strong><a href="#Rule81"><span class="mw-headline" id="Rule81">#</span></a> <font color="red">C. Rule 81.</font></strong> <br><br><br>
+	    <strong><a href="#Rule82"><span class="mw-headline" id="Rule82">#</span></a> <font color="red">C. Rule 82.</font></strong> <br><br><br>
+	    <strong><a href="#Rule83"><span class="mw-headline" id="Rule83">#</span></a> <font color="red">C. Rule 83.</font></strong> <br><br><br>
+	    <strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">C. Rule 84.</font></strong> <br><br><br>
+	    <strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">C. Rule 85.</font></strong> <br><br><br>
+	    <strong><a href="#Rule86"><span class="mw-headline" id="Rule86">#</span></a> <font color="red">C. Rule 86.</font></strong> <br><br><br>
+	    <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">C. Rule 87.</font></strong> <br><br><br>
+	    <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">C. Rule 88.</font></strong> <br><br><br>
+	    <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">C. Rule 89.</font></strong> <br><br><br>
 	    
-	    <strong><a href="#Rule70"><span class="mw-headline" id="Rule70">#</span></a> <font color="red">P. Rule 70.</font></strong> <br><br><br>
-	    <strong><a href="#Rule71"><span class="mw-headline" id="Rule71">#</span></a> <font color="red">P. Rule 71.</font></strong> <br><br><br>
-	    <strong><a href="#Rule72"><span class="mw-headline" id="Rule72">#</span></a> <font color="red">P. Rule 72.</font></strong> <br><br><br>
-	    <strong><a href="#Rule73"><span class="mw-headline" id="Rule73">#</span></a> <font color="red">P. Rule 73.</font></strong> <br><br><br>
-	    <strong><a href="#Rule74"><span class="mw-headline" id="Rule74">#</span></a> <font color="red">P. Rule 74.</font></strong> <br><br><br>
-	    <strong><a href="#Rule75"><span class="mw-headline" id="Rule75">#</span></a> <font color="red">P. Rule 75.</font></strong> <br><br><br>
-	    <strong><a href="#Rule76"><span class="mw-headline" id="Rule76">#</span></a> <font color="red">P. Rule 76.</font></strong> <br><br><br>
-	    <strong><a href="#Rule77"><span class="mw-headline" id="Rule77">#</span></a> <font color="red">P. Rule 77.</font></strong> <br><br><br>
-	    <strong><a href="#Rule78"><span class="mw-headline" id="Rule78">#</span></a> <font color="red">P. Rule 78.</font></strong> <br><br><br>
-	    <strong><a href="#Rule79"><span class="mw-headline" id="Rule79">#</span></a> <font color="red">P. Rule 79.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule80"><span class="mw-headline" id="Rule80">#</span></a> <font color="red">P. Rule 80.</font></strong> <br><br><br>
-	    <strong><a href="#Rule81"><span class="mw-headline" id="Rule81">#</span></a> <font color="red">P. Rule 81.</font></strong> <br><br><br>
-	    <strong><a href="#Rule82"><span class="mw-headline" id="Rule82">#</span></a> <font color="red">P. Rule 82.</font></strong> <br><br><br>
-	    <strong><a href="#Rule83"><span class="mw-headline" id="Rule83">#</span></a> <font color="red">P. Rule 83.</font></strong> <br><br><br>
-	    <strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">P. Rule 84.</font></strong> <br><br><br>
-	    <strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">P. Rule 85.</font></strong> <br><br><br>
-	    <strong><a href="#Rule86"><span class="mw-headline" id="Rule86">#</span></a> <font color="red">P. Rule 86.</font></strong> <br><br><br>
-	    <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> <br><br><br>
-	    <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <br><br><br>
-	    <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">P. Rule 89.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">P. Rule 90.</font></strong> <br><br><br>
-	    <strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">P. Rule 91.</font></strong> <br><br><br>
-	    <strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">P. Rule 92.</font></strong> <br><br><br>
-	    <strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">P. Rule 93.</font></strong> <br><br><br>
-	    <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">P. Rule 94.</font></strong> <br><br><br>
-	    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">P. Rule 95.</font></strong> <br><br><br>
-	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">P. Rule 96.</font></strong> <br><br><br>
-	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">P. Rule 97.</font></strong> <br><br><br>
-	    <strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">P. Rule 98.</font></strong> <br><br><br>
-	    <strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">P. Rule 99.</font></strong> <br><br><br>
+	    <strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">C. Rule 90.</font></strong> <br><br><br>
+	    <strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">C. Rule 91.</font></strong> <br><br><br>
+	    <strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">C. Rule 92.</font></strong> <br><br><br>
+	    <strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">C. Rule 93.</font></strong> <br><br><br>
+	    <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">C. Rule 94.</font></strong> <br><br><br>
+	    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">C. Rule 95.</font></strong> <br><br><br>
+	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">C. Rule 96.</font></strong> <br><br><br>
+	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">C. Rule 97.</font></strong> <br><br><br>
+	    <strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">C. Rule 98.</font></strong> <br><br><br>
+	    <strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">C. Rule 99.</font></strong> <br><br><br>
 	    
 	    
 	    
 	    
 	    
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <br><br><br>
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> <br><br><br>
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> <br><br><br>
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> <br><br><br>
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> <br><br><br>
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> <br><br><br>
-	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">P. Rule 16.</font></strong> <br><br><br>
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">P. Rule 17.</font></strong> <br><br><br>
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">P. Rule 18.</font></strong> <br><br><br>
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">P. Rule 19.</font></strong> <br><br><br>
+	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">C. Rule 10.</font></strong> <br><br><br>
+	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">C. Rule 11.</font></strong> <br><br><br>
+	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">C. Rule 12.</font></strong> <br><br><br>
+	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">C. Rule 13.</font></strong> <br><br><br>
+	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">C. Rule 14.</font></strong> <br><br><br>
+	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">C. Rule 15.</font></strong> <br><br><br>
+	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">C. Rule 16.</font></strong> <br><br><br>
+	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <br><br><br>
+	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> <br><br><br>
+	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> <br><br><br>
 	    
 	    
 	    
 	    
-	    <strong><a href="#Rule0"><span class="mw-headline" id="Rule0">#</span></a> <font color="red">P. Rule 0.</font></strong> <br><br><br>
-	    <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">P. Rule 1.</font></strong> <br><br><br>
-	    <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">P. Rule 2.</font></strong> <br><br><br>
-	    <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> <br><br><br>
-	    <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> <br><br><br>
-	    <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">P. Rule 5.</font></strong> <br><br><br>
-	    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">P. Rule 6.</font></strong> <br><br><br>
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> <br><br><br>
-	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <br><br><br>
-	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong> <br><br><br>
+	    <strong><a href="#Rule0"><span class="mw-headline" id="Rule0">#</span></a> <font color="red">C. Rule 0.</font></strong> <br><br><br>
+	    <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">C. Rule 1.</font></strong> <br><br><br>
+	    <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">C. Rule 2.</font></strong> <br><br><br>
+	    <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> <br><br><br>
+	    <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> <br><br><br>
+	    <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">C. Rule 5.</font></strong> <br><br><br>
+	    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">C. Rule 6.</font></strong> <br><br><br>
+	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">C. Rule 7.</font></strong> <br><br><br>
+	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">C. Rule 8.</font></strong> <br><br><br>
+	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">C. Rule 9.</font></strong> <br><br><br>
 	    
 	    -->
 	    
@@ -663,10 +808,10 @@ Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is 
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong>Complete Symmetric Cryptography</strong></article>
         <br>
-        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 23 2024</span><br>
+      	<span class="tiny">Last Change: December 24 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

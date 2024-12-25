@@ -72,7 +72,7 @@
         </div>
         
         <div class="toc-column">
-          <a href="#IntegerRings">II.III Integer Rings.</a>
+          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
         </div>
  
       </div>
@@ -81,11 +81,21 @@
       <div class="toc-container">
         <div class="toc-column">
           <a href="#ModularArithmetic">II.II Modular Arithmetic Basics.</a>
+        </div><!---->
+        <div class="toc-column">
+          <a href="#AffineCipher">II.V Affine Cipher.</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#IntegerRings">II.III Integer Rings.</a>
         </div><!--
         <div class="toc-column">
-          <a href="#Exponents">VI. Rules of Exponents.</a>
-        </div>
-        -->
+          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
+        </div>-->
+        
       </div>
 	  
 	  <header class="articleHeader"><hr>
@@ -98,14 +108,16 @@
 <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> 
+	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">C. Rule 7.</font></strong> 
 	    
 	    <strong>Substitution Cipher</strong><br><br>
 A historical cipher, operating purely on letters, in which every plaintext letter is replaced by a fixed ciphertext letter. It is just scrambling the letters, nothing more.<br><br>
 
 The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext letter decreases the remaining number of possible letters. Thus, a brute-force attack would be out of the question for modern computers.<br><br>
 
-Since the different letters of the English alphabet have different frequencies, Letter Frequency Analysis can be conducted as an attack on the substitution cipher, making it rather simple. This is an example of a situation in which an Analytical Attack is most effective.
+Since the different letters of the English alphabet have different frequencies, and these frequencies are preserved even after scrambling (just different letters will <em>have</em> the frequencies), <strong>Letter Frequency Analysis</strong> can be conducted as an attack on the substitution cipher, making it rather simple.<br><br>
+
+This is an example of a cipher/algorithm in which an Analytical Attack is most effective.
 	    
 	    <br><br><br>
 	    
@@ -115,16 +127,9 @@ Since the different letters of the English alphabet have different frequencies, 
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
+	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">C. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
 
-Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
-
-Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or remainder operator, see below), in effect wrapping the number around the modulus in relation to how much greater the number is from the closest (smaller) multiple of the modulus. <br><br>
-For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
-
-The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.<br><br>
-
-Mathematically, modular arithmetic is defined as follows:<br><br><br>
+<strong><u>Mathematical Definition</u></strong>:<br><br>
 <em>(a, r, m) ∈ <strong>ℤ</strong><br>
 m > 0<br><br>
 If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
@@ -135,27 +140,41 @@ If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
 <strong>m</strong> = The modulus, the highest possible number in the set.<br>
 <strong>'mod'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
 <br><br><br>
+
+<strong><u>Explanation:</u></strong><br><br>
+
+Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
+
+Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or remainder operator, see below), in effect 'wrapping' the number around the modulus, with respect to the difference between the number and any multiple of the modulus, known as the <em>remainder</em>.<br><br>
+
+The <em>preferred</em> multiple for finding the remainder (indeed, the exact one that would be found by division (see two paragraphs below)) is the greatest one lower than the number, but any will work - see Rule 10, Equivalence Classes.<br><br>
+For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
+
+The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.
+
+<br><br><br>
 	  
-	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
+	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">C. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
 	  To find the remainder when m and a are large, burdensome numbers, there is an exact, algorithmic definition:<br><br><br>
 
+<strong><u>Mathematical Definition</u></strong>:<br><br>
 <em>
 (a, m) ∈ <strong>ℤ</strong><br>
 0 ≤ r &lt; m <br><br>
 a = q × m + r<br>
 Thus, a - r = q × m<br><br>
 <strong>m|(a − r)</strong>
-</em><BR><BR><br>
-This is precisely the same as what was discovered before, and q is not in any of the final equations - all that matters is the remainder.<br><Br>
+</em><BR><br><Br>
 
 <strong>ℤ</strong> = The set of all integers.<br>
 <strong>a</strong> = The chosen number.<br>
 <strong>q</strong> = The quotient, which produces a multiple of the modulus.<br>
 <strong>r</strong> = The remainder.<br>
-<strong>m</strong> = The modulus, the highest possible number in the set.
+<strong>m</strong> = The modulus, the highest possible number in the set.<BR><br>
+The final equation is precisely the same as what was discovered before, and q is not involved whatsoever - all that matters is the remainder.
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
+	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">C. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
 
 While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. This is because, while the remainders may not exactly be the difference between 'a' (12) and the <u>highest</u> multiple of m lesser than a (9), they all still return true in the formula of Rule 8:<br><br>
 
@@ -174,7 +193,7 @@ Note: There are 'm' equivalence classes for each possible remainder (0 through m
 	  
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
+	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">C. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
 	  Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions in mathematical operations that use the modulus operator can be performed, simplifying them.<br><br>
 
 Take (13 × 16) - 8, with modulus 5. While the full number can be computed (200) and an answer derived from there (0 mod 5), that is lame and time-consuming. A much cooler, faster, 21st century means of solving the problem is to substitute in for each term the simplest member of their respective equivalence classes:<br><br>
@@ -200,7 +219,7 @@ Division
 	  
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
+	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">C. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
 	  
 	  
 	  </article>
@@ -213,7 +232,7 @@ Division
       <br><br><br>
 	    
 	  
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> 
+	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">C. Rule 13.</font></strong> 
 	    <strong>Algebraic Modular Arithmetic</strong>:<br><br>
 
 Modular Arithmetic can be defined in the form of an integer ring:<br><br><br>
@@ -227,6 +246,159 @@ The integer ring <strong>ℤ</strong><sub>m</sub> consists of the following char
 
 There are many overshadowing rules that every ring has to fulfill, seen in the section "RULES OF THE RING" below.
 	    <br><br><br>
+	  
+	  <div title="You WILL accept these as true. You WON'T try to figure out how they were derived."><strong><font color="blue"><a href="#RingRules"><span class="mw-headline" id="RingRules">#</span></a> RULES OF THE RING:</font></strong></div><br>
+  These following rules hold true for all integer rings in general, not just modular arithmetic.<br><br>
+  <ol>
+
+<li> The ring should be closed: if any two numbers from the set are multiplied or added together, the result must be in the ring. This is ensured by the modulus operator.</li><br>
+
+<li> Addition and multiplication are associative properties: For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a + (b + c) = (a + b) + c, and a × (b × c) = (a × b) × c.</li><br><br>
+
+<strong>Addition:</strong><br><br><br>
+
+<li> Addition is commutative for all (a, b) ∈ <strong>ℤ</strong><sub>m</sub>: a + b = b + a.</li>
+<br>
+
+<li>There is an <strong>additive neutral element</strong>, 0. For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a + 0 ≡ a mod m</strong>.</li>
+<br>
+<!--ajj- backpack playing in my head all day-->
+
+<li>The <strong>additive inverse</strong> always exists: for any element a in the ring, there is always a negative element '-a' such that <strong>a + (-a) ≡ 0 mod m</strong>, the neutral element.</li>
+<br><br>
+
+<strong>Multiplication</strong>:<br><br><br>
+
+<li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m.</strong></li><br>
+
+<li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in Rules 14 & 15.<br><br>
+If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
+<br>
+
+
+<li> The distributive property holds for all ring operations. For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a × (b + c) = (a × b) + (a × c).</li>
+
+</ol>
+
+<br><br>
+	  
+	  <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">C. Rule 14.</font></strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
+<br><br>
+
+If <strong>gcd(a, m) = 1</strong>, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br><br>
+If <strong>gcd(a, m) ≠ 1</strong>, then there does <u>NOT</u> exist a⁻¹.<br><br>
+If m is prime, then gcd(a, m) will always equal to 1, for all nonzero 'a' values, and thus every 'a' value will have an inverse in those rings. The inverse of an integer completely depends on the ring, and thus the modulus.
+
+	  <br><br><br>
+	  
+	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">C. Rule 15.</font></strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in Rule of the Ring #7):<br><br>
+
+<strong>a × a⁻¹ ≡ 1 mod m</strong>
+<br><br>
+
+Though the multiplicative inverse of a is literally shown as a⁻¹, it is almost never the actual reciprocal of a. The reason for this is simple: All reciprocals other than -1 and 1 are not integers, and are thus not included in the set.<br><br>
+
+Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is not included in the set. A different inverse must be found specific to the modulus; if the modulus were 3, then an inverse of '2' would work:<br><br>
+<strong>2 × 2 ≡ 1 mod 3</strong>
+	    <br><br><br>
+	    
+	    
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ShiftCipher">II.IV Shift/Caesar Cipher.</span></h3>
+	    </header>
+	    <article>
+	    
+	  
+	  <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">C. Rule 16.</font></strong> <strong>Shift Cipher:</strong><br><br>
+	  
+	  
+	  <strong><u>Mathematical Definition</u></strong>:<br><br>
+	  
+	  <em>
+(x, y, k) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ (x + k) mod 26</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (y - k) mod 26</strong>
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key fed into the encryption and decryption functions.<br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+	  <br><br><br>
+	  
+	  <strong><u>Explanation:</u></strong><br><br>
+	  
+	  A simplified form or special case of the Substitution cipher, the <strong>Shift Cipher</strong> (or <strong>Caesar Cipher</strong>) merely shifts every plaintext letter however many so positions rightward in the alphabet, wrapping around when it reaches the end (modular arithmetic!). This is occasionally known as the "ROT" Cipher, and the most well-known example is <a href="https://rot13.com/">ROT13</a>, which shifts rightward precisely halfway through the alphabet.<br><br>
+
+As a generic example, with a key of 1, some shifts would be as follows:<br><br>
+a -> b<br>
+b -> c<br>
+...<br>
+z -> a<br><br>
+As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the ring <strong>ℤ</strong><sub>26</sub> (26 - k) (since the set begins at 0), the shift returns to the front of the alphabet.<br><br>
+
+It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (explained in Rule 7) and brute-force attacks (Rule 5).
+
+<br><br><br>
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="AffineCipher">II.V Affine Cipher.</span></h3>
+	    </header>
+	    <article>
+	  
+	  <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Affine Cipher:</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(x, y, a, b) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ ((a × x) + b) mod 26</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (a⁻¹ × (y - b)) mod 26</strong>
+
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key fed into the encryption and decryption functions.<br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+
+<br><br><br>
+
+
+<strong><u>Explanation:</u></strong><br><br>
+
+The <strong>Affine Cipher</strong> is an attempted improvement of the shift cipher, done by complicating the encryption function through the addition of multiple parameters, but is still extremely easy to break. The affine cipher is performed by splitting the key into two parts:<br><br>
+
+<strong>K = (a, b)</strong><br><br>
+
+The number of possible b values in the system is 26, as it is merely the shift parameter (as shown in the definition equations).<br><br>
+
+The number of possible a values is limited by the condition explicated in Rule 14, with m = 26: only when gcd(a, 26) = 1 is 'a' an inverse, and thus contributive to the number of possible values. Counting all possible values of a (1, 3, 5, 7, 9, ...), all odd numbers 1-26 other than 13, produces an end result of 12 possible 'a' values.<br><br>
+
+The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to break using a brute-force attack (Rule 5).<br><br> 
+
+Furthermore, letter frequency also remains preserved (since any of a particular character (plaintext) will always be converted to another specific character (ciphertext), despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
+
+Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule [[[[).
+<br><br><br>
+	  
+	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
+	  
+	  <br><br><br>
+	  
+	  
+	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
+<br><br>
 	    
 	    </article>
 	</div>
@@ -258,10 +430,10 @@ There are many overshadowing rules that every ring has to fulfill, seen in the s
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong><a href="/cryptography/symmetricFull.html">Complete Symmetric Cryptography</a></strong></article>
         <br>
-        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 23 2024</span><br>
+      	<span class="tiny">Last Change: December 24 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

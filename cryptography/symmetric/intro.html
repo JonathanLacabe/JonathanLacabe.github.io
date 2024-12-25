@@ -91,12 +91,15 @@
 	    <h3><span class="mw-headline" id="Terminology">I.I Classification & Terminology.</span></h3>
 	  </header>
 	  <article><br>
+	  
 	    <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification Hierarchy of the major components of Cryptology. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
 	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
 	    
 	    
-	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.
+	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
+	    
+	    All IT Security follows the <strong>CIA Triad</strong>: Confidentiality, Integrity and Availability of information. Security is largely focused on attackers, while system safety & reliability is focused on protecting against random technical failures.
 <br><br><br>
 
 <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
@@ -115,7 +118,7 @@
 <br><br><br>
 
 
-<strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">P. Rule 1.</font></strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br><br>
+<strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">C. Rule 1.</font></strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br><br>
 
 <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmission from interception is the goal of cryptography.
 <br><br><br>
@@ -132,7 +135,7 @@
 	    <article>
 	    
 	  
-	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">P. Rule 2.</font></strong> Symmetric Cryptography
+	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">C. Rule 2.</font></strong> Symmetric Cryptography
 	  
 	  
 	  <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
@@ -157,12 +160,12 @@ In order for Bob to not simply decrypt the ciphertext immediately using the decr
 
 <strong>K</strong> = The Key fed into the encryption and decryption functions.<br><br>
 	    
-<strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong> of the algorithm: If it produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
+<strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong>/<strong>key length</strong> of the algorithm: If it produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
 	    
 	    
 <br><br><br>
 
-<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
+<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
 
 
 This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br>
@@ -184,7 +187,7 @@ In Practice: Never use an untested Crypto algorithm! Furthermore, never roll you
 	    </header>
 	    <article>
 	    
-<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
 In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
 
 <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
@@ -205,27 +208,31 @@ These attacks are most relevant when the attacker has physical access to a piece
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
 <br><br><br>
 
-<strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">P. Rule 5.</font></strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
+<strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">C. Rule 5.</font></strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
+
+If the equality holds, a possible correct key is found; if not, proceed with the next key.
+</em>
+<br><br><br>
+
+<strong><u>Explanation:</u></strong><br><br>
 
 The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
 <br><br>
 As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
-	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span><br><br> 
-
-<br> Mathematically, a brute-force search (which respect to the key) is defined as follows:<br><br>
-<em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
-
-If the equality holds, a possible correct key is found; if not, proceed with the next key.
-</em>
+	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span>
 
 <br><br><br>
 
-<strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to current cryptographic systems and antiquated ones still in use, as it becomes cheaper and faster to break them.
+<strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.
 <br><br><br>
 
 
-<strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">P. Rule 6.</font></strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
+<strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">C. Rule 6.</font></strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
 The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
 There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
@@ -283,10 +290,10 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong><a href="/cryptography/symmetricFull.html">Complete Symmetric Cryptography</a></strong></article>
         <br>
-        <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 23 2024</span><br>
+      	<span class="tiny">Last Change: December 24 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

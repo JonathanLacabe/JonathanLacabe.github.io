@@ -3,6 +3,10 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+
+December 25 2024: More work on Cryptography, this time solely in Stream Ciphers. Furthermore, a new section was added to the "Mathematical Symbols" page, "Expressions".
+Rules Added: Cryptography, Symmetric Cryptography - Rule 20, 21, 22
+
 December 24 2024: Edits to I.I in Cryptography, I.II totally completed, I.III began, changes to the "About" page, general all-around work day. The Stream Ciphers section was began and was added to all relevant pages.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 16, 17, 18, 19.
 

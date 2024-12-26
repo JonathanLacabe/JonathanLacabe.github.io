@@ -345,6 +345,46 @@ As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the 
 It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (explained in Rule 7) and brute-force attacks (Rule 5).
 
 <br><br><br>
+
+<strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Vigenère Cipher</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(x, y, k, l) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ (x<sub>i</sub> + k<sub>i mod l</sub>) mod 26</strong><br><br>
+
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (y<sub>i</sub> - k<sub>i mod l</sub>) mod 26</strong>
+
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key/codeword fed into the encryption and decryption functions, which, like the plaintext, is a series of letters (represented by their numerical value, 0-25) that are used by their i position.<br>
+<strong>i</strong> = The position in the string of both the key and the plaintext.<br>
+<strong>l</strong> = The length of the codeword.<br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+
+<br><br><br>
+
+
+
+<strong><u>Explanation:</u></strong><br><br>
+
+A mere variation of the Shift cipher, in which the shift for each letter is determined by a secret code word 'c', which has 'l' letters. Each character in the code word c represents a number of shifts rightward according to its cipher.<br><br>
+The letters of the code word are denoted as (c<sub>0</sub>, c<sub>1</sub>, ..., c<sub>l - 1</sub>), and as the keys, they are also represented as (k<sub>0</sub>, k<sub>1</sub>, ..., k<sub>l - 1</sub>), respectively.<br><br>
+
+The encryption function works as follows: Each character in the plaintext string 'x' is applied a rightward shift according to it's respective letter (identical position) in the key text (a cyclic shift, if the addition of the key letter produces a number greater than 26).<br><br>
+
+This dictates that the length of the code word must be the same or larger than that of the actual code itself, which is somewhat inefficient for longer plaintexts. E.g., |x| ≤ l.<br><br>
+
+The decryption function, of course, is just the opposite of the encryption function, moving each character of the ciphertext backward by the value in the positional counterpart of the code word 'c'.
+
+<br><br><br>
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -352,7 +392,7 @@ It should be obvious to all this is an extremely unsecure cryptosystem, with a k
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Affine Cipher:</strong><br><br>
+	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> <strong>Affine Cipher:</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -391,12 +431,12 @@ Furthermore, letter frequency also remains preserved (since any of a particular 
 Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule [[[[).
 <br><br><br>
 	  
-	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
+	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
 	  
 	  <br><br><br>
 	  
 	  
-	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+	  <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">C. Rule 20.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
 Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
 <br><br>
 	    
@@ -433,7 +473,7 @@ Also recall that the mod operator will simply remain in place - it can be practi
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 24 2024</span><br>
+      	<span class="tiny">Last Change: December 25 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

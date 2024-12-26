@@ -151,6 +151,21 @@ rainbow {
       <br>
       
       
+      <article><center><a href="#BlockCiphers">IV. Block Ciphers.</a></center></article>
+        
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#DES">IV.I Data Encryption Standard.</a>
+        </div>
+        <!--
+        <div class="toc-column">
+          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
+        </div>
+        -->
+      </div>
+      
+      
+      <br>
       
       
       
@@ -161,8 +176,8 @@ rainbow {
 	  <article><br>
 	  
 	    <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification Hierarchy of the major components of Cryptology. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
-	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
+	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
 	    
 	    
 	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
@@ -236,18 +251,20 @@ In order for Bob to not simply decrypt the ciphertext immediately using the decr
 <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
 
 
-This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br>
+This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br><br>
 
 <strong>Kerckhoffs' Principle</strong>:<br><br>
-<em>"A cryptosystem should be secure even if the attacker</em> (Oscar)<em> knows all the details of the system, with the exception of the secret key."</em><br><br>
+<em>"A cryptosystem should be secure even if the attacker</em> (Oscar)<em> knows all the details of the system, with the exception of the secret key."</em><br><br><br>
 
 
 In Practice: Never use an untested Crypto algorithm! Furthermore, never roll your own crypto!
-
-
-
 <br><br><br>
 
+<strong><a href="#EndToEndDef"><span class="mw-headline" id="EndToEndDef">#</span></a> <font color="#006400">End-Eo-End Encryption (E2EE)</font></strong>: A system of encryption widely used in modern communication services (like internet messaging sites), in which all data sent from Alice to Bob (party #1 to party #2) is never decrypted at any point along its route until it reaches Bob. <br><br>
+Thus, all parties intercepting/eavesdropping will be unable to read or manipulate the message, even if they control any of the base stations the message goes through.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/e2eediagram.png"><img src="/cryptography/img/e2eediagram.png" alt="An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme." width=82%/></a></div>
+	    <span class="tiny"><em>An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme.</em></span>
+<br><br><br>
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -259,8 +276,8 @@ In Practice: Never use an untested Crypto algorithm! Furthermore, never roll you
 In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
 
 <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis." width=66%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis.</em></span><br><br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both type have their own strengths and weaknesses.
 <br><br><br>
@@ -579,6 +596,46 @@ As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the 
 It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (explained in Rule 7) and brute-force attacks (Rule 5).
 
 <br><br><br>
+
+<strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Vigenère Cipher</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(x, y, k, l) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ (x<sub>i</sub> + k<sub>i mod l</sub>) mod 26</strong><br><br>
+
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (y<sub>i</sub> - k<sub>i mod l</sub>) mod 26</strong>
+
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key/codeword fed into the encryption and decryption functions, which, like the plaintext, is a series of letters (represented by their numerical value, 0-25) that are used by their i position.<br>
+<strong>i</strong> = The position in the string of both the key and the plaintext.<br>
+<strong>l</strong> = The length of the codeword.<br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+
+<br><br><br>
+
+
+
+<strong><u>Explanation:</u></strong><br><br>
+
+A mere variation of the Shift cipher, in which the shift for each letter is determined by a secret code word 'c', which has 'l' letters. Each character in the code word c represents a number of shifts rightward according to its cipher.<br><br>
+The letters of the code word are denoted as (c<sub>0</sub>, c<sub>1</sub>, ..., c<sub>l - 1</sub>), and as the keys, they are also represented as (k<sub>0</sub>, k<sub>1</sub>, ..., k<sub>l - 1</sub>), respectively.<br><br>
+
+The encryption function works as follows: Each character in the plaintext string 'x' is applied a rightward shift according to it's respective letter (identical position) in the key text (a cyclic shift, if the addition of the key letter produces a number greater than 26).<br><br>
+
+This dictates that the length of the code word must be the same or larger than that of the actual code itself, which is somewhat inefficient for longer plaintexts. E.g., |x| ≤ l.<br><br>
+
+The decryption function, of course, is just the opposite of the encryption function, moving each character of the ciphertext backward by the value in the positional counterpart of the code word 'c'.
+
+<br><br><br>
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -586,7 +643,7 @@ It should be obvious to all this is an extremely unsecure cryptosystem, with a k
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Affine Cipher:</strong><br><br>
+	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> <strong>Affine Cipher:</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -625,12 +682,12 @@ Furthermore, letter frequency also remains preserved (since any of a particular 
 Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule [[[[).
 <br><br><br>
 	  
-	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
+	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
 	  
 	  <br><br><br>
 	  
 	  
-	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+	  <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">C. Rule 20.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
 Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
 <br><br><br>
 	  
@@ -642,9 +699,103 @@ Also recall that the mod operator will simply remain in place - it can be practi
 	    <h2><span class="mw-headline" id="StreamCiphers">III. Stream Ciphers.</span></h2>
 	    <h3><span class="mw-headline" id="StreamIntro">III.I Introduction to Stream Ciphers.</span></h3>
 	  </header>
-	  <article>
+	  <article><br>
+
+<strong>Fig. 3. - Symmetric Cryptography Hierarchy:</strong><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and Rule 5 for Cryptanalysis." width=58%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and Rule 5 for Cryptanalysis.</em></span><br><br><br>
+	  
+	  <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">C. Rule 21.</font></strong> <strong>Stream Ciphers</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(x<sub>i</sub>, y<sub>i</sub>, s<sub>i</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>s<sub>i</sub></sub>(x<sub>i</sub>) ≡ (x<sub>i</sub> + s<sub>i</sub>) mod 2</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>s<sub>i</sub></sub>(y<sub>i</sub>) ≡ (y<sub>i</sub> + s<sub>i</sub>) mod 2</strong>
+
+</em><br><br><br>
+
+<strong>x<sub>i</sub></strong> = The Plaintext bit at index i.<br>
+<strong>y<sub>i</sub></strong> = The Ciphertext bit at index i.<br>
+<strong>s<sub>i</sub></strong> = Equivalent to 'k' (as in past ciphers), the Key (at index i) fed into the encryption and decryption functions. For Stream Ciphers, this is known as the special "<strong>Key Stream</strong>".<br>
+<strong><strong>ℤ</strong><sub>2</sub></strong> = A ring of the first 2 integers: {0, 1}.<br>
+<strong>e<sub>s<sub>i</sub></sub>(x<sub>i</sub>)</strong> = Encryption function, a mathematical formula that converts each x bit into a y bit.<br>
+<strong>d<sub>s<sub>i</sub></sub>(y<sub>i</sub>)</strong> = Decryption function, a mathematical formula that converts each y bit into an x bit.<br>
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
+
+<br><br><br>
+
+
+
+<strong><u>Explanation:</u></strong><br><br>
+A cipher that encrypts bits individually, processing one bit after another in a sequence. This is opposed to a Block Cipher (see Section IV), which takes in large amounts of bits all at once.<br><br>
+
+The modular 2 operation (see Rule 22) has its own symbol in cryptographic diagrams: a circle with a cross. In electrical engineering, the mod 2 function is known as the XOR gate, a type of binary gate ([[[[[). <br><br>
+
+Using this symbol, the encryption and decryption functions of the basic stream cipher can be depicted as shown:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/StreamDiagram.png"><img src="/cryptography/img/StreamDiagram.png" alt="A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function." width=73%/></a></div>
+	    <span class="tiny"><em>A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function.</em></span><br><br>
+
+
+
+If the key bit is zero, then the plaintext bit will pass through unchanged, but if the key bit is 1, then the plaintext bit will flip (like binary). Thus, if the keystream (by divine intervention) is straight 0's, then the plaintext will go unencrypted. <br><br>
+The central complexity of the Stream Cipher is the generation of the "Key Stream", e.g. the stream of bits with which the plaintext is encrypted. This generation must be performed through <em>Random Numbers</em> - see Rule 23.
+<!--Most beautiful 90 seconds in cryptography:
+https://youtu.be/AELVJL0axRs?list=PL2jrku-ebl3H50FiEPr4erSJiJHURM9BX&t=1520
+
+the Mozart Piano Concerto #21 Andante of cryptography lecture segments
+
+-->
+	  <br><br><br>
+	  
+	  <strong><a href="#KeyStreamDef"><span class="mw-headline" id="KeyStreamDef">#</span></a> <font color="#006400">Key Stream</font></strong>: A <u><em>stream</em></u> of characters that is combined with the plaintext to produce the ciphertext in a Stream Cipher, or, in the case of asynchronous stream ciphers, combined with a previous ciphertext to produce a new ciphertext.<br><br>
+
+The key stream is <u>derived</u> from the <em>key</em>, in that the key is like the complete string which holds the full length of the key, while the key stream is the array in which each element/bit of the key holds its own index.<!--beautiful, sleep-deprivation produced sentence. things just flow in this state, I never overthink anything.-->
+<br><br><br>
 	  
 	  
+	  <strong><a href="#SynchronousStreamDef"><span class="mw-headline" id="SynchronousStreamDef">#</span></a> <font color="#006400">Synchronous Stream Cipher</font></strong>: A Stream Cipher in which the key stream depends solely on the key, generated independently of the plaintext or ciphertext. Examples include Salsa20 & ChaCha.
+<br><br><br>
+	  
+	  <strong><a href="#AsynchronousStreamDef"><span class="mw-headline" id="AsynchronousStreamDef">#</span></a> <font color="#006400">Asynchronous Stream Cipher</font></strong>: A Stream Cipher in which the key stream depends on the ciphertext in addition to the key - the key generation is reliant on previous ciphertext, making it a risky operation. An example is the Cipher Feedback (CFB) mode.
+<br><br><br>
+	  
+	  <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br><br>
+	  
+	  <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">C. Rule 23.</font></strong> <br><br><br>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  </article>
+	    <header class="articleHeader"><hr><hr>
+	    <h2><span class="mw-headline" id="BlockCiphers">IV. Block Ciphers.</span></h2>
+	    <h3><span class="mw-headline" id="DES">IV.I Data Encryption Standard.</span></h3>
+	  </header>
+	  <article><br>
+	  
+	  
+	  <strong>rule something [[[[[[[[[[[[[[</strong><Br><br>
+
+<strong>Block Ciphers</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+
+
+
+<strong><u>Explanation:</u></strong><br><br>
+A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is not equal to one (since that would be a stream cipher). Thus, the encryption of any plaintext bit in the block depends on the nature of every other plaintext bit in the block, like the positions celestial bodies in a galaxy.<br><br>
+Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule [[[[[).<br><br>
+Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes.
 
 	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ ° ≠ ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
@@ -657,10 +808,6 @@ Also recall that the mod operator will simply remain in place - it can be practi
 	    
 	    <!--
 	    
-	    <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">C. Rule 20.</font></strong> <br><br><br>
-	    <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">C. Rule 21.</font></strong> <br><br><br>
-	    <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> <br><br><br>
-	    <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">C. Rule 23.</font></strong> <br><br><br>
 	    <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">C. Rule 24.</font></strong> <br><br><br>
 	    <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">C. Rule 25.</font></strong> <br><br><br>
 	    <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">C. Rule 26.</font></strong> <br><br><br>
@@ -811,7 +958,7 @@ Also recall that the mod operator will simply remain in place - it can be practi
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 24 2024</span><br>
+      	<span class="tiny">Last Change: December 25 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

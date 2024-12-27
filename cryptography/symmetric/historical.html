@@ -138,7 +138,7 @@ If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
 <strong>a</strong> = The chosen number.<br>
 <strong>r</strong> = The remainder.<br>
 <strong>m</strong> = The modulus, the highest possible number in the set.<br>
-<strong>'mod'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
+<strong>'mod m'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
 <br><br><br>
 
 <strong><u>Explanation:</u></strong><br><br>
@@ -405,7 +405,9 @@ The decryption function, of course, is just the opposite of the encryption funct
 
 <strong>x</strong> = Plaintext message.<br>
 <strong>y</strong> = Ciphertext.<br>
-<strong>k</strong> = The Key fed into the encryption and decryption functions.<br>
+<strong>a</strong> = The multiplied value of the key. The number of possible 'a' values is limited by the necessity of the inverse (for the decryption function), as explained below.<br>
+<strong>a⁻¹</strong> = The inverse of a, necessary for the decryption function.<br>
+<strong>b</strong> = The "shift parameter" value of the key, only in addition and subtraction operations. There are 26 possible values for b, explained below.<br>
 <strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
 <strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
 <strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
@@ -473,7 +475,7 @@ Also recall that the mod operator will simply remain in place - it can be practi
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 25 2024</span><br>
+      	<span class="tiny">Last Change: December 26 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

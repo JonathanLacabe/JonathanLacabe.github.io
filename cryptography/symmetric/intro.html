@@ -93,8 +93,8 @@
 	  <article><br>
 	  
 	    <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification Hierarchy of the major components of Cryptology. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
-	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
+	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
 	    
 	    
 	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
@@ -168,18 +168,20 @@ In order for Bob to not simply decrypt the ciphertext immediately using the decr
 <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
 
 
-This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br>
+This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br><br>
 
 <strong>Kerckhoffs' Principle</strong>:<br><br>
-<em>"A cryptosystem should be secure even if the attacker</em> (Oscar)<em> knows all the details of the system, with the exception of the secret key."</em><br><br>
+<em>"A cryptosystem should be secure even if the attacker</em> (Oscar)<em> knows all the details of the system, with the exception of the secret key."</em><br><br><br>
 
 
 In Practice: Never use an untested Crypto algorithm! Furthermore, never roll your own crypto!
-
-
-
 <br><br><br>
 
+<strong><a href="#EndToEndDef"><span class="mw-headline" id="EndToEndDef">#</span></a> <font color="#006400">End-Eo-End Encryption (E2EE)</font></strong>: A system of encryption widely used in modern communication services (like internet messaging sites), in which all data sent from Alice to Bob (party #1 to party #2) is never decrypted at any point along its route until it reaches Bob. <br><br>
+Thus, all parties intercepting/eavesdropping will be unable to read or manipulate the message, even if they control any of the base stations the message goes through.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/e2eediagram.png"><img src="/cryptography/img/e2eediagram.png" alt="An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme." width=82%/></a></div>
+	    <span class="tiny"><em>An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme.</em></span>
+<br><br><br>
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -190,9 +192,9 @@ In Practice: Never use an untested Crypto algorithm! Furthermore, never roll you
 <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
 In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
 
-<strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis." width=66%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis.</em></span><br><br><br>
+<strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both type have their own strengths and weaknesses.
 <br><br><br>
@@ -293,7 +295,7 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 24 2024</span><br>
+      	<span class="tiny">Last Change: December 26 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

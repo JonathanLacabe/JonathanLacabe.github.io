@@ -394,6 +394,7 @@ This is an example of a cipher/algorithm in which an Analytical Attack is most e
 m > 0<br><br>
 If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
 </em><BR><BR><br>
+
 <strong>ℤ</strong> = The set of all integers.<br>
 <strong>a</strong> = The chosen number.<br>
 <strong>r</strong> = The remainder.<br>
@@ -950,16 +951,30 @@ An example of a shift register, with three flip-flops, with every new value sent
 
 <em>
 
-The equation depends on the specific characteristics of the LFSR! Specifically, the number of columns, the number of mod 2 functions, and the positioning of the mod 2 functions.<br><br>
+The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in Rule 29:<br><br>
 
-Here is a generalized formula that should serve in all LFSR's one may come across, explained in Rule 29:<br><br>
+(S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
+(i, j) ∈ <strong>ℤ</strong><sub>m</sub>
+</em><br><br>
 
-<strong>
-</strong>
+$$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
 
-</em><br><br><br>
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 30) of the output sequence.<br><br>
 
+<strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
 
+<strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
+
+<strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
+
+<strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
+
+<strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
+
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
+<br><br><br>
+
+<!--On God this is the best explanation of each variable. Human Knowledge is the greatest learning resource known to mankind, better than Wikipedia, better than any Alien knowledgebase.-->
 
 
 
@@ -968,52 +983,103 @@ Here is a generalized formula that should serve in all LFSR's one may come acros
 <strong><u>Explanation:</u></strong><br><br>
 
 There is an inherent relationship between electrical engineering and Cryptography, specifically in how Cryptography developed: in the early days of the development of the Stream Cipher, the goal was to create a 'small' stream cipher, e.g. a stream cipher that could be implemented in hardware without using too much power.<br><br>
-Today, all stream ciphers fit one of two categories: ciphers optimized for <strong>software implementation</strong>, and ciphers optimized for <strong>hardware implementation</strong>. A prime example of the latter are "Shift Register-Based Stream Ciphers", in particular shift registers with feedback, better known as <u><strong>Linear Feedback Shift Registers</strong></u>.<br><br>
 
-Linear Feedback Shift Registers are algorithms of key stream generation that utilize a CSPRNG (described in Rule 23) instead of a PRNG, in order to prevent the type of attack applicable to LCG's (as shown in Rule 26). Many ciphers, such as the A51 cipher, consist of multiple LFSRs (in the case of A51, 3).<br><br>
+Today, all stream ciphers fit one of two categories: ciphers optimized for <strong>software implementation</strong>, and ciphers optimized for <strong>hardware implementation</strong>. A prime example of the latter are "Shift Register-Based Stream Ciphers", in particular shift registers with feedback, better known as Linear Feedback Shift Registers.<br><br>
 
-LFSR's incorporate a standard Shift Register with a feedback mechanism, generating fresh input for the first flip-flop using some output data. This is done by a modular 2 addition function (an XOR gate), which can be performed between the value from the final flip-flop and any other located in the shift register. Multiple mod2 functions can be added in fact, complicating the structure of the LFSR.<br><br> The mod 2 calculation is first performed in the initial state of the shift register, before the first clock cycle, pre-computing the value that will be used as input for the first flip-flop <u>on</u> the first clock cycle.<br><br>
+Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are algorithms of key stream generation that utilize a CSPRNG (described in Rule 23) instead of a PRNG, in order to prevent the type of attack applicable to LCG's (as shown in Rule 26). Many ciphers, such as the A51 cipher, consist of multiple LFSRs (in the case of A51, 3).<br><br>
+
+LFSR's incorporate a standard Shift Register with a <strong>feedback mechanism/path</strong>, generating fresh input for the first flip-flop using some output data. This is done by a modular 2 addition function (an XOR gate), which can be performed between the value from the final flip-flop and any other located in the shift register. Multiple mod2 functions can be added in fact, complicating the structure of the LFSR.<br><br> The mod 2 calculation is first performed in the initial state of the shift register, before the first clock cycle, pre-computing the value that will be used as input for the first flip-flop <u>on</u> the first clock cycle.<br><br>
 
 <strong>Remember:</strong> The feedback mechanism that the outputs take uses a mod2 function, but the actual input into the first flip-flop itself is without any special system - it is directly taking in the given number.<br><br>
 
 
-Very important to notice in the progress of an LFSR is that there will be a distinct pattern that holds in each calculated value (placed below the flip-flops on a diagram): it will be translated diagonally to the right, for as many flip-flops as there are to the right, continually. Note this pattern in the diagram below:<br><br>
+Very important to notice in the progress of an LFSR is that there will be a distinct pattern that holds in each calculated value (placed below the flip-flops on a diagram), known as the <strong>Diagonal Rule</strong>: each bit value will be translated diagonally to the right, for as many flip-flops as there are to the right, continually. Note this pattern in the diagram below:<br><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag2.png"><img src="/cryptography/img/ShiftCipherDiag2.png" alt="A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete key stream." width=78%/></a></div>
-	    <span class="tiny"><em>A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete key stream.</em></span>
+	    <span class="tiny"><em>A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete key stream.</em></span><br><br><br>
 
-The specific mathematical formula of the key produced by the LFSR depicted is <strong>S<sub>i+3</sub> ≡ (s<sub>i+1</sub> + s<sub>i</sub>) mod 2</strong>.<br><br>
+The specific mathematical formula of the key produced by the LFSR depicted is:<br> <strong>S<sub>i+3</sub> ≡ (s<sub>i+1</sub> + s<sub>i</sub>) mod 2</strong>.
 
-The <strong>Period</strong> is the number of different strings of numbers that can occur in a specific LFSR before repeating. In the given LFSR, this number is 7, and of course it can only be a maximum of (2^x) - 1, where 'x' is the number of flip-flops.<br><br>
+<br><br><br>
 
-The only string of bits that can never appear in an LFSR is straight 0's. Such a thing is only possible if the initial setting is all straight 0's, which is a ridiculous thought not to be entertained.
+
+<strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, helps form an LFSR. 
+<br><br><br>
+
+<strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
+
+ Even without knowledge of the XOR positions, every flip-flop bit in the following state (except for the first, the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> described in Rule 28.
 <br><br><br>
 
 
-<strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">C. Rule 29.</font></strong> <strong>LFSR Generalization:</STRONG><br><br> To generalize the LFSR so that a genereal equation can be applied, several new mathematical operations must be introduced.<br><br>
+<strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">C. Rule 29.</font></strong> <strong>LFSR Generalization:</STRONG><br><br> 
 
-First, the number of flip-flops in the register can be generalized to an arbitary 'm' number of times, which is the simply generalization to be made.<br><br>
+To generalize the LFSR so that a general equation can be applied, several new mathematical operations must be introduced.<br><br>
 
-It is possible for any of the flip-flops to have an XOR gate, and for there to be as many XOR gates as flip-flops (minus one). Since all of the flip-flops have a chance at being part of the feedback path, a multiplier function, essentially acting as an on-or-off switch, must be added after each flip-flop. The multiplier function functions by multiplying the value of the flip-flop (the Input value I) by the internal P-value, which is determined by whether the flip-flop actually has an XOR gate or not (see below). The p-value can only be a binary value: p<sub>i</sub> ∈ ℤ<sub>2</sub>.<br><br>
+First, the number of flip-flops in the register can be generalized to an arbitrary 'm' number of times, which is the simplest generalization to be made.<br><br>
 
-The multipliers (labeled P<sub>0</sub> to P<sub>m-1</sub>) have their own values depending on whether the switch is closed or not, and must all be XOR'ed together in sequence. The value of a multiplier is dictated by the "switch", e.g. if there is or isn't a connection to an XOR gate from that flip-flop. Furthermore, there is an input I and output O that travels from the multiplier onto the XOR gate path.<br><br>
+It is possible for any of the flip-flops to have an XOR gate, and for there to be as many XOR gates as flip-flops, minus one. Since all of the flip-flops have a chance at being part of the feedback path, a <strong>multiplier function</strong> must be added after each flip-flop, between the path after the flip-flop and any possible XOR gate above on the feedback path. Thus, the multiplier controls the way to the XOR gate, and essentially acts as an on-or-off switch.<br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/GeneralizedLFSR.png"><img src="/cryptography/img/GeneralizedLFSR.png" alt="A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation." width=82%/></a></div>
+	    <span class="tiny"><em>A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation.</em></span><br><br><br>
 
-If the switch is closed (e.g. there IS an XOR gate connected to that flip-flop, and thus a connection to the feedback path), then the p-value will equal 1, since the input is equal to the output: <strong>O = p<sub>i</sub> × I = I</strong>.<br><br>
+The <strong>multiplier function</strong> works by multiplying the value of the flip-flop (the Input value I) by the internal P-value, which is determined by whether the flip-flop actually has an XOR gate or not (see below). The p-value can only be a binary value: <strong>p<sub>i</sub> ∈ ℤ<sub>2</sub></strong>.<br><br>
 
-If the switch is open (no XOR gate), then the p-value will equal 0. The output O is equal to 0, and since O = p<sub>i</sub> × I, and I is not necessarily 0, then p<sub>i</sub> must equal 0.<br><br>
+The multipliers (labeled P<sub>0</sub> to P<sub>m-1</sub>) have their own values, known as <strong>"feedback coefficients"</strong>. These values are dictated by the "switch", e.g. if there is or isn't a connection to an XOR gate from that flip-flop. Furthermore, there is an input I and output O that travels from the multiplier onto the XOR gate path.<br><br>
 
-For the following formula, you must assume that s<sub>m</sub> is the sum of all of the XOR gates, e.g. the preloaded value that is ready to be inputted into the first flip-flop after the intial state has finished being processed.<br><br>
+If the <strong>switch is closed</strong> (e.g. there IS an XOR gate connected to that flip-flop, and thus a connection to the feedback path), then the p-value will equal 1, since the input is equal to the output: <strong>O = p<sub>i</sub> × I = I</strong>.<br><br>
 
-<strong>s<sub>m+1</sub> ≡ &Sigma; [[[[</strong>
+If the <strong>switch is open</strong> (no XOR gate), then the p-value will equal 0. The output O is equal to 0, and since O = p<sub>i</sub> × I, and I is not necessarily 0, then p<sub>i</sub> must equal 0.<br><br>
 
+For the following formula, you must assume that s<sub>m</sub> is the sum of all of the XOR gates, e.g. the preloaded value that is ready to be inputted into the first flip-flop after the initial state has finished being processed. Thus, the second complete XOR-ing of the values (the second value inputted into the first flip-flop) will be S<sub>m+1</sub>, and so on. The value of the input into the first flip-flop is the result of the summation of all of the possible XOR operations that could be present in the LFSR.<br><br><br>
 
+<em>
+(S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
+(i, j) ∈ <strong>ℤ</strong><sub>m</sub>
+</em><br>
 
-<strong>m</strong> = The number of flip-flops in the LFSR.
+$$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
 
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 30) of the output sequence.<br><br>
+
+<strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
+
+<strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
+
+<strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
+
+<strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
+
+<strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
+
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
 <br><br><br>
 	  
 	  
 	  
+	  <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> 
+	  The <strong>Period</strong> is the number of different strings of numbers that can occur in a specific LFSR before repeating. In the LFSR given in Rule 28 (with 3 flip-flops), this number is 7.<br><br>
+	  A simple principle can thus be derived: <strong>The maximum <em><u>possible</u></em> period (or sequence length) generated by an LFSR of degree m is 2<sup>m</sup> - 1.</strong><br><br>
 	  
+	  As soon as a previous bit pattern/sequence (a 'state') is reached, then the cycle will repeat itself. While any initial state in a 3-F.F. LFSR will produce all possible states, only certain feedback configurations (P<sub>m-1</sub>, ..., P<sub>0</sub>) yield maximum length sequences.<br><br>
+
+This is why the given value is the maximum <em>possible</em> period of an LFSR - only some reach it.
+
+
+
+
+
+
+
+
+	  and of course it can only be a maximum of (2^m) - 1, where 'm' is the number of flip-flops.
+	  <br><br><br>
+	  
+	  
+	  
+	  
+	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> 
+	    The only string of bits that can never appear in an LFSR is straight 0's. Such a thing is only possible if the initial setting is all straight 0's, which is a ridiculous thought not to be entertained.
+	    
+	    <br><br><br>
 	  
 	  
 	  
@@ -1053,8 +1119,7 @@ Block Ciphers are more commonly used than Stream Ciphers in modern computer encr
 	    
 	    
 	    
-	    <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> <br><br><br>
-	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> <br><br><br>
+	    
 	    <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">C. Rule 32.</font></strong> <br><br><br>
 	    <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">C. Rule 33.</font></strong> <br><br><br>
 	    <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">C. Rule 34.</font></strong> <br><br><br>
@@ -1196,7 +1261,7 @@ Block Ciphers are more commonly used than Stream Ciphers in modern computer encr
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 26 2024</span><br>
+      	<span class="tiny">Last Change: December 27 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

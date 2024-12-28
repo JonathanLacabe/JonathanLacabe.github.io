@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+December 27 2024: Created the Cryptography Equations page, and updated the ordering of the Cryptography so that Post-Quantum is the last (currently, I may add more after it). All relevant pages were changed to reflect this. On the main Cryptography information front, almost of Linear Feedback Shift Registers was completed.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 
+
 December 26 2024: Stream Cipher work, primarily in Linear Congruential Generators and Linear Feedback Shift Registers.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 23, 24, 25, 26, 27, 28, 29.
 

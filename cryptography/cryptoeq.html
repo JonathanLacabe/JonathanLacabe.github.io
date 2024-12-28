@@ -1,32 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The web site of humanknowledge</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  	<meta charset="UTF-8" />
+    <title>List of Cryptography Equations</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
   </head>
-  <body>
-    <h1>Welcome to my Website!</h1>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                       <style>
+      .vecteur {
+        position: relative;
+      }
+      .vecteur::before {
+        content: "\2192";
+        position: absolute;
+        top: -0.55em;
+        left: -0.1em;
+        font-size: 1.2em;
+      }
+      .vecteurb {
+        position: relative;
+      }
+      .vecteurb::before {
+        content: "\2190";
+        position: absolute;
+        top: -0.55em;
+        left: -0.1em;
+        font-size: 1.2em;
+      }
+      </style>
+      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
 
-    <p>This is a paragraph! Here's how you make a link: <a href="https://neocities.org">Neocities</a>.</p>
+<img src="/_other/logos/Cryptography.png" width=45%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><em>Art by Shoaib Pasha.</em></span><hr>
+      </header>
 
-    <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>List of Cryptography Equations</h2>
+	  </header>
+	  <hr>
+	  <article>
+	    <p>In learning Cryptography, there will be many equations that one will use repeatedly (and should memorize). This is my attempt to pool every Cryptography equation I come across in my notes/studies. The equations are listed by order of when they appear in the notes, rather than any connection to one another. This page goes beyond simple equation collection to incorporate all <em>mathematical definitions</em> of different systems/algorithms in Cryptography, which tend to reference matematical 'processes', without the use of an equation.<br><br>Note that there may be some overlap between this page and other topic equation pages, such as Electrical Engineering. Equations used in mathematics are found <a href="/math/matheq.html">here</a>, while those used in electrical engineering are found <a href="/engineering/electrik/electriceq.html">here</a>.<br><br> In the unlikely event there are any egregious errors in this page, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Symmetric">Symmetric Cryptography</a>
+        </div>
+        <div class="toc-column">
+          <a href="#Authentication">Message Authentication</a>
+        </div>
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Public">Public-Key Cryptography</a>
+        </div>
+        <div class="toc-column">
+          <a href="#KeyManagement">Key Management</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#HashDigital">Hash Functions & Digital Signatures</a>
+        </div>
+        <div class="toc-column">
+          <a href="#PostQuantum">Post-Quantum Cryptography</a>
+        </div>
+      </div>
 
-    <p>Here's how you can add an image:</p>
-    <img src="/neocities.png">
+      
+      <br>
 
-    <p>Here's how to make a list:</p>
+	    <header class="articleHeader"><hr>
+	      <h1><a href="#Symmetric"><span class="mw-headline" id="Symmetric">#</span></a> Symmetric Cryptography</h1>
+	    </header><hr><hr>
+	    <article><br>
+	    
+	    <center><h2><a href="#I.III"><span class="mw-headline" id="I.III">#</span></a> <span class="mw-headline" id="I.III"><a href="/cryptography/symmetricFull#AnalysisBasics">I.III Cryptanalysis Basics.</a></span></h2></center><br><br>
+	    
+	    <h2><a href="#BruteForceSearch"><span class="mw-headline" id="BruteForceSearch">#</span></a> <span class="mw-headline" id="BruteForceSearch"><strong>BRUTE-FORCE ATTACK/EXHAUSTIVE KEY SEARCH:</strong></span><br></h2>
+	    
+	    <br><em>A brute-force attack checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
 
-    <ul>
-      <li>First thing</li>
-      <li>Second thing</li>
-      <li>Third thing</li>
-    </ul>
+If the equality holds, a possible correct key is found; if not, proceed with the next key.
+</em><br><br><br>
+      <strong>x</strong> = The plaintext.<br>
+      <strong>y</strong> = The ciphertext.<br>
+      <strong>K</strong> = {k<sub>1</sub> ,..., k<sub>κ</sub> }, the key space of all possible keys k<sub>i</sub>.<br>
+	    <strong>d<sub>k<sub>i</sub></sub></strong> = The decryption function, being fed a possible key at index i.<br><br><br><br><br><hr>
+      
+      
+      
+      <center><h2><a href="#II.II"><span class="mw-headline" id="II.II">#</span></a> <span class="mw-headline" id="II.II"><a href="/cryptography/symmetricFull#ModularArithmetic">II.II Modular Arithmetic Basics.</a></span></h2></center><br><br>
+	    
+	    <h2><a href="#MODULAR"><span class="mw-headline" id="MODULAR">#</span></a> <span class="mw-headline" id="MODULAR"><strong>MODULAR ARITHMETIC:</strong></span><br></h2>
+	    
+	    <br>
+<em>(a, r, m) ∈ <strong>ℤ</strong><br>
+m > 0<br><br>
+If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
+</em><BR><BR><BR>
 
-    <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
-  </body>
+	    <strong>ℤ</strong> = The set of all integers.<br>
+<strong>a</strong> = The chosen number.<br>
+<strong>r</strong> = The remainder.<br>
+<strong>m</strong> = The modulus, the highest possible number in the set.<br>
+<strong>'mod m'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.<br><br><br><br><br>
+	    <!--<hr>-->
+	    
+
+      
+	    </article>
+	    <header class="articleHeader"><hr><hr>
+	      <h1><a href="#Public"><span class="mw-headline" id="Public">#</span></a> Public-Key Cryptography</h1>
+	    </header> <hr>
+	    <article><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    </article>
+	    <header class="articleHeader"><hr><hr>
+	      <h1><a href="#HashDigital"><span class="mw-headline" id="HashDigital">#</span></a> Hash Functions & Digital Signatures</h1>
+	    </header> <hr>
+	    <article><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    </article>
+	    <header class="articleHeader"><hr><hr>
+	      <h1><a href="#Authentication"><span class="mw-headline" id="Authentication">#</span></a> Message Authentication</h1>
+	    </header> <hr>
+	    <article><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    </article>
+	    <header class="articleHeader"><hr><hr>
+	      <h1><a href="#KeyManagement"><span class="mw-headline" id="KeyManagement">#</span></a> Key Management</h1>
+	    </header> <hr>
+	    <article><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    </article>
+	    <header class="articleHeader"><hr><hr>
+	      <h1><a href="#PostQuantum"><span class="mw-headline" id="PostQuantum">#</span></a> Post-Quantum Cryptography</h1>
+	    </header> <hr>
+	    <article><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+
+
+      
+
+
+	    
+	  </article>
+    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width="90%"></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width="90%"></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <article><strong><a href="/cryptography/cryptography.html">Cryptography</a> <br> List of Cryptography Equations</strong></article>
+        <br>
+        <article><strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong> → <strong><a href="">Public-Key Cryptography</a></strong> → <strong><a href="">Hash Functions & Digital Signatures</a></strong> → <strong><a href="">Message Authentication</a></strong> → <strong><a href="">Key Management</a></strong> → <strong><a href="">Post-Quantum Cryptography</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: December 27 2024</span><br>
+      	<span class="tiny">Jonathan Lacabe 2024</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width="9%">
+      </footer>
+      </div>
+   </body>
 </html>

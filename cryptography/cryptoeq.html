@@ -149,11 +149,255 @@ If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
 	    <strong>ℤ</strong> = The set of all integers.<br>
 <strong>a</strong> = The chosen number.<br>
 <strong>r</strong> = The remainder.<br>
-<strong>m</strong> = The modulus, the highest possible number in the set.<br>
+<strong>m</strong> = The modulus, the highest possible number in the set.<br><br>
 <strong>'mod m'</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.<br><br><br><br><br>
-	    <!--<hr>-->
-	    
 
+<h2><a href="#MODULAR2"><span class="mw-headline" id="MODULAR2">#</span></a> <span class="mw-headline" id="MODULAR2"><strong>MODULAR ARITHMETIC - REMAINDER:</strong></span><br></h2>
+	    <BR>
+<em>
+(a, m) ∈ <strong>ℤ</strong><br>
+0 ≤ r &lt; m <br><br>
+a = q × m + r<br>
+Thus, a - r = q × m<br><br>
+<strong>m|(a − r)</strong>
+</em><BR><br><Br>
+
+<strong>ℤ</strong> = The set of all integers.<br>
+<strong>a</strong> = The chosen number.<br>
+<strong>q</strong> = The quotient, which produces a multiple of the modulus.<br>
+<strong>r</strong> = The remainder.<br>
+<strong>m</strong> = The modulus, the highest possible number in the set.<br><br><br>
+
+The final equation is precisely that of the <a href="#MODULAR">previous modular arithmetic equation</a>; the following mathematical deduction demonstrates how q is irrelevant to the end result - all that matters is the remainder.
+<br><br><br><br><br><hr>
+	    <!---->
+	    
+<center><h2><a href="#II.III"><span class="mw-headline" id="II.III">#</span></a> <span class="mw-headline" id="II.III"><a href="/cryptography/symmetricFull#IntegerRings">II.III Integer Rings.</a></span></h2></center><br><br>
+
+<h2><a href="#ALGEBRAICMODULAR"><span class="mw-headline" id="ALGEBRAICMODULAR">#</span></a> <span class="mw-headline" id="ALGEBRAICMODULAR"><strong>ALGEBRAIC MODULAR ARITHMETIC:</strong></span><br></h2>
+	    <BR>
+<em>
+The integer ring <strong>ℤ</strong><sub>m</sub> consists of the following characteristics:<br><br>
+<strong>1.</strong> The set <strong>ℤ</strong><sub>m</sub> = {0, 1, ..., m-1}<br><br>
+<strong>2.</strong> Two arithmetic operators, "+" and "×", hold for all (a, b, c, d) ∈ <strong>ℤ</strong><sub>m</sub> that:<br>
+&nbsp;&nbsp;<strong>i)</strong>&nbsp; a + b ≡ c mod m<br>
+&nbsp;&nbsp;<strong>ii)</strong> a × b ≡ d mod m
+</em><br><br><br>
+
+Modular Arithmetic can be defined in the form of an integer ring, seen above. Every ring has to fulfill several rules, described below.
+<br><br><br><br><br>
+
+
+<h2><a href="#RINGRULES"><span class="mw-headline" id="RINGRULES">#</span></a> <span class="mw-headline" id="RINGRULES"><strong>RULES OF THE RING:</strong></span><br></h2>
+	    <BR>
+These following rules hold true for all integer rings in general, not just modular arithmetic.<br><br>
+  <ol>
+
+<li> The ring should be closed: if any two numbers from the set are multiplied or added together, the result must be in the ring. This is ensured by the modulus operator.</li><br>
+
+<li> Addition and multiplication are associative properties: For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a + (b + c) = (a + b) + c, and a × (b × c) = (a × b) × c.</li><br><br>
+
+<strong>Addition:</strong><br><br><br>
+
+<li> Addition is commutative for all (a, b) ∈ <strong>ℤ</strong><sub>m</sub>: a + b = b + a.</li>
+<br>
+
+<li>There is an <strong>additive neutral element</strong>, 0. For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a + 0 ≡ a mod m</strong>.</li>
+<br>
+<!--ajj- backpack playing in my head all day-->
+
+<li>The <strong>additive inverse</strong> always exists: for any element a in the ring, there is always a negative element '-a' such that <strong>a + (-a) ≡ 0 mod m</strong>, the neutral element.</li>
+<br><br>
+
+<strong>Multiplication</strong>:<br><br><br>
+
+<li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m.</strong></li><br>
+
+<li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in C. Rules <a href="/cryptography/symmetricFull#Rule14">14</a> & <a href="/cryptography/symmetricFull#Rule15">15</a>.<br><br>
+If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as a divisor, since <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
+<br>
+
+
+<li> The distributive property holds for all ring operations. For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a × (b + c) = (a × b) + (a × c).</li>
+
+</ol>
+<br><br><br><br><hr>
+
+<!-- ctrl-u makes everything bold? new invention from the universe-->
+<center><h2><a href="#II.IV"><span class="mw-headline" id="II.IV">#</span></a> <span class="mw-headline" id="II.IV"><a href="/cryptography/symmetricFull#ShiftCipher">II.IV Shift/Caesar Cipher.</a></span></h2></center><br><br>
+
+<h2><a href="#SHIFTCIPHER"><span class="mw-headline" id="SHIFTCIPHER">#</span></a> <span class="mw-headline" id="SHIFTCIPHER"><strong>SHIFT CIPHER:</strong></span><br></h2>
+	    <br>
+	    
+	    <em>
+(x, y, k) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ (x + k) mod 26</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (y - k) mod 26</strong>
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>k</strong> = The Key fed into the encryption and decryption functions.<br><br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br><br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br><br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.<br><br><br><br><br>
+
+
+<h2><a href="#VIGCIPHER"><span class="mw-headline" id="VIGCIPHER">#</span></a> <span class="mw-headline" id="VIGCIPHER"><strong>VIGENÈRE CIPHER:</strong></span><br></h2>
+	    <br>
+	    
+	    <em>
+(x, y, k, l) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ (x<sub>i</sub> + k<sub>i mod l</sub>) mod 26</strong><br><br>
+
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (y<sub>i</sub> - k<sub>i mod l</sub>) mod 26</strong>
+
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br><br>
+<strong>k</strong> = The Key/codeword fed into the encryption and decryption functions, which, like the plaintext, is a series of letters (represented by their numerical value, 0-25) that are used by their i position.<br><br>
+<strong>i</strong> = The position in the string of both the key and the plaintext.<br>
+<strong>l</strong> = The length of the codeword.<br><br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br><br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br><br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.<br><br><br><br><br><hr>
+
+
+<center><h2><a href="#II.V"><span class="mw-headline" id="II.V">#</span></a> <span class="mw-headline" id="II.V"><a href="/cryptography/symmetricFull#AffineCipher">II.V Affine Cipher.</a></span></h2></center><br><br>
+
+      <h2><a href="#AFFINECIPHER"><span class="mw-headline" id="AFFINECIPHER">#</span></a> <span class="mw-headline" id="AFFINECIPHER"><strong>AFFINE CIPHER:</strong></span><br></h2>
+	    <br>
+	    
+	    <em>
+(x, y, a, b) ∈ <strong>ℤ</strong><sub>26</sub><br>
+K = (a, b)<br><br>
+<strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ ((a × x) + b) mod 26</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (a⁻¹ × (y - b)) mod 26</strong>
+
+</em><br><br><br>
+
+<strong>x</strong> = Plaintext message.<br>
+<strong>y</strong> = Ciphertext.<br>
+<strong>K</strong> = (symbol not depicted) The key, which has been split into two parts: a and b.<br><br>
+<strong>a</strong> = The multiplied value of the key. The number of possible 'a' values is limited by the necessity of the inverse (for the decryption function), as explained below.<br><br>
+<strong>a⁻¹</strong> = The inverse of a, necessary for the decryption function.<br><br>
+<strong>b</strong> = The "shift parameter" value of the key, only in addition and subtraction operations. There are 26 possible values for b, explained below.<br><br>
+<strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br><br>
+<strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
+<strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br><br>
+<strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.<br><br><br><br><br><hr>
+      
+      <center><h2><a href="#III.I"><span class="mw-headline" id="III.I">#</span></a> <span class="mw-headline" id="III.I"><a href="/cryptography/symmetricFull#StreamIntro">III.I Introduction to Stream Ciphers.</a></span></h2></center><br><br>
+      
+      <h2><a href="#STREAMCIPHER"><span class="mw-headline" id="STREAMCIPHER">#</span></a> <span class="mw-headline" id="STREAMCIPHER"><strong>STREAM CIPHERS:</strong></span><br></h2>
+	    <br>
+	    
+	    <em>
+(x<sub>i</sub>, y<sub>i</sub>, s<sub>i</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>s<sub>i</sub></sub>(x<sub>i</sub>) ≡ (x<sub>i</sub> + s<sub>i</sub>) mod 2</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>s<sub>i</sub></sub>(y<sub>i</sub>) ≡ (y<sub>i</sub> + s<sub>i</sub>) mod 2</strong>
+
+</em><br><br><br>
+
+<strong>x<sub>i</sub></strong> = The Plaintext bit at index i.<br>
+<strong>y<sub>i</sub></strong> = The Ciphertext bit at index i.<br><br>
+<strong>s<sub>i</sub></strong> = The <strong>"Key Stream"</strong> at index i, equivalent to 'k' (as in past ciphers). Here, it is the Key (at index i) fed into the encryption and decryption functions.<br><br>
+<strong><strong>ℤ</strong><sub>2</sub></strong> = A ring of the first 2 integers: {0, 1}.<br><br>
+<strong>e<sub>s<sub>i</sub></sub>(x<sub>i</sub>)</strong> = Encryption function, a mathematical formula that converts each x bit into a y bit.<br><br>
+<strong>d<sub>s<sub>i</sub></sub>(y<sub>i</sub>)</strong> = Decryption function, a mathematical formula that converts each y bit into an x bit.<br><br>
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.<br><br><br><br><br><hr>
+
+
+<center><h2><a href="#III.II"><span class="mw-headline" id="III.II">#</span></a> <span class="mw-headline" id="III.II"><a href="/cryptography/symmetricFull#RNG">III.II Random Number Generation.</a></span></h2></center><br><br>
+
+      <h2><a href="#PRNG"><span class="mw-headline" id="PRNG">#</span></a> <span class="mw-headline" id="PRNG"><strong>PSEUDO RANDOM NUMBER GENERATORS (PRNG):</strong></span><br></h2>
+	    <br>
+	    
+	    <em><Strong> s<sub>i+1</sub> = f(s<sub>i</sub>)</strong>
+</em><br><br><br>
+
+<strong>s<sub>0</sub></strong> = The initial seed value, which may be an actual TRNG.<br><br>
+<strong>f(s<sub>i</sub>)</strong> = The 'randomizer' function, which performs whatever upon the seed in order to computationally randomize it.<br><br><br><br><br>
+      
+      
+      <h2><a href="#CSPRNG"><span class="mw-headline" id="CSPRNG">#</span></a> <span class="mw-headline" id="CSPRNG"><strong>CRYPTOGRAPHICALLY SECURE PSEUDORANDOM NUMBER GENERATORS (CSPRNG):</strong></span><br></h2>
+	    <br>
+	    Similar to the PRNG, with the added requirement of unpredictability:
+	    <br><br>
+	    
+	    <em>Given n output bits (s<sub>i</sub>, s<sub>i+1</sub>, ..., s<sub>i+(n-1)</sub>), it is computationally infeasible to construct s<sub>i+n</sub>.
+</em><br><br><br><br><br>
+      
+      <h2><a href="#LCG"><span class="mw-headline" id="LCG">#</span></a> <span class="mw-headline" id="LCG"><strong>LINEAR CONGRUENTIAL GENERATOR (LCG):</strong></span><br></h2>
+	    <br>
+	    
+	    <em>
+(A, B, s<sub>i</sub>) ∈ <strong>ℤ</strong><sub>m</sub><br>
+
+Key K = (A, B)<Br><br>
+
+<strong>S<sub>i + 1</sub> ≡ ((A × S<sub>i</sub>) + B) mod m</strong>
+
+</em><br><br><br>
+
+
+<strong>S<sub>i + 1</sub></strong> = The following value in the keystream, which is recursively using the value of the previous bit in the keystream (along with the key) to calculate the new value. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br><br>
+
+<strong>S<sub>0</sub></strong> = The initial seed value, which may have been created using a TRNG. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br><br>
+
+<strong>S<sub>i</sub></strong> = The Key Stream at index i. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br>
+
+<strong><strong>ℤ</strong><sub>m</sub></strong> = A ring of m integers.<br><br>
+
+<strong>A</strong> = The multiplied value of the key. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br><br>
+
+<strong>B</strong> = The "shift parameter" value of the key, only used for the addition operation. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long.<br><br>
+
+<strong>mod m</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.<br><br><br><br><br><hr>
+
+
+<center><h2><a href="#III.III"><span class="mw-headline" id="III.III">#</span></a> <span class="mw-headline" id="III.III"><a href="/cryptography/symmetricFull#LFSR">III.III Linear Feedback Shift Registers.</a></span></h2></center><br><br>
+
+<h2><a href="#LFSR"><span class="mw-headline" id="LFSR">#</span></a> <span class="mw-headline" id="LFSR"><strong>LINEAR FEEDBACK SHIFT REGISTERS (LFSR):</strong></span><br></h2>
+	    <br>
+	    
+	    <em>
+The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in <a href="/cryptography/symmetricFull#Rule29">C. Rule 29</a>:<br><br>
+
+(S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
+(i, j) ∈ <strong>ℤ</strong><sub>m</sub>
+</em><br><br>
+
+$$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
+
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see <a href="/cryptography/symmetricFull#Rule30">C. Rule 30</a>) of the output sequence.<br><br>
+
+<strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
+
+<strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
+
+<strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
+
+<strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
+
+<strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
+
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.<br><br><br><br><br>
+
+
+
+<h2><a href="#LFSRPOLYNOMIAL"><span class="mw-headline" id="LFSRPOLYNOMIAL">#</span></a> <span class="mw-headline" id="LFSRPOLYNOMIAL"><strong>LFSR IN POLYNOMIAL FORM:</strong></span><br></h2>
+	    <br>
+	    
+	    
+	    <br><br><br><br><br>
+<hr>
+      
+      
       
 	    </article>
 	    <header class="articleHeader"><hr><hr>
@@ -276,7 +520,7 @@ If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
         <article><strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong> → <strong><a href="">Public-Key Cryptography</a></strong> → <strong><a href="">Hash Functions & Digital Signatures</a></strong> → <strong><a href="">Message Authentication</a></strong> → <strong><a href="">Key Management</a></strong> → <strong><a href="">Post-Quantum Cryptography</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 27 2024</span><br>
+      	<span class="tiny">Last Change: December 28 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width="9%">

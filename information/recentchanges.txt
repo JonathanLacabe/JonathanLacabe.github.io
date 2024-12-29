@@ -3,14 +3,17 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+December 28 2024: Finished Cryptography Equations, and LFSR. 
+Rules Added: Cryptography, Symmetric Cryptography - Rule 32, 33, 34.
+
 December 27 2024: Created the Cryptography Equations page, and updated the ordering of the Cryptography so that Post-Quantum is the last (currently, I may add more after it). All relevant pages were changed to reflect this. On the main Cryptography information front, almost of Linear Feedback Shift Registers was completed.
-Rules Added: Cryptography, Symmetric Cryptography - Rule 
+Rules Added: Cryptography, Symmetric Cryptography - Rule 30, 31.
 
 December 26 2024: Stream Cipher work, primarily in Linear Congruential Generators and Linear Feedback Shift Registers.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 23, 24, 25, 26, 27, 28, 29.
 
 December 25 2024: More work on Cryptography, this time solely in Stream Ciphers. Furthermore, a new section was added to the "Mathematical Symbols" page, "Expressions".
-Rules Added: Cryptography, Symmetric Cryptography - Rule 20, 21, 22
+Rules Added: Cryptography, Symmetric Cryptography - Rule 20, 21, 22.
 
 December 24 2024: Edits to I.I in Cryptography, I.II totally completed, I.III began, changes to the "About" page, general all-around work day. The Stream Ciphers section was began and was added to all relevant pages.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 16, 17, 18, 19.

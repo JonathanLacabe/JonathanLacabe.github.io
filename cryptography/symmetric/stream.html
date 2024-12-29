@@ -70,11 +70,19 @@
         <div class="toc-column">
           <a href="#StreamIntro">III.I Intro to Stream Ciphers.</a>
         </div>
-        <!--
         <div class="toc-column">
-          <a href="#ShiftCipher">II.IV Shift/Caesar Cipher.</a>
+          <a href="#LFSR">III.III L.F.S.R.'s.</a>
         </div>
-        -->
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#RNG">III.II Random Number Generation.</a>
+        </div>
+        
+        <div class="toc-column">
+          <a href="#AltSecureStream">III.IV Alt. Secure Stream Ciphers.</a>
+        </div>
       </div>
       
 	  
@@ -84,7 +92,475 @@
 	  </header>
 	  <article>
 	  
-	  Currently being worked on. See the full Symmetric Cryptography page for the most recent additions.
+	  <strong>Fig. 3. - Symmetric Cryptography Hierarchy:</strong><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and Rule 5 for Cryptanalysis." width=58%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and Rule 5 for Cryptanalysis.</em></span><br><br><br>
+	  
+	  <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">C. Rule 21.</font></strong> <strong>Stream Ciphers</strong><br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(x<sub>i</sub>, y<sub>i</sub>, s<sub>i</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br><br>
+<strong>Encryption</strong>: <strong>e<sub>s<sub>i</sub></sub>(x<sub>i</sub>) ≡ (x<sub>i</sub> + s<sub>i</sub>) mod 2</strong><br><br>
+<strong>Decryption</strong>: <strong>d<sub>s<sub>i</sub></sub>(y<sub>i</sub>) ≡ (y<sub>i</sub> + s<sub>i</sub>) mod 2</strong>
+
+</em><br><br><br>
+
+<strong>x<sub>i</sub></strong> = The Plaintext bit at index i.<br>
+<strong>y<sub>i</sub></strong> = The Ciphertext bit at index i.<br>
+<strong>s<sub>i</sub></strong> = The <strong>"Key Stream"</strong> at index i, equivalent to 'k' (as in past ciphers). Here, it is the Key (at index i) fed into the encryption and decryption functions.<br>
+<strong><strong>ℤ</strong><sub>2</sub></strong> = A ring of the first 2 integers: {0, 1}.<br>
+<strong>e<sub>s<sub>i</sub></sub>(x<sub>i</sub>)</strong> = Encryption function, a mathematical formula that converts each x bit into a y bit.<br>
+<strong>d<sub>s<sub>i</sub></sub>(y<sub>i</sub>)</strong> = Decryption function, a mathematical formula that converts each y bit into an x bit.<br>
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
+
+<br><br><br>
+
+
+
+<strong><u>Explanation:</u></strong><br><br>
+A cipher that encrypts bits individually, processing one bit after another in a sequence. This is opposed to a Block Cipher (see Section IV), which takes in large amounts of bits all at once.<br><br>
+
+The modular 2 operation (see Rule 22) has its own symbol in cryptographic diagrams: a circle with a cross. In electrical engineering, the mod 2 function is known as the XOR gate, a type of binary gate ([[[[[). <br><br>
+
+Using this symbol, the encryption and decryption functions of the basic stream cipher can be depicted as shown:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/StreamDiagram.png"><img src="/cryptography/img/StreamDiagram.png" alt="A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function." width=73%/></a></div>
+	    <span class="tiny"><em>A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function.</em></span><br><br>
+
+
+
+If the key bit is zero, then the plaintext bit will pass through unchanged, but if the key bit is 1, then the plaintext bit will flip (like binary). Thus, if the keystream (by divine intervention) is straight 0's, then the plaintext will go unencrypted. <br><br>
+The central complexity of the Stream Cipher is the generation of the "Key Stream", e.g. the stream of bits with which the plaintext is encrypted. This generation must be performed through <em>Random Numbers</em> - see Rule 23.
+<!--Most beautiful 90 seconds in cryptography:
+https://youtu.be/AELVJL0axRs?list=PL2jrku-ebl3H50FiEPr4erSJiJHURM9BX&t=1520
+
+the Mozart Piano Concerto #21 Andante of cryptography lecture segments
+
+-->
+	  <br><br><br>
+	  
+	  <strong><a href="#KeyStreamDef"><span class="mw-headline" id="KeyStreamDef">#</span></a> <font color="#006400">Key Stream</font></strong>: A <u><em>stream</em></u> of characters that is combined with the plaintext to produce the ciphertext in a Stream Cipher, or, in the case of asynchronous stream ciphers, combined with a previous ciphertext to produce a new ciphertext.<br><br>
+
+The key stream is <u>derived</u> from the <em>key</em> and the seed. Generally, the key stream is denoted as "s<sub>i</sub>", while the seed itself is s<sub>0</sub>, the initial position (which may have been created using an actual TRNG) from which all recursive stream ciphers evolve from in their encryption functions, at least all ciphers that use the PRNG algorithm, like the LCG (see Rule 25).
+<br><br><br>
+	  
+	  
+	  <strong><a href="#SynchronousStreamDef"><span class="mw-headline" id="SynchronousStreamDef">#</span></a> <font color="#006400">Synchronous Stream Cipher</font></strong>: A Stream Cipher in which the key stream depends solely on the key, generated independently of the plaintext or ciphertext. Examples include Salsa20 & ChaCha.
+<br><br><br>
+	  
+	  <strong><a href="#AsynchronousStreamDef"><span class="mw-headline" id="AsynchronousStreamDef">#</span></a> <font color="#006400">Asynchronous Stream Cipher</font></strong>: A Stream Cipher in which the key stream depends on the ciphertext in addition to the key - the key generation is reliant on previous ciphertext, making it a risky operation. An example is the Cipher Feedback (CFB) mode.
+<br><br><br>
+	  
+	  <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br><br>
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="RNG">III.II Random Number Generation.</span></h3>
+	    </header>
+	    <article>
+	  
+	  <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">C. Rule 23.</font></strong> <strong>Random Number Generators (RNG)</strong>:<br><br> The means with which a system can generate random numbers, for the purposes of constructing/filling a keystream with random bits, are split into three main mechanisms:<br><br>
+
+<ol>
+<li> <strong>True Random Number Generators (TRNGs)</strong>: "True" random numbers stem from random physical processes that cannot be reproduced. <Br><br>
+
+Such <em>natural</em> sources of entropy include flipping a coin, rolling a die, thermal noise, mouse movement, and keystroke timing.<br><br>
+
+Hardware and cryptographic systems have tried a lot of different techniques over the years to create a TRNG by analyzing/recording internal characteristics of the computer. Most modern CPU's have a TRNG within a TPM  (trusted platform module) on the motherboard.
+
+</li><br><br>
+
+
+<li> <strong>Pseudo Random Number Generators (PRNGs)</strong>: An RNG system that is random, but reproducable. Because PRNG's are computed, they are inherently deterministic processes. Since they are deterministic, Alice and Bob can generate the same key stream independently of one another, only needing to know the initial "seed", which is like the key for the key.<br><br>
+
+Often, PRNG's are computed with the following function:<br><br>
+
+<strong> s<sub>i+1</sub> = f(s<sub>i</sub>)
+</strong><br><br>
+
+<strong>s<sub>0</sub></strong> = The initial seed value, which may be an actual TRNG.<br>
+<strong>f(s<sub>i</sub>)</strong> = The 'randomizer' function, which performs whatever upon the seed
+in order to computationally randomize it.<br><br>
+
+This recursive generation is the form taken by the Linear Congruential Generator (see Rule 25). <br><br>
+The rand() function in C is a PRNG and uses a seed of 12345, with the following function as the randomizer: <br>S<sub>i+1</sub> = ((1103515245 × s<sub>i</sub>) + 12345) mod 2³¹.
+</li><br><br>
+
+
+<li><strong>Cryptographically Secure Pseudorandom Number Generators (CSPRNGs)</strong>: PRNG's that have an additional property: the numbers must be <strong><u>unpredictable</u></strong>.<br><br>
+
+Given n output bits (s<sub>i</sub>, s<sub>i+1</sub>, ..., s<sub>i+(n-1)</sub>), it is computationally infeasible to construct s<sub>i+n</sub>.<br><br>
+
+While in most applications, PRNG systems are perfectly fine and suited to create 'random' numbers for whatever purpose, they form very unsecure cryptosystems, and thus in cryptography, the additional property of unpredictability is required.
+
+
+</li>
+
+</ol>
+<br><br>
+
+<strong><a href="#UnconditionalSecurityDef"><span class="mw-headline" id="UnconditionalSecurityDef">#</span></a> <font color="#006400">Unconditional Security</font></strong>: A cipher is "unconditionally secure" (or "information-theoretically secure") if it cannot be broken even with <u>infinite</u> computing resources. <br><br>
+
+Even if a key is 2^1000 bits, it would not be considered "unconditionally secure", because 2^1000 computers (a patently <u>not</u> infinite amount of computers) would be able to break the key in one second. This is despite the fact that such levels of computing power will never be realized in human history.<br><br> 
+Thus, though there are very many ciphers that are "practically" secure (forming the backbone of our modern cybersecurity systems), they are not unconditionally secure.
+<br><br><br>
+
+<strong><a href="#ComputationalSecurityDef"><span class="mw-headline" id="ComputationalSecurityDef">#</span></a> <font color="#006400">Computational Security</font></strong>: A cryptosystem is computationally secure if the best known algorithm for breaking it requires at least t operations, where 't' is some ridiculous number far beyond the reach of modern brute-force computational abilities.
+<br><br><br>
+	  
+	  <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">C. Rule 24.</font></strong> <strong>One Time Pad (OTP)</strong><br><br>
+The OTP, as it were, is the unconditionally secure, perfect encryption algorithm, unbreakable in any meaningful way. The OTP is a stream cipher with the following properties:<br><br>
+1) The Keystream bits s<sub>i</sub> must originate from a TRNG.<br><br>
+2) Each Key stream bit must be used only once.<br><br>
+
+Knowledge of the Key Stream must be exclusively limited to the involved parties, of course. At the end of the data transfer, the party that received the data must destroy the key so that it cannot be used by another party to decrypt the message after the fact. This is the same reason why reusing keys is extremely risky and nullifies the security benefits of the OTP.<br><br>
+
+The security of cryptosystem draws from the fact that, without knowledge of the keystream, even a brute-force attack would be futile, because any two text strings are equally as probable to be the plaintext: if a four letter word were to be encrypted, it is equally probable for it to be "when", "stop", or "abcd".<br><br>
+
+There is one fundamental drawback of the OTP, however, that prevents its universal application: since keystream bits cannot be reused, <strong>the key has to be as long as the plaintext</strong>. A 400MB file, 8 bits to the byte, would entail a 3.2GB key.<br><br><br>
+	  
+	  <strong>Fig. 4. - Practical Stream Ciphers:</strong><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/PracticalStream.png"><img src="/cryptography/img/PracticalStream.png" alt="A diagram of how all practical stream ciphers should function, with the modular 2 addition highlighted and the key stream generator (which varies from cipher to cipher) displayed." width=79%/></a></div>
+	    <span class="tiny"><em>A diagram of how all <em>practical</em> stream ciphers should function, with the modular 2 addition highlighted and the key stream generator (which varies from cipher to cipher) displayed.</em></span><br><br><br>
+	  
+	  <strong><a href="#BitLengthDef"><span class="mw-headline" id="BitLengthDef">#</span></a> <font color="#006400">Bit-length</font></strong>: The number of bits required to represent an integer as a binary number. The capital letter 'A', for example, has an ASCII value of 65, which is 1000001, meaning a bit-length of 7. It is often calculated using log<sub>2</sub>, since binary positions are dictated by powers of two.
+<br><br><br>
+	  
+	  <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">C. Rule 25.</font></strong> <strong>Linear Congruential Generator (LCG)</strong>:<br><br>
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+(A, B, s<sub>i</sub>) ∈ <strong>ℤ</strong><sub>m</sub><br>
+
+Key K = (A, B)<Br><br>
+
+<strong>S<sub>i + 1</sub> ≡ ((A × S<sub>i</sub>) + B) mod m</strong>
+
+</em><br><br><br>
+
+
+<strong>S<sub>i + 1</sub></strong> = The following value in the keystream, which is recursively using the value of the previous bit in the keystream (along with the key) to calculate the new value. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br>
+
+<strong>S<sub>0</sub></strong> = The initial seed value, which may have been created using a TRNG. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br>
+
+<strong>S<sub>i</sub></strong> = The Key Stream at index i. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br>
+
+<strong><strong>ℤ</strong><sub>m</sub></strong> = A ring of m integers.<br>
+
+<strong>A</strong> = The multiplied value of the key. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long. <br>
+
+<strong>B</strong> = The "shift parameter" value of the key, only used for the addition operation. It is exactly ⌈log<sub>2</sub> m⌉ (bit-length of m) bits long.<br>
+
+<strong>mod m</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
+<br><br><br>
+
+<strong><u>Explanation:</u></strong><br><br>
+
+A means of generating a unique key stream using the PRNG system, based on the attributes of the key and the seed. This makes it more practical a system than the One-Time Pad, but much easier to break (see Rule 26).<br><br>
+Of course, separate from the nature of the function/equation itself, note that there are no "Encryption" or "Decryption" functions, because the given equation is merely for composing the keystream (in the Rule 23 PRNG-style), while the equation for the Stream <em>Cipher</em> itself remains the same (Rule 21).
+
+
+<!--Easily the hardest rule(s) I have had to write so far in Cryptography, 25 & 26. Took several hours of total concentration and thinking power, requiring the rewriting of portions of past rules and definitions as well.-->
+
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">C. Rule 26.</font></strong> <strong>HOW TO CRACK A LINEAR CONGRUENTIAL GENERATOR (LCG):</strong><br><br>
+
+In order to crack a rudimentary LCG system and discover the full keystream to decrypt the system, the attacker only needs to know three characters of the plaintext that were encrypted (along with all of the ciphertext). Generally, in encrypting a document (such as Microsoft Word or Excel), there will be file or protocol header information at the start (like the version number), which will always be the same initial symbols being encrypted. Therefore, knowledge of the attacker of these plaintext characters, in addition to the ciphertext, can be assumed.<br><br>
+
+With knowledge of the LCG key-stream equation, the attacker would know S<sub>0</sub>, S<sub>1</sub>, and S<sub>2</sub> only. There would thus be three unknowns, A, B, and m. However, the set of commonly used m values is relatively small (see <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator#Parameters_in_common_use">list</a>) could possibly be, and so iterating through them using brute-force (once A and B have been discovered) would be very simple: calculate the associated key stream for each probable m value, then check each key stream using the stream cipher decryption function (see Rule 21) and the known ciphertext, until the correct key stream (and thus m value) is found. Thus, m is considered one of the known variables.<br><br>
+
+The attacker only has to create a system of equations-style problem (using the three known plaintext characters and the ciphertext) in order to isolate A and B, respectively.<br><br>
+S<sub>1</sub> ≡ ((A × S<sub>0</sub>) + B) mod m<br>
+S<sub>2</sub> ≡ ((A × S<sub>1</sub>) + B) mod m<br><br>
+
+<strong>A = ((S<sub>1</sub> - S<sub>2</sub>) × (S<sub>0</sub> - S<sub>1</sub>)⁻¹) mod m</strong><br>
+
+<strong>B = (S<sub>1</sub> - (S<sub>0</sub> × (S<sub>1</sub> - S<sub>2</sub>) × (S<sub>0</sub> - S<sub>1</sub>)⁻¹)) mod m</strong><br><br>
+
+After finding A and B, all that would be left to be done is to brute-force m as previously described, and the system would be cracked.
+
+<br><br><br>
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="LFSR">III.III Linear Feedback Shift Registers.</span></h3>
+	    </header>
+	    <article>
+	    
+	    
+	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. In electrical engineering, CSE's are part of clocking subsystems and respond to Clock signals (E.E. Rule [[[[[).
+<br><br><br>
+	    
+	  
+	  <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">C. Rule 27.</font></strong> A "<strong>Flip-flop</strong>" is a clocked storage element that stores a single bit. There is an input, an output, and a <strong>Clock Input</strong> that determines whether any inputted bit is to be stored or not.<br><br>
+
+The general symbology used in diagrams for a flip-flop is as follows:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-flip-flop-basics.png"><img src="/cryptography/img/D-flip-flop-basics.png" alt="A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of buildcircuitelectronics." width=53%/></a></div>
+	    <span class="tiny"><em>A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of <a href="https://www.build-electronic-circuits.com/d-flip-flop/">buildcircuitelectronics</a>.</em></span><br><br>
+
+And here is a diagram showing how the output relies on clock signals to accept an input change, if any:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-type_flip-flop_impulse_diagram.png"><img src="/cryptography/img/D-type_flip-flop_impulse_diagram.png" alt="A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of Wikipedia." width=58%/></a></div>
+	    <span class="tiny"><em>A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:D-type_flip-flop_impulse_diagram.png">Wikipedia</a>.</em></span>
+	  
+	  
+	  <br><br><br>
+	  
+	  <strong><a href="#ShiftRegisterDef"><span class="mw-headline" id="ShiftRegisterDef">#</span></a> <font color="#006400">Shift Register</font></strong>: A "shift register" is akin to a system, a concatentation of several individual flip-flops, each sending a signal to the next until the final flip-flop, which will produce each bit of the output. It is one half of an LFSR.<br><br>
+
+An example of a shift register, with three flip-flops, with every new value sent receiving a clock signal:<br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag1.png"><img src="/cryptography/img/ShiftCipherDiag1.png" alt="A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and then each change is moved over until there are no more changes to be moved." width=53%/></a></div>
+	    <span class="tiny"><em>A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and then each change is moved over until there are no more changes to be moved.</em></span>
+	  
+	  
+	  
+	  
+<br><br><br>
+	  
+	  
+	  
+	  
+	  <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">C. Rule 28.</font></strong> <strong>Linear Feedback Shift Registers</strong>:<br><br>
+
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+<em>
+
+The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in Rule 29:<br><br>
+
+(S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
+(i, j) ∈ <strong>ℤ</strong><sub>m</sub>
+</em><br><br>
+
+$$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
+
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 30) of the output sequence.<br><br>
+
+<strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
+
+<strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
+
+<strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
+
+<strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
+
+<strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
+
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
+<br><br><br>
+
+<!--On God this is the best explanation of each variable. Human Knowledge is the greatest learning resource known to mankind, better than Wikipedia, better than any Alien knowledgebase.-->
+
+
+
+<strong><u>Explanation:</u></strong><br><br>
+
+There is an inherent relationship between electrical engineering and Cryptography, specifically in how Cryptography developed: in the early days of the development of the Stream Cipher, the goal was to create a 'small' stream cipher, e.g. a stream cipher that could be implemented in hardware without using too much power.<br><br>
+
+Today, all stream ciphers fit one of two categories: ciphers optimized for <strong>software implementation</strong>, and ciphers optimized for <strong>hardware implementation</strong>. A prime example of the latter are "Shift Register-Based Stream Ciphers", in particular shift registers with feedback, better known as Linear Feedback Shift Registers.<br><br>
+
+Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are algorithms of key stream generation that utilize yet another PRNG, and are thus crackable with some effort (see Rule 34).<br><br>
+
+Many ciphers, such as the A51 cipher, consist of multiple LFSRs (in the case of A51, 3), which greatly enhance the security of the cipher and validate the usage of LFSR's for legitimate cryptographic purposes ([[[[[[[[[ how?).<br><br>
+
+LFSR's incorporate a standard Shift Register with a <strong>feedback mechanism/path</strong>, generating fresh input for the first flip-flop using some output data. This is done by a modular 2 addition function (an XOR gate), which can be performed between the value from the final flip-flop and any other located in the shift register. Multiple mod2 functions can be added in fact, complicating the structure of the LFSR.<br><br> The mod 2 calculation is first performed in the initial state of the shift register, before the first clock cycle, pre-computing the value that will be used as input for the first flip-flop <u>on</u> the first clock cycle.<br><br>
+
+<strong>Remember:</strong> The feedback mechanism that the outputs take uses a mod2 function, but the actual input into the first flip-flop itself is without any special system - it is directly taking in the given number.<br><br>
+
+
+Very important to notice in the progress of an LFSR is that there will be a distinct pattern that holds in each calculated value (placed below the flip-flops on a diagram), known as the <strong>Diagonal Rule</strong>: each bit value will be translated diagonally to the right, for as many flip-flops as there are to the right, continually. Note this pattern in the diagram below:<br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag2.png"><img src="/cryptography/img/ShiftCipherDiag2.png" alt="A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete key stream." width=78%/></a></div>
+	    <span class="tiny"><em>A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete key stream.</em></span><br><br><br>
+
+The specific mathematical formula of the key produced by the LFSR depicted is:<br> <strong>S<sub>i+3</sub> ≡ (s<sub>i+1</sub> + s<sub>i</sub>) mod 2</strong>.
+
+<br><br><br>
+
+
+<strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, helps form an LFSR. 
+<br><br><br>
+
+<strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
+
+ Even without knowledge of the XOR positions, by pure knowledge of the first state, every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> described in Rule 28.
+<br><br><br>
+
+
+<strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">C. Rule 29.</font></strong> <strong>LFSR Generalization:</STRONG><br><br> 
+
+To generalize the LFSR so that a general equation can be applied, several new mathematical operations must be introduced.<br><br>
+
+First, the number of flip-flops in the register can be generalized to an arbitrary 'm' number of times, which is the simplest generalization to be made.<br><br>
+
+It is possible for any of the flip-flops to have an XOR gate, and for there to be as many XOR gates as flip-flops, minus one. Since all of the flip-flops have a chance at being part of the feedback path, a <strong>multiplier function</strong> must be added after each flip-flop, between the path after the flip-flop and any possible XOR gate above on the feedback path. Thus, the multiplier controls the way to the XOR gate, and essentially acts as an on-or-off switch.<br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/GeneralizedLFSR.png"><img src="/cryptography/img/GeneralizedLFSR.png" alt="A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation." width=82%/></a></div>
+	    <span class="tiny"><em>A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation.</em></span><br><br><br>
+
+The <strong>multiplier function</strong> works by multiplying the value of the flip-flop (the Input value I) by the internal P-value, which is determined by whether the flip-flop actually has an XOR gate or not (see below). The p-value can only be a binary value: <strong>p<sub>i</sub> ∈ ℤ<sub>2</sub></strong>.<br><br>
+
+The multipliers (labeled P<sub>0</sub> to P<sub>m-1</sub>) have their own values, known as <strong>"feedback coefficients"</strong>. These values are dictated by the "switch", e.g. if there is or isn't a connection to an XOR gate from that flip-flop. Furthermore, there is an input I and output O that travels from the multiplier onto the XOR gate path.<br><br>
+
+If the <strong>switch is closed</strong> (e.g. there IS an XOR gate connected to that flip-flop, and thus a connection to the feedback path), then the p-value will equal 1, since the input is equal to the output: <strong>O = p<sub>i</sub> × I = I</strong>.<br><br>
+
+If the <strong>switch is open</strong> (no XOR gate), then the p-value will equal 0. The output O is equal to 0, and since O = p<sub>i</sub> × I, and I is not necessarily 0, then p<sub>i</sub> must equal 0.<br><br>
+
+For the following formula, you must assume that s<sub>m</sub> is the sum of all of the XOR gates, e.g. the preloaded value that is ready to be inputted into the first flip-flop after the initial state has finished being processed. Thus, the second complete XOR-ing of the values (the second value inputted into the first flip-flop) will be S<sub>m+1</sub>, and so on. The value of the input into the first flip-flop is the result of the summation of all of the possible XOR operations that could be present in the LFSR.<br><br><br>
+
+<em>
+(S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
+(i, j) ∈ <strong>ℤ</strong><sub>m</sub>
+</em><br>
+
+$$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
+
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 30) of the output sequence.<br><br>
+
+<strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
+
+<strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
+
+<strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
+
+<strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
+
+<strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
+
+<strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
+<br><br><br>
+	  
+	  
+	  <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> 
+	  The <strong>Period</strong> is the number of different strings of numbers that can occur in a specific LFSR before repeating. In the LFSR given in Rule 28 (with 3 flip-flops), this number is 7, e.g. all possible states.<br><br>
+	  A simple principle can thus be derived: <strong>The maximum <em><u>possible</u></em> period (or sequence length) generated by an LFSR of degree m is 2<sup>m</sup> - 1.</strong><br><br>
+	  
+	  As soon as a previous bit pattern/sequence (a 'state') is reached, then the cycle will repeat itself. Only certain feedback configurations (P<sub>m-1</sub>, ..., P<sub>0</sub>) yield maximum length sequences, regardless of the initial bit pattern/state (!). For any LFSR with a set number of flip-flops, m, and a given positioning/number of XOR gates, no matter what the initial state is, the period will always be the same.<br><br>
+	  
+This is why the given value is the maximum <em>possible</em> period of an LFSR - only some reach it.<br><br>
+There are patterns within the LFSR, specifically that of the positioning of the XOR gates with respect to the degree m, that can be used to determine if an LFSR will produce a maximum-length period or not - see Rule 33 for more information. These patterns require knowledge of the Polynomial Representation of LFSR's, described in Rule 32.
+
+	  <br><br><br>
+	  
+	  
+	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> 
+	    The only string of bits that can never appear in an LFSR is straight 0's. Such a thing is only possible if the initial setting is all straight 0's, which is a ridiculous thought not to be entertained.
+	    <br><br><br>
+	  
+	  <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">C. Rule 32.</font></strong> <strong>Polynomial Representation of LFSR's</strong>:<br><br>
+	  All that is needed to represent the nature of an LFSR (devoid of the initial state) is the degree m (the number of flip-flops), and the feedback coefficients. These characteristics can be represented in simple polynomial form:<br><br>
+
+<strong>P(x) = x<sup>m</sup> + P<sub>m-1</sub> × x<sup>m-1</sup> + ... + P<sub>1</sub> × x + P<sub>0</sub></strong>
+<br><br>
+
+<strong>m</strong> = The number of flip-flops. <br>
+<strong>x</strong> = The simple polynomial variable, nothing to be plugged in.<br>
+<strong>P<sub>m-1</sub></strong> = The feedback coefficient of the very first multiplier function (and thus, the flip-flop it represents) in the sequence. P<sub>m</sub> would be to the left of the first flip-flop, along the very end of the feedback path, and thus is always 1 and is unnotated. The sequence P<sub>m</sub> to P<sub>0</sub> represents all multiplier functions, left to right.<br><br>
+
+For example: The LFSR depicted in Rule 28 would be represented as x³ + x + 1.<br><br>
+
+Even if there were no XOR gates in the entire LFSR, then the equation would still be x<sup>m</sup> + 1, representing the ending and beginning points of feedback path.<br><br>
+What you are really looking at when you see a polynomial expression of an LSFR is the degree of the first term, and all of the terms in between the first term and the last term, because there is always going to be a +1 at the end. Otherwise, the output would not be incorporated into the feedback path, which is utterly preposterous and is never seen in the real world.<br><br>
+
+There are patterns in LFSR polynomials that can be used to determine whether the LFSR has a maximum-length period or not, described in Rule 33.
+	  <br><br><br>
+	  
+	  <strong><a href="#PrimitivePolyDef"><span class="mw-headline" id="PrimitivePolyDef">#</span></a> <font color="#006400">Primitive Polynomials</font></strong>: A form of irreducible polynomials, akin to a "prime" polynomial, with the only "factors" being 1 and the polynomial itself. [[[[[[[EXPLAIN IN A MORE COHESIVE AND FULLY ELABORATED MANNER[[[[[[[[.
+<br><br><br>
+	  
+	  <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">C. Rule 33.</font></strong> <strong>Deriving Maximum-Length Periods from LFSR Polynomials:</strong><br><br>
+	  <strong>Only LFSR's with primitive polynomials</strong> (see definition) <strong>yield maximum-length sequences.</strong> <br><br>
+
+Below is a table showcasing an example primitive polynomial for each m value 2-128. Note that there are multitudes of primitive polynomials for any given m value, too many to produce a complete list. There are 6.92 × 10⁷ primitive polynomials for an LFSR of m 31.<br><br>
+In the table below, take the values as representing the degrees in reverse order: x^0 + x^1 + x^2, for example. This ensures the +1, a necessary component of any LFSR polynomial as explained in Rule 32.<br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/LFSRTable.png"><img src="/cryptography/img/LFSRTable.png" alt="A table showcasing an example primitive polynomial for each m value 2-128." width=78%/></a></div>
+	    <span class="tiny"><em>A table showcasing an example primitive polynomial for each m value 2-128.</em></span>
+
+
+	  
+	  <br><br><br>
+	  
+	  
+	  <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">C. Rule <U>34</u>.<!--a wonderful milestone in any category.--></font></strong> <strong>HOW TO CRACK A LINEAR FEEDBACK SHIFT REGISTER (LFSR):</strong><br><br>
+	  
+	  
+	  While Linear Feedback Shift Register's have the properties of relative randomness and are exceedingly efficient (with 100 flip-flops, a miniscule amount of space in hardware, producing a period of 2¹⁰⁰ - 1), it fails on the last hurdle: <em>unpredictability</em>. <br><br>
+	  
+	  By its very nature, an LFSR is a <u>deterministic</u> means of producing a key stream, thus opening it up to vulnerabilities that can be exploited. The main principle that must be acknowledged in attempting to 'break' or 'crack' any stream cipher that utilizes an LFSR is as follows:<br><br>
+
+<strong>If an attacker knows (at least) 2m output values of an LFSR, he can recover the entire LFSR configuration.</strong><br><br>
+
+<!--Recall that the LFSR is merely a keystream generation algorithm, providing the keystream to a simple stream cipher. Thus, both the equations of the stream cipher and those specific to the LFSR can be used in cracking it.<br><br>-->   <!--budget cuts, rule is very long and this explanation is kind of obvious.--> 
+
+Oscar, as always knows the complete ciphertext string. Furthermore, he knows the degree m of the LFSR, and, most damningly, he knows the first few plaintext characters: x<sub>0</sub>, ..., x<sub>2m - 1</sub>. With the header information, it is still realistic for that amount of plaintext to be known to the attacker.<br><br>
+
+Given this knowledge, Oscar simply has to follow a 3-step process in order to recover the entire key:<br><br><br>
+
+<strong>Step 1</strong>: <br>Utilizing the definition of the encryption function of a stream cipher, the key stream at position i can be isolated:<br><br>
+
+i ∈ <strong>ℤ</strong><sub>2m</sub><br><br>
+<strong>S<sub>i</sub> ≡ (x<sub>i</sub> + y<sub>i</sub>) mod 2</strong>.<br><br>
+
+Thus, Oscar is able to recover the first 2m output bits (the output/keystream bits) of the LFSR, which is <u>not enough:</u> the maximum possible period is 2<sup>m</sup> - 1, so there remain a considerable number of output bits that need to be recovered.<br><br><br>
+
+<strong>Step 2</strong>: <br>In order to discover the remaining bits, the feedback coefficients of the multiplier functions must be discovered. This is done using the generalized summation equation of the LFSR. Expanding out the summation will produce the following equation:<br><br>
+
+<strong>S<sub>m</sub> ≡ (S<sub>m-1</sub> × P<sub>m-1</sub> + ... + S<sub>0</sub> × P<sub>0</sub>) mod 2</strong><br><br>
+
+The only unknowns in this equation are every single feedback coefficient. Thus, there are a total of m unknowns that need to be solved for. In order to solve for the total of m unknowns, a system-of-equations type problem, with m equations, must be created:<br><br>
+
+<strong>S<sub>m</sub> ≡ (S<sub>m-1</sub> × P<sub>m-1</sub> + ... + S<sub>0</sub> × P<sub>0</sub>) mod 2</strong><br><br>
+
+<strong>S<sub>m+1</sub> ≡ (S<sub>m</sub> × P<sub>m-1</sub> + ... + S<sub>1</sub> × P<sub>0</sub>) mod 2</strong><br><br>
+.<br>
+.<br>
+.<Br><br>
+
+<strong>S<sub>2m-1</sub> ≡ (S<sub>2m-2</sub> × P<sub>m-1</sub> + ... + S<sub>m-1</sub> × P<sub>0</sub>) mod 2</strong><br><br>
+
+As was done for Linear Congruential Generators, each unknown can easily be solve for by Gaussian Elimination ([[[[[) or Matrix Inversion ([[[[[[[[).<br><br><br>
+
+
+<strong>Step 3</strong>: <br>Now that Oscar knows all of the Feedback Coefficients, he can build the LFSR himself.<br><br>
+
+He can determine the initial state using the output bits that are already known (using the Diagonal Rule, see Rule 28), and from there he will be able to compute the full keystream, S<sub>2m+1</sub> and beyond.<br><br>
+
+With the keystream, Oscar will now, of course, be able to recover the full plaintext:<br><br>
+
+<strong>x<sub>i</sub> ≡ (y<sub>i</sub> + s<sub>i</sub>) mod 2</strong>
+	  <br><br><br>
+	  
+	  
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="AltSecureStream">III.IV Alternate Secure Stream Ciphers.</span></h3>
+	    </header>
+	    <article>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	  
 	    </article>
 	</div>
@@ -116,10 +592,10 @@
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong><a href="/cryptography/symmetricFull.html">Complete Symmetric Cryptography</a></strong></article>
         <br>
-        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong>Stream Ciphers</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong>Stream Ciphers</strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 24 2024</span><br>
+      	<span class="tiny">Last Change: December 28 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

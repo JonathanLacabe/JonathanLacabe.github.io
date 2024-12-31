@@ -1,0 +1,32 @@
+REGISTER OF LEARNING IMPORTANCE/PRIORITY
+
+
+HIGH-PRIORITY:
+Cryptography ->
+                Symmetric Ciphers, specifically Stream Ciphers.
+
+Remainder of 2nd Semester Calculus.
+         
+             
+Physics -> 
+           Oscillations
+           Electromagnetism.
+             
+                
+
+
+
+
+MID-PRIORITY:
+All of the existing Calculus notes.
+
+
+
+
+
+LOW-PRIORITY
+Salsa20, ChaCha, and Trivium content for Symmetric Cryptography.
+
+Astronomy
+
+All unestablished pages: Nuclear Engineering, Aerospace Engineering, etc.

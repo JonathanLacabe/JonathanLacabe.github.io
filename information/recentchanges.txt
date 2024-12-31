@@ -3,6 +3,15 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+December 30 2024: Significant work in Block Ciphers, specifically regarding the Feistel Network.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 39, 40, 41, 42.
+
+December 29 2024: Wrapping up Stream Ciphers. Minor changes to some Internal metapages. In examining the Salsa20 and ChaCha ciphers, I noted that understanding of these specific ciphers is more specific and in-depth into a certain sector of Cryptography, and not necessary for the development of an understanding of the fundamentals of Cryptography alone, since I would like to focus more on Post-Quantum attributes of Cryptography. Thus, in order to save time (while noting using the '[' system the unfinishedness of the content), I reserved four rules (a reasonable estimate) for future development of that section, with all additional rules created (if any) being subject to the WoO system. Onto block ciphers.
+  Additionally, a priority register for me to log all future "unfinished sections" that come about has been created: https://humanknowledge.neocities.org/_other/register.txt
+  As for low-priority intake, this allows me to recognize content that should be added to the project, and that its absence is not merely the result of me not having heard about it in the first place.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 35 (reserved), 36 (reserved), 37 (reserved), 38 (reserved),
+
+
 December 28 2024: Finished Cryptography Equations, and LFSR. 
 Rules Added: Cryptography, Symmetric Cryptography - Rule 32, 33, 34.
 

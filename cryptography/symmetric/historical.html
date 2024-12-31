@@ -134,6 +134,7 @@ This is an example of a cipher/algorithm in which an Analytical Attack is most e
 m > 0<br><br>
 If <strong>m|(a − r)</strong>, then <strong>a ≡ r mod m</strong>
 </em><BR><BR><br>
+
 <strong>ℤ</strong> = The set of all integers.<br>
 <strong>a</strong> = The chosen number.<br>
 <strong>r</strong> = The remainder.<br>
@@ -272,7 +273,8 @@ There are many overshadowing rules that every ring has to fulfill, seen in the s
 <li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m.</strong></li><br>
 
 <li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in Rules 14 & 15.<br><br>
-If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
+
+If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as a divisor, since <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
 <br>
 
 
@@ -397,7 +399,8 @@ The decryption function, of course, is just the opposite of the encryption funct
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
 <em>
-(x, y, a, b) ∈ <strong>ℤ</strong><sub>26</sub><br><br>
+(x, y, a, b) ∈ <strong>ℤ</strong><sub>26</sub><br>
+K = (a, b)<br><br>
 <strong>Encryption</strong>: <strong>e<sub>k</sub>(x) ≡ ((a × x) + b) mod 26</strong><br><br>
 <strong>Decryption</strong>: <strong>d<sub>k</sub>(y) ≡ (a⁻¹ × (y - b)) mod 26</strong>
 
@@ -405,6 +408,7 @@ The decryption function, of course, is just the opposite of the encryption funct
 
 <strong>x</strong> = Plaintext message.<br>
 <strong>y</strong> = Ciphertext.<br>
+<strong>K</strong> = (symbol not depicted) The key, which has been split into two parts: a and b.<br>
 <strong>a</strong> = The multiplied value of the key. The number of possible 'a' values is limited by the necessity of the inverse (for the decryption function), as explained below.<br>
 <strong>a⁻¹</strong> = The inverse of a, necessary for the decryption function.<br>
 <strong>b</strong> = The "shift parameter" value of the key, only in addition and subtraction operations. There are 26 possible values for b, explained below.<br>
@@ -475,7 +479,7 @@ Also recall that the mod operator will simply remain in place - it can be practi
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 28 2024</span><br>
+      	<span class="tiny">Last Change: December 30 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

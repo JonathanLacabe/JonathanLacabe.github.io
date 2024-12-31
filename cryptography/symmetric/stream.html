@@ -152,7 +152,11 @@ The key stream is <u>derived</u> from the <em>key</em> and the seed. Generally, 
 	  <strong><a href="#AsynchronousStreamDef"><span class="mw-headline" id="AsynchronousStreamDef">#</span></a> <font color="#006400">Asynchronous Stream Cipher</font></strong>: A Stream Cipher in which the key stream depends on the ciphertext in addition to the key - the key generation is reliant on previous ciphertext, making it a risky operation. An example is the Cipher Feedback (CFB) mode.
 <br><br><br>
 	  
-	  <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br><br>
+	  <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br>
+	  
+	  Note that this does <STRONG>NOT</STRONG> extend to the modulus of any other number - only for two. See the Vigenère Cipher (Rule 17), which works akin to a stream cipher, for proof.
+	  
+	  <br><br><br>
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -210,13 +214,13 @@ Thus, though there are very many ciphers that are "practically" secure (forming 
 <br><br><br>
 	  
 	  <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">C. Rule 24.</font></strong> <strong>One Time Pad (OTP)</strong><br><br>
-The OTP, as it were, is the unconditionally secure, perfect encryption algorithm, unbreakable in any meaningful way. The OTP is a stream cipher with the following properties:<br><br>
+The <strong>One Time Pad</strong> (also referred to as the "<strong>Vernam cipher</strong>"), as it were, is the unconditionally secure, perfect encryption algorithm, unbreakable in any meaningful way. The OTP is a stream cipher with the following properties:<br><br>
 1) The Keystream bits s<sub>i</sub> must originate from a TRNG.<br><br>
 2) Each Key stream bit must be used only once.<br><br>
 
 Knowledge of the Key Stream must be exclusively limited to the involved parties, of course. At the end of the data transfer, the party that received the data must destroy the key so that it cannot be used by another party to decrypt the message after the fact. This is the same reason why reusing keys is extremely risky and nullifies the security benefits of the OTP.<br><br>
 
-The security of cryptosystem draws from the fact that, without knowledge of the keystream, even a brute-force attack would be futile, because any two text strings are equally as probable to be the plaintext: if a four letter word were to be encrypted, it is equally probable for it to be "when", "stop", or "abcd".<br><br>
+The security of cryptosystem draws from the fact that, without knowledge of the keystream, even a brute-force attack would be futile, because any two text strings are equally as probable to be a particular word in the plaintext: if a four letter word were to be encrypted, it is equally probable for it to be "when", "stop", or "abcd".<br><br>
 
 There is one fundamental drawback of the OTP, however, that prevents its universal application: since keystream bits cannot be reused, <strong>the key has to be as long as the plaintext</strong>. A 400MB file, 8 bits to the byte, would entail a 3.2GB key.<br><br><br>
 	  
@@ -258,7 +262,7 @@ Key K = (A, B)<Br><br>
 
 <strong><u>Explanation:</u></strong><br><br>
 
-A means of generating a unique key stream using the PRNG system, based on the attributes of the key and the seed. This makes it more practical a system than the One-Time Pad, but much easier to break (see Rule 26).<br><br>
+A means of generating a unique key stream using the PRNG system, based on the attributes of the key and the seed. This makes it more practical a system than the One Time Pad, but much easier to break (see Rule 26).<br><br>
 Of course, separate from the nature of the function/equation itself, note that there are no "Encryption" or "Decryption" functions, because the given equation is merely for composing the keystream (in the Rule 23 PRNG-style), while the equation for the Stream <em>Cipher</em> itself remains the same (Rule 21).
 
 
@@ -338,7 +342,7 @@ The equation depends on the specific characteristics of the LFSR. Specifically, 
 
 $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
 
-<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 30) of the output sequence.<br><br>
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 31) of the output sequence.<br><br>
 
 <strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
 
@@ -363,7 +367,7 @@ There is an inherent relationship between electrical engineering and Cryptograph
 
 Today, all stream ciphers fit one of two categories: ciphers optimized for <strong>software implementation</strong>, and ciphers optimized for <strong>hardware implementation</strong>. A prime example of the latter are "Shift Register-Based Stream Ciphers", in particular shift registers with feedback, better known as Linear Feedback Shift Registers.<br><br>
 
-Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are algorithms of key stream generation that utilize yet another PRNG, and are thus crackable with some effort (see Rule 34).<br><br>
+Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are algorithms of key stream generation that utilize yet another PRNG, and are thus crackable with some effort (see Rule 35).<br><br>
 
 Many ciphers, such as the A51 cipher, consist of multiple LFSRs (in the case of A51, 3), which greatly enhance the security of the cipher and validate the usage of LFSR's for legitimate cryptographic purposes ([[[[[[[[[ how?).<br><br>
 
@@ -384,7 +388,7 @@ The specific mathematical formula of the key produced by the LFSR depicted is:<b
 <strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, helps form an LFSR. 
 <br><br><br>
 
-<strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
+<strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: Also referred as the "<strong>initialization vector</strong>" of the LFSR in this context. The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
 
  Even without knowledge of the XOR positions, by pure knowledge of the first state, every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> described in Rule 28.
 <br><br><br>
@@ -417,7 +421,7 @@ For the following formula, you must assume that s<sub>m</sub> is the sum of all 
 
 $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
 
-<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 30) of the output sequence.<br><br>
+<strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 31) of the output sequence.<br><br>
 
 <strong>i</strong> = The offset in the shift register, e.g., the number bit of the key stream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
 
@@ -432,24 +436,48 @@ $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<b
 <strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
 <br><br><br>
 	  
+	  <strong><a href="#PrimitivePolyDef"><span class="mw-headline" id="PrimitivePolyDef">#</span></a> <font color="#006400">Primitive Polynomials</font></strong>: A form of irreducible polynomials, akin to a "prime" polynomial, with the only "factors" being 1 and the polynomial itself. [[[[[[[EXPLAIN IN A MORE COHESIVE AND FULLY ELABORATED MANNER[[[[[[[[.
+<br><br><br>
 	  
-	  <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> 
+	  <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> <strong>Types of LFSRs:</strong><br><br>
+	  In practice, there are three types of LFSRs, the properties of which are the result of the feedback coefficients and degree.
+	  
+	  <ol>
+	  
+  	  <li><strong>Primitive Polynomial-based</strong>: These LFSRs are composed of primitive polynomials (see definition), and produce a maximum-length sequence, the only LFSRs to do so.
+  	  
+  	  </li><br>
+  	  
+  	  <li><strong>Non-Primitive Irreducible Polynomial-based</strong>: Using irreducible polynomials that are not "primitive", these LFSRs produce a period that is totally independent of the initial value/"state" of the register. These algorithms do <strong><u>not</u></strong> produce maximum-length sequences.
+  	  
+  	  </li><br>
+  	  
+  	  <li><strong>Reducible Polynomial-based:</strong> These LFSRs have a sequence/period <em>dependent</em> on the initial state of the register. Of course, these algorithms can never produce a maximum-length sequence.
+  	  
+  	  </li><br>
+	  
+	  </ol>
+	  
+	  <br>
+	  
+	  
+	  <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> 
 	  The <strong>Period</strong> is the number of different strings of numbers that can occur in a specific LFSR before repeating. In the LFSR given in Rule 28 (with 3 flip-flops), this number is 7, e.g. all possible states.<br><br>
 	  A simple principle can thus be derived: <strong>The maximum <em><u>possible</u></em> period (or sequence length) generated by an LFSR of degree m is 2<sup>m</sup> - 1.</strong><br><br>
 	  
 	  As soon as a previous bit pattern/sequence (a 'state') is reached, then the cycle will repeat itself. Only certain feedback configurations (P<sub>m-1</sub>, ..., P<sub>0</sub>) yield maximum length sequences, regardless of the initial bit pattern/state (!). For any LFSR with a set number of flip-flops, m, and a given positioning/number of XOR gates, no matter what the initial state is, the period will always be the same.<br><br>
 	  
 This is why the given value is the maximum <em>possible</em> period of an LFSR - only some reach it.<br><br>
-There are patterns within the LFSR, specifically that of the positioning of the XOR gates with respect to the degree m, that can be used to determine if an LFSR will produce a maximum-length period or not - see Rule 33 for more information. These patterns require knowledge of the Polynomial Representation of LFSR's, described in Rule 32.
+There are patterns within the LFSR, specifically that of the positioning of the XOR gates with respect to the degree m, that can be used to determine if an LFSR will produce a maximum-length period or not - see Rule 34 for more information. These patterns require knowledge of the Polynomial Representation of LFSR's, described in Rule 32.
 
 	  <br><br><br>
 	  
 	  
-	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> 
+	    <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">C. Rule 32.</font></strong> 
 	    The only string of bits that can never appear in an LFSR is straight 0's. Such a thing is only possible if the initial setting is all straight 0's, which is a ridiculous thought not to be entertained.
 	    <br><br><br>
 	  
-	  <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">C. Rule 32.</font></strong> <strong>Polynomial Representation of LFSR's</strong>:<br><br>
+	  <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">C. Rule 33.</font></strong> <strong>Polynomial Representation of LFSR's</strong>:<br><br>
 	  All that is needed to represent the nature of an LFSR (devoid of the initial state) is the degree m (the number of flip-flops), and the feedback coefficients. These characteristics can be represented in simple polynomial form:<br><br>
 
 <strong>P(x) = x<sup>m</sup> + P<sub>m-1</sub> × x<sup>m-1</sup> + ... + P<sub>1</sub> × x + P<sub>0</sub></strong>
@@ -464,17 +492,14 @@ For example: The LFSR depicted in Rule 28 would be represented as x³ + x + 1.<b
 Even if there were no XOR gates in the entire LFSR, then the equation would still be x<sup>m</sup> + 1, representing the ending and beginning points of feedback path.<br><br>
 What you are really looking at when you see a polynomial expression of an LSFR is the degree of the first term, and all of the terms in between the first term and the last term, because there is always going to be a +1 at the end. Otherwise, the output would not be incorporated into the feedback path, which is utterly preposterous and is never seen in the real world.<br><br>
 
-There are patterns in LFSR polynomials that can be used to determine whether the LFSR has a maximum-length period or not, described in Rule 33.
+There are patterns in LFSR polynomials that can be used to determine whether the LFSR has a maximum-length period or not, described in Rule 34.
 	  <br><br><br>
 	  
-	  <strong><a href="#PrimitivePolyDef"><span class="mw-headline" id="PrimitivePolyDef">#</span></a> <font color="#006400">Primitive Polynomials</font></strong>: A form of irreducible polynomials, akin to a "prime" polynomial, with the only "factors" being 1 and the polynomial itself. [[[[[[[EXPLAIN IN A MORE COHESIVE AND FULLY ELABORATED MANNER[[[[[[[[.
-<br><br><br>
-	  
-	  <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">C. Rule 33.</font></strong> <strong>Deriving Maximum-Length Periods from LFSR Polynomials:</strong><br><br>
+	  <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">C. Rule <U>34.</u><!--a wonderful milestone in any category.--></font></strong> <strong>Deriving Maximum-Length Periods from LFSR Polynomials:</strong><br><br>
 	  <strong>Only LFSR's with primitive polynomials</strong> (see definition) <strong>yield maximum-length sequences.</strong> <br><br>
 
 Below is a table showcasing an example primitive polynomial for each m value 2-128. Note that there are multitudes of primitive polynomials for any given m value, too many to produce a complete list. There are 6.92 × 10⁷ primitive polynomials for an LFSR of m 31.<br><br>
-In the table below, take the values as representing the degrees in reverse order: x^0 + x^1 + x^2, for example. This ensures the +1, a necessary component of any LFSR polynomial as explained in Rule 32.<br><br>
+In the table below, take the values as representing the degrees in reverse order: x^0 + x^1 + x^2, for example. This ensures the +1, a necessary component of any LFSR polynomial as explained in Rule 33.<br><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/LFSRTable.png"><img src="/cryptography/img/LFSRTable.png" alt="A table showcasing an example primitive polynomial for each m value 2-128." width=78%/></a></div>
 	    <span class="tiny"><em>A table showcasing an example primitive polynomial for each m value 2-128.</em></span>
 
@@ -483,7 +508,7 @@ In the table below, take the values as representing the degrees in reverse order
 	  <br><br><br>
 	  
 	  
-	  <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">C. Rule <U>34</u>.<!--a wonderful milestone in any category.--></font></strong> <strong>HOW TO CRACK A LINEAR FEEDBACK SHIFT REGISTER (LFSR):</strong><br><br>
+	  <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">C. Rule 35.</font></strong> <strong>HOW TO CRACK A LINEAR FEEDBACK SHIFT REGISTER (LFSR):</strong><br><br>
 	  
 	  
 	  While Linear Feedback Shift Register's have the properties of relative randomness and are exceedingly efficient (with 100 flip-flops, a miniscule amount of space in hardware, producing a period of 2¹⁰⁰ - 1), it fails on the last hurdle: <em>unpredictability</em>. <br><br>
@@ -539,21 +564,66 @@ With the keystream, Oscar will now, of course, be able to recover the full plain
 	      <h3><span class="mw-headline" id="AltSecureStream">III.IV Alternate Secure Stream Ciphers.</span></h3>
 	    </header>
 	    <article>
+	  
+	  <strong><font color="blue"><a href="#ModernCiphers"><span class="mw-headline" id="ModernCiphers">#</span></a> The Development of Modern Stream Ciphers:</font></strong><br><br>
+
+During the 1990s, stream ciphers were a center of attention for many cryptanalysts, who ruthlessly revealed vulnerabilites and weaknesses that opened particular popular ciphers of the time - this would fuel the predominance of block ciphers in modern cryptographic communications. <br><br>As a result, the eSTREAM project was established in 2004 by the "European Network of Excellence in Cryptology" (an E.U. front), which called for the development (and expert selection) of stream ciphers.<br><br> By 2008, several new, highly secure stream ciphers were developed, divided into two main categories/profiles:<br><br>
+
+<strong>1.</strong> Stream ciphers designed for implementation in software with high-volume data transfer requirements. Examples: Salsa20 (Rule 36) & ChaCha (Rule [[[[).
+<br><br>
+
+<strong>2.</strong> Stream ciphers designed for hardware implementation, with low power consumption, storage capabilities, and gate counts. Example: Trivium (Rule [[[[).
+<br><br><br>
+
+	  
+	  <strong><a href="#ARXORDef"><span class="mw-headline" id="ARXORDef">#</span></a> <font color="#006400">Add-Rotate-XOR (ARX) Ciphers</font></strong>: An algorithm in a cryptosystem that only uses additions, rotations, and XOR operations to generate its keystream.
+<br><br><br>
+	  
+	  <strong><a href="#NonceDef"><span class="mw-headline" id="NonceDef">#</span></a> <font color="#006400">"Nonce"</font></strong>: A number used only once.
+<br><br><br>
+	  
+	  <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">C. Rule 36.</font></strong> <strong>Salsa20:</strong><br><br>
+
+
+<strong><u>Mathematical Definition</u></strong>:<br><br>
+
+[[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
+
+
+<strong><u>Explanation:</u></strong><br><br>
+
+
+
+
+<strong>"Salsa20"</strong> is a family of profile-1 stream ciphers, developed in 2005. The PRNG utilizes a 32-bit ARX framework, with additional layers of security added through increased 'rounds' of encryption: the base cipher (Salsa20/20) uses 20 ciphers, while reduced-round, faster varients use 12 rounds (Salsa20/12) and 8 rounds (Salsa20/8), respectively.<br><br>
+
+Salsa20/20 (hereafter referred to as "Salsa20") supports key lengths of either 128 or 256 bits, though 256 is recommended. 
+
+[[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
+	  
+	  <br><br><br>
+	  
+	  
+	  <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">C. Rule 37.</font></strong> 
+	  [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
+	  
+	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
+	  
+	  <br><br><br>
+	  
+	  
+	    <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">C. Rule 38.</font></strong> 
+	    [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
+	  
+	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
+	    <br><br><br>
 	    
 	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+	    <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">C. Rule 39.</font></strong> 
+	    [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
+	  
+	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
+	    <br><br>
 	    
 	    
 	    
@@ -595,7 +665,7 @@ With the keystream, Oscar will now, of course, be able to recover the full plain
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong>Stream Ciphers</strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 28 2024</span><br>
+      	<span class="tiny">Last Change: December 30 2024</span><br>
       	<span class="tiny">Jonathan Lacabe 2024</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

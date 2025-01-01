@@ -3,6 +3,10 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+
+December 31 2024: Work on Cryptography, developing the DES section significantly, but also some on Calculus (in my own notebook, to be transferred to the site soon). By the end of 2025, I hope for all of Calculus, Multivariable Calculus, and Linear Algebra to be finished on the Math side, all of Electromagnetism (and some entry into Quantum Physics) on the Physics side, and for all of the currently established Cryptography sections (Symmetric Cryptography through Post-Quantum) to be finished as well. A tall order, but there is a considerable amount of time between then and now.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 43, 44, 45, 46.
+
 December 30 2024: Significant work in Block Ciphers, specifically regarding the Feistel Network.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 39, 40, 41, 42.
 

@@ -1,32 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The web site of humanknowledge</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  	<meta charset="UTF-8" />
+    <title>Limits (Differential Calculus)</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
   </head>
-  <body>
-    <h1>Welcome to my Website!</h1>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
 
-    <p>This is a paragraph! Here's how you make a link: <a href="https://neocities.org">Neocities</a>.</p>
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
 
-    <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Limits (Differential Calculus)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Limits in Differential Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <hr>
+	    <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="Limits">?. Limits.</span></h2>
+	  </header>
+	  <article><br>
+	      
+	      <strong><a href="#AverageRatesDef"><span class="mw-headline" id="AverageRatesDef">#</span></a> <font color="#006400">Average Rates/Speed</font></strong>: Average Speed is found by dividing the distance covered by the elapsed time.
+	    <br><br><br>
+	      
+	      <strong><a href="#LimitDef"><span class="mw-headline" id="LimitDef">#</span></a> <font color="#006400">Limit</font></strong>: The value a function approaches as it becomes closer to a specified point - thus, not necessarily actually being <em>at</em> that point, but rather as close to it as possible with being on it. If a function is continuous near that point, the limit equals the function's value; otherwise, it will describe the behavior of the function even if undefined at that point.
+	    <br><br><br>
+	    
+	    
+	    <strong><font color="blue"><a href="#LimitProperties"><span class="mw-headline" id="LimitProperties">#</span></a> Properties of Limits:</font></strong><br><br>
+        Similar to Logarithms, Limits have their internal rules that can applied at any time. The "commandments" version of this list can be seen in Rule 110.<br><br><br><br>
+        
+        <strong><a href="#LP1"><span class="mw-headline" id="LP1">1.</span></a> </strong>The limit of a constant is equal to a constant.
+        $$\lim_{x \to a} c = c$$
+        <br><br><br>
+        
+        <strong><a href="#LP2"><span class="mw-headline" id="LP2">2.</span></a> </strong>The limit of x as x approaches a, equals a.
+        $$\lim_{x \to a} x = a$$
+        <br><br><br>
+        
+        <strong><a href="#LP3"><span class="mw-headline" id="LP3">3.</span></a> </strong>The limit of a sum is the sum of the limits.
+        $$\lim_{x \to a} (f(x) + g(x)) = \lim_{x \to a} f(x)  + \lim_{x \to a} g(x)$$
+        <br><br><br>
+        
+        <strong><a href="#LP4"><span class="mw-headline" id="LP4">4.</span></a> </strong>The limit of a difference is the difference of the limits.
+        $$\lim_{x \to a} (f(x) - g(x)) = \lim_{x \to a} f(x)  - \lim_{x \to a} g(x)$$
+        <br><br><br>
+        
+        <strong><a href="#LP5"><span class="mw-headline" id="LP5">5.</span></a> </strong>The limit of a constant times a function is the constant times to limit of the function.
+        $$\lim_{x \to a} [c × f(x)] = c \lim_{x \to a} f(x)$$
+        <br><br><br>
+        
+        <strong><a href="#LP6"><span class="mw-headline" id="LP6">6.</span></a> </strong>The limit of a product is the product of the limits.
+        $$\lim_{x \to a} (f(x) × g(x)) = \lim_{x \to a} f(x)  × \lim_{x \to a} g(x)$$
+        <br><br><br>
+        
+        <strong><a href="#LP7"><span class="mw-headline" id="LP7">7.</span></a> </strong>The limit of a quotient is the quotient of the limits, provided the denominator does not equal zero.
+        $$\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}$$
+        <br><br><br>
+        
+        <strong><a href="#LP8"><span class="mw-headline" id="LP8">8.</span></a> </strong>The limit of a sum is the sum of the limits.
+        $$\lim_{x \to a} (f(x))^n = (\lim_{x \to a} f(x))^n$$
+        
+        
+        
+<br><br><br>
 
-    <p>Here's how you can add an image:</p>
-    <img src="/neocities.png">
+      <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">Rule 106.</font></strong> The average rate of change IS the slope. The average speed is the distance covered divided by the elapsed time, like miles per hour.<br><br><br>
 
-    <p>Here's how to make a list:</p>
+	     <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">Rule 107.</font></strong>Say that 16t² is the free fall motion of an object with no air resistance. It will follow the same (∆y / ∆t) formula as the slope formula.<br><br>
+	     
+	     <strong>∆ (Delta)</strong> means as "the change in", so (change in distance / change in time). From 0 to 2 seconds, the rock will travel (6(2)² - (6(0)^2)) / (2 - 0), or 34 ft/sec average speed.
+	     <br><br><br>
+	     
+	     <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">Rule 108.</font></strong> To find the instaneous speed/rate of change, the limit formula is as follows:
+	     $$\lim_{h \to 0} \frac{f(a + h) - f(a)}{h}$$
+	     
+	     You know a and the equation at first, plug in (a + h) to the equation and complete formula. Then, plug in 0 for h to find instantaneous velocity/speed.
+	     <br><br><br>
+	     
+	     <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">Rule 109.</font></strong> Speed is the time rate at which an object is moving along a path, while velocity is the rate and direction of an object's movement.<br><br><br>
+	     
+	     
+	     
+	     
+	     <strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">Rule 110.</font></strong> There are nine holy truths of limits that must always be remembered and and held immutable. They are similar to the mystical factoring rules, and some are versions of the <a href="#LimitProperties">Limit Properties</a> referenced previously:
+	     
+	      
+	     <br><br>
+	     
+	     <ol>
+<!--1--><li>The equivalance of constants. (L.P. <a href="#LP1">#1</a>)
 
-    <ul>
-      <li>First thing</li>
-      <li>Second thing</li>
-      <li>Third thing</li>
-    </ul>
+</li><br>
 
-    <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
-  </body>
+<!--2--><li>The equivalance of a to x approaching a. (L.P. <a href="#LP2">#2</a>)
+
+</li><br>
+
+<!--3--><li>The Sum Rule. (L.P. <a href="#LP3">#3</a>)
+
+</li><br>
+
+<!--4--><li>The Difference Rule. (L.P. <a href="#LP4">#4</a>)
+
+</li><br>
+
+<!--5--><li>The Constant Multiplication Rule. (L.P. <a href="#LP5">#5</a>)
+
+</li><br>
+
+<!--6--><li>The Limit Product Rule. (L.P. <a href="#LP6">#6</a>)
+
+</li><br>
+
+<!--7--><li>The Limit Quotient Rule. (L.P. <a href="#LP7">#7</a>)
+
+</li><br>
+
+<!--8--><li>The Limit Power Rule. (L.P. <a href="#LP8">#8</a>)
+
+</li><br>
+
+<!--9--><li>The Radical Rule. (a synthesis of L.P. <a href="#LP7">#8</a> & <a href="#LP7">#7</a> or <a href="#LP6">#6</a>)
+
+</li>
+
+  </ol>
+	     
+	     <br><br>
+	     
+	     <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">Rule 111.</font></strong> The one-sided limit is allowed to be infinity, while two-sided limits cannot be infinity and must not be a number.
+	     
+	     <br><br><br>
+	     
+	     <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">Rule 112.</font></strong> <strong>The Squeeze Theorem</strong>:<br><br>
+	     When the limit can't be found directly, find it indirectly using the squeeze theorem. The way this theorem works, is to 'squeeze' function f (which has the uncertain limit) between two functions, h and g, and find their limits. Definitionally, this is written as follows:<br><br>
+	     
+	     If g(x) ≤ f(x) ≤ h(x), where x ≠ c in some interval around c, then:
+	     $$\lim_{x \to c} g(x) = \lim_{x \to c} h(x) = L$$
+	     <br>The classic example of a function that must use the Squeeze Theorem is one that oscillates, such as x² × sin(1/x).<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/squeezediagram.png"><img src="/math/img/squeezediagram.png" alt="The demonstration of how the squeeze theorem may work on a function f, with the functions h and g above and below 'squeezing' the position of f at a point, thus requiring the limit of f to match that of h and g at that point. Courtesy of Cooper's Calculus." width=44%/></a></div>
+	    <span class="tiny"><em>The demonstration of how the squeeze theorem may work on a function f, with the functions h and g above and below 'squeezing' the position of f at a point, thus requiring the limit of f to match that of h and g at that point. Courtesy of <a href="https://www.youtube.com/watch?v=ZH60sVXj2eg">Cooper's Calculus</a>.</em></span><br>
+	      The key idea of the Squeeze Theorem is that if h(x), which is above f(x), has its limit at c with the same y-value as g(x), then f(x) would also have to have that limit because it is between g(x) and h(x).
+	     <br><br><br>
+	     
+	     <strong><a href="#InfinityDef"><span class="mw-headline" id="InfinityDef">#</span></a> <font color="#006400">Infinity/∞</font></strong>: The term 'infinity' does not refer - it describes the behavior of a function. Infinity means an increasing distance forever.
+	    <br><br><br>
+	     
+	     
+	     <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">Rule 113.</font></strong> The squeeze theorem also works for infinite limits.<br><br><br>
+	     
+	     <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">Rule 114.</font></strong> To find the horizontal asymptote, you can take the biggest thing on top, and divide it by the biggest thing on the bottom, or you could factor out the biggest base (with exponent), even if it makes every divisor weird. Then, factor to find the vertical asymptote, just plug in zero for the bottom, or cheat by using a graph.<br><br><br>
+	     
+	     <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">Rule 115.</font></strong> <strong>End Behavior Models</strong><br><br>
+	     
+	     You can determine the end behavior of a complicated polynomial by looking at a similar one that acts exactly the same for extremely large values of x. For all polynomials, <strong>g(x) = a<sub>n</sub> × xⁿ</strong> is the end behavior.<br><br>
+	     The function g must be:<br><br>
+	     a) A right end behavior model for f if $$\lim_{x \to ∞} \frac{f(x)}{g(x)} = 1$$
+	     <br><br><br>
+	     b) a left end behavior model for f if $$\lim_{x \to -∞} \frac{f(x)}{g(x)} = 1$$
+	     
+	     <br><br>
+	     
+	     <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">Rule 116.</font></strong> If the EBM is a constant, then it is a horizontal asymptote.<br><br><br>
+	     
+	     <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">Rule 117.</font></strong> A function's right & left end behavior models are not always the same function.<br><br><br>
+	     
+	     <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">Rule 118.</font></strong> Tradition dictates that for an equation with only two polynomials, the <u>left</u> one is the REBM and the <u>right</u> is the LEBM. Yes, opposite of what one may immediately think.<br><br><br>
+	     
+	     <strong><font color="blue"><a href="#ReciprocalSubstitution"><span class="mw-headline" id="ReciprocalSubstitution">#</span></a> Reciprocal Substitution:</font></strong><br><br>
+        There is a very specific and unique characteristic of Limits that must always be kept in mind when performing problems. Reciprocal substitution can be performed by taking the variable of the limit (90% of the time being x), flip it to its reciprocal (e.g., 1/x for x), and switch the term of the limit as shown below. This reciprocal is performed even for x's inside of trig. functions - it is done for <u>all instances</u>.<br><br>
+        
+        $$\lim_{x \to ∞} \frac{1}{x} = \lim_{x \to 0^+} x$$
+        $$\lim_{x \to -∞} \frac{1}{x} = \lim_{x \to 0^-} x$$
+        <br>Infinity goes to Zero-Right, as Negative Infinity goes to Zero-Left. The nature of the reciprocal is not specific a specific side - either infinity or the zero could have 1/x or x.
+        <br><br><br>
+	     
+	     <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">Rule 119.</font></strong> Rampant idiocracy<!--"Liberalism", as I put it in the book--> has softened testing policy enough that you may be able to, in essence, <u>cheat</u> and look at the graph to determine values like the end behavior mode and asymptotes<!--, even on the AP test-->.
+	     <br><br><br>
+	     
+	     <strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">Rule 120.</font></strong> If the assumed number for the LEDM of some two-polynomialed equation doesn't work, then try the answer for the REBM. Same for the issue vice-versa.<br><br><br>
+	     
+	     <strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">Rule 121.</font></strong> For piecewise functions, even if x is ≥ or ≤ or &gt; or whatever to 0, a (Lim x→0⁻) will make the function go to the f(x) for less than zero, and (Lim x→0⁺) makes it go to x > 0. Think of it like the plus and negative signs -0.1 or add 0.1 to the value.<br><br><br>
+	     
+	     <strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">Rule 122.</font></strong> Any function y = f(x) whose graph y = f(x) can be sketched in one continuous motion without lifting the pencil is an example of a <strong>continuous function</strong>.<br><br><br>
+	     
+	     <strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">Rule 123.</font></strong> There are two RULES of CONTINUITY, which if both met, establish UNIVERSAL CONTINUITY for a function.<br><br>
+	     
+	     <ol type="a">
+
+          <li>A function y = f(x) is continuous at an inerior point c of its domain if:<br>
+          
+          $$\lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = f(c)$$
+          
+          $$\lim_{x \to c} f(x) = f(c)$$
+          
+          </li><br><br>  
+        
+          <li>A function y = f(x) is continuous at a left endpoint <u>a</u> if:<br>
+          $$\lim_{x \to a^+} f(x) = f(a)$$<br>
+          and is continous at a right endpoint <u>b</u> of its domain if:
+          $$\lim_{x \to b^-} f(x) = f(b)$$<br>
+          
+          If a function f is not continuous at a point x, we say that f is discontinuous at c, and that c is a "<strong>point of discontinuity</strong>" of f.
+          
+          </li> 
+
+        </ol>
+	     
+	     
+	     <br><br><br>
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	      </article>
+
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
+        <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong><a href="/math/calculuspart2.html">Integral Calculus</a></strong></article>
+        <br>
+        <article><strong>Limits</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: January 2 2025</span><br>
+      	<span class="tiny">Jonathan Lacabe 2025</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
 </html>

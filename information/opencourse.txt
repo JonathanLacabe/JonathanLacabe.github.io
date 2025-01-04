@@ -1,4 +1,4 @@
-All of the MIT OpenCourseWare courses I have studied in their entirety. Soon (within the next few years), this page should be incorporative of all science courses MIT has to offer.
+All of the MIT OpenCourseWare courses I, Jonathan Lacabe, have studied in their entirety. Soon (within the next few years, if I go really hardcore (which I intend to)), this page should be incorporative of all science courses MIT has to offer.
 
 
 Physics (8):
@@ -7,6 +7,8 @@ Physics (8):
 
 Math (18):
 18.01 - Single Variable Calculus - Fall 2006
+18.01SC - Single Variable Calculus Recitation - Fall 2010
+
 
 
 

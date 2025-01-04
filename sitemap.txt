@@ -1,4 +1,4 @@
-All pages as of December 6 2024.
+All pages as of January 1 2025.
 
 Home                                                 - https://humanknowledge.neocities.org/
 
@@ -20,6 +20,7 @@ Physics                                              - https://humanknowledge.ne
 ---Momentum & Center of Mass                         - https://humanknowledge.neocities.org/Physics/mechanics/momentum
 ---Rotational Dynamics                               - https://humanknowledge.neocities.org/Physics/mechanics/rotationaldynamics
 ---Gravitation                                       - https://humanknowledge.neocities.org/Physics/mechanics/gravitation
+---Oscillations                                      - https://humanknowledge.neocities.org/Physics/mechanics/oscillations
 
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
 
@@ -52,6 +53,14 @@ Mathematics                                          - https://humanknowledge.ne
 
 
 Cryptography                                         - https://humanknowledge.neocities.org/cryptography/cryptography
+~List of Cryptography Equations                      - https://humanknowledge.neocities.org/cryptography/cryptoeq
+
+-Symmetric Cryptography                              - https://humanknowledge.neocities.org/cryptography/symmetry.html
+--Full Symmetric Cryptography                        - https://humanknowledge.neocities.org/cryptography/symmetricFull.html
+---Introductions                                     - https://humanknowledge.neocities.org/cryptography/symmetric/intro.html
+---Historical Ciphers & Modular Arithmetic           - https://humanknowledge.neocities.org/cryptography/symmetric/historical.html
+---Stream Ciphers                                    - https://humanknowledge.neocities.org/cryptography/symmetric/stream.html
+---Block Ciphers                                     - https://humanknowledge.neocities.org/cryptography/symmetric/block.html
 
 
 

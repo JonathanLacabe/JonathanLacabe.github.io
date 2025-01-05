@@ -7,8 +7,8 @@ Physics (8):
 
 Math (18):
 18.01 - Single Variable Calculus - Fall 2006
-18.01SC - Single Variable Calculus Recitation - Fall 2010
-
-
+18.01SC - Single Variable Calculus Scholar Course - Fall 2010
+18.02 - Multivariable Calculus - Fall 2007
+18.02SC - Multivariable Calculus - Fall 2010
 
 

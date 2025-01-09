@@ -3,13 +3,19 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-January 6 2024: Considerable work was done on the Math Symbols page. Furthermore, I created the Multivariable Calculus pages, and worked on them on paper.
+January 8 2025: Continual Calculus Work, with lots (!!!) of Multivariable Calculus work done on paper. Further work on the Math Symbols page as well, 'finishing' (in terms of all the symbols I had listed) the Non-Constant Symbols section, and beginning significant work on the 'Constants' section. Furthermore, the logo for the Symmetric Cryptography category was finished and added to all applicable pages.
+Rules Added: Mathematics, Single Variable Calculus - Rule 129.
+
+January 7 2025: Calculus work. 
+Rules Added: Mathematics, Single Variable Calculus - Rule 128.
+
+January 6 2025: Considerable work was done on the Math Symbols page. Furthermore, I created the Multivariable Calculus pages, and worked on them on paper.
 Rules Added: Mathematics, Single Variable Calculus - Rule 127.
 
-January 5 2024: Calculus work. Today, I worked on Multivariable Calculus in my paper notes. In doing so, I revised some of my Physics notes regarding Dot Product (which were some of the first non-math notes added to the site), making it flow and look much better.
+January 5 2025: Calculus work. Today, I worked on Multivariable Calculus in my paper notes. In doing so, I revised some of my Physics notes regarding Dot Product (which were some of the first non-math notes added to the site), making it flow and look much better.
 Rules Added: Mathematics, Single Variable Calculus - Rule 126.
 
-January 4 2024: Calculus work.
+January 4 2025: Calculus work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 125.
 
 January 3 2025: Formalization of the website has begun - several older, non-educational, disused pages (which merely take up space on the site) have been removed. Additional, minor updates to the Calculus page have been performed as a part of the new program/goal I am forwarding with regard to my paper Math notes, which continue to increase in the amount remaining to be digitized. In formalizing the site, a major update to the About page was done.

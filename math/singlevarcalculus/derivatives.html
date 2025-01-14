@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Derivatives (Differential Calculus)</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
+  </head>
+<body><style>
+rainbow {
+  margin-top: 0px;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Derivatives (Differential Calculus)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Derivatives in Differential Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <hr>
+	  
+	    <header class="articleHeader"><hr>
+	    <h3><span class="mw-headline" id="Derivative1">?. Derivative.</span></h3>
+	  </header>
+	  <article><br>
+	      
+	      <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">Rule 130.</font></strong> A <strong>secant line</strong> is a line that intersects the line at two places. The <em>slope</em> of the secant line is the <u>average rate of change</u> between the two points.
+	     <br><br><br>
+	     
+	     
+	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">Rule 131.</font></strong> A <strong>tangent line</strong> is a line that intersects a curve at exactly one point. The <em>slope</em> of the tangent line is the <u>instantaneous rate of change</u> at a point.
+	    <br><br><br>
+	    
+	    <strong><a href="#DifferenceQuotientDef"><span class="mw-headline" id="DifferenceQuotientDef">#</span></a> <font color="#006400">Difference Quotient</font></strong>: 
+	    $$\frac{f(x + h) - f(x)}{h}$$
+	    The "Difference Quotient", given above, represents the secant line of a curve from the point (a, f(a)) to (a+h, f(a+h)), which is also the average rate of change from x=a to x=a+h:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/differenceQuotientSecant.jpg"><img src="/math/img/differenceQuotientSecant.jpg" alt="The graph of a curve f, which has a secant line from (a, f(a)) to (a+h, f(a+h)), which is given by the difference quotient. Courtesy of Study.com." width=44%/></a></div>
+	    <span class="tiny"><em>The graph of a curve f, which has a secant line from (a, f(a)) to (a+h, f(a+h)), which is given by the difference quotient. Courtesy of <a href="https://study.com/skill/learn/determining-the-average-rate-of-change-using-the-difference-quotient-of-f-a-plus-h-f-a-h-explanation.html">Study.com</a>.</em></span><br>
+	    <br><br><br>
+	    
+	    <strong><a href="#NormalLineDef1"><span class="mw-headline" id="NormalLineDef1">#</span></a> <font color="#006400">Normal Line</font></strong>: The line normal to a curve is the line perpendicular to the tangent at that point.
+	    <br><br><br>
+	    
+	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">Rule 132.</font></strong> When the limit exists, it's called the <strong><em>derivative</em></strong> of f at a, or any point. The derivative is f'(x) =
+	    $$\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
+	    provided the limit exists. "Differentiate" means to determine the Derivative.
+	    <br><br><br>
+	    
+	    <strong><font color="blue"><a href="#VerbalNotation"><span class="mw-headline" id="VerbalNotation">#</span></a> Verbal Descriptions of Calculus Notation:</font></strong><br>
+	    
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/NotationVerbal.png"><img src="/math/img/NotationVerbal.png" alt="A 'READ:', 'SAY:' chart for f'(x), y', dy/dx, and d/dx." width=44%/></a></div>
+	    <span class="tiny"><em>A "READ:", "SAY:" chart for f'(x), y', dy/dx, and d/dx.</em></span>
+	    <br><Br><br>
+	    
+	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">Rule 133.</font></strong> 
+	    Graphing the derivative without knowledge of the formulas for dy/dx nor the parent function, is wack:<br><br>
+	    First, get the slope between two points on the original f(x) and find the slope. As x increases, a decreasing f(x) value indicates a negative slope, while an increasing f(x) value indicates a positive slope. Find an x-value in the middle of the two points and use it as the x-value. Use the slope as the y-value and plug into the new graph, and repeat. Fo a graph with "pointy points", known as corners, they are undefined in the derivative graph (the f'(x)), as they do not have local linearity (see [[[).
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">Rule 134.</font></strong> When a fraction has a square root, standard procedure is to multiply it by a conjugate, especially if the square root is on the denominator.
+	    <br><br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	      </article>
+
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
+        <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong><a href="/math/calculuspart2.html">Integral Calculus & Calculus 2</a></strong></article>
+        <br>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href=""></a>Derivatives</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: January 13 2025</span><br>
+      	<span class="tiny">Jonathan Lacabe 2025</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

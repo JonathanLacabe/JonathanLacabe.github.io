@@ -3,7 +3,12 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-January 12 2025: Calculus Work.
+
+
+January 13 2025: Calculus Work. I created the Derivative page to incorporate some of the newer rules being added.
+Rules Added: Mathematics, Single Variable Calculus - Rule 134.
+
+January 12 2025: Calculus Work. Minor edits to the about page.
 Rules Added: Mathematics, Single Variable Calculus - Rule 133.
 
 January 11 2025: Calculus, Single-Variable and Multivariable work, along with what should be my final adjustments to the older Physics pages for the time being.

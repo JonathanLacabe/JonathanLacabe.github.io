@@ -3,7 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-
+January 14 2025: Calculus Work. Furthermore, I created the rest of the Cryptography pages in preparation for the rest of them being worked on and completed after Symmetric Encryption - I am currently shooting for a Late March completion date for all six Cryptography categories that are currently up, and for the OCR program to be up and running before the end of January. Note that the completion of the given Cryptography pages does not specifically mean that Cryptography as a subject has been cohesively incorporated, in all of its knowledge, into the site, only that the series I am following has concluded. More series, textbooks, and whatnot will supply additionall knowledge until some point in the future where all knowable information regarding Cryptography is incorporated in the page, in a highly-accessible manner (accessible because I have created explanations that I myself can understand, and I am a fool). By late March, however, a very good general overview of the six existing cryptography subjects will be cohesively established.
+Rules Added: Mathematics, Single Variable Calculus - Rule 135.
 
 January 13 2025: Calculus Work. I created the Derivative page to incorporate some of the newer rules being added.
 Rules Added: Mathematics, Single Variable Calculus - Rule 134.

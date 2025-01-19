@@ -3,6 +3,18 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+January 18 2025: Calculus Work. I have been thinking about how I am going to deal with adding new sections to older parts of the site, entailing the renumbering of huge amounts of rules and entire sections, and I have come to the conclusion that this process can be yearly, taking place as a part of a yearly "Edition" updating. Think of the current incarnation of the site as being a v0.15 or something of the sort, like how a developer update register would label updates. Since this website is, in effect, rewriting textbooks and incorporating huge amounts of often disconnected pieces of knowledge into a cohesive and, most importantly, accessible whole, the "first edition" as it were will be formed whenever I finish incorporating all of the missing Precalculus sections, which will likely require years, since that is low on my priority register. When the Precalulus section is fully fitted, I am going to update all of the section numbers accordingly, and will painstakingly go through the entire process of renumbering all necessary rules, and catalog all references to rules in each page in order to fix all linkings. This will entail making every single WoO a fully fledged rule, which I feel is necessary to make the site more encyclopedic.
+Rules Added: Mathematics, Single Variable Calculus - Rule 139.
+
+January 17 2025: Calculus Work. 
+Rules Added: Mathematics, Single Variable Calculus - Rule 138.
+
+January 16 2025: Calculus Work. 
+Rules Added: Mathematics, Single Variable Calculus - Rule 137.
+
+January 15 2025: Calculus Work. 
+Rules Added: Mathematics, Single Variable Calculus - Rule 136.
+
 January 14 2025: Calculus Work. Furthermore, I created the rest of the Cryptography pages in preparation for the rest of them being worked on and completed after Symmetric Encryption - I am currently shooting for a Late March completion date for all six Cryptography categories that are currently up, and for the OCR program to be up and running before the end of January. Note that the completion of the given Cryptography pages does not specifically mean that Cryptography as a subject has been cohesively incorporated, in all of its knowledge, into the site, only that the series I am following has concluded. More series, textbooks, and whatnot will supply additionall knowledge until some point in the future where all knowable information regarding Cryptography is incorporated in the page, in a highly-accessible manner (accessible because I have created explanations that I myself can understand, and I am a fool). By late March, however, a very good general overview of the six existing cryptography subjects will be cohesively established.
 Rules Added: Mathematics, Single Variable Calculus - Rule 135.
 

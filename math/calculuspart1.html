@@ -53,6 +53,7 @@ rainbow {
 		  <hr><!--Internal Pages-->
 		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
 		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
 		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
 		  <a href="/information/about.html">About</a><br>
 		  <hr><!--Special Github Mirror-->
@@ -389,6 +390,58 @@ rainbow {
 	    
 	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">Rule 135.</font></strong> For the alternate definition of the derivative, you always want to do all the algebra first before substituting for a at the end. Then, you can do a.<br><br><br>
 	    
+	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> Function f(x) is differentiable on a closed interval [a, b] if it has a derivative at every interior point of the interval, and if the limits below exist at the endpoints.<br><br>
+	    $$\lim_{h \to 0^+} \frac{f(a + h) - f(a)}{h}$$
+	    is the right-hand derivative, and<br><br><br>
+	    
+          $$\lim_{h \to 0^-} \frac{f(b + h) - f(b)}{h}$$
+	    is the left-hand derivative.
+	    <br><br><br>
+	    
+	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> The left hand derivative can be found by using the regular f(x), while the right hand derivative is found by using the equation of the f'(x) derivative found from the left hand derivative. If the two derivatives are equal to each other, then the derivative in totality is real<!--extant-->.<br><br><br>
+	    
+	    <strong><a href="#DifferentiabilityDef"><span class="mw-headline" id="DifferentiabilityDef">#</span></a> <font color="#006400">Differentiability</font></strong>: The ability to find slope at a point, which is necessary to take the derivative.
+	    <br><br><br>
+	    
+	    
+	    <strong><font color="blue"><a href="#NonDiffCases"><span class="mw-headline" id="NonDiffCases">#</span></a> Cases when f'(a) doesn't exist (or, when a point is non-differentiable):</font></strong><br>
+	    
+	    
+	    <ol type="a">
+
+          <li>A <strong>Corner</strong>: f(x) = |x|<br><br>
+          A corner occurs when, at the point a, the function on the graph will make a sharp turn, and it's slope will change instantaneously.<br>
+          </li><br><br>  
+          
+          <li>A <strong>Cusp</strong>: f(x) = x<sup>2/3</sup><br><br>
+          A cusp occurs when the line gradually curves into a sharp corner. In effect, the cusp is a special case of the corner: the cusp only has one possible tangent, while a corner has two distinct ones.<!----><br>
+          </li><br><br>  
+          
+          <li>A <strong>Vertical Tangent</strong>: f(x) = <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">x</span></span><br><br>
+          When the line is vertical, there is no slope, and thus it is non-differentiable at that point.<br>
+          </li><br><br>
+          
+        
+          <li>A <strong>Discontinuity</strong>:<br><br>
+          For example, a non-continuous piecewise function. The derivative (nor the limit, if it is a jump discontinuity) exists at a point that is discontinous.<br>
+          
+          </li> 
+
+        </ol>
+        
+	    <br><Br><br>
+	    
+	    <strong><a href="#LocalLinearityDef"><span class="mw-headline" id="LocalLinearityDef">#</span></a> <font color="#006400">Local Linearity</font></strong>: If you focus on a point on a curve, if you continuously zoom in on the point, eventually the graph of the curve at the point will resemble a line. Differentiability implies local linearity.
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> The <strong>symmetric difference quotient</strong> is as follows:
+	    $$f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x - h)}{2h}$$
+	   It is used any time you want the derivative from each side of the tangent line (the distance being h), rather than from just one side.<br><br><br>
+	    
+	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> A derivative is a limit. Not only does the limit have to exist, it must also be continuous. The slope on the left being different from the derivative on the right rules out corners from having derivatives. If the slope becomes a vertical line (e.g., slope/m = infinity), then the derivative also does not exist.<br><br><br>
+	    
+	    
 	    
 	    
 	    
@@ -399,12 +452,6 @@ rainbow {
 	    
 	    <!--
 	    
-	    
-	    
-	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> <br><br><br>
-	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> <br><br><br>
-	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> <br><br><br>
-	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> <br><br><br>
 	    
 	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">Rule 140.</font></strong> <br><br><br>
 	    <strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">Rule 141.</font></strong> <br><br><br>
@@ -514,7 +561,7 @@ rainbow {
         <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: January 14 2025</span><br>
+      	<span class="tiny">Last Change: January 18 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

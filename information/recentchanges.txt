@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+Jaunary 19 2025: Calculus Work. Improvements were made to some Physics page and to the homepage.
+Rules Added: Mathematics, Single Variable Calculus - Rule 140.
+
 January 18 2025: Calculus Work. I have been thinking about how I am going to deal with adding new sections to older parts of the site, entailing the renumbering of huge amounts of rules and entire sections, and I have come to the conclusion that this process can be yearly, taking place as a part of a yearly "Edition" updating. Think of the current incarnation of the site as being a v0.15 or something of the sort, like how a developer update register would label updates. Since this website is, in effect, rewriting textbooks and incorporating huge amounts of often disconnected pieces of knowledge into a cohesive and, most importantly, accessible whole, the "first edition" as it were will be formed whenever I finish incorporating all of the missing Precalculus sections, which will likely require years, since that is low on my priority register. When the Precalulus section is fully fitted, I am going to update all of the section numbers accordingly, and will painstakingly go through the entire process of renumbering all necessary rules, and catalog all references to rules in each page in order to fix all linkings. This will entail making every single WoO a fully fledged rule, which I feel is necessary to make the site more encyclopedic.
 Rules Added: Mathematics, Single Variable Calculus - Rule 139.
 

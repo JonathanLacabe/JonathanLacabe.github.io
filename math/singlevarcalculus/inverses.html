@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Inverses (Differential Calculus)</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
+  </head>
+<body><style>
+rainbow {
+  margin-top: 0px;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Inverses (Differential Calculus)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Inverses in Differential Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <hr>
+	  
+	    <header class="articleHeader"><hr>
+	    <h3><span class="mw-headline" id="Inverses">?. Inverses.</span></h3>
+	  </header>
+	  <article><br>
+	      
+	      <strong><a href="#Rule152"><span class="mw-headline" id="Rule152">#</span></a> <font color="red">Rule 152.</font></strong> Steps for <strong>Implicit Differentiation</strong>:<br><br>
+	    <ol>
+	    
+	      <li>
+	      Differentiate both sides with respect to x.
+	      </li><br><br>
+	      
+	      <li>
+	      Collect the terms with dy/dx on one side of the equation.
+	      </li><br><br>
+	      
+	      <li>
+	      Factor out dy/dx.
+	      </li><br><br>
+	      
+	      <li>
+	      Solve for dy/dx.
+	      </li>
+	      
+	    </ol>
+	    
+	    <br>
+	    
+	    <strong><a href="#Rule153"><span class="mw-headline" id="Rule153">#</span></a> <font color="red">Rule 153.</font></strong> 
+	    For Implicit Differentiation, only when finding the derivative of y do you need to get dy/dx and use the chain rule. For x, you can just find the derivative with the power rule.
+	    <br><br><br>
+	    
+	    <strong><a href="#Rule154"><span class="mw-headline" id="Rule154">#</span></a> <font color="red">Rule 154.</font></strong> 
+	    When writing powers of trigonometric functions, like y = sin³(x), always rewrite the function like y = (sin(x))³. This will make it easier to take derivatives, if needed, and is just a simpler way of seeing the exponential.
+	    <br><br><br>
+	    
+	    <strong><a href="#Rule155"><span class="mw-headline" id="Rule155">#</span></a> <font color="red">Rule 155.</font></strong> 
+	    To find the <strong>derivative of the inverse</strong> of a function, use the formula 1/f'(g(x)) without multiplying by the derivative of the inner function.
+	    <br><br><br>
+	    
+	    <strong><a href="#Rule156"><span class="mw-headline" id="Rule156">#</span></a> <font color="red">Rule 156.</font></strong> To find the implicit differentiation of trigonometric functions, you just take the derivative of the function itself multiplied by the y': sin(y) = cos(y) × dy/dx.<br><br><br>
+	    
+	    <strong><a href="#Rule157"><span class="mw-headline" id="Rule157">#</span></a> <font color="red">Rule 157.</font></strong> The inverse of the function f(x) = y is found simply by reversing the x & y values in the function. If f is differentiable at every point of an interval I, and df/dx is never zero along I, then f has an inverse and f<sup>-1</sup> is differentiable at every point on interval f(I).<br><br>
+	    
+	    df/dx is never zero because a function only <em>has</em> an inverse when it is ALWAYS increasing or decreasing. ([[[must past horiz. and vert. line test]]])<br><br>
+	    
+	    df/dx = 0 means a horizontal tangent not increasing or decreasing at that point. Horizontal tangents can denote a change in direction of the function, as long as the sign of df/dx changes from before and after the found horizontal tangent point.
+	    <br><br><br>
+	    
+	    
+	    <strong><font color="blue"><a href="#InverseTrigDeriv"><span class="mw-headline" id="InverseTrigDeriv">#</span></a> Inverse Trigonometric Derivatives:</font></strong><br><br>
+	    
+	    (d/dx) <strong>sin⁻¹(x)</strong>&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;(1 / <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">1 - x²</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |x| &lt; 1.
+	    <br><br>
+	    
+	    (d/dx) <strong>csc⁻¹(x)</strong>&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;(-1 / |x|<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x² - 1</span></span>)&nbsp;&nbsp; |x| &gt; 1.
+	    <br><br>
+	    
+	    (d/dx) <strong>cos⁻¹(x)</strong>&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;(-1 / <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">1 - x²</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |x| &lt; 1.
+	    <br><br>
+	    
+	    (d/dx) <strong>sec⁻¹(x)</strong>&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;(1 / |x|<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x² - 1</span></span>)&nbsp;&nbsp;&nbsp; |x| &gt; 1.
+	    <br><br>
+	    
+	    (d/dx) <strong>tan⁻¹(x)</strong>&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;(1 / 1 + x²)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all real #s.
+	    <br><br>
+	    
+	    (d/dx) <strong>cot⁻¹(x)</strong>&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;(-1 / 1 + x²)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all real #s.
+	    
+	    
+        <br><br><br>
+	    
+	    <strong><a href="#Rule158"><span class="mw-headline" id="Rule158">#</span></a> <font color="red">Rule 158.</font></strong> In order to find the derivative of the inverse of a function when only knowing the x-value & the function formula, plug in the x-value into the function to get the y-value, and then do 1/f'(y).
+	    
+	    <br><br> In doing so, you find the derivative of the function while plugging in the y-value under f⁻¹(x) = 1/f'(y).<br><br><br>
+	    
+	    
+	    
+	      </article>
+
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
+        <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong><a href="/math/calculuspart2.html">Integral Calculus & Calculus 2</a></strong></article>
+        <br>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong>Inverses</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: February 7 2025</span><br>
+      	<span class="tiny">Jonathan Lacabe 2025</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

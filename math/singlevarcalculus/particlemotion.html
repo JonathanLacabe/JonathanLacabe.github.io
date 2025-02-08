@@ -2,7 +2,7 @@
 <html>
   <head>
   	<meta charset="UTF-8" />
-    <title>Derivatives (Differential Calculus)</title>
+    <title>Particle Motion (Differential Calculus)</title>
     <link href="/style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico">
   </head>
@@ -102,6 +102,43 @@ rainbow {
 	    
 	    <strong>Total distance</strong> is how much distance you covered. For example, the displacement can be zero because you can end up exactly where you started.<br><br><br>
 	    
+	    <strong><font color="blue"><a href="#ApplicationCost"><span class="mw-headline" id="ApplicationCost">#</span></a> Application of Calculus: Cost Modeling:</font></strong><br><br>
+        In manufacturing, the <strong>cost of production</strong> c(x) represents the cost of producing x number of units. The <strong>marginal cost</strong> is the rate of change, or "the cost to produce one more item". Marginal cost is the derivative of cost: c'(x).<br><br>
+        <strong>Revenue</strong>, r(x) is the total amount of money collected for the sales of a product. <strong>Marginal Reveue</strong> is the total amount collected from selling one more unit. r'(x) = Marginal Revenue.
+        
+        <br><br><br>
+	    
+	    <strong><font color="blue"><a href="#SinCosLoop"><span class="mw-headline" id="SinCosLoop">#</span></a> Sine-Cosine Derivative Loop:</font></strong><br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/sincosderiv.jpg"><img src="/math/img/sincosderiv.jpg" alt="The loop in which the derivatives (and antiderivatives, which are elucidated in [[[) of sinx and cosx are shown to be recursive. Courtesy of MathNStuff." width=29%/></a></div>
+	    <span class="tiny"><em>The loop in which the derivatives (and antiderivatives, which are elucidated in [[[) of sinx and cosx are shown to be recursive. Courtesy of <a href="https://www.mathnstuff.com/math/spoken/here/2class/420/sincos.htm">MathNStuff</a>.</em></span><br>
+        
+        <br><br><br>
+	    
+	    <strong><a href="#Rule149"><span class="mw-headline" id="Rule149">#</span></a> <font color="red">Rule 149.</font></strong> To find when a particle is <strong>moving forward or backward</strong>, make a number line for the x's of the velocity graph and find when it is negative or positive: positive is forward, negative is backward.<br><br>
+	    
+	    For where the particle is speeding up or slowing down, if the particle has v(t) > 0 & a(t) &lt; 0, or v(t) &lt; 0 & a(t) > 0 (e.g., the signs do not match between the velocity and acceleration), then the particle is <strong>slowing down</strong>.<br><br>
+	    If the particle has v(t) &lt; 0 & a(t) &lt; 0 or v(t) > 0 & a(t) > 0 (matching signs between velocity and acceleration) then the particle is <strong>speeding up</strong>.
+	    
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#Rule150"><span class="mw-headline" id="Rule150">#</span></a> <font color="red">Rule 150.</font></strong> 
+	    For equations that have two functions that are just sum or difference and not product nor quotient, you can find the derivative of each individual function and continue the sum and difference as so:<br>f(x) = sin(x) - cos(x)
+	    <br>
+	    f'(x) = cos(x) + sin(x)
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#Rule151"><span class="mw-headline" id="Rule151">#</span></a> <font color="red">Rule 151.</font></strong> 
+	    <strong>Particle Motion in a Nutshell</strong>:<br><br>
+	    <strong>Displacement</strong>: The change in position of the particle. S(t<sub>f</sub>) - S(t<sub>i</sub>)<br><br>
+	    <strong>Total Distance</strong>: The cumulative distance traveled between the starting and ending points of the particle. Found by finding every point in which the velocity changes sign, and absolute valuing all distances traveled under negative velocities while summing everything up.<br><br>
+	    <strong>Speeding up</strong>: The v(t) and a(t) of the particle have the same sign.<br><br>
+	    <strong>Slowing down</strong>: The v(t) and a(t) of the particle have differing signs.
+	    
+	    <br><br>
+	    
+	    
 	    
 	      </article>
 
@@ -134,10 +171,10 @@ rainbow {
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong><a href="/math/calculuspart2.html">Integral Calculus & Calculus 2</a></strong></article>
         <br>
-        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong>Particle Motion</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong>Particle Motion</strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: January 26 2025</span><br>
+      	<span class="tiny">Last Change: February 2 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -3,7 +3,11 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-February 7 2025: Calculus Work, accounting for past missing ones.
+
+February 8 2025: This project is in the midst of a huge linking update. I succeeded in a test run on the Astronomy pages, which have been fully converted onto this new system. Now, when a Rule needs to be placed in the middle of many other rules, the numbering all those rules afterward will be adjusted instantly. This may end up nullifying the need for the WoO notes, and greatly simplify the process with which the "First Edition" of the Human Knowledge Project will be deployed (see January 18 2025). The underlying purpose for "reserving Rules" (see December 29 2024) has also probably been rendered meaningless, although I believe that reserving can still serve a symbolic purpose of showing un-accessibilized knowledge. All scientific knowledge will be sequenced into the great Human Knowledge aggregator, where it is made understandable and accessible to all.
+Rules Added: Physics, Classical Mechanics - Rule 156.
+
+February 7 2025: Calculus Work, accounting for past missing ones. Rewrote part of the frontpage description text.
 Rules Added: Mathematics, Single Variable Calculus - Rule 157, 158.
 
 February 6 2025: Physics Additions.

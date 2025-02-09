@@ -15,15 +15,6 @@ Vector symbol on top:
 
 
 
-Summation:
-$$\sum_{n=0}^n {b_n}$$
-
-<script src=
-"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-
 
 Rainbow gradient:
 <rainbow>beautiful morning</rainbow>

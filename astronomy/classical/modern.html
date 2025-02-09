@@ -10,6 +10,35 @@
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -49,6 +78,8 @@
 	  <article>
 	    <p>These are my complete notes for the Origin of Modern Astronomy. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
+	  
+	  <div class="rules" data-start="22">
 
 	  <header class="articleHeader"><hr>
 	       <h2><span class="mw-headline" id="modernOrigins">IV. Origin of Modern Astronomy.</span></h2>
@@ -59,34 +90,61 @@
       While Europe was going througn an anti-intellectual phase during the Middle Ages, there was a flowering of Astronomical discovery and progress during the <strong>Islamic Golden Age</strong>, which preserved and elaborated on the ideas of the Greeks. It was the end of the Dark Ages in Europe and the ushering in of the <u>Renaissance</u> that saw a revival in intellectual interest in sceintific, and importantly Astronomical, ideas in Europe. Copernicus embodied the spirit of European revival in interest in Astronomy (see below).
       <br><br><br>
       
-      <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">A. Rule 22.</font></strong> <strong>Nicolaus Copernicus</strong> was a Polish astronomer who flourished during the early 1500s. He led the critical reappraisal of Ptolemy's ancient model of the Universe, which had stood as the dominant explanation of the cosmos for over a thousand years. He led the formation of the <strong>Heliocentric model</strong> of the solar system, which radically considered Earth itself to be a planet that orbited the sun, alongside all other planets. Additionally, he theorized that only the moon orbits the Earth.<br>
+      <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Nicolaus Copernicus</strong> was a Polish astronomer who flourished during the early 1500s. He led the critical reappraisal of Ptolemy's ancient model of the Universe, which had stood as the dominant explanation of the cosmos for over a thousand years. He led the formation of the <strong>Heliocentric model</strong> of the solar system, which radically considered Earth itself to be a planet that orbited the sun, alongside all other planets. Additionally, he theorized that only the moon orbits the Earth.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/earlyhelio.png"><img src="/astronomy/img/earlyhelio.png" alt="Copernicus developed a heliocentric plan of the solar system. This system was published in the first edition of De Revolutionibus Orbium Coelestium. Notice the word Sol for “Sun” in the middle." width=38%/></a></div>
 	    <span class="tiny"><em>Copernicus developed a heliocentric plan of the solar system. This system was published in the first edition of De Revolutionibus Orbium Coelestium. Notice the word Sol for “Sun” in the middle.</em></span><br><br>
       
       As evident, he still assumed that the orbits of the planets would be uniformally circular. However, his ideas were revolutionary enough to provoke discussion across the scientific world, and the tenets of heliocentrism would eventually be popularly accepted over a century after his death. Controversially (as with everything he theorized), he explained the precession of the celestial sphere as being the result of the rotation of the Earth along its axis.
-      <br><br><br>
+      
+      </div><br><br>
+      
 	   
-	   <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">A. Rule 23.</font></strong> Copernicus's masterpiece, <strong>De Revolutionibus</strong>, elaborates on Earth as one of six planets, and correctly lists the Planets in order of their proximity to the sun, and was able to deduce that the closer to the sun the planet, the greater the orbital speed. <br><br>
-	   Furthermore, complexities like retrograde motion were explained through this new theory with much simpler explanations than Ptolemy. This theory conflicted with the thousands of years of established common sense: the greek/classical schools of thought, and the dogma pushed by the Catholic Church. <br><br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Copernicus's masterpiece, <strong>De Revolutionibus</strong>, elaborates on Earth as one of six planets, and correctly lists the Planets in order of their proximity to the sun, and was able to deduce that the closer to the sun the planet, the greater the orbital speed. <br><br>
+	   Furthermore, complexities like retrograde motion were explained through this new theory with much simpler explanations than Ptolemy. This theory conflicted with the thousands of years of established common sense: the greek/classical schools of thought, and the dogma pushed by the Catholic Church. 
+	   
+	   </div><br><br>
 	
 	   
-	   <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">A. Rule 24.</font></strong> <strong>The scientific method</strong>, nonexistant during the time of Copernicus, was developed by <strong>Galileo Galileo</strong> during the 17th century. He greatly contributed to the understandings of Mechanics, Classical Physics of motion, and the influence of forces on bodies. Galileo theorized the basic principle of Inertia, that rest is no more natural a state for a body than motion. He argued that a force is required not only to start an object moving from rest, but also for slowing down, stopping, speeding up, and changing direction in any form. Additionally, in studying <strong>acceleration</strong> (see <a href="/Physics/mechanics/velspaccel#Rule12">P. Rule 12</a>), he found that objects will accelerate uniformally as they free fall or are otherwise influenced by gravity. These laws would be formulated in exact mathematical expressions. <br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The scientific method</strong>, nonexistant during the time of Copernicus, was developed by <strong>Galileo Galileo</strong> during the 17th century. He greatly contributed to the understandings of Mechanics, Classical Physics of motion, and the influence of forces on bodies. Galileo theorized the basic principle of Inertia, that rest is no more natural a state for a body than motion. He argued that a force is required not only to start an object moving from rest, but also for slowing down, stopping, speeding up, and changing direction in any form. Additionally, in studying <strong>acceleration</strong> (see <a href="/Physics/mechanics/velspaccel#Rule12">P. Rule 12</a>), he found that objects will accelerate uniformly as they free fall or are otherwise influenced by gravity. These laws would be formulated in exact mathematical expressions. <br><br>
 	   Most importantly, he adopted the heliocentric model of the universe in the 1590s and began lecturing on the topic. The church pushed back, decreeing that heliocentrism was "false and absurd" in 1616 and disavowing its defense.<br><br>
 	    Galileo would drastically improve upon the telescope and its powers of magnification. He used this invention to observe the cosmos, beginning in 1609, and he discovered many distant stars too faint to be seen with the naked eye, and that the Milky Way across the night sky was made out of many stars as well. <br><br>
 	    
 	    He found that Jupiter had its own moons, circling Jupiter at different orbit speeds, proving that centers of motion could themselves be in motion (a theory argued against by geocentrics). Venus proved to go through phases like the moon, showing it revolved around the sun. <br><br>
 	    
 	    For these discoveries, Galileo was rewarded with a house arrest on the orders of the Catholic Church, who found his work heretical, and this would last until his death. In this confinement he would write one of his greatest masterpieces, the "<strong>Two New Sciences</strong>" which would form the foundations for modern Physics.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">A. Rule 25.</font></strong> <strong>Tycho Brahe</strong> was a Danish astronomer who worked concurrent to Galileo, and produced a sound mathematical basis (along with Kepler) of Copernicus's Theory of Heliocentrism. <br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Tycho Brahe</strong> was a Danish astronomer who worked concurrent to Galileo, and produced a sound mathematical basis (along with Kepler) of Copernicus's Theory of Heliocentrism. <br><br>
 	   
 	   He established an observatory on a North Sea Island, and he is said to be the last of the pre-telescopic observers in Europe. He took extremely detailed records of the positions of the Sun, Moon, and Planets for almost 20 years, the greatest collection of such data since Hipparchus. <br><br>
 	   When he fled Denmark because of all the enemies he'd accumulated, he became the court Astronomer in Prague, where he enlisted the help of the young Astronomer Johannes Kepler in analyzing the data (see below). 
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">A. Rule 26.</font></strong> <strong>Johannes Kepler</strong> was a German astronomer who served as Tycho Brahe's assistant in Prague. It was only after Brahe's death did Kepler gain access to the entirety of the records, which occupied him for the next 20 years. In this analysis, he developed three laws that dictate the motion of planets through Space, known as <strong>Kepler's Laws of Planetary Motion</strong>.<br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Johannes Kepler</strong> was a German astronomer who served as Tycho Brahe's assistant in Prague. It was only after Brahe's death did Kepler gain access to the entirety of the records, which occupied him for the next 20 years. In this analysis, he developed three laws that dictate the motion of planets through Space, known as <strong>Kepler's Laws of Planetary Motion</strong>.<br><br>
 	   
 	   <strong>Law of Planetary Motion #1 - The Orbit of a planet is an ellipse with the Sun at one of the two foci.</strong><br><br>
 	   <u>Explanation</u>: The path of an object through space is called its orbit. Kepler assumed, at first, that the orbits of planets were circles, but doing so only produced orbits that were consistent with Brahe's observations. He discovered that the orbit of Mars was elliptical rather than circular. <br><br>
@@ -112,20 +170,32 @@
 	    The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. If the eccentricity is zero, then the foci will be in the same spot and the ellipse will be a circle. Thus, in elliptical terms, a circle is an ellipse of zero eccentricity with the Semimajor axis as the radius. <br /><br />
 	    
 	    The greater the eccentricity, the more elongated the ellipse, up to a maximum eccentricity of 1.0, which is just a flat line. The size and shape of an ellipse are completely specified by its Semimajor axis and its Eccentricity. Mars has an elliptical orbit of 0.1, with the sun at one of the foci, the other being empty. This discovery was generalized by Kepler to apply to all orbits, with different eccentricities.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">A. Rule 27.</font></strong> <br><strong>Law of Planetary Motion #2 - A line segment joining a planet and the sun sweeps out equal areas during equal intervals of time.</strong><br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <br><strong>Law of Planetary Motion #2 - A line segment joining a planet and the sun sweeps out equal areas during equal intervals of time.</strong><br><br>
 	   The 2nd Law deals with orbital speed, or the speed with which each planet moves along its ellipse. Kepler determined that Mars moves faster as it comes closer to the Sun, and slows down as it pulls away from the Sun. <br><br>
 	   
 	   Visualize an elastic band connecting a celestial body with the Sun. As the body gets farther from the sun, the band gets stretched, and thus moves slower until the band will pull it back to the sun. When it is closer to the sun, the band is not stretched as much and thus moves rapidly. Additionally, if you were to imagine the area sweeped in the ellipse (centered from the sun) by the orbit, then, given equal intervals of time, any two sweeped areas of the orbit will be equal.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/2ndLaw.png"><img src="/astronomy/img/2ndLaw.png" alt="The orbital speed of a planet traveling around the Sun (the circular object inside the ellipse) varies in such a way that in equal intervals of time (t), a line between the Sun and a planet sweeps out equal areas (A and B). Note that the eccentricities of the planets’ orbits in the solar system are substantially less than shown here." width=44%/></a></div>
 	    <span class="tiny"><em>The orbital speed of a planet traveling around the Sun (the circular object inside the ellipse) varies in such a way that in equal intervals of time (t), a line between the Sun and a planet sweeps out equal areas (A and B). Note that the eccentricities of the planets’ orbits in the solar system are substantially less than shown here.</em></span><br><br> 
 	   While a circular orbit would cause a planet to move at the same speed throughout its orbit, the differing speeds of the planets as they move make it evident that their orbits are elliptical.
-	   <br><br><br>
+	   
+	   </div><br><br>
+	   
 	   
 	   <strong><font color="#006400"><a href="#KinematicsDef"><span class="mw-headline" id="KinematicsDef">#</span></a> Kinematics</font></strong>: The Science of motion, such as Newton's & Kepler's Laws.<br><br><br>
 	   
-	   <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">A. Rule 28.</font></strong> <strong>Law of Planetary Motion #3 - The square of a planet's orbital period is proportional to the cube of the length of the Semimajor axis of its orbit.</strong><br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Law of Planetary Motion #3 - The square of a planet's orbital period is proportional to the cube of the length of the Semimajor axis of its orbit.</strong><br><br>
 	   While the first two laws deal largely with the shape and speeds of a planet's orbit, there was yet to be a mathematical model for the spacing of the planets and how they ended up in the positions/orbits they have. <br><br>
 	   
 	   It was Kepler's 1619 discovery of a basic relationship relating the orbits of the planets to their relative distance from the sun that a mathematical model governing planetary spacing was formed. The Orbital Period P is the time it takes a planet to travel once around the Sun, and the Semimajor axis of a planet's orbit is equivalent to its average distance from the sun. In mathematical terms, this law can be defined as the following:<br><br>
@@ -141,16 +211,26 @@
 	   With regard to the Earth (and all other planets where years and AU are the given units), the sides of the formula are not only proportional, but equal. The Third Law of Planetary Motion applies for all objects orbiting the sun, and enables the determination of an objects relative distance from the Sun based on how long the <strong>Orbital Period</strong> is. <br><br>
 	   Since Mars has an orbital period of 1.88 years, the third law tells us that (1.88)² = a³, using years and AU as the units. Therefore, the Semimajor axis of Mars has a length of <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">3.53</span></span> AU, or 1.52 AU, thus orbiting farther from the Sun than Earth.
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">A. Rule 29.</font></strong> Kepler's laws are highly qualitative, as they only reflect rules of thumb that Kepler discerned about the planetary motion in the solar systems. The laws do not actually explain what forces of nature are causing the celestial body to act in the ways specified; that is what makes them 'Laws' (see <a href="https://www.youtube.com/watch?v=GyN2RhbhiEU">video</a> for reference).<br><br> 
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Kepler's laws are highly qualitative, as they only reflect rules of thumb that Kepler discerned about the planetary motion in the solar systems. The laws do not actually explain what forces of nature are causing the celestial body to act in the ways specified; that is what makes them 'Laws' (see <a href="https://www.youtube.com/watch?v=GyN2RhbhiEU">video</a> for reference).<br><br> 
 	   It would be <strong>Isaac Newton</strong> who would form the sound mathematical framework that explained the observations and rules formulated by Galileo, Brahe, Kepler, and the rest. As a professor of Mathematics at Cambridge, Newton dedicated much of his time to pondering the cosmos and reality, and from this he developed special mathematical models/equations and laws to govern motion itself, the forces behind Kinematics. He wrote down his theories in a book called the <strong>Principia</strong>, in 1687, where he unleashed unto an unsuspecting public his three laws of motion:<br><br>
 	   <strong><u>Law of Motion #1</u>:  Every object will continue to be in a state of rest, or move at a constant speed in a straight line, until it is compelled to change by an outside force.</strong> The first law is just a restatement of one of Galileo's discoveries, called the <strong>Conservation of Momentum</strong> (see
 	   <a href="/Physics/MechanicsFull3#MomentumBasics">P. Section VIII.II</a>). This law states that in the abscence of any outside influence, there is a measure of a body's motion, called its momentum, that remains unchanged. <br><br>The first law is also oftentimes called the <strong>Law of Inertia</strong>, where Inertia is the tendency of an object to resist a change in the state of motion (see the <a href="/Physics/mechanics/force#Inertia">Physics reference</a>). In other words, a stationary object will stay at rest while a moving object will keep moving until some force intervenes.
-	   <br><br><br>
+	   
+	   </div><br><br>
 	   
 	   
-	   <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">A. Rule 30.</font></strong> Momentum relies on three factors:
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Momentum relies on three factors:
 	   <ol>
       <li><strong>Speed</strong>, how fast an object moves (zero if stationary).
 
@@ -168,30 +248,54 @@
 	   The speed (with only magnitude) and direction of motion can be combined as velocity (see <a href="/Physics/mechanics/velspaccel">Classical Physics Section I</a> for explanations and interpretations of velocity & speed). 20 kilometers per hour due South is in terms of Velocity, while 20 kilometers per hour by itself is in terms of speed.<br><br> Momentum, referred to as variable p, can be expressed through the following equation: <span class="vecteur"><strong>p</strong></span> = m × <span class="vecteur"><strong>v</strong></span>, where m is the object's mass and v is the velocity at any point. <br><br>
 	   
 	   It is difficult to see Momentum and the First Law of Motion in action in the real world, because of how many forces are acting on a body at any one time, from Air Resistance to Electromagnetism. For example, while a ball rolling on the sidewalk will eventually be slowed down due to Rubbing Friction (see <a href="/Physics/MechanicsFull2#Rule58">P. Rule 58</a> and below), but if that ball was moving in space (the "vacuum" in which the idealized equations of kinematics are best applicable), the friction is so minute and insignificant that it would continue coasting through space forever. Thus, momentum can change only under the action of an outside force, such as gravity.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">A. Rule 31.</font></strong> <strong><u>Law of Motion #2</u>: The change of motion of a body is proportional to, and in the direction of, the force acting on it.</strong> <br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><u>Law of Motion #2</u>: The change of motion of a body is proportional to, and in the direction of, the force acting on it.</strong> <br><br>
 	   This law expresses force in terms of its ability to change momentum with time. A force, push or pull, has both direction and magnitude. When a force is applied to a body, the momentum changes in the direction of the applied force. This means that a force is required to change either the speed or the direction of a body, or both - to start it moving, to speed it up, to slow it down, to stop it, or to change its direction.<br><br>
 	   The rate of change in an object's velocity is called acceleration, and the second law states that the acceleration of a body is proportional to the force being applied to it.<br><br>
 	   For example: Imagine a table as a smooth, frictionless surface. If you were to push a book across it, it will speed up as long as you keep pushing it with a positive acceleration (or negative acceleration if you are pushing it backwards). The harder you push the book, the more it will speed up. How much an object will accelerate given a force is reliant on the mass of the object; if you pushed a pen on the table with the same force you pushed the book with, it would accelerate to a higher speed.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">A. Rule 32.</font></strong> <strong><u>Law of Motion #3</u>: For every action, there is an equal and opposite reaction (or: the mutual actions of two bodies upon each other are always equal and act in opposite directions).</strong><br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><u>Law of Motion #3</u>: For every action, there is an equal and opposite reaction (or: the mutual actions of two bodies upon each other are always equal and act in opposite directions).</strong><br><br>
 	   This law generalizes the first law in a way that also defines mass. Thus, if there were to be a car system of multiple oblects, isolated from external forces, the first law would stipulate that the total momentum of the objects would remain constant. <br><br>
 	   Any change of momentum in a system <u>must</u> be balanced by another change, equal in force and opposite in direction, so that the momentum of the entire system is not changed. In every situation, there is always a force pair governing the reactions between any two objects. When you fall from a tree, the force pair is you and the Earth, because the Earth is exerting the force of gravity attracting you to the Earth, while the Earth is accelerated by the student's pull. You do not notice the change in momentum of the Earth because of its huge mass, which measures the inertia of the object, the tendency of the object to resist acceleration. <br><br>
 	   The recoil from hitting a ball with a baseball is further proof of the third law.
-	   <br><br><br>
+	   
+	   </div><br><br>
+	   
 	   
 	   <strong><font color="#006400"><a href="#VolumeDef"><span class="mw-headline" id="VolumeDef">#</span></a> Volume</font></strong>: The measurement of how much Physical space an object occupies. Measured in cubic units, like cm³ or liters.<br><br><br>
 	   
 	   <strong><font color="#006400"><a href="#DensityDef"><span class="mw-headline" id="DensityDef">#</span></a> Density</font></strong>: Mass divided by volume. Common units include g/cm³.<br><br><br>
 	   
-	   <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">A. Rule 33.</font></strong> <strong>Angular Momentum</strong> is the measurement of the rotation of a body as it revolves around some fixed point, like a planet rotating around the Sun. Mathematically, the angular momentum of an object is the product of its mass, velocity, and distance from the fixed point (which isn't always the radius, as known from elliptical orbits). If these three values were to be constant, meaning that an object's motion takes places at a constant velocity at a fixed distance from the spin center, then the angular momentum is also constant.<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Angular Momentum</strong> is the measurement of the rotation of a body as it revolves around some fixed point, like a planet rotating around the Sun. Mathematically, the angular momentum of an object is the product of its mass, velocity, and distance from the fixed point (which isn't always the radius, as known from elliptical orbits). If these three values were to be constant, meaning that an object's motion takes places at a constant velocity at a fixed distance from the spin center, then the angular momentum is also constant.<br><br>
 	   
 	   Kepler's 2nd law is a result of the conservation of angular momentum. As a planet approaches the Sun on an elliptical orbit and the distance to the spin center decreases; the planet speeds up to conserve angular momentum. Similarly, when the planet is farther from the sun, it moves slower. When you spin on a swivel chair at the park, when you have your arms outstretched, you move slower, but when you bring your arms inward, you speed up.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">A. Rule 34.</font></strong> Because the planets move in ellipses instead of straight lines, they must have a force bending their paths: <strong>Gravity</strong>. The Earth's gravity extends to the moon, and in doing so produces the force required to curve the Moon’s path from a straight line and keep it in its orbit. Furthermore, the attractive force of the Sun keeps all of the planets in their orbits.<br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Because the planets move in ellipses instead of straight lines, they must have a force bending their paths: <strong>Gravity</strong>. The Earth's gravity extends to the moon, and in doing so produces the force required to curve the Moon’s path from a straight line and keep it in its orbit. Furthermore, the attractive force of the Sun keeps all of the planets in their orbits.<br><br>
 
 It was the Third law of motion that truly rocked the scientific world in its day, and it carried with it the implication that there was a Universal attraction among all bodies everywhere in space. This attraction both explains the falling of objects on Earth and the orbit of the planets. Thus, Newton formulated the law of Gravitational Attraction, establishing a proportionality between the gravitational force between two objects and the mass & distances of the objects:<br><br>
 
@@ -203,38 +307,66 @@ It was the Third law of motion that truly rocked the scientific world in its day
 <strong>M<sub>2</sub></strong> = The Mass of the second object.<br>
 <strong>R</strong> = The distance between the two objects.<br><br>
 
-Gravity is internal to the code of mass - it is a property that was specifically given a value in the source code of the Universe. No matter the distance between two objects, there will always be a gravitational pull between them, with the gravitational pull of different objects affecting objects millions of kilometers away, such as through smaller galaxies orbiting larger ones.<br><br><br>
+Gravity is internal to the code of mass - it is a property that was specifically given a value in the source code of the Universe. No matter the distance between two objects, there will always be a gravitational pull between them, with the gravitational pull of different objects affecting objects millions of kilometers away, such as through smaller galaxies orbiting larger ones.
+
+</div><br><br>
 	   
-	   <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">P. Rule 35.</font></strong> Some points in the orbits of the planets (specifically those in our Solar System) have been assigned special names:<br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Some points in the orbits of the planets (specifically those in our Solar System) have been assigned special names:<br><br>
 
 <strong>Perihelion</strong>: The point along the orbit of a planet in which it is closest to the sun, and thus moving the fastest. For moons and artificial satellites of the Earth, the equivalent term is <strong>perigee</strong>.
 <br><br>
 
 <strong>Aphelion</strong>: The point along the orbit in which the planet is farthest from the sun, and thus moving the slowest. For moons and artificial satellites of the Earth, the equivalent term is <strong>apogee</strong>.
-<br><br><br>
+
+</div><br><br>
+
 	   
-	   <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">P. Rule 36.</font></strong> 
-	   While the planets of the Solar System all tend to have low eccentricities (Mars has the largest, at 0.21), asteroids and comets (see Rules [[[ & [[[ respectively) have their own trends in orbital eccentricities and other characteristics:<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> While the planets of the Solar System all tend to have low eccentricities (Mars has the largest, at 0.21), asteroids and comets (see Rules [[[ & [[[ respectively) have their own trends in orbital eccentricities and other characteristics:<br><br>
 
 Generally, asteroids have smaller Semimajor axes in their orbits than comets, while comets have much larger orbits and eccentricities (averaging over 0.8). Most asteroids reside in the asteroid belt, a region between 2.2 & 3.3 AU, located in a gap between the orbits of Mars & Jupiter. The distance between Mars and Jupiter is large enough that a stable orbit of small bodies can exist in the gap.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/solarorbitals.png"><img src="/astronomy/img/solarorbitals.png" alt="The orbitals of various objects in the solar system. Black represents the five planets closest to the Sun, Red represents three comets, and Blue represents the four largest asteroids." width=50%/></a></div>
 	    <span class="tiny"><em>The orbitals of various objects in the solar system. <strong>Black</strong> represents the five planets closest to the Sun, <strong>Red</strong> represents three comets, and <strong>Blue</strong> represents the four largest asteroids.</em></span>
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">P. Rule 37.</font></strong> When a satellite is in orbit, it does not need to exert any energy to remain in orbit. However, in order to <em>get</em> into orbit, the rocket that lifts the satellite into position must exert a huge amount of energy to accelerate it to <strong>Orbital Speed</strong>. <br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> When a satellite is in orbit, it does not need to exert any energy to remain in orbit. However, in order to <em>get</em> into orbit, the rocket that lifts the satellite into position must exert a huge amount of energy to accelerate it to <strong>Orbital Speed</strong>. <br><br>
 Furthermore, if it is the goal of the satellite to traverse beyond the orbit of Earth into further regions of the Solar System, then the rocket must reach <strong>Escape Speed</strong>, the speed needed to escape the pull of Earth. This is approximately 11 kilometers per second, and after escaping the orbit of the Earth, the satellite will simply be able to coast through space, interacting with nearby orbits as they pass by them, toward whichever target they intend. To avoid falling into these nearby orbits, small thruster rockets onboard must be used to adjust the trajectory.
 
-<br><br><br>
+</div><br><br>
 	   
-	   <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">P. Rule 38.</font></strong> <strong>Multiple Bodies:</strong><br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Multiple Bodies:</strong><br><br>
 
 The motion of a body under the gravitational influence of 2+ bodies complicates exponentially. Of course, every body is under the influence of everything in the universe all the time, but with increasing distance these influences becomes more negligible.<br><br>
 While when considering the effect of thousands of stars and bodies on eachother within a galaxy, it is clear that only extremely powerful supercomputers can compute the effects these bodies have on eachother (as they move) enough to predict their future locations.<br><br>
 Within the Solar System, things are much simpler, because the planets barely have any effect on the orbits of one another. These small influences are known as <strong>perturbations</strong>, and the study of their effects resulted in the discovery of Neptune in 1846.
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">P. Rule 39.</font></strong> <strong>Discovering New Planets:</strong><br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Discovering New Planets:</strong><br><br>
 
 <strong>Uranus</strong>, the first planet discovered beyond those known to the ancients, was first noticed in 1781, by William Herschel. It had previously not been recognized as a planet, but as a star. This discovery proved that planets beyond those visible to the naked eye could exist, and that calculating the locations of these planets was possible.<br><br>
 
@@ -242,7 +374,9 @@ The orbit of Uranus was calculated in 1790, using the observational data of the 
 
 To reconcile the difference in the position of Uranus with the Newtonian orbital formulas, an analysis of whether the irregularity could be caused by the pull of a new, previously unknown planet began. This research began in 1843 by John Couch Adams, and returned the mass, orbit, and approximate position for the planet in the sky.<br><br>
 
-Independently of one another, Adams and the frenchman Urbain Le Verrier both produced the mathematical deductions of the location and nature of the unknown planet, and it would be on September 23rd, 1846 that the planet was identified, confirming the generality of the Laws of Gravitation.<br><br><br>
+Independently of one another, Adams and the frenchman Urbain Le Verrier both produced the mathematical deductions of the location and nature of the unknown planet, and it would be on September 23rd, 1846 that the planet was identified, confirming the generality of the Laws of Gravitation.
+
+</div><br><br>
 
 
 	   <strong><font color="#006400"><a href="#GreatCircleDef"><span class="mw-headline" id="GreatCircleDef">#</span></a> Great Circle</font></strong>: Any circle on the surface of a sphere whose center is at the center of the sphere. For example, Earth’s equator is a great circle on Earth’s surface, halfway between the North and South Poles.<br><br><br>
@@ -260,24 +394,37 @@ Independently of one another, Adams and the frenchman Urbain Le Verrier both pro
 	    
 	    
 	   
-	   <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">P. Rule 40.</font></strong> There is a celestial version of the latitude and longitude system: <strong>Declination</strong> & <strong>Right Ascension</strong>. This system makes use of the space dome and the celestial equator.<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> There is a celestial version of the latitude and longitude system: <strong>Declination</strong> & <strong>Right Ascension</strong>. This system makes use of the space dome and the celestial equator.<br><br>
 <strong>Declination</strong> is the space equivalent to latitude, directed northward or southward from the celestial equator. Polaris, for example, has a declination of +90°.<br><br>
 
 <strong>Right Ascension</strong> is the space equivalent to longitude. However, instead of the Greenwich line, the arbitrary chosen line is the <strong>Vernal Equinox</strong>, the particular point in the sky in which the <strong>Ecliptic</strong> (the Sun's path) crosses the celestial equator.<br><br>
 Since the space dome can be seen turning around the Earth once a day as the planet turns on its axis, the Right ascension turns 360° in 24 hours, and thus each 15° of the arc is equivalent to 1 hour of time. For example, the celestial coordinates of the star Capella are R.A. 5h = 75° and declination +50°.
-<br><br><br>
-	   
-	   <strong><a href="#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">P. Rule 41.</font></strong> <Strong>The Seasons</strong>:<br><br>
 
-Recalling that the Earth is tilted on its axis by 23.5°, which is always in the same direction in space regardless of the point of the Earth in its orbit (see diagram).<br><br>
+</div><br><br>
+
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <Strong>The Seasons</strong>:<br><br>
+
+Recall that the Earth is tilted on its axis by 23.5°, which is always in the same direction in space regardless of the point of the Earth in its orbit (see diagram).<br><br>
 As a result of the tilt of the Earth and the orbit around the Sun, during June the Northern Hemisphere is more directly facing the Sun, while the Southern Hemisphere is more directly facing it in December. These attributes are at their extremes on the Summer Solstice and the Winter Solstice, respectively.<br><br>
 During September and March, the Autumnal and Vernal Equinoxes respectively, the two hemispheres are equally favored with sunlight.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/axisorbit.png"><img src="/astronomy/img/axisorbit.png" alt="The Earth during different points of its orbit of the Sun, which results in different hemispheres being illuminated for different periods of time, resulting in the seasons." width=56%/></a></div>
 	    <span class="tiny"><em>The Earth during different points of its orbit of the Sun, which results in different hemispheres being illuminated for different periods of time, resulting in the seasons. </em></span>
+
+</div><br><br>
      
 	   
 	   </article>
 	   
+	</div>
 	</div>
 	
 	<div class="General links">
@@ -309,7 +456,7 @@ During September and March, the Autumnal and Vernal Equinoxes respectively, the 
         <article><strong><a href="/astronomy/classical/intro">Introduction/General Terms</a></strong> → <strong><a href="/astronomy/classical/ancient.html">Ancient Astronomy</a></strong> → <strong><a href="/astronomy/classical/pseudoscience.html">Astrology</a></strong> → <strong>Origin of Modern Astronomy</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 18 2024</span><br>
+      	<span class="tiny">Last Change: February 8 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

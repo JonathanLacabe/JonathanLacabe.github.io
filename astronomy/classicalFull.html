@@ -18,6 +18,37 @@ rainbow {
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
+
 
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -79,6 +110,7 @@ rainbow {
       </div>
       
       
+      <div class="rules" data-start="1">
       
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Intro">I. Introduction/General Terms.</span></h2>
@@ -96,21 +128,51 @@ rainbow {
 	  <strong><a href="#AstronomicalUnitDef"><span class="mw-headline" id="AstronomicalUnitDef">#</span></a> <font color="#006400">Astronomical Unit</font></strong>: The <u>average</u> distance between the Sun and the Earth, defined as 149,597,870,700 meters. <!--1 year is the length of time it takes the Earth to rotate around the Sun. From the human reference point, an individual's velocity with respect to Earth is zero, but with respect to the Sun, they would be moving 110,000 kilometers per second due to the Earth's orbit. This is <a href="/Physics/mechanics/range">Relative Motion & Velocity</a>, which is mathematically elaborated on in Classical Physics.-->
 <br><br><br>
 	
-	    <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">A. Rule 1.</font></strong> There are eight planets that orbit around the Sun, along with many other bodies like moons, dwarf planets, and others. These compose the 'Solar System'. <strong>Planets</strong> are celestial bodies of significant size that orbit a star. If the planet consistently produces its own light, it is a star. Though there is man-made light on Earth, anything involving life doesn't count.<br><br>
+	    <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> There are eight planets that orbit around the Sun, along with many other bodies like moons, dwarf planets, and others. These compose the 'Solar System'. <strong>Planets</strong> are celestial bodies of significant size that orbit a star. If the planet consistently produces its own light, it is a star. Though there is man-made light on Earth, anything involving life doesn't count.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/solarsystem.png"><img src="/astronomy/img/solarsystem.png" alt="The celestial bodies, including several dwarf planets, drawn to scale but not accurate orbit-wise. Courtesy of Qld Science Teachers." width=60%/></a></div>
 	    <span class="tiny"><em>The celestial bodies, including several dwarf planets, drawn to scale but not accurate orbit-wise. Courtesy of <a href="https://www.qldscienceteachers.com/junior-science/astronomy/solar-system">Qld Science Teachers</a>.</em></span><br><br>
 	    The Sun is the local star of the solar system (the 'primary' of the Earth), and stars themselves are basically just enormous balls of glowing gas which generate energy through internal nuclear reactions.
-	    <br><br><br>
 	    
-	   <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">A. Rule 2.</font></strong> All of the stars visible to the naked eye in the night sky are part of the <strong>Mily Way Galaxy</strong> - there are hundreds of billions of stars in this galaxy, and hundreds of billions of galaxies in the Universe.<br><br>
-	   The space between the stars is not completely empty: there is a sparse distribution of gas intermixed with tiny particles called '<strong>interstellar dust</strong>'. Progressively, the gas and dust collect into huge clouds in each galaxy, which form the raw material for future generations of stars. This interstellar dust is extremely sparse, however, and can thus still serve as a great vacuum. Built-up dust is akin to space smog, blocking the view of more distant regions of the galaxy to Earth.<br><br><br>
+	    </div><br><br>
+	    
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> All of the stars visible to the naked eye in the night sky are part of the <strong>Mily Way Galaxy</strong> - there are hundreds of billions of stars in this galaxy, and hundreds of billions of galaxies in the Universe.<br><br>
+	   The space between the stars is not completely empty: there is a sparse distribution of gas intermixed with tiny particles called '<strong>interstellar dust</strong>'. Progressively, the gas and dust collect into huge clouds in each galaxy, which form the raw material for future generations of stars. This interstellar dust is extremely sparse, however, and can thus still serve as a great vacuum. Built-up dust is akin to space smog, blocking the view of more distant regions of the galaxy to Earth.
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">A. Rule 3.</font></strong> Because of experimental/observational evidence indicating that there is some unknown material exerting gravitational force upon objects in space, it is believed there is some "<strong>Dark Matter</strong>" that cannot be directly observed, interfering with everything and frustrating the current 'laws' of Physics.<br><br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Because of experimental/observational evidence indicating that there is some unknown material exerting gravitational force upon objects in space, it is believed there is some "<strong>Dark Matter</strong>" that cannot be directly observed, interfering with everything and frustrating the current 'laws' of Physics.
+	   
+	   </div><br><br>
 	   
 	   
-	   <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">A. Rule 4.</font></strong> While many solar systems only have one star (like ours), many systems are <strong>double</strong> or <strong>triple systems</strong>, with 2, 3, or more stars revolving around each other. Several places in the galaxy have so many stars they are known as <strong>star clusters</strong>.<br><br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> While many solar systems only have one star (like ours), many systems are <strong>double</strong> or <strong>triple systems</strong>, with 2, 3, or more stars revolving around each other. Several places in the galaxy have so many stars they are known as <strong>star clusters</strong>.
 	   
-	   <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">A. Rule 5.</font></strong> All stars die after running out of "fuel", because stars can only produce energy while they have some fuel source. The Sun, for example, uses <strong>nuclear fusion</strong> to create fuel, converting hydrogen into helium, which releases energy in the form of light and heat. When stars die, they explode and their star dust is fed back into the Universe for reuse.<br><br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> All stars die after running out of "fuel", because stars can only produce energy while they have some fuel source. The Sun, for example, uses <strong>nuclear fusion</strong> to create fuel, converting hydrogen into helium, which releases energy in the form of light and heat. When stars die, they explode and their star dust is fed back into the Universe for reuse.
+	   
+	   </div><br><br>
+	   
 	   
 	   <strong><a href="#ConstellationDef"><span class="mw-headline" id="ConstellationDef">#</span></a> <font color="#006400">Constellation</font></strong>: The groupings of stars in the night sky that different cultures assigned different meanings - patterns, such as Orion the Hunter and the Big Dipper, are among these groupings.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/orion.png"><img src="/astronomy/img/orion.png" alt="Orion the Hunter and the constellation that is said to represent him. The bright orange star on his shoulder is called Betelgeuse." width=65%/></a></div>
@@ -118,17 +180,41 @@ rainbow {
 	    While there are <a href ="https://en.wikipedia.org/wiki/IAU_designated_constellations">88 patches of sky</a> which humans have deliminated (additionally serving to simplify observations), there are many less bright night-sky objects that are not included in the constellations.<br><br>Many galaxies/celestial objects are named after the constellation in which they reside - for example, the <strong>Saggitarius Dwarf Galaxy</strong> is in the direction of the Saggitarius constellation.
 <br><br><br>
 
-    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">A. Rule 6.</font></strong> The Milky Way Galaxy has many orbiting <strong>satellite galaxies</strong> that will eventually be incorporated/subsumed by the Milky Way Galaxy itself, such as the <strong>Magellanic Clouds</strong> and the Sagittarius Dwarf Galaxy.<br><br>
-    The nearest non-satellite galaxy to the Milky Way is the <strong>Andromeda Galaxy</strong> (of the Andromeda Constellation), and these two galaxies, along with 50 others nearby, are collectively known as the <strong>Local Group</strong>, the 'local' galaxy cluster. Most galaxies are found in clusters.<br><br><br>
 
-
-    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">A. Rule 7.</font></strong> Some galaxy clusters themselves form into larger groups, known as <strong>superclusters</strong>. The Local Group is part of the Virgo Supercluster, 110 million lightyears across. <br><br>
-    Farther away, there are <strong>quasars</strong>, the especially brilliant centers of galaxies which glow from an 'extremely energetic process'. Normally, at the distance where one could see quasars, galaxies are too dim to see, but because quasars have an energy produced by a gas heated to a temperature of millions of degrees (produced as it gravitates toward a massive black hole and swirls around it), quasars are bright enough to be the most distant objects that can be seen in the expanses of space. <br><br>The quasars are 10 billion plus light-years away, and thus show 10 billion years into the past. Beyond these quasars, astronomers detected the feeble afterglow of the Big Bang, detected from all directions in space.<br><br><br>
+    <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> The Milky Way Galaxy has many orbiting <strong>satellite galaxies</strong> that will eventually be incorporated/subsumed by the Milky Way Galaxy itself, such as the <strong>Magellanic Clouds</strong> and the Sagittarius Dwarf Galaxy.<br><br>
+    The nearest non-satellite galaxy to the Milky Way is the <strong>Andromeda Galaxy</strong> (of the Andromeda Constellation), and these two galaxies, along with 50 others nearby, are collectively known as the <strong>Local Group</strong>, the 'local' galaxy cluster. Most galaxies are found in clusters.
     
-    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">A. Rule 8.</font></strong> While the Universe is very large, it is also very sparse. In the interstellar gas of the galaxy, there is on average one atom per cubic centimeter, while in <strong>intergalactic space</strong> (much sparser than the Milky Way galaxy), that number drops to one atom per cubic meter of space.<br><br><br>
+    </div><br><br>
+
+
+    <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Some galaxy clusters themselves form into larger groups, known as <strong>superclusters</strong>. The Local Group is part of the Virgo Supercluster, 110 million lightyears across. <br><br>
+    Farther away, there are <strong>quasars</strong>, the especially brilliant centers of galaxies which glow from an 'extremely energetic process'. Normally, at the distance where one could see quasars, galaxies are too dim to see, but because quasars have an energy produced by a gas heated to a temperature of millions of degrees (produced as it gravitates toward a massive black hole and swirls around it), quasars are bright enough to be the most distant objects that can be seen in the expanses of space. <br><br>The quasars are 10 billion plus light-years away, and thus show 10 billion years into the past. Beyond these quasars, astronomers detected the feeble afterglow of the Big Bang, detected from all directions in space.
+    
+    </div><br><br>
+    
+    
+    <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> While the Universe is very large, it is also very sparse. In the interstellar gas of the galaxy, there is on average one atom per cubic centimeter, while in <strong>intergalactic space</strong> (much sparser than the Milky Way galaxy), that number drops to one atom per cubic meter of space.
+    
+    </div><br><br>
 
     
-    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">A. Rule 9.</font></strong> <strong>Summary of the Atomic Level of Matter:</strong><br><br>
+    <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Summary of the Atomic Level of Matter:</strong><br><br>
 The smallest part of any matter that retains its chemical properties (anything more complex than mono-atomic structures) are the molecules. Water, for example, has the molecule H<sub>2</sub>O, three atoms bonded together. Molecules are always built of atoms, the smallest division of an element that can be identified as that element. 
 <br><br>There are over 100 elements that occur in nature, but most are rare, and only a few occur with any real frequency, known as the <strong>“Cosmically Abundant”</strong> elements. Listed in descending frequency, they are as follows:<br>
 <ol>
@@ -145,8 +231,9 @@ The smallest part of any matter that retains its chemical properties (anything m
 </ol>
 
 Atoms consist of a central, positively charged <strong>nucleus</strong> surrounded by negatively charged <strong>electrons</strong>. The densest part of the atom is in the nucleus (composed of positive protons and neutral neutrons) while the majority of the mass is in the electron cloud around the nucleus.<br><br>
-Elements are defined by the number of <strong>protons</strong> in its atoms. The distance between the nucleus to the electrons is 100K times that of the diameter of the nucleus itself. Thus, solid matter is mostly empty space, and atoms are much emptier than the solar system, if they were to be placed on the same scale. 
-<br><br><br>
+Elements are defined by the number of <strong>protons</strong> in its atoms. The distance between the nucleus to the electrons is 100K times that of the diameter of the nucleus itself. Thus, solid matter is mostly empty space, and atoms are much emptier than the solar system, if they were to be placed on the same scale.
+
+</div><br><br>
 
 
 
@@ -174,18 +261,39 @@ Elements are defined by the number of <strong>protons</strong> in its atoms. The
 
 
 
-<strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">A. Rule 10.</font></strong> Way back when, everyone thought the Universe revolved around the Earth, known as the <strong>Geocentric Model</strong> of the Universe. This is ignorant and wrong. <br><br>
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Way back when, everyone thought the Universe revolved around the Earth, known as the <strong>Geocentric Model</strong> of the Universe. This is ignorant and wrong. <br><br>
 
 This idea was developed for more reasons than sheer human-centrism, however: the sun was about 1° to the east each day, relative to the stars. It takes 1 year for the sun to make a complete circle. This path is elliptic - the Sun rises 4 minutes later each day with respect to the stars. During the day, sunlight is scattered by the molecules of Earth's atmosphere, filling the sky with light and hiding the stars above the horizon. <br><br>
 
-The elliptic is not along the celestial equator (see definition above), but is rather inclined to it at an angle of 23.5°, because Earth's axis of rotation is tilted by 23.5°. Other planets are so tilted that they orbit the Sun on their side. This tilt is why the Sun moves northward and southward in the sky as the seasons change.<br><br><br>
+The elliptic is not along the celestial equator (see definition above), but is rather inclined to it at an angle of 23.5°, because Earth's axis of rotation is tilted by 23.5°. Other planets are so tilted that they orbit the Sun on their side. This tilt is why the Sun moves northward and southward in the sky as the seasons change.
 
-<strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">A. Rule 11.</font></strong> When north of the equator, the 'north celestial pole' will appear above the northern horizon at an angle equal to one's latitude - In San Francisco, 38°N, the north celestial pole is 38° above the northern horizon. The 'south celestial pole' is thus 38° below the southern horizon, and furthermore at 38° South the southern celestial pole will be 38° above the horizon. <br><br>
-  The part of the sky however many degrees from the pole (in this case, 38°) will seem to never set, known as the <strong>circumpolar zone</strong>. There is a particular star right at the Earth's north celestial pole that seems to move minimally during the daily rotations of the heavens: this is <strong>Polaris</strong>, the North Star.<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">A. Rule 12.</font></strong> Apart from the sun, the other planets change their positions slightly everyday. They have their own rotational patterns, 'rising' and 'setting' (in relation to the visibility of the Sun from a particular point on the object) over specific periods of time. The Greeks differentiated these bodies from the rest of the "fixed stars" by calling them planets, or wanderers.<!-- !!!!!! <3 --> <br><br>
 
-The moon has the fastest planetary motion, since it moves 12° per day. All of the planets have their paths close to the elliptic path of the sun, because the paths of the planets around the sun are all almost in exactly the same plane, like circles on a paper, along with the Earth. Each of the major celestial bodies are found with an 18°-wide belt, centered on the Sun's elliptic path, known as the <strong>zodiac</strong>. The motions of the planets, as seen from Earth, are somewhat obfuscated by the movement of Earth, making the process rather complex to understand from the Earth as the reference point.<br><br><br>
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> When north of the equator, the 'north celestial pole' will appear above the northern horizon at an angle equal to one's latitude - In San Francisco, 38°N, the north celestial pole is 38° above the northern horizon. The 'south celestial pole' is thus 38° below the southern horizon, and furthermore at 38° South the southern celestial pole will be 38° above the horizon. <br><br>
+  The part of the sky however many degrees from the pole (in this case, 38°) will seem to never set, known as the <strong>circumpolar zone</strong>. There is a particular star right at the Earth's north celestial pole that seems to move minimally during the daily rotations of the heavens: this is <strong>Polaris</strong>, the North Star.
+  
+  </div><br><br>
+
+  
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Apart from the sun, the other planets change their positions slightly everyday. They have their own rotational patterns, 'rising' and 'setting' (in relation to the visibility of the Sun from a particular point on the object) over specific periods of time. The Greeks differentiated these bodies from the rest of the "fixed stars" by calling them planets, or wanderers.<!-- !!!!!! <3 --> <br><br>
+
+The moon has the fastest planetary motion, since it moves 12° per day. All of the planets have their paths close to the elliptic path of the sun, because the paths of the planets around the sun are all almost in exactly the same plane, like circles on a paper, along with the Earth. Each of the major celestial bodies are found with an 18°-wide belt, centered on the Sun's elliptic path, known as the <strong>zodiac</strong>. The motions of the planets, as seen from Earth, are somewhat obfuscated by the movement of Earth, making the process rather complex to understand from the Earth as the reference point.
+
+</div><br><br>
+
 
 <strong><a href="#AsterismDef"><span class="mw-headline" id="AsterismDef">#</span></a> <font color="#006400">Asterism</font></strong>: A star pattern within a constellation (or spanning multiple constellations), such as the big Dipper as a part of Ursa Major<!--SIGNIFICANCE MINOR.-->. Think of them like sub-constellations.
 <br><br><br>
@@ -199,7 +307,11 @@ The moon has the fastest planetary motion, since it moves 12° per day. All of t
 <strong><a href="#CosmologyDef"><span class="mw-headline" id="CosmologyDef">#</span></a> <font color="#006400">Cosmology</font></strong>: The Science of the Cosmos, the human conceptualization and understanding thereof. The Mayans and Ancient Britons used calendar systems to record astronomical observations, such as the Mayan calendar and Stonehenge. Numerous cultures (like the Egyptians and Chinese) developed 365 day calendars, needed for things like the timing of the flooding of the Nile River (which follows a yearly pattern).
 <br><br><br>
 
-<strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">A. Rule 13.</font></strong> Aristotle is the earliest significant scholar in Astronomy, working from 384-322 B.C. - he wrote of how the Moon's phases are caused by differing portions being lit by the sun as the months go by. He knew the Sun was farther away due to the solar eclipses, and that the Earth was spherical due to the shadow on the moon never being indicative of a disk (which, at least during some points of the movement, would be a straight line across). <br><br>
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Aristotle is the earliest significant scholar in Astronomy, working from 384-322 B.C. - he wrote of how the Moon's phases are caused by differing portions being lit by the sun as the months go by. He knew the Sun was farther away due to the solar eclipses, and that the Earth was spherical due to the shadow on the moon never being indicative of a disk (which, at least during some points of the movement, would be a straight line across). <br><br>
   He, and everyone else at the time, were also convinced that the Universe was revolving around the Earth, because the closer objects in the sky (the 'fixed stars') seem to move on a still distant backdrop, compared to the wandering stars.<br><br>
   This apparent fixed-ness is the result of the <strong>Parallax</strong>, the shift in direction of an object due to the perspective and motion of the observer. The perceived shift in direction of stars due to the Earth's orbital motion is called stellar parallax, and because it is practically imperceptible in more distance objects (believed to be closer due to their brightness), only two possibilities were immediately clear to the Greeks:<br><br>
 
@@ -207,40 +319,70 @@ The moon has the fastest planetary motion, since it moves 12° per day. All of t
 2. The stars are so far away that the Parallax shift is extremely small, much like how far-away mountains do not seem to move when you are moving far away from them.<br><br>
 
 Of course, they went with the former.
-<br><br><br>
 
-<strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">A. Rule 14.</font></strong> 'Flat Earth Theory' is an ignoramus ideology for the following reasons: <br><br>Firstly, if you were to view a ship sailing across the horizon, you would find that it does not shrink and get smaller. The curvature of the Earth will interfere with your view of the ship, and the hull of the ship will disappear over the horizon before the mast does.<br><br>
+</div><br><br>
+
+
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> 'Flat Earth Theory' is an ignoramus ideology for the following reasons: <br><br>Firstly, if you were to view a ship sailing across the horizon, you would find that it does not shrink and get smaller. The curvature of the Earth will interfere with your view of the ship, and the hull of the ship will disappear over the horizon before the mast does.<br><br>
 Secondly, if the Earth were to be assumed to be a disk, it would not be possible for it to be simultaneously night and day on different parts of the planet. The nature of a disk makes it so when the Sun is facing it, even if the disk is turned a little, it will be lit by the Sun, and thus be day. 
-<br><br><br>
 
-<strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">A. Rule 15.</font></strong> Geometric determination of the size of the Earth:<br><br>
+</div><br><br>
+
+
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Geometric determination of the size of the Earth:<br><br>
 Because the sun is so far away, if everyone on Earth were to point at the Sun while it is visible (the entire enlightened side of the Earth), each arm would be parallel to one another:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/pointingtosun.png"><img src="/astronomy/img/pointingtosun.png" alt="The more distant an object, the closer to parallel the rays of light coming from it." width=60%/></a></div>
 	    <span class="tiny"><em>The more distant an object, the closer to parallel the rays of light coming from it.</em></span><br><br>
 	    
- <strong>Eratosthenes</strong> found that the bottom of a well in Syrene, Egypt, would be perfectly enlightened by the sun at noon on the first day of Summer. At noon of the first of Summer in Alexandria, he found that the sun was not directly overhead, but in fact off by a few degrees (based on the shadow of a column). Therefore, he deduced that in Alexandria the sun was roughly 7° off what it was in Syrene. This being 1/50th of the 360° of the assumed sphere, he multiplied the distance from Syrene to Alexandria by 50 and found a rough estimate of the circumference fo the Earth.
-<br><br><br>
+ <strong>Eratosthenes</strong> found that the bottom of a well in Syrene, Egypt, would be perfectly enlightened by the sun at noon on the first day of Summer. At noon of the first of Summer in Alexandria, he found that the sun was not directly overhead, but in fact was off by a few degrees (based on the shadow of a column). Therefore, he deduced that in Alexandria the sun was roughly 7° off what it was in Syrene. This being 1/50th of the 360° of the assumed sphere, he multiplied the distance from Syrene to Alexandria by 50 and found a rough estimate of the circumference of the Earth.
+ 
+</div><br><br>
 
-<strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">A. Rule 16.</font></strong> <strong>Hipparchus</strong> was even more hardcore in his devotion to Astronomical truth than Eratosthenes. He catalogued the sky into a system based on coordinates and brightness - the position of objects in the sky were catalogued in a primitive celestial latitude and longitude system, and he divided the sky into different apparent magnitudes according to their brightness. The brightest stars were of the first magnitude, for example. <br><br>He then made a horrifying discovery.<br><br>
+
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Hipparchus</strong> was even more hardcore in his devotion to Astronomical truth than Eratosthenes. He catalogued the sky into a system based on coordinates and brightness - the position of objects in the sky were catalogued in a primitive celestial latitude and longitude system, and he divided the sky into different apparent magnitudes according to their brightness. The brightest stars were of the first magnitude, for example. <br><br>He then made a horrifying discovery.<br><br>
 The position of the sky of the north celestial pole, as it had appeared in the centuries prior and then, had shifted in position somewhat. The rate with which the entire sky dome rotates is slow, continuous, and constant. The North Celestial Pole is just the projection of Earth's North Pole into the sky - if the north celestial pole is wobbling around, then it is the <em>Earth</em> that is doing the wobbling. The motion of Earth's axis points is called <strong>precession</strong>. Precession, the Earth's wobble cycle, can be illustrated by the following conical pattern:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/precession.png"><img src="/astronomy/img/precession.png" alt="The axis of Earth wobbles in a 26,000-year cycle. Today the north celestial pole is near the star Polaris, but about 5000 years ago it was close to a star called Thuban, and in 14,000 years it will be closest to the star Vega." width=37%/></a></div>
 	    <span class="tiny"><em>The axis of Earth wobbles in a 26,000-year cycle. Today the north celestial pole is near the star Polaris, but about 5000 years ago it was close to a star called Thuban, and in 14,000 years it will be closest to the star Vega.</em></span>
-<br><br><br>
+	    
+</div><br><br>
 
 	   
-<strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">A. Rule 17.</font></strong> The last ancient Astronomer who wrote hugely consequential astronomical treatises was <strong>Ptolemy</strong>, who wrote a compendium of astronomical knowledge known as the <strong>Almagest</strong> in 140-ish A.D.. This book also discusses many works from the past, saving knowlege of those works for future generations. <br><br>Ptolemy benefited from the mass of astronomical knowledge hoarded over the prior centuries, especially that of Hipparchus, and produced the <strong>Ptolemaic Model</strong> of the Universe, which no one expanded upon for 1000+ years. See Rule 18 for a full description.<br><br><br>
+<div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> The last ancient Astronomer who wrote hugely consequential astronomical treatises was <strong>Ptolemy</strong>, who wrote a compendium of astronomical knowledge known as the <strong>Almagest</strong> in 140-ish A.D.. This book also discusses many works from the past, saving knowlege of those works for future generations. <br><br>Ptolemy benefited from the mass of astronomical knowledge hoarded over the prior centuries, especially that of Hipparchus, and produced the <strong>Ptolemaic Model</strong> of the Universe, which no one expanded upon for 1000+ years. See Rule 18 for a full description.
+
+</div><br><br>
 	   
 	   
-	   <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">A. Rule 18.</font></strong> 
-	   One of the most infamous of the baffling interpretations to result from the Earth rotating around the sun is the phenomenon of <strong>Retrograde Motion</strong>:<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> One of the most infamous of the baffling interpretations to result from the Earth rotating around the sun is the phenomenon of <strong>Retrograde Motion</strong>:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/retrograde.png"><img src="/astronomy/img/retrograde.png" alt="Retrograde Motion of a planet beyond Earth’s Orbit. The letters on the diagram show where Earth and Mars are at different times. By following the lines from each Earth position through each corresponding Mars position, you can see how the retrograde path of Mars looks against the background stars." width=60%/></a></div>
 	    <span class="tiny"><em>Retrograde Motion of a planet beyond Earth’s Orbit. The letters on the diagram show where Earth and Mars are at different times. By following the lines from each Earth position through each corresponding Mars position, you can see how the retrograde path of Mars looks against the background stars.</em></span><br><br>
 	    Most of the year, planets will appear to move eastward as they orbit the sun, but as shown in the image, from position B to D, a planet will appear to drift backward as it is overtaken by the faster Earth, moving westward, even though it is still moving to the East. As the Earth rounds it orbit toward point E, the planet will again seem to move westward - this is Retrograde Motion. Now that the Earth is known to also be a moving planet, this is much easier to understand than the astronomical concoction of intersecting circles cooked up by Ptolemy:<br><br>
 	    
 	    Ptolemy's theory, the <strong>Ptolemaic Model</strong>, declared that each planet revolved in an orbit of its own, called an <strong>epicycle</strong>, while it itself is revolving around the Earth in an orbit called the <strong>Deferant</strong>. The deferant isn't even exactly centered around the Earth, however, it is slightly off-centered on something called the <strong>Equant point</strong>. <br><br>Ptolemy invented this fantastical system by carefully calculating the speeds and distances for the movements of the celestial bodies so that 1. the movements of the of the planets matched his model, no matter how complex they were, and more importantly that 2. the model conforms to the ancient assumptions that Earth was stationary and that it is the center of the Universe. <br><br>
 	    
-	    While this made the model functionally correct, generally providing the positions of the stars based on its algorithmic system, it is all wrong and built off of false assumptions. 
-	   <br><br><br>
+	    While this made the model functionally correct, generally providing the positions of the stars based on its algorithmic system, it is all wrong and built off of false assumptions.
+	    
+	   </div><br><br>
+	   
 	   
 	   </article>
 	    <header class="articleHeader"><hr>
@@ -248,17 +390,36 @@ The position of the sky of the north celestial pole, as it had appeared in the c
 	    </header>
 	    <article><br>
 	   
-	   <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">A. Rule 19.</font></strong> While Astrology is not bound to reality, it is interesting to learn about it from a historical perspective. The seven classical wandering stars, including the sun and the moon, hold a special place in the mythos of different cultures as they developed and formed their own belief systems. <br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> While Astrology is not bound to reality, it is interesting to learn about it from a historical perspective. The seven classical wandering stars, including the sun and the moon, hold a special place in the mythos of different cultures as they developed and formed their own belief systems. <br><br>
 	   
 	   <!--In humanity's most primitive state, invented stories (all human-centric) regarding natural phenomena will be used as a means of explaining the inexplicable Universe. -->As a means of explaining the inexplicable Universe (and to support the notions that humans are central to it), weather, solar exlipses, and the patterns of birds were all assigned divine significance. Applied to Astronomy, "<em>Astrology</em>" was born. <br><br>
-	    The Babylonians used the knowledge of the stars to guide rulers in decision-making. By the 2nd century B.C., the Greeks applied Astrology to every individual - "Natal Astronomy" was formed through the belief that the configuration of the stars at the moment of one's birth will have an effect on their life and success. Ptolemy took this belief system to the next level by writing the "<strong>Tetrabiblos</strong>", the treatise on Astrology that transformed natal astronomy into something akin to a religion.<br><br><br>
+	    The Babylonians used the knowledge of the stars to guide rulers in decision-making. By the 2nd century B.C., the Greeks applied Astrology to every individual - "Natal Astronomy" was formed through the belief that the configuration of the stars at the moment of one's birth will have an effect on their life and success. Ptolemy took this belief system to the next level by writing the "<strong>Tetrabiblos</strong>", the treatise on Astrology that transformed natal astronomy into something akin to a religion.
+	    
+	    </div><br><br>
 	   
-	   <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">A. Rule 20.</font></strong> The <strong>Horoscope</strong> is the central part of natal astronomy, the identifying of the time of birth with the relationship to the movement of the stars that supposedly determines one's personality traits.<br><br> 
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Horoscope</strong> is the central part of natal astronomy, the identifying of the time of birth with the relationship to the movement of the stars that supposedly determines one's personality traits.<br><br> 
 	   If religion is the opium of the masses, Astrology is the opium of the ignoramuses. The zodiac, as mentioned in Rule 12, is divided into 12 <em>signs</em>, sections, each 30° long as part of the 360° celestial sphere. Each sign is named after a constellation in that section of the sky where the sun, moon, and planets were seen to pass.
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">A. Rule 21.</font></strong> An individual's "sign" is their <strong>sun sign</strong>, e.g. the part of the zodiac the sun was in when they were born. However, because of precession (see Rule 15), the sky has been rotating over time, and in the 2000 years since the Tetrabiblos was written, the stars have shifted 1/12 the zodiac - about 1/2 of a sign. To stop themselves from allowing reason to infiltrate their minds, practioners of Astrology retain the position of stars as they were in the time of Ptolemy as their "sun sign", which makes even less sense than having the dates of the signs change over time. This speaks to the meaningless and pseudoscientific nature of Astrology as a whole, which, as an ancient spiritualistic practice, has had a remarkable lifespan past the Age of Enlightenment.<br><br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> An individual's "sign" is their <strong>sun sign</strong>, e.g. the part of the zodiac the sun was in when they were born. However, because of precession (see Rule 15), the sky has been rotating over time, and in the 2000 years since the Tetrabiblos was written, the stars have shifted 1/12 the zodiac - about 1/2 of a sign. To stop themselves from allowing reason to infiltrate their minds, practioners of Astrology retain the position of stars as they were in the time of Ptolemy as their "sun sign", which makes even less sense than having the dates of the signs change over time. This speaks to the meaningless and pseudoscientific nature of Astrology as a whole, which, as an ancient spiritualistic practice, has had a remarkable lifespan past the Age of Enlightenment.
+	   
+	   </div><br><br>
+	   
 	   
 	   </article>
 	    <header class="articleHeader"><hr>
@@ -270,34 +431,61 @@ The position of the sky of the north celestial pole, as it had appeared in the c
       While Europe was going througn an anti-intellectual phase during the Middle Ages, there was a flowering of Astronomical discovery and progress during the <strong>Islamic Golden Age</strong>, which preserved and elaborated on the ideas of the Greeks. It was the end of the Dark Ages in Europe and the ushering in of the <u>Renaissance</u> that saw a revival in intellectual interest in sceintific, and importantly Astronomical, ideas in Europe. Copernicus embodied the spirit of European revival in interest in Astronomy (see below).
       <br><br><br>
       
-      <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">A. Rule 22.</font></strong> <strong>Nicolaus Copernicus</strong> was a Polish astronomer who flourished during the early 1500s. He led the critical reappraisal of Ptolemy's ancient model of the Universe, which had stood as the dominant explanation of the cosmos for over a thousand years. He led the formation of the <strong>Heliocentric model</strong> of the solar system, which radically considered Earth itself to be a planet that orbited the sun, alongside all other planets. Additionally, he theorized that only the moon orbits the Earth.<br>
+      <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Nicolaus Copernicus</strong> was a Polish astronomer who flourished during the early 1500s. He led the critical reappraisal of Ptolemy's ancient model of the Universe, which had stood as the dominant explanation of the cosmos for over a thousand years. He led the formation of the <strong>Heliocentric model</strong> of the solar system, which radically considered Earth itself to be a planet that orbited the sun, alongside all other planets. Additionally, he theorized that only the moon orbits the Earth.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/earlyhelio.png"><img src="/astronomy/img/earlyhelio.png" alt="Copernicus developed a heliocentric plan of the solar system. This system was published in the first edition of De Revolutionibus Orbium Coelestium. Notice the word Sol for “Sun” in the middle." width=38%/></a></div>
 	    <span class="tiny"><em>Copernicus developed a heliocentric plan of the solar system. This system was published in the first edition of De Revolutionibus Orbium Coelestium. Notice the word Sol for “Sun” in the middle.</em></span><br><br>
       
       As evident, he still assumed that the orbits of the planets would be uniformally circular. However, his ideas were revolutionary enough to provoke discussion across the scientific world, and the tenets of heliocentrism would eventually be popularly accepted over a century after his death. Controversially (as with everything he theorized), he explained the precession of the celestial sphere as being the result of the rotation of the Earth along its axis.
-      <br><br><br>
+      
+      </div><br><br>
+      
 	   
-	   <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">A. Rule 23.</font></strong> Copernicus's masterpiece, <strong>De Revolutionibus</strong>, elaborates on Earth as one of six planets, and correctly lists the Planets in order of their proximity to the sun, and was able to deduce that the closer to the sun the planet, the greater the orbital speed. <br><br>
-	   Furthermore, complexities like retrograde motion were explained through this new theory with much simpler explanations than Ptolemy. This theory conflicted with the thousands of years of established common sense: the greek/classical schools of thought, and the dogma pushed by the Catholic Church. <br><br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Copernicus's masterpiece, <strong>De Revolutionibus</strong>, elaborates on Earth as one of six planets, and correctly lists the Planets in order of their proximity to the sun, and was able to deduce that the closer to the sun the planet, the greater the orbital speed. <br><br>
+	   Furthermore, complexities like retrograde motion were explained through this new theory with much simpler explanations than Ptolemy. This theory conflicted with the thousands of years of established common sense: the greek/classical schools of thought, and the dogma pushed by the Catholic Church. 
+	   
+	   </div><br><br>
 	
 	   
-	   <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">A. Rule 24.</font></strong> <strong>The scientific method</strong>, nonexistant during the time of Copernicus, was developed by <strong>Galileo Galileo</strong> during the 17th century. He greatly contributed to the understandings of Mechanics, Classical Physics of motion, and the influence of forces on bodies. Galileo theorized the basic principle of Inertia, that rest is no more natural a state for a body than motion. He argued that a force is required not only to start an object moving from rest, but also for slowing down, stopping, speeding up, and changing direction in any form. Additionally, in studying <strong>acceleration</strong> (see <a href="/Physics/mechanics/velspaccel#Rule12">P. Rule 12</a>), he found that objects will accelerate uniformally as they free fall or are otherwise influenced by gravity. These laws would be formulated in exact mathematical expressions. <br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The scientific method</strong>, nonexistant during the time of Copernicus, was developed by <strong>Galileo Galileo</strong> during the 17th century. He greatly contributed to the understandings of Mechanics, Classical Physics of motion, and the influence of forces on bodies. Galileo theorized the basic principle of Inertia, that rest is no more natural a state for a body than motion. He argued that a force is required not only to start an object moving from rest, but also for slowing down, stopping, speeding up, and changing direction in any form. Additionally, in studying <strong>acceleration</strong> (see <a href="/Physics/mechanics/velspaccel#Rule12">P. Rule 12</a>), he found that objects will accelerate uniformly as they free fall or are otherwise influenced by gravity. These laws would be formulated in exact mathematical expressions. <br><br>
 	   Most importantly, he adopted the heliocentric model of the universe in the 1590s and began lecturing on the topic. The church pushed back, decreeing that heliocentrism was "false and absurd" in 1616 and disavowing its defense.<br><br>
 	    Galileo would drastically improve upon the telescope and its powers of magnification. He used this invention to observe the cosmos, beginning in 1609, and he discovered many distant stars too faint to be seen with the naked eye, and that the Milky Way across the night sky was made out of many stars as well. <br><br>
 	    
 	    He found that Jupiter had its own moons, circling Jupiter at different orbit speeds, proving that centers of motion could themselves be in motion (a theory argued against by geocentrics). Venus proved to go through phases like the moon, showing it revolved around the sun. <br><br>
 	    
 	    For these discoveries, Galileo was rewarded with a house arrest on the orders of the Catholic Church, who found his work heretical, and this would last until his death. In this confinement he would write one of his greatest masterpieces, the "<strong>Two New Sciences</strong>" which would form the foundations for modern Physics.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">A. Rule 25.</font></strong> <strong>Tycho Brahe</strong> was a Danish astronomer who worked concurrent to Galileo, and produced a sound mathematical basis (along with Kepler) of Copernicus's Theory of Heliocentrism. <br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Tycho Brahe</strong> was a Danish astronomer who worked concurrent to Galileo, and produced a sound mathematical basis (along with Kepler) of Copernicus's Theory of Heliocentrism. <br><br>
 	   
 	   He established an observatory on a North Sea Island, and he is said to be the last of the pre-telescopic observers in Europe. He took extremely detailed records of the positions of the Sun, Moon, and Planets for almost 20 years, the greatest collection of such data since Hipparchus. <br><br>
 	   When he fled Denmark because of all the enemies he'd accumulated, he became the court Astronomer in Prague, where he enlisted the help of the young Astronomer Johannes Kepler in analyzing the data (see below). 
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">A. Rule 26.</font></strong> <strong>Johannes Kepler</strong> was a German astronomer who served as Tycho Brahe's assistant in Prague. It was only after Brahe's death did Kepler gain access to the entirety of the records, which occupied him for the next 20 years. In this analysis, he developed three laws that dictate the motion of planets through Space, known as <strong>Kepler's Laws of Planetary Motion</strong>.<br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Johannes Kepler</strong> was a German astronomer who served as Tycho Brahe's assistant in Prague. It was only after Brahe's death did Kepler gain access to the entirety of the records, which occupied him for the next 20 years. In this analysis, he developed three laws that dictate the motion of planets through Space, known as <strong>Kepler's Laws of Planetary Motion</strong>.<br><br>
 	   
 	   <strong>Law of Planetary Motion #1 - The Orbit of a planet is an ellipse with the Sun at one of the two foci.</strong><br><br>
 	   <u>Explanation</u>: The path of an object through space is called its orbit. Kepler assumed, at first, that the orbits of planets were circles, but doing so only produced orbits that were consistent with Brahe's observations. He discovered that the orbit of Mars was elliptical rather than circular. <br><br>
@@ -323,20 +511,32 @@ The position of the sky of the north celestial pole, as it had appeared in the c
 	    The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. If the eccentricity is zero, then the foci will be in the same spot and the ellipse will be a circle. Thus, in elliptical terms, a circle is an ellipse of zero eccentricity with the Semimajor axis as the radius. <br /><br />
 	    
 	    The greater the eccentricity, the more elongated the ellipse, up to a maximum eccentricity of 1.0, which is just a flat line. The size and shape of an ellipse are completely specified by its Semimajor axis and its Eccentricity. Mars has an elliptical orbit of 0.1, with the sun at one of the foci, the other being empty. This discovery was generalized by Kepler to apply to all orbits, with different eccentricities.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">A. Rule 27.</font></strong> <br><strong>Law of Planetary Motion #2 - A line segment joining a planet and the sun sweeps out equal areas during equal intervals of time.</strong><br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <br><strong>Law of Planetary Motion #2 - A line segment joining a planet and the sun sweeps out equal areas during equal intervals of time.</strong><br><br>
 	   The 2nd Law deals with orbital speed, or the speed with which each planet moves along its ellipse. Kepler determined that Mars moves faster as it comes closer to the Sun, and slows down as it pulls away from the Sun. <br><br>
 	   
 	   Visualize an elastic band connecting a celestial body with the Sun. As the body gets farther from the sun, the band gets stretched, and thus moves slower until the band will pull it back to the sun. When it is closer to the sun, the band is not stretched as much and thus moves rapidly. Additionally, if you were to imagine the area sweeped in the ellipse (centered from the sun) by the orbit, then, given equal intervals of time, any two sweeped areas of the orbit will be equal.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/2ndLaw.png"><img src="/astronomy/img/2ndLaw.png" alt="The orbital speed of a planet traveling around the Sun (the circular object inside the ellipse) varies in such a way that in equal intervals of time (t), a line between the Sun and a planet sweeps out equal areas (A and B). Note that the eccentricities of the planets’ orbits in the solar system are substantially less than shown here." width=44%/></a></div>
 	    <span class="tiny"><em>The orbital speed of a planet traveling around the Sun (the circular object inside the ellipse) varies in such a way that in equal intervals of time (t), a line between the Sun and a planet sweeps out equal areas (A and B). Note that the eccentricities of the planets’ orbits in the solar system are substantially less than shown here.</em></span><br><br> 
 	   While a circular orbit would cause a planet to move at the same speed throughout its orbit, the differing speeds of the planets as they move make it evident that their orbits are elliptical.
-	   <br><br><br>
+	   
+	   </div><br><br>
+	   
 	   
 	   <strong><font color="#006400"><a href="#KinematicsDef"><span class="mw-headline" id="KinematicsDef">#</span></a> Kinematics</font></strong>: The Science of motion, such as Newton's & Kepler's Laws.<br><br><br>
 	   
-	   <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">A. Rule 28.</font></strong> <strong>Law of Planetary Motion #3 - The square of a planet's orbital period is proportional to the cube of the length of the Semimajor axis of its orbit.</strong><br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Law of Planetary Motion #3 - The square of a planet's orbital period is proportional to the cube of the length of the Semimajor axis of its orbit.</strong><br><br>
 	   While the first two laws deal largely with the shape and speeds of a planet's orbit, there was yet to be a mathematical model for the spacing of the planets and how they ended up in the positions/orbits they have. <br><br>
 	   
 	   It was Kepler's 1619 discovery of a basic relationship relating the orbits of the planets to their relative distance from the sun that a mathematical model governing planetary spacing was formed. The Orbital Period P is the time it takes a planet to travel once around the Sun, and the Semimajor axis of a planet's orbit is equivalent to its average distance from the sun. In mathematical terms, this law can be defined as the following:<br><br>
@@ -352,16 +552,26 @@ The position of the sky of the north celestial pole, as it had appeared in the c
 	   With regard to the Earth (and all other planets where years and AU are the given units), the sides of the formula are not only proportional, but equal. The Third Law of Planetary Motion applies for all objects orbiting the sun, and enables the determination of an objects relative distance from the Sun based on how long the <strong>Orbital Period</strong> is. <br><br>
 	   Since Mars has an orbital period of 1.88 years, the third law tells us that (1.88)² = a³, using years and AU as the units. Therefore, the Semimajor axis of Mars has a length of <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">3.53</span></span> AU, or 1.52 AU, thus orbiting farther from the Sun than Earth.
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">A. Rule 29.</font></strong> Kepler's laws are highly qualitative, as they only reflect rules of thumb that Kepler discerned about the planetary motion in the solar systems. The laws do not actually explain what forces of nature are causing the celestial body to act in the ways specified; that is what makes them 'Laws' (see <a href="https://www.youtube.com/watch?v=GyN2RhbhiEU">video</a> for reference).<br><br> 
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Kepler's laws are highly qualitative, as they only reflect rules of thumb that Kepler discerned about the planetary motion in the solar systems. The laws do not actually explain what forces of nature are causing the celestial body to act in the ways specified; that is what makes them 'Laws' (see <a href="https://www.youtube.com/watch?v=GyN2RhbhiEU">video</a> for reference).<br><br> 
 	   It would be <strong>Isaac Newton</strong> who would form the sound mathematical framework that explained the observations and rules formulated by Galileo, Brahe, Kepler, and the rest. As a professor of Mathematics at Cambridge, Newton dedicated much of his time to pondering the cosmos and reality, and from this he developed special mathematical models/equations and laws to govern motion itself, the forces behind Kinematics. He wrote down his theories in a book called the <strong>Principia</strong>, in 1687, where he unleashed unto an unsuspecting public his three laws of motion:<br><br>
 	   <strong><u>Law of Motion #1</u>:  Every object will continue to be in a state of rest, or move at a constant speed in a straight line, until it is compelled to change by an outside force.</strong> The first law is just a restatement of one of Galileo's discoveries, called the <strong>Conservation of Momentum</strong> (see
 	   <a href="/Physics/MechanicsFull3#MomentumBasics">P. Section VIII.II</a>). This law states that in the abscence of any outside influence, there is a measure of a body's motion, called its momentum, that remains unchanged. <br><br>The first law is also oftentimes called the <strong>Law of Inertia</strong>, where Inertia is the tendency of an object to resist a change in the state of motion (see the <a href="/Physics/mechanics/force#Inertia">Physics reference</a>). In other words, a stationary object will stay at rest while a moving object will keep moving until some force intervenes.
-	   <br><br><br>
+	   
+	   </div><br><br>
 	   
 	   
-	   <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">A. Rule 30.</font></strong> Momentum relies on three factors:
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Momentum relies on three factors:
 	   <ol>
       <li><strong>Speed</strong>, how fast an object moves (zero if stationary).
 
@@ -379,30 +589,54 @@ The position of the sky of the north celestial pole, as it had appeared in the c
 	   The speed (with only magnitude) and direction of motion can be combined as velocity (see <a href="/Physics/mechanics/velspaccel">Classical Physics Section I</a> for explanations and interpretations of velocity & speed). 20 kilometers per hour due South is in terms of Velocity, while 20 kilometers per hour by itself is in terms of speed.<br><br> Momentum, referred to as variable p, can be expressed through the following equation: <span class="vecteur"><strong>p</strong></span> = m × <span class="vecteur"><strong>v</strong></span>, where m is the object's mass and v is the velocity at any point. <br><br>
 	   
 	   It is difficult to see Momentum and the First Law of Motion in action in the real world, because of how many forces are acting on a body at any one time, from Air Resistance to Electromagnetism. For example, while a ball rolling on the sidewalk will eventually be slowed down due to Rubbing Friction (see <a href="/Physics/MechanicsFull2#Rule58">P. Rule 58</a> and below), but if that ball was moving in space (the "vacuum" in which the idealized equations of kinematics are best applicable), the friction is so minute and insignificant that it would continue coasting through space forever. Thus, momentum can change only under the action of an outside force, such as gravity.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">A. Rule 31.</font></strong> <strong><u>Law of Motion #2</u>: The change of motion of a body is proportional to, and in the direction of, the force acting on it.</strong> <br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><u>Law of Motion #2</u>: The change of motion of a body is proportional to, and in the direction of, the force acting on it.</strong> <br><br>
 	   This law expresses force in terms of its ability to change momentum with time. A force, push or pull, has both direction and magnitude. When a force is applied to a body, the momentum changes in the direction of the applied force. This means that a force is required to change either the speed or the direction of a body, or both - to start it moving, to speed it up, to slow it down, to stop it, or to change its direction.<br><br>
 	   The rate of change in an object's velocity is called acceleration, and the second law states that the acceleration of a body is proportional to the force being applied to it.<br><br>
 	   For example: Imagine a table as a smooth, frictionless surface. If you were to push a book across it, it will speed up as long as you keep pushing it with a positive acceleration (or negative acceleration if you are pushing it backwards). The harder you push the book, the more it will speed up. How much an object will accelerate given a force is reliant on the mass of the object; if you pushed a pen on the table with the same force you pushed the book with, it would accelerate to a higher speed.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">A. Rule 32.</font></strong> <strong><u>Law of Motion #3</u>: For every action, there is an equal and opposite reaction (or: the mutual actions of two bodies upon each other are always equal and act in opposite directions).</strong><br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><u>Law of Motion #3</u>: For every action, there is an equal and opposite reaction (or: the mutual actions of two bodies upon each other are always equal and act in opposite directions).</strong><br><br>
 	   This law generalizes the first law in a way that also defines mass. Thus, if there were to be a car system of multiple oblects, isolated from external forces, the first law would stipulate that the total momentum of the objects would remain constant. <br><br>
 	   Any change of momentum in a system <u>must</u> be balanced by another change, equal in force and opposite in direction, so that the momentum of the entire system is not changed. In every situation, there is always a force pair governing the reactions between any two objects. When you fall from a tree, the force pair is you and the Earth, because the Earth is exerting the force of gravity attracting you to the Earth, while the Earth is accelerated by the student's pull. You do not notice the change in momentum of the Earth because of its huge mass, which measures the inertia of the object, the tendency of the object to resist acceleration. <br><br>
 	   The recoil from hitting a ball with a baseball is further proof of the third law.
-	   <br><br><br>
+	   
+	   </div><br><br>
+	   
 	   
 	   <strong><font color="#006400"><a href="#VolumeDef"><span class="mw-headline" id="VolumeDef">#</span></a> Volume</font></strong>: The measurement of how much Physical space an object occupies. Measured in cubic units, like cm³ or liters.<br><br><br>
 	   
 	   <strong><font color="#006400"><a href="#DensityDef"><span class="mw-headline" id="DensityDef">#</span></a> Density</font></strong>: Mass divided by volume. Common units include g/cm³.<br><br><br>
 	   
-	   <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">A. Rule 33.</font></strong> <strong>Angular Momentum</strong> is the measurement of the rotation of a body as it revolves around some fixed point, like a planet rotating around the Sun. Mathematically, the angular momentum of an object is the product of its mass, velocity, and distance from the fixed point (which isn't always the radius, as known from elliptical orbits). If these three values were to be constant, meaning that an object's motion takes places at a constant velocity at a fixed distance from the spin center, then the angular momentum is also constant.<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Angular Momentum</strong> is the measurement of the rotation of a body as it revolves around some fixed point, like a planet rotating around the Sun. Mathematically, the angular momentum of an object is the product of its mass, velocity, and distance from the fixed point (which isn't always the radius, as known from elliptical orbits). If these three values were to be constant, meaning that an object's motion takes places at a constant velocity at a fixed distance from the spin center, then the angular momentum is also constant.<br><br>
 	   
 	   Kepler's 2nd law is a result of the conservation of angular momentum. As a planet approaches the Sun on an elliptical orbit and the distance to the spin center decreases; the planet speeds up to conserve angular momentum. Similarly, when the planet is farther from the sun, it moves slower. When you spin on a swivel chair at the park, when you have your arms outstretched, you move slower, but when you bring your arms inward, you speed up.
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">A. Rule 34.</font></strong> Because the planets move in ellipses instead of straight lines, they must have a force bending their paths: <strong>Gravity</strong>. The Earth's gravity extends to the moon, and in doing so produces the force required to curve the Moon’s path from a straight line and keep it in its orbit. Furthermore, the attractive force of the Sun keeps all of the planets in their orbits.<br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Because the planets move in ellipses instead of straight lines, they must have a force bending their paths: <strong>Gravity</strong>. The Earth's gravity extends to the moon, and in doing so produces the force required to curve the Moon’s path from a straight line and keep it in its orbit. Furthermore, the attractive force of the Sun keeps all of the planets in their orbits.<br><br>
 
 It was the Third law of motion that truly rocked the scientific world in its day, and it carried with it the implication that there was a Universal attraction among all bodies everywhere in space. This attraction both explains the falling of objects on Earth and the orbit of the planets. Thus, Newton formulated the law of Gravitational Attraction, establishing a proportionality between the gravitational force between two objects and the mass & distances of the objects:<br><br>
 
@@ -414,38 +648,66 @@ It was the Third law of motion that truly rocked the scientific world in its day
 <strong>M<sub>2</sub></strong> = The Mass of the second object.<br>
 <strong>R</strong> = The distance between the two objects.<br><br>
 
-Gravity is internal to the code of mass - it is a property that was specifically given a value in the source code of the Universe. No matter the distance between two objects, there will always be a gravitational pull between them, with the gravitational pull of different objects affecting objects millions of kilometers away, such as through smaller galaxies orbiting larger ones.<br><br><br>
+Gravity is internal to the code of mass - it is a property that was specifically given a value in the source code of the Universe. No matter the distance between two objects, there will always be a gravitational pull between them, with the gravitational pull of different objects affecting objects millions of kilometers away, such as through smaller galaxies orbiting larger ones.
+
+</div><br><br>
 	   
-	   <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">P. Rule 35.</font></strong> Some points in the orbits of the planets (specifically those in our Solar System) have been assigned special names:<br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Some points in the orbits of the planets (specifically those in our Solar System) have been assigned special names:<br><br>
 
 <strong>Perihelion</strong>: The point along the orbit of a planet in which it is closest to the sun, and thus moving the fastest. For moons and artificial satellites of the Earth, the equivalent term is <strong>perigee</strong>.
 <br><br>
 
 <strong>Aphelion</strong>: The point along the orbit in which the planet is farthest from the sun, and thus moving the slowest. For moons and artificial satellites of the Earth, the equivalent term is <strong>apogee</strong>.
-<br><br><br>
+
+</div><br><br>
+
 	   
-	   <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">P. Rule 36.</font></strong> 
-	   While the planets of the Solar System all tend to have low eccentricities (Mars has the largest, at 0.21), asteroids and comets (see Rules [[[ & [[[ respectively) have their own trends in orbital eccentricities and other characteristics:<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> While the planets of the Solar System all tend to have low eccentricities (Mars has the largest, at 0.21), asteroids and comets (see Rules [[[ & [[[ respectively) have their own trends in orbital eccentricities and other characteristics:<br><br>
 
 Generally, asteroids have smaller Semimajor axes in their orbits than comets, while comets have much larger orbits and eccentricities (averaging over 0.8). Most asteroids reside in the asteroid belt, a region between 2.2 & 3.3 AU, located in a gap between the orbits of Mars & Jupiter. The distance between Mars and Jupiter is large enough that a stable orbit of small bodies can exist in the gap.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/solarorbitals.png"><img src="/astronomy/img/solarorbitals.png" alt="The orbitals of various objects in the solar system. Black represents the five planets closest to the Sun, Red represents three comets, and Blue represents the four largest asteroids." width=50%/></a></div>
 	    <span class="tiny"><em>The orbitals of various objects in the solar system. <strong>Black</strong> represents the five planets closest to the Sun, <strong>Red</strong> represents three comets, and <strong>Blue</strong> represents the four largest asteroids.</em></span>
-	   <br><br><br>
 	   
-	   <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">P. Rule 37.</font></strong> When a satellite is in orbit, it does not need to exert any energy to remain in orbit. However, in order to <em>get</em> into orbit, the rocket that lifts the satellite into position must exert a huge amount of energy to accelerate it to <strong>Orbital Speed</strong>. <br><br>
+	   </div><br><br>
+	   
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> When a satellite is in orbit, it does not need to exert any energy to remain in orbit. However, in order to <em>get</em> into orbit, the rocket that lifts the satellite into position must exert a huge amount of energy to accelerate it to <strong>Orbital Speed</strong>. <br><br>
 Furthermore, if it is the goal of the satellite to traverse beyond the orbit of Earth into further regions of the Solar System, then the rocket must reach <strong>Escape Speed</strong>, the speed needed to escape the pull of Earth. This is approximately 11 kilometers per second, and after escaping the orbit of the Earth, the satellite will simply be able to coast through space, interacting with nearby orbits as they pass by them, toward whichever target they intend. To avoid falling into these nearby orbits, small thruster rockets onboard must be used to adjust the trajectory.
 
-<br><br><br>
+</div><br><br>
 	   
-	   <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">P. Rule 38.</font></strong> <strong>Multiple Bodies:</strong><br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Multiple Bodies:</strong><br><br>
 
 The motion of a body under the gravitational influence of 2+ bodies complicates exponentially. Of course, every body is under the influence of everything in the universe all the time, but with increasing distance these influences becomes more negligible.<br><br>
 While when considering the effect of thousands of stars and bodies on eachother within a galaxy, it is clear that only extremely powerful supercomputers can compute the effects these bodies have on eachother (as they move) enough to predict their future locations.<br><br>
 Within the Solar System, things are much simpler, because the planets barely have any effect on the orbits of one another. These small influences are known as <strong>perturbations</strong>, and the study of their effects resulted in the discovery of Neptune in 1846.
 	   
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">P. Rule 39.</font></strong> <strong>Discovering New Planets:</strong><br><br>
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Discovering New Planets:</strong><br><br>
 
 <strong>Uranus</strong>, the first planet discovered beyond those known to the ancients, was first noticed in 1781, by William Herschel. It had previously not been recognized as a planet, but as a star. This discovery proved that planets beyond those visible to the naked eye could exist, and that calculating the locations of these planets was possible.<br><br>
 
@@ -453,7 +715,9 @@ The orbit of Uranus was calculated in 1790, using the observational data of the 
 
 To reconcile the difference in the position of Uranus with the Newtonian orbital formulas, an analysis of whether the irregularity could be caused by the pull of a new, previously unknown planet began. This research began in 1843 by John Couch Adams, and returned the mass, orbit, and approximate position for the planet in the sky.<br><br>
 
-Independently of one another, Adams and the frenchman Urbain Le Verrier both produced the mathematical deductions of the location and nature of the unknown planet, and it would be on September 23rd, 1846 that the planet was identified, confirming the generality of the Laws of Gravitation.<br><br><br>
+Independently of one another, Adams and the frenchman Urbain Le Verrier both produced the mathematical deductions of the location and nature of the unknown planet, and it would be on September 23rd, 1846 that the planet was identified, confirming the generality of the Laws of Gravitation.
+
+</div><br><br>
 
 
 	   <strong><font color="#006400"><a href="#GreatCircleDef"><span class="mw-headline" id="GreatCircleDef">#</span></a> Great Circle</font></strong>: Any circle on the surface of a sphere whose center is at the center of the sphere. For example, Earth’s equator is a great circle on Earth’s surface, halfway between the North and South Poles.<br><br><br>
@@ -471,23 +735,34 @@ Independently of one another, Adams and the frenchman Urbain Le Verrier both pro
 	    
 	    
 	   
-	   <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">P. Rule 40.</font></strong> There is a celestial version of the latitude and longitude system: <strong>Declination</strong> & <strong>Right Ascension</strong>. This system makes use of the space dome and the celestial equator.<br><br>
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> There is a celestial version of the latitude and longitude system: <strong>Declination</strong> & <strong>Right Ascension</strong>. This system makes use of the space dome and the celestial equator.<br><br>
 <strong>Declination</strong> is the space equivalent to latitude, directed northward or southward from the celestial equator. Polaris, for example, has a declination of +90°.<br><br>
 
 <strong>Right Ascension</strong> is the space equivalent to longitude. However, instead of the Greenwich line, the arbitrary chosen line is the <strong>Vernal Equinox</strong>, the particular point in the sky in which the <strong>Ecliptic</strong> (the Sun's path) crosses the celestial equator.<br><br>
 Since the space dome can be seen turning around the Earth once a day as the planet turns on its axis, the Right ascension turns 360° in 24 hours, and thus each 15° of the arc is equivalent to 1 hour of time. For example, the celestial coordinates of the star Capella are R.A. 5h = 75° and declination +50°.
-<br><br><br>
-	   
-	   <strong><a href="#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">P. Rule 41.</font></strong> <Strong>The Seasons</strong>:<br><br>
 
-Recalling that the Earth is tilted on its axis by 23.5°, which is always in the same direction in space regardless of the point of the Earth in its orbit (see diagram).<br><br>
+</div><br><br>
+
+	   
+	   <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <Strong>The Seasons</strong>:<br><br>
+
+Recall that the Earth is tilted on its axis by 23.5°, which is always in the same direction in space regardless of the point of the Earth in its orbit (see diagram).<br><br>
 As a result of the tilt of the Earth and the orbit around the Sun, during June the Northern Hemisphere is more directly facing the Sun, while the Southern Hemisphere is more directly facing it in December. These attributes are at their extremes on the Summer Solstice and the Winter Solstice, respectively.<br><br>
 During September and March, the Autumnal and Vernal Equinoxes respectively, the two hemispheres are equally favored with sunlight.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/astronomy/img/axisorbit.png"><img src="/astronomy/img/axisorbit.png" alt="The Earth during different points of its orbit of the Sun, which results in different hemispheres being illuminated for different periods of time, resulting in the seasons." width=56%/></a></div>
 	    <span class="tiny"><em>The Earth during different points of its orbit of the Sun, which results in different hemispheres being illuminated for different periods of time, resulting in the seasons. </em></span>
-<br><br><br>
+
+</div><br><br>
 	   
-	   <strong><a href="#Rule42"><span class="mw-headline" id="Rule42">#</span></a> <font color="red">P. Rule 42.</font></strong> pg 123 last reference<br><br><br>
+	   
 	   
 	   
 	   
@@ -497,71 +772,16 @@ During September and March, the Autumnal and Vernal Equinoxes respectively, the 
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	    
+	    
+	    
 	   <!--
-	    
-	    <strong><a href="#Rule43"><span class="mw-headline" id="Rule43">#</span></a> <font color="red">P. Rule 43.</font></strong> <br><br><br>
-	    <strong><a href="#Rule44"><span class="mw-headline" id="Rule44">#</span></a> <font color="red">P. Rule 44.</font></strong> <br><br><br>
-	    <strong><a href="#Rule45"><span class="mw-headline" id="Rule45">#</span></a> <font color="red">P. Rule 45.</font></strong> <br><br><br>
-	    <strong><a href="#Rule46"><span class="mw-headline" id="Rule46">#</span></a> <font color="red">P. Rule 46.</font></strong> <br><br><br>
-	    <strong><a href="#Rule47"><span class="mw-headline" id="Rule47">#</span></a> <font color="red">P. Rule 47.</font></strong> <br><br><br>
-	    <strong><a href="#Rule48"><span class="mw-headline" id="Rule48">#</span></a> <font color="red">P. Rule 48.</font></strong> <br><br><br>
-	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">P. Rule 49.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule50"><span class="mw-headline" id="Rule50">#</span></a> <font color="red">P. Rule 50.</font></strong> <br><br><br>
-	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">P. Rule 51.</font></strong> <br><br><br>
-	    <strong><a href="#Rule52"><span class="mw-headline" id="Rule52">#</span></a> <font color="red">P. Rule 52.</font></strong> <br><br><br>
-	    <strong><a href="#Rule53"><span class="mw-headline" id="Rule53">#</span></a> <font color="red">P. Rule 53.</font></strong> <br><br><br>
-	    <strong><a href="#Rule54"><span class="mw-headline" id="Rule54">#</span></a> <font color="red">P. Rule 54.</font></strong> <br><br><br>
-	    <strong><a href="#Rule55"><span class="mw-headline" id="Rule55">#</span></a> <font color="red">P. Rule 55.</font></strong> <br><br><br>
-	    <strong><a href="#Rule56"><span class="mw-headline" id="Rule56">#</span></a> <font color="red">P. Rule 56.</font></strong> <br><br><br>
-	    <strong><a href="#Rule57"><span class="mw-headline" id="Rule57">#</span></a> <font color="red">P. Rule 57.</font></strong> <br><br><br>
-	    <strong><a href="#Rule58"><span class="mw-headline" id="Rule58">#</span></a> <font color="red">P. Rule 58.</font></strong> <br><br><br>
-	    <strong><a href="#Rule59"><span class="mw-headline" id="Rule59">#</span></a> <font color="red">P. Rule 59.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule60"><span class="mw-headline" id="Rule60">#</span></a> <font color="red">P. Rule 60.</font></strong> <br><br><br>
-	    <strong><a href="#Rule61"><span class="mw-headline" id="Rule61">#</span></a> <font color="red">P. Rule 61.</font></strong> <br><br><br>
-	    <strong><a href="#Rule62"><span class="mw-headline" id="Rule62">#</span></a> <font color="red">P. Rule 62.</font></strong> <br><br><br>
-	    <strong><a href="#Rule63"><span class="mw-headline" id="Rule63">#</span></a> <font color="red">P. Rule 63.</font></strong> <br><br><br>
-	    <strong><a href="#Rule64"><span class="mw-headline" id="Rule64">#</span></a> <font color="red">P. Rule 64.</font></strong> <br><br><br>
-	    <strong><a href="#Rule65"><span class="mw-headline" id="Rule65">#</span></a> <font color="red">P. Rule 65.</font></strong> <br><br><br>
-	    <strong><a href="#Rule66"><span class="mw-headline" id="Rule66">#</span></a> <font color="red">P. Rule 66.</font></strong> <br><br><br>
-	    <strong><a href="#Rule67"><span class="mw-headline" id="Rule67">#</span></a> <font color="red">P. Rule 67.</font></strong> <br><br><br>
-	    <strong><a href="#Rule68"><span class="mw-headline" id="Rule68">#</span></a> <font color="red">P. Rule 68.</font></strong> <br><br><br>
-	    <strong><a href="#Rule69"><span class="mw-headline" id="Rule69">#</span></a> <font color="red">P. Rule 69.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule70"><span class="mw-headline" id="Rule70">#</span></a> <font color="red">P. Rule 70.</font></strong> <br><br><br>
-	    <strong><a href="#Rule71"><span class="mw-headline" id="Rule71">#</span></a> <font color="red">P. Rule 71.</font></strong> <br><br><br>
-	    <strong><a href="#Rule72"><span class="mw-headline" id="Rule72">#</span></a> <font color="red">P. Rule 72.</font></strong> <br><br><br>
-	    <strong><a href="#Rule73"><span class="mw-headline" id="Rule73">#</span></a> <font color="red">P. Rule 73.</font></strong> <br><br><br>
-	    <strong><a href="#Rule74"><span class="mw-headline" id="Rule74">#</span></a> <font color="red">P. Rule 74.</font></strong> <br><br><br>
-	    <strong><a href="#Rule75"><span class="mw-headline" id="Rule75">#</span></a> <font color="red">P. Rule 75.</font></strong> <br><br><br>
-	    <strong><a href="#Rule76"><span class="mw-headline" id="Rule76">#</span></a> <font color="red">P. Rule 76.</font></strong> <br><br><br>
-	    <strong><a href="#Rule77"><span class="mw-headline" id="Rule77">#</span></a> <font color="red">P. Rule 77.</font></strong> <br><br><br>
-	    <strong><a href="#Rule78"><span class="mw-headline" id="Rule78">#</span></a> <font color="red">P. Rule 78.</font></strong> <br><br><br>
-	    <strong><a href="#Rule79"><span class="mw-headline" id="Rule79">#</span></a> <font color="red">P. Rule 79.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule80"><span class="mw-headline" id="Rule80">#</span></a> <font color="red">P. Rule 80.</font></strong> <br><br><br>
-	    <strong><a href="#Rule81"><span class="mw-headline" id="Rule81">#</span></a> <font color="red">P. Rule 81.</font></strong> <br><br><br>
-	    <strong><a href="#Rule82"><span class="mw-headline" id="Rule82">#</span></a> <font color="red">P. Rule 82.</font></strong> <br><br><br>
-	    <strong><a href="#Rule83"><span class="mw-headline" id="Rule83">#</span></a> <font color="red">P. Rule 83.</font></strong> <br><br><br>
-	    <strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">P. Rule 84.</font></strong> <br><br><br>
-	    <strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">P. Rule 85.</font></strong> <br><br><br>
-	    <strong><a href="#Rule86"><span class="mw-headline" id="Rule86">#</span></a> <font color="red">P. Rule 86.</font></strong> <br><br><br>
-	    <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> <br><br><br>
-	    <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <br><br><br>
-	    <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">P. Rule 89.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">P. Rule 90.</font></strong> <br><br><br>
-	    <strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">P. Rule 91.</font></strong> <br><br><br>
-	    <strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">P. Rule 92.</font></strong> <br><br><br>
-	    <strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">P. Rule 93.</font></strong> <br><br><br>
-	    <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">P. Rule 94.</font></strong> <br><br><br>
-	    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">P. Rule 95.</font></strong> <br><br><br>
-	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">P. Rule 96.</font></strong> <br><br><br>
-	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">P. Rule 97.</font></strong> <br><br><br>
-	    <strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">P. Rule 98.</font></strong> <br><br><br>
-	    <strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">P. Rule 99.</font></strong> <br><br><br>
-	    
+	   pg 123 last reference
+	   
+	    <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> </div><br><br>
 	    
 	   -->
 	   
@@ -569,6 +789,7 @@ During September and March, the Autumnal and Vernal Equinoxes respectively, the 
 	    
 	  </article>
 	  
+	  </div>
 	  
 	</div>
 	
@@ -601,7 +822,7 @@ During September and March, the Autumnal and Vernal Equinoxes respectively, the 
         <article><strong><a href="/astronomy/classical/intro">Introduction/General Terms</a></strong> → <strong><a href="/astronomy/classical/ancient.html">Ancient Astronomy</a></strong> → <strong><a href="/astronomy/classical/pseudoscience.html">Astrology</a></strong> → <strong><a href="/astronomy/classical/modern.html">Origin of Modern Astronomy</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 12 2024</span><br>
+      	<span class="tiny">Last Change: February 8 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

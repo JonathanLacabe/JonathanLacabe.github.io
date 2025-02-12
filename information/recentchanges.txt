@@ -3,6 +3,11 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+February 11 2025: Physics work!!!!
+
+
+February 10 2025: The mass fixing of Rules to standardize references to other Rules, in order to facilitate the coming shift onto the javascript-Rule system, is progressing full steam ahead. Work in Math was done today. While performing these edits, I have had the opportunity to fix many errors and typos.
+
 February 9 2025: Elaborated and revised many earlier Physics Rules. All references to Rules in other Rules have been changed to reflect the "see Rule x" string that makes my life 10000x easier in changing rule numberings - this is across all pages, and thus far has only been completed for Physics (and should be completed over the next few days). This tedious and repetitive task helped to cope with Death Grips breaking up. Furthermore, Electromagnetism in Physics has officially opened for business, with rules and the like being added.
 Rules Added: Physics, Classical Mechanics - Rule 157, 158, 159, 160.
 

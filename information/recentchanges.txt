@@ -3,13 +3,21 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-February 11 2025: Physics work!!!!
+February 14 2025: Further work on Physics.
 
+February 13 2025: Began Electric Fields section of Physics.
+Rules Added: Physics, Electromagnetism - Rule 166, 167.
+
+February 12 2025: Progress in Physics, particularly in Electric force. This should be completed by tomorrow, and electric fields began in proper.
+Rules Added: Physics, Electromagnetism - Rule 163, 164, 165.
+
+February 11 2025: Physics work!!!!
+Rules Added: Physics, Electromagnetism - Rule 161, 162.
 
 February 10 2025: The mass fixing of Rules to standardize references to other Rules, in order to facilitate the coming shift onto the javascript-Rule system, is progressing full steam ahead. Work in Math was done today. While performing these edits, I have had the opportunity to fix many errors and typos.
 
 February 9 2025: Elaborated and revised many earlier Physics Rules. All references to Rules in other Rules have been changed to reflect the "see Rule x" string that makes my life 10000x easier in changing rule numberings - this is across all pages, and thus far has only been completed for Physics (and should be completed over the next few days). This tedious and repetitive task helped to cope with Death Grips breaking up. Furthermore, Electromagnetism in Physics has officially opened for business, with rules and the like being added.
-Rules Added: Physics, Classical Mechanics - Rule 157, 158, 159, 160.
+Rules Added: Physics, Electromagnetism - Rule 157, 158, 159, 160.
 
 February 8 2025: This project is in the midst of a huge linking update. I succeeded in a test run on the Astronomy pages, which have been fully converted onto this new system. Now, when a Rule needs to be placed in the middle of many other rules, the numbering all those rules afterward will be adjusted instantly. This may end up nullifying the need for the WoO notes, and greatly simplify the process with which the "First Edition" of the Human Knowledge Project will be deployed (see January 18 2025). The underlying purpose for "reserving Rules" (see December 29 2024) has also probably been rendered meaningless, although I believe that reserving can still serve a symbolic purpose of showing un-accessibilized knowledge. All scientific knowledge will be sequenced into the great Human Knowledge aggregator, where it is made understandable and accessible to all.
 Rules Added: Physics, Classical Mechanics - Rule 156.

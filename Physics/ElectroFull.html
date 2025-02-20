@@ -101,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function (){
 	  </header>
 	  <hr>
 	  <article>
-	    <p>These are the complete notes for Electromagnetism, covering topics such as Electric Charge, Coulomb's Law, Conduction/Induction, Electric Fields, Electric Flux, Gauss's Law, Circuitry, Ohm's Law, Magnetic Flux, Resistance, and more. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	    <p>These are the complete notes for Electromagnetism, covering topics such as Electric Charge, the Law of Electric Force, Conduction/Induction, Electric Fields, Electric Flux, Gauss's Law, Circuitry, Ohm's Law, Magnetic Flux, Resistance, and more. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
 	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
 	  
-          <article><center><a href="#CoulombLaw">XII. Coulomb’s Law</a></center></article>
+          <article><center><a href="#LawElectricForce">XII. Law of Electric Force.</a></center></article>
         
       <div class="toc-container">
         <div class="toc-column">
@@ -123,20 +123,31 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="toc-column">
           <a href="#FieldIntro">XIII.I Introduction to Fields.</a>
         </div>
-        
-      </div>
+        <div class="toc-column">
+          <a href="#CCD1">XIII.II Continuous Charge Distrib.</a>
+        </div>
+      </div><br>
       
-      <br>
+      <article><center><a href="#law">XIV. law</a></center></article>
+        
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#ElectricFlux">XIV.I Electric Flux.</a>
+        </div>
+        
+      </div><br>
+      
+      
       
       <div class="rules" data-start="157">
 
 	  <header class="articleHeader"><hr>
-	    <h2><span class="mw-headline" id="CoulombLaw">XII. Coulomb’s Law.</span></h2>
+	    <h2><span class="mw-headline" id="LawElectricForce">XII. Law of Electric Force.</span></h2>
 	    <h3><span class="mw-headline" id="ElectricCharge">XII.I Electric Charge.</span></h3>
 	  </header>
 	  <article>
 	  
-	  <strong><a href="#ElectricChargeDef"><span class="mw-headline" id="ElectricChargeDef">#</span></a> <font color="#006400">Electric Charge</font></strong>: A property of matter expressed most poignantly by particles on the atomic level, such as electrons (negatively charged) and protons (positively charged). Charge causes matter to experience an electric force (see [[[). Because the terms "negative" and "positive" are used to denote charge, summing charges is very simple when one needs to determine net charge.<br><br>
+	  <strong><a href="#ElectricChargeDef"><span class="mw-headline" id="ElectricChargeDef">#</span></a> <font color="#006400">Electric Charge</font></strong>: A property of matter expressed most poignantly by particles on the atomic level, such as electrons (negatively charged) and protons (positively charged). Charge causes matter to experience an electric force (see section XII.II). Because the terms "negative" and "positive" are used to denote charge, summing charges is very simple when one needs to determine net charge.<br><br>
 
 The character '<strong>q</strong>' is used to denote the net charge on an object.
 	    <br><br><br>
@@ -147,7 +158,7 @@ The character '<strong>q</strong>' is used to denote the net charge on an object
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> The '<strong>Coulomb</strong>' is the SI unit for Electric Charge. Specifically, it is defined as the "amount of electric charge  transported by a current of one ampere flowing for one second" (see definitions of each new term, they are gone over in more depth later on).<br><br>
 
-By itself, a Coulomb is a huge amount of charge - charged particles like protons and electrons have electric charges many orders of magnitude smaller than a single Coulomb. Two objects, each with one Coulomb of charge, located one meter apart, experience an electric force of roughly nine billion newtons.</div><br><br>
+By itself, a Coulomb is a huge amount of charge - charged particles like protons and electrons have electric charges many orders of magnitude smaller than a single Coulomb. Two objects, each with one Coulomb of charge, located one meter apart, experience an electric force (see section XII.II) of roughly nine billion newtons.</div><br><br>
         
 	    
 	    <strong><a href="#ElementaryParticleDef"><span class="mw-headline" id="ElementaryParticleDef">#</span></a> <font color="#006400">Elementary Particle</font></strong>: A particle that cannot be divided into smaller entities - it is a base, undivisible unit of matter. Examples include electrons, photons, and quarks.
@@ -186,7 +197,7 @@ The electron, being an elementary particle, just has a net charge of -e.</div><b
 	    <strong>Opposite charges attract, while like charges repel</strong>.<br><br>
 
 Example: Rubbing a balloon against one's hair will cause the electrons to move from the hair to the balloon (a transfer faciliated by rubbing), causing the balloon to stick to the hair. Furthermore, since each hair will become more positively-charged, they will repel one another, causing one's hair to stick up and separate.
-	    <br><Br><br>
+	    <br><br><br>
 	    
 	    <div class="rule">
         <strong>
@@ -215,14 +226,14 @@ Using the net/elementary charge relation (see Rule 159), one can find that it is
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#ElectricForceDef"><span class="mw-headline" id="ElectricForceDef">#</span></a> <font color="#006400">Electric Force</font></strong>: The force produced by the Electric Charge inherent to all matter. Also known as "Coulomb's Force" or "Electrostatic Force".
+	  <strong><a href="#ElectricForceDef"><span class="mw-headline" id="ElectricForceDef">#</span></a> <font color="#006400">Electric Force</font></strong>: The force produced by the Electric Charge inherent to all matter. Also known as "Coulomb's Force" or "<strong>Electrostatic Force</strong>".
 	    <br><br><br>
 	  
 	  <div class="rule">
         <strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Coulomb's Law</strong>: VECTOR.<br><br>
+        </strong> <strong>Law of Electric Force (Coulomb's Law)</strong>: VECTOR.<br><br>
 
 <u><strong>Units</strong></u>: Newtons.<br><br><br>
 
@@ -238,7 +249,7 @@ Using the net/elementary charge relation (see Rule 159), one can find that it is
 
 <br><br><br>
 
-<u><strong>Definition</strong></u>: Coulomb's Law enables one to find the magnitude of the Electric Force, the force produced by the Electric Charge inherent to all matter.<br><br>
+<u><strong>Definition</strong></u>: Coulomb's Law, hereafter referred to as the Law of Electric Force, enables one to find the magnitude of the Electric Force, the force produced by the Electric Charge inherent to all matter.<br><br>
 
 Note that this equation looks very similar to <!--hella like--> the Universal Law of Gravitation (see Rule 142). Accordingly, k (the Coulomb constant) functions similar to G (the Gravitational constant), being equal to (N × m²) / (a particular composition property of mass)². Clearly, since the Coulomb constant is 20 orders of magnitude stronger than the Gravitational constant, the Electric Force between objects is much more powerful than their Gravitational attraction. F<sub>e</sub> &gt;&gt;&gt; F<sub>g</sub>.<br><br>
 
@@ -257,13 +268,13 @@ If the calculated Electric Force has a <strong>Negative Value</strong>, then it 
 	    <br><br><br>
 	  
 	  
-	  <strong><a href="#MicrocoulombsDef"><span class="mw-headline" id="MicrocoulombsDef">#</span></a> <font color="#006400">Microcoulombs (μC)</font></strong>: One one millionth of a Coulomb. E.g., 1 × 10⁻⁶ C. Occasionally misstated as "Myu Coulombs", "Myu-Coulombs", etc.
+	  <strong><a href="#MicroCoulombsDef"><span class="mw-headline" id="MicroCoulombsDef">#</span></a> <font color="#006400">MicroCoulombs (μC)</font></strong>: One one millionth of a Coulomb. E.g., 1 × 10⁻⁶ C. Occasionally misstated as "Myu Coulombs", "Myu-Coulombs", etc.
 	    <br><br><br>
 	  
-	  <strong><a href="#NanocoulombsDef"><span class="mw-headline" id="NanocoulombsDef">#</span></a> <font color="#006400">Nanocoulombs (nC)</font></strong>: One one billionth of a Coulomb. E.g., 1 × 10⁻⁹ C.
+	  <strong><a href="#NanoCoulombsDef"><span class="mw-headline" id="NanoCoulombsDef">#</span></a> <font color="#006400">NanoCoulombs (nC)</font></strong>: One one billionth of a Coulomb. E.g., 1 × 10⁻⁹ C.
 	    <br><br><br>
 	  
-	  <strong><a href="#PicocoulombsDef"><span class="mw-headline" id="PicocoulombsDef">#</span></a> <font color="#006400">Picocoulombs (pC)</font></strong>: One one trillionth of a Coulomb. E.g., 1 × 10⁻¹² C.
+	  <strong><a href="#PicoCoulombsDef"><span class="mw-headline" id="PicoCoulombsDef">#</span></a> <font color="#006400">PicoCoulombs (pC)</font></strong>: One one trillionth of a Coulomb. E.g., 1 × 10⁻¹² C.
 	    <br><br><br>
 	  
 	  <div class="rule">
@@ -272,12 +283,25 @@ If the calculated Electric Force has a <strong>Negative Value</strong>, then it 
             <font color="red">A. Rule <span class="rule-number"></span>.</font>
         </strong> <!--I am very happy about this Rule - what you have in textbooks and whatever is the raw information, but the 'in-the-field' knowledge that you can only obtain by doing the problems and thinking shit out rationally by yourself, 'homework rules' as I call it, that is the most important and valuable educational resource that you can have in creating your knowledge tool for relearning content after the fact. You regain that state of mind that, that creative flow specific to that topic.-->
 
-With charges, the fundamental concept to understand in applying Coulomb's Law <!--in any circumstance-->is that in order to derive any useful information (depending on the question, but in general), you must determine the effect of the electric force on the individual point charges. Specifically, you must be able to determine the direction the charges will move in as a result of the force.<br><br>
+With charges, the fundamental concept to understand in applying the Law of Electric Force <!--in any circumstance-->is that in order to derive any useful information (depending on the question, but in general), you must determine the effect of the electric force on the individual point charges. Specifically, you must be able to determine the direction the charges will move in as a result of the force.<br><br>
 
-Coulomb's Law determines the repulsive or attractive force acting on both charges, since they're a Newton's Law Force Pair (see Rule 76). However, in addition, you must utilize this information to determine the direction of the movement of each charge. If you have a proton on the left and an electron on the right, the proton will move rightward and the electron leftward as they attract toward one another. If you have two electrons, they will move in opposite directions away from one another.</div><br><br>
+The Law of Electric Force determines the repulsive or attractive force acting on both charges, since they're a Newton's Law Force Pair (see Rule 76). However, in addition, you must utilize this information to determine the direction of the movement of each charge. If you have a proton on the left and an electron on the right, the proton will move rightward and the electron leftward as they attract toward one another. If you have two electrons, they will move in opposite directions away from one another.</div><br><br>
 	  
 	  <strong><a href="#ElectroscopeDef"><span class="mw-headline" id="ElectroscopeDef">#</span></a> <font color="#006400">Electroscope</font></strong>: An instrument for demonstrating electric charge. They take several forms, but generally have some place where an isolated charge (protected by some insulator, like glass) is held.
 	    <br><br><br>
+	    
+	    <strong><a href="#ElectricityDef"><span class="mw-headline" id="ElectricityDef">#</span></a> <font color="#006400">Electricity</font></strong>: The flow of electrons through a conductor.
+	    <br><br><br>
+	    
+	    <strong><a href="#ConductorDef"><span class="mw-headline" id="ConductorDef">#</span></a> <font color="#006400">Conductor</font></strong>: Something that can conduct electricity, like a wire. On the outside of a wire, there is rubber or plastic that serves as an <strong>insulator</strong>: something that doesn't conduct electricity very well or at all.
+	    <br><br><br>
+	  
+	  <strong><a href="#SemiconductorDef"><span class="mw-headline" id="SemiconductorDef">#</span></a> <font color="#006400">Semiconductor</font></strong>: A material that holds both qualities of a conductor and insulator and can be tailored to be a better conductor or insulator. Depending on electrical signals, it can be conducting or insulating.
+	    <br><br><br>
+	    
+	    <strong><a href="#SuperconductorDef"><span class="mw-headline" id="SuperconductorDef">#</span></a> <font color="#006400">Superconductor</font></strong>: An idealized perfect conductor, allowing charge to move without any hindrance.
+	    <br><br><br>
+	    
 	  
 	  <div class="rule">
         <strong>
@@ -321,12 +345,6 @@ There are only two requisites for an object to be charged by conduction, and the
 2. The objects must finish with opposite signs of net charge.</div><br><br>
 	  
 	  
-	  <strong><a href="#ConductorDef"><span class="mw-headline" id="ConductorDef">#</span></a> <font color="#006400">Conductor</font></strong>: Something that can conduct electricity, like a wire. On the outside of a wire, there is rubber or plastic that serves as an <strong>insulator</strong>: something that doesn't conduct electricity very well or at all.
-	    <br><br><br>
-	  
-	  <strong><a href="#ElectricityDef"><span class="mw-headline" id="ElectricityDef">#</span></a> <font color="#006400">Electricity</font></strong>: The flow of electrons through a conductor.
-	    <br><br><br>
-	  
 	  <div class="rule">
         <strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -337,7 +355,7 @@ Polarization is the process through which the charges within objects (and thus t
 
 Polarization doesn't change the net charge of the object, but rather has to do with how charges rearrange themselves within the object.<br><br>
 
-The process itself is simple: When an object with an excess charge approaches a neutral object, the like charges will repel and the opposite charges will attract (the electrons being the sole moving particles, moving either in front of or behind the protons). Since the opposite charges will be closer to the charges of the object than the like charges, by Coulomb's Law, there will be a net attractive electric force, since the opposite charges have a smaller 'r' value than the like charges.<br><br>
+The process itself is simple: When an object with an excess charge approaches a neutral object, the like charges will repel and the opposite charges will attract (the electrons being the sole moving particles, moving either in front of or behind the protons). Since the opposite charges will be closer to the charges of the object than the like charges, by the Law of Electric Force, there will be a net attractive electric force, since the opposite charges have a smaller 'r' value than the like charges.<br><br>
 
 This is the reason that balloons stick to walls once they have an excess negative charge. The wall, as an insulator without free electrons, cannot "attract" the charge of the balloon. Instead, the charges in the wall rearrange themselves and end up with that net attractive force.<br><br>
 
@@ -377,7 +395,7 @@ If the conductors being touched in a conservation of charge-type equation are id
 	  <article>
 	  
 	  
-	  <strong><a href="#TestChargeDef"><span class="mw-headline" id="TestChargeDef">#</span></a> <font color="#006400">Test Charge</font></strong>: A charge small enough not to measurably change or interact with the electric field it is placed in. These charges are ideal for measuring the magnitude of particular points of the electric field (see Rule below). <br><br>
+	  <strong><a href="#TestChargeDef"><span class="mw-headline" id="TestChargeDef">#</span></a> <font color="#006400">Test Charge</font></strong>: A charge small enough not to measurably change or interact with the electric field it is placed in. These charges are ideal for measuring the magnitude of particular points of the electric field (see Rule 167). <br><br>
 
 If the test charge is positive, then it will be in the same direction as the electric field, and if it is negative, then it will be in the opposite direction of the electric field. By convention, positive test charges are used to define electric fields.
 	    <br><br><br>
@@ -387,12 +405,183 @@ If the test charge is positive, then it will be in the same direction as the ele
         <strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> 
+        </strong> <strong>Electric Field</strong>: VECTOR.<br><br>
 
+<u><strong>Units</strong></u>: Newtons / Coulombs.<br><br><br>
+
+<u><strong>Equation</strong></u>:<br><br>
+
+<strong><span class="vecteur"><strong>E</strong></span> = (<span class="vecteur"><strong>F<sub>e</sub></strong></span> / q)</strong><br><br>
+
+
+<strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of the electric field at a particular point.
+<br>
+
+<strong><span class="vecteur"><strong>F<sub>e</sub></strong></span></strong> = The electric force being felt by the charge at the particular point being measured.
+<br>
+
+<strong>q</strong> = The charge/charged particle of the particular point being measured.
+
+<br><br><br>
+
+<u><strong>Definition</strong></u>: An Electric Field is the field in space surrounding a charged object, in which the object's electric force has strength. Technically, this means that the electric field is the "amount of electric force per charge at a point in space", the ratio between the electric force of the charge and the magnitude of the charge itself. All charge creates an electric field in relation to its electric force.<br><br>
+
+The reason an exact magnitude value can be determined for an electric field (an inherently emanating and changing entity), as is done in the given equation, is because the magnitude being found is that of the strength of electric field at a particular point, denoted by the electric force experienced by the charge placed at that point.<br><br>
+
+The magnitude of the electric field will decrease as the test charge gets farther from the point charge, as a result of the Law of Electric Force (since the denominator distance value increases and all). The entire Law of Electric Force equation can be substituted into the Electric Field equation, enabling one to simplify things considerably if the circumstances allow.<br><br>
+
+All Electric fields experience lines of attraction that can be summarized into a simple rule of thumb - see Rule 168.
 
 </div><br><br>
+
 	  
 	  
+	  <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Electric Field Lines</strong>:<br><BR>
+
+<strong>1.</strong> The lines of attraction in an electric field always point away from the positive charge and toward the negative charge. Thus, the lines always point in the direction in which the test charge would experience an electric force.<br><Br>
+
+<strong>2.</strong> The # of electric field lines per unit area is proportional to the electric field strength. Therefore, a higher density of electric field lines means a higher electric field strength.<br><br>
+
+<strong>3.</strong> Electric field lines always start perpendicularly to the surface of the charge, and start on a positive charge and end on a negative charge (unless there is more of one charge, in which case some lines would start/end infinitely far away).<br><br>
+
+<strong>4.</strong> Electric field lines never cross.<br><br>
+
+Use the test charge (a positive entity - see the <a href="#TestChargeDef">definition</a>) as the sample particle, for the sake of illustrating this point.<br><br>
+
+When the test charge (standardized as positive) is placed in the field of a positive point charge, the test charge will be repelled from the point charge. Electric force projects radially outward from the positive point charge, decreasing in magnitude as distance increases.<br><Br>
+
+On the flip side, if the point charge is negative, then the test charge will be attracted toward the point charge. All of the arrows will point radially inward toward the negative point charge.
+</div><br><br>
+	  
+	  </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="CCD1">XIII.II Continuous Charge Distributions.</span></h3>
+	    </header>
+	    <article>
+	    
+	    
+	  <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>Continuous Charge Distribution</strong> is a simple concept that elaborates the simple 'point' model of charges into one that uses calculus to account for more chargetype possibilities, furthering our all-consuming journey in human knowledge.<br><br>
+
+All a 'continuous charge distribution' is, is a charge that <em>isn't</em> a point charge; e.g., a charge with a shape and an electric charge continuously distributed throughout the object.<br><br>
+
+The electric field that exists around a continuous charge distribution can be determined through a rethinking of the standard Electric Field-Law of Electric Force combined equation (see Rule 167), using Calculus:<br><br>
+
+Since the charged object is made up of an infinite number of infinitesimally small point charges ('dq' representing them individually), the therefore infinite number of electric fields can be calculated using an integral.
+
+$$E_{CCD} = k \int \frac{dq}{r^2} \hat{r}$$
+
+<strong>k</strong> = The Coulomb constant, equal to 8.99 × 10⁹ (N × m²) / (C²).<br><br>
+<strong>dq</strong> = The infinitesimally small point charges, of which there is an infinite number of.<br><br>
+<strong>r</strong> = The distance between the infinitesimal charge dq and the point where the electric field is being calculated. Unlike the Law of Electric Force, this r is a function that varies depending on the charge, since there is technically an <em>infinite</em> number of charges (dq).<br><br>
+<strong>r&#x302;</strong> = The unit vector pointing from dq (whichever charge) toward the test charge - this is most applicable post-integral, when you can have a test charge to calculate the strength of the electric field with respect to. The direction points radially outward for positive dq, and inward for negative dq.<br><br><br>
+
+There are very specific use cases for this integral: it is not applicable everywhere. See Rule 170 for a detailed treatise on this cases and their exceptions.
+
+The limits of integration of the integral are specific to each problem and can be determined through ingenuity and through the power of the indomitable human spirit.<br><br>
+
+That pesky 'dq' thing can be switched out by taking the derivative of any of the charge densities (see <a href="#LinearChargeDensity">linear</a>, <a href="#SurfaceChargeDensity">surface</a>, and <a href="#VolumetricChargeDensity">volumetric</a>), depending on what one is looking for.</div><br><br>
+        
+        
+        <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> <!--the android rule. one of my greatest masterpieces, a testament to my power of elucidation. unironically took me 4 hours of writing and revision as I was learning a concept for the first time.-->
+The given integral equation for CCDs (continuous charge distributions, see Rule 169) is only applicable when <u>every infinitesimal charge has its electric field pointing in the same direction when it is pointing toward the test point</u>. For example: when the CCD is a flat line, and the test charge is on it's same axis.<br><br>
+
+There are some workarounds in which the above stipulation is technically still respected, allowing the integral to still be used even for shapes like rings. This is when all components in all other directions cancel out, leaving only the components in a specific direction. For example, in a uniformly charged ring, the horizontal components of the field from symmetric charge elements cancel, leaving only the vertical (axial) component.<br><br>
+
+When all fails, and the direction of the electric at test charge P is simply not the same for every charge dq on the ring, then take the derivative of both sides of the equation (giving d<span class="vecteur">E</span>) and try to see if any components cancel eachother out anywhere - in order to find the components, use the direction of the electric field from or toward the test charge (remember: the direction points radially outward for positive dq, and inward for negative dq), and imagine that beyond the test charge or dq, wherever the direction points, the direction line continues - this extended line segment represents d<span class="vecteur">E</span>, which can then be broken into components (which will hopefully cancel out in one direction). If there are equal negative and positive dq's in a particular direction, then it cancels out. Ideally, the direction that doesn't cancel out should only a single sign no matter the direction/origin of the dq.<br><br>
+
+<!--halfway between android and human-->
+
+Generally, the dq electric field values in a particular direction 'cancelling out' is the result of a symmetry created by the placement of the point charge. For example, a point charge placed somewhere along the axis of the center of the ring.<br><br>
+
+If one has succeeded in cancelling out, then they would be able to proceed with all the necessary moving of sines or cosines (resultant from the components) and the general transfiguration of terms dependent on the characteristics of the problem itself. After one has been able to simplfy and reduce everything into only one real variable on one side (every other symbol just being a constant), then both sides can be integrated, creating a problem-specific version of the hyper-generalized CCD integral equation (see Rule 169).
+<br><br>
+
+All of this component business requires that there be some reference position, a known x-axis and y-axis positioning in relation to the given CCD and point charge that can be used to derive the components from.
+</div><br><br>
+        
+        
+        <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Note that the farther you get from a finite continuous charge distribution, the more the electric field caused by the CCD<!--thing--> matches the electric field caused by a point charge (as in, the simplified Law of Electric Force + Electric Force equation from way back when (see Rule 167)). Of course, this requires the distance between the test charge and the CCD to be much much greater than the internal distance with the CCD itself.</div><br><br>
+        
+        
+        <div class="rule">
+        <strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">A. Rule <span class="rule-number"></span>.</font>
+        </strong> Always be aware of what constants/variables are much much greater than others. In end game integrals, such as in CCD-type problems (see Rule 170), this can totally simplify whole entire parts of your equation by just thinking of the lesser variable as zero (where it is left alone and not acting as a coefficient). Of course, this mandates the usage of the approximation symbol (≈) for your answer.</div><br><br>
+	  
+	  <!--It is verychill to take a break after writing out two giants to make two cute little rules-->
+	  
+	  
+<strong><font color="blue"><a href="#LinearChargeDensity"><span class="mw-headline" id="LinearChargeDensity">#</span></a> Linear Charge Density:</font></strong><br><br>
+
+<strong>λ = (Q / L)</strong><br><br>
+
+<strong>λ</strong> = The direction and magnitude of the given expression, defined in Coulombs per Meter (C / m).<br>
+<strong>Q</strong> = The charge of the object.<br>
+<strong>L</strong> = The length of the object - this form of density is best applied to charge along a flat line.<br><br>
+
+Treat λ as a constant when taking the derivative.
+<br><br><br>
+
+
+
+
+<strong><font color="blue"><a href="#SurfaceChargeDensity"><span class="mw-headline" id="SurfaceChargeDensity">#</span></a> Surface Charge Density:</font></strong><br><br>
+
+<strong>σ = (Q / A)</strong><br><br>
+
+<strong>σ</strong> = The direction and magnitude of the given expression, defined in Coulombs per Meter Squared (C / m²).<br>
+<strong>Q</strong> = The charge of the object.<br>
+<strong>A</strong> = The total area of the object.<br><br>
+
+Treat σ as a constant when taking the derivative.
+<br><br><br>
+
+
+
+<strong><font color="blue"><a href="#VolumetricChargeDensity"><span class="mw-headline" id="VolumetricChargeDensity">#</span></a> Volumetric Charge Density:</font></strong><br><br>
+
+<strong>ρ = (Q / V)</strong><br><br>
+
+<strong>σ</strong> = The direction and magnitude of the given expression, defined in Coulombs per Meter Cubed (C / m³).<br>
+<strong>Q</strong> = The charge of the object.<br>
+<strong>V</strong> = The total volume of the object.<br><br>
+<!-- what serves one clown serves the whole circus - humanknowledge in a nutshell-->
+Treat ρ as a constant when taking the derivative.
+<br><br><br>
+	  
+	  
+	  
+	  </article>
+	    <header class="articleHeader"><hr><hr>
+	    <h2><span class="mw-headline" id="law">XIV. law</span></h2>
+	    <h3><span class="mw-headline" id="ElectricFlux">XIV.I Electric Flux.</span></h3>
+	  </header>
+	  <article>
+	  
+	  <strong><a href="#FluxDef"><span class="mw-headline" id="FluxDef">#</span></a> <font color="#006400">Flux</font></strong>: Any physical quantity or phenomenon that has the effect of appearing to pass or travel through a surface or substance, regardless of whether it actually does so or not.
+	    <br><br><br>
+	    
+	    
+	    
+	    
+	    
 	  
 	  
 	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
@@ -440,10 +629,10 @@ If the test charge is positive, then it will be in the same direction as the ele
         <strong><a href="/Physics/Electromagnetism.html">Electromagnetism</a></strong><br>
         <article><strong>Complete Electromagnetism</strong></article>
         <br>
-        <article><strong><a href="/Physics/electromagnetism/coulomb.html">Coulomb’s Law</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 14 2025</span><br>
+      	<span class="tiny">Last Change: February 19 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

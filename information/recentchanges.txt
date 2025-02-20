@@ -3,6 +3,15 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+February 19 2025: I fixed the website by removing all unneccessary human references in scientific laws - I am unable to remove units named after people, though I have made sure to capitalize them. I am working on a comprehensive renaming scheme that will be published in the near future. My crusade against improper Rule referencing continued today, finishing out Mathematics and moving through Cryptography.
+
+February 18 2025: The missing Electric Fields page was added to account for the new section. All appropriate pages were updated. Also some Calculus work to make up for a few missed days.
+Rules Added: Mathematics, Single Variable Calculus - Rule 159, 160, 161.
+Rules Added: Physics, Electromagnetism - Rule 169, 170, 171, 172.
+
+February 17 2025: Physics Work.
+Rules Added: Physics, Electromagnetism - Rule 168.
+
 February 14 2025: Further work on Physics.
 
 February 13 2025: Began Electric Fields section of Physics.

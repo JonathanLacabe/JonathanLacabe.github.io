@@ -95,7 +95,9 @@ rainbow {
         <div class="toc-column">
           <a href="#Derivative1">?. Derivatives.</a>
         </div>
-        
+        <div class="toc-column">
+          <a href="#ChainRule1">?. Chain Rule.</a>
+        </div>
         
       </div>
       
@@ -111,7 +113,7 @@ rainbow {
 	    
 	    
 	    <strong><font color="blue"><a href="#LimitProperties"><span class="mw-headline" id="LimitProperties">#</span></a> Properties of Limits:</font></strong><br><br>
-        Similar to Logarithms, Limits have their internal rules that can applied at any time. The "commandments" version of this list can be seen in Rule 110.<br><br><br><br>
+        Similar to Logarithms, Limits have their internal rules that can applied at any time. For the "commandments" version of this list, see Rule 110.<br><br><br><br>
         
         <strong><a href="#LP1"><span class="mw-headline" id="LP1">1.</span></a> </strong>The limit of a constant is equal to a constant.
         $$\lim_{x \to a} c = c$$
@@ -713,6 +715,31 @@ rainbow {
 	    <br><br> In doing so, you find the derivative of the function while plugging in the y-value under f⁻¹(x) = 1/f'(y).<br><br><br>
 	    
 	    
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ChainRule1">?. Chain Rule.</span></h3>
+	    </header>
+	    <article>
+	    
+	    
+	    <strong><font color="blue"><a href="#ChainRuleDef"><span class="mw-headline" id="ChainRuleDef">#</span></a> Chain Rule:</font></strong><br><br>
+        <strong>(f(g(x)))' = f'(g(x)) × g'(x)</strong>
+        <br><br><br>
+	    
+	    <strong><font color="blue"><a href="#IntegerExpPowers"><span class="mw-headline" id="IntegerExpPowers">#</span></a> Integers with Exponential Powers:</font></strong><br><br>
+        For a &gt; 0, and a ≠ 1, <strong>(a<sup>u</sup>)' = a<sup>u</sup> × ln(a) × (du/dx)</strong><br><br>
+        
+        Without the chain rule for the exponent, this simplifies to <strong>(a<sup>x</sup>)' = a<sup>x</sup> × ln(a)</strong>.
+        <br><br><br>
+        
+	    
+	    <strong><a href="#Rule159"><span class="mw-headline" id="Rule159">#</span></a> <font color="red">Rule 159.</font></strong> (e<sup>x</sup>)<sup>1</sup> is just e<sup>x</sup>. Whenever finding the derivative of an equation involving e<sup>x</sup>, just copy that original e<sup>x</sup> expression and multiply by the chain rule.<br><br><br>
+	    
+	    <strong><a href="#Rule160"><span class="mw-headline" id="Rule160">#</span></a> <font color="red">Rule 160.</font></strong> For other expressions where x is part of the exponent, like 9<sup>-x</sup> or 3<sup>csc(x)</sup>, you copy the original equation, multiply by ln of the base, and by the derivative of the exponent: 3<sup>csc(x)</sup> = ln(3) × 3<sup>csc(x)</sup> × -csc(x)cot(x). See the Integers with Exponential Powers blue section.<br><br><br>
+	    
+	    <strong><a href="#Rule161"><span class="mw-headline" id="Rule161">#</span></a> <font color="red">Rule 161.</font></strong> For finding the derivative of an equation with ln, know that (ln(x))' = 1/x, with the x changing as needed. The derivative is just the changed value of 1/x multiplied by the derivative of the x-value: (ln(x²))' = (1/x²) × 2x.<br><br><br>
+	    
+	    
 	    
 	    
 	    
@@ -721,11 +748,6 @@ rainbow {
 	    
 	    
 	    <!--
-	    
-	    <strong><a href="#Rule159"><span class="mw-headline" id="Rule159">#</span></a> <font color="red">Rule 159.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule160"><span class="mw-headline" id="Rule160">#</span></a> <font color="red">Rule 160.</font></strong> <br><br><br>
-	    <strong><a href="#Rule161"><span class="mw-headline" id="Rule161">#</span></a> <font color="red">Rule 161.</font></strong> <br><br><br>
 	    <strong><a href="#Rule162"><span class="mw-headline" id="Rule162">#</span></a> <font color="red">Rule 162.</font></strong> <br><br><br>
 	    <strong><a href="#Rule163"><span class="mw-headline" id="Rule163">#</span></a> <font color="red">Rule 163.</font></strong> <br><br><br>
 	    <strong><a href="#Rule164"><span class="mw-headline" id="Rule164">#</span></a> <font color="red">Rule 164.</font></strong> <br><br><br>
@@ -807,10 +829,10 @@ rainbow {
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong>Differential Calculus</strong> → <strong><a href="/math/calculuspart2">Integral Calculus & Calculus 2</a></strong></article>
         <br>
-        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 7 2025</span><br>
+      	<span class="tiny">Last Change: February 18 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

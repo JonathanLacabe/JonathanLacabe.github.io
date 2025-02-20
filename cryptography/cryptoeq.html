@@ -213,7 +213,7 @@ These following rules hold true for all integer rings in general, not just modul
 
 <li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m.</strong></li><br>
 
-<li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in C. Rules <a href="/cryptography/symmetricFull#Rule14">14</a> & <a href="/cryptography/symmetricFull#Rule15">15</a>.<br><br>
+<li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in the Cryptography Inverse Rules (see C. Rules <a href="/cryptography/symmetricFull#Rule14">14</a> & <a href="/cryptography/symmetricFull#Rule15">15</a>).<br><br>
 If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as a divisor, since <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
 <br>
 
@@ -366,7 +366,7 @@ Key K = (A, B)<Br><br>
 	    <br>
 	    
 	    <em>
-The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in <a href="/cryptography/symmetricFull#Rule29">C. Rule 29</a>:<br><br>
+The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in the LFSR Generalization Rule (see <a href="/cryptography/symmetricFull#Rule29">C. Rule 29</a>):<br><br>
 
 (S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
 (i, j) ∈ <strong>ℤ</strong><sub>m</sub>
@@ -520,7 +520,7 @@ $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<b
         <article><strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong> → <strong><a href="/cryptography/publickey.html">Public-Key Cryptography</a></strong> → <strong><a href="/cryptography/digital.html">Hash Functions & Digital Signatures</a></strong> → <strong><a href="/cryptography/authentication.html">Message Authentication</a></strong> → <strong><a href="/cryptography/keymanage.html">Key Management</a></strong> → <strong><a href="/cryptography/PostQuantum.html">Post-Quantum Cryptography</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: January 14 2025</span><br>
+      	<span class="tiny">Last Change: February 19 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width="9%">

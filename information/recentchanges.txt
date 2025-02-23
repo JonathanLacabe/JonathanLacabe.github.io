@@ -3,7 +3,11 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+February 22 2025: Work on Physics (Electric Flux). Additionally, I added two new questions to the FAQ page - a single thought on a issue I had with inaccessible learning resources spiraled into several hours of writing and revising, enlargening a previously somewhat limited page.
+Rules Added: Physics, Electromagnetism - Rule 174, 175, 176.
+
 February 20 2025: In working on the yet-to-be-named new Physics section (focused on Gauss's Law, which I will rename into something inhuman soon), I have been able to finish a sort of philosophical rule I have been drafted and rewriting for the past few days, framing it into something I could imagine Herbert Gross himself saying. The rest of Electric Flux, I hope, will be finished tomorrow, February 21st, 2025. Additionally, I made some small elaborations to a FAQ question.
+Rules Added: Physics, Electromagnetism - Rule 173.
 
 February 19 2025: I fixed the website by removing all unneccessary human references in scientific laws - I am unable to remove units named after people, though I have made sure to capitalize them. I am working on a comprehensive renaming scheme that will be published in the near future. My crusade against improper Rule referencing continued today, finishing out Mathematics and moving through Cryptography.
 

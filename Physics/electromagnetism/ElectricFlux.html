@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Electric Flux (Electromagnetism) Summary</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
+  </head>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
+
+<img src="/_other/logos/Electro_Magnetism.png" width=45%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><em>Art by Shoaib Pasha.</em></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Electric Flux (Electromagnetism)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Electric Flux in Electromagnetism. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  
+	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#UniformFlux">XIV.I Uniform Flux.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#ChargeFlux">XIV.II Charge-Flux Law.</a>
+        </div>
+        
+      </div>
+      
+	  
+	  <div class="rules" data-start="174">
+	  <hr>
+	  <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="ElectricFlex">XIV. Electric Flux</span></h2>
+	    <h3><span class="mw-headline" id="UniformFlux">XIV.I Uniform Flux.</span></h3>
+	  </header>
+	  <article>
+	  
+	  <!--do not enter is written on the doorway-->	
+	  
+	    <strong><a href="#FluxDef"><span class="mw-headline" id="FluxDef">#</span></a> <font color="#006400">Flux</font></strong>: Any physical quantity or phenomenon that has the effect of appearing to pass or travel through a surface or substance, regardless of whether it actually does so or not. The symbol for all types of flux (such as Electric Flux) is uppercase Phi: Φ.
+	    <br><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> 
+        
+
+In defining "<strong>Electric Flux</strong>", the focus of this section, one must understand a fundamental reconsideration of how one views <em>electric fields</em> themselves - if not, the following definitions and descriptions of Electric Flux will seem nonsensical.<br><br>
+
+First, note that the previous usage of electrical fields treated them like a structured object, a <em>vector</em> field, in which every point in space around it has a magnitude and a direction in relation to the field. In this mindset, an electric field is limited to just being a function that varies with spacial positioning.<br><br>
+
+The new, super <!--graphic--> ultra modern rethinking of electric fields, treats them as a <u>measurement of an amount</u> - something that can be summed up, through integration. By saying "the amount of electric field", what this statement is really referring to is the cumulative <em>influence</em> of the electric field across a given area - in relation to electric flux, the cumulative influence of the electric field passing through a surface.<br><br>
+
+This use of language is jarring at first, but can be quickly accustomed to by the young physicist. Before, electric fields were solely used in the form of a countable noun (like "apples") - now, they can also be used in the form of an uncountable noun (like "knowledge"). Without further ado:<!--<br><br><br>-->
+
+<!--If at any point, my way of writing and explaining seems unusual, that is because I am writing from the perspective of my current, knowledgable self lecturing my future, uneducated self about this topic. Herbert Gross-style.--></div><br><br>
+	    
+	    
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Uniform Electric Flux</strong>: SCALAR.<br><br>
+
+<u><strong>Units</strong></u>: (Newtons × Meters²) / Coulombs
+<br><br><br>
+
+<u><strong>Equation</strong></u>:<br><br>
+<strong>Φ<sub>E</sub> = <span class="vecteur"><strong>E</strong></span> × <span class="vecteur"><strong>A</strong></span> × cos(θ)</strong>
+<br><br><br>
+
+<strong>Φ<sub>E</sub></strong> = The magnitude of Electric Flux over a Uniform Electric Field (see definition below).<br><br>
+
+<strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of a uniform electric field, the amount of which (see Rule 174) is measured over a surface and not just at an individual point in space (though, being uniform, it will have the same strength at any individual point in space). Given how the existing Electric Field equation (see Rule 167) only specifically calculates the magnitude of an electric force at a point, this equation is overly idealized in assuming a <em>uniform</em> electric field (therefore not a point charge or anything similar). <br><br>
+
+<span class="vecteur"><strong>A</strong></span> = The magnitude of the area of the surface through which the uniform electric field is passing. AREA, not VOLUME (explained in def.).<br><br>
+
+<strong>θ</strong> = The angle between the directions of the electric field and the direction of the area (area having its direction perpendicular to the plane, and directed outward for closed surfaces). This value, given that all other values in the equation are positive magnitudes, determines whether the flux is positive or negative.<br><br><br>
+<!--they say I'm a yapper but I'm bad with words -  One Lacabe = one word per hour. If I speak any faster, it is because I am saying nonsense, don't listen to a word I say. It is with extreme effort I produce HumanKnowledge essays.-->
+
+<u><strong>Definition</strong></u>: <strong>Electric flux</strong> is the measure of the <em>amount of electric field</em> (see Rule 174) which passes through a defined area. The given equation is specifically for uniform electric fields, something that is totally idealized and never really happens in reality.<br><br>
+
+This equation in particular is the result of a dot product between the electric field and the surface - this is why the result of the equation is a scalar, and why a cosine is used for the theta.<br><br>
+
+Because this equation is a dot product, that means the two variables are vectors, both with magnitude and direction. Area, the result of a cross product between two vectors (see Math Rule [[[), has a direction normal to the plane of the area, just like how the direction of angular velocity is normal to the plane in which the object is rotating (see Rule 53).<br><br>
+
+Note that this equation uses <strong>AREA</strong>, not VOLUME. When the electric field is passing a multi-sided object, the electric flux must be determined for each side of the object and summed thereafter, forming Φ<sub>total</sub>.<br><br>
+
+Generally, using this equation to determine electric flux is optimal when the flux is passing through some sort of <u>closed surface</u> (see Rule 177).
+
+        
+        </div><br><br>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If the surface of which the electric field is passing through is perpendicular to the electric field, then since the angle created between the surface and the field will be 90° (and as cos(90) = 0), there will be a net zero electric flux acting upon that surface. This is true for both uniform (see Rule 175) and nonuniform (see Rule [[[) electric fields.</div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When an electric field is going <em>into</em> a closed surface (like an object), the electric flux is negative. When an electric field is coming <em>out</em> of a closed surface, the electric flux is positive. This is the rule of thumb that emerges from the cosine of the uniform electric flux equation (see Rule 175).</div><br><br>
+        
+        
+        </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ChargeFlux">XIV.II Charge-Flux Law.</span></h3>
+	    </header>
+	    <article>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Nonuniform Electric Fields are the standard form of Electric Fields: a field emanating outward (from a point charge or CCD), decreasing in strength with distance (symbolized in the 'r' of the Law of Electric Force (see Rule 161)).<br><br>
+
+A new equation, an adapted form of the Uniform Electric Flux equation (see Rule 175) will account for this previously irreconcilable difference. Again, <!--in the same vein--> as was done for Electric Fields with Continuous Charge Distribution (Rule 170), this adaptation/rethinking will be done using Calculus.<br><br>
+
+Infinitesimally small areas of the surface plane, d<span class="vecteur"><strong>A</strong></span>, will replace <span class="vecteur"><strong>A</strong></span>.<!--Likewise--> Correspondingly, infinitesimally small fluxes dΦ<sub>E</sub> (created by the electric field) will pass through d<span class="vecteur"><strong>A</strong></span>.<br><br>
+
+Substituting these values into the original uniform equation (see Rule 175), and then integrating both sides, will produce the new, revolutionary Nonuniform Electric Flux equation (though you could use it for uniform fields if you really wanted to):<br>
+
+$$\Phi_E = \oint \vec{E} d\vec{A} \cos\theta = \frac{q_{\text{enclosed}}}{\varepsilon_0}$$
+
+
+<strong>Φ<sub>E</sub></strong> = The electric flux through a closed surface.<br><br>
+
+<strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of a uniform electric field, measured in relation to its strength at the infinitesimally small area (essentially a point) d<span class="vecteur">A</span>.<br><br>
+
+<strong>d<span class="vecteur"><strong>A</strong></span></strong> = An infinitesimally small area of the surface plane, each of which is collectively represented by d<span class="vecteur">A</span> in the integral.<br><br>
+
+<strong>θ</strong> = The angle between the directions of the electric field and the direction of the infinitesimally small area d<span class="vecteur">A</span> (area having its direction perpendicular to the plane, and directed outward for closed surfaces). This value, given that all other values in the equation are positive magnitudes, determines whether the flux is positive or negative.<br><br>
+
+<strong>q<sub>enclosed</sub></strong> = The charge enclosed in the Gaussian Surface (see Rule [[[[).<br><br>
+
+<strong>ε<sub>0</sub></strong> = The Permittivity of Free Space (see Rule [[[).<br><br><br>
+
+
+
+
+This equation is known as Gauss's Law, hereafter referred to as the <strong>Charge-Flux Law</strong>. This law, in serving nonuniform electric fields (all real ones), relates electric flux through a "Gaussian surface" to the charge enclosed by said surface.<br><br>
+
+The shapes of these surfaces can be specifically chosen for characteristics that significantly simplify calculations in specific problems. See Rule [[[+1 for what these characteristics entail.<br><br>
+
+The loop on the integral sign denotes a <strong>closed surface integral</strong> (see Math Rule [[[), meaning that one must integrate over the entire closed surface to get the net flux through the surface.<br><br>
+
+The only major difference from this to integrating normally is that you essentially have to sum the normal integrals of each side of the object. This must be done every time!
+
+<!--E.g., just integrate as normal, but know that this new integral symbol has SYMBOLISM and MEANING that makes it unique and special.<br><br>--></div><br><br>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>Gaussian surface</strong> is a three-dimensional closed surface in which flux of any kind is calculated. Generally, these surfaces, when used in problems, are imaginary, though they could be real physical surfaces.<br><br>
+
+In most cases, all references to a "Gaussian Surface" can be replaced by a simple description of a closed surface - there is nothing particularly unique or individual the distinguishes a ""Gaussian"" surface from any other , it is just a generic surface purpose-built as a template for flux calculations.<br><br>
+
+Typically, the shapes of these surfaces are chosen such that the electric field generated by the enclosed charge is either perpendicular or parallel to the sides of the Gaussian surface. This greatly simplifies the surface integral because all the angles are multiples of 90 degrees and the cosine of those angles have a value of -1, 0, or 1.<br><br>
+
+As long as the amount of charge enclosed in a Gaussian surface is constant, the total electric flux through the Gaussian surface does not depend on the size of the Gaussian surface.<br><br>
+
+If the net charge inside a closed Gaussian surface (q<sub>enclosed</sub>) is zero, then the net electric flux through the Gaussian surface is zero. This is because all of the electric field entering into the object exits right through the other side. There must be some charge coming from the inside of the object for there to be any electric flux.</div><br><br>
+        
+        
+        <strong><a href="#ConcentricDef"><span class="mw-headline" id="ConcentricDef">#</span></a> <font color="#006400">Concentric</font></strong>: The state of objects sharing the same center. Objects are said to be <em>concentric</em> to one another when they share the same center.
+	    <br><br><br>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> With respect to point charges, the electric field will have the same magnitude as it passes through each area d<span class="vecteur"><strong>A</strong></span> at a constant distance from the point charge - see Rule 168.
+
+Thus, for all concentric entities surrounding a point charge, where each point on the circle or sphere are at a constant distance from the point charge, the strength of the point charge at each point along the entity will be constant.<br><br>
+
+In such cases (limited specifically to circular and circularly-shaped object), the <span class="vecteur"><strong>E</strong></span> variable of the Nonuniform Electric Flux equation (see Rule [[[-1) can be moved outside of the integral, since it will be a constant.<br><br>
+
+Additionally, in these cases, the cos(θ) will equal one and thus be removed, since the angle between the electric field and every area d<span class="vecteur"><strong>A</strong></span> will equal zero, since they are both outward and in the same direction.<!-- Note the absence of the cos(θ) that previously resulted from the dot product. , --></div><br><br>
+      
+      
+      
+	    </article>
+	</div>
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+      <br>
+        <strong><a href="/Physics/Electromagnetism.html">Electromagnetism</a></strong><br>
+        <article><strong><a href="/Physics/ElectroFull.html">Complete Electromagnetism</a></strong></article>
+        <br>
+        <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong>Electric Flux</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: February 24 2025</span><br>
+      	<span class="tiny">Jonathan Lacabe 2025</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

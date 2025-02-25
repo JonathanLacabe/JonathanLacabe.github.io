@@ -726,8 +726,8 @@ Also recall that the mod operator will simply remain in place - it can be practi
 	  <article><br>
 
 <strong>Fig. 3. - Symmetric Cryptography Hierarchy:</strong><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and Rule 5 for Cryptanalysis." width=58%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and Rule 5 for Cryptanalysis.</em></span><br><br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and see Rule 5 for Cryptanalysis." width=58%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and see Rule 5 for Cryptanalysis.</em></span><br><br><br>
 	  
 	  <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">C. Rule 21.</font></strong> <strong>Stream Ciphers</strong><br><br>
 
@@ -896,7 +896,7 @@ Key K = (A, B)<Br><br>
 <strong><u>Explanation:</u></strong><br><br>
 
 A means of generating a unique key stream using the PRNG system, based on the attributes of the key and the seed. This makes it more practical a system than the One Time Pad, but much easier to break (see Rule 26).<br><br>
-Of course, separate from the nature of the function/equation itself, note that there are no "Encryption" or "Decryption" functions, because the given equation is merely for composing the keystream (in the Rule 23 PRNG-style), while the equation for the Stream <em>Cipher</em> itself remains the same (see Rule 21).
+Of course, separate from the nature of the function/equation itself, note that there are no "Encryption" or "Decryption" functions, because the given equation is merely for composing the keystream (PRNG-style - see Rule 23), while the equation for the Stream <em>Cipher</em> itself remains the same (see Rule 21).
 
 
 <!--Easily the hardest rule(s) I have had to write so far in Cryptography, 25 & 26. Took several hours of total concentration and thinking power, requiring the rewriting of portions of past rules and definitions as well.-->
@@ -929,7 +929,7 @@ After finding A and B, all that would be left to be done is to brute-force m as 
 	    <article>
 	    
 	    
-	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. In electrical engineering, CSE's are part of clocking subsystems and respond to Clock signals (E.E. Rule [[[[[).
+	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. In electrical engineering, CSE's are part of clocking subsystems and respond to Clock signals (see E.E. Rule [[[[[).
 <br><br><br>
 	    
 	  
@@ -965,7 +965,7 @@ An example of a shift register, with three flip-flops, with every new value sent
 
 <em>
 
-The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in Rule 29:<br><br>
+The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in the LFSR Generalization (see Rule 29):<br><br>
 
 (S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
 (i, j) ∈ <strong>ℤ</strong><sub>m</sub>
@@ -1021,7 +1021,7 @@ The specific mathematical formula of the key produced by the LFSR depicted is:<b
 
 <strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: Also referred as the "<strong>initialization vector</strong>" of the LFSR in this context. The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
 
- Even without knowledge of the XOR positions, by pure knowledge of the first state, every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> described in Rule 28.
+ Even without knowledge of the XOR positions, by pure knowledge of the first state, every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> of LFSRs (see Rule 28).
 <br><br><br>
 
 
@@ -1698,7 +1698,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 19 2025</span><br>
+      	<span class="tiny">Last Change: February 24 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -1,6 +1,6 @@
 Hooke's Law -> Law of Elasticity
 Coulomb's Law -> Law of Electric Force
-Gauss's Law ->
+Gauss's Law -> Charge-Flux Law
 
 
 

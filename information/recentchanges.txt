@@ -3,6 +3,12 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+February 24 2025: The lengthy drafting and revising process of the new Electric Flux Physics rules has been completed. The Rules have all been added, and the new "Electric Flux" section fully incorporated into the site, all pages linked appropriately.
+Rules Added: Physics, Electromagnetism - Rule 178, 179, 180.
+
+February 23 2025: Much work on Physics, though the individual Rules written today would be uploaded em masse the next day. Necessary edits for this incoming information was made, facilitating the new Rules. An earlier Rule was split into two to make this addition easier.
+Rules Added: Physics, Electromagnetism - Rule 177.
+
 February 22 2025: Work on Physics (Electric Flux). Additionally, I added two new questions to the FAQ page - a single thought on a issue I had with inaccessible learning resources spiraled into several hours of writing and revising, enlargening a previously somewhat limited page.
 Rules Added: Physics, Electromagnetism - Rule 174, 175, 176.
 

@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+February 25 2025: Added the missing Permittivity of Free Space Rule, which had been bugging me for its absence for the last few days. All Rule numberings were instantly changed through the new Javascript system. The only thing that needed to be changed were the references to Rules within other Rules, which only took a minute.
+Rules Added: Physics, Electromagnetism - Rule 181.
+
 February 24 2025: The lengthy drafting and revising process of the new Electric Flux Physics rules has been completed. The Rules have all been added, and the new "Electric Flux" section fully incorporated into the site, all pages linked appropriately.
 Rules Added: Physics, Electromagnetism - Rule 178, 179, 180.
 

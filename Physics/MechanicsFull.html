@@ -35,6 +35,36 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -151,6 +181,8 @@
       </div>
       <br>
 
+      <div class="rules" data-start="1">
+
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Velocity">I. Velocity, Speed, Acceleration.</span></h2>
 	    <h3><span class="mw-headline" id="Basics">I.I Basics of Mechanics.</span></h3>
@@ -161,18 +193,28 @@
 	  Physics is based on measurement of physical quantities: Having some expertise in dimensional analysis is crucial to be able to convert from one unit of measurement to another. There are several different systems of measurements which measure the same types of quantities, the two biggest systems being the Metric System and the Imperial System. For example, length is measured in the metric system in 'meters', while the imperial unit for length is 'feet'. Dimensional Analysis is conducted using <strong>conversion factors</strong>, which are just the ratio of units equivalent to what you are trying to convert to. For example, <br><br>(2 min) x (60 sec/1 min)<br><br> has (60 sec/1 min) as the conversion factor, converting from minutes to seconds. The conversion factor is the raetion being multiplied regardless of the coefficient of the original unit, as shown in how two minutes, 40 minutes, and 542 minutes will all have the same conversion factor when converting into seconds.
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">P. Rule 1.</font></strong> <strong>1)</strong> All Non-zero digits are significant.<br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>1)</strong> All Non-zero digits are significant.<br>
 	  <strong>2)</strong> Zeros between significant digits are significant.<br>
 	  <strong>3)</strong> Zeros to the left of nonzero digits are not significant.<br>
 	  <strong>4)</strong> Zeros at the end of a number are significant only if there is a decimal point present.<br><br>
 	  For Example:<br>
 	  1200 with 3 significant figures: 1.20 x 10³<br>
 	  0.002 with 3 significant figures: 2.00 x 10⁻³
-	  <br><br><br>
-	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">P. Rule 2.</font></strong> <strong><u>THE ARCANE ROUNDING RULE</u></strong> - If the number ends in a perfect 5, you round to the even number.<br>
+	  </div><br><br>
+	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><u>THE ARCANE ROUNDING RULE</u></strong> - If the number ends in a perfect 5, you round to the even number.<br>
 	  <br>For Example:<br>
 	  275 with 2 Significant figures: 280
-	  1030 x 5.1 = 5300<br><br><br>
+	  1030 x 5.1 = 5300</div><br><br>
+	  
+	  
 	  
 	  <strong><font color="blue"><a href="#AMU"><span class="mw-headline" id="AMU">#</span></a> A.M.U.:</font></strong><br>
 	  An additional unit of measurement (derived from the kg) which is specific to atoms is the <strong>Atomic Mass Unit</strong>, found as the atomic mass of each element in relation to that of Carbon-12. For those familiar with stoichiometry, the amu can converted to moles and atoms easily.
@@ -200,7 +242,12 @@
 	    When you have a problem such as that shown below (ignore the problem itself - it is done through integration if you must know), the "<strong>vertical scaling</strong>" is just referring to what the given value (v<sub>s</sub>) is as each y-value is multiplied by a constant, creating a ratio between the new and old scales. The old scale will almost always be a scaling of 1:1, e.g. the normal graph, and the new scale (as depicted in the image) has a ratio of 2:1 with the old graph, demonstrated by how v<sub>s</sub> is four units upward, meaning each unit is two. The exact same process can be applied to the x-axis, resulting in <strong>Horizontal Scaling</strong>.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vertscale.png"><img src="/Physics/img/vertscale.png" alt="A physics problem involving vertical scaling." width=25%/></a></div><br><br>
 	    
-	    <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> When you have squared or cubed units, you put the exponent on the outside of the individual component, given both units of the type share the same exponent: 12 mm² → m²&nbsp; = &nbsp;12 mm² × ((1 m) / (1000 mm))²<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you have squared or cubed units, you put the exponent on the outside of the individual component, given both units of the type share the same exponent: 12 mm² → m²&nbsp; = &nbsp;12 mm² × ((1 m) / (1000 mm))²</div><br><br>
+	    
+	    
 	    <strong><a href="#TangentLine"><span class="mw-headline" id="TangentLine">#</span></a> <font color="#006400">Tangent Line</font></strong>: A straight line that touches a curve at a point but does not cross the curve.<br><br><br>
 	    
 	    <strong><font color="blue"><a href="#FinalExample"><span class="mw-headline" id="FinalExample">#</span></a> Final Example:</font></strong><br>
@@ -221,13 +268,23 @@
 	    <strong><a href="#Precision"><span class="mw-headline" id="Precision">#</span></a> <font color="#006400">Precision</font></strong>: How close your observed (or measured) values are to one another.<br><br>
 	    <br>
 	    
-	    <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> High Accuracy also includes taking the average of all of the instances, so if a bullseye looks like this: <br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> High Accuracy also includes taking the average of all of the instances, so if a bullseye looks like this: <br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Untitled.png"><img src="/Physics/img/Untitled.png" alt="A target with four hits shown medium-distance from the x, forming a high accuracy average." width=25%/></a></div>
 	    <span class="tiny"><em>A target with four hits shown medium-distance from the x, forming a high accuracy average.</em></span><br><br>
 	    it would be high accuracy.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">P. Rule 5.</font></strong> If there is only one measurement that can't be compared to any other measurements, precision cannot be determined.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If there is only one measurement that can't be compared to any other measurements, precision cannot be determined.
+	    
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#ErrorEquations"><span class="mw-headline" id="ErrorEquations">#</span></a> Error Equations:</font></strong><br>
 	    Relative Error measures Accuracy:<br><br>
@@ -245,7 +302,11 @@
 	    <strong><a href="#PercentUncertainty"><span class="mw-headline" id="PercentUncertainty">#</span></a> <font color="#006400">Percent Uncertainty</font></strong>: The ratio between the estimated uncertainty and the measured value, made into a percentage: ((0.1) / (88)) × 100% ≈ 1%.<br><br>
 	    <br>
 	    	    
-	    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">P. Rule 6.</font></strong> When you want to find the approximate uncertainty of something, such as that of a circle when given the radius, use the main area formula, in this case πr², to first find the ideal area. If r = 3.8 × 10⁴ cm, then A = 4.5 × 10⁹ cm². From there, if no uncertainty number is given, assume 0.1 of the original units, 0.1 × 10⁴ cm. From there, find area again from the original for ±0.1. Find the difference in the areas, divide by 2, and use it as the uncertainty of the ideal area: (4.5 ± 0.26) × 10⁹ cm².<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you want to find the approximate uncertainty of something, such as that of a circle when given the radius, use the main area formula, in this case πr², to first find the ideal area. If r = 3.8 × 10⁴ cm, then A = 4.5 × 10⁹ cm². From there, if no uncertainty number is given, assume 0.1 of the original units, 0.1 × 10⁴ cm. From there, find area again from the original for ±0.1. Find the difference in the areas, divide by 2, and use it as the uncertainty of the ideal area: (4.5 ± 0.26) × 10⁹ cm².
+	    </div><br>
 	    
 	    
 	    </article>
@@ -261,7 +322,7 @@
 	    
 	    The equation for displacement (using <span class="vecteur"><strong>d</strong></span> for displacement) in terms of unit vectors (see Rule 22) is <span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)i&#x302; + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)j&#x302;. This equation describes displacement in terms of its component vectors on the x-axis and y-axis. These component vectors indicate the direction and magnitude of the displacement.<br><br>
 	    
-	    In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions: this will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rules 20 & 21). <br><br>The following equation can be used to find the magnitude of the displacement in the explicit numerical/graphical sense - the exact straight-line distance between any two points: <br>
+	    In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions: this will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rule 20 & Rule 21). <br><br>The following equation can be used to find the magnitude of the displacement in the explicit numerical/graphical sense - the exact straight-line distance between any two points: <br>
 	    |<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span><br><br> 
 	    
 	    Use this equation when prompted to find the <em>magnitude</em> of the displacement - the direction can be determined by the component vectors themselves; see Rule 22.<br><br>
@@ -275,29 +336,49 @@
 	    Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> <strong>Cartesian Coordinates</strong>: (x, y).<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Cartesian Coordinates</strong>: (x, y).<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cartesian.png"><img src="/Physics/img/cartesian.png" alt="A graph with random cartesian coordinates." width=25%/></a></div>
 	    <span class="tiny"><em>A graph with random cartesian coordinates. Courtesy of <a href="https://gissimplified.in/what-is-cartesian-coordinate-system/">GIS</a>.</em></span><br><br>
 	    <strong>Relative Coordinates</strong>: (Left, Right).<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/relative.png"><img src="/Physics/img/relative.png" alt="A graph with relative directions like right and back superimposed over them." width=25%/></a></div>
 	    <strong>Cardinal Direction</strong>: (North, West)<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cardinal.jpg"><img src="/Physics/img/cardinal.jpg" alt="A compass, with each of the cardinal directions." width=25%/></a></div>
-	    You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0. The distance traveled will always be greater or equal to the magnitude of displacement.<br><br><br> 
+	    You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0. The distance traveled will always be greater or equal to the magnitude of displacement.
+	    </div><br><br>
+	    
 	    
 	    <strong><a href="#VelocityDef"><span class="mw-headline" id="VelocityDef">#</span></a> <font color="#006400">Velocity</font></strong>: V = (∆x / ∆t) = (change in position) / (change in time) = (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
 	    Thus, velocity has both magnitude and direction.<br><br>
 	    <br>
 	    
-	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> ALWAYS convert into the standard S.I. Units unless told otherwise.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> ALWAYS convert into the standard S.I. Units unless told otherwise.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong> <strong>Speed</strong> = (total distance) / (time). MAGNITUDE ONLY. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. <br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Speed</strong> = (total distance) / (time). MAGNITUDE ONLY. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. 
+	    </div><br><br>
+	    
 	    
 	    <strong><a href="#Slope"><span class="mw-headline" id="Slope">#</span></a> <font color="#006400">Slope</font></strong>: slope = m = (rise)/(run) = (∆y / ∆x) = (change in position / change in time) = VELOCITY. See "The Truth About Velocity & Displacement" for further elaboration. The slope of a position as a function of the time graph is the velocity. The slope of a velocity vs. time graph is acceleration.<br><br><br>
 	    
 	    <strong><a href="#AccelerationDef"><span class="mw-headline" id="AccelerationDef">#</span></a> <font color="#006400">Acceleration</font></strong>: a = (∆v / ∆t) = (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
 	    Since velocity is in meters over seconds, then acceleration is in (meters over seconds) over seconds, which is equal to meters over second². Acceleration, as a function of velocity, has both magnitude and direction.<br><br><br>
 	    
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> The object is speeding up whenever velocity and acceleration are in the same direction (e.g. they are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The object is speeding up whenever velocity and acceleration are in the same direction (e.g. they are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#TheTruth"><span class="mw-headline" id="TheTruth">#</span></a> The Truth About Velocity & Displacement:</font></strong><br>
 	     In your reading of Velocity and Slope, you have no doubt read these two truths:<br><br>
@@ -356,9 +437,13 @@
 	    
 	    <br><br>
 	    
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy physics student. The highest exponent in the position equation must be 2 or below for U.A.M. to be active. If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion. These are also referred to as the <strong>kinematic equations</strong>, the equations that govern motion (when ignoring thing like drag/air resistance - see Section III.IV for that). For motion in two dimensions, see Section III.III.
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy physics student. The highest exponent in the position equation must be 2 or below for U.A.M. to be active. If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion. These are also referred to as the <strong>kinematic equations</strong>, the equations that govern motion (when ignoring thing like drag/air resistance - see Section III.IV for that). For motion in two dimensions, see Section III.III.
 	    <br><br> If you have two equations, and you know they have three of the same U.A.M. variables, you will know that the other two have to be the same as well. In the classic bullet equation, where we knew the fired bullet and dropped bullet had a Δy of -h, an acceleration of -9.81 m/s², and a V<sub>iy</sub> of 0, we could determine that the time it would tell them to hit the ground would be the same (considering how time is the same for the x-direction and y-direction - see Rule 27 and the rest of Projectile Motion for more information).
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#UAMMemory"><span class="mw-headline" id="UAMMemory">#</span></a> Memorization tools for U.A.M. Equations:</font></strong><br>
 	    &lt;disclaimer&gt;<br>I believe the best way to memorize new information is to associate it with something that we have already memorized that we subconsciously reinforce through repetition: music. Everyone has already memorized hundreds of melodies, so finding one that would match the rhythm and meter of the equation is not too terribly difficult. Of course, fast music is most of the time unfit for memorizing an equation, of which a slower recitation and melody are much easier to perfectly and quickly recall.<br>&lt;/disclaimer&gt;<br><br>
@@ -381,9 +466,19 @@
 	    
 	    <br><br>
 	    
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> Acceleration refers to the change in meters per seconds <em>per second</em>, When a ball is rolling on an incline, it will start at 0 m/s in velocity and after 1 second get to 2 m/s, and with each passing second the velocity increases by 2 m/s. Finding the position for those times is just as simple as using the second U.A.M. equation, which in this case leaves you with each change in position equaling the change in time squared.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Acceleration refers to the change in meters per seconds <em>per second</em>, When a ball is rolling on an incline, it will start at 0 m/s in velocity and after 1 second get to 2 m/s, and with each passing second the velocity increases by 2 m/s. Finding the position for those times is just as simple as using the second U.A.M. equation, which in this case leaves you with each change in position equaling the change in time squared.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> Order of Magnitude estimates are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only tohe power of ten, adding one if rounding up.<em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Order of Magnitude estimates are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only tohe power of ten, adding one if rounding up.<em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#EsotericUAM"><span class="mw-headline" id="EsotericUAM">#</span></a> Esoteric U.A.M. Problem:</font></strong><br>
 	    A use of the U.A.M. equations that is not immediately apparent:<br><br> <em>Two trains, each having a speed of 30 km/h, are headed at each other on the same straight track. A bird that can fly 60 km/h flies off the front of one train when they are 60 km apart and heads directly for the other train. On reaching the other train, the (crazy) bird flies directly back to the first train, and so forth. What is the total distance the bird travels before the trains collide?</em><br><br>
@@ -419,9 +514,24 @@
 	    
 	    <strong><a href="#AverageVelocity"><span class="mw-headline" id="AverageVelocity">#</span></a> <font color="#006400">Average Velocity</font></strong>: The velocity over a time period. The velocity definition, change in position over change in time, is an average velocity itself.<br><br><br>
 	    
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5</sub>, specifies an interval on the graph to find the velocity of.<br><br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5</sub>, specifies an interval on the graph to find the velocity of.
+	    </div><br><br><br>
+	    
 	    
 	    ALL OF THE INFORMATION ABOUT DERIVATIVES WILL APPLY IN THE NEXT SECTION. MAKE SURE YOU KNOW AT LEAST THE DERIVATIVE PART OF <a href="/math/singlevarcalculus.html">SINGLE-VARIABLE CALCULUS</a> BEFORE CONTINUING ONTO FREE FALL.<br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    </article>
 	    <header class="articleHeader"><hr><hr>
@@ -436,20 +546,35 @@
 	    - There is no air resistance (the object is falling in a vacuum).
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> <strong>a<sub>y</sub> is the acceleration in the y direction</strong> (for free fall on planet earth) is -9.81 m/s², or -g. Thus, free fall is a U.A.M. through the constant acceleration.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>a<sub>y</sub> is the acceleration in the y direction</strong> (for free fall on planet earth) is -9.81 m/s², or -g. Thus, free fall is a U.A.M. through the constant acceleration.<br><br>
 
 <strong>g = Acceleration due to Gravity</strong>. This is separate from the specific acceleration in the y direction.<br>
 g<sub>Earth</sub> = 9.81 m/s². The acceleration due to gravity on Earth is positive. From a global perspective, the g is not constant at all locations on the planet. However, from a local perspective, the acceleration due to gravity is constant.<br>
-For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><br>
+For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².
+</div><br><br>
 
-      <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">P. Rule 16.</font></strong> Additional facts about gravity:<br>
+
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Additional facts about gravity:<br>
 - 9.81 m/s can also be represented as 9.81 m/s down.<br>
-- The acceleration due to gravity, g, is the same no matter the mass of the object.<br><br><br>
+- The acceleration due to gravity, g, is the same no matter the mass of the object.
+</div><br><br>
+
 
 <strong><a href="#Parallax"><span class="mw-headline" id="Parallax">#</span></a> <font color="#006400">Parallax</font></strong>: When the position of an object appears to differ when viewed from different locations.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">P. Rule 17.</font></strong> Sometimes, when you are dealing with an object that changes direction, splitting your calculations into two is necessary in order to find information that serves the equation as a whole: For example, if you were to take a ball and throw it up in the air, catching it in the same y-value that you threw it, the change in position would be 0, making it impossible to find the change in time using the the entirety of the event. Thus, one has to divide the movement of the object along the critical point, with the period of the ball moving upward and then moving down being separately used in calculations. Then, values can be combined to reflect the full event (the change in time, if the ball lands in the same place where it was thrown, would be the change in time of either half of the event doubled, due to symmetry. If the ball lands somewhere elsewhere then it was thrown, then the time for each half would have to be calculated and then added together).<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Sometimes, when you are dealing with an object that changes direction, splitting your calculations into two is necessary in order to find information that serves the equation as a whole: For example, if you were to take a ball and throw it up in the air, catching it in the same y-value that you threw it, the change in position would be 0, making it impossible to find the change in time using the the entirety of the event. Thus, one has to divide the movement of the object along the critical point, with the period of the ball moving upward and then moving down being separately used in calculations. Then, values can be combined to reflect the full event (the change in time, if the ball lands in the same place where it was thrown, would be the change in time of either half of the event doubled, due to symmetry. If the ball lands somewhere elsewhere then it was thrown, then the time for each half would have to be calculated and then added together).
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#CommonMistakes"><span class="mw-headline" id="CommonMistakes">#</span></a> Common Mistakes in Free Fall:</font></strong><br>
 	    -When you throw a ball upward, it will not have a positive acceleration. Having such would make it shoot upward like a rocket. Gravity is a positive constant, but the acceleration in the y direction during free fall is -9.81 m/s² for any object, whether moving upward or downward.<br><br>
@@ -476,7 +601,10 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <strong><a href="#ScalarDef"><span class="mw-headline" id="ScalarDef">#</span></a> <font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">P. Rule 18.</font></strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
 	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. This tells you the <strong>resultant vector</strong>.<br><br> If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (see Rule 20) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
 	    Here are two vectors utilizing the vector symbols:<br><br>
 	    <span class="vecteur"><strong>A</strong></span> = 49 (mm/s) North<br>
@@ -490,7 +618,9 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    Since a vector has direction, we need to find it trigonometrically:<br>
 	    tanθ = (O / A) = (<span class="vecteur"><strong>B</strong></span> / <span class="vecteur"><strong>A</strong></span>) = (42 / 49)<br>
 	    θ = tan⁻¹(42/49) = 40.601° = East of North (see Rule 19).<br>
-	    Thus, the object is moving at a resultant vector of 65 mm/s East of North.<br><br><br>
+	    Thus, the object is moving at a resultant vector of 65 mm/s East of North.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#VectorSubtraction"><span class="mw-headline" id="VectorSubtraction">#</span></a> Vector subtraction:</font></strong><br>
 	    Vector subtraction is similar to addition. <span class="vecteur"><strong>A</strong></span> - <span class="vecteur"><strong>B</strong></span> = <span class="vecteur"><strong>A</strong></span> + (-<span class="vecteur"><strong>B</strong></span>). Thus, all that would need to be done for vector subtraction is to put <span class="vecteur"><strong>B</strong></span> in the opposite direction and discover the resultant vector from there. This, indeed, can be a different resultant vector from vector addition - gander:
@@ -499,7 +629,10 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <br><br>
 	    <br><br>
 	    
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">P. Rule 19.</font></strong> Cardinal directions in Vectors are as follows:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Cardinal directions in Vectors are as follows:<br>
 	    
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/cardinaldirections.png"><img src="/Physics/img/vectors/cardinaldirections.png" alt="A graph with most of the cardinal directions of vectors filled in. Courtesy of Flipping Physics." width=30%/></a></div>
 	    <span class="tiny"><em>A graph with most of the cardinal directions of vectors filled in. Courtesy of <a href="https://www.flippingphysics.com/cardinal-directions.html">Flipping Physics</a>.</em></span><br><br>
@@ -507,9 +640,13 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    Additionally, the cardinal directions at perfect 45° angles would be as follows:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/angles.png"><img src="/Physics/img/vectors/angles.png" alt="A graph with the cardinal directions at 45° filled in." width=30%/></a></div>
 	    <span class="tiny"><em>A graph with the cardinal directions at 45° filled in.</em></span><br><br>
-	    <br>
+	    </div>
 	    
-	    <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">P. Rule 20.</font></strong> Complex vector problems oftentimes entail <strong>vector decomposition</strong>, where one may have to use trigonometry in order to find the sides of the vector triangle. A 'component' in <em>any direction</em> can be found for a vector, so long as that component is not perpendicular to the vector - only in that direction <!--(both senses ([[[))--> is there no component.
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Complex vector problems oftentimes entail <strong>vector decomposition</strong>, where one may have to use trigonometry in order to find the sides of the vector triangle. A 'component' in <em>any direction</em> can be found for a vector, so long as that component is not perpendicular to the vector - only in that direction <!--(both senses ([[[))--> is there no component.
 	    
 	    <br><br>
 	    
@@ -522,10 +659,15 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
 	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.<br><br> The COMPONENTS of a VECTOR are <strong>ALSO VECTORS</strong>. There are just in a single direction, represented in unit vectors like so: [0i&#x302; + 5j&#x302;] or [5i&#x302; + 0j&#x302;] (see Rule 22).
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
+	    
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈-->
 	    
-	    <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">P. Rule 21.</font></strong> <strong>The Associative Property of Vector Addition</strong>:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The Associative Property of Vector Addition</strong>:<br><br>
 	    <span class="vecteur"><strong>A</strong></span> + (<span class="vecteur"><strong>B</strong></span> + <span class="vecteur"><strong>C</strong></span>) = (<span class="vecteur"><strong>A</strong></span> + <span class="vecteur"><strong>B</strong></span>) + <span class="vecteur"><strong>C</strong></span>.<br>
 	    This property, in conjunction with vector decomposition, is very useful when doing vector problems such as the following: <br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector1.gif"><img src="/Physics/img/vectors/vector1.gif" alt="The initial vector, going from 60 cm West, to 50 cm North, to 40 cm SouthWest." width=30%/></a></div>
@@ -536,9 +678,13 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <span class="tiny"><em>The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the pythagorean theorem.</em></span><br><br>
     <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
-	    <br>
+	    </div>
 	    
-	    <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">P. Rule 22.</font></strong> <strong>UNIT VECTORS:</strong><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>UNIT VECTORS:</strong><br>
 	    Unit vectors are vectors with a magnitude of 1 unit in an absolute direction, without any decomposable angle. They are written differently than normal vectors, with a roof symbol on top rather than an arrow:<br><br>
 	    <strong>i&#x302;</strong> = <strong>x&#x302;</strong> = 1 unit in the x direction.<br>
 	    <strong>j&#x302;</strong> = <strong>y&#x302;</strong> = 1 unit in the y direction.<br>
@@ -549,9 +695,13 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
 	    <span class="vecteur"><strong>A</strong></span> = [2.0<strong>i&#x302;</strong> + 2.0<strong>j&#x302;</strong>]m<br><span class="vecteur"><strong>B</strong></span> = [1.0<strong>i&#x302;</strong> - 3.0<strong>j&#x302;</strong>]m<br><span class="vecteur"><strong>C</strong></span> = [4.0<strong>i&#x302;</strong> + 4.0<strong>j&#x302;</strong>]m<br><br><span class="vecteur"><strong>R</strong></span> = <span class="vecteur"><strong>A</strong></span> + <span class="vecteur"><strong>B</strong></span> + <span class="vecteur"><strong>C</strong></span> = [7.0i&#x302; + 3.0j&#x302;]m<br><br>
 	    Note that given the component vectors, reconstruction of a direction for the whole vector is possible (obviously), though unless the angle is a perfect 45°, you will only get a general idea of where it is pointing, since 25° North of East is the same as 65° East of North.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-<strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">P. Rule 23.</font></strong> When a question asks to find the distance between two vectors, you simply need to find the displacement between their endpoints.<br><br> 
+	    
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When a question asks to find the distance between two vectors, you simply need to find the displacement between their endpoints.<br><br> 
 
 In a mechanism similar to Vector Subtraction, create your own vector that has the base of it's tail on the tip of the first vector, and the base of it's tip on the tip of the second vector - the order of the vectors does not matter. Call this new vector ∆<span class="vecteur"><strong>r</strong></span>, and the two original vectors <span class="vecteur"><strong>r<sub>1</sub></strong></span> & <span class="vecteur"><strong>r<sub>2</sub></strong></span>.<br><br>
 
@@ -559,7 +709,7 @@ In a mechanism similar to Vector Subtraction, create your own vector that has th
 	    
 	    ∆<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> - <span class="vecteur"><strong>r<sub>1</sub></strong></span>
 	    <br><br>
-	    You do not need to move either of the original vectors to find the distance between them - you simply need to create a new vector that bridges their endpoints. Then, find the length of that vector by using the pythagorean strategies taught before - see Rules 19 and 20. The vectors may look similar to this:<br><br>
+	    You do not need to move either of the original vectors to find the distance between them - you simply need to create a new vector that bridges their endpoints. Then, find the length of that vector by using the pythagorean strategies taught before - see Rule 19 and Rule 20. The vectors may look similar to this:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/pablo1.png"><img src="/Physics/img/vectors/pablo1.png" alt="A graph with two vectors with no other information." width=18%/></a></div>
 	    <span class="tiny"><em>A graph with two vectors with no other information. Courtesy of <a href="https://www.flippingphysics.com/r-position-velocity-acceleration.html">Flipping Physics</a>.</em></span><br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/PABLO2.png"><img src="/Physics/img/vectors/PABLO2.png" alt="A graph with two vectors with no other information, except now with the connecting vector created." width=18%/></a></div>
@@ -588,16 +738,18 @@ Because the question asked for the distance, we need to find the magnitude of th
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    
-	    <br><br><!--Convert this text into html (without any color, make everything black) with the following prerequisites: Every instance of a vector symbol will represented as such: 'r' with a subscript 1 with a vector symbol will be <span class="vecteur"><strong>r<sub>1</sub></strong></span>. A hat symbol, such as i hat, will be represented as such: "<strong>i&#x302;</strong>". Every instance of '⇒' replace with a <br>. If there is a square root anywhere, replace it like this: if the inside of the radical is 10, it should be <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">10</span></span>. If there are roots/radicals to altering powers, such as (x)^1/3, then you figure out a way to represent it that looks correct. 
--->
+	    </div><br>
 
 
-      <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">P. Rule 24.</font></strong> The r position vector, <span class="vecteur"><strong>r</strong></span>, is used to identify the location of an object in multiple dimensions.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The r position vector, <span class="vecteur"><strong>r</strong></span>, is used to identify the location of an object in multiple dimensions.<br><br>
 <span class="vecteur"><strong>r</strong></span> = x<strong>i&#x302;</strong> + y<strong>j&#x302;</strong> + z<strong>k&#x302;</strong> identifies the location of an object in 3-dimensional space.<br><br>
 <span class="vecteur"><strong>&#916;r</strong></span> = <span class="vecteur"><strong>r<sub>f</sub></strong></span> - <span class="vecteur"><strong>r<sub>i</sub></strong></span> is the displacement of an object in 3-dimensional space.<br><br>
 <span class="vecteur"><strong>&#916;r</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>v</strong></span><sub>average</sub> & <strong>d<span class="vecteur">r</span></strong>/dt = <span class="vecteur"><strong>v</strong></span><sub>instantaneous</sub><br>
 <span class="vecteur"><strong>&#916;v</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>a</strong></span><sub>average</sub> & <strong>d<span class="vecteur">v</span></strong>/dt = <span class="vecteur"><strong>a</strong></span><sub>instantaneous</sub>
-<br><br>
+</div><br><br>
 
 
 
@@ -760,7 +912,10 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    </header>
 	    <article>
 	    
-	    <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">P. Rule 25.</font></strong> <strong>Projectile Motion</strong> - A specialization of Free Fall in which the object is moving in multiple dimensions. Thus, this movement has all of the properties of free fall in place:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Projectile Motion</strong> - A specialization of Free Fall in which the object is moving in multiple dimensions. Thus, this movement has all of the properties of free fall in place:<br>
 	    - The only force acting on it is the Force of Gravity.<br>
 	    - It is not touching any other objects.<br>
 	    - There is no air resistance (the object is falling in a vacuum).<br>
@@ -775,12 +930,17 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    V<sub>x</sub> = (∆x / ∆t)&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;┃&nbsp;U.A.M.<br>
 	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;┃&nbsp;<br>
 	    <br>&nbsp;&nbsp;(<u>Needs 2 Var.</u>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>Needs 3 Var.</u>)<br><br>
-	    In projectile motion, the object will not accelerate to the left or to the right, it will have a constant velocity only. The localized gravity here on Earth makes it only give the y direction of a falling object acceleration.<br><br> If you were to drop an object straight downward, the constant velocity would be zero as it would not move in the x or y direction whatsoever. It would also not be in projectile motion, as it is only moving in one dimension.<br> If the object were to be thrown however, the object would have a non-zero constant velocity and would be in projectile motion.<br><br><br>
+	    In projectile motion, the object will not accelerate to the left or to the right, it will have a constant velocity only. The localized gravity here on Earth makes it only give the y direction of a falling object acceleration.<br><br> If you were to drop an object straight downward, the constant velocity would be zero as it would not move in the x or y direction whatsoever. It would also not be in projectile motion, as it is only moving in one dimension.<br> If the object were to be thrown however, the object would have a non-zero constant velocity and would be in projectile motion.
+	    </div><br><br>
+	    
 	    
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≠  ≤,  ≥   the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
 	    
-	    <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">P. Rule 26.</font></strong> - <strong>Differing equations</strong> for free fall in the X-direction and Y-directions:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> - <strong>Differing equations</strong> for free fall in the X-direction and Y-directions:<br>
 	    <h3>X-DIRECTION:</h3>
 	    Since the acceleration for projectile motion in the x-direction is always zero, and every U.A.M. equation has acceleration, after plugging in zero for acceleration for each one we are left with only two equations:<br><br>1. <strong>V<sub>F</sub> = V<sub>i</sub></strong><br>
 	    The first equation simplifies the velocity of x in projectile motion to a single variable, V<sub>x</sub>, which we already intuitively knew.<br><br>
@@ -792,17 +952,42 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    V<sub>x</sub> = (∆x / ∆t)<br><br>
 	    Thus, the velocity equation itself must be the one used when calculating movement in the x direction during projectile motion. Since there are only 3 variables, you would need to know 2 variables to discover the other 1.<br>
 	    <h3>Y-DIRECTION:</h3>
-	    For the y direction, the equations are the same as they have always been - all four U.A.M. equations are in play with acceleration as -9.81 m/s², and you need three variables to find the other two. This simplifies the process.<br><br><br>
+	    For the y direction, the equations are the same as they have always been - all four U.A.M. equations are in play with acceleration as -9.81 m/s², and you need three variables to find the other two. This simplifies the process.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">P. Rule 27.</font></strong> The only U.A.M. variable that is a scalar is change in time (∆t). If you solve for the change in time in the y or x direction, you can use it for the other direction. This is because ∆t is independent of direction as a scalar.<br><br><br>
 	    
-	    <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">P. Rule 28.</font></strong> When you need to find the final velocity of an object in projectile motion, you need to find the velocity in the y direction and the velocity in the x direction. Then, you must realize that since you have the x and y components of an objects movement, that you have the decomposed vector and now need to find the vector itself, the hypotenuse of the triangle through the pythagorean theorem.<br><br>NEVER FORGET to find the direction at the end - you just have to do the sine inverse (or cosine inverse depending on which theta you need, though the theta should always be on the tail of the vector/hypotenuse) using the x and y decomposed vectors. This will give you the angle that, if you don't have any particular directions to work off of at the beginning, can just be said to be 'in front of the negative y-axis' if the object is moving rightward and downward, changing this as needed. <br>Remember that angles also must follow sig. fig. rules no matter what. <br>Vectors always require direction in addition to magnitude, a + or - will not do.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The only U.A.M. variable that is a scalar is change in time (∆t). If you solve for the change in time in the y or x direction, you can use it for the other direction. This is because ∆t is independent of direction as a scalar.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">P. Rule 29.</font></strong> As an object falls, the magnitude of the velocity increases and the direction of the velocity points farther and farther directly downward. The velocity vector arrow increases in length as the object falls, because the magnitude of the object's velocity will keep increasing (neglecting air resistance and the existence of a terminal velocity).<br><br><br>
 	    
-	    <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">P. Rule 30.</font></strong> Any U.A.M. variable that is a vector (everything other than time) can be decomposed to find its x and y-direction component vectors. This is most useful when you need to find the movement of an object in both directions during projectile motion. For example, if an object were to be launched with an initial speed of 3.25 m/s at an angle of 61.7°, you can easily find the initial velocity in the x-direction and y-direction by using decomposition tricks - see Rule 20.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you need to find the final velocity of an object in projectile motion, you need to find the velocity in the y direction and the velocity in the x direction. Then, you must realize that since you have the x and y components of an objects movement, that you have the decomposed vector and now need to find the vector itself, the hypotenuse of the triangle through the pythagorean theorem.<br><br>NEVER FORGET to find the direction at the end - you just have to do the sine inverse (or cosine inverse depending on which theta you need, though the theta should always be on the tail of the vector/hypotenuse) using the x and y decomposed vectors. This will give you the angle that, if you don't have any particular directions to work off of at the beginning, can just be said to be 'in front of the negative y-axis' if the object is moving rightward and downward, changing this as needed. <br>Remember that angles also must follow sig. fig. rules no matter what. <br>Vectors always require direction in addition to magnitude, a + or - will not do.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">P. Rule 31.</font></strong> When doing calculations with unit vectors, as could be done in the previous question, the 2nd U.A.M. equation (and all others, for that matter) can be easily converted into a more useful form:<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> As an object falls, the magnitude of the velocity increases and the direction of the velocity points farther and farther directly downward. The velocity vector arrow increases in length as the object falls, because the magnitude of the object's velocity will keep increasing (neglecting air resistance and the existence of a terminal velocity).
+	    </div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Any U.A.M. variable that is a vector (everything other than time) can be decomposed to find its x and y-direction component vectors. This is most useful when you need to find the movement of an object in both directions during projectile motion. For example, if an object were to be launched with an initial speed of 3.25 m/s at an angle of 61.7°, you can easily find the initial velocity in the x-direction and y-direction by using decomposition tricks - see Rule 20.
+	    </div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When doing calculations with unit vectors, as could be done in the previous question, the 2nd U.A.M. equation (and all others, for that matter) can be easily converted into a more useful form:<br><br>
 	    <strong><span class="vecteur">r</span><sub>F</sub> = <span class="vecteur">r</span><sub>i</sub> + <span class="vecteur">V</span><sub>i</sub> × t + (1/2) × <span class="vecteur">a</span> × t²</strong><br>
 	    <br>Of course, this equation was created by recognizing <strong><span class="vecteur">r</span></strong> as being the displacement (∆x), and splitting it into its final and initial forms and moving the initial to the right side, as can be done for ∆x or acceleration at any time. Whereas before we were not writing the vector symbols in the U.A.M. equations, we are taking specific note of their vector status now. <br><br>'<span class="vecteur">r</span>' is a <strong>displacement vector</strong>, representing the change in position of the object - see Rule 24 for more uses of it. <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are <strong>position vectors</strong>, in that they describe the object's location at specific points in time, each being the sum of its components in the x and y directions (and potentially z direction in 3D space). <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are of course representative of the initial and final positions of the object, respectively. The displacement vector <strong><span class="vecteur">r</span></strong> indicates the direct path and distance between these two positions.<br><br>
 	    Recall that when you are working in unit vectors, U.A.M. equations are done with the x and y component vectors of each vector. For example, <span class="vecteur"><strong>V<sub>i</sub></strong></span> can have the value [1.32i&#x302; + 4.24j&#x302;] (or anything of the sort) plugged in to any equation. These form a more fun equation to solve, because you are plugging in the x and y forms simultaneously into the equation (for an example and a neat trick, see Rule 32). 
@@ -811,9 +996,13 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    The vector right triangle is not the actual trajectory of the object on a graph.<br>
 	    The vector right triangle is not the actual trajectory of the object on a graph.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">P. Rule 32.</font></strong> There is something very beautiful, the result of the independence of the x and y-directions, that must be experienced as a mathematician or Physicist to appreciate it's true beauty.<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There is something very beautiful, the result of the independence of the x and y-directions, that must be experienced as a mathematician or Physicist to appreciate it's true beauty.<br><br>
 	    
 	    Say you have plugged in the unit vectors for each of the variables in the 2nd U.A.M. equation (see Rule 31 for how this can be done), and you get the following: <br><br> [0.93i&#x302; + yj&#x302;] = [0i&#x302; + 0j&#x302;] + [1.54079i&#x302; + 2.86155j&#x302;]t + (1/2) × [-9.81j&#x302;]t²<br>0.93i&#x302; + yj&#x302; = 1.54079ti&#x302; + 2.86155tj&#x302; - 4.905t²j&#x302;<br><br>
 	    
@@ -823,16 +1012,21 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    
 	    From here, the process is simple, isolating time and whatnot (which, as we learned in past revelations (see Rule 27), is a directionless scalar quantity that can be used in both the x and y directions). Of course, we can repeat this process by isolating the y-direction, where we can now plug in the newly found time.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">P. Rule 33.</font></strong> Some general tricks that keep one's ducks in line when doing physakz: When you discover the value of a new variable, always immediately check whether the sign is correct.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Some general tricks that keep one's ducks in line when doing physakz: When you discover the value of a new variable, always immediately check whether the sign is correct.<br><br>
 	    
 	    1. Your object is falling? The velocity is going to be negative.<br>
 	    
 	    2. You found negative time? Time travel doesn't exist yet. Go back and find your error somewhere, which probably has to do with possibility 1.<br><br>
 	    
-	    Additionally, sometimes, specifically when you are finding time in the 2nd U.A.M. equation (where time is squared), you will need to use the quadratic formula. Try to figure any possible way in which you avoid using it, whether using a different formula or whatever. If you have to, you have to, but use your common sense in determining which answer applies to your problem, if only one.<br><br><br>
+	    Additionally, sometimes, specifically when you are finding time in the 2nd U.A.M. equation (where time is squared), you will need to use the quadratic formula. Try to figure any possible way in which you avoid using it, whether using a different formula or whatever. If you have to, you have to, but use your common sense in determining which answer applies to your problem, if only one.
+	    
+	    </div><br><br>
 	    
 	    
 	    
@@ -856,7 +1050,10 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    
 	    <strong><a href="#FluidDef"><span class="mw-headline" id="FluidDef">#</span></a> <font color="#006400">Fluid</font></strong>: Anything that can flow, so generally gases and liquids. Any relative velocity between a fluid and a body (either because the body moves through the fluid or because the fluid moves past the body) will cause the body to experience a drag force.<br><br><br>
 	    
-	    <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">P. Rule 34. My Treatise on Drag <strong><font color="#CD7F32">(<u>1</u>)</font></strong>:</font></strong> <br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>. My Treatise on Drag <strong><font color="#CD7F32">(<u>1</u>)</font></strong>:</font>
+        </strong><br>Because projectile motion and free fall have explicit requirements of an object moving through a vacuum, accounting for air resistance means that the object is <u>not</u> in projectile motion or free fall. Thus, <br><br>a<sub>y</sub> ≠ -9.81 m/s²<br>V<sub>x</sub> ≠ Constant<br><br>
 	    The force of drag always acts opposite to the direction of the velocity of the object:
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dragGraph.png"><img src="/Physics/img/dragGraph.png" alt="A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of Flipping Physics." width=29%/></a></div>
 	    <span class="tiny"><em>A free body diagram of velocity with the forces of Gravity and the decomposed x and y forces of Drag being shown. Courtesy of <a href="https://www.flippingphysics.com/the-euler-method.html">Flipping Physics</a>.</em></span><br><br>
@@ -896,8 +1093,11 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    As a result, we have found the acceleration in the x-direction, which DOES NOT EXIST in projectile motion. Since you now know acceleration, Velocity initial, and change in time (1/100 sec), you find 4.6805 m/s as your velocity final. Therefore, compared to the Velocity initial of this 0.01 second period of 4.4694, the velocity in the x-direction (which we took to be constant) has decreased by 1.4 thousandths of a meter per second, accounting for air resistance in our calculations and contrary to what the standard U.A.M. equations for projectile motion would suggest.<br><br>
 	    ∆x = x<sub>F</sub> - x<sub>i</sub> = V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>x<sub>F</sub> = x<sub>i</sub> + V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>
 	    x = (0)+(4.4694) × (0.01) + (1/2) × (-0.13953) × (0.01)²<br>
-	    = 0.04469 meters<br><br><br>
+	    = 0.04469 meters
+	    
+	    </div><br><br>
 	    <!--$$\sum_{n=0}^n {b_n}$$-->
+	    
 	    
 	    <strong><font color="blue"><a href="#TERMINALVELOCITY"><span class="mw-headline" id="TERMINALVELOCITY">#</span></a> TERMINAL VELOCITY:</font></strong><br>
 	    <!--Blessed be the 30th of September, when I realized how balanced forces will only result in there being no acceleration, not that the object would not move. Thanks be to the cat of Page 131 for this enlightenment.-->
@@ -905,6 +1105,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    As a body falls, the drag force gradually increases in magnitude (from zero) as the speed of the body increases. If the body falls long enough, the force of drag will eventually equal to the force of gravity, ideally. In the real world, the force of gravity will never exactly equal the force of drag, of course, but the acceleration will become small enough that it will be negligible for any calculations. <br><br>Though the forces will cancel eachother out, this does not mean that the object will stop moving (see Rule 76 for the Third Law of Motion) - it only means that the object will have no acceleration, and that it will be in equilibrium, in the sense that the velocity will be constant. <br><br>From this point onward, the body will fall at a constant speed, known as the terminal velocity <span class="vecteur"><strong>V<sub>T</sub></strong></span>.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/terminalcat.png"><img src="/Physics/img/terminalcat.png" alt="The fall of a cat, and the drag force that will eventually bring it to terminal velocity." width=40%/></a></div>
 	    <span class="tiny"><em>The fall of a cat, and the drag force that will eventually bring it to terminal velocity.</em></span><br><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#LINEARDRAG"><span class="mw-headline" id="LINEARDRAG">#</span></a> LINEAR DRAG:</font></strong><br>
 	    There is a simpler, more memorizable equation for drag that THEY don't want you to know about. It is known as the Linear Drag Equation, and it can only be used for "small objects moving at slow speeds":<br><br>
@@ -917,6 +1118,7 @@ A "<strong>Proportionality constant</strong>" is just the ratio between two quan
 
  While the traditional "drag equation" as elaborated previously results in a scalar, this new drag equation results in a vector.<br><br>
  The negative in the equation means that the drag force has the opposite direction of the velocity of the object. Thus, when the object is moving upward on Earth, the force of drag is downward, and when the ball begins falling downward, the force of drag moves upward.<br><br><br>
+ 
  
  <strong><font color="blue"><a href="#DRAGANALYSIS"><span class="mw-headline" id="DRAGANALYSIS">#</span></a> DRAG ANALYSIS:</font></strong><br>
       As an object moves upward, the acceleration will <u>decrease</u> to -g, because of the following sequence of events:<br><br>
@@ -937,6 +1139,16 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    </article>
 	    <header class="articleHeader"><hr><hr>
 	    <h2><span class="mw-headline" id="Range">IV. Range & Relative Motion.</span></h2>
@@ -947,7 +1159,10 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <strong><a href="#RangeDef"><span class="mw-headline" id="RangeDef">#</span></a> <font color="#006400">Range</font></strong>: The horizontal displacement of an object in projectile motion when the overall displacement in the Y direction of the object equals zero. <strong>READ</strong>: The Horizontal Displacement.
 <br><br><br>
 
-      <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">P. Rule 35.</font></strong> Here is the 'Range' equation, giving you the horizontal displacement (which, you should note, is not written with a Δx, as that would displacement as a whole). There are specific characteristics of a question that will allow you to use the range equation, in the same manner as the U.A.M. equations. If a question explicitly says that an object in projectile motion is landing at the same height which it was thrown (or something to that effect), then the range equation can be used as the displacement in the y direction is zero.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Here is the 'Range' equation, giving you the horizontal displacement (which, you should note, is not written with a Δx, as that would displacement as a whole). There are specific characteristics of a question that will allow you to use the range equation, in the same manner as the U.A.M. equations. If a question explicitly says that an object in projectile motion is landing at the same height which it was thrown (or something to that effect), then the range equation can be used as the displacement in the y direction is zero.<br><br>
 	    <strong>Range = (V<sub>i</sub>² × sin(2θ<sub>i</sub>)) / g</strong><br><br>
 	    <strong>R</strong> = Range = Δx<br>
 	    <strong>V<sub>i</sub></strong> = ||V<sub>i</sub>|| (Magnitude of Vi)<br>
@@ -957,7 +1172,8 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <strong>g</strong>: In projectile motion, a<sub>y</sub> = -g<br>g = +9.81 m/s²<br> a<sub>y</sub> = -9.81 m/s²<br>Given this information, we know that the value in the bottom of the equation is not the negative acceleration we are accustomed to, but rather the positive acceleration due to gravity on planet Earth, 9.81 m/s². Because gravity has the dimensions of m/s², the rest of the variables must use the standard meters and seconds for their dimensions, m/s for ||V<sub>i</sub>|| and meters for the range itself. <br><br>
 	    <strong>θ<sub>i</sub></strong>: The sine of any angle can never be greater than one. Therefore, the maximum range an angle can have (given the magnitude of the velocity initial is constant, which is should considering this is the x-direction) is discoverable through simply setting the sine value of the equation equal to one:<br>1 = sin(2θ<sub>i</sub>)<br>2θ<sub>i</sub> = sin⁻¹(1) = 90°<br>θ<sub>i</sub> = (90° / 2) = 45°. <br>Therefore, a launch angle of 45° will give us the maximum range of an object given a constant magnitude of the initial velocity. Any angle other than 45° will give a smaller range. <br><br>Furthermore, being familiar with the graph of sin(2θ), we know that any two complementary angles will have the same sine value and range, such as 30° and 60°. Mathematically, this is shown as <strong>sin(2θ<sub>i</sub>) = sin(2(90 - θ<sub>i</sub>))</strong>.<br><br> JUST BECAUSE TWO ANGLES HAVE THE SAME RANGE, THAT DOES NOT MEAN THAT THEY HAVE THE SAME PROJECTILE PATH. An object launched at 60 degrees will go higher than one launched at 30 degrees, but they will end up in the same place. 
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#RangeMemorization"><span class="mw-headline" id="RangeMemorization">#</span></a> Memorization tool for Range:</font></strong><br>
 	    I believe the best way to memorize new information is to associate it with something that we have already memorized that we subconsciously reinforce through repetition: music. Everyone has already memorized hundreds of melodies, so finding one that would match the rhythm and meter of the equation is not too terribly difficult. <br><br><!-- I am going to plug this in everywhere there is an equation to be memorized.-->
@@ -974,17 +1190,24 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <strong><a href="#RelativeMotionDef"><span class="mw-headline" id="RelativeMotionDef">#</span></a> <font color="#006400">Relative Motion</font></strong>: The TRUTH of perspective. Velocity measurements depend on the frame of reference from which they are taken. The motion of the person taking the measurements will affect the interpretation of the motion of the object being observed. For example: If you were skateboarding and threw a ball up in the air, from your perspective it would move straight up and down, but from a still bystander, the ball would move parabolically, matching your velocity in the x-direction. Thus, we must conclude <strong>All motion is relative to a frame of reference</strong>.
 <br><br><br>
 
-      <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">P. Rule 36.</font></strong> Relative motion is done with vectors. Imagine a van and a motorcycle driving side by side: the velocity of the van relative to Earth is 24 mi/hr in the East direction. The velocity of the motorcycle relative to the Earth is 13 mi/hr in the East direction. These values would be written thusly: <br><br><span class="vecteur"><strong>V<sub>vE</sub></strong></span> = 24 mi/hr E<br><span class="vecteur"><strong>V<sub>mE</sub></strong></span> = 13 mi/hr E<br><br> In order to find the velocity of the van with respect to the motorcycle, we must use <span class="vecteur"><strong>V<sub>vm</sub></strong></span> as the term. This value will be the difference between the two vectors.
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Relative motion is done with vectors. Imagine a van and a motorcycle driving side by side: the velocity of the van relative to Earth is 24 mi/hr in the East direction. The velocity of the motorcycle relative to the Earth is 13 mi/hr in the East direction. These values would be written thusly: <br><br><span class="vecteur"><strong>V<sub>vE</sub></strong></span> = 24 mi/hr E<br><span class="vecteur"><strong>V<sub>mE</sub></strong></span> = 13 mi/hr E<br><br> In order to find the velocity of the van with respect to the motorcycle, we must use <span class="vecteur"><strong>V<sub>vm</sub></strong></span> as the term. This value will be the difference between the two vectors.
 	    <br><br><span class="vecteur"><strong>V<sub>vE</sub></strong></span> = <span class="vecteur"><strong>V<sub>mE</sub></strong></span> + <span class="vecteur"><strong>V<sub>vm</sub></strong></span><br> <span class="vecteur"><strong>V<sub>vm</sub></strong></span> = <span class="vecteur"><strong>V<sub>vE</sub></strong></span> - <span class="vecteur"><strong>V<sub>mE</sub></strong></span><br>
 	    <span class="vecteur"><strong>V<sub>vm</sub></strong></span> = 24 mi/hr E - 13 mi/hr E<br><span class="vecteur"><strong>V<sub>vm</sub></strong></span> = 11 mi/hr E<br><br>You may notice that by taking the negative of the vector, we are in effect reversing its direction. This can be represented by switching the order of the subscripts.<br><br>-<span class="vecteur"><strong>V<sub>mE</sub></strong></span> = <span class="vecteur"><strong>V<sub>Em</sub></strong></span><br>= -13 mi/hr E <br>= 13 mi/hr W<br><br>Therefore, from the point of view of the motorcycle, it would appear that the Earth is moving westward at 13 mi/hr. Finally, in order to solve the velocity of the motorcycle with respect to the van, we simply need to take the negative of the already known value of the motorcycle with respect to van:<br><br><span class="vecteur"><strong>V<sub>mv</sub></strong></span> = -<span class="vecteur"><strong>V<sub>vm</sub></strong></span><br>=-11 mi/hr E<br>11 mi/hr W<br><br>Thus, the van, which is moving faster than the motorcycle, would see the motorcycle as moving backwards (west) as 11 mi/hr.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">P. Rule 37.</font></strong> There is a trick that can be used in all relative motion subscripts: any time you <u>sum</u> two relative motion velocities and they share a common subscript on the inside or the outside, that subscript will cancel out in a specific way. Using a previous example (see Rule 36), we can understand specifically what this means:<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There is a trick that can be used in all relative motion subscripts: any time you <u>sum</u> two relative motion velocities and they share a common subscript on the inside or the outside, that subscript will cancel out in a specific way. Using a previous example (see Rule 36), we can understand specifically what this means:<br><br>
 	    <span class="vecteur"><strong>V<sub>vm</sub></strong></span> = <span class="vecteur"><strong>V<sub>vE</sub></strong></span> + <span class="vecteur"><strong>V<sub>Em</sub></strong></span><br><br>The "E" (Earth) on the inside of the two velocities will cancel out, and because the common subscript was on the inside, the subscripts will combine forwardly into vm.<br><br>
 	    <span class="vecteur"><strong>V<sub>vE</sub></strong></span> = <span class="vecteur"><strong>V<sub>mE</sub></strong></span> + <span class="vecteur"><strong>V<sub>vm</sub></strong></span>
 	    <br><br>
 	    With this equation, because the common subscript is on the outside, the resultant subscripts are presented backwardly. Of course, you can switch the order of the terms to make the common subscript be on the inside and get the same answer, but knowledge of these tricks either way will be very helpful.
-	    <br><br><br><br><br>
+	    </div><br><br><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#KINEMATICSPOSTMORTEM"><span class="mw-headline" id="KINEMATICSPOSTMORTEM">#</span></a> KINEMATICS POSTMORTEM:</font></strong><br>
@@ -998,6 +1221,13 @@ Because the average acceleration on the way up is lower than the average acceler
 	    
 	    
 	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    <header class="articleHeader"><hr><hr>
 	    <h2><span class="mw-headline" id="Rotational">V. Rotational Motion.</span></h2>
 	    <h3><span class="mw-headline" id="AngularVel">V.I Angular & Tangential Velocity.</span></h3>
@@ -1007,22 +1237,42 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <strong><a href="#RevolutionDef"><span class="mw-headline" id="RevolutionDef">#</span></a> <font color="#006400">Revolution</font></strong>: 360°, or 2π radians.
       <br><br><br>
       
-      <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">P. Rule 38.</font></strong> The position of an object in <strong>rotational motion</strong> can be determined in Cartesian and Polar coordinates, going back and forth using trigonometry. When an object is moving along a circle with a constant radius, the object undergoes an angular displacement (with regard to the Polar coordinates (r, θ)):<br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The position of an object in <strong>rotational motion</strong> can be determined in Cartesian and Polar coordinates, going back and forth using trigonometry. When an object is moving along a circle with a constant radius, the object undergoes an angular displacement (with regard to the Polar coordinates (r, θ)):<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/triangle.png"><img src="/Physics/img/triangle.png" alt="A section of a circle, showcasing arc-length (s), the angle (Δθ), but not the individual angles of the Hypotenuse and the adjacent leg, θ final and θ initial. Courtesy of Wikipedia." width=52%/></a></div>
 	    <span class="tiny"><em>A section of a circle, showcasing arc-length (s), the angle (Δθ), but not the individual angles of the Hypotenuse and the adjacent leg, θ<sub>F</sub> and θ<sub>i</sub>. Courtesy of <a href="https://en.wikipedia.org/wiki/File:Small_angle_triangle.svg">Wikipedia</a>.</em></span><br><br>
 	    <strong>Δθ = θ<sub>F</sub> - θ<sub>i</sub></strong><br><br>
 	    The curved linear distance the object would move when moving along an arc is called the arc length. It is the curved length on the side of the circle outside of the angular displacement Δθ. The equation for arc length is as follows: <br><br><strong>s = r × Δθ</strong><br><br>Where s is the arc length, r is the radius, and Δθ is the angular displacement. THE UNITS FOR ANGULAR DISPLACEMENT MUST BE IN RADIANS. CONVERT USING (π / 180) IF NEEDS BE.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">P. Rule 39.</font></strong> π = 3.1, give or take. It refers to the ratio of a circle's circumference to its diameter, and as an irrational number, it will go on forever. Since the formula for obtaining pi cancels out any dimensions in length (c/d = (86.9m)/(27.5m) ≈ 3.1415926...), the value of pi is in Radians, which is just a dimensionless placeholder unit. The abbreviation for Radians is 'rad'. 
-	    <br><br><br>
 	    
-	    <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">P. Rule 40.</font></strong> While average linear velocity is conveyed as <span class="vecteur"><strong>V<sub>avg</sub></strong></span> = (<span class="vecteur"><strong>∆x</strong></span> / ∆t), average <u><em>angular</em></u> velocity is written as <strong><span class="vecteur"><strong>ω<sub>avg</sub></strong></span> = (<strong>∆<span class="vecteur">θ</span></strong> / ∆t)</strong>, which can be represented in Radians per Second, Revolutions per Minute, Degrees per Millisecond, etc. <br><br>Radians per Second are most commonly used in Physics, while revolutions per minute is most used in Applicationism and "the real world". 
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> π = 3.1, give or take. It refers to the ratio of a circle's circumference to its diameter, and as an irrational number, it will go on forever. Since the formula for obtaining pi cancels out any dimensions in length (c/d = (86.9m)/(27.5m) ≈ 3.1415926...), the value of pi is in Radians, which is just a dimensionless placeholder unit. The abbreviation for Radians is 'rad'. 
+	    </div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> While average linear velocity is conveyed as <span class="vecteur"><strong>V<sub>avg</sub></strong></span> = (<span class="vecteur"><strong>∆x</strong></span> / ∆t), average <u><em>angular</em></u> velocity is written as <strong><span class="vecteur"><strong>ω<sub>avg</sub></strong></span> = (<strong>∆<span class="vecteur">θ</span></strong> / ∆t)</strong>, which can be represented in Radians per Second, Revolutions per Minute, Degrees per Millisecond, etc. <br><br>Radians per Second are most commonly used in Physics, while revolutions per minute is most used in Applicationism and "the real world". 
+	    </div><br><br>
+	    
 	  
-	    <strong><a href="/Physics/MechanicsFull.html#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">P. Rule 41.</font></strong> The symbol for angular acceleration is α, which is very convenient considering how similar it looks to a. The average angular acceleration is equal to <strong><span class="vecteur"><strong>α<sub>avg</sub></strong></span> = (<span class="vecteur"><strong>∆ω</strong></span> / ∆t)</strong>. Therefore, the units for angular acceleration are radians per second squared or revolutions per minute squared. <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The symbol for angular acceleration is α, which is very convenient considering how similar it looks to a. The average angular acceleration is equal to <strong><span class="vecteur"><strong>α<sub>avg</sub></strong></span> = (<span class="vecteur"><strong>∆ω</strong></span> / ∆t)</strong>. Therefore, the units for angular acceleration are radians per second squared or revolutions per minute squared. 
+	    </div><br><br>
 	    
-	    <strong><a href="/Physics/MechanicsFull.html#Rule42"><span class="mw-headline" id="Rule42">#</span></a> <font color="red">P. Rule 42.</font></strong> Just like an object can have uniformly accelerated motion, an object can also have uniformly angularly accelerated motion. This is written as U.α.M., instead of U.A.M., even though the alpha is lowercase. As with linear acceleration, the U.α.M. constants can be used when α is constant. All of the variables from U.A.M. must be converted into their angular form:<br><br><strong>ω<sub>F</sub></strong>, <strong>ω<sub>i</sub></strong>, <strong>α</strong>, <strong>∆θ</strong>, and <strong>∆t</strong>. <br><br>Now, we can rewrite every U.A.M. equation using these variables:
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Just like how an object can have uniformly accelerated motion, an object can also have uniformly angularly accelerated motion. This is written as U.α.M., instead of U.A.M., even though the alpha is lowercase. As with linear acceleration, the U.α.M. constants can be used when α is constant. All of the variables from U.A.M. must be converted into their angular form:<br><br><strong>ω<sub>F</sub></strong>, <strong>ω<sub>i</sub></strong>, <strong>α</strong>, <strong>∆θ</strong>, and <strong>∆t</strong>. <br><br>Now, we can rewrite every U.A.M. equation using these variables:
 	      <br><br>
 	      
 	    <strong>ω<sub>F</sub> = ω<sub>i</sub> + (α × ∆t).<br></strong>
@@ -1030,14 +1280,23 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <strong>ω<sub>F</sub>² = ω<sub>i</sub>² + (2 × α × ∆θ)<br></strong>
 	    <strong>∆θ = (1/2) × (ω<sub>F</sub> + ω<sub>i</sub>) × ∆t</strong><br><br>
 	    ALWAYS use radians in your calculations for U.α.M. equations. Additionally, remember that <strong>ω<sub>F</sub></strong> and <strong>ω<sub>i</sub></strong> are instantaneous angular velocities, as opposed to the average velocity (<span class="vecteur"><strong>∆θ</strong></span> / ∆t).
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="/Physics/MechanicsFull.html#Rule43"><span class="mw-headline" id="Rule43">#</span></a> <font color="red">P. Rule 43.</font></strong> Since angular velocity, angular acceleration, and change in angular position are vectors, they all have direction. However, since clockwise and counterclockwise are observer-dependent, we use the right-hand rule to determine direction. <br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Since angular velocity, angular acceleration, and change in angular position are vectors, they all have direction. However, since clockwise and counterclockwise are observer-dependent, we use the right-hand rule to determine direction. 
+	    </div><br><br>
+	    
 	    
 	    <strong><a href="#TangentialVelocityDef"><span class="mw-headline" id="TangentialVelocityDef">#</span></a> <font color="#006400">Tangential Velocity</font></strong>: The linear velocity of an object moving in a circle. Given by the equation <strong><strong>v<sub>t</sub></strong> = r × ω</strong>. Because it is LINEAR, you use m/s as your base units. Furthermore, notice that none of the values in the equation are vectors - this equation refers purely to the <u>magnitudes</u> of each variable.
       <br><br><br>
 	    
-	    <strong><a href="/Physics/MechanicsFull.html#Rule44"><span class="mw-headline" id="Rule44">#</span></a> <font color="red">P. Rule 44.</font></strong> The farther along you go on the radius of a circle, the linear distance that point travels when moving through a circle, which is called arc length, will increase. This is in spite of the fact that the angular velocity and angular displacement is the same, regardless of radii length, as each point on the radius covers the same number of degrees in the same amount of time.<br><br> The path traveled by each point on the radius will form an internal circle, the point moving around the circumference of this circle. Each point on the radius has a linear velocity when it is moving in the circle, known as <strong>tangential velocity</strong>, which increases proportionally as the radius and arc length (defined by the formula s = r × Δθ) increase. The tangential velocity is given by the equation <strong><span class="vecteur"><strong>v<sub>t</sub></strong></span> = r × ω</strong>, which, just like the arc length equation, requires radians. The angular velocity in the equation needs to be in radians per second.<br><br> 
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The farther along you go on the radius of a circle, the linear distance that point travels when moving through a circle, which is called arc length, will increase. This is in spite of the fact that the angular velocity and angular displacement is the same, regardless of radii length, as each point on the radius covers the same number of degrees in the same amount of time.<br><br> The path traveled by each point on the radius will form an internal circle, the point moving around the circumference of this circle. Each point on the radius has a linear velocity when it is moving in the circle, known as <strong>tangential velocity</strong>, which increases proportionally as the radius and arc length (defined by the formula s = r × Δθ) increase. The tangential velocity is given by the equation <strong><span class="vecteur"><strong>v<sub>t</sub></strong></span> = r × ω</strong>, which, just like the arc length equation, requires radians. The angular velocity in the equation needs to be in radians per second.<br><br> 
 	    See the different internal arc lengths that each radius-length has below:
 	    <br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/rotationalmotion.png"><img src="/Physics/img/rotationalmotion.png" alt="A diagram of internal circles defined by different points on the radius, of which the arc length differs for the same change in θ. Courtesy of Flipping Physics." width=27%/></a></div>
@@ -1045,14 +1304,24 @@ Because the average acceleration on the way up is lower than the average acceler
 	    
 	    Tangential Velocity is named for how its velocity vector is tangent to the circumference of the circle, perpendicular to the radius. Tangential Acceleration is the exact same way:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/tanvel.png"><img src="/Physics/img/tanvel.png" alt="The tangential velocity of three separate circle, increasing each time. Courtesy of Flipping Physics." width=47%/></a></div>
-	    <span class="tiny"><em>The tangential velocity of three separate circle, increasing each time. Courtesy of  <a href="https://www.youtube.com/watch?v=fPH2RwErUog">Flipping Physics</a>.</em></span><br><br>
-	    <br><br><br>
+	    <span class="tiny"><em>The tangential velocity of three separate circle, increasing each time. Courtesy of  <a href="https://www.youtube.com/watch?v=fPH2RwErUog">Flipping Physics</a>.</em></span><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule45"><span class="mw-headline" id="Rule45">#</span></a> <font color="red">P. Rule 45.</font></strong> Tangential Acceleration is defined by the following equation:<br><br><strong><strong>a<sub>t</sub></strong> = r × α.</strong><br><br> Like the equations for arc length and tangential velocity, you must use Radians as your angular quantity. Because it is LINEAR, you use m/s² as your base units. Furthermore, notice that none of the values in the equation are vectors - this equation refers purely to the <u>magnitudes</u> of each variable.<br><br><br>
 	    
-	    <strong><a href="#Rule46"><span class="mw-headline" id="Rule46">#</span></a> <font color="red">P. Rule 46.</font></strong> <strong>On the nature of Tangential Velocity (and others) as a vector:</strong><br><br>Imagine a situation in which the radius and angular velocity of a point on the circle are both constant - This just means that the circle is rotating at a constant speed.<br><br> 
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Tangential Acceleration is defined by the following equation:<br><br><strong><strong>a<sub>t</sub></strong> = r × α.</strong><br><br> Like the equations for arc length and tangential velocity, you must use Radians as your angular quantity. Because it is LINEAR, you use m/s² as your base units. Furthermore, notice that none of the values in the equation are vectors - this equation refers purely to the <u>magnitudes</u> of each variable.
+	    </div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>On the nature of Tangential Velocity (and others) as a vector:</strong><br><br>Imagine a situation in which the radius and angular velocity of a point on the circle are both constant - This just means that the circle is rotating at a constant speed.<br><br> 
 	      If this were to be the case, then the linear velocity of the radius, the tangential velocity, would still not be constant, even though tangential velocity is literally equal to the radius times the angular velocity. This is because tangential velocity is a <u>vector</u> with both magnitude and direction. While the magnitude would be constant, the direction of the tangential velocity would be constantly changing (perpendicular to the radius as it makes it revolution around the circle), and so tangential velocity itself would not be constant. Therefore, the radius has neither a tangential acceleration nor an angular acceleration.
-	      <br><br><br><!--I am really proud of this rule. This is really an excellent rule.-->
+	      </div><br><br><!--I am really proud of this rule. This is really an excellent rule.-->
+	    
 	    
 	    </article>
 	    <header class="articleHeader"><hr>
@@ -1063,7 +1332,10 @@ Because the average acceleration on the way up is lower than the average acceler
 	    <strong><a href="#RadialDef"><span class="mw-headline" id="RadialDef">#</span></a> <font color="#006400">Radial</font></strong>: The linear analog to angular. Specifically, 'radial' indicates special attention to the reference point of the motion: Radial speed measures how fast an object is moving toward or away from the reference point.<br><br> "Radial Velocity" is just linear velocity, and "Radial Acceleration" refers to Centripetal Acceleration (below). 
       <br><br><br>
 	    
-	    <strong><a href="#Rule47"><span class="mw-headline" id="Rule47">#</span></a> <font color="red">P. Rule 47.</font></strong> There is ANOTHER linear acceleration apart from tangential acceleration - there are three total that matter. It is called <strong>Centripetal Acceleration</strong>, also known as Radial Acceleration. Look at these words: <br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There is ANOTHER linear acceleration apart from tangential acceleration - there are three total that matter. It is called <strong>Centripetal Acceleration</strong>, also known as Radial Acceleration. Look at these words: <br><br>
 	    <em>"Centripetal Acceleration is the linear acceleration that causes the tangential velocity to change direction."</em>
 	    <br><br>Utterly meaningless on their surface, searching for any possible knowledge in these words is an exercise in futility. However, beyond their nonsensical face-value, an elaboration of these words will reveal their value:<br><br>
 	    The word 'Centripetal' is derived from "centrum", meaning center, and "petere", meaning to seek. Centripetal acceleration is the acceleration that causes circular motion. Centripetal acceleration is always directed inward to the circle, toward the center. It is a center-seeking linear acceleration. The force inward is what causes circular motion - see Rule 51 for more information.
@@ -1076,35 +1348,62 @@ Because the average acceleration on the way up is lower than the average acceler
 	    = ((r × ω)² / r)  = ((r² × ω²) / r) = <strong>r × ω²</strong><br><br>
 	    Because it is LINEAR, you use m/s² as your base units. 
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule48"><span class="mw-headline" id="Rule48">#</span></a> <font color="red">P. Rule 48.</font></strong> We can extrapolate the known information about circular centripetal acceleration to apply to any curved path an object may follow, and therefore <u>any object moving on a curved path will experience a centripetal acceleration.</u><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> We can extrapolate the known information about circular centripetal acceleration to apply to any curved path an object may follow, and therefore <u>any object moving on a curved path will experience a centripetal acceleration.</u><br><br>
 	    
 	    When going over the top of a hill or other circular object that can have its forces summed to form the centripetal force (see Rule 51), the normal force will be less than the force of gravity, since you feel less of a normal reaction force from the ground. This is why you feel weightless when you are driving over a hill!
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">P. Rule 49.</font></strong> The whole idea of centripetal acceleration and tangential velocity and acceleration and everything else in rotational motion is that all the equations use all the same variables, and you can connect what you have to what you need by repeatedly plugging in numbers into equations. For example, to find centripetal acceleration (equation below), you tangential velocity, which you need the average angular velocity for, and so on. To really instill this into your brain, stare at the <a href="/Physics/physicseq#V-I">equations</a> for rotational motion until you imagine them every time you see a rotating circle. For a refresher on all three types of acceleration, watch <a href="https://www.youtube.com/watch?v=EQQZF2gVNKI">this videos</a>.<br><br><br><!--The worst rule yet in all of physics, as of the time of writing.-->
 	    
-	    <strong><a href="#Rule50"><span class="mw-headline" id="Rule50">#</span></a> <font color="red">P. Rule 50.</font></strong> By the nature of their equations, Tangential velocity requires the object to be in acceleration (either speeding up or slowing down as it goes around the circle), while Centripetal acceleration only needs the object to be going around in the circle at a constant rate.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The whole idea of centripetal acceleration and tangential velocity and acceleration and everything else in rotational motion is that all the equations use all the same variables, and you can connect what you have to what you need by repeatedly plugging in numbers into equations. For example, to find centripetal acceleration (equation below), you tangential velocity, which you need the average angular velocity for, and so on. To really instill this into your brain, stare at the <a href="/Physics/physicseq#V-I">equations</a> for rotational motion until you imagine them every time you see a rotating circle. For a refresher on all three types of acceleration, watch <a href="https://www.youtube.com/watch?v=EQQZF2gVNKI">this videos</a>.
+	    </div><br><br><!--The worst rule yet in all of physics, as of the time of writing.-->
 	    
-	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">P. Rule 51.</font></strong> <a href ="/Physics/MechanicsFull2#Rule70">Newton's Second Law</a> (see Rule 70) states that net force equals mass times acceleration, or &Sigma;<span class="vecteur"><strong>F</strong></span> = m × <span class="vecteur"><strong>a</strong></span>. Since it has been determined (see Rule 48) that every object moving on a curved path will have centripetal acceleration, we can apply centripetal acceleration to Newton's Second Law and end up with the equation for <strong>Centripetal Force</strong>:<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> By the nature of their equations, Tangential velocity requires the object to be in acceleration (either speeding up or slowing down as it goes around the circle), while Centripetal acceleration only needs the object to be going around in the circle at a constant rate.</div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Newton's Second Law (see Rule 70) states that net force equals mass times acceleration, or &Sigma;<span class="vecteur"><strong>F</strong></span> = m × <span class="vecteur"><strong>a</strong></span>. Since it has been determined (see Rule 48) that every object moving on a curved path will have centripetal acceleration, we can apply centripetal acceleration to Newton's Second Law and end up with the equation for <strong>Centripetal Force</strong>:<br><br>
+	    
 <strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = m × <span class="vecteur"><strong>a<sub>c</sub></strong></span></strong><br><br>
+
 There are several important rules for comprehending centripetal force:<br><br>
 <strong>1) Centripetal Force is not a New Force</strong>. Most other forces, such as the force of gravity, tension, friction, and the normal force (<a href="/Physics/MechanicsFull2#FBD">Sections V.II - V.IV</a>), are 'independently-defined' forces, meaning they are not dependent on anything else and exist despite of what humans think is possible or impossible. Centripetal force, on the other hand, is composed out of these bedrock forces, whether by a mixture of them or just one. This is because it is the NET force in the inward direction, the net of all the forces acting in the inward direction.<br><br>
 <strong>2) Centripetal Force is never in a Free Body Diagram</strong>. Because centripetal force is not a new force, it never appears in a free body diagram. In order to determine the centripetal force, you need to draw out your free body diagram and then sum the forces in the inward direction. <br><br>
 <strong>3) In is positive, and out is negative</strong>. When you sum the forces in the inward direction, the in direction is positive, while the out direction is negative. This is almost the same for what was done before for summing forces, just now you sum them in relation to the in direction, and set them equal to centripetal acceleration instead of m × <span class="vecteur">a</span>. <strong>NEVER</strong> attempt to sum forces in the "tangential" direction - there is no such thing (you may be thinking of summing in the y or x directions). Instead, sum your torques (see Rule 126).
-<br><br><br>
+</div><br><br>
+
 	    
-	    <strong><a href="#Rule52"><span class="mw-headline" id="Rule52">#</span></a> <font color="red">P. Rule 52.</font></strong> <strong>Time Constant:</strong><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Time Constant:</strong><br><br>
 	    
 The time constant, τ, is a means of determining the time it takes for an exponential equation to get to a percent of its maximum value, calculated similarly to a half-life. The first time constant is 63.2%, which is a universal constant that must be remembered. It is the result of 1 - (1 / e), exactly. This number comes up with some frequency in physics. <br><br>
 
 Thus, since the first time constant is 63.2% of the time it takes to reach terminal velocity, then 2τ will be the 86.5%, because it increased by 63.2% of the percent remaining until 100%. 3τ will be 95%, and so on and so on. Every increase in the time constant will make the velocity 63.2% closer to terminal velocity. Thus, it will take 6.91τ for the velocity to be 99.9% of the terminal velocity.<br><br>
 Objects that encounter more air resistance and meet their terminal velocity faster, like coffee filters, will have a small time constant, while an object like a baseball will have a larger time constant.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule53"><span class="mw-headline" id="Rule53">#</span></a> <font color="red">P. Rule 53.</font></strong><strong> Rotational Right-Hand-Rule</strong>:<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong><strong> Rotational Right-Hand-Rule</strong>:<br><br>
 	    
 	    
 	    There is a second <u>right-hand rule</u>, one separate from the Vector right hand rule described in the <a href="/Physics/mechanics/vectors#CrossProduct">"Multiplying Vectors"</a> section of III.II.
@@ -1123,28 +1422,37 @@ Have no restraint in turning your hand to have the path follow correctly - this 
 
 If you have performed this rule correctly, from your point of view (like the bird's eye view of a flat circle in centripetal motion), a circle moving clockwise will always produce a direction in the negative z-axis direction when using the R.R.H.R., and that using it on a circle moving counter-clockwise will result in the positive z-axis direction.<br><br><br><br>
 
-
 You may wonder, "Why bother with the R.R.H.R. anyways? Can't you just memorize the direction based on whether the circle is moving clockwise or counter-clockwise?". The issue with doing so is that "clockwise" and "counter-clockwise" are observer-dependent directions, and that they can change from whichever perspective you are looking at the circle from (and a problem can require you to look at it from several). Thus, by using the R.R.H.R., you can easily determine which direction the angular velocity & displacement are in by finding the "angular" direction, which, though it can change in positioning depending on perspective, will always be in the same direction.
 
 <br><br>For example, if you were to determine on the front side of an object in centripetal motion that it's direction is outward, and then when you move to the backside that it's direction is inward, you would have found the same direction, just from different perspectives. For all intents and purposes, it remains wise to define one view of the object in centripetal motion as being the "front" view, so that any direction inward can be labeled as being on the negative z-axis and any direction outward as being on the positive z-axis.
 
-<br><br><br>
+</div><br><br>
+
 	    
-	    <strong><a href="#Rule54"><span class="mw-headline" id="Rule54">#</span></a> <font color="red">P. Rule 54.</font></strong> To determine the angular velocity of an object in centripetal motion when looking at it from the side, as depicted in figure (a) below, you would need to perform the exact same steps of the Rotational Right-Hand-Rule (see Rule 53): curl your fingers in the direction of the movement of the circle, with the added cognizance of the positioning your hand. You must make sure to turn your hand to best reflect the motion of the object, as if the path of your fingers was on the same plane as the object, as seen in figure (b).<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> To determine the angular velocity of an object in centripetal motion when looking at it from the side, as depicted in figure (a) below, you would need to perform the exact same steps of the Rotational Right-Hand-Rule (see Rule 53): curl your fingers in the direction of the movement of the circle, with the added cognizance of the positioning your hand. You must make sure to turn your hand to best reflect the motion of the object, as if the path of your fingers was on the same plane as the object, as seen in figure (b).<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/righthandrotate.jpeg"><img src="/Physics/img/righthandrotate.jpeg" alt="An example of how the R.R.H.R. would be carried out with respect to an object in centripetal motion as viewed from the side, in this case producing the positive y-direction. Courtesy of Libretexts." width=47%/></a></div>
 	    <span class="tiny"><em>An example of how the R.R.H.R. would be carried out with respect to an object in centripetal motion as viewed from the side, in this case producing the positive y-direction. Courtesy of <a href="https://phys.libretexts.org/Bookshelves/University_Physics/Physics_%28Boundless%29/9%3A_Rotational_Kinematics_Angular_Momentum_and_Energy/9.7%3A_Vector_Nature_of_Rotational_Kinematics">Libretexts</a>.</em></span><br><br>
 	    
 	    This enables for directions to be found in the negative and positive x and y directions.
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
+	    
 	    
 	    <strong><a href="#PendulumDef"><span class="mw-headline" id="PendulumDef">#</span></a> <font color="#006400">Conical Pendulum</font></strong>: A pendulum (a hung weight that can swing freely back and forth in oscillations) that swings circularly, the motion of which forms a conical shape. In these problems, the centripetal motion will be along the horizontal plane (if hanging normally), or whichever plane the problem specifies if moving against gravity.
       <br><br><br>
       
       <strong><a href="#UniformCircularMotionDef"><span class="mw-headline" id="UniformCircularMotionDef">#</span></a> <font color="#006400">Uniform Circular Motion</font></strong>: Centripetal motion at a constant angular velocity. This motion thus has no change in angular velocity, no angular acceleration, nor any tangential acceleration. An object spinning on the y-plane, like a yo-yo, is considered to be in <u>nonuniform</u> circular motion, as the force of tension will always be changing as it moves through the air (weakest when at its maximum height, and strongest at the bottom), in order for the net centripetal acceleration to be conserved. The yo-yo will take longer to move through the top semicircle of the revolution than the bottom, since the tangential speed is greater at the bottom. For a conceptual refresher, watch this <a href="https://youtu.be/95W_w33nkSY">video proof</a>.
       <br><br><br>
+      
 	    
-	    <strong><a href="#Rule55"><span class="mw-headline" id="Rule55">#</span></a> <font color="red">P. Rule 55.</font></strong> The acceleration of any object in non-uniform circular motion has two perpendicular components: tangential acceleration and centripetal acceleration. Thus, to determine the absolute magnitude of the acceleration of an object in centripetal motion at any moment, you would simply perform the Pythagorean Theorem with the two component accelerations being a and b.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The acceleration of any object in non-uniform circular motion has two perpendicular components: tangential acceleration and centripetal acceleration. Thus, to determine the absolute magnitude of the acceleration of an object in centripetal motion at any moment, you would simply perform the Pythagorean Theorem with the two component accelerations being a and b.</div><br>
 	    
 	    
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥, α  ω  ÷, the roof is &#x302; -->
@@ -1155,6 +1463,7 @@ You may wonder, "Why bother with the R.R.H.R. anyways? Can't you just memorize t
 	  </article>
 	  
 	  
+	</div>
 	</div>
 	
 	<div class="General links">
@@ -1187,7 +1496,7 @@ You may wonder, "Why bother with the R.R.H.R. anyways? Can't you just memorize t
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong>  → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 9 2025</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

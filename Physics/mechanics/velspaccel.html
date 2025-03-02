@@ -24,6 +24,36 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -83,6 +113,11 @@
         
         
       </div>
+      
+      
+      <div class="rules" data-start="1">
+      
+      
 <hr>
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Velocity">I. Velocity, Speed, Acceleration.</span></h2>
@@ -94,18 +129,28 @@
 	  Physics is based on measurement of physical quantities: Having some expertise in dimensional analysis is crucial to be able to convert from one unit of measurement to another. There are several different systems of measurements which measure the same types of quantities, the two biggest systems being the Metric System and the Imperial System. For example, length is measured in the metric system in 'meters', while the imperial unit for length is 'feet'. Dimensional Analysis is conducted using <strong>conversion factors</strong>, which are just the ratio of units equivalent to what you are trying to convert to. For example, <br><br>(2 min) x (60 sec/1 min)<br><br> has (60 sec/1 min) as the conversion factor, converting from minutes to seconds. The conversion factor is the raetion being multiplied regardless of the coefficient of the original unit, as shown in how two minutes, 40 minutes, and 542 minutes will all have the same conversion factor when converting into seconds.
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">P. Rule 1.</font></strong> <strong>1)</strong> All Non-zero digits are significant.<br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>1)</strong> All Non-zero digits are significant.<br>
 	  <strong>2)</strong> Zeros between significant digits are significant.<br>
 	  <strong>3)</strong> Zeros to the left of nonzero digits are not significant.<br>
 	  <strong>4)</strong> Zeros at the end of a number are significant only if there is a decimal point present.<br><br>
 	  For Example:<br>
 	  1200 with 3 significant figures: 1.20 x 10³<br>
 	  0.002 with 3 significant figures: 2.00 x 10⁻³
-	  <br><br><br>
-	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">P. Rule 2.</font></strong> <strong><u>THE ARCANE ROUNDING RULE</u></strong> - If the number ends in a perfect 5, you round to the even number.<br>
+	  </div><br><br>
+	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><u>THE ARCANE ROUNDING RULE</u></strong> - If the number ends in a perfect 5, you round to the even number.<br>
 	  <br>For Example:<br>
 	  275 with 2 Significant figures: 280
-	  1030 x 5.1 = 5300<br><br><br>
+	  1030 x 5.1 = 5300</div><br><br>
+	  
+	  
 	  
 	  <strong><font color="blue"><a href="#AMU"><span class="mw-headline" id="AMU">#</span></a> A.M.U.:</font></strong><br>
 	  An additional unit of measurement (derived from the kg) which is specific to atoms is the <strong>Atomic Mass Unit</strong>, found as the atomic mass of each element in relation to that of Carbon-12. For those familiar with stoichiometry, the amu can converted to moles and atoms easily.
@@ -133,7 +178,12 @@
 	    When you have a problem such as that shown below (ignore the problem itself - it is done through integration if you must know), the "<strong>vertical scaling</strong>" is just referring to what the given value (v<sub>s</sub>) is as each y-value is multiplied by a constant, creating a ratio between the new and old scales. The old scale will almost always be a scaling of 1:1, e.g. the normal graph, and the new scale (as depicted in the image) has a ratio of 2:1 with the old graph, demonstrated by how v<sub>s</sub> is four units upward, meaning each unit is two. The exact same process can be applied to the x-axis, resulting in <strong>Horizontal Scaling</strong>.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vertscale.png"><img src="/Physics/img/vertscale.png" alt="A physics problem involving vertical scaling." width=25%/></a></div><br><br>
 	    
-	    <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> When you have squared or cubed units, you put the exponent on the outside of the individual component, given both units of the type share the same exponent: 12 mm² → m²&nbsp; = &nbsp;12 mm² × ((1 m) / (1000 mm))²<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you have squared or cubed units, you put the exponent on the outside of the individual component, given both units of the type share the same exponent: 12 mm² → m²&nbsp; = &nbsp;12 mm² × ((1 m) / (1000 mm))²</div><br><br>
+	    
+	    
 	    <strong><a href="#TangentLine"><span class="mw-headline" id="TangentLine">#</span></a> <font color="#006400">Tangent Line</font></strong>: A straight line that touches a curve at a point but does not cross the curve.<br><br><br>
 	    
 	    <strong><font color="blue"><a href="#FinalExample"><span class="mw-headline" id="FinalExample">#</span></a> Final Example:</font></strong><br>
@@ -154,13 +204,23 @@
 	    <strong><a href="#Precision"><span class="mw-headline" id="Precision">#</span></a> <font color="#006400">Precision</font></strong>: How close your observed (or measured) values are to one another.<br><br>
 	    <br>
 	    
-	    <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> High Accuracy also includes taking the average of all of the instances, so if a bullseye looks like this: <br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> High Accuracy also includes taking the average of all of the instances, so if a bullseye looks like this: <br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Untitled.png"><img src="/Physics/img/Untitled.png" alt="A target with four hits shown medium-distance from the x, forming a high accuracy average." width=25%/></a></div>
 	    <span class="tiny"><em>A target with four hits shown medium-distance from the x, forming a high accuracy average.</em></span><br><br>
 	    it would be high accuracy.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">P. Rule 5.</font></strong> If there is only one measurement that can't be compared to any other measurements, precision cannot be determined.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If there is only one measurement that can't be compared to any other measurements, precision cannot be determined.
+	    
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#ErrorEquations"><span class="mw-headline" id="ErrorEquations">#</span></a> Error Equations:</font></strong><br>
 	    Relative Error measures Accuracy:<br><br>
@@ -178,7 +238,11 @@
 	    <strong><a href="#PercentUncertainty"><span class="mw-headline" id="PercentUncertainty">#</span></a> <font color="#006400">Percent Uncertainty</font></strong>: The ratio between the estimated uncertainty and the measured value, made into a percentage: ((0.1) / (88)) × 100% ≈ 1%.<br><br>
 	    <br>
 	    	    
-	    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">P. Rule 6.</font></strong> When you want to find the approximate uncertainty of something, such as that of a circle when given the radius, use the main area formula, in this case πr², to first find the ideal area. If r = 3.8 × 10⁴ cm, then A = 4.5 × 10⁹ cm². From there, if no uncertainty number is given, assume 0.1 of the original units, 0.1 × 10⁴ cm. From there, find area again from the original for ±0.1. Find the difference in the areas, divide by 2, and use it as the uncertainty of the ideal area: (4.5 ± 0.26) × 10⁹ cm².<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you want to find the approximate uncertainty of something, such as that of a circle when given the radius, use the main area formula, in this case πr², to first find the ideal area. If r = 3.8 × 10⁴ cm, then A = 4.5 × 10⁹ cm². From there, if no uncertainty number is given, assume 0.1 of the original units, 0.1 × 10⁴ cm. From there, find area again from the original for ±0.1. Find the difference in the areas, divide by 2, and use it as the uncertainty of the ideal area: (4.5 ± 0.26) × 10⁹ cm².
+	    </div><br>
 	    
 	    
 	    </article>
@@ -194,7 +258,7 @@
 	    
 	    The equation for displacement (using <span class="vecteur"><strong>d</strong></span> for displacement) in terms of unit vectors (see Rule 22) is <span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)i&#x302; + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)j&#x302;. This equation describes displacement in terms of its component vectors on the x-axis and y-axis. These component vectors indicate the direction and magnitude of the displacement.<br><br>
 	    
-	    In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions: this will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rules 20 & 21). <br><br>The following equation can be used to find the magnitude of the displacement in the explicit numerical/graphical sense - the exact straight-line distance between any two points: <br>
+	    In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions: this will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rule 20 & Rule 21). <br><br>The following equation can be used to find the magnitude of the displacement in the explicit numerical/graphical sense - the exact straight-line distance between any two points: <br>
 	    |<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span><br><br> 
 	    
 	    Use this equation when prompted to find the <em>magnitude</em> of the displacement - the direction can be determined by the component vectors themselves; see Rule 22.<br><br>
@@ -208,29 +272,49 @@
 	    Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> <strong>Cartesian Coordinates</strong>: (x, y).<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Cartesian Coordinates</strong>: (x, y).<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cartesian.png"><img src="/Physics/img/cartesian.png" alt="A graph with random cartesian coordinates." width=25%/></a></div>
 	    <span class="tiny"><em>A graph with random cartesian coordinates. Courtesy of <a href="https://gissimplified.in/what-is-cartesian-coordinate-system/">GIS</a>.</em></span><br><br>
 	    <strong>Relative Coordinates</strong>: (Left, Right).<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/relative.png"><img src="/Physics/img/relative.png" alt="A graph with relative directions like right and back superimposed over them." width=25%/></a></div>
 	    <strong>Cardinal Direction</strong>: (North, West)<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cardinal.jpg"><img src="/Physics/img/cardinal.jpg" alt="A compass, with each of the cardinal directions." width=25%/></a></div>
-	    You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0. The distance traveled will always be greater or equal to the magnitude of displacement.<br><br><br> 
+	    You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0. The distance traveled will always be greater or equal to the magnitude of displacement.
+	    </div><br><br>
+	    
 	    
 	    <strong><a href="#VelocityDef"><span class="mw-headline" id="VelocityDef">#</span></a> <font color="#006400">Velocity</font></strong>: V = (∆x / ∆t) = (change in position) / (change in time) = (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
 	    Thus, velocity has both magnitude and direction.<br><br>
 	    <br>
 	    
-	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> ALWAYS convert into the standard S.I. Units unless told otherwise.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> ALWAYS convert into the standard S.I. Units unless told otherwise.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong> <strong>Speed</strong> = (total distance) / (time). MAGNITUDE ONLY. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. <br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Speed</strong> = (total distance) / (time). MAGNITUDE ONLY. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. 
+	    </div><br><br>
+	    
 	    
 	    <strong><a href="#Slope"><span class="mw-headline" id="Slope">#</span></a> <font color="#006400">Slope</font></strong>: slope = m = (rise)/(run) = (∆y / ∆x) = (change in position / change in time) = VELOCITY. See "The Truth About Velocity & Displacement" for further elaboration. The slope of a position as a function of the time graph is the velocity. The slope of a velocity vs. time graph is acceleration.<br><br><br>
 	    
 	    <strong><a href="#AccelerationDef"><span class="mw-headline" id="AccelerationDef">#</span></a> <font color="#006400">Acceleration</font></strong>: a = (∆v / ∆t) = (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
 	    Since velocity is in meters over seconds, then acceleration is in (meters over seconds) over seconds, which is equal to meters over second². Acceleration, as a function of velocity, has both magnitude and direction.<br><br><br>
 	    
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> The object is speeding up whenever velocity and acceleration are in the same direction (e.g. they are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The object is speeding up whenever velocity and acceleration are in the same direction (e.g. they are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#TheTruth"><span class="mw-headline" id="TheTruth">#</span></a> The Truth About Velocity & Displacement:</font></strong><br>
 	     In your reading of Velocity and Slope, you have no doubt read these two truths:<br><br>
@@ -289,9 +373,13 @@
 	    
 	    <br><br>
 	    
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy physics student. The highest exponent in the position equation must be 2 or below for U.A.M. to be active. If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion. These are also referred to as the <strong>kinematic equations</strong>, the equations that govern motion (when ignoring thing like drag/air resistance - see Section III.IV for that). For motion in two dimensions, see Section III.III.
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy physics student. The highest exponent in the position equation must be 2 or below for U.A.M. to be active. If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion. These are also referred to as the <strong>kinematic equations</strong>, the equations that govern motion (when ignoring thing like drag/air resistance - see Section III.IV for that). For motion in two dimensions, see Section III.III.
 	    <br><br> If you have two equations, and you know they have three of the same U.A.M. variables, you will know that the other two have to be the same as well. In the classic bullet equation, where we knew the fired bullet and dropped bullet had a Δy of -h, an acceleration of -9.81 m/s², and a V<sub>iy</sub> of 0, we could determine that the time it would tell them to hit the ground would be the same (considering how time is the same for the x-direction and y-direction - see Rule 27 and the rest of Projectile Motion for more information).
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#UAMMemory"><span class="mw-headline" id="UAMMemory">#</span></a> Memorization tools for U.A.M. Equations:</font></strong><br>
 	    &lt;disclaimer&gt;<br>I believe the best way to memorize new information is to associate it with something that we have already memorized that we subconsciously reinforce through repetition: music. Everyone has already memorized hundreds of melodies, so finding one that would match the rhythm and meter of the equation is not too terribly difficult. Of course, fast music is most of the time unfit for memorizing an equation, of which a slower recitation and melody are much easier to perfectly and quickly recall.<br>&lt;/disclaimer&gt;<br><br>
@@ -314,9 +402,19 @@
 	    
 	    <br><br>
 	    
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> Acceleration refers to the change in meters per seconds <em>per second</em>, When a ball is rolling on an incline, it will start at 0 m/s in velocity and after 1 second get to 2 m/s, and with each passing second the velocity increases by 2 m/s. Finding the position for those times is just as simple as using the second U.A.M. equation, which in this case leaves you with each change in position equaling the change in time squared.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Acceleration refers to the change in meters per seconds <em>per second</em>, When a ball is rolling on an incline, it will start at 0 m/s in velocity and after 1 second get to 2 m/s, and with each passing second the velocity increases by 2 m/s. Finding the position for those times is just as simple as using the second U.A.M. equation, which in this case leaves you with each change in position equaling the change in time squared.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> Order of Magnitude estimates are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only tohe power of ten, adding one if rounding up.<em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Order of Magnitude estimates are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only tohe power of ten, adding one if rounding up.<em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#EsotericUAM"><span class="mw-headline" id="EsotericUAM">#</span></a> Esoteric U.A.M. Problem:</font></strong><br>
 	    A use of the U.A.M. equations that is not immediately apparent:<br><br> <em>Two trains, each having a speed of 30 km/h, are headed at each other on the same straight track. A bird that can fly 60 km/h flies off the front of one train when they are 60 km apart and heads directly for the other train. On reaching the other train, the (crazy) bird flies directly back to the first train, and so forth. What is the total distance the bird travels before the trains collide?</em><br><br>
@@ -352,12 +450,17 @@
 	    
 	    <strong><a href="#AverageVelocity"><span class="mw-headline" id="AverageVelocity">#</span></a> <font color="#006400">Average Velocity</font></strong>: The velocity over a time period. The velocity definition, change in position over change in time, is an average velocity itself.<br><br><br>
 	    
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5</sub>, specifies an interval on the graph to find the velocity of.<br><br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5</sub>, specifies an interval on the graph to find the velocity of.
+	    </div><br><br><br>
+	    
 	    
 	    ALL OF THE INFORMATION ABOUT DERIVATIVES WILL APPLY IN THE NEXT SECTION. MAKE SURE YOU KNOW AT LEAST THE DERIVATIVE PART OF <a href="/math/singlevarcalculus.html">SINGLE-VARIABLE CALCULUS</a> BEFORE CONTINUING ONTO FREE FALL.<br><br>
 	    
 	    </article>
-	</div>
+	</div></div>
 	
 	<div class="General links">
 		links
@@ -389,7 +492,7 @@
         <article><strong>Velocity, Speed, Acceleration</strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 9 2025</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

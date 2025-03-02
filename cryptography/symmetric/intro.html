@@ -141,13 +141,15 @@ Until 1976, this was the only form of cryptography in existence, and describes t
 	  
 	  <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
 
-Say <strong>Alice</strong> and <strong>Bob</strong> connect through the internet (which is an open channel due to the potential of package rerouting/interception) and transfer data. An opponent, <strong>Oscar</strong>, can read their communications by intercepting the data before it reaches Bob.<br>
+Say <strong>Alice</strong> and <strong>Bob</strong> connect through the internet (which is an open channel due to the potential of package rerouting/interception) and transfer data. An opponent, <strong>Oscar</strong>, can read their communications by intercepting the data before it reaches Bob.<br><br>
+
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/alicebobunsecure.png"><img src="/cryptography/img/alicebobunsecure.png" alt="A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar.</em></span><br><br> 
 	    
 	    To stop Oscar from reading the message, an encryption algorithm can be established, converting the plaintext message (x) into a ciphertext message (y), and then sending it through the insecure channel. Oscar would only see a stream of random characters/bits as a result of the encryption. Bob, using a decryption function, would convert the ciphertext back into plaintext, thus completing the data transfer without interception.<br><br>
 
-In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which should be public for reasons outlined in Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br>
+In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which should be made publicly available - see Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
+
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/AliceBobSecure.png"><img src="/cryptography/img/AliceBobSecure.png" alt="A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions.</em></span><br><br> 
 	    
@@ -190,7 +192,7 @@ Thus, all parties intercepting/eavesdropping will be unable to read or manipulat
 	    </header>
 	    <article>
 	    
-<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
 In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
 
 <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
@@ -296,7 +298,7 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: January 8 2025</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

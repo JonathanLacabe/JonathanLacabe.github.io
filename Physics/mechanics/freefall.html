@@ -24,6 +24,35 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -63,6 +92,10 @@
 	  <article>
 	    <p>These are my complete notes for Free Fall in Classical Mechanics. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
+	  
+	  <div class="rules" data-start="15">
+	  
+	  
 	  <header class="articleHeader"><hr><hr>
 	    <h2><span class="mw-headline" id="FreeFall">II. Free Fall.</span></h2>
 	    <h3><span class="mw-headline" id="IntroFree">I.I Intro to Free Fall.</span></h3>
@@ -75,20 +108,35 @@
 	    - There is no air resistance (the object is falling in a vacuum).
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> <strong>a<sub>y</sub> is the acceleration in the y direction</strong> (for free fall on planet earth) is -9.81 m/s², or -g. Thus, free fall is a U.A.M. through the constant acceleration.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>a<sub>y</sub> is the acceleration in the y direction</strong> (for free fall on planet earth) is -9.81 m/s², or -g. Thus, free fall is a U.A.M. through the constant acceleration.<br><br>
 
 <strong>g = Acceleration due to Gravity</strong>. This is separate from the specific acceleration in the y direction.<br>
 g<sub>Earth</sub> = 9.81 m/s². The acceleration due to gravity on Earth is positive. From a global perspective, the g is not constant at all locations on the planet. However, from a local perspective, the acceleration due to gravity is constant.<br>
-For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><br>
+For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².
+</div><br><br>
 
-      <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">P. Rule 16.</font></strong> Additional facts about gravity:<br>
+
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Additional facts about gravity:<br>
 - 9.81 m/s can also be represented as 9.81 m/s down.<br>
-- The acceleration due to gravity, g, is the same no matter the mass of the object.<br><br><br>
+- The acceleration due to gravity, g, is the same no matter the mass of the object.
+</div><br><br>
+
 
 <strong><a href="#Parallax"><span class="mw-headline" id="Parallax">#</span></a> <font color="#006400">Parallax</font></strong>: When the position of an object appears to differ when viewed from different locations.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">P. Rule 17.</font></strong> Sometimes, when you are dealing with an object that changes direction, splitting your calculations into two is necessary in order to find information that serves the equation as a whole: For example, if you were to take a ball and throw it up in the air, catching it in the same y-value that you threw it, the change in position would be 0, making it impossible to find the change in time using the the entirety of the event. Thus, one has to divide the movement of the object along the critical point, with the period of the ball moving upward and then moving down being separately used in calculations. Then, values can be combined to reflect the full event (the change in time, if the ball lands in the same place where it was thrown, would be the change in time of either half of the event doubled, due to symmetry. If the ball lands somewhere elsewhere then it was thrown, then the time for each half would have to be calculated and then added together).<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Sometimes, when you are dealing with an object that changes direction, splitting your calculations into two is necessary in order to find information that serves the equation as a whole: For example, if you were to take a ball and throw it up in the air, catching it in the same y-value that you threw it, the change in position would be 0, making it impossible to find the change in time using the the entirety of the event. Thus, one has to divide the movement of the object along the critical point, with the period of the ball moving upward and then moving down being separately used in calculations. Then, values can be combined to reflect the full event (the change in time, if the ball lands in the same place where it was thrown, would be the change in time of either half of the event doubled, due to symmetry. If the ball lands somewhere elsewhere then it was thrown, then the time for each half would have to be calculated and then added together).
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#CommonMistakes"><span class="mw-headline" id="CommonMistakes">#</span></a> Common Mistakes in Free Fall:</font></strong><br>
 	    -When you throw a ball upward, it will not have a positive acceleration. Having such would make it shoot upward like a rocket. Gravity is a positive constant, but the acceleration in the y direction during free fall is -9.81 m/s² for any object, whether moving upward or downward.<br><br>
@@ -97,8 +145,10 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
     <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    <br><br>
+	    
+	    
 	    </article>
-	</div>
+	</div></div>
 	
 	<div class="General links">
 		links
@@ -130,7 +180,7 @@ For other planets, g is different, like g<sub>Mars</sub> = 3.75 m/s².<br><br><b
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong>Free Fall</strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 21 2024</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

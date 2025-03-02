@@ -35,6 +35,37 @@
     displayAlign: "left", // Align equations to the left
   });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -134,6 +165,8 @@
       </div>
 
       <br>
+      
+      <div class="rules" data-start="56">
 
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Force">VI. Force</span></h2>
@@ -146,7 +179,12 @@
 	  <strong><a href="#InertialMass"><span class="mw-headline" id="InertialMass">#</span></a> <font color="#006400">Inertial Mass</font></strong>: SCALAR. Mass is "the amount of matter in an object", according to various geeks and losers, but it is defined more precisely as the measure of inertia. Mass is a measure of an object's resistance to acceleration - therefore, the more mass an object has, the more it will resist acceleration. <br><br>
 	  There are other types of mass, such as gravitational mass, but they are in effect identical - this is known as the Equivalence Principle (see Rule [[[[[[[). <br><br>The S.I. unit for mass is the kilogram, while the Imperial unit for mass is the Slug (not the pound! That is a unit of force. See Rule 63 for more information).<br><br><br>
 	  
-	  <strong><a href="#Rule56"><span class="mw-headline" id="Rule56">#</span></a> <font color="red">P. Rule 56.</font></strong> The most comprehensible and intuitive explanation of mass as a measurement of inertia and resistance to acceleration is as follows: A chair, which has little mass, is easy to accelerate from rest, while a desk, which has higher mass, is harder to accelerate and change the state of motion of from rest. <br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The most comprehensible and intuitive explanation of mass as a measurement of inertia and resistance to acceleration is as follows: A chair, which has little mass, is easy to accelerate from rest, while a desk, which has higher mass, is harder to accelerate and change the state of motion of from rest. 
+	  </div><br><br>
+	  
 	  
 	  <strong><a href="#Rest"><span class="mw-headline" id="Rest">#</span></a> <font color="#006400">Rest/Stationary</font></strong>: The state of motion in which an object is neither moving nor changing its position.<br><br><br>
 	  
@@ -159,9 +197,10 @@
 	  
 	  <br><br><br>
 	  
-	  <strong><a href="#Rule57"><span class="mw-headline" id="Rule57">#</span></a> <font color="red">P. Rule 57.</font></strong>
-	  
-	  A good visualization of force:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A good visualization of force:<br><br>
 Take the classic pulley scenario, where you have a block attached to a string that goes over a pulley and attaches to a second block hanging in the air.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/forcediagram.png"><img src="/Physics/img/forcediagram.png" alt="Fig. 1: A pulley diagram where mass 1 (in blue) is connected to the hanging mass 2 (in red)." width=40%/></a></div>
 	    <span class="tiny"><em>Fig. 1: A pulley diagram where mass 1 (in blue) is connected to the hanging mass 2 (in red).</em></span><br><br>
@@ -183,10 +222,13 @@ Take the classic pulley scenario, where you have a block attached to a string th
 	  
 	  If you return to the third figure, note that the acceleration of the blocks will be less than the acceleration of the blocks in Fig. 1, in spite of the fact that the blocks are evenly weighed. This is due to the increased friction being applied to the first block. Therefore, if you were to give the blocks equivalent weights and continue increasing the mass of those weights, then the acceleration of the blocks would continually decrease.<br><br>
 	  An individual force has the <em>ability</em> to cause a change in the state of motion of an object, but when other forces intervene (like friction), that force will do nothing.
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
-	  <strong><a href="#Rule58"><span class="mw-headline" id="Rule58">#</span></a> <font color="red">P. Rule 58.</font></strong> <strong><font color="#CD7F32">(<u>2</u>)</font></strong> <strong>Friction Force</strong>: VECTOR (a force).<br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><font color="#CD7F32">(<u>2</u>)</font></strong> <strong>Friction Force</strong>: VECTOR (a force).<br>
 	  <strong><u>Units</u></strong>: Newtons (because μ is dimensionless and F<sub>N</sub> is just a generic force)<br><br>
 	  
 	  <strong><u>Equation</u></strong>: <strong>F<sub>fmax</sub> = μ × F<sub>N</sub></strong><br><br>
@@ -201,9 +243,12 @@ Take the classic pulley scenario, where you have a block attached to a string th
 	  
 	  <strong>μ</strong> (myu) is the coefficient of friction. It is dimensionless, like radians. It can best be represented as the <em>slope</em> of the graph of kinetic/static friction vs. normal force, which represent how the friction increases for objects of differing masses. <br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/frictiongraph.png"><img src="/Physics/img/frictiongraph.png" alt="The graph of the kinetic force of friction as the normal force (the apparent weight) increases, as a result of increasing mass." width=70%/></a></div>
-	    <span class="tiny"><em>The graph of the kinetic force of friction as the normal force (the apparent weight, see Rule 80) increases, as a result of increasing mass.</em></span><br><br><br>
-	    <strong><font color="blue"><a href="#CommandmentsFric"><span class="mw-headline" id="CommandmentsFric">#</span></a> THE GREAT COMMANDMENTS OF FRICTION</font></strong>:<br><br>
+	    <span class="tiny"><em>The graph of the kinetic force of friction as the normal force (the apparent weight, see Rule 80) increases, as a result of increasing mass.</em></span>
+	    </div><br><br>
 	    
+	    
+	    
+	    <strong><font color="blue"><a href="#CommandmentsFric"><span class="mw-headline" id="CommandmentsFric">#</span></a> THE GREAT COMMANDMENTS OF FRICTION</font></strong>:<br><br>
 	    
 	    
 	    <strong>1.</strong> <strong>Kinetic Friction Force</strong>: <span class="vecteur"><strong>F<sub>k</sub> = μ<sub>k</sub> × F<sub>N</sub></strong></span>. The friction that acts between moving surfaces.<br><br>
@@ -226,13 +271,21 @@ Take the classic pulley scenario, where you have a block attached to a string th
 	  ii) Opposes sliding motion.<br>
 	  iii) Independent of the direction of the force applied.
 	  
-    
 	  <br><br><br>
-	  <strong><a href="#Rule59"><span class="mw-headline" id="Rule59">#</span></a> <font color="red">P. Rule 59.</font></strong>
-	  The fact that objects with more inertia (more massive) are harder to accelerate does NOT mean that there is some sort of "minimum force" required to accelerate objects with mass. <strong>Too much mass will NEVER prevent acceleration</strong> - you are simply imagining the friction of the ground (which is being pressed into the ground from the mass) prevented any sliding across its surface.<br><br>
-If you were, however, to imagine a perfectly smooth bowling ball moving down an infinite, smooth hallway with no air resistance, any amount of force would accelerate the bowling ball, no matter its size - it would just accelerate by a smaller amount the more massive it is.<br><br><br>
+	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The fact that objects with more inertia (more massive) are harder to accelerate does NOT mean that there is some sort of "minimum force" required to accelerate objects with mass. <strong>Too much mass will NEVER prevent acceleration</strong> - you are simply imagining the friction of the ground (which is being pressed into the ground from the mass) prevented any sliding across its surface.<br><br>
+If you were, however, to imagine a perfectly smooth bowling ball moving down an infinite, smooth hallway with no air resistance, any amount of force would accelerate the bowling ball, no matter its size - it would just accelerate by a smaller amount the more massive it is.
+</div><br><br>
 
-	  <strong><a href="#Rule60"><span class="mw-headline" id="Rule60">#</span></a> <font color="red">P. Rule 60.</font></strong> a FORCE is a VECTOR. Thus, it has both magnitude and direction. Additionally, a force is always the result of an interaction between two objects. Examples:<br>
+
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> a FORCE is a VECTOR. Thus, it has both magnitude and direction. Additionally, a force is always the result of an interaction between two objects. Examples:<br>
 <ol>
 <li>The <strong>Force of Gravity</strong> pulls everything toward the Earth. If you fall out of a tree, your fall is the result of an interaction between your body and the Earth.</li><br>
 
@@ -240,13 +293,18 @@ If you were, however, to imagine a perfectly smooth bowling ball moving down an 
 <li>When a sled flies through the air and lands on the ground, it is the result of an <strong>applied force</strong>, created from the interaction between the sled and the ground.</li>
 
 </ol>
-<br><br>
+</div><br>
 	  
-	  <strong><a href="#Rule61"><span class="mw-headline" id="Rule61">#</span></a> <font color="red">P. Rule 61.</font></strong> There are two types of force:<br><br>
-<strong>Contact Force:</strong><br><u>The two interacting objects are touching.</u> <br><br>Examples include the Applied Force (<strong><font color="#CD7F32">(<u>5</u>)</font></strong>, see Rules 65 & 66, between the two), the Drag Force (<strong><font color="#CD7F32">(<u>1</u>)</font></strong>, see Rule 34), the Friction Force (<strong><font color="#CD7F32">(<u>2</u>)</font></strong>, see Rule 58), the Normal Force (<strong><font color="#CD7F32">(<u>4</u>)</font></strong>, see Rule 64), the Spring Force (<strong><font color="#CD7F32">(<u>7</u>)</font></strong>, see Rule 83), and Tension (<strong><font color="#CD7F32">(<u>6</u>)</font></strong>, see Rule 78, before).<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There are two types of force:<br><br>
+<strong>Contact Force:</strong><br><u>The two interacting objects are touching.</u> <br><br>Examples include the Applied Force (<strong><font color="#CD7F32">(<u>5</u>)</font></strong>, see Rule 65 & Rule 66, between the two), the Drag Force (<strong><font color="#CD7F32">(<u>1</u>)</font></strong>, see Rule 34), the Friction Force (<strong><font color="#CD7F32">(<u>2</u>)</font></strong>, see Rule 58), the Normal Force (<strong><font color="#CD7F32">(<u>4</u>)</font></strong>, see Rule 64), the Spring Force (<strong><font color="#CD7F32">(<u>7</u>)</font></strong>, see Rule 83), and Tension (<strong><font color="#CD7F32">(<u>6</u>)</font></strong>, see Rule 78, before).<br><br><br>
 
 <strong>Field Force</strong> / <strong>Action-at-a-distance</strong>:<br><u>The two interacting objects do not touch.</u> <br><br>Examples include the Force of Gravity (<strong><font color="#CD7F32">(<u>3</u>)</font></strong>, also known as weight, see the definition of the Force of Gravity), the Magnetic Force (see Rule [[[[[[[[), and the Electric Force (see Rule [[[[[[[[).<br><br>
-This does not mean that the field forces can only be affecting an object if they are not touching - it only means that it can affect the object when they are not touching. Take Gravity, for example: When you fall through the air, gravity (your weight) is pulling you to the Earth, and it will continue pulling you to the ground when you have hit the ground.<br><br><br>
+This does not mean that the field forces can only be affecting an object if they are not touching - it only means that it can affect the object when they are not touching. Take Gravity, for example: When you fall through the air, gravity (your weight) is pulling you to the Earth, and it will continue pulling you to the ground when you have hit the ground.
+</div><br><br>
+
 
       </article>
 	    <header class="articleHeader"><hr>
@@ -267,16 +325,24 @@ This does not mean that the field forces can only be affecting an object if they
 	    
 	    <strong><font color="#006400"><a href="#GravMass"><span class="mw-headline" id="GravMass">#</span></a> Gravitational mass</font></strong>: SCALAR. The mass that helps determine the force of gravity that exists between an object and the Earth (or another body with mass). It is experimentally identifical to inertial mass - this is known as the Equivalence Principle ([[[[[[).<br><br><br>
 	    
-	  <strong><a href="#Rule62"><span class="mw-headline" id="Rule62">#</span></a> <font color="red">P. Rule 62.</font></strong> The direction of gravity, which is caused by the Earth, is always toward the center of the planet, which is to say, down. The base S.I. units for gravity are (kg)(m/s²), which is given the unit of 'Newtons', a unit <u>composed</u> of other units.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The direction of gravity, which is caused by the Earth, is always toward the center of the planet, which is to say, down. The base S.I. units for gravity are (kg)(m/s²), which is given the unit of 'Newtons', a unit <u>composed</u> of other units.
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule63"><span class="mw-headline" id="Rule63">#</span></a> <font color="red">P. Rule 63.</font></strong> 
-	  While the unit of force in S.I. units/the metric system is the newton, the unit of force in the Imperial system is the Pound! The pound is defined as the amount of force needed to accelerated one Slug at one foot per second squared, Slug being the imperial unit of mass. A cool way to visualize the pound as a unit of force is to consider how if you were to be flying through the air at the speed of light, a piece of popcorn you would be holding in your hand would be tens of millions of pounds!<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> While the unit of force in S.I. units/the metric system is the newton, the unit of force in the Imperial system is the Pound! The pound is defined as the amount of force needed to accelerated one Slug at one foot per second squared, Slug being the imperial unit of mass. A cool way to visualize the pound as a unit of force is to consider how if you were to be flying through the air at the speed of light, a piece of popcorn you would be holding in your hand would be tens of millions of pounds!<br><br>
 	  
 	  Because of the centuries of confusion over weight and mass, there are actually two types of pound, the pound-force and the pound-mass, because the goal of Science is to confuse the uninterested. To allow for some recompense from the horrible confusion that is the units of weight and mass, always assume that the pound is a unit of force unless otherwise stated. Dead-ringers for whether pound is in terms of force or mass include whenever the questions say something "weighs" 10 pounds or so, which is directly referencing force. Watch <a href="https://www.youtube.com/watch?v=bx794QkSHx4">this video</a> if ever confused - it will either confuse you further or resolve any immediate problems.<br><br>
 	  
 	  Kilograms and grams do not measure weight, because they do not measure a force. They merely measure the mass of the object, or the object's resistance to acceleration. Pounds, on the other hand, are a unit of mass multiplied by an acceleration, and so are a force.<br><br>
 	  
-	  Mass and weight differ in a billion ways - if you ever chance upon an ignoramus saying "I <em>weigh</em> 70 kilograms", or anything of the sort, respectfully inform them of their egregious error. If you were to go to a different planet, your weight would be different while your mass would remain the same. This is because mass is an <strong>Intrinsic Property</strong>, meaning it only depends on itself, an inherent characteristic. Weight on the other hand is an <strong>Extrinsic Property</strong>, determined by something external to the object, e.g. the acceleration due to gravity. You can also consider extrinsic properties to be <em>composed properties</em>, as stated before. <br><br><br>
+	  Mass and weight differ in a billion ways - if you ever chance upon an ignoramus saying "I <em>weigh</em> 70 kilograms", or anything of the sort, respectfully inform them of their egregious error. If you were to go to a different planet, your weight would be different while your mass would remain the same. This is because mass is an <strong>Intrinsic Property</strong>, meaning it only depends on itself, an inherent characteristic. Weight on the other hand is an <strong>Extrinsic Property</strong>, determined by something external to the object, e.g. the acceleration due to gravity. You can also consider extrinsic properties to be <em>composed properties</em>, as stated before. 
+	  </div><br><br>
+	  
 	  
 	  <strong><font color="#006400"><a href="#FBDDefine"><span class="mw-headline" id="FBDDefine">#</span></a> Free Body Diagram</font></strong>: A graphic used to visualize the various forces working on an object at a particular instant. Occasionally known as a force diagram. <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/Free_body_diagram2.svg">Example</a>.<br><br><br>
 	  
@@ -300,7 +366,10 @@ This dot is called the <strong>Center of Mass</strong>, the location at which al
 	   If you have fastened your critical thinking cap correctly, you will know that this is not the complete diagram. If only the force of gravity were to be applied to the book, then the book would be in free fall, accelerating downward. However, we know the object not be in free fall since it is resting on a table. Therefore, there is an additional force at work preventing the book from accelerating downward. This force is the <strong>Normal Force</strong> (see Rule 64). <br><br><br>
 	   
 	    
-	   <strong><a href="#Rule64"><span class="mw-headline" id="Rule64">#</span></a> <font color="red">P. Rule 64.</font></strong> <strong><font color="#CD7F32">(<u>4</u>)</font></strong> <strong>Normal Force</strong>: VECTOR (as a force).<br>
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><font color="#CD7F32">(<u>4</u>)</font></strong> <strong>Normal Force</strong>: VECTOR (as a force).<br>
 	   <strong><u>Units</u></strong>: Newtons, as a generic force.<br><br>
 	  
 	  <strong><u>Equation</u></strong>: None. Sum the force acting in the y direction (on the tilted axes or otherwise) using the Second Law of Motion (see Rule 70) to create a problem-specific equation for the normal force.<br><br>
@@ -312,19 +381,27 @@ This dot is called the <strong>Center of Mass</strong>, the location at which al
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/inclinefbd.png"><img src="/Physics/img/inclinefbd.png" alt="Fig. 1: The complete free body diagram of a book on an incline." width=37%/></a></div>
 	    <span class="tiny"><em>The complete free body diagram of a book on an incline.</em></span><br><br>
 	    Of course, the Normal Force will always be perpendicular to the surface of which the object is on, so it will be perpendicular to the incline, in spite of the direction of the force of gravity. In addition, the force stopping the book from sliding down the incline is the force of Friction.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	   <strong><a href="#Rule65"><span class="mw-headline" id="Rule65">#</span></a> <font color="red">P. Rule 65.</font></strong> You must be very careful as to <u>how you draw your arrows</u> on free body diagrams. The arrows you draw are force vectors, and the length of the arrows represents the magnitude of those force vectors. When an object is stationary, the magnitude of the normal force and the magnitude of the force of gravity are the same.<br><br><br>
+	    
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> You must be very careful as to <u>how you draw your arrows</u> on free body diagrams. The arrows you draw are force vectors, and the length of the arrows represents the magnitude of those force vectors. When an object is stationary, the magnitude of the normal force and the magnitude of the force of gravity are the same.<br><br><br>
 	   
 	   <strong><font color="#006400"><a href="#AppliedForce"><span class="mw-headline" id="AppliedForce">#</span></a> Applied Force</font></strong> <strong><font color="#CD7F32">(<u>5</u>)</font></strong>: VECTOR (as a force).<br>
 	   <strong><u>Units</u></strong>: Newtons, as a generic force.<br><br>
 	  
 	  <strong><u>Equation</u></strong>: None. Sum the force acting in the whichever direction the applied force is acting (decomposing as needed, which would require summing in both directions) using the Second Law of Motion (see Rule 70) to create a problem-specific equation for the applied force.<br><br>
 	  
-	  <strong><u>Definition</u></strong>: The contact force applied by one object on another in an external fashion. A generic force that just <em>is</em>, rather than being explained away and categorized like the rest of the forces.<br><br><br>
+	  <strong><u>Definition</u></strong>: The contact force applied by one object on another in an external fashion. A generic force that just <em>is</em>, rather than being explained away and categorized like the rest of the forces.
+	  </div><br><br>
+	  
 	   
-	   <strong><a href="#Rule66"><span class="mw-headline" id="Rule66">#</span></a> <font color="red">P. Rule 66.</font></strong> 
-	   The vast majority of free body diagrams have to do with the interactions between multiple objects (as shown previously in section "How to Draw a Free Body Diagram" with only a table and a book). Now, to see how other forces can be displayed in a free body diagram, let's add a small block exerting a force of 5 Newtons on the book, which, although it is exerting a force on the book, is not causing the book to move:<br>
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The vast majority of free body diagrams have to do with the interactions between multiple objects (as shown previously in section "How to Draw a Free Body Diagram" with only a table and a book). Now, to see how other forces can be displayed in a free body diagram, let's add a small block exerting a force of 5 Newtons on the book, which, although it is exerting a force on the book, is not causing the book to move:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/fbd5.png"><img src="/Physics/img/fbd5.png" alt="Fig. 1: A block has been added to the diagram, exerting a force on the book." width=40%/></a></div>
 	    <span class="tiny"><em>Fig. 1: A block has been added to the diagram, exerting a force on the book.</em></span><br><br>
     Now, we must draw the forces caused by the block: There is the <strong>Force Applied</strong> by the block onto the book, but the book is not accelerating to the right. Indeed, even if it were accelerating rightward, there would still be another force at play: the <strong>Force of Friction</strong> (see Rule 58). As long as the surface on which an object is moving is not perfectly smooth, the force of friction will be pushing the object in the opposite direction. Adding these forces will give us the complete force diagram:<br>
@@ -337,17 +414,25 @@ This dot is called the <strong>Center of Mass</strong>, the location at which al
 	    <span class="tiny"><em>Fig. 3: The completed force diagram. Force Vectors not drawn to scale.</em></span><br><br>
 	    Of course, the Force F<sub>book on block</sub> is equivalent to -F<sub>A</sub>.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule67"><span class="mw-headline" id="Rule67">#</span></a> <font color="red">P. Rule 67.</font></strong> 
-Many a time, the free body diagrams will be separated into individual graphs for each object. Continuing from a previous example (see Rule 66), this can be done for the book as so:<br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Many a time, the free body diagrams will be separated into individual graphs for each object. Continuing from a previous example (see Rule 66), this can be done for the book as so:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/individualfbd1.png"><img src="/Physics/img/individualfbd1.png" alt="Fig. 1: A complete free body diagram for the book, given its own axes." width=27%/></a></div>
 	    <span class="tiny"><em>Fig. 1: A complete free body diagram for book, given its own axes.</em></span><br><br>
 	   
-	   <br>
+	   </div>
 	   
 	    
-	    <strong><a href="#Rule68"><span class="mw-headline" id="Rule68">#</span></a> <font color="red">P. Rule 68.</font></strong> All free-body diagrams are idealized. The only force that starts at the center of mass is the Force of gravity, while the others have different starting points. <br><br>The Force of Friction starts below the center of mass on the surface the object is laying upon, the Force Applied is starting from the object applying the force and points toward the center of mass, and the Normal Force points perpendicular from the surface the object is on. This more 'correct' way of drawing free body diagrams will be utilized when drawing diagrams for Torque (see Rule 141).<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> All free-body diagrams are idealized. The only force that starts at the center of mass is the Force of gravity, while the others have different starting points. <br><br>The Force of Friction starts below the center of mass on the surface the object is laying upon, the Force Applied is starting from the object applying the force and points toward the center of mass, and the Normal Force points perpendicular from the surface the object is on. This more 'correct' way of drawing free body diagrams will be utilized when drawing diagrams for Torque (see Rule 141).
+	    
+	    </div><br><br>
 	    
 	    </article>
 	    <header class="articleHeader"><hr>
@@ -355,7 +440,10 @@ Many a time, the free body diagrams will be separated into individual graphs for
 	    </header>
 	    <article>
 	    
-	    <strong><a href="#Rule69"><span class="mw-headline" id="Rule69">#</span></a> <font color="red">P. Rule <u>69</u>.</font></strong> <strong>The First Law of Motion:</strong><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The First Law of Motion:</strong><br><br>
 	    <em>"An object at rest will remain at rest and an object in motion will maintain a constant velocity unless acted upon by a net external force."</em><br><br>
 	    This law is also known as the <strong>Law of Inertia</strong>.<br><br>
 	    As you should see, there are two cases being described by this rule. First, if you were to have a pebble on the ground at rest, you would be able to conclude that there is no net external force acting on the rock. This almost never means that there is NO force acting on the rock, but rather that all of the forces acting in any particular direction cancel eachother out, making there be no <u>net</u> external force. This is mathematically represented as follows:<br><br>
@@ -363,9 +451,13 @@ Many a time, the free body diagrams will be separated into individual graphs for
 	    The second case is that of an object in motion maintaining a constant velocity unless acted upon by a net external force. If you had a ball rolling across a flat frictionless surface, the only thing that would ever cause it to slow down and eventually stop is air resistance. Without air resistance, it would continue rolling at the same velocity forever.<br><br>
 If there were to be a block (at rest) standing in the direction that the ball is rolling, when the ball hits the block, a reaction force with the equivalent magnitude to the force with which the sphere hit the block will cause a net external force to slow down the ball and push the block momentarily, until the ball has completely lost acceleration and velocity, transferring these attributes to the block through the Force Applied.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule70"><span class="mw-headline" id="Rule70">#</span></a> <font color="red">P. Rule 70.</font></strong> <strong>The Second Law of Motion:</strong><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The Second Law of Motion:</strong><br><br>
 	    <strong>&Sigma;<span class="vecteur"><strong>F</strong></span> = m × <span class="vecteur"><strong>a</strong></span></strong>
 	    <br><br>
 	    An integrable part of all force equations, and is used in variated forms by some forces (example: the force of gravity is m × g, g being the <u>acceleration</u> due to gravity).<br><br>
@@ -375,10 +467,13 @@ If there were to be a block (at rest) standing in the direction that the ball is
 	    
 	    For a modern 21st century™ version of the 2nd law that incorporates momentum, see <a href="/Physics/MechanicsFull3#MomentumLaw">here</a>.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule71"><span class="mw-headline" id="Rule71">#</span></a> <font color="red">P. Rule 71.</font></strong> 
-	    Whenever you are doing force problems, there is a very high likelihood you will need to sum the forces acting in the x, y, and possibly z directions of the object. Thus, given an object resting upon a flat horizontal surface with a mass of 1627 grams, a Force of Friction of 3.6 N, and a Force Applied of 5.0 N, the free body diagram would look something like this:<br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Whenever you are doing force problems, there is a very high likelihood you will need to sum the forces acting in the x, y, and possibly z directions of the object. Thus, given an object resting upon a flat horizontal surface with a mass of 1627 grams, a Force of Friction of 3.6 N, and a Force Applied of 5.0 N, the free body diagram would look something like this:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/newfbd.png"><img src="/Physics/img/newfbd.png" alt="Fig. 1: A complete free body diagram of an object given specific force values, unnoted." width=27%/></a></div>
 	    <span class="tiny"><em>Fig. 1: A complete free body diagram for book, given its own axes.</em></span><br><br>
 	    Summing Forces is always conducted as follows: Right minus left, up minus down, or inward minus outward.<br><br>
@@ -393,16 +488,41 @@ We can immediately determine the net force in the x-direction from the applied f
 	    <br><br>Thus, we can determine that the force in the y-direction is equal to 0, since F<sub>N</sub> - F<sub>g</sub> = 16 - 16.
 	    
 	    Note that summing forces will get more complicated when the forces are not in perfect 90° directions, such as in the incline example (see Rule 64). When this is the case, vector decomposition is required - this how m × a<sub>y</sub> is the force in the y-direction even if the normal force is tilted.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	   <strong><a href="#Rule72"><span class="mw-headline" id="Rule72">#</span></a> <font color="red">P. Rule 72.</font></strong> When a question asks you to find the acceleration of an object given some forces, it is asking you to recompose the acceleration vector using the x and y direction accelerations. If the object is at rest, the y-direction acceleration is zero.<br><br><br>
+	    
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When a question asks you to find the acceleration of an object given some forces, it is asking you to recompose the acceleration vector using the x and y direction accelerations. If the object is at rest, the y-direction acceleration is zero.
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule73"><span class="mw-headline" id="Rule73">#</span></a> <font color="red">P. Rule 73.</font></strong> Whenever two bodies move together, such as in pulley problems where the two masses are connected by a string, the bodies have the same acceleration and are thus called the System. Since the bodies have the same acceleration, they need to share the same sign, although the mass hanging is moving downward. The direction of the system will thus be identified as positive, known as "<strong>String direction</strong>".<br><br><br>
 	   
-	   <strong><a href="#Rule74"><span class="mw-headline" id="Rule74">#</span></a> <font color="red">P. Rule 74.</font></strong> Because mass is a scalar and force is a vector, by the second law of motion, net force and acceleration are in the same direction. Velocity and acceleration, however, are not always in the same direction. Only if velocity initial is zero would velocity and acceleration be in the same direction.<br><br><br>
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Whenever two bodies move together, such as in pulley problems where the two masses are connected by a string, the bodies have the same acceleration and are thus called the System. Since the bodies have the same acceleration, they need to share the same sign, although the mass hanging is moving downward. The direction of the system will thus be identified as positive, known as "<strong>String direction</strong>".
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule75"><span class="mw-headline" id="Rule75">#</span></a> <font color="red">P. Rule 75.</font></strong> You cannot combine unit vectors and magnitude in the same equation. All vectors must be either written in unit vector form or broken down into their components in the perpendicular directions. The UAM equations require that all units be in terms of the x or y directions. Always make sure that everything you're plugging into the equation is in the same perfect x or y direction.<br><br><br>
-	   <strong><a href="#Rule76"><span class="mw-headline" id="Rule76">#</span></a> <font color="red">P. Rule 76.</font></strong><strong> The Third Law of Motion</strong>:<br><br><em>"For every action, the reaction will be equal in magnitude but opposite in direction."</em><br><br>
+	   
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Because mass is a scalar and force is a vector, by the second law of motion, net force and acceleration are in the same direction. Velocity and acceleration, however, are not always in the same direction. Only if velocity initial is zero would velocity and acceleration be in the same direction.
+	   </div><br><br>
+	   
+	   
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> You cannot combine unit vectors and magnitude in the same equation. All vectors must be either written in unit vector form or broken down into their components in the perpendicular directions. The UAM equations require that all units be in terms of the x or y directions. Always make sure that everything you're plugging into the equation is in the same perfect x or y direction.
+	   </div><br><br>
+	   
+	   
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong><strong> The Third Law of Motion</strong>:<br><br><em>"For every action, the reaction will be equal in magnitude but opposite in direction."</em><br><br>
 	   <h2 style="font-size:190%;"><strong>THE KEY TO THE PUZZLE:</strong></h2><br>
 	    If the forces in a particular direction cancel out, that just means that there is no acceleration in that direction. The object is in equilibrium, and that can mean that it is not moving or that it is moving at a constant velocity.<br><br>Take terminal velocity, for example: the drag force is equal to the force of gravity, and yet the object remains falling. It just has no acceleration.
 	   
@@ -413,9 +533,15 @@ We can immediately determine the net force in the x-direction from the applied f
 	    
 	    For example: If you are to strike a nail with a hammer, the force pair would be the hammer and the nail. The nail starts at rest, and when the hammer strikes the nail, the nail accelerates and has a force applied to it by the hammer. Inversely, the hammer accelerates at the beginnning and accelerates in the opposite direction after hitting the nail.<br><br>
 	    When a car crashes into a building and the building does not move, that is because the mass of the building (the level of resistance the building has to acceleration) is large enough to prevent the force exerted by the car from changing its state of motion. 
-	   <br><br><br>
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule77"><span class="mw-headline" id="Rule77">#</span></a> <font color="red">P. Rule 77.</font></strong> While the normal force and the force of gravity of, say, a book in the horizontal resting state are equivalent in magnitude and working in the opposite directions (<span class="vecteur"><strong>F<sub>N</sub></strong></span> = -<span class="vecteur"><strong>F<sub>g</sub></strong></span>), they are NOT third law force pairs. This is because the two forces act on the same object, while force pairs must be between two objects. Instead, one must consider whatever surface the book is laying upon, whether it be a table or the earth, for the second object of the force pair. On the surface the book is laying on, there is a downward normal force caused by the book as the complementary force pair to the upward normal force of the book, which is caused by the table. All Normal forces are the result of a third law force pair, you just need to find the second object.<br><br><br>
+	   
+	   
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> While the normal force and the force of gravity of, say, a book in the horizontal resting state are equivalent in magnitude and working in the opposite directions (<span class="vecteur"><strong>F<sub>N</sub></strong></span> = -<span class="vecteur"><strong>F<sub>g</sub></strong></span>), they are NOT third law force pairs. This is because the two forces act on the same object, while force pairs must be between two objects. Instead, one must consider whatever surface the book is laying upon, whether it be a table or the earth, for the second object of the force pair. On the surface the book is laying on, there is a downward normal force caused by the book as the complementary force pair to the upward normal force of the book, which is caused by the table. All Normal forces are the result of a third law force pair, you just need to find the second object.
+	   </div><br><br>
 
 	   
 	   </article>
@@ -435,7 +561,11 @@ We can immediately determine the net force in the x-direction from the applied f
 	   Many questions will directly ask you to "find the tension" of a wire or rope, which is just ignoramus-speak for "find the value of the tension force".
 	   <br><br><br>
 	   
-	   <strong><a href="#Rule78"><span class="mw-headline" id="Rule78">#</span></a> <font color="red">P. Rule 78.</font></strong> For every single pulley problem, imagine that the all of the forces are just acting in one direction, because the tension of the rope is going to be the same on either side of the pulley. This direction will be whatever direction the forces are moving with respect to gravity (e.g. downward) or the applied force. If needs be, draw the conceptual free body diagram with mg pulling in the x direction, even though this violates the purity of the diagram by not pointing the gravity force vector directly downward. <!--the oldheads will take personal offense to this--> It all helps with visualization, purely, and when the forces are acting on inclines, adjust the axes with which you are making the system one-dimensional as needed.<br><br><br>
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> For every single pulley problem, imagine that the all of the forces are just acting in one direction, because the tension of the rope is going to be the same on either side of the pulley. This direction will be whatever direction the forces are moving with respect to gravity (e.g. downward) or the applied force. If needs be, draw the conceptual free body diagram with mg pulling in the x direction, even though this violates the purity of the diagram by not pointing the gravity force vector directly downward. <!--the oldheads will take personal offense to this--> It all helps with visualization, purely, and when the forces are acting on inclines, adjust the axes with which you are making the system one-dimensional as needed.
+	   </div><br><br>
 	   
 	   
 	   <strong><font color="blue"><a href="#FactsLogic"><span class="mw-headline" id="FactsLogic">#</span></a> <u>FACTS and LOGIC needed for physics work - Tension Edition:</u></font></strong><br>
@@ -446,9 +576,18 @@ We can immediately determine the net force in the x-direction from the applied f
 	   <br><br><br>
 	   
 	   <strong><font color="#006400"><a href="#TranslationalEquilibrium"><span class="mw-headline" id="TranslationalEquilibrium">#</span></a> Translational Equilibrium</font></strong>: The state of an object when the net force acting on an object is equal to zero. This occurs when an object either has 1. constant velocity, or is 2. at rest.<br><br><br>
-	   <strong><a href="#Rule79"><span class="mw-headline" id="Rule79">#</span></a> <font color="red">P. Rule 79.</font></strong> Although translational equilibrium requires the net forces of an object to be zero, this does not necessarily mean that the object is at rest:<br><br> The net force of an object is the mass multiplied by acceleration. Acceleration, at least the average acceleration used in the equation, is equal to the change in velocity divided by the change in time. Therefore, if there is a constant velocity (thus having the 'change in velocity' equal zero), the acceleration will equal zero and thus net force. This is the circumstance in which an object can be in equilibrium without being at rest - when the object is under constant velocity. <br><br><br>
 	   
-	   <strong><a href="#Rule80"><span class="mw-headline" id="Rule80">#</span></a> <font color="red">P. Rule 80.</font></strong> You do NOT feel the force of gravity acting on you - you do not feel your weight. When you stand on a scale, it is not actually measuring the force of gravity on you, but rather the downward force that is being applied to it. In effect, it is measuring the upward normal force the scale is acting on you, which is also known as the <strong>apparent weight</strong>. This is why when you move about on the scale, it changes weight, even though your gravitational force on Earth always remains the same.<br><br>
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Although translational equilibrium requires the net forces of an object to be zero, this does not necessarily mean that the object is at rest:<br><br> The net force of an object is the mass multiplied by acceleration. Acceleration, at least the average acceleration used in the equation, is equal to the change in velocity divided by the change in time. Therefore, if there is a constant velocity (thus having the 'change in velocity' equal zero), the acceleration will equal zero and thus net force. This is the circumstance in which an object can be in equilibrium without being at rest - when the object is under constant velocity. 
+	   </div><br><br>
+	   
+	   
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> You do NOT feel the force of gravity acting on you - you do not feel your weight. When you stand on a scale, it is not actually measuring the force of gravity on you, but rather the downward force that is being applied to it. In effect, it is measuring the upward normal force the scale is acting on you, which is also known as the <strong>apparent weight</strong>. This is why when you move about on the scale, it changes weight, even though your gravitational force on Earth always remains the same.<br><br>
 	   When you are at rest, your acceleration in the y-direction equals zero and so your normal force equals your weight. Therefore, when you are at rest, your apparent weight and actual weight are the same. Mathematically, this is all described as follows, where we know <span class="vecteur"><strong>F<sub>N</sub></strong></span> to be equal to one's apparent weight:<br><br>
 	   <span class="vecteur"><strong>F<sub>N</sub></strong></span> = <span class="vecteur"><strong>F<sub>g</sub></strong></span> + m × <span class="vecteur"><strong>a<sub>y</sub></strong></span><br>
 	   If a > 0, then m × <span class="vecteur"><strong>a<sub>y</sub></strong></span> > 0 and <span class="vecteur"><strong>F<sub>N</sub></strong></span> > <span class="vecteur"><strong>F<sub>g</sub></strong></span><br>
@@ -461,15 +600,25 @@ We can immediately determine the net force in the x-direction from the applied f
 	   <span class="vecteur"><strong>F<sub>N</sub></strong></span> = m × (<span class="vecteur"><strong>g</strong></span> - <span class="vecteur"><strong>g</strong></span>)<br>
 	   <span class="vecteur"><strong>F<sub>N</sub></strong></span> = m × (0)<br>
 	   	   <span class="vecteur"><strong>F<sub>N</sub></strong></span> = 0<br>
-	   <br><br>
+	   </div><br>
 	   
-	   <strong><a href="#Rule81"><span class="mw-headline" id="Rule81">#</span></a> <font color="red">P. Rule 81.</font></strong> When in doubt, make a free body diagram and start summing forces. If anything, it will give you a value to plug into another equation. Always go through the motions of the four steps of free body diagrams if you run into trouble:<br><br>
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When in doubt, make a free body diagram and start summing forces. If anything, it will give you a value to plug into another equation. Always go through the motions of the four steps of free body diagrams if you run into trouble:<br><br>
 	   1) Draw Free Body Diagram.<br>
 	   2) Break Forces into Components.<br>
 	   3) Redraw Free Body Diagram.<br>
-	   4) Sum the Forces in the x and y directions.<br><br><br>
+	   4) Sum the Forces in the x and y directions.
+	   </div><br><br>
 	   
-	   <strong><a href="#Rule82"><span class="mw-headline" id="Rule82">#</span></a> <font color="red">P. Rule 82.</font></strong> When you are solving symbolically, it is totally okay to plug in 'symbolic numbers', like 0, in to make substitution easier later on. It is the more exact, problem-specific numbers that you put off plugging in until the end.<br><br><br>
+	   
+	   <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you are solving symbolically, it is totally okay to plug in 'symbolic numbers', like 0, in to make substitution easier later on. It is the more exact, problem-specific numbers that you put off plugging in until the end.
+	   </div><br><br>
+	   
 	   
 	   </article>
 	    <header class="articleHeader"><hr>
@@ -479,7 +628,10 @@ We can immediately determine the net force in the x-direction from the applied f
 	    
 	    <strong><font color="#006400"><a href="#RestoringForce"><span class="mw-headline" id="RestoringForce">#</span></a> Restoring Force</font></strong>: A force that is always directed toward a rest position. This force will tend to bring an object back to the equilibrium position.<br><br><br>
 	    
-	    <strong><a href="#Rule83"><span class="mw-headline" id="Rule83">#</span></a> <font color="red">P. Rule 83.</font></strong> <strong>Spring Force</strong> <strong><font color="#CD7F32">(<u>7</u>)</font></strong>: VECTOR (as a force).<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Spring Force</strong> <strong><font color="#CD7F32">(<u>7</u>)</font></strong>: VECTOR (as a force).<br>
 	   <strong><u>Units</u></strong>: Newtons, as a generic force.<br><br>
 	  
 	  <strong><u>Equation</u></strong>: <strong><span class="vecteur"><strong>F<sub>s</sub></strong></span> = -k × ∆<span class="vecteur"><strong>x</strong></span></strong><br><br>
@@ -498,7 +650,8 @@ The <strong>equilibrium position</strong> for a spring is where the spring is at
 
 The <u>negative</u> in the law of elasticity indicates that the direction of the spring force is opposite to the direction of the displacement of the spring from equilibrium position.
 
-<br><br><br>
+</div><br><br>
+
 
 <strong><font color="blue"><a href="#SpringWork"><span class="mw-headline" id="SpringWork">#</span></a> Spring Work:</font></strong><br>
 If an object is attached to the spring’s free end, the work W<sub>S</sub> (see section VII.I) done on the object by the spring force when the object is moved from an initial position x<sub>i</sub> to a final position x<sub>f</sub> is as follows:<br><br><strong>W<sub>s</sub> = 1/2 × k × ∆x²</strong><br><br>
@@ -506,14 +659,26 @@ This is the result of taking the integral of the non-constant spring force, sinc
 Work W<sub>s</sub> is positive if the block ends up closer to the relaxed position (x = 0) than it was initially. It is negative if the block ends up farther away from x = 0. It is zero if the block ends up at the same distance from x = 0.
 <br><br><br>
 
-<strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">P. Rule 84.</font></strong> The Law of Elasticity is only applicable on a spring until it reaches the <strong>Elastic limit</strong>, the maximum displacement a spring can undergo until the spring will be permanently deformed.
-<br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The Law of Elasticity is only applicable on a spring until it reaches the <strong>Elastic limit</strong>, the maximum displacement a spring can undergo until the spring will be permanently deformed.
+</div><br><br>
 
-<strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">P. Rule 85.</font></strong> When you are using the spring force equation in  a free body diagram, you only use the negative of the equation to determine the direction of the spring. IMMEDIATELY disregard the negative when you go into calculations. Carry out all of the calculations with "k × ∆<span class="vecteur">x</span>" for the spring force. This is a very strange rule and thing to do, but it is tradition and is immutable.
-<br><br><br>
 
-<strong><a href="#Rule86"><span class="mw-headline" id="Rule86">#</span></a> <font color="red">P. Rule 86.</font></strong> The spring constant of a spring can differ when the spring is horizontal or vertical - this is because of gravity. The force of gravity acting on the center of mass of a vertically hanging spring can make a spring longer, while that same spring laid down horizontally would be shorter. Furthermore, a spring standing horizontally would compress a little and be shorter, all due to the inherent gravity of the spring that is always neglected in calculations. 
-<br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you are using the spring force equation in  a free body diagram, you only use the negative of the equation to determine the direction of the spring. IMMEDIATELY disregard the negative when you go into calculations. Carry out all of the calculations with "k × ∆<span class="vecteur">x</span>" for the spring force. This is a very strange rule and thing to do, but it is tradition and is immutable.
+</div><br><br>
+
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The spring constant of a spring can differ when the spring is horizontal or vertical - this is because of gravity. The force of gravity acting on the center of mass of a vertically hanging spring can make a spring longer, while that same spring laid down horizontally would be shorter. Furthermore, a spring standing horizontally would compress a little and be shorter, all due to the inherent gravity of the spring that is always neglected in calculations. 
+</div><br><br>
+
 
 
 
@@ -553,17 +718,28 @@ Work is a result of the dot product between Force and displacement. As before, t
 The 'net work' is the sum of the individual works of each force - if you want, you can combine all of the forces into the net force using vector decomposition and then recomposition, and then get the work from there.
 <br><br><br><br>
 	  
-	  <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
 $$W = \int_{x_i}^{x_f} F_x \, dx$$<br>
 Use with discretion. Whenever you see force with a variable, you must immediately recognize that it is a non-constant force, and that it will need to be integrated.
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">P. Rule 89.</font></strong><br>
-Gravity acts separately than the other forces with respect to work. Instead of using the total displacement and having θ act respective to it, the displacement for gravitational work is only vertical displacement, because gravity works strictly in the vertical direction, a quality other forces do not share. This is a result of gravity being a conservative force - see section VII.IV for more information.
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong><br>Gravity acts separately than the other forces with respect to work. Instead of using the total displacement and having θ act respective to it, the displacement for gravitational work is only vertical displacement, because gravity works strictly in the vertical direction, a quality other forces do not share. This is a result of gravity being a conservative force - see section VII.IV for more information.
+</div><br><br>
 
-<br><br><br>
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -611,7 +787,10 @@ There is no <em>real</em> situation in which a system is isolated, because of ai
 <br><br><br>
 
 
-<strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">P. Rule 90.</font></strong> Kinetic Energy: SCALAR.<br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Kinetic Energy: SCALAR.<br>
 	   <u><strong>Units</strong></u>: Joules.<br><br><br>
 	  
 	  <u><strong>Equation</strong></u>: The equation for it is <a href="/Physics/img/kineticintegration.png">derived from the non-constant work equation</a>:<br><br>
@@ -626,17 +805,24 @@ The energy associated with the motion of the object. It can never be negative.<b
 
 On occasion, a question, will simply refer to the "initial energy", or something of the sort. This is in reference specifically to <u>kinetic</u> energy, not mechanical energy as a whole.
 
-<br><br><br><br>
+</div><br><br><br>
 
 <strong><a href="#RigidBody"><span class="mw-headline" id="RigidBody">#</span></a> <font color="#006400">Rigid Body</font></strong>: A solid object that does not deform or change shape when external forces are applied. Thus, a spring is not a rigid body, due to the Elastic Limit. All 'Rigid bodies/objects with shape' are are just objects that do not change shape and are larger than point particles.<br><br><br>
 
-<strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">P. Rule 91.</font></strong> Work–Kinetic energy theorem: Kinetic Energy and Work are both measurements of energy in Joules. An increase in the kinetic energy of a rigid body is caused by an equal amount of positive work done on the body by the net force acting on that body. Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the net force.
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Work–Kinetic energy theorem: Kinetic Energy and Work are both measurements of energy in Joules. An increase in the kinetic energy of a rigid body is caused by an equal amount of positive work done on the body by the net force acting on that body. Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the net force.
 
 <br><br> Despite what the elites will tell you, there IS an assumption built into this theorem: the constancy of mass/inertia. An example where the Work-Energy Theorem fails (due to this assumption) is in rocket mechanics because such systems' masses change with time.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">P. Rule 92.</font></strong> When dealing with a graph of the force acting on an object moving over a displacement, that would be the exact situation in which you can sum the area underneath the curve in order to find work: When the force is not a constant, integrating a Force vs. Displacement graph will give you work.<br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When dealing with a graph of the force acting on an object moving over a displacement, that would be the exact situation in which you can sum the area underneath the curve in order to find work: When the force is not a constant, integrating a Force vs. Displacement graph will give you work.<br><br>
 From this graph, you can determine a lot of things, including the 1. greatest and lowest kinetic energy, the 2. greatest and lowest speed of the object, and the 3. points at which it is at zero speed.<br><br>
 ALWAYS remember that Work is just the change in Kinetic Energy, so you must always sum the areas beginning at ∆<span class="vecteur"><strong>r</strong></span> = 0. In other words, the first limit of integration, no matter what the second is (e.g. what point you pick on the graph), is zero.<br><br>
 <strong>1.</strong> By the Work–Kinetic energy theorem (see Rule 91), the kinetic energy is greatest where the work is greatest and thus inversely is lowest where the work is lowest, and thus the point on the graph where there is the greatest area of positive work (when the area of the force over the displacement is summed through integration) would be the point at which the kinetic area is greatest. The point on the graph with the greatest area of NEGATIVE work (summed negative force) will have the lowest kinetic energy.<br><br>
@@ -645,11 +831,15 @@ ALWAYS remember that Work is just the change in Kinetic Energy, so you must alwa
 
 <strong>3.</strong> The speed/velocity will be at zero when the kinetic energy will be at zero, which will be when the work is zero, which will be when the areas of the positive work and negative work cancel out. 
 
-<br><br><br>
+</div><br><br>
+
 
 <strong><a href="#PotentialEnergy1"><span class="mw-headline" id="PotentialEnergy1">#</span></a> <font color="#006400">Potential Energy</font></strong>: The energy stored in an object that has the potential to turn into different types of energy, such as kinetic energy.<br><br><br>
 
-<strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">P. Rule 93.</font></strong> Gravitational Potential Energy: SCALAR.<br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Gravitational Potential Energy: SCALAR.<br>
 	   <u><strong>Units</strong></u>: Joules.<br><br><br>
 	  
 	  <u><strong>Equation</strong></u>: PE<sub>g</sub> = m × g × h<br><br>
@@ -667,9 +857,13 @@ If you were to place the horizontal zero line above the object, h would be negat
 
  Because m and g are always positive, it is h that determines the sign of the gravitational potential energy.
 	  
-	  <br><br><br><br>
+	  </div><br><br><br>
 	  
-	  <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">P. Rule 94.</font></strong> Elastic Potential Energy: SCALAR.<br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Elastic Potential Energy: SCALAR.<br>
 	   <u><strong>Units</strong></u>: Joules.<br><br><br>
 	  
 	  <u><strong>Equation</strong></u>: PE<sub>e</sub> = 1/2 × k × ∆x² (SAME EQUATION AS SPRING WORK)<br><br>
@@ -683,10 +877,13 @@ If you were to place the horizontal zero line above the object, h would be negat
 	  When a spring is elongated or compressed, the elastic potential energy can be converted into kinetic energy and gravitational potential energy.<br><br>
 	  Remember that the spring constant is directly proportional to the amount of force it takes to compress or elongate a spring. Because the spring constant is always positive, and because the displacement is squared, elastic potential energy is always positive.
 	  
-	  <br><br><br><br>
+	  </div><br><br><br>
 
 
-    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">P. Rule 95.</font></strong> The usage of the conservation of mechanical energy as a means of problem solving can come in unexpected ways. In the places where it is applicable, such as the movement of something through gravity (while ignoring air resistance), the formation of the full conservation equation (incorporating all of the component energies) can be useful:<br><br>
+    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The usage of the conservation of mechanical energy as a means of problem solving can come in unexpected ways. In the places where it is applicable, such as the movement of something through gravity (while ignoring air resistance), the formation of the full conservation equation (incorporating all of the component energies) can be useful:<br><br>
     ME<sub>i</sub> = ME<sub>f</sub><br>
     KE<sub>i</sub> + PE<sub>gi</sub> + PE<sub>ei</sub> = KE<sub>f</sub> + PE<sub>gf</sub> + PE<sub>ef</sub><br>
     <br>
@@ -694,10 +891,13 @@ If you were to place the horizontal zero line above the object, h would be negat
     
     Whatever can be canceled out will simplify the equation, and it will be useful in a variety of circumstances.
     
-    <br><br><br>
+    </div><br><br>
     
 	    
-	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">P. Rule 96.</font></strong> <strong>The signs of the individual works of the mechanical energies:</strong><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The signs of the individual works of the mechanical energies:</strong><br><br>
 	    
 	    <u>When Expanding</u>, the work done by the force of a spring is positive, because the spring converts all the initial elastic potential energy into kinetic energy.<br><br>
 
@@ -709,17 +909,25 @@ The work done by the force of kinetic friction is negative because it converts k
 
 <u>When Moving Downward</u>, the work done by the force of gravity is positive because it converts gravitational potential energy into kinetic energy as the object moves in the direction of the gravitational force.<br><br>
 
-End of story.<br><br><br>
+End of story.
+</div><br><br>
 	    
 	    
-	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">P. Rule 97.</font></strong> When the work by the force applied to an object is equal to zero (W<sub>Fa</sub> = 0), the work done by friction is equal to the change in mechanical energy.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When the work by the force applied to an object is equal to zero (W<sub>Fa</sub> = 0), the work done by friction is equal to the change in mechanical energy.<br><br>
 W<sub>f</sub> = ∆ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(when W<sub>Fa</sub> = 0)<br>
 F<sub>f</sub> × d × cos(θ) = ME<sub>f</sub> - ME<sub>i</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;(when W<sub>Fa</sub> = 0)<br><br>
 As you should see, the Conservation of Energy equation is a mere special case of this friction work equation, occuring when friction is equal to zero (because ME<sub>i</sub> can be moved to the other side).
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">P. Rule 98.</font></strong> When a question tries to sneak past you that the 'mass' of an object is in Newtons (or another force-based unit), like stating that a "67 N ball" was dropped, the "Newtons" is simply referring to the weight of the ball, e.g. the force of gravity acting on the ball. Incorporating this into your calculations, you can calculate the mass by finding the net force in y-direction (or whichever direction the normal force is in, tilted axes or otherwise) and isolating m as needed.<br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When a question tries to sneak past you that the 'mass' of an object is in Newtons (or another force-based unit), like stating that a "67 N ball" was dropped, the "Newtons" is simply referring to the weight of the ball, e.g. the force of gravity acting on the ball. Incorporating this into your calculations, you can calculate the mass by finding the net force in y-direction (or whichever direction the normal force is in, tilted axes or otherwise) and isolating m as needed.
+</div><br><br>
 
 
 </article>
@@ -728,7 +936,10 @@ As you should see, the Conservation of Energy equation is a mere special case of
 	    </header>
 	    <article>
 
-<strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">P. Rule 99.</font></strong> <strong>Conservative Force</strong>: A force in which the work done on an object is the same regardless of the path taken by the object. Conservative forces can return the kinetic energy back to the system after taking it away, conserving the mechanical energy - hence, conservative forces. It thus follows that nonconservative forces cannot have the conservation of energy laws applied.<br><br> Examples of conservative forces include the following:<br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Conservative Force</strong>: A force in which the work done on an object is the same regardless of the path taken by the object. Conservative forces can return the kinetic energy back to the system after taking it away, conserving the mechanical energy - hence, conservative forces. It thus follows that nonconservative forces cannot have the conservation of energy laws applied.<br><br> Examples of conservative forces include the following:<br>
   <ol>
 <li>Force of Gravity</li>
 <li>Spring Force</li>
@@ -744,7 +955,8 @@ Additionally, you can integrate both sides to get the following form:<br><br>
 $$\int_{x_i}^{x_f} F_x \, dx = -∆U$$<br><br>
 Both equations are applicable in different circumstances, being the same equation represented in different ways.
   
-  <br><br><br>
+  </div><br><br>
+  
   
   <strong><a href="#NonConservativeForce"><span class="mw-headline" id="NonConservativeForce">#</span></a> <font color="#006400">Nonconservative Force</font></strong>: A force in which the work done on an object depends on the path taken by the object. Examples include the following:<br>
   <ol>
@@ -809,8 +1021,10 @@ When you rub your hands together, the kinetic energy of the motion of your hands
 
 <br><br><br><br>
 
-
-<strong><a href="#Rule100"><span class="mw-headline" id="Rule100">#</span></a> <font color="red">P. Rule <u>100</u>. <!--celebration! woo~~~~!--></font></strong> <strong>Energy Transfer Equation Cheatsheet:</strong> <br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <u><span class="rule-number"></span></u>.<!--celebration! woo~~~~!--></font>
+        </strong><br><br><br>
 
 <strong>Basic Principles:</strong><br><br>
 
@@ -837,25 +1051,43 @@ When you rub your hands together, the kinetic energy of the motion of your hands
 9. <strong>$$\int_{x_i}^{x_f} F_{conservative} \, dx = -∆U$$</strong> <a href="/Physics/MechanicsFull2#Rule99">[]</a>
 
 
-<br><br><br>
+</div><br><br>
 
-	    <strong><a href="#Rule101"><span class="mw-headline" id="Rule101">#</span></a> <font color="red">P. Rule 101.</font></strong> Identifying what forces are external and internal are very important to using the energy system equations: When the force is external, represent it using work, and if the force is internal, represent it using Potential Energy. See Rule 102 for how to determine whether a force is internal or external.<br><br><br>
+
+
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Identifying what forces are external and internal are very important to using the energy system equations: When the force is external, represent it using work, and if the force is internal, represent it using Potential Energy. See Rule 102 for how to determine whether a force is internal or external.
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule102"><span class="mw-headline" id="Rule102">#</span></a> <font color="red">P. Rule 102.</font></strong> Defining what forces acting on a system are external and internal is not as bad as you may think:<br><br>
-
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Defining what forces acting on a system are external and internal is not as bad as you may think:<br><br>
 
 Suppose you have a system containing objects A and B, and a second system containing objects C and D. Any force object A exerts on B (or vice versa) is internal, because it is a force resulting from the interaction of two objects defined to be a part of the same system. If C or D exerted a force on A or B (or A or B exerted on C or D), the force is external, because the interaction involves objects that are and aren't in the system.<br><br> 
 
-In the first case, quantities such as momentum and total energy will be conserved because the force was internal. This does not hold true in the second case, because the force was external.<br><br><br>
+In the first case, quantities such as momentum and total energy will be conserved because the force was internal. This does not hold true in the second case, because the force was external.
+</div><br><br>
 	    
 	    
-	    <strong><a href="#Rule103"><span class="mw-headline" id="Rule103">#</span></a> <font color="red">P. Rule 103.</font></strong> Gravitational energy only exists when you have at least two objects in your system: When the Earth is not part of the system, and there is only one object in the system, then the system cannot have gravitational potential energy. Thus, the work done by the force of gravity will be an external force when the system is not declared to include the Earth, or whatever planet the event is occurring on.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Gravitational energy only exists when you have at least two objects in your system: When the Earth is not part of the system, and there is only one object in the system, then the system cannot have gravitational potential energy. Thus, the work done by the force of gravity will be an external force when the system is not declared to include the Earth, or whatever planet the event is occurring on.<br><br>
 
-Newton's third law force pairs are always internal forces. When a system includes an object and the Earth, the force of gravity of the object acting on the block, and the force of gravity of the object acting on the earth, are equal in magnitude and opposite in direction. This does NOT mean that the force normal and force of gravity go together; Force Normal is <u>always</u> an external force.<br><br><br>
+Newton's third law force pairs are always internal forces. When a system includes an object and the Earth, the force of gravity of the object acting on the block, and the force of gravity of the object acting on the earth, are equal in magnitude and opposite in direction. This does NOT mean that the force normal and force of gravity go together; Force Normal is <u>always</u> an external force.
+</div><br><br>
 
 
-<strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">P. Rule 104.</font></strong> Know that instead of just summing the forces in one direction at a time, you can sum all of them at once in unit vector form, where you assign each of the forces <strong>i&#x302;</strong>, -<strong>i&#x302;</strong>, <strong>j&#x302;</strong>, or -<strong>j&#x302;</strong> depending on their direction. If the force is not squarely in a unit vector direction (e.g., it is at an angle not cleanly divisible by 90), then just incorporate both <strong>i&#x302;</strong> & <strong>j&#x302;</strong> into one force. Know that you should also write acceleration in it unit vector form if you can. Once you have an equation in this unit vector form, you can once again isolate the x and y direction vectors to solve for any missing variables. <br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Know that instead of just summing the forces in one direction at a time, you can sum all of them at once in unit vector form, where you assign each of the forces <strong>i&#x302;</strong>, -<strong>i&#x302;</strong>, <strong>j&#x302;</strong>, or -<strong>j&#x302;</strong> depending on their direction. If the force is not squarely in a unit vector direction (e.g., it is at an angle not cleanly divisible by 90), then just incorporate both <strong>i&#x302;</strong> & <strong>j&#x302;</strong> into one force. Know that you should also write acceleration in it unit vector form if you can. Once you have an equation in this unit vector form, you can once again isolate the x and y direction vectors to solve for any missing variables. 
+</div><br><br>
+
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -901,14 +1133,10 @@ A <strong>turning point</strong> is a point x at which the particle reverses its
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    <!--
-	    
-	    
-	    -->
 	    
 	  </article>
 	  
-	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -941,7 +1169,7 @@ A <strong>turning point</strong> is a point x at which the particle reverses its
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 10 2025</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

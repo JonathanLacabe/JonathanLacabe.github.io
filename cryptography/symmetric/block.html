@@ -97,7 +97,7 @@
 
 A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit would be a stream cipher). Thus, the encryption of any plaintext bit in the block depends on the nature of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy.<br><br>
 
-Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rules 43 & [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.
+Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule 43 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.
 <br><br>
 
 Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
@@ -233,7 +233,7 @@ The nature of the Feistel Network is such that the only distinguishing character
 	    <article>
 
 
-<strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (Rule 43), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (Rule 41): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits.
+<strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (see Rule 43), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 41): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits.
 <br><br><br>
 
 
@@ -249,7 +249,7 @@ The nature of the Feistel Network is such that the only distinguishing character
 
 <strong><u>Explanation:</u></strong><br><br>
 
-The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return, through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, under the known elements of best-practice block ciphers (Rule 41).<br><br>
+The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return, through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, under the known elements of best-practice block ciphers (see Rule 41).<br><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
 	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key.</em></span><br><br>
 
@@ -261,7 +261,7 @@ The keysize of DES is 56 bits (and thus has a keyspace of only 2^56), highly cra
 
 Proposed in 1974 by IBM (in coordination with the NSA), DES was the cryptographic standard for the U.S. government between 1977 and 1998, making it the most studied cipher in the world.<br><br>
 
-The DES was the first ever "secure" cryptosystem made public by a national government under the postulate of Kerckhoffs's principle (Rule 3).<br><br>
+The DES was the first ever "secure" cryptosystem made public by a national government under the postulate of Kerckhoffs's principle (see Rule 3).<br><br>
 
 Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to the short length of its key (56 bits), 3DES has a very long key, and as such is immune to such attacks.
 
@@ -379,7 +379,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
   
 
 </ol>
-<br><br>
+<br>
 	  
 	    </article>
 	</div>
@@ -414,7 +414,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: January 8 2025</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

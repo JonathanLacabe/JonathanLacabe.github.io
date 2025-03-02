@@ -24,6 +24,36 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -63,16 +93,23 @@
 	    <p>These are my complete notes for Oscillations in Classical Mechanics. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
       
+      <div class="rules" data-start="152">
+      
 	  <hr>
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Oscillations">XI. Oscillations</span></h2>
 	    <h3><span class="mw-headline" id="HarmonicMotion">XI.I Simple Harmonic Motion.</span></h3>
 	  </header>
 	  <article>
+	  
+	  
 	  <strong><a href="#HorizMassSpringDef"><span class="mw-headline" id="HorizMassSpringDef">#</span></a> <font color="#006400">Horizontal Mass-Spring System</font></strong>: A system in which a mass is attached to a spring oriented horizontally, then placed on a frictionless surface.
 <br><br><br>
 	  
-	  <strong><a href="#Rule152"><span class="mw-headline" id="Rule152">#</span></a> <font color="red">P. Rule 152.</font></strong> A <strong>Simple Harmonic Motion</strong> system is one that will continue to oscillate back and forth forever in the absense of friction. The main two types of SHM are pendulums and springs.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>Simple Harmonic Motion</strong> system is one that will continue to oscillate back and forth forever in the absense of friction. The main two types of SHM are pendulums and springs.<br><br>
 
 Any force can cause simple harmonic motion, as long as it passes these two requirements:<br><br>
 
@@ -84,7 +121,7 @@ Any force can cause simple harmonic motion, as long as it passes these two requi
 <li>The magnitude of the restoring force must be proportional to the displacement from equilibrium position. For example, the Law of Elasticity (and thus all springs) follows this specification.
 </li>
 
-</ol><br>
+</ol></div>
 	  
 	  <strong><font color="blue"><a href="#HarmonicPositions"><span class="mw-headline" id="HarmonicPositions">#</span></a> Simple Harmonic Motion from the perspective of the three base positions:</font></strong><br><br>
 	  
@@ -98,17 +135,28 @@ The acceleration will be linearly proportional to the spring force, meaning it f
 When moving toward rest position, acceleration and velocity are in the same direction and thus the weight is speeding up. When moving <em>away</em> from rest position, however, the weight will now be slowing down, as the acceleration is always pointed toward the rest position (as it is tied to the force) and velocity away from it.
 <br><br><br>
 	  
-	  <strong><a href="#Rule153"><span class="mw-headline" id="Rule153">#</span></a> <font color="red">P. Rule 153.</font></strong> Simple Harmonic Motion is not Uniformly Accelerated Motion. You can't use the UAM equations for SHM. Live with it, punk.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Simple Harmonic Motion is not Uniformly Accelerated Motion. You can't use the UAM equations for SHM. Live with it, punk.
+	  </div><br><br>
 	  
 	  
 	  <strong><a href="#AmplitudeDef"><span class="mw-headline" id="AmplitudeDef">#</span></a> <font color="#006400">Amplitude</font></strong>: The magnitude of the maximum displacement from the equilibrium position, during simple harmonic motion.
 <br><br><br>
 	  
-	  <strong><a href="#Rule154"><span class="mw-headline" id="Rule154">#</span></a> <font color="red">P. Rule 154.</font></strong> The difference between horizontal and vertical mass-spring systems lies solely in how the rest position changes in a vertical system due to gravity pulling the weight downward. In practice, the equations and everything will remain the same, vertically or horizontally, as the vertical system will still oscillate around that new rest point created by the weight.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The difference between horizontal and vertical mass-spring systems lies solely in how the rest position changes in a vertical system due to gravity pulling the weight downward. In practice, the equations and everything will remain the same, vertically or horizontally, as the vertical system will still oscillate around that new rest point created by the weight.
+	  </div><br><br>
 	  
 	  
 	  
-	    <strong><a href="#Rule155"><span class="mw-headline" id="Rule155">#</span></a> <font color="red">P. Rule 155.</font></strong> <strong>Pendulum Oscillation</strong>:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Pendulum Oscillation</strong>:<br><br>
 	    
 	    A pendulum is only considered to be in Simple Harmonic Motion when has an amplitude less than 15 degrees, as a result of the restoring force of pendulums.
 	    The restoring force for a pendulum is the <strong>component of gravity in the tangential direction</strong>, hereafter referred to as "the force of gravity tangential". This has the equation mgsin(θ).<br><br>
@@ -121,16 +169,20 @@ As the angular displacement from rest position increases, the force of gravity t
 The force of gravity tangential is at its peak when theta equals 90, represented both in how the sine is at it's maximum value, and by how the entire force of gravity (and not just a tangential <em>component</em>) is tangential to the pendulum. Of course, this also means that -->
 
 
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule156"><span class="mw-headline" id="Rule156">#</span></a> <font color="red">P. Rule 156.</font></strong> <br>In a mass-spring system<u></u>, the displacement from the rest position is a <strong><em>linear</em> displacement</strong>, ∆x.<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <br>In a mass-spring system<u></u>, the displacement from the rest position is a <strong><em>linear</em> displacement</strong>, ∆x.<br><br>
 
 In a <u></u>pendulum system, the displacement from the rest position is an <strong><em>angular</em> displacement</strong>, θ. This is the result of the pendulum oscillating through a small arc-length of a circle, given it is oscillating at it's maximum extension. Use radians for the units.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	  
 	  </article>
-	</div>
+	</div></div>
 	
 	<div class="General links">
 		links
@@ -162,7 +214,7 @@ In a <u></u>pendulum system, the displacement from the rest position is an <stro
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong>Oscillations</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 9 2025</span><br>
+      	<span class="tiny">Last Change: February 28 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

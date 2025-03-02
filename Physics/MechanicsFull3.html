@@ -36,6 +36,36 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -135,7 +165,7 @@
       
       <br>
       
-      
+      <div class="rules" data-start="105">
       
       
 
@@ -147,32 +177,67 @@
 	  
 	  <strong><font color="#006400"><a href="#CenterDef"><span class="mw-headline" id="CenterDef">#</span></a> Center of Mass</font></strong>: Mass-weighted average position of all mass of an object. An object with a constant density and symmetrical shape, the center of mass is directly in the center of the object. Except for in microgravity (which is not discussed in the elementary physics of Classical Mechanics), then the center of mass and <em><strong>center of gravity</strong></em> are synonymous - see Rule 107.<br><br><br>
 	  
-	  <strong><a href="#Rule105"><span class="mw-headline" id="Rule105">#</span></a> <font color="red">P. Rule 105.</font></strong> EVERYTHING moves in the parabolar shape as it is thrown in the air. The motion of irregularly shaped objects, like a hammer, seems to be much more complicated. However, you must see through the propaganda and see that the hammer rotates around its center of mass, and the motion of the center of mass of the hammer still follows a parabola just like a ball or something else with a symmetrical shape/constant density. Evidence:<br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> EVERYTHING moves in the parabolar shape as it is thrown in the air. The motion of irregularly shaped objects, like a hammer, seems to be much more complicated. However, you must see through the propaganda and see that the hammer rotates around its center of mass, and the motion of the center of mass of the hammer still follows a parabola just like a ball or something else with a symmetrical shape/constant density. Evidence:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Hammers.png"><img src="/Physics/img/Hammers.png" alt="Diagram of the dynamic motion of a hammer. The colored line represents the parabolic curve as the hammer falls under the influence of gravity." width=52%/></a></div>
 	    <span class="tiny"><em>Diagram of the dynamic motion of a hammer. The colored line represents the parabolic curve as the hammer falls under the influence of gravity.</em></span><br><br>
 	    Regardless of any rotation an object may be experiencing (as depicted with the hammer), you can consider the force of gravity to be acting directly on the center of mass. This holds true for all objects in projectile motion.
 	  
-	  <br><br><br>
+  	  </div><br><br>
+  	  
 	  
-	    <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">P. Rule 106.</font></strong> Expanding on the previous concept (see Rule 105), <u>systems</u> of objects also have their own center of mass (discerned through the location and individual masses/densities of all of the objects) that follows the same old parabolar projectile motion path. This is in spite of the fact that the balls are all moving relative to one another.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Expanding on the previous concept (see Rule 105), <u>systems</u> of objects also have their own center of mass (discerned through the location and individual masses/densities of all of the objects) that follows the same old parabolar projectile motion path. This is in spite of the fact that the balls are all moving relative to one another.
+	    </div><br><br>
 	    
-	  <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">P. Rule 107.</font></strong> When the object is in a constant gravitational field, the center of mass is the same as the center of gravity. We generalize Earth to have a constant gravitational acceleration (9.81 m/s²), even though that number actually varies at different locations on Earth (see <a href="/Physics/MechanicsFull#Rule15">Rule 15</a>).<br><br><br>
+	    
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When the object is in a constant gravitational field, the center of mass is the same as the center of gravity. We generalize Earth to have a constant gravitational acceleration (9.81 m/s²), even though that number actually varies at different locations on Earth (see <a href="/Physics/MechanicsFull#Rule15">Rule 15</a>).
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">P. Rule 108.</font></strong> The center of mass of an object is not necessarily always located on the object itself - think of a donut, for example. Constant density + constant shape = center of mass in the geometric center, regardless of if there is anything in the center.<br><br><br>
 	  
-	  <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">P. Rule 109.</font></strong> When you apply a force somewhere to the sides of the center of mass of the system, the applied force will rotate the system. If you apply a force to an object at, or directly toward, its center of mass (which is the case in practically every problem you will have to deal with), the force applied will not cause the object to rotationally accelerate - the force will only cause a linear acceleration of the object.<br><br> 
-Note that even though many problems state that a force is pushing at an angle, 99% of the time that force is still being directed on the center of mass, just from a new angle of attack.<br><br><br>
-
-<strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">P. Rule 110.</font></strong> When hung or tipped, the force of gravity will pull directly upon the center of mass of the object to bring the center of mass back to its lowest point. When you tip one of those untippable cups, the center of mass is getting raised in the air (because it was already very low), and so the force of gravity will naturally pull downward on the center of mass, as a result causing the cup to stand upright again. <br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The center of mass of an object is not necessarily always located on the object itself - think of a donut, for example. Constant density + constant shape = center of mass in the geometric center, regardless of if there is anything in the center.
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">P. Rule 111.</font></strong> There is a trick you can use to determine the center of mass of a flat object in reality: simply hang the object up by one end and place tape vertically, from where the object is hung to the bottom. Then, turn the object and repeat the process. Where the two lines of tape intersect is where the enter of mass will be. <br><br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When you apply a force somewhere to the sides of the center of mass of the system, the applied force will rotate the system. If you apply a force to an object at, or directly toward, its center of mass (which is the case in practically every problem you will have to deal with), the force applied will not cause the object to rotationally accelerate - the force will only cause a linear acceleration of the object.<br><br> 
+Note that even though many problems state that a force is pushing at an angle, 99% of the time that force is still being directed on the center of mass, just from a new angle of attack.
+    </div><br><br>
+    
+    
+    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When hung or tipped, the force of gravity will pull directly upon the center of mass of the object to bring the center of mass back to its lowest point. When you tip one of those untippable cups, the center of mass is getting raised in the air (because it was already very low), and so the force of gravity will naturally pull downward on the center of mass, as a result causing the cup to stand upright again. 
+    </div><br><br>
+    
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There is a trick you can use to determine the center of mass of a flat object in reality: simply hang the object up by one end and place tape vertically, from where the object is hung to the bottom. Then, turn the object and repeat the process. Where the two lines of tape intersect is where the enter of mass will be. 
+	  </div><br><br>
 	  
 	  <strong><font color="#006400"><a href="#PointObjectDef"><span class="mw-headline" id="PointObjectDef">#</span></a> Point Object/Point Particle</font></strong>: An object small enough that its size and shape are irrelevant - it can just be considered to be a dot in space, possibly with a mysterious mass associated with it as well.<br><br><br>
 	  
 	  <strong><font color="#006400"><a href="#CentroidDef"><span class="mw-headline" id="CentroidDef">#</span></a> Centroid</font></strong>: The unweighted, geometric center of a system. If there are two objects in a system, and one is 1000x the mass of the second, the centroid will still be directly in the middle between them. Thus, the centroid is the ignoramus's center of mass.<br><br><br>
 	  
-	  <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">P. Rule 112.</font></strong> Calculating the center of mass of a system is lightwork. First, collect the mass and positions in the cartesian plane of each individual object of the system. This system works best with point objects. A general equation for the center of a system is flexible to work with any number of points, but must be solved separately for the x, y, and z directions of the points, as follows:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Calculating the center of mass of a system is lightwork. First, collect the mass and positions in the cartesian plane of each individual object of the system. This system works best with point objects. A general equation for the center of a system is flexible to work with any number of points, but must be solved separately for the x, y, and z directions of the points, as follows:<br><br>
 <strong><span class="vecteur"><strong>x</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub>x<sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
 <strong><span class="vecteur"><strong>y</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub>y<sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
 <strong><span class="vecteur"><strong>z</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub>z<sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong><br><br>
@@ -185,14 +250,27 @@ A revolutionary, modern super-equation fit for the 21st century has recently bee
 	  <strong><span class="vecteur"><strong>v</strong></span><sub>com</sub> = (&Sigma;&thinsp;m<sub>n</sub><span class="vecteur"><strong>v</strong></span><sub>n</sub>) / (&Sigma;&thinsp;m<sub>n</sub>)</strong>
 	  
 	  
-	  <br><br><br>
-	  
-	  <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">P. Rule 113.</font></strong> In order to find the change in position of the center of mass of a system, you must use the center of mass equation for the initial position, and then for the final position, and subtract former from the ladder, in the delta "change in" tradition.<br><br><br>
-	  
-	  <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">P. Rule 114.</font></strong> One method of finding the center of mass of irregular objects is to split the object into multiple, normally shaped objects (like squares, rectangles, triangles, and other basic shapes) which can then be used in a 'system-of-particles'-type problem (see Rule 112). <br><br><br>
+	  </div><br><br>
 	  
 	  
-	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">P. Rule 115.</font></strong> If you don't know mass in a problem with multiple objects, do not fear: When all the pieces of the object (or all of the parts of a system) have the same density and thickness, the center of mass equation can be altered as follows, utilizing area instead:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the change in position of the center of mass of a system, you must use the center of mass equation for the initial position, and then for the final position, and subtract former from the ladder, in the delta "change in" tradition.</div><br><br>
+	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> One method of finding the center of mass of irregular objects is to split the object into multiple, normally shaped objects (like squares, rectangles, triangles, and other basic shapes) which can then be used in a 'system-of-particles'-type problem (see Rule 112). 
+	  </div><br><br>
+	  
+	  
+	  
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If you don't know mass in a problem with multiple objects, do not fear: When all the pieces of the object (or all of the parts of a system) have the same density and thickness, the center of mass equation can be altered as follows, utilizing area instead:<br><br>
 
 <strong>x<sub>com</sub> = (A<sub>1</sub>x<sub>1</sub> + A<sub>2</sub>x<sub>2</sub> + ...) / (A<sub>1</sub> + A<sub>2</sub> + ...)</strong>
 <br><br><br>
@@ -208,13 +286,23 @@ This is derived through the following means, with ρ being volumetric mass densi
 <strong>m<sub>1</sub> = (A<sub>1</sub> / A<sub>2</sub>) × m<sub>2</sub>
 </strong><br><br>
 
-From there, you can just plug in that value into the center of mass equation, causing every term to have the same mass. Thus, the mass can be canceled out, and now only the area of each object is needed to complete the problem.<br><br><br>
+From there, you can just plug in that value into the center of mass equation, causing every term to have the same mass. Thus, the mass can be canceled out, and now only the area of each object is needed to complete the problem.
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">P. Rule 116.</font></strong> If the object has a hole in it, you can calculate the center of mass by imagining the hole and the object it is part of as being separate particles, calculating the center of mass for each individually. From there, you can use the classic 'system of particles' equation (see Rule 112). However - be careful to instead SUBTRACT the terms relating to the hole in the equation instead of adding them, in order to account for the center of mass being shifted away from the part of the object with the hole.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If the object has a hole in it, you can calculate the center of mass by imagining the hole and the object it is part of as being separate particles, calculating the center of mass for each individually. From there, you can use the classic 'system of particles' equation (see Rule 112). However - be careful to instead SUBTRACT the terms relating to the hole in the equation instead of adding them, in order to account for the center of mass being shifted away from the part of the object with the hole.
+	  </div><br><br>
+	  
 	  
 	  <strong><font color="#006400"><a href="#UniformDef"><span class="mw-headline" id="UniformDef">#</span></a> Uniform</font></strong>: When applied in the context of all of this center of mass nonsense, it means that the object has constant density.<br><br><br>
 	  
-	  <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">P. Rule 117.</font></strong> It is possible, more efficient, and fairly easy to use calculus in order to calculate the center of mass, deriving the equation for it from the density equation and the system of particles equation.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> It is possible, more efficient, and fairly easy to use calculus in order to calculate the center of mass, deriving the equation for it from the density equation and the system of particles equation.<br><br>
 	  First, the summation of all of the particles in the system must be made to account for an infinite amount of particles, the mass of which will each approach zero as they get more numerous and more representative of actual particles. This can be represented as follows:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/comlimit.png"><img src="/Physics/img/comlimit.png" alt="The integral for determining the center of mass of a system." width=27%/></a></div>
 	    <span class="tiny"><em>The integral for determining the center of mass of a system.</em></span><br><br>
@@ -252,9 +340,13 @@ $$x_{cm} = \frac{2}{ab} \int_0^a x \left( \frac{b}{a} x \right) \, dx$$
 Solving this problem out, you get (2/3) × a.
 	  
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">P. Rule 118.</font></strong> Despite what you have been indoctrinated into believing in school, there are actually THREE (3) types of density relating to mass.
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Despite what you have been indoctrinated into believing in school, there are actually THREE (3) types of density relating to mass.
 	  
 	  <ol>
       <li><strong>Volumetric Mass Density</strong>: ρ = (m / V). Defined by Wikipedia as "a substance's mass per unit of volume". Note that there are actually other types of volumetric density, <!--that THEY don't want you to know about-->such as <em>volumetric weight density</em> & <em>volumetric charge density</em>. </li><br>
@@ -265,13 +357,16 @@ Solving this problem out, you get (2/3) × a.
   </ol>
   ALWAYS remember that these are all representative of the AVERAGE density (for each type), and that to make each density in its instantaneous form, just use the instantaneous form of each variable of the equation (for example: instantaneous linear mass density has the formula dm / dL).
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
-	  <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">P. Rule 119.</font></strong> Internal forces will occur when particles within the system collide with one another. However, those internal forces form a Newton's 3rd Law force pair and cancel one another out. Thus,<br><br><strong>&Sigma;<span class="vecteur"><strong>F</strong></span><sub>internal</sub> = 0</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Internal forces will occur when particles within the system collide with one another. However, those internal forces form a Newton's 3rd Law force pair and cancel one another out. Thus,<br><br><strong>&Sigma;<span class="vecteur"><strong>F</strong></span><sub>internal</sub> = 0</strong><br><br>
 	  Thus, even when a collisions occurs with the system, if there is no net external force acting on the system, the acceleration will be zero and thus the velocity (and linear momentum) of the center of mass of the system will remain constant.
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
 	  
@@ -332,15 +427,27 @@ Solving this problem out, you get (2/3) × a.
 	  
 	  <br><br><br><br><br>
 
-<strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">P. Rule 120.</font></strong> <strong>Impulse Approximation:</strong><br>During collisions with short time intervals, the force of impact is much larger than all the other forces, therefore all other forces can be considered to be negligible when compared to the impact force and the net force is approximately equal to the force of impact.<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Impulse Approximation:</strong><br>During collisions with short time intervals, the force of impact is much larger than all the other forces, therefore all other forces can be considered to be negligible when compared to the impact force and the net force is approximately equal to the force of impact.<br><br>
 tl;dr: With collisions that have short ∆t, &Sigma;<span class="vecteur"><strong>F</strong></span> ≈ <span class="vecteur"><strong>F</strong></span><sub>impact</sub><br><br>
 The shorter the time length, the more accurate this approximation gets.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">P. Rule 121.</font></strong> With respect to impulse, consider time and force to be inversely proportional to eachother. Because the impulse of a collision will be constant, if there is a shorter time length of the collision, the Force will be higher, and if the collision occurs over a longer period of time, then the force will be smaller, since either way they need to equal the same constant (impulse) when multiplied.<br><br><br>
 
-<strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">P. Rule 122.</font></strong> <strong>Conservation of Momentum:</strong><br><br>A system is "isolated" when the net force on the system is zero. Momentum is conserved in all isolated systems:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> With respect to impulse, consider time and force to be inversely proportional to eachother. Because the impulse of a collision will be constant, if there is a shorter time length of the collision, the Force will be higher, and if the collision occurs over a longer period of time, then the force will be smaller, since either way they need to equal the same constant (impulse) when multiplied.
+</div><br><br>
+
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Conservation of Momentum:</strong><br><br>A system is "isolated" when the net force on the system is zero. Momentum is conserved in all isolated systems:<br><br>
 &Sigma;<span class="vecteur"><strong>p</strong></span><sub>i</sub> = &Sigma;<span class="vecteur"><strong>p</strong></span><sub>f</sub><br><br>
 As you can see, this equation accounts for changes in the mass of a system, so long as there is a proportional change in the velocity that will result in momentum being conserved. The initial point is assumed to be right before the collision or explosion, and the final point is assumed to be right after.<br><br>
 Momentum is conserved during all collisions and explosions. In physics terms, an explosion is essentially just a collision in reverse.<br><br>
@@ -349,9 +456,13 @@ REMEMBER: Conservation of momentum can be done in individual directions or combi
 
 
 For example: when you stand on a skateboard and you are holding a ball, the system consists of you, the skateboard, and the ball. You start off with an initial momentum of zero, because you are not moving. When you throw that ball in one direction, the ball obtains a velocity, which means it patently does not have a momentum of zero. In order for the net momentum of the system to be zero (since one part of the system is moving), the other part of the system must move in the opposite direction (with the same force, of course) so that the total momentum of the system will cancel out and remain zero. This follows both the 3rd law of motion and ensures the conservation of momentum.
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">P. Rule 123.</font></strong> <strong>TYPES OF COLLISIONS:</strong><BR><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>TYPES OF COLLISIONS:</strong><BR><br>
 Momentum is conserved in all of these, because they are all collisions.<br>
 <ol>
 <li><strong>Elastic Collision</strong>: A collision in which the total kinetic energy of a system of the two colliding bodies is unchanged by the collision, conserving the kinetic energy of the system. Generally, the objects "bounce" off of one another in these types of collisions. </li><br>
@@ -364,7 +475,8 @@ Momentum is conserved in all of these, because they are all collisions.<br>
 All real-world bounces are inelastic, but on the atomic level, there are many elastic collisions.
 
 
-<br><br><br>
+</div><br><br>
+
 
 <strong><font color="blue"><a href="#THELASTWORD"><span class="mw-headline" id="THELASTWORD">#</span></a> THE LAST WORD:</font></strong><br><br>
         The Equation of Conservation of Energy requires a minimum of two objects. Of course, this does not mean that these objects must remain constant throughout the problem - you could possibly have a single object in the beginning that could explode into three objects, resulting in one object on the left side of the equation and three on the right side. Or, possibly, you could have a Perfect Inelastic Collision occur, resulting in two objects on the left side and one object on the right. 
@@ -374,6 +486,8 @@ All real-world bounces are inelastic, but on the atomic level, there are many el
         It is easy to forget the point of Physics is to have FUN! Playing around with the variables is a great way to relieve stress.
         
 <br><br><br>
+
+
 
 
 
@@ -420,7 +534,10 @@ In essence, the equations for moment of inertia state that as the distance from 
 	  <br><br><br><br>
 	  
 	  
-	  <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">P. Rule 124.</font></strong> <strong>Kinetic Energy of Rotation:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Kinetic Energy of Rotation:</strong><br><br>
       
       The Kinetic Energy of old has failed us. Since the classic kinetic energy formula is only with regard to the center of mass of the object (this is called "translational" kinetic energy), a uniform object in rotational motion would be considered to have zero kinetic energy - ignorantly. This equation is inadequate to deal with such pressing questions of modern physics as the kinetic energy contained in a spinning object - all objects in motion must have kinetic energy.<br><br>
       Thus, a new form of kinetic energy must be discovered: the summation of the kinetic energies of every particle of the system, in the process reimagining the object as a system of particles, each with its own velocity that can contribute to the whole:
@@ -436,7 +553,8 @@ In essence, the equations for moment of inertia state that as the distance from 
       
       During all conservation of mechanical energy problems, you must account for both Translational and Rotational Kinetic Energy. An object can be in rotational and translational motion at the same time, occurring when both the center of mass of the object is moving through space, and the object itself is in centripetal motion, such as when the object is rolling.
       
-      <br><br><br>
+      </div><br><br>
+      
       
       <strong><font color="blue"><a href="#InertiasEx"><span class="mw-headline" id="InertiasEx">#</span></a> Basic Rotational Inertias:</font></strong><br><br>
         Here are the Moments of Inertia of some basic rigid objects with constant density. Recall that 'M' is m<sub>total</sub>.<br><br>
@@ -485,7 +603,10 @@ In essence, the equations for moment of inertia state that as the distance from 
 	  
 	  <br><br><br><br>
 	    
-	    <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">P. Rule 125.</font></strong> <STRONG>ANALYSIS OF TORQUE.</STRONG><BR><BR>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <STRONG>ANALYSIS OF TORQUE.</STRONG><BR><BR>
 	    Think of the opening of a door: The door handle will be positioned as far from the hinges as possible, since the hinges represent the axis of rotation. If you push on the part of the door close to the hinges, it will barely budge. This is because by pushing farther away from the hinges, a larger r value is created (thus producing more torque), and by pushing close the hinges, a smaller r value is created, thus creating less torque.
 	    
 	    <br><br> Furthermore, the angle at which the door is pushed will matter significantly due to the sin curve - the maximum value for the sine of angle is at 90 degrees (1), so pushing perpendicular to the door will result in the most angular acceleration, while other degrees will produce less. A perpendicular force would produce the minimum force necessary to produce torque - other angles at which force can be applied would require higher magnitudes of force to reach the same level of torque. If you push directly parallelly to the direction of <span class="vecteur"><strong>r</strong></span>, e.g. directly toward the hinges from the side of the handle, then an angle of 180 will be created, resulting in no torque whatsoever (since sin(180) = 0).<br><br>
@@ -499,7 +620,8 @@ Understand that the direction of the <span class="vecteur"><strong>r</strong></s
 	    
 	    Torque is NOT the same as work - torque uses the <u>direction</u> of the variables.
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
       <strong><font color="#006400"><a href="#MomentLeverDef"><span class="mw-headline" id="MomentLeverDef">#</span></a> Moment Arm/Lever Arm</font></strong>: The Perpendicular distance between the line of action of the force and the axis of rotation. The "<strong>line of action</strong>" is just the artificial extension of the force through space until it can form a right angle with the also artificially created "moment arm".
 
@@ -513,19 +635,27 @@ This is something that you are guaranteed to do during a problem at some point: 
       
       <br><br><br>
       
-      <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">P. Rule 126.</font></strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
       When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity can be set to zero since it has an <span class="vecteur">r</span> of 0. You must be careful not to place the normal force as being located at the center of mass of the object - that is an old oversight that must be corrected - See Rule 141.<br><br>
       
       If a question is directly asking to find "the net force", just sum the torques without setting it equal to I × <span class="vecteur">α</span>. See Rule 127 for an example.
       
-      <br><br><br>
+      </div><br><br>
       
-      <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">P. Rule 127.</font></strong> <strong>Rotational Form of Newton's Second Law:</strong><br><br>
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Rotational Form of Newton's Second Law:</strong><br><br>
       <strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span> = I × <span class="vecteur"><strong>α</strong></span></strong>. <br><br>The sum of the torque is equal to the moment of inertia times the angular acceleration. The angular acceleration is directly proportional to the magnitude of the net torque, and is inversely proportional to the moment of inertia. <br><br>
       
         In order to use this equation, you must identify the objects with torque, the axis of rotation of them, and which direction is positive torque. 
       
-      <br><br><br>
+      </div><br><br>
+      
       
       <strong><font color="#006400"><a href="#RotateEquilibriumDef"><span class="mw-headline" id="RotateEquilibriumDef">#</span></a> Rotational Equilibrium</font></strong>: When, as a result of a net zero torque (which in turn causes zero angular acceleration), the object remains at rest or at a constant angular velocity.
 
@@ -539,22 +669,38 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
       
       <br><br><br>
       
-      <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">P. Rule 128.</font></strong> In all situations, if there are objects that are on top of other objects, and you are including the bottom objects in your force summation, then you do not need to include the force normals of the objects on top, only their forces of gravity. This is because the weight of the top objects will just contribute to the force normal of the bottom object.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In all situations, if there are objects that are on top of other objects, and you are including the bottom objects in your force summation, then you do not need to include the force normals of the objects on top, only their forces of gravity. This is because the weight of the top objects will just contribute to the force normal of the bottom object.<br><br>
       
       Secondly, ALWAYS include ALL of the objects in the summation of the torques, including the objects on bottom and on top and anything in between. When determining if the torques are positive or not, don't forget you need to use the old right hand rule to figure it out, using the forces as your guide. Draw out the free-body diagram and draw the arrows on the forces to make it easier on yourself.<br><br>
       
       
       Don't forget the principle of single direction (see Rule 78) in all pulley problems. The direction you decide the torque to be moving in will change how you conduct force summations for any hanging objects, summing with regard to the direction that you decided would be positive, whether it be the clockwise or counter-clockwise movement of the pulley. Thus, for an object on the side of the pulley that would denote positive movement (whatever you decided that means) would have the force of gravity as a negative force, while a hanging object on the other side would have gravity as a positive.
       
-      <br><br><br><!--homework rules: rules that were created when actually out in the field appliying the base knowledge of the previous, lecture rules, into practice, thus gaining actually useful insight into how problems relating to a concept will generally work. For the student, homework rules will be much more valuable, but for the reviewer before the test, the lecture rules are what you want to look at. -->
+      </div><br><br><!--homework rules: rules that were created when actually out in the field appliying the base knowledge of the previous, lecture rules, into practice, thus gaining actually useful insight into how problems relating to a concept will generally work. For the student, homework rules will be much more valuable, but for the reviewer before the test, the lecture rules are what you want to look at. -->
       
-      <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">P. Rule 129.</font></strong> To solve static equilibrium problems, you can chose 1 of two placements of the axis of rotation for your torque summations: 
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> To solve static equilibrium problems, you can chose 1 of two placements of the axis of rotation for your torque summations: 
       <br><br> 1. You can set the axis of rotation all the way to the end of the main object (the saw or meterstick or whichever similar object), which can best be done in circumstances where the force normal has already been determined (whether through the y-direction force summation or other means). 
-      <br><br>2. You can set the axis of rotation to be at an exact point, whether one you want to find (such as a point whose <span class="vecteur">r</span> value you are trying to find) or one you want to remove all together in order to isolate another variable (in situations which you have two unknown variables, and placing the axis of rotation upon one point will remove that variable, allowing the other one to be solved).<br><br><br><!--Homework rule-->
+      <br><br>2. You can set the axis of rotation to be at an exact point, whether one you want to find (such as a point whose <span class="vecteur">r</span> value you are trying to find) or one you want to remove all together in order to isolate another variable (in situations which you have two unknown variables, and placing the axis of rotation upon one point will remove that variable, allowing the other one to be solved).
+      </div><br><br><!--Homework rule-->
       
-      <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">P. Rule 130.</font></strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3#InertiasEx">basic rotational inertias</a>.<br><br><br>
       
-      <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">P. Rule 131.</font></strong> <strong>Parallel Axis Theorem</strong>:<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3#InertiasEx">basic rotational inertias</a>.
+      </div><br><br>
+      
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Parallel Axis Theorem</strong>:<br><br>
       <strong>I<sub>parallel</sub> = I<sub>COM</sub> + M × D²</strong><br><br>
 
 <strong>I<sub>parallel</sub></strong> = The moment of inertia parallel to an axis through center of mass.<br>
@@ -565,13 +711,24 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
 
 This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3#InertiasEx">Basic Rotational Inertias</a>" from the first).
       
-      <br><br><br>
+      </div><br><br>
       
-      <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">P. Rule 132.</font></strong> Do not forget how to correlate rotational and linear acceleration/velocity - you learned this before.<br><br>On a pulley system in which a string pull downward upon the circular pulley, pulling into centripetal motion, the pulley will be accelerating (angularly) at a proportional rate to the string (linearly), since the string can only move downward as the pulley/circular object moves with it. In these circumstances, remember that the string is moving at a tangential acceleration, which already has a proportionality defined for it:<br><br><strong>a<sub>t</sub> = r × α.</strong><br><br> Tangential Velocity is practically the same thing as well, just with angular velocity instead of acceleration.<br><br>
       
-      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq#V-I">here</a>.<br><br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Do not forget how to correlate rotational and linear acceleration/velocity - you learned this before.<br><br>On a pulley system in which a string pull downward upon the circular pulley, pulling into centripetal motion, the pulley will be accelerating (angularly) at a proportional rate to the string (linearly), since the string can only move downward as the pulley/circular object moves with it. In these circumstances, remember that the string is moving at a tangential acceleration, which already has a proportionality defined for it:<br><br><strong>a<sub>t</sub> = r × α.</strong><br><br> Tangential Velocity is practically the same thing as well, just with angular velocity instead of acceleration.<br><br>
       
-      <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">P. Rule 133.</font></strong> <strong>Negligible friction</strong>: Though a pulley can be stated to have "negligible friction", if this were actually true, any strings/wire upon it would just slide off and the pulley would never rotate. The meaning of "negligible friction" when stated with regard to a pulley is that the <strong>Axle</strong> of the pulley, the center rotatinal axis, has negligible friction - the surface of the pulley still has the necessary friction to interact with the string, enough so that the acceleration of the pulley and the string are proportional to one another. See Rule 132 for an explanation.<br><br><br>
+      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq#V-I">here</a>.
+      </div><br><br>
+      
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Negligible friction</strong>: Though a pulley can be stated to have "negligible friction", if this were actually true, any strings/wire upon it would just slide off and the pulley would never rotate. The meaning of "negligible friction" when stated with regard to a pulley is that the <strong>Axle</strong> of the pulley, the center rotatinal axis, has negligible friction - the surface of the pulley still has the necessary friction to interact with the string, enough so that the acceleration of the pulley and the string are proportional to one another. See Rule 132 for an explanation.
+      </div><br><br>
+      
       
       <strong><font color="#006400"><a href="#CycloidDef"><span class="mw-headline" id="CycloidDef">#</span></a> Cycloid</font></strong>: A curve traced by a point on a circle rolling in a straight line.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Cycloid_animated.gif"><img src="/Physics/img/Cycloid_animated.gif" alt="Cycloid. Courtesy of Wikimedia." width=44%/></a></div>
@@ -579,7 +736,10 @@ This theorem is an easy way to determine the moment of inertia of a rigid body, 
       
       <br><br><br>
       
-      <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">P. Rule 134.</font></strong> All objects that roll without slipping, such as cylinders and all good tires, have a total kinetic energy that equals the sum of the translational and rotational kinetic energies of the object:<br><br><strong>KE<sub>total</sub> = KE<sub>T</sub> + KE<sub>R</sub></strong><br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> All objects that roll without slipping, such as cylinders and all good tires, have a total kinetic energy that equals the sum of the translational and rotational kinetic energies of the object:<br><br><strong>KE<sub>total</sub> = KE<sub>T</sub> + KE<sub>R</sub></strong><br><br>
       
       <strong>KE<sub>total</sub> = (½ × m × v²) + (½ × I × ω²)</strong><br><br>
 
@@ -589,10 +749,13 @@ For example, if a hollow sphere and a solid sphere (the radius of each being neg
 
 If you do not know either component variable of rotational inertia (either mass & length or mass & radius), then it can be better <u>not</u> to substitute in the equation for rotational inertia into the problem, to leave I as only one unknown in the rotational kinetic energy equation. Sometimes, problems will tell you the specificities for a known moment of inertia ("a thin rod that rotates around one end"), but they will only serve as red herrings when no information as to the components of inertial mass is given, and so isolating the variable <em>I</em> itself and solving it outright will be the correct solution.<br><br> Do not fall into the dogma of having to substitute every possible equation in at all times - solving something on a higher level first can help you in many different ways.
 
-      <br><br><br>
+      </div><br><br>
       
       
-      <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">P. Rule 135.</font></strong> The acceleration and velocities of the center of masses of objects that roll without slipping (translational, obviously) also have their own equations, totally identical to their tangential equivalents:<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The acceleration and velocities of the center of masses of objects that roll without slipping (translational, obviously) also have their own equations, totally identical to their tangential equivalents:<br><br>
 
 <strong>v<sub>com</sub> = R × ω</strong><br>
 <strong>a<sub>com</sub> = R × α</strong><br><br>
@@ -603,8 +766,8 @@ The equation for the distance travelled by the center of mass of the rolling obj
 
 <strong>∆x<sub>com</sub> = R × ∆θ</strong>
 
-<br><br><br>
-<!--slave to future self: your future self is uninterested in the level of hard work you had to do in the past to reach your results, it only cares about the end result. Your future self does not care about how you wanted to stay in bed past your alarm, he needs to have the results of the person who didn't.-->
+</div><br><br>
+<!--your future self is uninterested in the level of hard work you had to do in the past to reach your results, it only cares about the end result. Your future self does not care about how you wanted to stay in bed past your alarm, he needs to have the results of the person who didn't.-->
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -612,7 +775,10 @@ The equation for the distance travelled by the center of mass of the rolling obj
 	    </header>
 	    <article>
 
-<strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a><!--IVE TRIED NOTHING EVERYTHING WORKS--> <font color="red">P. Rule 136.</font></strong><strong> Angular Momentum:</strong> VECTOR.<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong><strong> Angular Momentum:</strong> VECTOR.<br><br>
 
 	   <u><strong>Units</strong></u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br><br>
 	  
@@ -630,9 +796,12 @@ The equation for the distance travelled by the center of mass of the rolling obj
 	  <br><br>
 	  Notice that since angular momentum and angular velocity are directly proportional vectors, they must be in the same direction. Determine direction using the rotational right hand rule. Furthermore, <span class="vecteur"><strong>L</strong></span> has an inherent axis of rotation that must be identified every time, like torque and rotational inertia. <a href="https://www.youtube.com/watch?v=feZnNrF2wc4">Watch this</a> for the derivation of the equation.
 
-	  <br><br><br><br>
+	  </div><br><br><br>
 
-<strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">P. Rule 137.</font></strong> <strong>Conservation of Angular Momentum:</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Conservation of Angular Momentum:</strong><br><br>
 
 <strong>&Sigma;<span class="vecteur"><strong>L</strong></span><sub>i</sub> = &Sigma;<span class="vecteur"><strong>L</strong></span><sub>f</sub></strong><br><br>
 
@@ -644,14 +813,17 @@ Add as many additional angular momentums into the equation as there are objects 
 The conservation of angular momentum equation can be easily derived from a special case of the net external torque equation:<br><br>
 <strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span><sub>external</sub> = (∆<span class="vecteur"><strong>L</strong></span><sub>system</sub> / ∆t)</strong><br><br>
 
-Thus, if the object is not in centripetal motion at the beginning of the event (initial torque = 0), then if angular momentum is conserved, it will continue to have 0 centripetal motion at the end. If an external force causes centripetal motion to be created, then angular momentum is not conserved. See Rules 102 & 103 to determine what forces are external or not.<br><br>
+Thus, if the object is not in centripetal motion at the beginning of the event (initial torque = 0), then if angular momentum is conserved, it will continue to have 0 centripetal motion at the end. If an external force causes centripetal motion to be created, then angular momentum is not conserved. See Rule 102 & Rule 103 to determine what forces are external or not.<br><br>
 
 General Example: When a figure skater pulls their arms inward during a performance, they will speed up. This is because they are reducing the distance of some amount of mass from their center of mass, thus decreasing the moment of inertia and causing the angular velocity to increase so that angular momentum is conserved.
 
-<br><br><br>
+</div><br><br>
 
 
-<strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">P. Rule 138.</font></strong> In the SPECIFIC CASE of a point particle moving in a circle (centripetal motion), the following attributes are applicable to the particle:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In the SPECIFIC CASE of a point particle moving in a circle (centripetal motion), the following attributes are applicable to the particle:<br><br>
 <strong>1. </strong>Translational and Rotational Kinetic Energy will return the same value (only in these circumstances!). Choose either depending on what variables you have.<br><br><br>
 <strong>2. </strong>The angular momentum of the particle can be calculated using both the 'rigid object with shape' momentum equation (I × ω) and the translational point-particle momentum equation:
 
@@ -664,22 +836,34 @@ General Example: When a figure skater pulls their arms inward during a performan
 This equation can additionally be used for all translationally moving point particles (which, indeed, have angular momentum insofar as how it could translate to another object obtaining that angular momentum following a collision).<br><br><br>
 
 Attribute #1 is also applicable for ellipses, though not #2.
-<br><br><br>
-
-<strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">P. Rule 139.</font></strong> When a questions asks just for the "acceleration", "velocity", or "speed" of an object or a system, it is general principle to find the linear quanity, unless the question specifically asks for the angular version.<br><br><br><!--vital rule. came up during the homework as well.-->
+</div><br><br>
 
 
-	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">P. Rule 140.</font></strong> <strong>Pulleys with Mass</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When a questions asks just for the "acceleration", "velocity", or "speed" of an object or a system, it is general principle <!--subtle reference--> to find the linear quanity, unless the question specifically asks for the angular version.
+</div><br><br><!--vital rule. came up during the homework as well.-->
+
+
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Pulleys with Mass</strong>:<br><br>
 Pulleys with mass have rotational inertia. Pulleys without mass do not have rotational inertia.<br><br>
 Where as before, the force of tension (magnitude) applied on each side of the pully was the same, this is not the case in pulleys with mass: These pulleys will have rotational inertia due to their mass, and thus will resist angular acceleration, making the two forces of tension acting on either side of the pulley not necesarilly having the same magnitude.<br><br>
 
 In all problems where the pulley has mass, just incorporate it as another one of the objects you are findings the torques/angular momentum of, and summing the force normal & gravity of the pulley.
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">P. Rule 141.</font></strong> In torque problems, you must always draw the normal force as originating at the point of contact, from the surface the object is resting on. <br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In torque problems, you must always draw the normal force as originating at the point of contact, from the surface the object is resting on. <br><br>
 In the past, the normal force has been drawn as having the center of mass of the object as its origin - this is a simplification, a falsehood that is done purely in problems where such an oversight does not matter.<br><br>
 
-In problems involving Torque however, the location of the origin of the forces matters significantly, due to how torque is calculated. If the axis of rotation of an object is placed along the center of mass, then all torques acting at the center of mass are equal to 0 since they have a radius of 0 (see Rule 126). By placing the normal force on the center of mass of the object, you would be incorrectly excluding it from all torque summations in all situations where the axis of rotation is upon the center of mass.<br><br>
+In problems involving Torque however, the location of the origin of the forces matters significantly, due to how torque is calculated. If the axis of rotation of an object is placed along the center of mass, then all torques acting at the center of mass are equal to 0 since they have a radius of 0 (see Rule 126). By placing the normal force on the center of mass of the object, you would be incorrectly excluding it from all torque summations in all situations where the axis of rotation is upon the center of mass.</div><br>
+
 
 
 
@@ -699,7 +883,10 @@ In problems involving Torque however, the location of the origin of the forces m
 	  </header>
 	  <article>
 	  
-	  <strong><a href="#Rule142"><span class="mw-headline" id="Rule142">#</span></a> <font color="red">P. Rule 142.</font></strong> A force of gravitational attraction exists for any two objects, not just an object and the Earth. The equation to determine this force is Newton's <strong>Universal Law of Gravitation</strong>: VECTOR.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A force of gravitational attraction exists for any two objects, not just an object and the Earth. The equation to determine this force is Newton's <strong>Universal Law of Gravitation</strong>: VECTOR.<br><br>
 	   <u><strong>Units</strong></u>: Newtons. It is in the same form as F<sub>g</sub>, as will be described.<br><br><br>
 <u><strong>Equation</strong></u>:<br><br>
 <strong>F<sub>g</sub> = (G × m<sub>1</sub> × m<sub>2</sub>) / (r²)
@@ -716,13 +903,16 @@ The equation provides only the <em>magnitude</em> of the gravitational attractio
 <br><br>
 
 The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>planet-specific</u> equation, usable only on objects close to a planet and using that planet as one of the masses. The Law of Gravitation, however, is always correct in all scenarios, including those involving planets.
-<br><br><br><br>
+</div><br><br><br>
 	  
 	  <strong><font color="#006400"><a href="#GeocentricModelDef"><span class="mw-headline" id="GeocentricModelDef">#</span></a> Geocentric Model</font></strong>: The ancient model of the solar system in which a stationary Earth was at the center, with the sun and planets orbiting around it. This model was formalized by Ptolemy in the 1st century A.D. (see <a href="/astronomy/classical/ancient#Rule18">A. Rule 18</a>).<br><br><br>
 	  
 	  <strong><font color="#006400"><a href="#HeliocentricModelDef"><span class="mw-headline" id="HeliocentricModelDef">#</span></a> Heliocentric Model</font></strong>: A model of the solar system (widely accepted) in which the Sun is at the center, with the Earth and planets revolving around it. This model was proposed by Copernicus in 1543 (see <a href="/astronomy/classical/modern#Rule22">A. Rule 22</a>), supported by Celestial observations by Tycho Brahe in the late 1500s (see <a href="/astronomy/classical/modern#Rule25">A. Rule 25</a>), and given a mathematical basis by Johannes Kepler in the early 1600s (see <a href="/astronomy/classical/modern#Rule26">A. Rule 26</a>), who had been worked off of the data of Brahe.<br><br><br>
 	  
-	  <strong><a href="#Rule143"><span class="mw-headline" id="Rule143">#</span></a> <font color="red">P. Rule 143.</font></strong> Kepler's <strong>Three Laws of Planetary Motion</strong> were developed over the course of 20 years of hardcore analysis of the data of Tycho Brahe. They are not too complex:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Kepler's <strong>Three Laws of Planetary Motion</strong> were developed over the course of 20 years of hardcore analysis of the data of Tycho Brahe. They are not too complex:<br><br>
 	  <strong>Law of Planetary Motion #1 - Law of Orbits</strong>
 	  <br>
 	  <em>"Planets move in elliptical orbits with the Sun at one foci/focus point."</em><br><br>
@@ -747,9 +937,12 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 	  The shape/roundness of an ellipse depends on how close together the two foci are, compared with the Major Axis. The ratio of the distance between the foci to the length of the major axis is called the <strong><u>Eccentricity</u></strong> of the ellipse. The equation for eccentricity can be derived as <strong>e = (c / a)</strong>, where a is the length of the semimajor axis and c is the distance between the center of the ellipse to the foci.<br><br>
 	  
 	  If the eccentricity is zero, then the foci will be in the same spot and the ellipse will be a circle. Thus, in elliptical terms, a circle is an ellipse of zero eccentricity with the Semimajor axis as the radius. <br><br>The greater the eccentricity, the more elongated the ellipse, up to a maximum eccentricity of 1.0, which is just a flat line. The size and shape of an ellipse are completely specified by its Semimajor axis and its Eccentricity. 
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule144"><span class="mw-headline" id="Rule144">#</span></a> <font color="red">P. Rule 144.</font></strong> 
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	  
 	  <strong>Law of Planetary Motion #2 - Law of Areas</strong>
 	  <br>
@@ -762,12 +955,16 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 	    <span class="tiny"><em>The orbital speed of a planet traveling around the Sun (the circular object inside the ellipse) varies in such a way that in equal intervals of time (t), a line between the Sun and a planet sweeps out equal areas (A and B). Note that the eccentricities of the planets’ orbits in the solar system are substantially less than shown here.</em></span><br><br> 
 	   While a circular orbit would cause a planet to move at the same speed throughout its orbit, the differing speeds of the planets as they move make it evident that their orbits are elliptical.
 	  
-	  <br><br><br>
+	  </div><br><br>
+	  
 	  
 	  <strong><a href="#AstronomicalUnitDef"><span class="mw-headline" id="AstronomicalUnitDef">#</span></a> <font color="#006400">Astronomical Unit</font></strong>: The <u>average</u> distance between the Sun and the Earth, defined as 149,597,870,700 meters. 
 <br><br><br>
 	  
-	  <strong><a href="#Rule145"><span class="mw-headline" id="Rule145">#</span></a> <font color="red">P. Rule 145.</font></strong> 
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	  
 	  <strong>Law of Planetary Motion #3 - Law of Periods</strong>
 	  <br>
@@ -786,7 +983,7 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 	  <strong>G</strong> - The Universal Gravitational Constant (6.67 x 10⁻¹¹ (N × m²) / (kg²))<br>
 	  <strong>M</strong> - Mass of the Primary (e.g., the Sun or another star), except in binary systems - in this case, M represents the total mass of the objects.<br><br>
 	  The equation is derived from the Law of Gravitation and an inward force summation.
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  <strong><a href="#GeostationaryDef"><span class="mw-headline" id="GeostationaryDef">#</span></a> <font color="#006400">Geosynchronous/Geostationary Orbit</font></strong>: A state of an object orbiting the Earth where it is always positioned directly over the same spot on the Earth. In order for this to be the case, the orbiting body must be directly over the equator.<br><br>
         The orbited body has to be the Earth, for otherwise, it would merely be a Stationary or Synchronous orbit.
@@ -800,7 +997,10 @@ The old force of gravity equation, "F<sub>g</sub> = mg" or whatever, is a <u>pla
 
 
 	  
-	  <strong><a href="#Rule146"><span class="mw-headline" id="Rule146">#</span></a> <font color="red">P. Rule 146.</font></strong> 
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	  <strong>Weightlessness</strong>:<br><br>
 
 In order for TRUE weightlessness, the force of gravity acting on an object (the weight) must be equal to zero, and thus the acceleration due to gravity must equal to zero.<br><br>
@@ -810,9 +1010,13 @@ Given the Universal Law of Gravitation, the only way to have the force of gravit
 Other means of reaching weightlessness while more than one object exists in the universe include placing the object in the center of a uniform spherical shell, in which case the object would be perfectly pulled in every direction to remain stationary. Similarly, the simple case of placing the object between two objects, so that the object will be equally pulled in opposite directions, will leave the object stationary.<br><br>
 
 Of course, for the "<strong>apparent weightlessness</strong>" that is simply falling, only the normal force needs to be zero, as is the case with the International Space Station. See Rule 80 for the derivation. Apparent Weightlessness can be simply defined as a state in which zero g-Forces in any direction are acting on an object (zero net g-forces (see Rule 147)).
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule147"><span class="mw-headline" id="Rule147">#</span></a> <font color="red">P. Rule 147.</font></strong> <strong>G-Forces</strong>:<br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>G-Forces</strong>:<br><br>
 
 The number of "G's" an object has is a ratio of the acceleration experienced by the object with respect to the ordinary acceleration experienced on Earth: If you have a vertical g-force of 2, you are experiencing an apparent weight double to what it normally is.<br><br>
 
@@ -831,9 +1035,13 @@ There are two equations that can be used to determine the total number of g-Forc
 <strong>a<sub>x</sub></strong> = Acceleration of an object in the x-direction.<br>
 <strong>g<sub>Earth</sub></strong> = The acceleration due to gravity of the Earth.
 
-<br><br><br>
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule148"><span class="mw-headline" id="Rule148">#</span></a> <font color="red">P. Rule 148.</font></strong> 
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	  	  <strong>Gravitational Fields</strong>:<br><br>
 
 A field in which a force of gravitational attraction is present. Diagrams are drawn as so:
@@ -858,9 +1066,13 @@ In a constant gravitational field, any object will produce the gravitational acc
 <strong>m<sub>o</sub></strong> = Mass of the object.<br>
 <strong>r</strong> = The distance between the centers of mass of the two objects, not the radius (unless it is by circumstance).
 	  	  
-	  	  <br><br><br>
+	  	  </div><br><br>
+	  	  
 	  
-	  <strong><a href="#Rule149"><span class="mw-headline" id="Rule149">#</span></a> <font color="red">P. Rule 149.</font></strong> <strong>Universal Gravitational Potential Energy</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Universal Gravitational Potential Energy</strong><br><br>
 
 Whereas before, the only equation for PE<sub>g</sub> (mgh) referred to objects in a constant gravitational field, recent advancements have led to the development of a Universal equation, which can provide the gravitational potential energy for any object in the universe, regardless of field:<br><br>
 
@@ -877,7 +1089,7 @@ Mixing and matching different forms of gravitational potential energy, such as i
 
 <br><br>You must only use one or the other. If which to use is ever in doubt (e.g., the object is leaving ground level), just use the U.G.P.E..
 
-<br><br><br>
+</div><br><br>
 	  
 	  
 	  
@@ -899,14 +1111,21 @@ $$ v_{\text{escape}} = \sqrt{2 a_p R} $$
 Choose whichever based on the variables you have. The first equation is derived <a href="/Physics/img/escapederivation.png">as so</a>. The second is more of a generalization, most applicable on the surface of a planet.
 <br><br><br>
 	  
-	  <strong><a href="#Rule150"><span class="mw-headline" id="Rule150">#</span></a> <font color="red">P. Rule 150.</font></strong> The <strong>Principle of Superposition</strong> dictates the net gravitational force of one particle in a system of particles. The basic idea is that the gravitational forces acting on that specific particle, are individually computed from each of the other particles, and from there are summed.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Principle of Superposition</strong> dictates the net gravitational force of one particle in a system of particles. The basic idea is that the gravitational forces acting on that specific particle, are individually computed from each of the other particles, and from there are summed.<br><br>
 The forces must always be summed <em>vectorally</em>, accounting for direction - see Rule 142.
 
 
 <!--THE PEOPLE NEED TO HEAR THIS: https://www.youtube.com/watch?v=HHOn8u-c2wk&ab_channel=captainchef-->
-<br><br><br>
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule151"><span class="mw-headline" id="Rule151">#</span></a> <font color="red">P. Rule 151.</font></strong> <strong>Internal Gravitation</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Internal Gravitation</strong><br><br>
 
 Gravitational attraction <u>INSIDE</u> a planet, follows slightly different equations (though still derived from the base ones) that must be memorized. In doing this, 'r' will become less than the radius of the planet.<br><br>
 
@@ -956,7 +1175,13 @@ Using a <a href="/Physics/img/shellderivation.png">simple derivation</a>, a revo
 <strong>r</strong> = The distance of the object from the center of mass of the planet.<br>
 <strong>R</strong> = The actual radius of the planet.
 	  
-	  <br><br><br>
+	  </div><br><br>
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  
@@ -974,7 +1199,10 @@ Using a <a href="/Physics/img/shellderivation.png">simple derivation</a>, a revo
 	  <strong><a href="#HorizMassSpringDef"><span class="mw-headline" id="HorizMassSpringDef">#</span></a> <font color="#006400">Horizontal Mass-Spring System</font></strong>: A system in which a mass is attached to a spring oriented horizontally, then placed on a frictionless surface.
 <br><br><br>
 	  
-	  <strong><a href="#Rule152"><span class="mw-headline" id="Rule152">#</span></a> <font color="red">P. Rule 152.</font></strong> A <strong>Simple Harmonic Motion</strong> system is one that will continue to oscillate back and forth forever in the absense of friction. The main two types of SHM are pendulums and springs.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>Simple Harmonic Motion</strong> system is one that will continue to oscillate back and forth forever in the absense of friction. The main two types of SHM are pendulums and springs.<br><br>
 
 Any force can cause simple harmonic motion, as long as it passes these two requirements:<br><br>
 
@@ -986,7 +1214,7 @@ Any force can cause simple harmonic motion, as long as it passes these two requi
 <li>The magnitude of the restoring force must be proportional to the displacement from equilibrium position. For example, the Law of Elasticity (and thus all springs) follows this specification.
 </li>
 
-</ol><br>
+</ol></div>
 	  
 	  <strong><font color="blue"><a href="#HarmonicPositions"><span class="mw-headline" id="HarmonicPositions">#</span></a> Simple Harmonic Motion from the perspective of the three base positions:</font></strong><br><br>
 	  
@@ -1000,17 +1228,28 @@ The acceleration will be linearly proportional to the spring force, meaning it f
 When moving toward rest position, acceleration and velocity are in the same direction and thus the weight is speeding up. When moving <em>away</em> from rest position, however, the weight will now be slowing down, as the acceleration is always pointed toward the rest position (as it is tied to the force) and velocity away from it.
 <br><br><br>
 	  
-	  <strong><a href="#Rule153"><span class="mw-headline" id="Rule153">#</span></a> <font color="red">P. Rule 153.</font></strong> Simple Harmonic Motion is not Uniformly Accelerated Motion. You can't use the UAM equations for SHM. Live with it, punk.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Simple Harmonic Motion is not Uniformly Accelerated Motion. You can't use the UAM equations for SHM. Live with it, punk.
+	  </div><br><br>
 	  
 	  
 	  <strong><a href="#AmplitudeDef"><span class="mw-headline" id="AmplitudeDef">#</span></a> <font color="#006400">Amplitude</font></strong>: The magnitude of the maximum displacement from the equilibrium position, during simple harmonic motion.
 <br><br><br>
 	  
-	  <strong><a href="#Rule154"><span class="mw-headline" id="Rule154">#</span></a> <font color="red">P. Rule 154.</font></strong> The difference between horizontal and vertical mass-spring systems lies solely in how the rest position changes in a vertical system due to gravity pulling the weight downward. In practice, the equations and everything will remain the same, vertically or horizontally, as the vertical system will still oscillate around that new rest point created by the weight.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The difference between horizontal and vertical mass-spring systems lies solely in how the rest position changes in a vertical system due to gravity pulling the weight downward. In practice, the equations and everything will remain the same, vertically or horizontally, as the vertical system will still oscillate around that new rest point created by the weight.
+	  </div><br><br>
 	  
 	  
 	  
-	    <strong><a href="#Rule155"><span class="mw-headline" id="Rule155">#</span></a> <font color="red">P. Rule 155.</font></strong> <strong>Pendulum Oscillation</strong>:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Pendulum Oscillation</strong>:<br><br>
 	    
 	    A pendulum is only considered to be in Simple Harmonic Motion when has an amplitude less than 15 degrees, as a result of the restoring force of pendulums.
 	    The restoring force for a pendulum is the <strong>component of gravity in the tangential direction</strong>, hereafter referred to as "the force of gravity tangential". This has the equation mgsin(θ).<br><br>
@@ -1023,13 +1262,17 @@ As the angular displacement from rest position increases, the force of gravity t
 The force of gravity tangential is at its peak when theta equals 90, represented both in how the sine is at it's maximum value, and by how the entire force of gravity (and not just a tangential <em>component</em>) is tangential to the pendulum. Of course, this also means that -->
 
 
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule156"><span class="mw-headline" id="Rule156">#</span></a> <font color="red">P. Rule 156.</font></strong> <br>In a mass-spring system<u></u>, the displacement from the rest position is a <strong><em>linear</em> displacement</strong>, ∆x.<br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <br>In a mass-spring system<u></u>, the displacement from the rest position is a <strong><em>linear</em> displacement</strong>, ∆x.<br><br>
 
 In a <u></u>pendulum system, the displacement from the rest position is an <strong><em>angular</em> displacement</strong>, θ. This is the result of the pendulum oscillating through a small arc-length of a circle, given it is oscillating at it's maximum extension. Use radians for the units.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
 	    
@@ -1047,91 +1290,10 @@ In a <u></u>pendulum system, the displacement from the rest position is an <stro
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	    
 	    
-	    <!--
-	    
-	    <strong><a href="#Rule157"><span class="mw-headline" id="Rule157">#</span></a> <font color="red">P. Rule 157.</font></strong> <br><br><br>
-	    <strong><a href="#Rule158"><span class="mw-headline" id="Rule158">#</span></a> <font color="red">P. Rule 158.</font></strong> <br><br><br>
-	    <strong><a href="#Rule159"><span class="mw-headline" id="Rule159">#</span></a> <font color="red">P. Rule 159.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule160"><span class="mw-headline" id="Rule160">#</span></a> <font color="red">P. Rule 160.</font></strong> <br><br><br>
-	    <strong><a href="#Rule161"><span class="mw-headline" id="Rule161">#</span></a> <font color="red">P. Rule 161.</font></strong> <br><br><br>
-	    <strong><a href="#Rule162"><span class="mw-headline" id="Rule162">#</span></a> <font color="red">P. Rule 162.</font></strong> <br><br><br>
-	    <strong><a href="#Rule163"><span class="mw-headline" id="Rule163">#</span></a> <font color="red">P. Rule 163.</font></strong> <br><br><br>
-	    <strong><a href="#Rule164"><span class="mw-headline" id="Rule164">#</span></a> <font color="red">P. Rule 164.</font></strong> <br><br><br>
-	    <strong><a href="#Rule165"><span class="mw-headline" id="Rule165">#</span></a> <font color="red">P. Rule 165.</font></strong> <br><br><br>
-	    <strong><a href="#Rule166"><span class="mw-headline" id="Rule166">#</span></a> <font color="red">P. Rule 166.</font></strong> <br><br><br>
-	    <strong><a href="#Rule167"><span class="mw-headline" id="Rule167">#</span></a> <font color="red">P. Rule 167.</font></strong> <br><br><br>
-	    <strong><a href="#Rule168"><span class="mw-headline" id="Rule168">#</span></a> <font color="red">P. Rule 168.</font></strong> <br><br><br>
-	    <strong><a href="#Rule169"><span class="mw-headline" id="Rule169">#</span></a> <font color="red">P. Rule 169.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule170"><span class="mw-headline" id="Rule170">#</span></a> <font color="red">P. Rule 170.</font></strong> <br><br><br>
-	    <strong><a href="#Rule171"><span class="mw-headline" id="Rule171">#</span></a> <font color="red">P. Rule 171.</font></strong> <br><br><br>
-	    <strong><a href="#Rule172"><span class="mw-headline" id="Rule172">#</span></a> <font color="red">P. Rule 172.</font></strong> <br><br><br>
-	    <strong><a href="#Rule173"><span class="mw-headline" id="Rule173">#</span></a> <font color="red">P. Rule 173.</font></strong> <br><br><br>
-	    <strong><a href="#Rule174"><span class="mw-headline" id="Rule174">#</span></a> <font color="red">P. Rule 174.</font></strong> <br><br><br>
-	    <strong><a href="#Rule175"><span class="mw-headline" id="Rule175">#</span></a> <font color="red">P. Rule 175.</font></strong> <br><br><br>
-	    <strong><a href="#Rule176"><span class="mw-headline" id="Rule176">#</span></a> <font color="red">P. Rule 176.</font></strong> <br><br><br>
-	    <strong><a href="#Rule177"><span class="mw-headline" id="Rule177">#</span></a> <font color="red">P. Rule 177.</font></strong> <br><br><br>
-	    <strong><a href="#Rule178"><span class="mw-headline" id="Rule178">#</span></a> <font color="red">P. Rule 178.</font></strong> <br><br><br>
-	    <strong><a href="#Rule179"><span class="mw-headline" id="Rule179">#</span></a> <font color="red">P. Rule 179.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule180"><span class="mw-headline" id="Rule180">#</span></a> <font color="red">P. Rule 180.</font></strong> <br><br><br>
-	    <strong><a href="#Rule181"><span class="mw-headline" id="Rule181">#</span></a> <font color="red">P. Rule 181.</font></strong> <br><br><br>
-	    <strong><a href="#Rule182"><span class="mw-headline" id="Rule182">#</span></a> <font color="red">P. Rule 182.</font></strong> <br><br><br>
-	    <strong><a href="#Rule183"><span class="mw-headline" id="Rule183">#</span></a> <font color="red">P. Rule 183.</font></strong> <br><br><br>
-	    <strong><a href="#Rule184"><span class="mw-headline" id="Rule184">#</span></a> <font color="red">P. Rule 184.</font></strong> <br><br><br>
-	    <strong><a href="#Rule185"><span class="mw-headline" id="Rule185">#</span></a> <font color="red">P. Rule 185.</font></strong> <br><br><br>
-	    <strong><a href="#Rule186"><span class="mw-headline" id="Rule186">#</span></a> <font color="red">P. Rule 186.</font></strong> <br><br><br>
-	    <strong><a href="#Rule187"><span class="mw-headline" id="Rule187">#</span></a> <font color="red">P. Rule 187.</font></strong> <br><br><br>
-	    <strong><a href="#Rule188"><span class="mw-headline" id="Rule188">#</span></a> <font color="red">P. Rule 188.</font></strong> <br><br><br>
-	    <strong><a href="#Rule189"><span class="mw-headline" id="Rule189">#</span></a> <font color="red">P. Rule 189.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule190"><span class="mw-headline" id="Rule190">#</span></a> <font color="red">P. Rule 190.</font></strong> <br><br><br>
-	    <strong><a href="#Rule191"><span class="mw-headline" id="Rule191">#</span></a> <font color="red">P. Rule 191.</font></strong> <br><br><br>
-	    <strong><a href="#Rule192"><span class="mw-headline" id="Rule192">#</span></a> <font color="red">P. Rule 192.</font></strong> <br><br><br>
-	    <strong><a href="#Rule193"><span class="mw-headline" id="Rule193">#</span></a> <font color="red">P. Rule 193.</font></strong> <br><br><br>
-	    <strong><a href="#Rule194"><span class="mw-headline" id="Rule194">#</span></a> <font color="red">P. Rule 194.</font></strong> <br><br><br>
-	    <strong><a href="#Rule195"><span class="mw-headline" id="Rule195">#</span></a> <font color="red">P. Rule 195.</font></strong> <br><br><br>
-	    <strong><a href="#Rule196"><span class="mw-headline" id="Rule196">#</span></a> <font color="red">P. Rule 196.</font></strong> <br><br><br>
-	    <strong><a href="#Rule197"><span class="mw-headline" id="Rule197">#</span></a> <font color="red">P. Rule 197.</font></strong> <br><br><br>
-	    <strong><a href="#Rule198"><span class="mw-headline" id="Rule198">#</span></a> <font color="red">P. Rule 198.</font></strong> <br><br><br>
-	    <strong><a href="#Rule199"><span class="mw-headline" id="Rule199">#</span></a> <font color="red">P. Rule 199.</font></strong> <br><br><br>
-	    
-	    
-	    
-	    
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">P. Rule 10.</font></strong> <br><br><br>
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">P. Rule 11.</font></strong> <br><br><br>
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">P. Rule 12.</font></strong> <br><br><br>
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">P. Rule 13.</font></strong> <br><br><br>
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">P. Rule 14.</font></strong> <br><br><br>
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">P. Rule 15.</font></strong> <br><br><br>
-	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">P. Rule 16.</font></strong> <br><br><br>
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">P. Rule 17.</font></strong> <br><br><br>
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">P. Rule 18.</font></strong> <br><br><br>
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">P. Rule 19.</font></strong> <br><br><br>
-	    
-	    
-	    
-	    
-	    
-	    <strong><a href="#Rule0"><span class="mw-headline" id="Rule0">#</span></a> <font color="red">P. Rule 0.</font></strong> <br><br><br>
-	    <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">P. Rule 1.</font></strong> <br><br><br>
-	    <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">P. Rule 2.</font></strong> <br><br><br>
-	    <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">P. Rule 3.</font></strong> <br><br><br>
-	    <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">P. Rule 4.</font></strong> <br><br><br>
-	    <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">P. Rule 5.</font></strong> <br><br><br>
-	    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">P. Rule 6.</font></strong> <br><br><br>
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">P. Rule 7.</font></strong> <br><br><br>
-	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">P. Rule 8.</font></strong> <br><br><br>
-	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">P. Rule 9.</font></strong> <br><br><br>
-	    
-	    -->
-	    
 	  </article>
 	  
 	  
-	</div>
+	</div></div>
 	
 	<div class="General links">
 		links
@@ -1163,7 +1325,7 @@ In a <u></u>pendulum system, the displacement from the rest position is an <stro
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 11 2025</span><br>
+      	<span class="tiny">Last Change: February 28 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -25,6 +25,36 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -92,7 +122,9 @@
           <a href="#EnergyWells">VII.VI Energy Wells.</a>
         </div>
       </div>
-
+    
+    <div class="rules" data-start="87">
+    
 	  <hr>
 	    <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="EWork">VII. Energy and Work</span></h2>
@@ -122,17 +154,28 @@ Work is a result of the dot product between Force and displacement. As before, t
 The 'net work' is the sum of the individual works of each force - if you want, you can combine all of the forces into the net force using vector decomposition and then recomposition, and then get the work from there.
 <br><br><br><br>
 	  
-	  <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">P. Rule 87.</font></strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Every force that is being applied to the object is producing its own work on the object, whether positive or negative. <br><br><u>Important</u>: The direction of the force being applied is totally independent of the direction of the displacement of the object. If you hold an object and slowly move it downward, you are still applying a positive force on the object.
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">P. Rule 88.</font></strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Work as a <u>Non-Constant Force</u>:</strong><br><br>
 $$W = \int_{x_i}^{x_f} F_x \, dx$$<br>
 Use with discretion. Whenever you see force with a variable, you must immediately recognize that it is a non-constant force, and that it will need to be integrated.
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">P. Rule 89.</font></strong><br>
-Gravity acts separately than the other forces with respect to work. Instead of using the total displacement and having θ act respective to it, the displacement for gravitational work is only vertical displacement, because gravity works strictly in the vertical direction, a quality other forces do not share. This is a result of gravity being a conservative force - see section VII.IV for more information.
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong><br>Gravity acts separately than the other forces with respect to work. Instead of using the total displacement and having θ act respective to it, the displacement for gravitational work is only vertical displacement, because gravity works strictly in the vertical direction, a quality other forces do not share. This is a result of gravity being a conservative force - see section VII.IV for more information.
+</div><br><br>
 
-<br><br><br>
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -180,7 +223,10 @@ There is no <em>real</em> situation in which a system is isolated, because of ai
 <br><br><br>
 
 
-<strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">P. Rule 90.</font></strong> Kinetic Energy: SCALAR.<br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Kinetic Energy: SCALAR.<br>
 	   <u><strong>Units</strong></u>: Joules.<br><br><br>
 	  
 	  <u><strong>Equation</strong></u>: The equation for it is <a href="/Physics/img/kineticintegration.png">derived from the non-constant work equation</a>:<br><br>
@@ -195,17 +241,24 @@ The energy associated with the motion of the object. It can never be negative.<b
 
 On occasion, a question, will simply refer to the "initial energy", or something of the sort. This is in reference specifically to <u>kinetic</u> energy, not mechanical energy as a whole.
 
-<br><br><br><br>
+</div><br><br><br>
 
 <strong><a href="#RigidBody"><span class="mw-headline" id="RigidBody">#</span></a> <font color="#006400">Rigid Body</font></strong>: A solid object that does not deform or change shape when external forces are applied. Thus, a spring is not a rigid body, due to the Elastic Limit. All 'Rigid bodies/objects with shape' are are just objects that do not change shape and are larger than point particles.<br><br><br>
 
-<strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">P. Rule 91.</font></strong> Work–Kinetic energy theorem: Kinetic Energy and Work are both measurements of energy in Joules. An increase in the kinetic energy of a rigid body is caused by an equal amount of positive work done on the body by the net force acting on that body. Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the net force.
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Work–Kinetic energy theorem: Kinetic Energy and Work are both measurements of energy in Joules. An increase in the kinetic energy of a rigid body is caused by an equal amount of positive work done on the body by the net force acting on that body. Conversely, a decrease in kinetic energy is caused by an equal amount of negative work done by the net force.
 
 <br><br> Despite what the elites will tell you, there IS an assumption built into this theorem: the constancy of mass/inertia. An example where the Work-Energy Theorem fails (due to this assumption) is in rocket mechanics because such systems' masses change with time.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">P. Rule 92.</font></strong> When dealing with a graph of the force acting on an object moving over a displacement, that would be the exact situation in which you can sum the area underneath the curve in order to find work: When the force is not a constant, integrating a Force vs. Displacement graph will give you work.<br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When dealing with a graph of the force acting on an object moving over a displacement, that would be the exact situation in which you can sum the area underneath the curve in order to find work: When the force is not a constant, integrating a Force vs. Displacement graph will give you work.<br><br>
 From this graph, you can determine a lot of things, including the 1. greatest and lowest kinetic energy, the 2. greatest and lowest speed of the object, and the 3. points at which it is at zero speed.<br><br>
 ALWAYS remember that Work is just the change in Kinetic Energy, so you must always sum the areas beginning at ∆<span class="vecteur"><strong>r</strong></span> = 0. In other words, the first limit of integration, no matter what the second is (e.g. what point you pick on the graph), is zero.<br><br>
 <strong>1.</strong> By the Work–Kinetic energy theorem (see Rule 91), the kinetic energy is greatest where the work is greatest and thus inversely is lowest where the work is lowest, and thus the point on the graph where there is the greatest area of positive work (when the area of the force over the displacement is summed through integration) would be the point at which the kinetic area is greatest. The point on the graph with the greatest area of NEGATIVE work (summed negative force) will have the lowest kinetic energy.<br><br>
@@ -214,11 +267,15 @@ ALWAYS remember that Work is just the change in Kinetic Energy, so you must alwa
 
 <strong>3.</strong> The speed/velocity will be at zero when the kinetic energy will be at zero, which will be when the work is zero, which will be when the areas of the positive work and negative work cancel out. 
 
-<br><br><br>
+</div><br><br>
+
 
 <strong><a href="#PotentialEnergy1"><span class="mw-headline" id="PotentialEnergy1">#</span></a> <font color="#006400">Potential Energy</font></strong>: The energy stored in an object that has the potential to turn into different types of energy, such as kinetic energy.<br><br><br>
 
-<strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">P. Rule 93.</font></strong> Gravitational Potential Energy: SCALAR.<br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Gravitational Potential Energy: SCALAR.<br>
 	   <u><strong>Units</strong></u>: Joules.<br><br><br>
 	  
 	  <u><strong>Equation</strong></u>: PE<sub>g</sub> = m × g × h<br><br>
@@ -236,9 +293,13 @@ If you were to place the horizontal zero line above the object, h would be negat
 
  Because m and g are always positive, it is h that determines the sign of the gravitational potential energy.
 	  
-	  <br><br><br><br>
+	  </div><br><br><br>
 	  
-	  <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">P. Rule 94.</font></strong> Elastic Potential Energy: SCALAR.<br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Elastic Potential Energy: SCALAR.<br>
 	   <u><strong>Units</strong></u>: Joules.<br><br><br>
 	  
 	  <u><strong>Equation</strong></u>: PE<sub>e</sub> = 1/2 × k × ∆x² (SAME EQUATION AS SPRING WORK)<br><br>
@@ -252,10 +313,13 @@ If you were to place the horizontal zero line above the object, h would be negat
 	  When a spring is elongated or compressed, the elastic potential energy can be converted into kinetic energy and gravitational potential energy.<br><br>
 	  Remember that the spring constant is directly proportional to the amount of force it takes to compress or elongate a spring. Because the spring constant is always positive, and because the displacement is squared, elastic potential energy is always positive.
 	  
-	  <br><br><br><br>
+	  </div><br><br><br>
 
 
-    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">P. Rule 95.</font></strong> The usage of the conservation of mechanical energy as a means of problem solving can come in unexpected ways. In the places where it is applicable, such as the movement of something through gravity (while ignoring air resistance), the formation of the full conservation equation (incorporating all of the component energies) can be useful:<br><br>
+    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The usage of the conservation of mechanical energy as a means of problem solving can come in unexpected ways. In the places where it is applicable, such as the movement of something through gravity (while ignoring air resistance), the formation of the full conservation equation (incorporating all of the component energies) can be useful:<br><br>
     ME<sub>i</sub> = ME<sub>f</sub><br>
     KE<sub>i</sub> + PE<sub>gi</sub> + PE<sub>ei</sub> = KE<sub>f</sub> + PE<sub>gf</sub> + PE<sub>ef</sub><br>
     <br>
@@ -263,10 +327,13 @@ If you were to place the horizontal zero line above the object, h would be negat
     
     Whatever can be canceled out will simplify the equation, and it will be useful in a variety of circumstances.
     
-    <br><br><br>
+    </div><br><br>
     
 	    
-	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">P. Rule 96.</font></strong> <strong>The signs of the individual works of the mechanical energies:</strong><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The signs of the individual works of the mechanical energies:</strong><br><br>
 	    
 	    <u>When Expanding</u>, the work done by the force of a spring is positive, because the spring converts all the initial elastic potential energy into kinetic energy.<br><br>
 
@@ -278,17 +345,25 @@ The work done by the force of kinetic friction is negative because it converts k
 
 <u>When Moving Downward</u>, the work done by the force of gravity is positive because it converts gravitational potential energy into kinetic energy as the object moves in the direction of the gravitational force.<br><br>
 
-End of story.<br><br><br>
+End of story.
+</div><br><br>
 	    
 	    
-	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">P. Rule 97.</font></strong> When the work by the force applied to an object is equal to zero (W<sub>Fa</sub> = 0), the work done by friction is equal to the change in mechanical energy.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When the work by the force applied to an object is equal to zero (W<sub>Fa</sub> = 0), the work done by friction is equal to the change in mechanical energy.<br><br>
 W<sub>f</sub> = ∆ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(when W<sub>Fa</sub> = 0)<br>
 F<sub>f</sub> × d × cos(θ) = ME<sub>f</sub> - ME<sub>i</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;(when W<sub>Fa</sub> = 0)<br><br>
 As you should see, the Conservation of Energy equation is a mere special case of this friction work equation, occuring when friction is equal to zero (because ME<sub>i</sub> can be moved to the other side).
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">P. Rule 98.</font></strong> When a question tries to sneak past you that the 'mass' of an object is in Newtons (or another force-based unit), like stating that a "67 N ball" was dropped, the "Newtons" is simply referring to the weight of the ball, e.g. the force of gravity acting on the ball. Incorporating this into your calculations, you can calculate the mass by finding the net force in y-direction (or whichever direction the normal force is in, tilted axes or otherwise) and isolating m as needed.<br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When a question tries to sneak past you that the 'mass' of an object is in Newtons (or another force-based unit), like stating that a "67 N ball" was dropped, the "Newtons" is simply referring to the weight of the ball, e.g. the force of gravity acting on the ball. Incorporating this into your calculations, you can calculate the mass by finding the net force in y-direction (or whichever direction the normal force is in, tilted axes or otherwise) and isolating m as needed.
+</div><br><br>
 
 
 </article>
@@ -297,7 +372,10 @@ As you should see, the Conservation of Energy equation is a mere special case of
 	    </header>
 	    <article>
 
-<strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">P. Rule 99.</font></strong> <strong>Conservative Force</strong>: A force in which the work done on an object is the same regardless of the path taken by the object. Conservative forces can return the kinetic energy back to the system after taking it away, conserving the mechanical energy - hence, conservative forces. It thus follows that nonconservative forces cannot have the conservation of energy laws applied.<br><br> Examples of conservative forces include the following:<br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Conservative Force</strong>: A force in which the work done on an object is the same regardless of the path taken by the object. Conservative forces can return the kinetic energy back to the system after taking it away, conserving the mechanical energy - hence, conservative forces. It thus follows that nonconservative forces cannot have the conservation of energy laws applied.<br><br> Examples of conservative forces include the following:<br>
   <ol>
 <li>Force of Gravity</li>
 <li>Spring Force</li>
@@ -313,7 +391,8 @@ Additionally, you can integrate both sides to get the following form:<br><br>
 $$\int_{x_i}^{x_f} F_x \, dx = -∆U$$<br><br>
 Both equations are applicable in different circumstances, being the same equation represented in different ways.
   
-  <br><br><br>
+  </div><br><br>
+  
   
   <strong><a href="#NonConservativeForce"><span class="mw-headline" id="NonConservativeForce">#</span></a> <font color="#006400">Nonconservative Force</font></strong>: A force in which the work done on an object depends on the path taken by the object. Examples include the following:<br>
   <ol>
@@ -378,8 +457,10 @@ When you rub your hands together, the kinetic energy of the motion of your hands
 
 <br><br><br><br>
 
-
-<strong><a href="#Rule100"><span class="mw-headline" id="Rule100">#</span></a> <font color="red">P. Rule <u>100</u>. <!--celebration! woo~~~~!--></font></strong> <strong>Energy Transfer Equation Cheatsheet:</strong> <br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <u><span class="rule-number"></span></u>.<!--celebration! woo~~~~!--></font>
+        </strong><br><br><br>
 
 <strong>Basic Principles:</strong><br><br>
 
@@ -406,25 +487,43 @@ When you rub your hands together, the kinetic energy of the motion of your hands
 9. <strong>$$\int_{x_i}^{x_f} F_{conservative} \, dx = -∆U$$</strong> <a href="/Physics/MechanicsFull2#Rule99">[]</a>
 
 
-<br><br><br>
+</div><br><br>
 
-	    <strong><a href="#Rule101"><span class="mw-headline" id="Rule101">#</span></a> <font color="red">P. Rule 101.</font></strong> Identifying what forces are external and internal are very important to using the energy system equations: When the force is external, represent it using work, and if the force is internal, represent it using Potential Energy. See Rule 102 for how to determine whether a force is internal or external.<br><br><br>
+
+
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Identifying what forces are external and internal are very important to using the energy system equations: When the force is external, represent it using work, and if the force is internal, represent it using Potential Energy. See Rule 102 for how to determine whether a force is internal or external.
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule102"><span class="mw-headline" id="Rule102">#</span></a> <font color="red">P. Rule 102.</font></strong> Defining what forces acting on a system are external and internal is not as bad as you may think:<br><br>
-
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Defining what forces acting on a system are external and internal is not as bad as you may think:<br><br>
 
 Suppose you have a system containing objects A and B, and a second system containing objects C and D. Any force object A exerts on B (or vice versa) is internal, because it is a force resulting from the interaction of two objects defined to be a part of the same system. If C or D exerted a force on A or B (or A or B exerted on C or D), the force is external, because the interaction involves objects that are and aren't in the system.<br><br> 
 
-In the first case, quantities such as momentum and total energy will be conserved because the force was internal. This does not hold true in the second case, because the force was external.<br><br><br>
+In the first case, quantities such as momentum and total energy will be conserved because the force was internal. This does not hold true in the second case, because the force was external.
+</div><br><br>
 	    
 	    
-	    <strong><a href="#Rule103"><span class="mw-headline" id="Rule103">#</span></a> <font color="red">P. Rule 103.</font></strong> Gravitational energy only exists when you have at least two objects in your system: When the Earth is not part of the system, and there is only one object in the system, then the system cannot have gravitational potential energy. Thus, the work done by the force of gravity will be an external force when the system is not declared to include the Earth, or whatever planet the event is occurring on.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Gravitational energy only exists when you have at least two objects in your system: When the Earth is not part of the system, and there is only one object in the system, then the system cannot have gravitational potential energy. Thus, the work done by the force of gravity will be an external force when the system is not declared to include the Earth, or whatever planet the event is occurring on.<br><br>
 
-Newton's third law force pairs are always internal forces. When a system includes an object and the Earth, the force of gravity of the object acting on the block, and the force of gravity of the object acting on the earth, are equal in magnitude and opposite in direction. This does NOT mean that the force normal and force of gravity go together; Force Normal is <u>always</u> an external force.<br><br><br>
+Newton's third law force pairs are always internal forces. When a system includes an object and the Earth, the force of gravity of the object acting on the block, and the force of gravity of the object acting on the earth, are equal in magnitude and opposite in direction. This does NOT mean that the force normal and force of gravity go together; Force Normal is <u>always</u> an external force.
+</div><br><br>
 
 
-<strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">P. Rule 104.</font></strong> Know that instead of just summing the forces in one direction at a time, you can sum all of them at once in unit vector form, where you assign each of the forces <strong>i&#x302;</strong>, -<strong>i&#x302;</strong>, <strong>j&#x302;</strong>, or -<strong>j&#x302;</strong> depending on their direction. If the force is not squarely in a unit vector direction (e.g., it is at an angle not cleanly divisible by 90), then just incorporate both <strong>i&#x302;</strong> & <strong>j&#x302;</strong> into one force. Know that you should also write acceleration in it unit vector form if you can. Once you have an equation in this unit vector form, you can once again isolate the x and y direction vectors to solve for any missing variables. <br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Know that instead of just summing the forces in one direction at a time, you can sum all of them at once in unit vector form, where you assign each of the forces <strong>i&#x302;</strong>, -<strong>i&#x302;</strong>, <strong>j&#x302;</strong>, or -<strong>j&#x302;</strong> depending on their direction. If the force is not squarely in a unit vector direction (e.g., it is at an angle not cleanly divisible by 90), then just incorporate both <strong>i&#x302;</strong> & <strong>j&#x302;</strong> into one force. Know that you should also write acceleration in it unit vector form if you can. Once you have an equation in this unit vector form, you can once again isolate the x and y direction vectors to solve for any missing variables. 
+</div><br><br>
+
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -464,6 +563,7 @@ A <strong>turning point</strong> is a point x at which the particle reverses its
 	    
 	  </article>
 	</div>
+	</div>
 	
 	<div class="General links">
 		links
@@ -495,7 +595,7 @@ A <strong>turning point</strong> is a point x at which the particle reverses its
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong>Energy and Work</strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 10 2025</span><br>
+      	<span class="tiny">Last Change: February 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

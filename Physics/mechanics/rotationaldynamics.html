@@ -24,6 +24,36 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Classical_Mechanics.png" width=46%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -81,6 +111,10 @@
         
       </div>
 	  <hr>
+	  
+	  <div class="rules" data-start="124">
+	  
+	  
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="RotationalDynamics">IX. Rotational Dynamics</span></h2>
 	    <h3><span class="mw-headline" id="MomentOfInertia">IX.I Moment of Inertia.</span></h3>
@@ -119,7 +153,10 @@ In essence, the equations for moment of inertia state that as the distance from 
 	  <br><br><br><br>
 	  
 	  
-	  <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">P. Rule 124.</font></strong> <strong>Kinetic Energy of Rotation:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Kinetic Energy of Rotation:</strong><br><br>
       
       The Kinetic Energy of old has failed us. Since the classic kinetic energy formula is only with regard to the center of mass of the object (this is called "translational" kinetic energy), a uniform object in rotational motion would be considered to have zero kinetic energy - ignorantly. This equation is inadequate to deal with such pressing questions of modern physics as the kinetic energy contained in a spinning object - all objects in motion must have kinetic energy.<br><br>
       Thus, a new form of kinetic energy must be discovered: the summation of the kinetic energies of every particle of the system, in the process reimagining the object as a system of particles, each with its own velocity that can contribute to the whole:
@@ -135,7 +172,8 @@ In essence, the equations for moment of inertia state that as the distance from 
       
       During all conservation of mechanical energy problems, you must account for both Translational and Rotational Kinetic Energy. An object can be in rotational and translational motion at the same time, occurring when both the center of mass of the object is moving through space, and the object itself is in centripetal motion, such as when the object is rolling.
       
-      <br><br><br>
+      </div><br><br>
+      
       
       <strong><font color="blue"><a href="#InertiasEx"><span class="mw-headline" id="InertiasEx">#</span></a> Basic Rotational Inertias:</font></strong><br><br>
         Here are the Moments of Inertia of some basic rigid objects with constant density. Recall that 'M' is m<sub>total</sub>.<br><br>
@@ -184,7 +222,10 @@ In essence, the equations for moment of inertia state that as the distance from 
 	  
 	  <br><br><br><br>
 	    
-	    <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">P. Rule 125.</font></strong> <STRONG>ANALYSIS OF TORQUE.</STRONG><BR><BR>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <STRONG>ANALYSIS OF TORQUE.</STRONG><BR><BR>
 	    Think of the opening of a door: The door handle will be positioned as far from the hinges as possible, since the hinges represent the axis of rotation. If you push on the part of the door close to the hinges, it will barely budge. This is because by pushing farther away from the hinges, a larger r value is created (thus producing more torque), and by pushing close the hinges, a smaller r value is created, thus creating less torque.
 	    
 	    <br><br> Furthermore, the angle at which the door is pushed will matter significantly due to the sin curve - the maximum value for the sine of angle is at 90 degrees (1), so pushing perpendicular to the door will result in the most angular acceleration, while other degrees will produce less. A perpendicular force would produce the minimum force necessary to produce torque - other angles at which force can be applied would require higher magnitudes of force to reach the same level of torque. If you push directly parallelly to the direction of <span class="vecteur"><strong>r</strong></span>, e.g. directly toward the hinges from the side of the handle, then an angle of 180 will be created, resulting in no torque whatsoever (since sin(180) = 0).<br><br>
@@ -198,7 +239,8 @@ Understand that the direction of the <span class="vecteur"><strong>r</strong></s
 	    
 	    Torque is NOT the same as work - torque uses the <u>direction</u> of the variables.
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
       <strong><font color="#006400"><a href="#MomentLeverDef"><span class="mw-headline" id="MomentLeverDef">#</span></a> Moment Arm/Lever Arm</font></strong>: The Perpendicular distance between the line of action of the force and the axis of rotation. The "<strong>line of action</strong>" is just the artificial extension of the force through space until it can form a right angle with the also artificially created "moment arm".
 
@@ -212,19 +254,27 @@ This is something that you are guaranteed to do during a problem at some point: 
       
       <br><br><br>
       
-      <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">P. Rule 126.</font></strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> To sum the torques of the various forces acting upon a position vector, you merely have to add all of the calculated torques of each force together. Make sure to determine the direction of each torque using the right-hand rule, as this will tell you which torques are negative or positive. The sign of your answer will serve as the "direction" of the torque, either positively or negatively perpendicular to the force and position vector.<br><br>
       When summing the torques, you have to sum the torque of EVERY force, including gravity and the normal force. If the axis of rotation is centered at the center of mass, then the torque of gravity can be set to zero since it has an <span class="vecteur">r</span> of 0. You must be careful not to place the normal force as being located at the center of mass of the object - that is an old oversight that must be corrected - See Rule 141.<br><br>
       
       If a question is directly asking to find "the net force", just sum the torques without setting it equal to I × <span class="vecteur">α</span>. See Rule 127 for an example.
       
-      <br><br><br>
+      </div><br><br>
       
-      <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">P. Rule 127.</font></strong> <strong>Rotational Form of Newton's Second Law:</strong><br><br>
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Rotational Form of Newton's Second Law:</strong><br><br>
       <strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span> = I × <span class="vecteur"><strong>α</strong></span></strong>. <br><br>The sum of the torque is equal to the moment of inertia times the angular acceleration. The angular acceleration is directly proportional to the magnitude of the net torque, and is inversely proportional to the moment of inertia. <br><br>
       
         In order to use this equation, you must identify the objects with torque, the axis of rotation of them, and which direction is positive torque. 
       
-      <br><br><br>
+      </div><br><br>
+      
       
       <strong><font color="#006400"><a href="#RotateEquilibriumDef"><span class="mw-headline" id="RotateEquilibriumDef">#</span></a> Rotational Equilibrium</font></strong>: When, as a result of a net zero torque (which in turn causes zero angular acceleration), the object remains at rest or at a constant angular velocity.
 
@@ -238,22 +288,38 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
       
       <br><br><br>
       
-      <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">P. Rule 128.</font></strong> In all situations, if there are objects that are on top of other objects, and you are including the bottom objects in your force summation, then you do not need to include the force normals of the objects on top, only their forces of gravity. This is because the weight of the top objects will just contribute to the force normal of the bottom object.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In all situations, if there are objects that are on top of other objects, and you are including the bottom objects in your force summation, then you do not need to include the force normals of the objects on top, only their forces of gravity. This is because the weight of the top objects will just contribute to the force normal of the bottom object.<br><br>
       
       Secondly, ALWAYS include ALL of the objects in the summation of the torques, including the objects on bottom and on top and anything in between. When determining if the torques are positive or not, don't forget you need to use the old right hand rule to figure it out, using the forces as your guide. Draw out the free-body diagram and draw the arrows on the forces to make it easier on yourself.<br><br>
       
       
       Don't forget the principle of single direction (see Rule 78) in all pulley problems. The direction you decide the torque to be moving in will change how you conduct force summations for any hanging objects, summing with regard to the direction that you decided would be positive, whether it be the clockwise or counter-clockwise movement of the pulley. Thus, for an object on the side of the pulley that would denote positive movement (whatever you decided that means) would have the force of gravity as a negative force, while a hanging object on the other side would have gravity as a positive.
       
-      <br><br><br><!--homework rules: rules that were created when actually out in the field appliying the base knowledge of the previous, lecture rules, into practice, thus gaining actually useful insight into how problems relating to a concept will generally work. For the student, homework rules will be much more valuable, but for the reviewer before the test, the lecture rules are what you want to look at. -->
+      </div><br><br><!--homework rules: rules that were created when actually out in the field appliying the base knowledge of the previous, lecture rules, into practice, thus gaining actually useful insight into how problems relating to a concept will generally work. For the student, homework rules will be much more valuable, but for the reviewer before the test, the lecture rules are what you want to look at. -->
       
-      <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">P. Rule 129.</font></strong> To solve static equilibrium problems, you can chose 1 of two placements of the axis of rotation for your torque summations: 
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> To solve static equilibrium problems, you can chose 1 of two placements of the axis of rotation for your torque summations: 
       <br><br> 1. You can set the axis of rotation all the way to the end of the main object (the saw or meterstick or whichever similar object), which can best be done in circumstances where the force normal has already been determined (whether through the y-direction force summation or other means). 
-      <br><br>2. You can set the axis of rotation to be at an exact point, whether one you want to find (such as a point whose <span class="vecteur">r</span> value you are trying to find) or one you want to remove all together in order to isolate another variable (in situations which you have two unknown variables, and placing the axis of rotation upon one point will remove that variable, allowing the other one to be solved).<br><br><br><!--Homework rule-->
+      <br><br>2. You can set the axis of rotation to be at an exact point, whether one you want to find (such as a point whose <span class="vecteur">r</span> value you are trying to find) or one you want to remove all together in order to isolate another variable (in situations which you have two unknown variables, and placing the axis of rotation upon one point will remove that variable, allowing the other one to be solved).
+      </div><br><br><!--Homework rule-->
       
-      <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">P. Rule 130.</font></strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3#InertiasEx">basic rotational inertias</a>.<br><br><br>
       
-      <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">P. Rule 131.</font></strong> <strong>Parallel Axis Theorem</strong>:<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3#InertiasEx">basic rotational inertias</a>.
+      </div><br><br>
+      
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Parallel Axis Theorem</strong>:<br><br>
       <strong>I<sub>parallel</sub> = I<sub>COM</sub> + M × D²</strong><br><br>
 
 <strong>I<sub>parallel</sub></strong> = The moment of inertia parallel to an axis through center of mass.<br>
@@ -264,13 +330,24 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
 
 This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3#InertiasEx">Basic Rotational Inertias</a>" from the first).
       
-      <br><br><br>
+      </div><br><br>
       
-      <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">P. Rule 132.</font></strong> Do not forget how to correlate rotational and linear acceleration/velocity - you learned this before.<br><br>On a pulley system in which a string pull downward upon the circular pulley, pulling into centripetal motion, the pulley will be accelerating (angularly) at a proportional rate to the string (linearly), since the string can only move downward as the pulley/circular object moves with it. In these circumstances, remember that the string is moving at a tangential acceleration, which already has a proportionality defined for it:<br><br><strong>a<sub>t</sub> = r × α.</strong><br><br> Tangential Velocity is practically the same thing as well, just with angular velocity instead of acceleration.<br><br>
       
-      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq#V-I">here</a>.<br><br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Do not forget how to correlate rotational and linear acceleration/velocity - you learned this before.<br><br>On a pulley system in which a string pull downward upon the circular pulley, pulling into centripetal motion, the pulley will be accelerating (angularly) at a proportional rate to the string (linearly), since the string can only move downward as the pulley/circular object moves with it. In these circumstances, remember that the string is moving at a tangential acceleration, which already has a proportionality defined for it:<br><br><strong>a<sub>t</sub> = r × α.</strong><br><br> Tangential Velocity is practically the same thing as well, just with angular velocity instead of acceleration.<br><br>
       
-      <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">P. Rule 133.</font></strong> <strong>Negligible friction</strong>: Though a pulley can be stated to have "negligible friction", if this were actually true, any strings/wire upon it would just slide off and the pulley would never rotate. The meaning of "negligible friction" when stated with regard to a pulley is that the <strong>Axle</strong> of the pulley, the center rotatinal axis, has negligible friction - the surface of the pulley still has the necessary friction to interact with the string, enough so that the acceleration of the pulley and the string are proportional to one another. See Rule 132 for an explanation.<br><br><br>
+      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq#V-I">here</a>.
+      </div><br><br>
+      
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Negligible friction</strong>: Though a pulley can be stated to have "negligible friction", if this were actually true, any strings/wire upon it would just slide off and the pulley would never rotate. The meaning of "negligible friction" when stated with regard to a pulley is that the <strong>Axle</strong> of the pulley, the center rotatinal axis, has negligible friction - the surface of the pulley still has the necessary friction to interact with the string, enough so that the acceleration of the pulley and the string are proportional to one another. See Rule 132 for an explanation.
+      </div><br><br>
+      
       
       <strong><font color="#006400"><a href="#CycloidDef"><span class="mw-headline" id="CycloidDef">#</span></a> Cycloid</font></strong>: A curve traced by a point on a circle rolling in a straight line.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Cycloid_animated.gif"><img src="/Physics/img/Cycloid_animated.gif" alt="Cycloid. Courtesy of Wikimedia." width=44%/></a></div>
@@ -278,7 +355,10 @@ This theorem is an easy way to determine the moment of inertia of a rigid body, 
       
       <br><br><br>
       
-      <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">P. Rule 134.</font></strong> All objects that roll without slipping, such as cylinders and all good tires, have a total kinetic energy that equals the sum of the translational and rotational kinetic energies of the object:<br><br><strong>KE<sub>total</sub> = KE<sub>T</sub> + KE<sub>R</sub></strong><br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> All objects that roll without slipping, such as cylinders and all good tires, have a total kinetic energy that equals the sum of the translational and rotational kinetic energies of the object:<br><br><strong>KE<sub>total</sub> = KE<sub>T</sub> + KE<sub>R</sub></strong><br><br>
       
       <strong>KE<sub>total</sub> = (½ × m × v²) + (½ × I × ω²)</strong><br><br>
 
@@ -288,10 +368,13 @@ For example, if a hollow sphere and a solid sphere (the radius of each being neg
 
 If you do not know either component variable of rotational inertia (either mass & length or mass & radius), then it can be better <u>not</u> to substitute in the equation for rotational inertia into the problem, to leave I as only one unknown in the rotational kinetic energy equation. Sometimes, problems will tell you the specificities for a known moment of inertia ("a thin rod that rotates around one end"), but they will only serve as red herrings when no information as to the components of inertial mass is given, and so isolating the variable <em>I</em> itself and solving it outright will be the correct solution.<br><br> Do not fall into the dogma of having to substitute every possible equation in at all times - solving something on a higher level first can help you in many different ways.
 
-      <br><br><br>
+      </div><br><br>
       
       
-      <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">P. Rule 135.</font></strong> The acceleration and velocities of the center of masses of objects that roll without slipping (translational, obviously) also have their own equations, totally identical to their tangential equivalents:<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The acceleration and velocities of the center of masses of objects that roll without slipping (translational, obviously) also have their own equations, totally identical to their tangential equivalents:<br><br>
 
 <strong>v<sub>com</sub> = R × ω</strong><br>
 <strong>a<sub>com</sub> = R × α</strong><br><br>
@@ -302,8 +385,8 @@ The equation for the distance travelled by the center of mass of the rolling obj
 
 <strong>∆x<sub>com</sub> = R × ∆θ</strong>
 
-<br><br><br>
-<!--slave to future self: your future self is uninterested in the level of hard work you had to do in the past to reach your results, it only cares about the end result. Your future self does not care about how you wanted to stay in bed past your alarm, he needs to have the results of the person who didn't.-->
+</div><br><br>
+<!--your future self is uninterested in the level of hard work you had to do in the past to reach your results, it only cares about the end result. Your future self does not care about how you wanted to stay in bed past your alarm, he needs to have the results of the person who didn't.-->
 
 </article>
 	    <header class="articleHeader"><hr>
@@ -311,7 +394,10 @@ The equation for the distance travelled by the center of mass of the rolling obj
 	    </header>
 	    <article>
 
-<strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a><!--IVE TRIED NOTHING EVERYTHING WORKS--> <font color="red">P. Rule 136.</font></strong><strong> Angular Momentum:</strong> VECTOR.<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong><strong> Angular Momentum:</strong> VECTOR.<br><br>
 
 	   <u><strong>Units</strong></u>: (kg) × (m / s), occasionally known as Newton Seconds.<br><br><br>
 	  
@@ -329,9 +415,12 @@ The equation for the distance travelled by the center of mass of the rolling obj
 	  <br><br>
 	  Notice that since angular momentum and angular velocity are directly proportional vectors, they must be in the same direction. Determine direction using the rotational right hand rule. Furthermore, <span class="vecteur"><strong>L</strong></span> has an inherent axis of rotation that must be identified every time, like torque and rotational inertia. <a href="https://www.youtube.com/watch?v=feZnNrF2wc4">Watch this</a> for the derivation of the equation.
 
-	  <br><br><br><br>
+	  </div><br><br><br>
 
-<strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">P. Rule 137.</font></strong> <strong>Conservation of Angular Momentum:</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Conservation of Angular Momentum:</strong><br><br>
 
 <strong>&Sigma;<span class="vecteur"><strong>L</strong></span><sub>i</sub> = &Sigma;<span class="vecteur"><strong>L</strong></span><sub>f</sub></strong><br><br>
 
@@ -343,14 +432,17 @@ Add as many additional angular momentums into the equation as there are objects 
 The conservation of angular momentum equation can be easily derived from a special case of the net external torque equation:<br><br>
 <strong>&Sigma;<span class="vecteur"><strong>&tau;</strong></span><sub>external</sub> = (∆<span class="vecteur"><strong>L</strong></span><sub>system</sub> / ∆t)</strong><br><br>
 
-Thus, if the object is not in centripetal motion at the beginning of the event (initial torque = 0), then if angular momentum is conserved, it will continue to have 0 centripetal motion at the end. If an external force causes centripetal motion to be created, then angular momentum is not conserved. See Rules 102 & 103 to determine what forces are external or not.<br><br>
+Thus, if the object is not in centripetal motion at the beginning of the event (initial torque = 0), then if angular momentum is conserved, it will continue to have 0 centripetal motion at the end. If an external force causes centripetal motion to be created, then angular momentum is not conserved. See Rule 102 & Rule 103 to determine what forces are external or not.<br><br>
 
 General Example: When a figure skater pulls their arms inward during a performance, they will speed up. This is because they are reducing the distance of some amount of mass from their center of mass, thus decreasing the moment of inertia and causing the angular velocity to increase so that angular momentum is conserved.
 
-<br><br><br>
+</div><br><br>
 
 
-<strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">P. Rule 138.</font></strong> In the SPECIFIC CASE of a point particle moving in a circle (centripetal motion), the following attributes are applicable to the particle:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In the SPECIFIC CASE of a point particle moving in a circle (centripetal motion), the following attributes are applicable to the particle:<br><br>
 <strong>1. </strong>Translational and Rotational Kinetic Energy will return the same value (only in these circumstances!). Choose either depending on what variables you have.<br><br><br>
 <strong>2. </strong>The angular momentum of the particle can be calculated using both the 'rigid object with shape' momentum equation (I × ω) and the translational point-particle momentum equation:
 
@@ -363,25 +455,36 @@ General Example: When a figure skater pulls their arms inward during a performan
 This equation can additionally be used for all translationally moving point particles (which, indeed, have angular momentum insofar as how it could translate to another object obtaining that angular momentum following a collision).<br><br><br>
 
 Attribute #1 is also applicable for ellipses, though not #2.
-<br><br><br>
-
-<strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">P. Rule 139.</font></strong> When a questions asks just for the "acceleration", "velocity", or "speed" of an object or a system, it is general principle to find the linear quanity, unless the question specifically asks for the angular version.<br><br><br><!--vital rule. came up during the homework as well.-->
+</div><br><br>
 
 
-	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">P. Rule 140.</font></strong> <strong>Pulleys with Mass</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> When a questions asks just for the "acceleration", "velocity", or "speed" of an object or a system, it is general principle <!--subtle reference--> to find the linear quanity, unless the question specifically asks for the angular version.
+</div><br><br><!--vital rule. came up during the homework as well.-->
+
+
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Pulleys with Mass</strong>:<br><br>
 Pulleys with mass have rotational inertia. Pulleys without mass do not have rotational inertia.<br><br>
 Where as before, the force of tension (magnitude) applied on each side of the pully was the same, this is not the case in pulleys with mass: These pulleys will have rotational inertia due to their mass, and thus will resist angular acceleration, making the two forces of tension acting on either side of the pulley not necesarilly having the same magnitude.<br><br>
 
 In all problems where the pulley has mass, just incorporate it as another one of the objects you are findings the torques/angular momentum of, and summing the force normal & gravity of the pulley.
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">P. Rule 141.</font></strong> In torque problems, you must always draw the normal force as originating at the point of contact, from the surface the object is resting on. <br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> In torque problems, you must always draw the normal force as originating at the point of contact, from the surface the object is resting on. <br><br>
 In the past, the normal force has been drawn as having the center of mass of the object as its origin - this is a simplification, a falsehood that is done purely in problems where such an oversight does not matter.<br><br>
 
-In problems involving Torque however, the location of the origin of the forces matters significantly, due to how torque is calculated. If the axis of rotation of an object is placed along the center of mass, then all torques acting at the center of mass are equal to 0 since they have a radius of 0 (see Rule 126). By placing the normal force on the center of mass of the object, you would be incorrectly excluding it from all torque summations in all situations where the axis of rotation is upon the center of mass.<br><br>
+In problems involving Torque however, the location of the origin of the forces matters significantly, due to how torque is calculated. If the axis of rotation of an object is placed along the center of mass, then all torques acting at the center of mass are equal to 0 since they have a radius of 0 (see Rule 126). By placing the normal force on the center of mass of the object, you would be incorrectly excluding it from all torque summations in all situations where the axis of rotation is upon the center of mass.</div><br>
 
 </article>
-	</div>
+	</div></div>
 	
 	<div class="General links">
 		links
@@ -413,7 +516,7 @@ In problems involving Torque however, the location of the origin of the forces m
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong>Rotational Dynamics</strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 10 2025</span><br>
+      	<span class="tiny">Last Change: February 28 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

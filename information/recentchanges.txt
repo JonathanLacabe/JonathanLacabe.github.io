@@ -3,6 +3,14 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 1 2025: Upon reviewing notes, I found several parts difficult to understand. In the process of learning the material, I tend to add content sequentially, which may pose a challenge to my future self if I find that the content is difficult to understand. As such, 
+Rules Added: Physics, Electromagnetism - Rule 182, 183.
+
+February 28 2025: The rule change has been completed for Mechanics Pt. 3, and all associated pages.
+The last few days have been highly unfortunate, and are not to be repeated.
+
+February 26 2025: My crusade in standardizing inter-Rule referencing continues - to faciliate ease in editing Rule numbering after any future change, all instances of "Rules x & y" has been removed and changed to be "Rule x & Rule y", making it much easier to search via Ctrl-F. In adding the javascript rule numbering system, I succeeded in converting over Mechanics Complete Rules pages 1 & 2, as well as their associated section pages. #3, as well as all other applicable pages, will soon be finished.
+
 February 25 2025: Added the missing Permittivity of Free Space Rule, which had been bugging me for its absence for the last few days. All Rule numberings were instantly changed through the new Javascript system. The only thing that needed to be changed were the references to Rules within other Rules, which only took a minute.
 Rules Added: Physics, Electromagnetism - Rule 181.
 

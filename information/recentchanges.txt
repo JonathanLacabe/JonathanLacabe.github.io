@@ -3,7 +3,10 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-March 1 2025: Upon reviewing notes, I found several parts difficult to understand. In the process of learning the material, I tend to add content sequentially, which may pose a challenge to my future self if I find that the content is difficult to understand. As such, 
+March 2 2025: Part 2 of Electromagnetism revisal. All of Electric Dipoles, and a bunch more.
+Rules Added: Physics, Electromagnetism - Rule 184, 185, 186, 187, 188.
+
+March 1 2025: Upon reviewing notes, I found several parts difficult to understand. In the process of learning the material, I tend to add content sequentially, which may pose a challenge to my future self if I find that the content is difficult to understand. As such, I have begun revising the existing electromagnetism content, adding significantly more content and making the old make sense with new elaborations. I intend to finish this project tomorrow.
 Rules Added: Physics, Electromagnetism - Rule 182, 183.
 
 February 28 2025: The rule change has been completed for Mechanics Pt. 3, and all associated pages.

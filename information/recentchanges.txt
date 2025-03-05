@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 4 2025: The main page was updated to have the internal pages be the first thing available, which really should have been done a while ago. It looks a bit simple right now, but I might improve it soon after I get feedback from users. 
+
 March 3 2025: Updated the individual Electromagnetism pages to reflect the many changes made to the Complete Notes page over the past few days. This, alongside preparing for Electric Potential, which is the next concept to be incorporated.
 
 March 2 2025: Part 2 of Electromagnetism revisal. All of Electric Dipoles, and a bunch more.

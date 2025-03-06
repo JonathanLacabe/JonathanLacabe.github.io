@@ -10,6 +10,35 @@
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -49,6 +78,9 @@
 	  <article>
 	    <p>These are my complete notes for Factoring Pt. 1 in Algebra II. I split Factoring into two parts, with the first part being more introductory and relating important concepts like the Quadratic Formula, Perfect Square Trinomials, and the X-method. The second part, found <a href="/math/algebraII/factoring2">here</a>, has somewhat higher level yet similar concepts such as Factoring Completely.<br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
+	  
+	  <div class="rules" data-start="22">
+	  
 	    <header class="articleHeader"><hr>
 	      <h2>II. Factoring Pt. 1.</h2>
 	    </header>
@@ -56,10 +88,17 @@
 	    NOTE: Although the rules start at 22, that is simply a continuation of the Algebra II notes from the previous section (<a href="/math/algebraII/quadtranslation">Quadratic Translation</a>). All of the Mathematic pages build off of the same rule count, as do those of Physics, Cryptography, and all other subjects on this site. Everything relating to Factoring in Algebra II is located on this page.
 	    <br><br><br>
 	    
-	    <strong><font color="#006400">Greatest Commmon Factor</font></strong>: The biggest number/factor both sides can be evenly divided by.<br><br><br>
+	    <strong><a href="#GCFDef"><span class="mw-headline" id="GCFDef">#</span></a> <font color="#006400">Greatest Common Factor</font></strong>: The biggest number/factor both sides can be evenly divided by.<br><br><br>
 	    
-	    <strong><font color="red">Rule 22.</font></strong> Factoring. 49x² + 42x + 9 is a <strong>Perfect Trinomial</strong> where a = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">9</span></span>. c, 42x, is equal to 2ab, or 42x = 2(7x)(3). This is correct, so the equation can be put in (a + b)² form: (7x + 3)². Any Linear Equation in Standard Form can be solved both in Graph Form and Factor Form. For any Non-Perfect Prime Trinomial, the x-method is the way to factor any Standard Form equations: ac over b is x.  Divide by the <strong>Greatest Common Factor</strong> to get the outside multiplier of the quantity when simplifying. This can be done only on one side of the equation. Factoring by grouping is fun, a(c + d) + b(c + d) = (a + b)(c + d). The internal quantity has to be the same. (a - b) and (b - a) can be made equal to eachother by making -(b - a). For four variables, this means to GCF 2 to 2, creating a grouping problem.<br><br><br>
-	    <strong><font color="red">Rule 23.</font></strong> Factoring Pt. 2. For (a + b)(a - b), (a² + b²) comes out. <strong>Perfect Square Binomial</strong>, if b is a square, then you can turn x² - 25 into (x + 5)(x - 5). This ONLY works with both a and b perfect squares, don't bother otherwise. Only works with negative b. For the X method, if "= 0" is at the end, divide the Standard equation to make a = 1. Unnecessary if not. Either way, remove any fractions by multiplying everything by the denominator. ac over b is the x method:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring. 49x² + 42x + 9 is a <strong>Perfect Trinomial</strong> where a = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">9</span></span>. c, 42x, is equal to 2ab, or 42x = 2(7x)(3). This is correct, so the equation can be put in (a + b)² form: (7x + 3)². Any Linear Equation in Standard Form can be solved both in Graph Form and Factor Form. For any Non-Perfect Prime Trinomial, the x-method is the way to factor any Standard Form equations: ac over b is x.  Divide by the <strong>Greatest Common Factor</strong> to get the outside multiplier of the quantity when simplifying. This can be done only on one side of the equation. Factoring by grouping is fun, a(c + d) + b(c + d) = (a + b)(c + d). The internal quantity has to be the same. (a - b) and (b - a) can be made equal to eachother by making -(b - a). For four variables, this means to GCF 2 to 2, creating a grouping problem.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring Pt. 2. For (a + b)(a - b), (a² + b²) comes out. <strong>Perfect Square Binomial</strong>, if b is a square, then you can turn x² - 25 into (x + 5)(x - 5). This ONLY works with both a and b perfect squares, don't bother otherwise. Only works with negative b. For the X method, if "= 0" is at the end, divide the Standard equation to make a = 1. Unnecessary if not. Either way, remove any fractions by multiplying everything by the denominator. ac over b is the x method:<br>
 	    ╲&nbsp;ac&nbsp;╱<br>
 	    &nbsp;╲&nbsp;&nbsp;╱<br>
 	    F1╲╱F2<br>
@@ -69,91 +108,136 @@
 	    (F1)(F2) = ac and F1 + F2 = b.
 	    <!-- ╱	╲	  ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &-->
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><font color="#006400">Reciprocal</font></strong>: Upside down fraction, same sign.<br><br><br>
+	    <strong><a href="#ReciprocalDef"><span class="mw-headline" id="ReciprocalDef">#</span></a> <font color="#006400">Reciprocal</font></strong>: Upside down fraction, same sign.<br><br><br>
 	    
-	    <strong><font color="red">Rule 24.</font></strong> Under no circumstances can there be a Radical in the denominator. Multiply both numerator and denominator by denominator to square the denominator and make it a regular integer. It would go from <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a / b</span></span>. to <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">ab</span></span> / b.<br><br><br>
-	    <strong><font color="red">Rule 25.</font></strong> Always be simplifying radicals. It is not ± <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>, but 28|2 → 14|2 → 7|7, ± 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>. In every case.<br><br><br>
-	    <strong><font color="red">Rule 26.</font></strong> Always consider leaving c on its own on one side of the equation in order to simplify a possible answer. Only if "= 0" is applied or if 100% sure that there is another method already codified can you bypass this fundamental simplification law.<br><br><br>
-	    <strong><font color="red">Rule 27.</font></strong> i. i = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span> In its most definitional sense, i is the square root of -1, an imaginary number. <strong>Complex Numbers</strong> are any equation with i, such as 2i. a + bi is the standard Form in which the solutions of the complex equations tend to take, a and b both being real numbers. Always be keepin' in mind that i maintains distinct properties than the regular algebraic variables like x and y. i may act as a normal variable at times, but when i gets multiplied by itself or by another exponent, its true self is revealed. As <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>, when squared, i becomes just -1. When cubed, i becomes -i. And when i is to the power of 4, it goes all the way to 1. This pattern repeats; to find where in the pattern any exponent lies (like i⁵⁰), divide the exponent number by 4, and take the remainder, in this case 2, and see in the patterns its equivalent. The equations are (a + bi) + (c + di) = (a + c) + i(b + d) and the negative form of (a + bi) - (c + di) = (a - c) + i(b - d). Simplify to get Standard Form. ONLY use formula if question is already in format or if can be grouped into it with factoring.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Under no circumstances can there be a Radical in the denominator. Multiply both numerator and denominator by denominator to square the denominator and make it a regular integer. It would go from <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a / b</span></span>. to <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">ab</span></span> / b.</div><br><br>
 	    
-	      <font color="blue"><strong>Pattern of i:</strong></font><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Always be simplifying radicals. It is not ± <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>, but 28|2 → 14|2 → 7|7, ± 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>. In every case.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Always consider leaving c on its own on one side of the equation in order to simplify a possible answer. Only if "= 0" is applied or if 100% sure that there is another method already codified can you bypass this fundamental simplification law.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> i. i = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span> In its most definitional sense, i is the square root of -1, an imaginary number. <strong>Complex Numbers</strong> are any equation with i, such as 2i. a + bi is the standard Form in which the solutions of the complex equations tend to take, a and b both being real numbers. Always be keepin' in mind that i maintains distinct properties than the regular algebraic variables like x and y. i may act as a normal variable at times, but when i gets multiplied by itself or by another exponent, its true self is revealed. As <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>, when squared, i becomes just -1. When cubed, i becomes -i. And when i is to the power of 4, it goes all the way to 1. This pattern repeats; to find where in the pattern any exponent lies (like i⁵⁰), divide the exponent number by 4, and take the remainder, in this case 2, and see in the patterns its equivalent. The equations are (a + bi) + (c + di) = (a + c) + i(b + d) and the negative form of (a + bi) - (c + di) = (a - c) + i(b - d). Simplify to get Standard Form. ONLY use formula if question is already in format or if can be grouped into it with factoring.</div><br><br>
+	    
+	      <font color="blue"><strong><a href="#PatternOfi"><span class="mw-headline" id="PatternOfi">#</span></a> Pattern of i:</strong></font><br>
 	      i = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>&nbsp;&nbsp;&nbsp;i⁵ = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>&nbsp;&nbsp;&nbsp;<br>
 	      i² = -1&nbsp;&nbsp;&nbsp;i⁶ = -1<br>
 	      i³ = -i&nbsp;&nbsp;&nbsp;i⁷ = -i<br>
 	      i⁴ = 1&nbsp;&nbsp;&nbsp;&nbsp;i⁸ = 1<br><br>
 	      
-	      <font color="blue"><strong>Squares to 16:</strong></font><br>
+	      <font color="blue"><strong><a href="#Squares16"><span class="mw-headline" id="Squares16">#</span></a> Squares to 16:</strong></font><br>
 	      1² = 1&nbsp;&nbsp;&nbsp;&nbsp;5² = 25&nbsp;&nbsp;&nbsp;&nbsp;9² = 81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13² = 169<br>
 	      2² = 4&nbsp;&nbsp;&nbsp;&nbsp;6² = 36&nbsp;&nbsp;&nbsp;&nbsp;10² = 100&nbsp;&nbsp;&nbsp;14² = 196<br>
 	      3² = 9&nbsp;&nbsp;&nbsp;&nbsp;7² = 49&nbsp;&nbsp;&nbsp;&nbsp;11² = 121&nbsp;&nbsp;&nbsp;15² = 225<br>
 	      4² = 16&nbsp;&nbsp;&nbsp;8² = 64&nbsp;&nbsp;&nbsp;&nbsp;12² = 144&nbsp;&nbsp;&nbsp;16² = 256<br><br><br>
 	    
-	    <strong><font color="red">Rule 28.</font></strong> Quantities exist for reasons, never ignore them. If there is a negative in front of it, it will be flipped with the negative reversing everything with the <strong>Distributive Property</strong>.<br><br><br>
-	    <strong><font color="red">Rule 29.</font></strong> Factoring Pt. 3. If the equation is in the correct form for X method but 'a' != 1 and 'b' & 'c' aren't divisible by 'a'<!--, making you unable to pacify 'a' into 1-->, it is still possible to factor. Continue with the X-method process and find the quantities, say, (3x - 1)(3x - 6), the second quantity can be simplified to (x - 2), making the factorization true.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Quantities exist for reasons, never ignore them. If there is a negative in front of it, it will be flipped with the negative reversing everything with the <strong>Distributive Property</strong>.</div><br><br>
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring Pt. 3. If the equation is in the correct form for X method but 'a' != 1 and 'b' & 'c' aren't divisible by 'a'<!--, making you unable to pacify 'a' into 1-->, it is still possible to factor. Continue with the X-method process and find the quantities, say, (3x - 1)(3x - 6), the second quantity can be simplified to (x - 2), making the factorization true.</div><br><br>
 	    
-	    <strong><font color="red">Rule 30.</font></strong> Factoring will not work in every case ("prime" factors), but one can still force a solution through completing the square. For an equation like x² + 16x + 17 = 0, the first move would be simply preparing the problem for applying the method: If there is C on the same side as the others and factoring has been ruled out, move C to the other side with 0 or whatever is already there. If simplification is possible, do so and try to get a as low as possible. If a is negative, multiply both sides by -1 to make it normal. Now, the equation is x² + 16 = -17. The next step is to use the equation of (b / 2)², (16/2)² in this case to get a Perfect Square Trinomial. The result of the equation is added to both sides, x² + 16x + 64 = 47. The PST nature of the left side makes it equal to (x + 8)² = 47. Square it on both sides, getting x + 8 = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span> Simplify if you can, if the Radical is negative put an i in front, and you should get x = -8 ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span>.<br><br><br>
-	    <strong><font color="red">Rule 31.</font></strong> <strong>Completing the Square</strong> can be used as an alternate method to convert Standard Form to Vertex Form. For the equation y = x² - 22x + 16, move c to the y, and then complete the square on the right side, getting the equation of y + 105 = x² - 22x + 121. Factoring the right side gives y + 105 = (x - 11)², and moving 105 gives the Vertex Form of y = (x - 11)² = 105. (11, -105) are the coordinates. Keep C in the Y side while using the 'complete the square' method of factoring, (b/2)² to find C.<br><br><br>
-	    <strong><font color="red">Rule 32.</font></strong> The <strong>Quadratic Formula</strong> works in place of factoring, completing the square, anything with regards to Standard Form, The Formula is x = (-b ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b² - 4ac</span></span>) / 2a. Example problem: 2x² + 4x - 30. 1. Always have it equal zero. 2. Simplify the base equation if you can. 3. Always have a positive a. 2 applied is x² + 2x - 15 = 0. Find a, b, and c, and plug them in to the formula. Remember PEMDAS. If <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">0</span></span>, there's only one solution (see Rule 33): try to simplify if there's a fraction.<br><br><br>
-	     <strong><font color="#006400">Quadratic</font></strong>: Highest Exponent is Two.<br><br><br>
-	    <strong><font color="red">Rule 33.</font></strong> If a Quadratic Equation EVER has an answer<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring will not work in every case ("prime" factors), but one can still force a solution through completing the square. For an equation like x² + 16x + 17 = 0, the first move would be simply preparing the problem for applying the method: If there is C on the same side as the others and factoring has been ruled out, move C to the other side with 0 or whatever is already there. If simplification is possible, do so and try to get a as low as possible. If a is negative, multiply both sides by -1 to make it normal. Now, the equation is x² + 16 = -17. The next step is to use the equation of (b / 2)², (16/2)² in this case to get a Perfect Square Trinomial. The result of the equation is added to both sides, x² + 16x + 64 = 47. The PST nature of the left side makes it equal to (x + 8)² = 47. Square it on both sides, getting x + 8 = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span> Simplify if you can, if the Radical is negative put an i in front, and you should get x = -8 ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span>.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Completing the Square</strong> can be used as an alternate method to convert Standard Form to Vertex Form. For the equation y = x² - 22x + 16, move c to the y, and then complete the square on the right side, getting the equation of y + 105 = x² - 22x + 121. Factoring the right side gives y + 105 = (x - 11)², and moving 105 gives the Vertex Form of y = (x - 11)² = 105. (11, -105) are the coordinates. Keep C in the Y side while using the 'complete the square' method of factoring, (b/2)² to find C.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Quadratic Formula</strong> works in place of factoring, completing the square, anything with regards to Standard Form, The Formula is x = (-b ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b² - 4ac</span></span>) / 2a. Example problem: 2x² + 4x - 30. 1. Always have it equal zero. 2. Simplify the base equation if you can. 3. Always have a positive a. 2 applied is x² + 2x - 15 = 0. Find a, b, and c, and plug them in to the formula. Remember PEMDAS. If <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">0</span></span>, there's only one solution (see Rule 33): try to simplify if there's a fraction.</div><br><br>
+	    
+	     <strong><a href="#QuadraticDef"><span class="mw-headline" id="QuadraticDef">#</span></a> <font color="#006400">Quadratic</font></strong>: Highest Exponent is Two.<br><br><br>
+	     
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If a Quadratic Equation EVER has an answer<br>
 	    <strong>D &lt; 0</strong>: a) that includes i, the equations has no x-intercepts. This means there are No real solutions. However, this also means there will be Two imaginary solutions. This is the D &lt; 0 property of the <strong>Discriminant</strong>, the part of the Quadratic Formula completely within a Radical: b² - 4ac. Plug in the Standard Form variables and get a solution, the Solution being D.<br>
 	    <strong>D = 0</strong>: b) For a Discriminant that ends up having a solution of <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">0</span></span>, D = 0 and there would therefore be One real solution to the problem. Only when the equation is already in a completed square form ((b / 2)² appears to have already been preformed) and a = 1 can this occur, where it is very obvious. PST will always have only one solution.<br>
-	    <strong>D > 0</strong>: c) For a Disriminant thats ends up having two real solutions (due to the ± in the quadratic formula), D > 0 and there are two x-intercepts. Most importantly, the "number of real-imagined solutions" is for the ENTIRE quadratic equations, the discriminant only tells how many answers there will be, not what they are. "Solution" is just another word for the number of x-intercepts.
-	    <br><br><br><br>
+	    <strong>D > 0</strong>: c) For a Discriminant thats ends up having two real solutions (due to the ± in the quadratic formula), D > 0 and there are two x-intercepts. Most importantly, the "number of real-imagined solutions" is for the ENTIRE quadratic equations, the discriminant only tells how many answers there will be, not what they are. "Solution" is just another word for the number of x-intercepts.
+	    </div><br><br><br>
 	    
-	    <strong><font color="red">RULE 34.</font></strong> <strong><h2>COMPARISON/PROPERTIES OF ALL FORMULAS & METHODS.</h2></strong>
+	    
+	    <div class="rule"><strong>
+            <a href="#RULE"><span class="hash">#</span></a> 
+            <font color="red">RULE <span class="rule-number"></span>.</font>
+        </strong> <strong><h2>COMPARISON/PROPERTIES OF ALL FORMULAS & METHODS.</h2></strong>
 	    <strong>Elimination, System of Equations, and Substitution are System of Equation-type methods. TRY WHICHEVER LOOKS BEST, NO ORDER.</strong><br>
 	    <strong>PST is a largely X-Isolation based Method. SEE RULE 26!!!</strong><br>
-	    <strong>IF NOT GCP/GROUPING, THEN COMPLETE THE SQUARE. USE QUADRATIC FORMULA AT ANY TIME.</strong><br>
-	    <h3>ELIMINATION.</h3>
+	    <strong>IF NOT GCP/GROUPING, THEN COMPLETE THE SQUARE. USE QUADRATIC FORMULA AT ANY TIME.</strong><br><br>
+	    
+	    <h3><strong><a href="#ELIMINATION1"><span class="mw-headline" id="ELIMINATION1">#</span></a> </strong>ELIMINATION.</h3>
 	    <strong>Formula + Description:</strong> Stack both equations like long addition and find the sum. Like System of Equations, but skipping a step. Keep two sides for factoring.<br>
 	    <strong>Unique Trait:</strong> The goal is generally to kill off 'y' ASAP, minusing the 2nd equation (if needs be) by reversing the entire second equation. Anything to kill y.<br>
 	    <strong>Applicable When:</strong> ONLY to be used when both equations have roughly the same variables. Equations should generally have a y.<br>
 	    <strong>Limitations:</strong> Cannot be used where there is a y that is not easily solved nor where y is already known (y = 10), where substitution would be preferable.<br><br>
 	    
-	    <h3>SYSTEM OF EQUATIONS.</h3>
+	    <h3><strong><a href="#SYSTEMEQUATIONS1"><span class="mw-headline" id="SYSTEMEQUATIONS1">#</span></a> </strong>SYSTEM OF EQUATIONS.</h3>
 	    <strong>Formula + Description:</strong> Format the equations to both be equal to the same variable (y) and the individual non-y side equal to eachother, simplifying.<br>
 	    <strong>Unique Trait:</strong> Only semi-self-contained method, with Elimination and Substitution both always leading to the big three. If an x² exists however, some x-isolation is needed.<br>
 	    <strong>Applicable When:</strong> When there is no x² or if there is only one x variable in some way. See if there can be a way to remove an entire x² or x consideration.<br>
 	    <strong>Limitations:</strong> If a and b both exist at the same time, then it might be easier to try Substitution or Elimination.<br><br>
 	    
-	    <h3>SUBSTITUTION.</h3>
+	    <h3><strong><a href="#SUBSTITUTION1"><span class="mw-headline" id="SUBSTITUTION1">#</span></a> </strong>SUBSTITUTION.</h3>
 	    <strong>Formula + Description:</strong> If an internal (to the left) variable has an equivalent made apparant in the second equation, plug in that equation inside the first equation. Simplify.<br>
 	    <strong>Unique Trait:</strong> Differs from System of Equations in how one equation is replacing a variable in another, while system makes both equations equal to eachother.<br>
 	    <strong>Applicable When:</strong> When it is seen that substitution is viable and that it will make a difference. A definite sign of a problem requiring substitution is when more than one variable is ^2.<br>
 	    <strong>Limitations:</strong> Sometimes, there are no inner Equations that have a variable given an equation in the second. In these situations, use System of equations or Elimination.<br><br>
 	    
-	    <h3>PERFECT SQUARE TRINOMIAL.</h3>
+	    <h3><strong><a href="#PERFECTTRINOMIAL1"><span class="mw-headline" id="PERFECTTRINOMIAL1">#</span></a> </strong>PERFECT SQUARE TRINOMIAL.</h3>
 	    <strong>Formula + Description:</strong> A Perfect Square Trinomial. (a + b)(a + b) = a² + 2ab + b² = (a + b)². (a - b)(a - b) = a² - 2ab + b² = (a - b)². Things like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x²</span></span> + 6x + <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">9</span></span>. Not ax² + bx + c, but a² + 2ab + b². Difference of Squares = (a + b)(a - b) = (a² - b²), If b and a are perfect squares. <br>
 	    <strong>Unique Trait:</strong> PST cannot be chosen as a Method. It is a form that has its own rules. You have no control.<br>
 	    <strong>Applicable When:</strong> When a and b are both dearly squared. Can be forced only in particular circumstances, like if x² + 6x = -10. When a discriminant of D = 0 is found in a Quadratic Equation, the equation is PST. There will be only one solution/x-intercept.<br>
 	    <strong>Limitations:</strong> a² + 2ab + c² is more or less ax² + bx + c in a special format. The difference of squares won't work if even one variable isn't a perfect square (x² is a perfect square).<br><br>
 	    
-	    <h3>GCF/GROUPING → X-METHOD FACTORING.</h3>
+	    <h3><strong><a href="#GROUPINGXMETHOD1"><span class="mw-headline" id="GROUPINGXMETHOD1">#</span></a> </strong>GCF/GROUPING → X-METHOD FACTORING.</h3>
 	    <strong>Formula + Description:</strong> In a multi-variable equation, you can use the GCF (Max number dividable by all) to simplify. Grouping is where a GCF-ized equations gets a(c + d) + b(c + d) = (a + b)(c + d). X Method, as shown previously (see Rule 23), is usable if the equation is equal to 0. <br>
 	    <strong>Unique Trait:</strong> Most direct, method finds factors that multiply to ac and sum to b. Can be used for both b = 0 and a = c, b being X-isolater and c being X.<br>
 	    <strong>Applicable When:</strong> X method is most preferable where all fractions are gone & a = 1. However, if a != 1, it still can be done, simplifying the equation if possible at the end. Can also be done when b = 0 (in some cases).<br>
 	    <strong>Limitations:</strong> For X method it sometimes just won't work, such as in i in ANS is a prime. b = 0 and others work if ac is a negative perfect square. ONLY IF = 0 can be done. Group only if both GCF's have the same (c + d).<br><br>
 	    
-	    <h3>COMPLETING THE SQUARE.</h3>
+	    <h3><strong><a href="#COMPLETESQUARE1"><span class="mw-headline" id="COMPLETESQUARE1">#</span></a> </strong>COMPLETING THE SQUARE.</h3>
 	    <strong>Formula + Description:</strong> Force a solution by making a PST. Simplify, move C to the right: x² + 16x = -17. Use (b / 2)² for left side and add to both: x² + 16x + 64 = 47. Left is PST, (x + 8)². Sqrt both sides, x + 8 = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span>.<br>
 	    <strong>Unique Trait:</strong> A sort of hodgepodge of other methods and rules: PST, then X Method (a ± b)², the x-isolater (sqrt), & i if needs be.<br>
 	    <strong>Applicable When:</strong> If ANS has an i, can be used. Can be used as an alternate method for converting Standard Form → Vertex Form: Move c to y and make PST: y + 105 = x² - 22x + 121. Factor Right and move back c: y = (x - 11)² - 105.<br>
 	    <strong>Limitations:</strong> Will not function on if b = 0, makes the equation not work. Having an odd b also complicates matters as you have to work with fractions the entire equation.<br><br>
 	    
-	    <h3>QUADRATIC EQUATIONS.</h3>
+	    <h3><strong><a href="#QUADRATICEQUATION1"><span class="mw-headline" id="QUADRATICEQUATION1">#</span></a> </strong>QUADRATIC EQUATIONS.</h3>
 	    <strong>Formula + Description:</strong> You already know what it is. Plug in a, b, x = x = (-b ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b² - 4ac</span></span>) / 2a and c from a quadratic standard form. Have a positve and simplify beforehand, when doing an equation remember PEMDAS and fractions. <br>
 	    <strong>Unique Trait:</strong> Reversed: Solution can be returned to a quadratic equation yeezily. Get b from top left and a from the bottom. Simplify the top using x-isolator to get c. Discriminant: Inside of sqrt tells how many answers/x-intercepts there are: D &lt; 0 is 0, D = 0 is 1, D > 0 is 2.<br>
 	    <strong>Applicable When:</strong> The Universal Method: Works in every case (X-mmethod not work if ANS has i and Completing the Square won't work if b = 0). Will ALWAYS give correct ANS if done correctly.<br>
-	    <strong>Limitations:</strong> None. If an ANS (real) is found for x with a sqrt., convert to decimal to get exact. If calculator is unavailable, simply plug in the square root for x to get an unsimplified answer.<br><br>
-	    <br><br>
+	    <strong>Limitations:</strong> None. If an ANS (real) is found for x with a sqrt., convert to decimal to get exact. If calculator is unavailable, simply plug in the square root for x to get an unsimplified answer.
+	    </div><br><br><br>
 	    
-	    <strong><font color="red">Rule 35.</font></strong> When a questions asks you to "sketch the f(x)," that just means to draw a graph for the previously stated f(x).<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When a questions asks you to "sketch the f(x)," that just means to draw a graph for the previously stated f(x).</div><br><br>
 	    
-	    <font color="blue"><strong>Basic Terms of Exponents:</strong></font><br><br>
+	    <font color="blue"><strong><a href="#BasicTermsExp"><span class="mw-headline" id="BasicTermsExp">#</span></a> Basic Terms of Exponents:</strong></font><br><br>
 	    
 	    &nbsp;&nbsp;┏━━The exponent, a 'power' (to the <u>power</u> of)<br>
 	    5x²<br>
@@ -162,13 +246,17 @@
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &-->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    <br><br>
-	    <strong><font color="#006400">Complex Number</font></strong>: i + real number.  2i, for example.<br><br><br>
-	    <strong><font color="red">Rule 36.</font></strong> The general rule of x-isolator (see Rule 26) is to put the individual x on one side, the c number on the other, and simplify. If there is a trinomial with both a & b, then this cannot be done. If = 0 is applied, the "big three" of the bottom of the Great Comparison Rule (see Rule 34) are to be used more effectively. There are several rules for what is to be done if c is available and either a or b are missing.<br>
+	    <strong><a href="#ComplexNumberDef"><span class="mw-headline" id="ComplexNumberDef">#</span></a> <font color="#006400">Complex Number</font></strong>: i + real number.  2i, for example.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The general rule of x-isolator (see Rule 26) is to put the individual x on one side, the c number on the other, and simplify. If there is a trinomial with both a & b, then this cannot be done. If = 0 is applied, the "big three" of the bottom of the Great Comparison Rule (see Rule 34) are to be used more effectively. There are several rules for what is to be done if c is available and either a or b are missing.<br>
 	    a) If the equation uses the variables a & c in the ax² + c format, try to divide by a to get a as low as possible. Always have a positive, hopefully just x². Once that has been achieved, all that needs to be done is isolate x and sqrt both sides, getting a ± for c. This is used in an altered way by PST.<br>
 	    b) If the equations uses the variables b & c in the bx + c format, no prior simplification is needed. Simply isolate b and divide both sides by b. There is no sorting needed, removing the possibility of i or a number leading to two answers as seen in ax² + c format. There will always be only one solution.
-	    <br><br>
+	    </div><br>
 	  </article>
-
+    </div>
 	</div>
 	
 	<div class="General links">
@@ -201,7 +289,7 @@
         <article><strong><a href="/math/algebraII/quadtranslation">Quadratic Translation</a></strong> → <strong>Factoring Pt. 1</strong> → <strong><a href="/math/algebraII/polyfunctions">Polynomial Functions</a></strong> → <strong><a href="/math/algebraII/longdivision">Long Division</a></strong> → <strong><a href="/math/algebraII/factoring2">Factoring Pt. 2</a></strong> → <strong><a href="/math/algebraII/exponentrules">Rules of Exponents</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 10 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

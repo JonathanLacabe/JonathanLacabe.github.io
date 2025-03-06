@@ -31,6 +31,36 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
@@ -70,6 +100,9 @@ rainbow {
 	    <p>These are my complete notes for Continuity in Differential Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
 	  <hr>
+	  
+	  <div class="rules" data-start="122">
+	  
 	    <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Continuity1">?. Continuity.</span></h2>
 	  </header>
@@ -78,9 +111,16 @@ rainbow {
 	      <strong><a href="#ContinuousFuncDef"><span class="mw-headline" id="ContinuousFuncDef">#</span></a> <font color="#006400">Continuous Functions</font></strong>: A function is continuous on an interval if it is continuous at every of the interval. A continuous <em>function</em> is a function that is continuous everywhere on its domain.
 	    <br><br><br>
 	    
-	     <strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">Rule 122.</font></strong> Any function y = f(x) whose graph y = f(x) can be sketched in one continuous motion without lifting the pencil is an example of a <strong>continuous function</strong>.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Any function y = f(x) whose graph y = f(x) can be sketched in one continuous motion without lifting the pencil is an example of a <strong>continuous function</strong>.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">Rule 123.</font></strong> There are two RULES of CONTINUITY, which if both met, establish UNIVERSAL CONTINUITY for a function.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There are two RULES of CONTINUITY, which if both met, establish UNIVERSAL CONTINUITY for a function.<br><br>
 	     
 	     <ol type="a">
 
@@ -102,13 +142,16 @@ rainbow {
           </li> 
 
         </ol>
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">Rule 124.</font></strong> Continuous Function are continuous everywhere on their domains. Properties of Continuous Functions f & g are continuous at x = c.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Continuous Function are continuous everywhere on their domains. Properties of Continuous Functions f & g are continuous at x = c.<br><br>
 	     
 	     All polynomial and Radical functions are continuous everywhere with no Points of Discontinuities. On the other hand, all rational and trig. functions are only continuous along their domain; they have Points of Discontinuities wherever the denominator equals 0. 
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
 	     
 	     
@@ -139,22 +182,39 @@ rainbow {
         
 <br><br>
 	     
-	     <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">Rule 125.</font></strong> If f is continuous at c, and g is continuous at f(c), then the composite g ∘ f is continuous at c.
-	     <br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If f is continuous at c, and g is continuous at f(c), then the composite g ∘ f is continuous at c.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">Rule 126.</font></strong> A function is continuous even if it has Points of Discontinuity, as long as these points are not within the domain. For example, 1/x is considered to be continuous along its domain, despite the absurdity of its graph.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A function is continuous even if it has Points of Discontinuity, as long as these points are not within the domain. For example, 1/x is considered to be continuous along its domain, despite the absurdity of its graph.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">Rule 127.</font></strong> A function passes the <strong>Intermediate value theorem</strong> if it never takes on two values without taking on every value in between. A continuous function f on a closed interval [a, b] will take on every y-value between f(a) and f(b), given no discontinuities.
-	     <br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A function passes the <strong>Intermediate value theorem</strong> if it never takes on two values without taking on every value in between. A continuous function f on a closed interval [a, b] will take on every y-value between f(a) and f(b), given no discontinuities.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">Rule 128.</font></strong> <strong>Jump Discontinuities:</strong> Where the left & right side limits are not equal.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Jump Discontinuities:</strong> Where the left & right side limits are not equal.<br><br>
 	     
 	     <strong>Infinite Discontinuities</strong>: Where the discontinuity is an asymptote.<Br><br>
 	     <strong>Removable Discontinuities</strong>: A detached dot, floating on the plane, where the limit continues to be a real number.<Br><br>
 	     <strong>Oscillating Discontinuities</strong>: A discontinuity that oscillates back and forth, son. Examples include sin(1/x). These functions are discontinuities because no matter how far you zoom in, it will still be oscilliating, thus lacking local linearity.
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">Rule 129.</font></strong> For Discontinuities: Jump beats hole. Infinite beats Jump. Oscillating is in a league of its own, as it can only be sin(1/x) or something of the sort.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> For Discontinuities: Jump beats hole. Infinite beats Jump. Oscillating is in a league of its own, as it can only be sin(1/x) or something of the sort.
+	     </div><br>
 	     
 	    
 	    
@@ -162,7 +222,7 @@ rainbow {
 	    
 	    
 	      </article>
-
+    </div>
 	</div>
 	
 	<div class="General links">
@@ -195,7 +255,7 @@ rainbow {
         <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong>Continuity</strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 18 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

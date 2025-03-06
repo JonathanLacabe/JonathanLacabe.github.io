@@ -10,6 +10,49 @@
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -50,20 +93,30 @@
 	    <p>These are my complete notes for Parents, Composition, and Inverse Functions in Precalculus, with the addition of Nonlinear Inequalities at the end. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
 	  <hr>
+	  
+	  <div class="rules" data-start="97">
+	  
 	    <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="PCI">VIII. Parents, Composition, and Inverse.</span></h2>
 	  </header>
 	  <article><br>
-	      <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">Rule 97.</font></strong> The <strong>Average Rate of Change</strong> is the slope of a line that passes through two points in a line, the slope of a secant line. This is a whole process, and at the end youg et to use a special formula:<br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Average Rate of Change</strong> is the slope of a line that passes through two points in a line, the slope of a secant line. This is a whole process, and at the end youg et to use a special formula:<br><br>
 	      <strong>(f(x₂) - f(x₁)) / (x₂ - x₁)</strong><br><br>
 	      To perform the process, you need two bits of information: The point [x₁, x₂], and the equation.<br><br>
 	      First, keep in mind that [x₁, x₂] = (x₁, f(x₁)) and (x₂, f(x₂)). Then, simply go about plugging in the points in for x of the equation. For example, with the points [-2, -1] and the equation f(x) = -x³ + 3x, -2 would produce 2 and -1 would produce -2, creating the points of (-2, 2), (-1, -2). In plugging in these numbers to the formula, make sure to keep all negatives as the negatives in the formula can be subject to change, such as when f(x₂) or x₂ are negative. For this example, (-2 -2) / (-1 + 2) = -4/1, = -4.<br><br>
 	      You don't need to worry about if the points are both x or not, you just need to find f(x₁) and f(x₂) and plug them into the equation.
 	      
-	      <br><br><br>
+	      </div><br><br>
 	      
 	      
-	      <strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">Rule 98.</font></strong> Families of functions are groups of functions with graphs that display similar characteristics. The <strong>parent function</strong> is the skeleton key function, the simplest of functions in a family. It is the function that is tranformed to create other members in a family of functions. All of the known Parent Functions are located in the "Common Functions & Their Parents" section below.  There are two important concepts that go along with parent functions: The parent function of all parent functions is y = 0. This is a constant function, like y = 2.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Families of functions are groups of functions with graphs that display similar characteristics. The <strong>parent function</strong> is the skeleton key function, the simplest of functions in a family. It is the function that is tranformed to create other members in a family of functions. All of the known Parent Functions are located in the "Common Functions & Their Parents" section below.  There are two important concepts that go along with parent functions: The parent function of all parent functions is y = 0. This is a constant function, like y = 2.
+	      </div><br><br>
 	      
 	      <strong><font color="blue"><a href="#CommonFuncParents"><span class="mw-headline" id="CommonFuncParents">#</span></a> Common Functions & Their Parents:</font></strong><br><br>
         <strong>Parent function of Parent functions</strong>: y = 0<br><br>
@@ -89,13 +142,16 @@
         <br><br><br>
 	      
 	     
-	     <strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">Rule 99.</font></strong> As remembered from the first Rules of Algebra 2, transformations are the changed in terms of movement on the graph an equation has in relation to the parent function.<br><br> Horizontal and Vertical Translations remain pretty uniform throughout all the different types of functions. Vertical is f(x) + k, regular in that + k is up and -k is down. Horizontal is f(x - h), and is opposite, so f(x - h) is Right and f(x + h) is Left.<br><br> This carries on everywhere, for example in Absolute Value functions, f(x) = |x + 3| is a vertical translation. The absolute function in particular is special in that it is always a positive number:<br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As remembered from the first Rules of Algebra 2, transformations are the changed in terms of movement on the graph an equation has in relation to the parent function.<br><br> Horizontal and Vertical Translations remain pretty uniform throughout all the different types of functions. Vertical is f(x) + k, regular in that + k is up and -k is down. Horizontal is f(x - h), and is opposite, so f(x - h) is Right and f(x + h) is Left.<br><br> This carries on everywhere, for example in Absolute Value functions, f(x) = |x + 3| is a vertical translation. The absolute function in particular is special in that it is always a positive number:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/absvaluefunction.jpg"><img src="/math/img/absvaluefunction.jpg" alt="The absolute value function and its variations. Courtesy of Math LibreTexts" width=30%/></a></div>
 	    <span class="tiny"><em>The absolute value function and its variations. Courtesy of <a href="https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_1e_(OpenStax)/01%3A_Functions/1.06%3A_Absolute_Value_Functions">Math LibreTexts</a>.</em></span><br><br>
 	    
 	    When there is a negative for any function, it goes opposite whatever axis it is situated, mostly the Y-axis. The steps of tranformation are fairly simple, 3 to the left, 4 down, and reflected across the Y-axis if a is negative.
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
 	     <strong><font color="blue"><a href="#HVT1"><span class="mw-headline" id="HVT1">#</span></a> Horizontal Vertical Translations:</font></strong><br><br>
 	     <strong>Vertical</strong>: f(x) + k, regular<br>
@@ -106,7 +162,10 @@
 	     
 	     <br><br><br>
 	     
-	     <strong><a href="#Rule100"><span class="mw-headline" id="Rule100">#</span></a> <font color="red">Rule <u>100</u>!.</font></strong> :)<br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <u><span class="rule-number"></span></u>!.</font>
+        </strong> :)<br>
 	     <strong>Function Operations</strong> and <strong>Compositions</strong> are special ways to dense using f(x) and g(x) to act on eachother in some way. For example:<br><br>
 	     (f + g)(x) = f(x) + g(x): <strong>Sum</strong><br>
 	     (f - g)(x) = f(x) - g(x): <strong>Difference</strong><br>
@@ -114,33 +173,51 @@
 	     (f / g)(x) = f(x) / g(x): <strong>Quotient</strong><br><br>
 	     Of course, f(x) and g(x) are already given by the question. Operations can also be used to find domain. Also, you can input any number for x to find an absolute number, such as (f · g)(-6).
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule101"><span class="mw-headline" id="Rule101">#</span></a> <font color="red">Rule 101.</font></strong> There is one last thing known as a <strong>composition</strong>, or (f ∘ g)(x) = f(g(x)): <strong>Composition</strong>.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There is one last thing known as a <strong>composition</strong>, or (f ∘ g)(x) = f(g(x)): <strong>Composition</strong>.<br><br>
 	     
 	     Again, you plug in any number for x, or not. You first find what g(x) is and thereafter find the value of f(x) with x being whatever value have been gotten from g(x). Simply put: empty circle in f ∘ g means f of g. Filled is multiply. If the result has radical x, the domain is [0, ∞), with whatever changes made, like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x - 2</span></span> as extra: [2, ∞).
 	     
-	     <br><br><br>
+	     </div><br><br>
 
-        <strong><a href="#Rule102"><span class="mw-headline" id="Rule102">#</span></a> <font color="red">Rule 102.</font></strong> As long as the x-value in a radical is greater than or equal to the minimum possible value of the radical, (such as -2 in the case of the Composition Rule (see Rule 101)), it is a function. Parabolas will always have the domain of (-∞, ∞), as they go forever, containing all x-values. Same for cubic equations. Only when = 0 because of factoring are the values of x not part of the domain. If you have a reciprocal function where x is the denominator, 1/x, 0 must always be excluded: (-∞, 0) ∪ (0, ∞).<br><br><br>
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As long as the x-value in a radical is greater than or equal to the minimum possible value of the radical, (such as -2 in the case of the Composition Rule (see Rule 101)), it is a function. Parabolas will always have the domain of (-∞, ∞), as they go forever, containing all x-values. Same for cubic equations. Only when = 0 because of factoring are the values of x not part of the domain. If you have a reciprocal function where x is the denominator, 1/x, 0 must always be excluded: (-∞, 0) ∪ (0, ∞).
+        </div><br><br>
 	     
-	     <strong><a href="#Rule103"><span class="mw-headline" id="Rule103">#</span></a> <font color="red">Rule 103.</font></strong> Remember that Radicals multiply like normal: <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 8</span></span> · <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 5</span></span> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x² + 13x + 40</span></span>.
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Remember that Radicals multiply like normal: <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 8</span></span> · <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 5</span></span> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x² + 13x + 40</span></span>.
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">Rule 104.</font></strong> Function f inverse = <strong>f⁻¹</strong>. Only if the function passes the Horizontal Line Test can it have an inverse. Only if it passes the Vertical Line Test can it be a function. For an equation like y = |x - 1|, which has the following graph:<br>
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Function f inverse = <strong>f⁻¹</strong>. Only if the function passes the Horizontal Line Test can it have an inverse. Only if it passes the Vertical Line Test can it be a function. For an equation like y = |x - 1|, which has the following graph:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/absvalx1.png"><img src="/math/img/absvalx1.png" alt="The graph of y = |x - 1|. Made using Desmos." width=30%/></a></div>
 	    <span class="tiny"><em>The graph of y = |x - 1|. Made using <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
 	     In this graph, and the function it represents, there is no inverse because it does not pass the HLT. It is good to memorize the graphs of all the base parent functions, which are located in the "Common Functions & Their Parents" section further above. The inverse of f(x) is f⁻¹(x).
 	     
+	     </div><br><br>
 	     
-	     <br><br><br>
 	     
-	     <strong><a href="#Rule105"><span class="mw-headline" id="Rule105">#</span></a> <font color="red">Rule 105.</font></strong> The Domain of x is the Range of f⁻¹(x), while the Range of x is the Domain of f⁻¹(x). This is shown by this chart:<br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The Domain of x is the Range of f⁻¹(x), while the Range of x is the Domain of f⁻¹(x). This is shown by this chart:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/inverseandregular.png"><img src="/math/img/inverseandregular.png" alt="The Domain and Range of f(x) and f⁻¹(x). As you can see, they switch." width=38%/></a></div>
-	    <span class="tiny"><em>The Domain and Range of f(x) and f⁻¹(x). As you can see, they switch.</em></span><br><br> 
+	    <span class="tiny"><em>The Domain and Range of f(x) and f⁻¹(x). As you can see, they switch.</em></span>
+	    </div><br><br><br>
 	    
-	    <br><br>
+	    
 	    <hr><br><strong>~~~</strong><br>
 	    It was at this point I ceased writing rules for Precalculus in my notebook, as I had fallen behind in writing notes for past content and was busy with other schoolwork. This was prior to my creation of the more efficient rule-writing system that I would use in the future.<br><br> 
 	    All notes below are WoO notes, explained <a href="/information/color#WoO">here</a>.
@@ -163,7 +240,7 @@
 	     
 	   
 	   </article>
-
+    </div>
 	</div>
 	
 	<div class="General links">
@@ -196,7 +273,7 @@
         <article><strong><a href="/math/precalculus/rational.html">Rational Equations</a></strong> → <strong><a href="/math/precalculus/symmetricality">Domain and Symmetricality</a></strong> → <strong>Parents, Composition, and Inverse</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 18 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

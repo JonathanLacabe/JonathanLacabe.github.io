@@ -10,6 +10,35 @@
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -49,6 +78,9 @@
 	  <article>
 	    <p>These are my complete notes for Quadratic Translation in Algebra II. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
+	  
+	  <div class="rules" data-start="1">
+	  
 	  <header class="articleHeader"><hr>
 	    <h2>I. Quadratic Translation.</h2>
 	  </header>
@@ -58,10 +90,10 @@
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <img src="/math/svg/parabolas-figure1.svg" alt="A standard parabola, y = (x + 1) - 6, with the vertex labeled."/><br></div>
 	    <span class="tiny"><em>A standard parabola, y = (x + 1) - 6, with the vertex labeled. Courtesy of <a href="https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/projectileMotion/parabolas">Ximera</a>.</em></span><br><br>
 	  
-	    <strong><font color="#006400">Vertex</font></strong>: The furthest point to which a parabola or other function reaches within a particular restriction.<br><br>
-	    <strong><font color="#006400">Quadratic Expression</font></strong>: An equation or any function expressing a parabola on a graph.<br><br>
-	    <strong><font color="#006400">Quantity</font></strong>: The total in the parenthesis at all times.<br><br>
-	    <strong><font color="#006400">Foil/Distribute</font></strong>: The conversion of an expression with an outer exponent ('n') into an expression repeated 'n' times, thus multiplying the expression by itself 'n' times.<br><br>
+	    <strong><a href="#VertexDef"><span class="mw-headline" id="VertexDef">#</span></a> <font color="#006400">Vertex</font></strong>: The furthest point to which a parabola or other function reaches within a particular restriction.<br><br>
+	    <strong><a href="#QuadraticExpressionDef"><span class="mw-headline" id="QuadraticExpressionDef">#</span></a> <font color="#006400">Quadratic Expression</font></strong>: An equation or any function expressing a parabola on a graph.<br><br>
+	    <strong><a href="#QuantityDef"><span class="mw-headline" id="QuantityDef">#</span></a> <font color="#006400">Quantity</font></strong>: The total in the parenthesis at all times.<br><br>
+	    <strong><a href="#FoilDef"><span class="mw-headline" id="FoilDef">#</span></a> <font color="#006400">Foil/Distribute</font></strong>: The conversion of an expression with an outer exponent ('n') into an expression repeated 'n' times, thus multiplying the expression by itself 'n' times.<br><br>
 	    <br>
 	    
 	    <font color="blue"><strong><a href="#QuadDissection"><span class="mw-headline" id="QuadDissection">#</span></a> Dissection of a Basic Quadratic Equation:</strong></font><br><br>
@@ -78,18 +110,44 @@
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    
 	    <br><br>
-	    <strong><font color="red">Rule 1.</font></strong> Quantity, the value in the parentheses of a quadratic equation, changes the horizontal location in the opposite manner to what is expected: y = (x-4)² will translate the parabola 4 spaces to the right rather than to the left. The y-axis change comes after the parenthesis, and is done as you would expect: a -6 moves the parabola down six spaces, while +2 brings it up two. See fig. 1. for proof of these traits of the quadratic translation.<br><br><br>
-	    <strong><font color="red">Rule 2.</font></strong> None of the truths of Rule 1 change when the equation becomes negative, y = -(x - 4)² + 2 is just the positive parabola upside down.<br><br><br>
-	    <strong><font color="red">Rule 3.</font></strong> For -(x - 4)², the square only applies for inside the quantity, the outer negative sticks around until the end when distribution comes (opposite/reverse everything, see Rule 1).<br><br><br>
-	    <strong><font color="red">Rule 4.</font></strong> The parent function (most simplified version) of all quadratic equations is f(x) = x², given the equation has an exponent no higher than 2. Transformation means to move the function along the graphical plane in some way, such as translation vertically or horizontally (as described in Rule 1).<br><br><br>
-	    <strong><font color="red">Rule 5.</font></strong> The all powerful formula: <strong> g(x) = a(x - h)² + k</strong>. This formula is known as <strong>Vertex Form</strong>. 'a' is the coefficient, the number in front of x to be distributed after simplifying. 'h' is the horizontal shift (opposite, R. 1). 'k' is the vertical shift (normal, R. 1). <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Quantity, the value in the parentheses of a quadratic equation, changes the horizontal location in the opposite manner to what is expected: y = (x-4)² will translate the parabola 4 spaces to the right rather than to the left. The y-axis change comes after the parenthesis, and is done as you would expect: a -6 moves the parabola down six spaces, while +2 brings it up two. See fig. 1. for proof of these traits of the quadratic translation.</div><br><br>
 	    
-	    <strong><font color="#006400">Axis of Symmetry</font></strong>: The vertical line that divides the parabola into two equal parts. h is this axis, generally.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> None of the truths of Rule 1 change when the equation becomes negative, y = -(x - 4)² + 2 is just the positive parabola upside down.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For -(x - 4)², the square only applies for inside the quantity, the outer negative sticks around until the end when distribution comes (opposite/reverse everything, see Rule 1).</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The parent function (most simplified version) of all quadratic equations is f(x) = x², given the equation has an exponent no higher than 2. Transformation means to move the function along the graphical plane in some way, such as translation vertically or horizontally (as described in Rule 1).</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The all powerful formula: <strong> g(x) = a(x - h)² + k</strong>. This formula is known as <strong>Vertex Form</strong>. 'a' is the coefficient, the number in front of x to be distributed after simplifying. 'h' is the horizontal shift (opposite, R. 1). 'k' is the vertical shift (normal, R. 1). </div><br><br>
+	    
+	    <strong><a href="#AxisSymmetryDef"><span class="mw-headline" id="AxisSymmetryDef">#</span></a> <font color="#006400">Axis of Symmetry</font></strong>: The vertical line that divides the parabola into two equal parts. h is this axis, generally.<br><br><br>
 	   
-	    <strong><font color="red">Rule 6.</font></strong> In all forms, 'a' decides whether the function/parabola will be positive or negative. 'h' is the axis of symmetry and plugging in 0 for x provides the y-intercept.<br><br><br>
-	    <strong><font color="red">Rule 7.</font></strong> The <strong>Standard Form</strong> equation is f(x) = ax² + bx + c. Converting to Vertex Form (see Rule 5 & Rule 6) is h = -b / 2a, and k = f(-b / 2a), plugging in h for x.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In all forms, 'a' decides whether the function/parabola will be positive or negative. 'h' is the axis of symmetry and plugging in 0 for x provides the y-intercept.</div><br><br>
 	    
-	    <font color="blue"><strong>Comparison of Standard and Vertex Form:</strong></font><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Standard Form</strong> equation is f(x) = ax² + bx + c. Converting to Vertex Form (see Rule 5 & Rule 6) is h = -b / 2a, and k = f(-b / 2a), plugging in h for x.</div><br><br>
+	    
+	    <font color="blue"><strong><a href="#StandardVertex"><span class="mw-headline" id="StandardVertex">#</span></a> Comparison of Standard and Vertex Form:</strong></font><br><br>
 	    Standard Form = f(x) = ax² + bx + c<br>
 	    Vertex Form = f(x) = a(x - h)² + k<br><br>
 	    Vertex a is Standard a<br>
@@ -102,37 +160,92 @@
 	    
 	    
 	    
-	    <strong><font color="red">Rule 8.</font></strong> When you are dividing zero by a number, the answer will always be zero.<br><br><br>
-	    <strong><font color="red">Rule 9.</font></strong> For Axis of Symmetry, always state if as x = #, not just what the # is. Remember for tests. Vertical line.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you are dividing zero by a number, the answer will always be zero.</div><br><br>
 	    
-	    <strong><font color="#006400">Minimum Value</font></strong>: The Vertex/Domain for X when the function is at its lowest point.<br><br>
-	    <strong><font color="#006400">Maximum Value</font></strong>: The Vertex/Domain for X when the function is at its highest point.<br><br>
-	    <strong><font color="#006400">Domain</font></strong>: The value where x exists in which X has its limits set, all real numbers within it, see above.<br><br>
-	    <strong><font color="#006400">Range</font></strong>: The limits of Y, where it exists give the Min/Max value.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For Axis of Symmetry, always state if as x = #, not just what the # is. Remember for tests. Vertical line.</div><br><br>
 	    
-	    <strong><font color="red">Rule 10.</font></strong> Domain is the value of x in certain imposed or natural limits, such as Max/Min values, with certain applied factors, like Decreasing or Increasing. From a vertical perspective, going up (a positive slope) is Increasing, while going down is decreasing.<br><br><br>
-	    <strong><font color="red">Rule 11.</font></strong> Decreasing Domains for wave parabolas have > greater than symbols, [ 2 > x, x > -2  ]. Increasing domains use lesser than symbols, [ -3 &lt; x, x &lt; 4  ], Range is below. For normal y = x² parabolas, Domain = all real #s.<br><br><br>
-	    <strong><font color="red">Rule 12.</font></strong> Range is the domain for Y (Domain, Range). While for parabolas X generally doesn't have a Min/Max value, Y has a Range based on the vertex. Y uses >= of &lt;=, as it is equal and infinitely going past the Min/Max value. For a vertex of (2, -3) with a positive a, the range is y >= 3, a parabola that just stoops below and to the right of the graph for its vertex.<br><br><br>
+	    <strong><a href="#MinimumValueDef"><span class="mw-headline" id="MinimumValueDef">#</span></a> <font color="#006400">Minimum Value</font></strong>: The Vertex/Domain for X when the function is at its lowest point.<br><br>
+	    <strong><a href="#MaximumValueDef"><span class="mw-headline" id="MaximumValueDef">#</span></a> <font color="#006400">Maximum Value</font></strong>: The Vertex/Domain for X when the function is at its highest point.<br><br>
+	    <strong><a href="#DomainDef1"><span class="mw-headline" id="DomainDef1">#</span></a> <font color="#006400">Domain</font></strong>: The value where x exists in which X has its limits set, all real numbers within it, see above.<br><br>
+	    <strong><a href="#RangeDef1"><span class="mw-headline" id="RangeDef1">#</span></a> <font color="#006400">Range</font></strong>: The limits of Y, where it exists give the Min/Max value.<br><br><br>
 	    
-	    <strong><font color="red">Rule 13.</font></strong> For <strong>Intercept Form</strong> f(x) = a(x - p)(x - q), converting to Vertex Form is h = (p + q) / 2, and k is plugging in h for x in f(x), just like converting from Standard form (see Rule 7). See Rule 5, see Rule 6, and see Rule 16.<br><br><br>
-	    <strong><font color="red">Rule 14.</font></strong> Two equations use negatives, complicating matters as you have to reverse the variable based on the positive or negative nature of the # of the particular equation. For Vertex Form, reverse h from the specific equation. In Standard Form, no reversing is necessary, the equation is positive. For Intercept Form, both p and q must be reversed.<br><br><br>
-	    <strong><font color="red">Rule 15.</font></strong> In equations like -x² where you have to plug in for x, the proper way to apply the number would be -(2)², applying the square first and then the negative afterwards, in the order of operations.<br><br><br>
-	    <strong><font color="red">Rule 16.</font></strong> Intercept form allows you to see the x-intercepts of the equation by simply reversing p & q. This is why it is Intercept form. See Rule 13.<br><br><br>
-	    <strong><font color="red">Rule 17.</font></strong> For an x-intercept of (0, 0) in Intercept form, there is a particular way to phrase it. Instead of writing g(x) = 1(x + 6)(x + 0), you cut out q from the equation (considering zero is not relevant), and place it at the front, always meaning q = 0, like so: -x(x + 6). a = -1, p = 6, q = 0. There should be no squares in the equation, see below.<br><br><br>
-	    <strong><font color="red">Rule 18.</font></strong> Intercept Form is the only Parabola Form that contains no squares (see Rule 4). However, when there is only x-intercept, it is possible to desimplify by taking the doubled quantities of -2(x - 3)(x - 3) and squaring it to make y = -2(x - 3). This may be confused for a Vertex Form equation with a k of 0, so always half-simplify to see. You will get the same answer either way.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Domain is the value of x in certain imposed or natural limits, such as Max/Min values, with certain applied factors, like Decreasing or Increasing. From a vertical perspective, going up (a positive slope) is Increasing, while going down is decreasing.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Decreasing Domains for wave parabolas have > greater than symbols, [ 2 > x, x > -2  ]. Increasing domains use lesser than symbols, [ -3 &lt; x, x &lt; 4  ], Range is below. For normal y = x² parabolas, Domain = all real #s.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Range is the domain for Y (Domain, Range). While for parabolas X generally doesn't have a Min/Max value, Y has a Range based on the vertex. Y uses >= of &lt;=, as it is equal and infinitely going past the Min/Max value. For a vertex of (2, -3) with a positive a, the range is y >= 3, a parabola that just stoops below and to the right of the graph for its vertex.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For <strong>Intercept Form</strong> f(x) = a(x - p)(x - q), converting to Vertex Form is h = (p + q) / 2, and k is plugging in h for x in f(x), just like converting from Standard form (see Rule 7). See Rule 5, see Rule 6, and see Rule 16.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Two equations use negatives, complicating matters as you have to reverse the variable based on the positive or negative nature of the # of the particular equation. For Vertex Form, reverse h from the specific equation. In Standard Form, no reversing is necessary, the equation is positive. For Intercept Form, both p and q must be reversed.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In equations like -x² where you have to plug in for x, the proper way to apply the number would be -(2)², applying the square first and then the negative afterwards, in the order of operations.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Intercept form allows you to see the x-intercepts of the equation by simply reversing p & q. This is why it is Intercept form. See Rule 13.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For an x-intercept of (0, 0) in Intercept form, there is a particular way to phrase it. Instead of writing g(x) = 1(x + 6)(x + 0), you cut out q from the equation (considering zero is not relevant), and place it at the front, always meaning q = 0, like so: -x(x + 6). a = -1, p = 6, q = 0. There should be no squares in the equation, see below.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Intercept Form is the only Parabola Form that contains no squares (see Rule 4). However, when there is only x-intercept, it is possible to desimplify by taking the doubled quantities of -2(x - 3)(x - 3) and squaring it to make y = -2(x - 3). This may be confused for a Vertex Form equation with a k of 0, so always half-simplify to see. You will get the same answer either way.</div><br><br>
 	   
-	    <strong><font color="#006400">Pass-through Point</font></strong>: The point in which a particular parabola equation h is used for substitution.<br>
-	    <strong><font color="#006400">Prime Factor</font></strong>: A trinomial or other equation that can't be factored.<br><br><br>
+	    <strong><a href="#PassThroughPointDef"><span class="mw-headline" id="PassThroughPointDef">#</span></a> <font color="#006400">Pass-through Point</font></strong>: The point in which a particular parabola equation h is used for substitution.<br><br>
 	    
-	    <strong><font color="red">Rule 19.</font></strong> Finding the equation of a parabola from just a point it passes through and a form-specific Indentifer is possible through substitution. Simply to get a. <br>
+	    <strong><a href="#PrimeFactorDef"><span class="mw-headline" id="PrimeFactorDef">#</span></a> <font color="#006400">Prime Factor</font></strong>: A trinomial or other equation that can't be factored.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Finding the equation of a parabola from just a point it passes through and a form-specific Indentifer is possible through substitution. Simply to get a. <br>
 	      a. For Vertex Form, create the equation from the known vertex to get the base equation and substitute in the known pass-through point to get a. Ex: You have the base equation of y = a(x + 5)² + 9 and the PTP is (-7, -15). You'd plug in -15 for y and -7 for x, getting the equation -15 = a(-7 + 5)² + 9. Simplify, and you'll find a = 6 and y = -6(x + 5)² + 9.<br>
 	      b. For Intercept Form, mostly the same thing as Vertex Form; find the base equation through the given x-intercepts and simplify using the given PTP. Ex: Base equation is y = a(x - 9)(x - 1). Plug in PTP of (0, -18), get -18 = a(0 - 9)(0 - 1). Simplifying proves a = -2.<br>
 	      c. Convert Standard Form to vertex and do it. Nothing special.
-	    <br><br><br>
-	    <strong><font color="red">Rule 20.</font></strong> f(x) just means y, written in function form. So is g(x). They are all the same.<br><br><br>
-	    <strong><font color="red">Rule 21.</font></strong> The Square root, √, is also known as a radical. <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">27</span></span> = Radical Twenty Seven. For the regular square root, it takes two to get out of the square using the 28|2 method, 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. For cube roots, it takes three to get out, turning 3√<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span> for 27 into just 3. For fractions like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">16 / 25</span></span>, all you have to do is square root the numerator and the denominator, getting a result of 4/5. You have to apply the method to the numerator and the denominator.<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> f(x) just means y, written in function form. So is g(x). They are all the same.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The Square root, √, is also known as a radical. <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">27</span></span> = Radical Twenty Seven. For the regular square root, it takes two to get out of the square using the 28|2 method, 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. For cube roots, it takes three to get out, turning 3√<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span> for 27 into just 3. For fractions like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">16 / 25</span></span>, all you have to do is square root the numerator and the denominator, getting a result of 4/5. You have to apply the method to the numerator and the denominator.</div><br>
 	    
 	  </article>
+	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -165,7 +278,7 @@
       <article><strong>Quadratic Translation</strong> → <strong><a href="/math/algebraII/factoring">Factoring Pt. 1</a></strong> → <strong><a href="/math/algebraII/polyfunctions">Polynomial Functions</a></strong> → <strong><a href="/math/algebraII/longdivision">Long Division</a></strong> → <strong><a href="/math/algebraII/factoring2">Factoring Pt. 2</a></strong> → <strong><a href="/math/algebraII/exponentrules">Rules of Exponents</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 26 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

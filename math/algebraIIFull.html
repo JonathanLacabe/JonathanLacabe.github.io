@@ -130,6 +130,10 @@ document.addEventListener("DOMContentLoaded", function (){
         </div>
         
       </div>
+      
+      <div class="rules" data-start="1">
+      
+      
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Quadratic Translation">I. Quadratic Translation.</span></h2>
 	  </header>
@@ -139,10 +143,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <img src="/math/svg/parabolas-figure1.svg" alt="A standard parabola, y = (x + 1) - 6, with the vertex labeled."/><br></div>
 	    <span class="tiny"><em>A standard parabola, y = (x + 1) - 6, with the vertex labeled. Courtesy of <a href="https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/projectileMotion/parabolas">Ximera</a>.</em></span><br><br>
 	  
-	    <strong><font color="#006400">Vertex</font></strong>: The furthest point to which a parabola or other function reaches within a particular restriction.<br><br>
-	    <strong><font color="#006400">Quadratic Expression</font></strong>: An equation or any function expressing a parabola on a graph.<br><br>
-	    <strong><font color="#006400">Quantity</font></strong>: The total in the parenthesis at all times.<br><br>
-	    <strong><font color="#006400">Foil/Distribute</font></strong>: The conversion of an expression with an outer exponent ('n') into an expression repeated 'n' times, thus multiplying the expression by itself 'n' times.<br><br>
+	    <strong><a href="#VertexDef"><span class="mw-headline" id="VertexDef">#</span></a> <font color="#006400">Vertex</font></strong>: The furthest point to which a parabola or other function reaches within a particular restriction.<br><br>
+	    <strong><a href="#QuadraticExpressionDef"><span class="mw-headline" id="QuadraticExpressionDef">#</span></a> <font color="#006400">Quadratic Expression</font></strong>: An equation or any function expressing a parabola on a graph.<br><br>
+	    <strong><a href="#QuantityDef"><span class="mw-headline" id="QuantityDef">#</span></a> <font color="#006400">Quantity</font></strong>: The total in the parenthesis at all times.<br><br>
+	    <strong><a href="#FoilDef"><span class="mw-headline" id="FoilDef">#</span></a> <font color="#006400">Foil/Distribute</font></strong>: The conversion of an expression with an outer exponent ('n') into an expression repeated 'n' times, thus multiplying the expression by itself 'n' times.<br><br>
 	    <br>
 	    
 	    <font color="blue"><strong><a href="#QuadDissection"><span class="mw-headline" id="QuadDissection">#</span></a> Dissection of a Basic Quadratic Equation:</strong></font><br><br>
@@ -159,18 +163,44 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    
 	    <br><br>
-	    <strong><font color="red">Rule 1.</font></strong> Quantity, the value in the parentheses of a quadratic equation, changes the horizontal location in the opposite manner to what is expected: y = (x-4)² will translate the parabola 4 spaces to the right rather than to the left. The y-axis change comes after the parenthesis, and is done as you would expect: a -6 moves the parabola down six spaces, while +2 brings it up two. See fig. 1. for proof of these traits of the quadratic translation.<br><br><br>
-	    <strong><font color="red">Rule 2.</font></strong> None of the truths of Rule 1 change when the equation becomes negative, y = -(x - 4)² + 2 is just the positive parabola upside down.<br><br><br>
-	    <strong><font color="red">Rule 3.</font></strong> For -(x - 4)², the square only applies for inside the quantity, the outer negative sticks around until the end when distribution comes (opposite/reverse everything, see Rule 1).<br><br><br>
-	    <strong><font color="red">Rule 4.</font></strong> The parent function (most simplified version) of all quadratic equations is f(x) = x², given the equation has an exponent no higher than 2. Transformation means to move the function along the graphical plane in some way, such as translation vertically or horizontally (as described in Rule 1).<br><br><br>
-	    <strong><font color="red">Rule 5.</font></strong> The all powerful formula: <strong> g(x) = a(x - h)² + k</strong>. This formula is known as <strong>Vertex Form</strong>. 'a' is the coefficient, the number in front of x to be distributed after simplifying. 'h' is the horizontal shift (opposite, R. 1). 'k' is the vertical shift (normal, R. 1). <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Quantity, the value in the parentheses of a quadratic equation, changes the horizontal location in the opposite manner to what is expected: y = (x-4)² will translate the parabola 4 spaces to the right rather than to the left. The y-axis change comes after the parenthesis, and is done as you would expect: a -6 moves the parabola down six spaces, while +2 brings it up two. See fig. 1. for proof of these traits of the quadratic translation.</div><br><br>
 	    
-	    <strong><font color="#006400">Axis of Symmetry</font></strong>: The vertical line that divides the parabola into two equal parts. h is this axis, generally.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> None of the truths of Rule 1 change when the equation becomes negative, y = -(x - 4)² + 2 is just the positive parabola upside down.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For -(x - 4)², the square only applies for inside the quantity, the outer negative sticks around until the end when distribution comes (opposite/reverse everything, see Rule 1).</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The parent function (most simplified version) of all quadratic equations is f(x) = x², given the equation has an exponent no higher than 2. Transformation means to move the function along the graphical plane in some way, such as translation vertically or horizontally (as described in Rule 1).</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The all powerful formula: <strong> g(x) = a(x - h)² + k</strong>. This formula is known as <strong>Vertex Form</strong>. 'a' is the coefficient, the number in front of x to be distributed after simplifying. 'h' is the horizontal shift (opposite, R. 1). 'k' is the vertical shift (normal, R. 1). </div><br><br>
+	    
+	    <strong><a href="#AxisSymmetryDef"><span class="mw-headline" id="AxisSymmetryDef">#</span></a> <font color="#006400">Axis of Symmetry</font></strong>: The vertical line that divides the parabola into two equal parts. h is this axis, generally.<br><br><br>
 	   
-	    <strong><font color="red">Rule 6.</font></strong> In all forms, 'a' decides whether the function/parabola will be positive or negative. 'h' is the axis of symmetry and plugging in 0 for x provides the y-intercept.<br><br><br>
-	    <strong><font color="red">Rule 7.</font></strong> The <strong>Standard Form</strong> equation is f(x) = ax² + bx + c. Converting to Vertex Form (see Rule 5 & Rule 6) is h = -b / 2a, and k = f(-b / 2a), plugging in h for x.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In all forms, 'a' decides whether the function/parabola will be positive or negative. 'h' is the axis of symmetry and plugging in 0 for x provides the y-intercept.</div><br><br>
 	    
-	    <font color="blue"><strong>Comparison of Standard and Vertex Form:</strong></font><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Standard Form</strong> equation is f(x) = ax² + bx + c. Converting to Vertex Form (see Rule 5 & Rule 6) is h = -b / 2a, and k = f(-b / 2a), plugging in h for x.</div><br><br>
+	    
+	    <font color="blue"><strong><a href="#StandardVertex"><span class="mw-headline" id="StandardVertex">#</span></a> Comparison of Standard and Vertex Form:</strong></font><br><br>
 	    Standard Form = f(x) = ax² + bx + c<br>
 	    Vertex Form = f(x) = a(x - h)² + k<br><br>
 	    Vertex a is Standard a<br>
@@ -183,36 +213,100 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    
 	    
-	    <strong><font color="red">Rule 8.</font></strong> When you are dividing zero by a number, the answer will always be zero.<br><br><br>
-	    <strong><font color="red">Rule 9.</font></strong> For Axis of Symmetry, always state if as x = #, not just what the # is. Remember for tests. Vertical line.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you are dividing zero by a number, the answer will always be zero.</div><br><br>
 	    
-	    <strong><font color="#006400">Minimum Value</font></strong>: The Vertex/Domain for X when the function is at its lowest point.<br><br>
-	    <strong><font color="#006400">Maximum Value</font></strong>: The Vertex/Domain for X when the function is at its highest point.<br><br>
-	    <strong><font color="#006400">Domain</font></strong>: The value where x exists in which X has its limits set, all real numbers within it, see above.<br><br>
-	    <strong><font color="#006400">Range</font></strong>: The limits of Y, where it exists give the Min/Max value.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For Axis of Symmetry, always state if as x = #, not just what the # is. Remember for tests. Vertical line.</div><br><br>
 	    
-	    <strong><font color="red">Rule 10.</font></strong> Domain is the value of x in certain imposed or natural limits, such as Max/Min values, with certain applied factors, like Decreasing or Increasing. From a vertical perspective, going up (a positive slope) is Increasing, while going down is decreasing.<br><br><br>
-	    <strong><font color="red">Rule 11.</font></strong> Decreasing Domains for wave parabolas have > greater than symbols, [ 2 > x, x > -2  ]. Increasing domains use lesser than symbols, [ -3 &lt; x, x &lt; 4  ], Range is below. For normal y = x² parabolas, Domain = all real #s.<br><br><br>
-	    <strong><font color="red">Rule 12.</font></strong> Range is the domain for Y (Domain, Range). While for parabolas X generally doesn't have a Min/Max value, Y has a Range based on the vertex. Y uses >= of &lt;=, as it is equal and infinitely going past the Min/Max value. For a vertex of (2, -3) with a positive a, the range is y >= 3, a parabola that just stoops below and to the right of the graph for its vertex.<br><br><br>
+	    <strong><a href="#MinimumValueDef"><span class="mw-headline" id="MinimumValueDef">#</span></a> <font color="#006400">Minimum Value</font></strong>: The Vertex/Domain for X when the function is at its lowest point.<br><br>
+	    <strong><a href="#MaximumValueDef"><span class="mw-headline" id="MaximumValueDef">#</span></a> <font color="#006400">Maximum Value</font></strong>: The Vertex/Domain for X when the function is at its highest point.<br><br>
+	    <strong><a href="#DomainDef1"><span class="mw-headline" id="DomainDef1">#</span></a> <font color="#006400">Domain</font></strong>: The value where x exists in which X has its limits set, all real numbers within it, see above.<br><br>
+	    <strong><a href="#RangeDef1"><span class="mw-headline" id="RangeDef1">#</span></a> <font color="#006400">Range</font></strong>: The limits of Y, where it exists give the Min/Max value.<br><br><br>
 	    
-	    <strong><font color="red">Rule 13.</font></strong> For <strong>Intercept Form</strong> f(x) = a(x - p)(x - q), converting to Vertex Form is h = (p + q) / 2, and k is plugging in h for x in f(x), just like converting from Standard form (see Rule 7). See Rule 5, see Rule 6, and see Rule 16.<br><br><br>
-	    <strong><font color="red">Rule 14.</font></strong> Two equations use negatives, complicating matters as you have to reverse the variable based on the positive or negative nature of the # of the particular equation. For Vertex Form, reverse h from the specific equation. In Standard Form, no reversing is necessary, the equation is positive. For Intercept Form, both p and q must be reversed.<br><br><br>
-	    <strong><font color="red">Rule 15.</font></strong> In equations like -x² where you have to plug in for x, the proper way to apply the number would be -(2)², applying the square first and then the negative afterwards, in the order of operations.<br><br><br>
-	    <strong><font color="red">Rule 16.</font></strong> Intercept form allows you to see the x-intercepts of the equation by simply reversing p & q. This is why it is Intercept form. See Rule 13.<br><br><br>
-	    <strong><font color="red">Rule 17.</font></strong> For an x-intercept of (0, 0) in Intercept form, there is a particular way to phrase it. Instead of writing g(x) = 1(x + 6)(x + 0), you cut out q from the equation (considering zero is not relevant), and place it at the front, always meaning q = 0, like so: -x(x + 6). a = -1, p = 6, q = 0. There should be no squares in the equation, see below.<br><br><br>
-	    <strong><font color="red">Rule 18.</font></strong> Intercept Form is the only Parabola Form that contains no squares (see Rule 4). However, when there is only x-intercept, it is possible to desimplify by taking the doubled quantities of -2(x - 3)(x - 3) and squaring it to make y = -2(x - 3). This may be confused for a Vertex Form equation with a k of 0, so always half-simplify to see. You will get the same answer either way.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Domain is the value of x in certain imposed or natural limits, such as Max/Min values, with certain applied factors, like Decreasing or Increasing. From a vertical perspective, going up (a positive slope) is Increasing, while going down is decreasing.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Decreasing Domains for wave parabolas have > greater than symbols, [ 2 > x, x > -2  ]. Increasing domains use lesser than symbols, [ -3 &lt; x, x &lt; 4  ], Range is below. For normal y = x² parabolas, Domain = all real #s.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Range is the domain for Y (Domain, Range). While for parabolas X generally doesn't have a Min/Max value, Y has a Range based on the vertex. Y uses >= of &lt;=, as it is equal and infinitely going past the Min/Max value. For a vertex of (2, -3) with a positive a, the range is y >= 3, a parabola that just stoops below and to the right of the graph for its vertex.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For <strong>Intercept Form</strong> f(x) = a(x - p)(x - q), converting to Vertex Form is h = (p + q) / 2, and k is plugging in h for x in f(x), just like converting from Standard form (see Rule 7). See Rule 5, see Rule 6, and see Rule 16.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Two equations use negatives, complicating matters as you have to reverse the variable based on the positive or negative nature of the # of the particular equation. For Vertex Form, reverse h from the specific equation. In Standard Form, no reversing is necessary, the equation is positive. For Intercept Form, both p and q must be reversed.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In equations like -x² where you have to plug in for x, the proper way to apply the number would be -(2)², applying the square first and then the negative afterwards, in the order of operations.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Intercept form allows you to see the x-intercepts of the equation by simply reversing p & q. This is why it is Intercept form. See Rule 13.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For an x-intercept of (0, 0) in Intercept form, there is a particular way to phrase it. Instead of writing g(x) = 1(x + 6)(x + 0), you cut out q from the equation (considering zero is not relevant), and place it at the front, always meaning q = 0, like so: -x(x + 6). a = -1, p = 6, q = 0. There should be no squares in the equation, see below.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Intercept Form is the only Parabola Form that contains no squares (see Rule 4). However, when there is only x-intercept, it is possible to desimplify by taking the doubled quantities of -2(x - 3)(x - 3) and squaring it to make y = -2(x - 3). This may be confused for a Vertex Form equation with a k of 0, so always half-simplify to see. You will get the same answer either way.</div><br><br>
 	   
-	    <strong><font color="#006400">Pass-through Point</font></strong>: The point in which a particular parabola equation h is used for substitution.<br>
-	    <strong><font color="#006400">Prime Factor</font></strong>: A trinomial or other equation that can't be factored.<br><br><br>
+	    <strong><a href="#PassThroughPointDef"><span class="mw-headline" id="PassThroughPointDef">#</span></a> <font color="#006400">Pass-through Point</font></strong>: The point in which a particular parabola equation h is used for substitution.<br><br>
 	    
-	    <strong><font color="red">Rule 19.</font></strong> Finding the equation of a parabola from just a point it passes through and a form-specific Indentifer is possible through substitution. Simply to get a. <br>
+	    <strong><a href="#PrimeFactorDef"><span class="mw-headline" id="PrimeFactorDef">#</span></a> <font color="#006400">Prime Factor</font></strong>: A trinomial or other equation that can't be factored.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Finding the equation of a parabola from just a point it passes through and a form-specific Indentifer is possible through substitution. Simply to get a. <br>
 	      a. For Vertex Form, create the equation from the known vertex to get the base equation and substitute in the known pass-through point to get a. Ex: You have the base equation of y = a(x + 5)² + 9 and the PTP is (-7, -15). You'd plug in -15 for y and -7 for x, getting the equation -15 = a(-7 + 5)² + 9. Simplify, and you'll find a = 6 and y = -6(x + 5)² + 9.<br>
 	      b. For Intercept Form, mostly the same thing as Vertex Form; find the base equation through the given x-intercepts and simplify using the given PTP. Ex: Base equation is y = a(x - 9)(x - 1). Plug in PTP of (0, -18), get -18 = a(0 - 9)(0 - 1). Simplifying proves a = -2.<br>
 	      c. Convert Standard Form to vertex and do it. Nothing special.
-	    <br><br><br>
-	    <strong><font color="red">Rule 20.</font></strong> f(x) just means y, written in function form. So is g(x). They are all the same.<br><br><br>
-	    <strong><font color="red">Rule 21.</font></strong> The Square root, √, is also known as a radical. <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">27</span></span> = Radical Twenty Seven. For the regular square root, it takes two to get out of the square using the 28|2 method, 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. For cube roots, it takes three to get out, turning 3√<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span> for 27 into just 3. For fractions like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">16 / 25</span></span>, all you have to do is square root the numerator and the denominator, getting a result of 4/5. You have to apply the method to the numerator and the denominator.<br><br>
+	    </div><br><br>
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> f(x) just means y, written in function form. So is g(x). They are all the same.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The Square root, √, is also known as a radical. <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">27</span></span> = Radical Twenty Seven. For the regular square root, it takes two to get out of the square using the 28|2 method, 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. For cube roots, it takes three to get out, turning 3√<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span> for 27 into just 3. For fractions like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">16 / 25</span></span>, all you have to do is square root the numerator and the denominator, getting a result of 4/5. You have to apply the method to the numerator and the denominator.</div><br>
+	    
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
 	     
 	    </article><hr>
 	    <header class="articleHeader"><hr>
@@ -220,10 +314,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	    </header>
 	    <article><br>
 	    
-	    <strong><font color="#006400">Greatest Commmon Factor</font></strong>: The biggest number/factor both sides can be evenly divided by.<br><br><br>
+	    <strong><a href="#GCFDef"><span class="mw-headline" id="GCFDef">#</span></a> <font color="#006400">Greatest Common Factor</font></strong>: The biggest number/factor both sides can be evenly divided by.<br><br><br>
 	    
-	    <strong><font color="red">Rule 22.</font></strong> Factoring. 49x² + 42x + 9 is a <strong>Perfect Trinomial</strong> where a = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">9</span></span>. c, 42x, is equal to 2ab, or 42x = 2(7x)(3). This is correct, so the equation can be put in (a + b)² form: (7x + 3)². Any Linear Equation in Standard Form can be solved both in Graph Form and Factor Form. For any Non-Perfect Prime Trinomial, the x-method is the way to factor any Standard Form equations: ac over b is x.  Divide by the <strong>Greatest Common Factor</strong> to get the outside multiplier of the quantity when simplifying. This can be done only on one side of the equation. Factoring by grouping is fun, a(c + d) + b(c + d) = (a + b)(c + d). The internal quantity has to be the same. (a - b) and (b - a) can be made equal to eachother by making -(b - a). For four variables, this means to GCF 2 to 2, creating a grouping problem.<br><br><br>
-	    <strong><font color="red">Rule 23.</font></strong> Factoring Pt. 2. For (a + b)(a - b), (a² + b²) comes out. <strong>Perfect Square Binomial</strong>, if b is a square, then you can turn x² - 25 into (x + 5)(x - 5). This ONLY works with both a and b perfect squares, don't bother otherwise. Only works with negative b. For the X method, if "= 0" is at the end, divide the Standard equation to make a = 1. Unnecessary if not. Either way, remove any fractions by multiplying everything by the denominator. ac over b is the x method:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring. 49x² + 42x + 9 is a <strong>Perfect Trinomial</strong> where a = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">9</span></span>. c, 42x, is equal to 2ab, or 42x = 2(7x)(3). This is correct, so the equation can be put in (a + b)² form: (7x + 3)². Any Linear Equation in Standard Form can be solved both in Graph Form and Factor Form. For any Non-Perfect Prime Trinomial, the x-method is the way to factor any Standard Form equations: ac over b is x.  Divide by the <strong>Greatest Common Factor</strong> to get the outside multiplier of the quantity when simplifying. This can be done only on one side of the equation. Factoring by grouping is fun, a(c + d) + b(c + d) = (a + b)(c + d). The internal quantity has to be the same. (a - b) and (b - a) can be made equal to eachother by making -(b - a). For four variables, this means to GCF 2 to 2, creating a grouping problem.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring Pt. 2. For (a + b)(a - b), (a² + b²) comes out. <strong>Perfect Square Binomial</strong>, if b is a square, then you can turn x² - 25 into (x + 5)(x - 5). This ONLY works with both a and b perfect squares, don't bother otherwise. Only works with negative b. For the X method, if "= 0" is at the end, divide the Standard equation to make a = 1. Unnecessary if not. Either way, remove any fractions by multiplying everything by the denominator. ac over b is the x method:<br>
 	    ╲&nbsp;ac&nbsp;╱<br>
 	    &nbsp;╲&nbsp;&nbsp;╱<br>
 	    F1╲╱F2<br>
@@ -233,91 +334,136 @@ document.addEventListener("DOMContentLoaded", function (){
 	    (F1)(F2) = ac and F1 + F2 = b.
 	    <!-- ╱	╲	  ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &-->
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><font color="#006400">Reciprocal</font></strong>: Upside down fraction, same sign.<br><br><br>
+	    <strong><a href="#ReciprocalDef"><span class="mw-headline" id="ReciprocalDef">#</span></a> <font color="#006400">Reciprocal</font></strong>: Upside down fraction, same sign.<br><br><br>
 	    
-	    <strong><font color="red">Rule 24.</font></strong> Under no circumstances can there be a Radical in the denominator. Multiply both numerator and denominator by denominator to square the denominator and make it a regular integer. It would go from <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a / b</span></span>. to <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">ab</span></span> / b.<br><br><br>
-	    <strong><font color="red">Rule 25.</font></strong> Always be simplifying radicals. It is not ± <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>, but 28|2 → 14|2 → 7|7, ± 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>. In every case.<br><br><br>
-	    <strong><font color="red">Rule 26.</font></strong> Always consider leaving c on its own on one side of the equation in order to simplify a possible answer. Only if "= 0" is applied or if 100% sure that there is another method already codified can you bypass this fundamental simplification law.<br><br><br>
-	    <strong><font color="red">Rule 27.</font></strong> i. i = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span> In its most definitional sense, i is the square root of -1, an imaginary number. <strong>Complex Numbers</strong> are any equation with i, such as 2i. a + bi is the standard Form in which the solutions of the complex equations tend to take, a and b both being real numbers. Always be keepin' in mind that i maintains distinct properties than the regular algebraic variables like x and y. i may act as a normal variable at times, but when i gets multiplied by itself or by another exponent, its true self is revealed. As <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>, when squared, i becomes just -1. When cubed, i becomes -i. And when i is to the power of 4, it goes all the way to 1. This pattern repeats; to find where in the pattern any exponent lies (like i⁵⁰), divide the exponent number by 4, and take the remainder, in this case 2, and see in the patterns its equivalent. The equations are (a + bi) + (c + di) = (a + c) + i(b + d) and the negative form of (a + bi) - (c + di) = (a - c) + i(b - d). Simplify to get Standard Form. ONLY use formula if question is already in format or if can be grouped into it with factoring.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Under no circumstances can there be a Radical in the denominator. Multiply both numerator and denominator by denominator to square the denominator and make it a regular integer. It would go from <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a / b</span></span>. to <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">ab</span></span> / b.</div><br><br>
 	    
-	      <font color="blue"><strong>Pattern of i:</strong></font><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Always be simplifying radicals. It is not ± <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">49x²</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>, but 28|2 → 14|2 → 7|7, ± 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> and b = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">28</span></span>. In every case.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Always consider leaving c on its own on one side of the equation in order to simplify a possible answer. Only if "= 0" is applied or if 100% sure that there is another method already codified can you bypass this fundamental simplification law.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> i. i = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span> In its most definitional sense, i is the square root of -1, an imaginary number. <strong>Complex Numbers</strong> are any equation with i, such as 2i. a + bi is the standard Form in which the solutions of the complex equations tend to take, a and b both being real numbers. Always be keepin' in mind that i maintains distinct properties than the regular algebraic variables like x and y. i may act as a normal variable at times, but when i gets multiplied by itself or by another exponent, its true self is revealed. As <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>, when squared, i becomes just -1. When cubed, i becomes -i. And when i is to the power of 4, it goes all the way to 1. This pattern repeats; to find where in the pattern any exponent lies (like i⁵⁰), divide the exponent number by 4, and take the remainder, in this case 2, and see in the patterns its equivalent. The equations are (a + bi) + (c + di) = (a + c) + i(b + d) and the negative form of (a + bi) - (c + di) = (a - c) + i(b - d). Simplify to get Standard Form. ONLY use formula if question is already in format or if can be grouped into it with factoring.</div><br><br>
+	    
+	      <font color="blue"><strong><a href="#PatternOfi"><span class="mw-headline" id="PatternOfi">#</span></a> Pattern of i:</strong></font><br>
 	      i = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>&nbsp;&nbsp;&nbsp;i⁵ = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-1</span></span>&nbsp;&nbsp;&nbsp;<br>
 	      i² = -1&nbsp;&nbsp;&nbsp;i⁶ = -1<br>
 	      i³ = -i&nbsp;&nbsp;&nbsp;i⁷ = -i<br>
 	      i⁴ = 1&nbsp;&nbsp;&nbsp;&nbsp;i⁸ = 1<br><br>
 	      
-	      <font color="blue"><strong>Squares to 16:</strong></font><br>
+	      <font color="blue"><strong><a href="#Squares16"><span class="mw-headline" id="Squares16">#</span></a> Squares to 16:</strong></font><br>
 	      1² = 1&nbsp;&nbsp;&nbsp;&nbsp;5² = 25&nbsp;&nbsp;&nbsp;&nbsp;9² = 81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13² = 169<br>
 	      2² = 4&nbsp;&nbsp;&nbsp;&nbsp;6² = 36&nbsp;&nbsp;&nbsp;&nbsp;10² = 100&nbsp;&nbsp;&nbsp;14² = 196<br>
 	      3² = 9&nbsp;&nbsp;&nbsp;&nbsp;7² = 49&nbsp;&nbsp;&nbsp;&nbsp;11² = 121&nbsp;&nbsp;&nbsp;15² = 225<br>
 	      4² = 16&nbsp;&nbsp;&nbsp;8² = 64&nbsp;&nbsp;&nbsp;&nbsp;12² = 144&nbsp;&nbsp;&nbsp;16² = 256<br><br><br>
 	    
-	    <strong><font color="red">Rule 28.</font></strong> Quantities exist for reasons, never ignore them. If there is a negative in front of it, it will be flipped with the negative reversing everything with the <strong>Distributive Property</strong>.<br><br><br>
-	    <strong><font color="red">Rule 29.</font></strong> Factoring Pt. 3. If the equation is in the correct form for X method but 'a' != 1 and 'b' & 'c' aren't divisible by 'a'<!--, making you unable to pacify 'a' into 1-->, it is still possible to factor. Continue with the X-method process and find the quantities, say, (3x - 1)(3x - 6), the second quantity can be simplified to (x - 2), making the factorization true.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Quantities exist for reasons, never ignore them. If there is a negative in front of it, it will be flipped with the negative reversing everything with the <strong>Distributive Property</strong>.</div><br><br>
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring Pt. 3. If the equation is in the correct form for X method but 'a' != 1 and 'b' & 'c' aren't divisible by 'a'<!--, making you unable to pacify 'a' into 1-->, it is still possible to factor. Continue with the X-method process and find the quantities, say, (3x - 1)(3x - 6), the second quantity can be simplified to (x - 2), making the factorization true.</div><br><br>
 	    
-	    <strong><font color="red">Rule 30.</font></strong> Factoring will not work in every case ("prime" factors), but one can still force a solution through completing the square. For an equation like x² + 16x + 17 = 0, the first move would be simply preparing the problem for applying the method: If there is C on the same side as the others and factoring has been ruled out, move C to the other side with 0 or whatever is already there. If simplification is possible, do so and try to get a as low as possible. If a is negative, multiply both sides by -1 to make it normal. Now, the equation is x² + 16 = -17. The next step is to use the equation of (b / 2)², (16/2)² in this case to get a Perfect Square Trinomial. The result of the equation is added to both sides, x² + 16x + 64 = 47. The PST nature of the left side makes it equal to (x + 8)² = 47. Square it on both sides, getting x + 8 = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span> Simplify if you can, if the Radical is negative put an i in front, and you should get x = -8 ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span>.<br><br><br>
-	    <strong><font color="red">Rule 31.</font></strong> <strong>Completing the Square</strong> can be used as an alternate method to convert Standard Form to Vertex Form. For the equation y = x² - 22x + 16, move c to the y, and then complete the square on the right side, getting the equation of y + 105 = x² - 22x + 121. Factoring the right side gives y + 105 = (x - 11)², and moving 105 gives the Vertex Form of y = (x - 11)² = 105. (11, -105) are the coordinates. Keep C in the Y side while using the 'complete the square' method of factoring, (b/2)² to find C.<br><br><br>
-	    <strong><font color="red">Rule 32.</font></strong> The <strong>Quadratic Formula</strong> works in place of factoring, completing the square, anything with regards to Standard Form, The Formula is x = (-b ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b² - 4ac</span></span>) / 2a. Example problem: 2x² + 4x - 30. 1. Always have it equal zero. 2. Simplify the base equation if you can. 3. Always have a positive a. 2 applied is x² + 2x - 15 = 0. Find a, b, and c, and plug them in to the formula. Remember PEMDAS. If <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">0</span></span>, there's only one solution (see Rule 33): try to simplify if there's a fraction.<br><br><br>
-	     <strong><font color="#006400">Quadratic</font></strong>: Highest Exponent is Two.<br><br><br>
-	    <strong><font color="red">Rule 33.</font></strong> If a Quadratic Equation EVER has an answer<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Factoring will not work in every case ("prime" factors), but one can still force a solution through completing the square. For an equation like x² + 16x + 17 = 0, the first move would be simply preparing the problem for applying the method: If there is C on the same side as the others and factoring has been ruled out, move C to the other side with 0 or whatever is already there. If simplification is possible, do so and try to get a as low as possible. If a is negative, multiply both sides by -1 to make it normal. Now, the equation is x² + 16 = -17. The next step is to use the equation of (b / 2)², (16/2)² in this case to get a Perfect Square Trinomial. The result of the equation is added to both sides, x² + 16x + 64 = 47. The PST nature of the left side makes it equal to (x + 8)² = 47. Square it on both sides, getting x + 8 = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span> Simplify if you can, if the Radical is negative put an i in front, and you should get x = -8 ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span>.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Completing the Square</strong> can be used as an alternate method to convert Standard Form to Vertex Form. For the equation y = x² - 22x + 16, move c to the y, and then complete the square on the right side, getting the equation of y + 105 = x² - 22x + 121. Factoring the right side gives y + 105 = (x - 11)², and moving 105 gives the Vertex Form of y = (x - 11)² = 105. (11, -105) are the coordinates. Keep C in the Y side while using the 'complete the square' method of factoring, (b/2)² to find C.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Quadratic Formula</strong> works in place of factoring, completing the square, anything with regards to Standard Form, The Formula is x = (-b ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b² - 4ac</span></span>) / 2a. Example problem: 2x² + 4x - 30. 1. Always have it equal zero. 2. Simplify the base equation if you can. 3. Always have a positive a. 2 applied is x² + 2x - 15 = 0. Find a, b, and c, and plug them in to the formula. Remember PEMDAS. If <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">0</span></span>, there's only one solution (see Rule 33): try to simplify if there's a fraction.</div><br><br>
+	    
+	     <strong><a href="#QuadraticDef"><span class="mw-headline" id="QuadraticDef">#</span></a> <font color="#006400">Quadratic</font></strong>: Highest Exponent is Two.<br><br><br>
+	     
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If a Quadratic Equation EVER has an answer<br>
 	    <strong>D &lt; 0</strong>: a) that includes i, the equations has no x-intercepts. This means there are No real solutions. However, this also means there will be Two imaginary solutions. This is the D &lt; 0 property of the <strong>Discriminant</strong>, the part of the Quadratic Formula completely within a Radical: b² - 4ac. Plug in the Standard Form variables and get a solution, the Solution being D.<br>
 	    <strong>D = 0</strong>: b) For a Discriminant that ends up having a solution of <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">0</span></span>, D = 0 and there would therefore be One real solution to the problem. Only when the equation is already in a completed square form ((b / 2)² appears to have already been preformed) and a = 1 can this occur, where it is very obvious. PST will always have only one solution.<br>
-	    <strong>D > 0</strong>: c) For a Disriminant thats ends up having two real solutions (due to the ± in the quadratic formula), D > 0 and there are two x-intercepts. Most importantly, the "number of real-imagined solutions" is for the ENTIRE quadratic equations, the discriminant only tells how many answers there will be, not what they are. "Solution" is just another word for the number of x-intercepts.
-	    <br><br><br><br>
+	    <strong>D > 0</strong>: c) For a Discriminant thats ends up having two real solutions (due to the ± in the quadratic formula), D > 0 and there are two x-intercepts. Most importantly, the "number of real-imagined solutions" is for the ENTIRE quadratic equations, the discriminant only tells how many answers there will be, not what they are. "Solution" is just another word for the number of x-intercepts.
+	    </div><br><br><br>
 	    
-	    <strong><font color="red">RULE 34.</font></strong> <strong><h2>COMPARISON/PROPERTIES OF ALL FORMULAS & METHODS.</h2></strong>
+	    
+	    <div class="rule"><strong>
+            <a href="#RULE"><span class="hash">#</span></a> 
+            <font color="red">RULE <span class="rule-number"></span>.</font>
+        </strong> <strong><h2>COMPARISON/PROPERTIES OF ALL FORMULAS & METHODS.</h2></strong>
 	    <strong>Elimination, System of Equations, and Substitution are System of Equation-type methods. TRY WHICHEVER LOOKS BEST, NO ORDER.</strong><br>
 	    <strong>PST is a largely X-Isolation based Method. SEE RULE 26!!!</strong><br>
-	    <strong>IF NOT GCP/GROUPING, THEN COMPLETE THE SQUARE. USE QUADRATIC FORMULA AT ANY TIME.</strong><br>
-	    <h3>ELIMINATION.</h3>
+	    <strong>IF NOT GCP/GROUPING, THEN COMPLETE THE SQUARE. USE QUADRATIC FORMULA AT ANY TIME.</strong><br><br>
+	    
+	    <h3><strong><a href="#ELIMINATION1"><span class="mw-headline" id="ELIMINATION1">#</span></a> </strong>ELIMINATION.</h3>
 	    <strong>Formula + Description:</strong> Stack both equations like long addition and find the sum. Like System of Equations, but skipping a step. Keep two sides for factoring.<br>
 	    <strong>Unique Trait:</strong> The goal is generally to kill off 'y' ASAP, minusing the 2nd equation (if needs be) by reversing the entire second equation. Anything to kill y.<br>
 	    <strong>Applicable When:</strong> ONLY to be used when both equations have roughly the same variables. Equations should generally have a y.<br>
 	    <strong>Limitations:</strong> Cannot be used where there is a y that is not easily solved nor where y is already known (y = 10), where substitution would be preferable.<br><br>
 	    
-	    <h3>SYSTEM OF EQUATIONS.</h3>
+	    <h3><strong><a href="#SYSTEMEQUATIONS1"><span class="mw-headline" id="SYSTEMEQUATIONS1">#</span></a> </strong>SYSTEM OF EQUATIONS.</h3>
 	    <strong>Formula + Description:</strong> Format the equations to both be equal to the same variable (y) and the individual non-y side equal to eachother, simplifying.<br>
 	    <strong>Unique Trait:</strong> Only semi-self-contained method, with Elimination and Substitution both always leading to the big three. If an x² exists however, some x-isolation is needed.<br>
 	    <strong>Applicable When:</strong> When there is no x² or if there is only one x variable in some way. See if there can be a way to remove an entire x² or x consideration.<br>
 	    <strong>Limitations:</strong> If a and b both exist at the same time, then it might be easier to try Substitution or Elimination.<br><br>
 	    
-	    <h3>SUBSTITUTION.</h3>
+	    <h3><strong><a href="#SUBSTITUTION1"><span class="mw-headline" id="SUBSTITUTION1">#</span></a> </strong>SUBSTITUTION.</h3>
 	    <strong>Formula + Description:</strong> If an internal (to the left) variable has an equivalent made apparant in the second equation, plug in that equation inside the first equation. Simplify.<br>
 	    <strong>Unique Trait:</strong> Differs from System of Equations in how one equation is replacing a variable in another, while system makes both equations equal to eachother.<br>
 	    <strong>Applicable When:</strong> When it is seen that substitution is viable and that it will make a difference. A definite sign of a problem requiring substitution is when more than one variable is ^2.<br>
 	    <strong>Limitations:</strong> Sometimes, there are no inner Equations that have a variable given an equation in the second. In these situations, use System of equations or Elimination.<br><br>
 	    
-	    <h3>PERFECT SQUARE TRINOMIAL.</h3>
+	    <h3><strong><a href="#PERFECTTRINOMIAL1"><span class="mw-headline" id="PERFECTTRINOMIAL1">#</span></a> </strong>PERFECT SQUARE TRINOMIAL.</h3>
 	    <strong>Formula + Description:</strong> A Perfect Square Trinomial. (a + b)(a + b) = a² + 2ab + b² = (a + b)². (a - b)(a - b) = a² - 2ab + b² = (a - b)². Things like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x²</span></span> + 6x + <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">9</span></span>. Not ax² + bx + c, but a² + 2ab + b². Difference of Squares = (a + b)(a - b) = (a² - b²), If b and a are perfect squares. <br>
 	    <strong>Unique Trait:</strong> PST cannot be chosen as a Method. It is a form that has its own rules. You have no control.<br>
 	    <strong>Applicable When:</strong> When a and b are both dearly squared. Can be forced only in particular circumstances, like if x² + 6x = -10. When a discriminant of D = 0 is found in a Quadratic Equation, the equation is PST. There will be only one solution/x-intercept.<br>
 	    <strong>Limitations:</strong> a² + 2ab + c² is more or less ax² + bx + c in a special format. The difference of squares won't work if even one variable isn't a perfect square (x² is a perfect square).<br><br>
 	    
-	    <h3>GCF/GROUPING → X-METHOD FACTORING.</h3>
+	    <h3><strong><a href="#GROUPINGXMETHOD1"><span class="mw-headline" id="GROUPINGXMETHOD1">#</span></a> </strong>GCF/GROUPING → X-METHOD FACTORING.</h3>
 	    <strong>Formula + Description:</strong> In a multi-variable equation, you can use the GCF (Max number dividable by all) to simplify. Grouping is where a GCF-ized equations gets a(c + d) + b(c + d) = (a + b)(c + d). X Method, as shown previously (see Rule 23), is usable if the equation is equal to 0. <br>
 	    <strong>Unique Trait:</strong> Most direct, method finds factors that multiply to ac and sum to b. Can be used for both b = 0 and a = c, b being X-isolater and c being X.<br>
 	    <strong>Applicable When:</strong> X method is most preferable where all fractions are gone & a = 1. However, if a != 1, it still can be done, simplifying the equation if possible at the end. Can also be done when b = 0 (in some cases).<br>
 	    <strong>Limitations:</strong> For X method it sometimes just won't work, such as in i in ANS is a prime. b = 0 and others work if ac is a negative perfect square. ONLY IF = 0 can be done. Group only if both GCF's have the same (c + d).<br><br>
 	    
-	    <h3>COMPLETING THE SQUARE.</h3>
+	    <h3><strong><a href="#COMPLETESQUARE1"><span class="mw-headline" id="COMPLETESQUARE1">#</span></a> </strong>COMPLETING THE SQUARE.</h3>
 	    <strong>Formula + Description:</strong> Force a solution by making a PST. Simplify, move C to the right: x² + 16x = -17. Use (b / 2)² for left side and add to both: x² + 16x + 64 = 47. Left is PST, (x + 8)². Sqrt both sides, x + 8 = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">47</span></span>.<br>
 	    <strong>Unique Trait:</strong> A sort of hodgepodge of other methods and rules: PST, then X Method (a ± b)², the x-isolater (sqrt), & i if needs be.<br>
 	    <strong>Applicable When:</strong> If ANS has an i, can be used. Can be used as an alternate method for converting Standard Form → Vertex Form: Move c to y and make PST: y + 105 = x² - 22x + 121. Factor Right and move back c: y = (x - 11)² - 105.<br>
 	    <strong>Limitations:</strong> Will not function on if b = 0, makes the equation not work. Having an odd b also complicates matters as you have to work with fractions the entire equation.<br><br>
 	    
-	    <h3>QUADRATIC EQUATIONS.</h3>
+	    <h3><strong><a href="#QUADRATICEQUATION1"><span class="mw-headline" id="QUADRATICEQUATION1">#</span></a> </strong>QUADRATIC EQUATIONS.</h3>
 	    <strong>Formula + Description:</strong> You already know what it is. Plug in a, b, x = x = (-b ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b² - 4ac</span></span>) / 2a and c from a quadratic standard form. Have a positve and simplify beforehand, when doing an equation remember PEMDAS and fractions. <br>
 	    <strong>Unique Trait:</strong> Reversed: Solution can be returned to a quadratic equation yeezily. Get b from top left and a from the bottom. Simplify the top using x-isolator to get c. Discriminant: Inside of sqrt tells how many answers/x-intercepts there are: D &lt; 0 is 0, D = 0 is 1, D > 0 is 2.<br>
 	    <strong>Applicable When:</strong> The Universal Method: Works in every case (X-mmethod not work if ANS has i and Completing the Square won't work if b = 0). Will ALWAYS give correct ANS if done correctly.<br>
-	    <strong>Limitations:</strong> None. If an ANS (real) is found for x with a sqrt., convert to decimal to get exact. If calculator is unavailable, simply plug in the square root for x to get an unsimplified answer.<br><br>
-	    <br><br>
+	    <strong>Limitations:</strong> None. If an ANS (real) is found for x with a sqrt., convert to decimal to get exact. If calculator is unavailable, simply plug in the square root for x to get an unsimplified answer.
+	    </div><br><br><br>
 	    
-	    <strong><font color="red">Rule 35.</font></strong> When a questions asks you to "sketch the f(x)," that just means to draw a graph for the previously stated f(x).<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When a questions asks you to "sketch the f(x)," that just means to draw a graph for the previously stated f(x).</div><br><br>
 	    
-	    <font color="blue"><strong>Basic Terms of Exponents:</strong></font><br><br>
+	    <font color="blue"><strong><a href="#BasicTermsExp"><span class="mw-headline" id="BasicTermsExp">#</span></a> Basic Terms of Exponents:</strong></font><br><br>
 	    
 	    &nbsp;&nbsp;┏━━The exponent, a 'power' (to the <u>power</u> of)<br>
 	    5x²<br>
@@ -326,13 +472,33 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &-->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    <br><br>
-	    <strong><font color="#006400">Complex Number</font></strong>: i + real number.  2i, for example.<br><br><br>
-	    <strong><font color="red">Rule 36.</font></strong> The general rule of x-isolator (see Rule 26) is to put the individual x on one side, the c number on the other, and simplify. If there is a trinomial with both a & b, then this cannot be done. If = 0 is applied, the "big three" of the bottom of the Great Comparison Rule (see Rule 34) are to be used more effectively. There are several rules for what is to be done if c is available and either a or b are missing.<br>
+	    <strong><a href="#ComplexNumberDef"><span class="mw-headline" id="ComplexNumberDef">#</span></a> <font color="#006400">Complex Number</font></strong>: i + real number.  2i, for example.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The general rule of x-isolator (see Rule 26) is to put the individual x on one side, the c number on the other, and simplify. If there is a trinomial with both a & b, then this cannot be done. If = 0 is applied, the "big three" of the bottom of the Great Comparison Rule (see Rule 34) are to be used more effectively. There are several rules for what is to be done if c is available and either a or b are missing.<br>
 	    a) If the equation uses the variables a & c in the ax² + c format, try to divide by a to get a as low as possible. Always have a positive, hopefully just x². Once that has been achieved, all that needs to be done is isolate x and sqrt both sides, getting a ± for c. This is used in an altered way by PST.<br>
 	    b) If the equations uses the variables b & c in the bx + c format, no prior simplification is needed. Simply isolate b and divide both sides by b. There is no sorting needed, removing the possibility of i or a number leading to two answers as seen in ax² + c format. There will always be only one solution.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
 	    
 	    
 	    </article><hr>
@@ -341,7 +507,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    </header>
 	    <article><br>
 	    
-	    <font color="blue"><strong>Intro to Polynomials:</strong></font><br>
+	    <font color="blue"><strong><a href="#IntroPolynomials"><span class="mw-headline" id="IntroPolynomials">#</span></a> Intro to Polynomials:</strong></font><br>
 	    An expression consisting of variables and coefficients that involves only addition, subtraction and multiplication, with <u>non-negative</u> integer exponents. x² - 2zx + 3y, x² + 3, and 1.33ˣ + 5x are all polynomials.<br><br>
 	    Some of the lower numbered Polynomial functions have names reflecting their highest degree, as shown in the section titled "Types of Polynomial Functions" (ctrl-f).<br><br>
 	    Anything involving a radical (any kind of root, square or otherwise) or negative exponent is inherently not a polynomial by not being either a non-negative number or a integer.<br><br>
@@ -352,7 +518,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <br><br><br>
 	    
-	    <font color="blue"><strong>Types of Polynomial Functions:</strong></font><br><br>
+	    <font color="blue"><strong><a href="#PolynomialFuncTypes"><span class="mw-headline" id="PolynomialFuncTypes">#</span></a> Types of Polynomial Functions:</strong></font><br><br>
 	    <strong>Constant</strong> = f(x) = a₀ = f(x) = -14<br>
 	    <strong>Linear</strong> = f(x) = a₁x + a₀ = f(x) = 5x - 7<br>
 	    <strong>Quadratic</strong> = a₂x² + a₁x + a₀ = f(x) = 2x² + x - 9<br>
@@ -361,9 +527,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
-	    <strong><font color="#006400">Standard Form</font></strong>: Exponents are in descending order.<br><br><br>
+	    <strong><a href="#StandardFormDef"><span class="mw-headline" id="StandardFormDef">#</span></a> <font color="#006400">Standard Form</font></strong>: Exponents are in descending order.<br><br><br>
 	    
-	    <strong><font color="red">Rule 37.</font></strong> Inequalities are Quadratic Equations that are not equal to 0 or y, but rather are >, &lt;, ≥, ≤ to them. For the inequalities in terms of 0, an answer can be determined without the use of a graph, although the answer represents where the equation is true on the graph. The first thing to be done in an inequality-in-regard-to-zero type equation is to pretend that the equation is, in fact, equal to zero. <br>x² - 3x - 4 &lt; x² - 3x - 4 = 0<br> Therefore, the Factoring X-Method can be done (see Rule 23). Create the double groupings, very important. (x - 4)(x + 1) &lt; 0. x = 4, x = -1. Then to fully visualize the value of x (> 0 or &lt; 0)<br> in relation to the X-intercepts found, make a number line with them: <br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Inequalities are Quadratic Equations that are not equal to 0 or y, but rather are >, &lt;, ≥, ≤ to them. For the inequalities in terms of 0, an answer can be determined without the use of a graph, although the answer represents where the equation is true on the graph. The first thing to be done in an inequality-in-regard-to-zero type equation is to pretend that the equation is, in fact, equal to zero. <br>x² - 3x - 4 &lt; x² - 3x - 4 = 0<br> Therefore, the Factoring X-Method can be done (see Rule 23). Create the double groupings, very important. (x - 4)(x + 1) &lt; 0. x = 4, x = -1. Then to fully visualize the value of x (> 0 or &lt; 0)<br> in relation to the X-intercepts found, make a number line with them: <br><br>
 	    &lt;━━━━╋━━━━━━╋━━━&gt;
 	    <br>&nbsp;&nbsp;&thinsp;&thinsp;&nbsp;-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;4<br><br>
 	    Then, plug in 0 for x in the double groupings you already created - (0 - 4)(0 + 1) &lt; 0. See if the answer would be negative or not. plug in the sign of the answer to the part of the line where the number was plugged in, is:<br>
@@ -377,43 +546,73 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <br><br>
 	     where x > 0, there is a special answer template. For the example if > , the answer would x &lt; -1 OR x > 4. These are two separate equations unified as one answer. The x &lt; _ or x > _ is the base template. X will always come first in the equation.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><font color="red">Rule 38.</font></strong> when a questions uses the > 0 format on a number other than 0, such as 3x² - 13x + 10 > 0. Applicable anywhere. All the base algebraic properties, such as flipping the signs, still apply.<br><br><br>
-	    <strong><font color="red">Rule 39.</font></strong> For Quadratic Inequalities in which the equation is unequal to y or f(x), there are special answers regarding graphing. The methodry for finding the x-intercepts is the same as for 0-type inequalities (see Rule 37), but the way the graph is shown is the real way to convey what answers are true. The functions are summed up in the chart below (ALSO FIND Y-INTERCEPTS!):<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> when a questions uses the > 0 format on a number other than 0, such as 3x² - 13x + 10 > 0. Applicable anywhere. All the base algebraic properties, such as flipping the signs, still apply.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For Quadratic Inequalities in which the equation is unequal to y or f(x), there are special answers regarding graphing. The methodry for finding the x-intercepts is the same as for 0-type inequalities (see Rule 37), but the way the graph is shown is the real way to convey what answers are true. The functions are summed up in the chart below (ALSO FIND Y-INTERCEPTS!):<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/quadraticInequalitiesGraph1.png"><img src="/math/img/quadraticInequalitiesGraph1.png" alt="The graphs of the four different quadratic inequalities, determined by greater than or lesser than symbols and if 'or equal to' is applied. Courtesy of Tiger Algebra." width=52%/></a></div>
 	    <span class="tiny"><em>The graphs of the four different quadratic inequalities, determined by greater than or lesser than symbols and if 'or equal to' is applied. Courtesy of <a href="https://www.tiger-algebra.com/en/terms-and-topics/quadratic-inequalities/">Tiger Algebra</a>.</em></span><br>
 	    <br> If the line is linear, the same rules apply. y > means the area above the dotten line is true, while y &lt; means the area below the line is true.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><font color="red">Rule 40.</font></strong> If there are multiple equations for y inequalities on the graph at the same time, such as y &lt; -x² + 2x -3, then the space in which they overlap is the only true part of the graph:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If there are multiple equations for y inequalities on the graph at the same time, such as y &lt; -x² + 2x -3, then the space in which they overlap is the only true part of the graph:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/overlap.png"><img src="/math/img/overlap.png" alt="Two inequalities that overlap in the graph. Courtesy of Dummies." width=30%/></a></div>
 	    <span class="tiny"><em>Two inequalities that overlap in the graph. Courtesy of <a href="https://www.dummies.com/article/academics-the-arts/math/algebra/graph-an-area-where-inequalities-overlap-138672/">Dummies</a>.</em></span><br><br>This is true even if a non-equal to equation (dotted line) is used.
-	    <br><br><br>
-	    <strong><font color="red">Rule 41.</font></strong> Any inequality for y or zero can be reversed in format by placing the variable at the front or the end. E.g., y > x² + 3 = x² + 3 &lt; y. Reversing the 'than' sign is all that is needed.<br><br><br>
+	    </div><br><br>
 	    
-	    <strong><font color="#006400">Degree</font></strong>: Highest exponent in an equation.<br>
-	    <strong><font color="#006400">Leading Coefficient</font></strong>: The coefficient with the highest degree attached.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Any inequality for y or zero can be reversed in format by placing the variable at the front or the end. E.g., y > x² + 3 = x² + 3 &lt; y. Reversing the 'than' sign is all that is needed.</div><br><br>
 	    
-	    <strong><font color="red">Rule 42.</font></strong> For equations involving xⁿ exponents, for Quadratic equations and those above with exponents higher than 2, there are two very important pieces of vocabulary: Degree and leading coefficient. To find these, first sort your Polynomial equation in a descending format, with the highest exponent coming first and so forth. This should be done in any circumstance. The degree is the highest exponent in the equation, the one that comes first. in  x³ - x² + 3x, the degree is three. Secondly, the Leading Coefficient is the coefficient attached to the variable with the highest degree, at the very front of the equation. There are various names for equations with different highest degrees, to the third being Cubic,, to the fourth being Quartic, etc. A detailed template of the different types of equations can be seen in the Other Important information section "Types of Polynomial Functions" (ctrl-f). For these equations to be functions, the Base needs to be x-variable, with exponent n (> 0).<br><br><br>
-	    <strong><font color="red">Rule 43.</font></strong> There are several rules for Polynomial functions. For one, exponents cannot be negative - they can only be positive integers. 3ˣ, therefore, cannot be considered a polynomial. The base must be x for an exponent to be attached. To be a polynomial, the exponent has to be ≥ 0 integers. There are no rules for what the coefficients can be, only exponents and bases can have issues.<br><br><br>
-	    <strong><font color="red">Rule 44.</font></strong> For all polynomial functions, the end behaviors (where x and y stretch out to infinity) can be quickly known from the knowledge of two factors: the degree and Leading Coefficient. Consult standard procedure (see Rule 42) as to whether the Degree is even or odd and whether the leading coefficient is negative or positive. An even coefficient creates a Parabola-Shaped graph and odd one creates a graph that increases concave-down to the origin, and the concave up increases to infinity. Negative and positive Leading Coefficients invert the graphs, turning the parabolar even graph upside down and the odd graph vice versa. For a more detailed chart, see the infographic titled "End Behavior of Polynomial Functions".<br><br> What is in the middle of the graph can only be determined by either <br>#1. the Decreasing/Increasing characteristics for y and x, or<br>
+	    <strong><a href="#DegreeDef1"><span class="mw-headline" id="DegreeDef1">#</span></a> <font color="#006400">Degree</font></strong>: Highest exponent in an equation.<br><br>
+	    <strong><a href="#LeadingCoefficientDef"><span class="mw-headline" id="LeadingCoefficientDef">#</span></a> <font color="#006400">Leading Coefficient</font></strong>: The coefficient with the highest degree attached.<br><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For equations involving xⁿ exponents, for Quadratic equations and those above with exponents higher than 2, there are two very important pieces of vocabulary: Degree and leading coefficient. To find these, first sort your Polynomial equation in a descending format, with the highest exponent coming first and so forth. This should be done in any circumstance. The degree is the highest exponent in the equation, the one that comes first. in  x³ - x² + 3x, the degree is three. Secondly, the Leading Coefficient is the coefficient attached to the variable with the highest degree, at the very front of the equation. There are various names for equations with different highest degrees, to the third being Cubic,, to the fourth being Quartic, etc. A detailed template of the different types of equations can be seen in the Other Important information section "Types of Polynomial Functions" (ctrl-f). For these equations to be functions, the Base needs to be x-variable, with exponent n (> 0).</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There are several rules for Polynomial functions. For one, exponents cannot be negative - they can only be positive integers. 3ˣ, therefore, cannot be considered a polynomial. The base must be x for an exponent to be attached. To be a polynomial, the exponent has to be ≥ 0 integers. There are no rules for what the coefficients can be, only exponents and bases can have issues.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For all polynomial functions, the end behaviors (where x and y stretch out to infinity) can be quickly known from the knowledge of two factors: the degree and Leading Coefficient. Consult standard procedure (see Rule 42) as to whether the Degree is even or odd and whether the leading coefficient is negative or positive. An even coefficient creates a Parabola-Shaped graph and odd one creates a graph that increases concave-down to the origin, and the concave up increases to infinity. Negative and positive Leading Coefficients invert the graphs, turning the parabolar even graph upside down and the odd graph vice versa. For a more detailed chart, see the infographic titled "End Behavior of Polynomial Functions".<br><br> What is in the middle of the graph can only be determined by either <br>#1. the Decreasing/Increasing characteristics for y and x, or<br>
 	    #2. Plugging in numbers for x to find various coordinates. For #1, see Rule 45. For #2, see Rule 46. The end behavior of a Polynomial Function is representative of where x and y will progresss going into their respective infinities:<br><br>
 	    <br>
 	    -, +&nbsp;&thinsp;&hairsp;┃&nbsp;+, +<br>
 	    ━━━━━━╋━━━━━━<br>
-	    -, -&nbsp;&thinsp;&hairsp;┃&nbsp;+, -<br>
-	    <br><br>
-	    <font color="blue"><strong>End Behavior of Polynomial Functions:</strong></font><br><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/Endbehaviors.jpg"><img src="/math/img/Endbehaviors.jpg" alt="The End Behaviors of Polynomial Functions, with acknowledgment of the center behavior being different depending on the exponent. Courtesy of Libretexts" width=40%/></a></div>
-	    <span class="tiny"><em>The End Behaviors of Polynomial Functions, with acknowledgment of the center behavior being different depending on the exponent. Courtesy of <a href="https://math.libretexts.org/Courses/Fresno_City_College/Math_3A%3A_College_Algebra_-_Fresno_City_College/04%3A_Polynomial_and_Rational_Functions/4.02%3A_Graphs_of_Polynomial_Functions">Libretexts</a></em></span>
+	    -, -&nbsp;&thinsp;&hairsp;┃&nbsp;+, -
+	    </div><br><br>
+	    
+	    
+	    <font color="blue"><strong><a href="#EndBehaviorPoly"><span class="mw-headline" id="EndBehaviorPoly">#</span></a> End Behavior of Polynomial Functions:</strong></font><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/Endbehaviors.jpg"><img src="/math/img/Endbehaviors.jpg" alt="The End Behaviors of Polynomial Functions, with acknowledgment of the center behavior being different depending on the exponent. Courtesy of Libretexts." width=40%/></a></div>
+	    <span class="tiny"><em>The End Behaviors of Polynomial Functions, with acknowledgment of the center behavior being different depending on the exponent. Courtesy of <a href="https://math.libretexts.org/Courses/Fresno_City_College/Math_3A%3A_College_Algebra_-_Fresno_City_College/04%3A_Polynomial_and_Rational_Functions/4.02%3A_Graphs_of_Polynomial_Functions">Libretexts</a>.</em></span>
 	    <br><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  ÷,   the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>-->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	    
-	    <strong><font color="red">Rule 45.</font></strong> When you get several lines of information stating where f(x) is increasing, decreasing, >0, and &lt;0, you must convert this info into line chart form before it can be in Graph form. Example: f(x) is increasing when x &lt; 0 and x > 4. This refers to continuity templates - see Rule 37. The line chart in this case would be:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you get several lines of information stating where f(x) is increasing, decreasing, >0, and &lt;0, you must convert this info into line chart form before it can be in Graph form. Example: f(x) is increasing when x &lt; 0 and x > 4. This refers to continuity templates - see Rule 37. The line chart in this case would be:<br>
 	    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dec.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inc.<br>
 	    &lt;━━━━━━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━━━&gt;<br>
 	    &nbsp;&nbsp;&thinsp;&nbsp;&hairsp;&nbsp;&nbsp;&nbsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
@@ -439,10 +638,34 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <br><br>
 	    If there are five sections of the line for above and below zero, the degree is definitely even. Next, simply transcribe each segment of the graph as shown on the line: <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/graph2.png"><img src="/math/img/graph2.png" alt="The graph determined by the information gathered in this Rule." width=35%/></a></div>
 	    <span class="tiny"><em>The graph determined by the information gathered in this Rule.</em></span>
-	    <br><br><br>
-	    <strong><font color="red">Rule 46.</font></strong> This method for finding the middle section is relatively simple: just plug in various numbers for x in the equation to get coordinates. It is recommended to use all numbers -2 to 2, as that should be enough to create an accurate graph. More # can be used if necessary. Once the coordinates have been gotten, find the end behavior from the equation to make sure the coordinates are connected correctly. Plug in the coordinates to the graph and connect them correctly.<br><br><br>
-	    <strong><font color="red">Rule 47.</font></strong> When a question is asking to divide a from b, the question is asking for b ÷ a. This is the case for questions of the type in both subtraction and division. For Long Division, b goes outside the box whilst a goes inside: <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">a </span><span style="border-top: 1px black solid; ">&thinsp;b&thinsp;</span>.<br><br><br>
-	    <strong><font color="red">Rule 48.</font></strong> For equations with three groups, such as (x + 2)(x - 1)(x - 3), multiply the first two equations first, and then multiply the result by the third group. Ex: (x² + x - 2)(x - 3). Further multiplied is x³ - 2x² - 5x + 6.<br><br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> This method for finding the middle section is relatively simple: just plug in various numbers for x in the equation to get coordinates. It is recommended to use all numbers -2 to 2, as that should be enough to create an accurate graph. More # can be used if necessary. Once the coordinates have been gotten, find the end behavior from the equation to make sure the coordinates are connected correctly. Plug in the coordinates to the graph and connect them correctly.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When a question is asking to divide a from b, the question is asking for b ÷ a. This is the case for questions of the type in both subtraction and division. For Long Division, b goes outside the box whilst a goes inside: <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">a </span><span style="border-top: 1px black solid; ">&thinsp;b&thinsp;</span>.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For equations with three groups, such as (x + 2)(x - 1)(x - 3), multiply the first two equations first, and then multiply the result by the third group. Ex: (x² + x - 2)(x - 3). Further multiplied is x³ - 2x² - 5x + 6.</div><br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    
@@ -454,15 +677,22 @@ document.addEventListener("DOMContentLoaded", function (){
 	    </header>
 	    <article><br>
 	    
-	    <strong><font color="#006400">Dividend</font></strong>: What is being divided from, goes inside. See Rule 49.<br>
-	    <strong><font color="#006400">Divisor</font></strong>: What is the factor finder, goes outside. See Rule 49.<br>
-	    <strong><font color="#006400">Synthetic Division</font></strong>: A shortcut in Long division. See Rule 50.<br>
-	    <strong><font color="#006400">Subtract</font></strong>: Adding the opposite.<br><br><br>
+	    <strong><a href="#DividendDef"><span class="mw-headline" id="DividendDef">#</span></a> <font color="#006400">Dividend</font></strong>: What is being divided from, goes inside. See Rule 49.<br><br>
+	    <strong><a href="#DivisorDef"><span class="mw-headline" id="DivisorDef">#</span></a> <font color="#006400">Divisor</font></strong>: What is the factor finder, goes outside. See Rule 49.<br><br>
+	    <strong><a href="#SyntheticDivisionDef"><span class="mw-headline" id="SyntheticDivisionDef">#</span></a> <font color="#006400">Synthetic Division</font></strong>: A shortcut in Long division. See Rule 50.<br><br>
+	    <strong><a href="#SubtractDef"><span class="mw-headline" id="SubtractDef">#</span></a> <font color="#006400">Subtract</font></strong>: Adding the opposite.<!--Adding in reverse.--><br><br><br>
 	    
-	    <strong><font color="red">Rule 49.</font></strong> <strong>Long Division</strong> is mainly a continous pattern involving Elimination that goes on until it cannot. Firstly, in terms of equations such as 251 ÷ 12, 12 is the Divisor (what is divided in terms of, the factor finder) and 251 is the dividend (what is being divided from). The values are to be placed in a manner showing <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>, with a space available on top for the answer. In a Polynomial Long Divison problem such as <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">x² - 3x - 2 </span><span style="border-top: 1px black solid; ">&thinsp;&thinsp;4x⁴ + 0x³ + 0x² + 5x - 4&thinsp;</span>, the following will be done: If the Dividend does not perfectly descend in degrees, add zeroes for those missing in the box. <br><br>The first actual step is to compare first terms: how many times does the first term of the divisor go into the first term of the dividend, or x² going into 4x⁴. x² goes in 4x² times, and therefore that variable goes atop the ^2 degree in the answer section above the box. 4x² is then distributed to every term in the divisor, the result going under the divisor. 4x⁴ - 12x³ - 8x². Then, to apply Elimination method between this result and the Dividend, flip the sign for every variable in the result, allowing the two equations to be summed. Draw a line under the original result and put out the sum. Remember to place the terms in their respective degree sections. Then, find how many times the first term goes into the first of the bottom result, repeating the entire process and adding more variables to the answer section above the box. The process ends when the first term of the divisor can no longer fit in the first term of the result, at which point the final part of long division begins.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Long Division</strong> is mainly a continous pattern involving Elimination that goes on until it cannot. Firstly, in terms of equations such as 251 ÷ 12, 12 is the Divisor (what is divided in terms of, the factor finder) and 251 is the dividend (what is being divided from). The values are to be placed in a manner showing <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>, with a space available on top for the answer. In a Polynomial Long Divison problem such as <span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">x² - 3x - 2 </span><span style="border-top: 1px black solid; ">&thinsp;&thinsp;4x⁴ + 0x³ + 0x² + 5x - 4&thinsp;</span>, the following will be done: If the Dividend does not perfectly descend in degrees, add zeroes for those missing in the box. <br><br>The first actual step is to compare first terms: how many times does the first term of the divisor go into the first term of the dividend, or x² going into 4x⁴. x² goes in 4x² times, and therefore that variable goes atop the ^2 degree in the answer section above the box. 4x² is then distributed to every term in the divisor, the result going under the divisor. 4x⁴ - 12x³ - 8x². Then, to apply Elimination method between this result and the Dividend, flip the sign for every variable in the result, allowing the two equations to be summed. Draw a line under the original result and put out the sum. Remember to place the terms in their respective degree sections. Then, find how many times the first term goes into the first of the bottom result, repeating the entire process and adding more variables to the answer section above the box. The process ends when the first term of the divisor can no longer fit in the first term of the result, at which point the final part of long division begins.<br><br>
 	    Take the remainder and made a division equation with the remainder being over the divisor. Add this to the answer that has become above the box, and that's the answer. There is another type of Long Division that is much shorter - see Rule 50.
-	    <br><br><br>
-	    <strong><font color="red">Rule 50.</font></strong> A shortcut can be used in Long Division when the divisor has an exponent of one - This is known as <strong>synthetic division</strong>. For example, take the equation (-x³ + 3x² + x) ÷ (x - 2). The degree of the divisor (x - 2) is 1. Take the base equation of the divisor and apply a simple x-isolation: x - 2 = 0, x = 2. This number will serve as Continuous Coefficient. Create a graph that looks like this: ┗━━━. Make sure there is space on the bottom. Place the Continuous Coefficient at the top left of the shape: ²┗━━━. Then, in descending order, plug in the coefficients of each variable of the dividend to the top of the shape:<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A shortcut can be used in Long Division when the divisor has an exponent of one - This is known as <strong>synthetic division</strong>. For example, take the equation (-x³ + 3x² + x) ÷ (x - 2). The degree of the divisor (x - 2) is 1. Take the base equation of the divisor and apply a simple x-isolation: x - 2 = 0, x = 2. This number will serve as Continuous Coefficient. Create a graph that looks like this: ┗━━━. Make sure there is space on the bottom. Place the Continuous Coefficient at the top left of the shape: ²┗━━━. Then, in descending order, plug in the coefficients of each variable of the dividend to the top of the shape:<br><br>
 	    2┃-1 3 1 0<br>
 	    &nbsp;┃<br>
 	    &nbsp;┗━━━━━━━━━<br>
@@ -488,13 +718,26 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <br>The values on the bottom, other than the one in the box, can be applied to create an answer. Count how many non-box lower values there are (in this case 3). Minus this number by one. That is what the highest degree will be. With this knowledge, plug in the values as coefficients to x-bases of descending degrees: -x² + x + 3. The value in the box, 6, is the remainder, and will be divided by the divisor, (6 / (x-2)). Add this to the previously found series of values & you have the answer: -x² + x + 3 + (6 / (x-2)).<br><br>
 	    
 	    There are many applications of Synthetic Division outside of purely being a shortcut for long division, including factorization: take the question "Complete the factorization of P(x) = 3x³ - 4x² - 59x + 20, given that one factor is (x - 5)", for example. By stating that one factor is x - 5, it becomes clear that the only passage forward is by synthetic division, finding a resultant equation through dividing by x - 5. When you carry out the necessary synthetic division, you obtain the result of 3x² + 11x - 4. Through the power of imagination, you can slightly change this result to 3x² + 12x - x - 4 in order to obtain this simple factorization: 3x(x + 4) - 1(x + 4), which, through a previously described mechanism (see Rule 22), is changeable to (3x - 1)(x + 4). Thus, the full factorization incorporating what was known from the start would be (x - 5)(3x - 1)(x + 4).
-	    <br><br><br>
+	    </div><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
 	    
-	    <strong><font color="red">Rule 51.</font></strong> In the Elimination method (as seen in Long Division) minusing the second equation is actually just adding the opposite, making the first variable negative even if others are made positive. That is "Subtraction" in Elimination.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In the Elimination method (as seen in Long Division) minusing the second equation is actually just adding the opposite, making the first variable negative even if others are made positive. That is "Subtraction" in Elimination.</div><br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    
@@ -506,13 +749,24 @@ document.addEventListener("DOMContentLoaded", function (){
 	    </header>
 	    <article><br>
 	    
-	    <strong><font color="red">Rule 52.</font></strong> Whilst a difference of cubes, as described previously (see Rule 23), is definitely factorable, a sum of squares (x² + 64) is not. (x² - 25) = (x + 5)(x - 5). (x² + 25) is not factorable. However, a sum of CUBES (x³ + 64) is very factorable, as is the difference of cubes. See Rule 53 for more.<br><br><br>
-	    <strong><font color="red">Rule 53.</font></strong> Another law of factorability is the Sum of Cubes, as well as the associated Difference of Cubes. There is an entirely different system of factoring Quantities of Cubes than for Square factoring: A difference of cubes has the base of a² - b² and is factored to the equation of (a + b)(a - b). A different of cubes, on the other hand, has the base of a³ - b³ (being to the third power and all) and is factored to the equation of (a - b)(a² + ab + b²). A sum of cubes has the factor equation of (a + b)(a² - ab + b²), having the base of (a³ + b³). As evident, the first parentheses has the same sign as the equation it factors, with as sum of cubes (a³ + b³) having a first parentheses of (a + b) while the difference of cubes (a³ - b³) has the first parentheses of (a - b). The second sign in the second parenthesis, that in regard to ab, is opposite of the sign in the first parenthesis, and therefore opposite of the sign in the original equation:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Whilst a difference of cubes, as described previously (see Rule 23), is definitely factorable, a sum of squares (x² + 64) is not. (x² - 25) = (x + 5)(x - 5). (x² + 25) is not factorable. However, a sum of CUBES (x³ + 64) is very factorable, as is the difference of cubes. See Rule 53 for more.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Another law of factorability is the Sum of Cubes, as well as the associated Difference of Cubes. There is an entirely different system of factoring Quantities of Cubes than for Square factoring: A difference of cubes has the base of a² - b² and is factored to the equation of (a + b)(a - b). A different of cubes, on the other hand, has the base of a³ - b³ (being to the third power and all) and is factored to the equation of (a - b)(a² + ab + b²). A sum of cubes has the factor equation of (a + b)(a² - ab + b²), having the base of (a³ + b³). As evident, the first parentheses has the same sign as the equation it factors, with as sum of cubes (a³ + b³) having a first parentheses of (a + b) while the difference of cubes (a³ - b³) has the first parentheses of (a - b). The second sign in the second parenthesis, that in regard to ab, is opposite of the sign in the first parenthesis, and therefore opposite of the sign in the original equation:<br><br>
 	    <strong>Sum: </strong> (a³ + b³) = (a + b)(a² - ab + b²)<br>
 	    <strong>Difference: </strong> (a³ - b³) = (a - b)(a² + ab + b²)<br><br>
 	    To perform this factorization to plug in a & b, the base equation must be cube rooted to both variables: With 8x³ - 125 for example, <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">&nbsp;&nbsp;</span></span> applied to both sides would result in 2x - 5. No ±. Remember to plug in the absolute value of a and b into the equation, getting a result of (2x - 5)(4x² + 10x + 25) where a = 2x and b = 5. Switch the sign in the original equation to a sum of cubes and the answer will be (2x + 5)(4x² + 10x + 25).
-	    <br><br><br>
-	    <strong><font color="red">Rule 54.</font></strong> On <strong>Factoring Completely</strong>, arguably the final key in the great constant of factoring. There are various rules, but most of the previously known concepts, such as GCF, still apply, but just on a larger scale with more steps. Complete Factoring incorporates the newly discovered Sum & Difference Cubes into trinomial Cbic equations. Generally, the first step in factoring a trinomial with a degree of three or greater (if another factoring option is not already obvious) is to GCF the entire equation. For example, in the equation x³ + 10x² + 24x, the GCF that can be removed is x, making the equation x(x² + 10x + 24). Now, the inner equation can be given the X method:<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> On <strong>Factoring Completely</strong>, arguably the final key in the great constant of factoring. There are various rules, but most of the previously known concepts, such as GCF, still apply, but just on a larger scale with more steps. Complete Factoring incorporates the newly discovered Sum & Difference Cubes into trinomial Cbic equations. Generally, the first step in factoring a trinomial with a degree of three or greater (if another factoring option is not already obvious) is to GCF the entire equation. For example, in the equation x³ + 10x² + 24x, the GCF that can be removed is x, making the equation x(x² + 10x + 24). Now, the inner equation can be given the X method:<br><br>
 	    ╲&nbsp;24&nbsp;╱<br>
 	    &nbsp;╲&nbsp;&nbsp;╱<br>
 	    0&nbsp;╲╱&nbsp;4<br>
@@ -521,64 +775,97 @@ document.addEventListener("DOMContentLoaded", function (){
 	    ╱&nbsp;10&nbsp;╲<br><br>
 	    The completely factored equation is now x(x + 6)(x + 4), nothing more can be done. If exact answers as to what x is equal to are needed, than the outer x = 0, and x  = -6, x = -4.<br>
 	    Factoring Completely is just a multistep, a more advanced form of factoring. However, one must always be checking if more can be done. For a complete simplification after a PST has been discovered, such as 6(x² - 4x + 4) factored into 6(x - 2)(x - 2), the equation can be condensed to 6(x - 2)². <br><br>An example of a furtherly elaborate equation is -16x⁵ - 250x². GCF: -2x²(8x³ + 125). Now, the internal equation is evidently in a sum of cubes (both the degree and the coefficient of a can be cube rooted). Cube rooting gives (2x)³ + (5)³, giving a = 2x and b = 5. The correct formula for a sum of cubes factorization is (a + b)(a² - ab + b²). All that's left to do is to plug in a and b, and <u>Remember to put the GCF in front of the equation</u>, kept for the entire problem. The answer would be -2x²(2x + 5)(4x² - 10x + 25). Equations with four variables can be dealt with the same way they always have: GCF-ing the first two and the last two separately, grouping. The paranthesized equation for each side should be the same: x²(x - 2) - 9(x - 2). As obvious, merge the sides and create (x² - 9)(x - 2). However, as Complete Factoring entails, there is more to be done: The first equation is a difference of squares. Therefore, the completely factored y is (x - 3)(x + 3)(x - 2), or x = 3, x = -3, x = 2. The "more that can be done" is almost always a difference of squares or sum/difference of cubes. In fact, in some cases, GCF is not immediately usable and the equation can just quickly be given using difference of squares or a sum/difference of cubes. Even if the equation looks quite complicated. <br><br><strong>ALWAYS</strong> be checking if the coefficients or bases in the equation are Perfect Squares or Cubes, as this is a shortcut to the answer. Of course, the degree of a base (the exponent of x) being a perfect square or cube just means it is divisible by 2 or 3. An example of this shortcut is 625x⁸ - 256. On the surface, there is no easily identifiable GCF. Therefore, it must ascertained that the equation is a difference of squares and can have those properties applied. First, square root both sides (25x⁴)² - (16)². Using a standard formula, this equation is now (25x⁴ + 16)(25x⁴ - 16). Hilariously, the second equation is another difference of squares, and therefore more factoring can be done. The result/final answer is (25x⁴ + 16)(5x² + 4)(5x² - 4), nothing more can be done.
-	    <br><br><br>
-	    <strong><font color="red">Rule 55.</font></strong> How can it be that X-Method is still applicable to non-quadratic equations? Well, it is possible to make an educated guess as to what the factors will be considering that exponents add when multiplied. In the equation 2x¹³ + 10x⁹ + 8x⁵, for example, after GCF it is 2x⁵(x⁸ + 5x⁴ + 4). Using the power of imagination, simply perform X-method normally and divde the degree by two and get a correct answer: 2x⁵(x⁴ + 4)(x⁴ + 1). This strategy will sometimes not work so use a mental trial and error to factor. The strategy generally works when the exponent of b is half of that of a.<br><br><br>
-	    <strong><font color="red">Rule 56.</font></strong> As repeatedly stated in a past Rule (see Rule 54), Complete Factoring sometimes allows for the values of x to be found. However, this should only be done when the question is specifically asking for it or is equal to 0. "Find the zeroes" provides different final answers than "Factor the Polynomial Completely", the latter stopping short of finding the values of x. As stated before, if an X is GCF-ed to the front of the equation, then it is automatically equal to zero.<br><br><br>
-	    <strong><font color="red">Rule 57.</font></strong> Similar to a previous rule of thumb of simplifying 'a' to zero when possible, Factoring out a negative in Complete Factoring whenever possible is a must, for not doing so could lead to an incorrect answer. It just makes things way easier in general.<br><br><br>
-	    <strong><font color="red">Rule 58.</font></strong> Specialties of finding the values of x in situations somewhat specific to Complete Factoring: When after X-method the x base is still exponential (see Rule 55 for what this looks like) and the question wants an exact values for x, then give a ± <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">&nbsp;</span></span> with the same root as whatever degree x is for the answer. Having the value not being perfect is a prerequisite. Think of this like an exponential form of the "simplify down to make the factorization true" trick (see Rule 29). Another way to represent the values of x is with curly brackets, as in x + {2, 3, 0}. Also, sometimes solutions can be repeated. Just keep one. <br>Solutions are zeroes are x-intercepts.<br><br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> How can it be that X-Method is still applicable to non-quadratic equations? Well, it is possible to make an educated guess as to what the factors will be considering that exponents add when multiplied. In the equation 2x¹³ + 10x⁹ + 8x⁵, for example, after GCF it is 2x⁵(x⁸ + 5x⁴ + 4). Using the power of imagination, simply perform X-method normally and divde the degree by two and get a correct answer: 2x⁵(x⁴ + 4)(x⁴ + 1). This strategy will sometimes not work so use a mental trial and error to factor. The strategy generally works when the exponent of b is half of that of a.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As repeatedly stated in a past Rule (see Rule 54), Complete Factoring sometimes allows for the values of x to be found. However, this should only be done when the question is specifically asking for it or is equal to 0. "Find the zeroes" provides different final answers than "Factor the Polynomial Completely", the latter stopping short of finding the values of x. As stated before, if an X is GCF-ed to the front of the equation, then it is automatically equal to zero.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Similar to a previous rule of thumb of simplifying 'a' to zero when possible, Factoring out a negative in Complete Factoring whenever possible is a must, for not doing so could lead to an incorrect answer. It just makes things way easier in general.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Specialties of finding the values of x in situations somewhat specific to Complete Factoring: When after X-method the x base is still exponential (see Rule 55 for what this looks like) and the question wants an exact values for x, then give a ± <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">&nbsp;</span></span> with the same root as whatever degree x is for the answer. Having the value not being perfect is a prerequisite. Think of this like an exponential form of the "simplify down to make the factorization true" trick (see Rule 29). Another way to represent the values of x is with curly brackets, as in x + {2, 3, 0}. Also, sometimes solutions can be repeated. Just keep one. <br>Solutions are zeroes are x-intercepts.
+	    </div><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    <strong><font color="red">Rule 59.</font></strong> The existence of the ± when square rooting is only made by the answer being X, such as x² = 4. It wants to catch all positive values of x. If the statement is simply <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">4</span></span> however, the answer is just 2. See Rule 64 for a continuation.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The existence of the ± when square rooting is only made by the answer being X, such as x² = 4. It wants to catch all positive values of x. If the statement is simply <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">4</span></span> however, the answer is just 2. See Rule 64 for a continuation.
+	    </div><br><br>
 	    
-	    <font color="blue"><strong>Rational Zeros Theorem:</strong></font><br>
+	    <font color="blue"><strong><a href="#RationalZerosTheorem"><span class="mw-headline" id="RationalZerosTheorem">#</span></a> Rational Zeros Theorem:</strong></font><br>
 
-If F(x) is a polynomial function with integral coefficients and if p/q (a rational number in lowest terms) is a zero of F(x), then p is a factor of the constant term of F(x), and q is a factor of the leading coefficient of F(x).<br>
-*we can use the Factor and Remainder Theorem in tandem with this.<br><br>
-Take F(x) = 9x³ - 18x² + 11x - 2, for example. The constant term at the end of the function is 2 (always make the number positive, because the list of (p / q) itself will be ±), and so the factors for p are 1 and 2. The leading coefficient of the term with the highest degree is 9, and so q is equal to its factors: 1 and 9, and 3 and 3. The Rational Zeros Theorem says that if there is going to be a rational zero for this polynomial, it must be in the list of P's over Q's:<br><br>
-p = ± {1, 2}<br>
-q = ± {1, 3, 9}<br>
-(p / q) = ± {1/1, 1/3, 1/9, 2/1, 2/3, 2/9}<br><br>
-Unironically, the best move right now is to plug in each one of the damn p/q's until you find a zero. Once you have at least one, then you can use synthetic division to find the rest:<br><br>
-F(1) = 0<br>
-By synthetic division, F(x) / (x - 1) = 9x² - 9x + 2.<br>
-Thus, 9x² - 6x - 3x + 2<br>
-3x(3x - 2) - 1(3x -2)<br>
-(3x - 1)(3x - 2)<br>
-Thus, <strong>(x - 1)(3x - 1)(3x - 2)</strong> are the zeroes of the function.<br><br>
-When you have a particularly lengthy problem in which the degree is greater than 3, such as 2x⁴ - 9x³ + 4x² - 35x - 50, applying the Rational Zeros Theorem and then Synthetic Division will still leave you with unfactorable problem: 2x³ - 11x² + 15x - 50. Thus, you simply have to do entire process again on that lower polynomial. Repeat until you reach an easily factorable bottom. If you reach the bottom and have found a non-easily factorable answer, such as, in this case, f(dx) = 2x² - x + 10, use quadratic formula, obviously. If you end up with imaginary answers, then just leave your answer as an unsimplified form using the zeroes you found before using synthetic division: (x + 1)(x - 5)(2x² - x +10).<br><br>
-In order to find a polynomial from the roots, you just need to multiply the roots (in their x + or - form) and see what you get. For example, given the roots x = 3, x = -4 + 3i, and x = -4 - 3i, then one can multiply them together as so: (x - 3)(x + 4 - 3i)(x + 4 + 3i). This multiplies out to x³ - 5x² - 15x - 27.
-	    <br><br><br>
-	    <font color="blue"><strong>The Fundamental Theorem of Algebra:</strong></font><br>
-For every polynomial function with the degree of "n", there are exactly "n" zeros, real or imaginary, rational or irrational.<br>
-For example, f(x) x²³ - 15x¹⁹ - 1 has 23 zeroes, because of the degree. This can be used in conjunction with another theorem:
-<br><br><br>
-
-<font color="blue"><strong>The Conjugate Zeros Theorem:</strong></font><br>
-States that if P(x) is a polynomial with real coefficients and if (a + bi) (where a and b are real and b ≠ 0) is a zero of P, then (a - bi) is also a zero of P.<br>
-Complex roots/solutions/zeros with non-zero imaginary components ALWAYS come in pairs. (a ± bi)
-<br>
-You can NEVER only have one zero with an imaginary number. The Conjugate Zeros Theorem will not allow it. See the diagram below for proof (and also for help for Descartes' Rule of Signs):<br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/signchart.png"><img src="/math/img/signchart.png" alt="The number of possible zeroes given the degree. Courtesy of Thomas Gribble." width=45%/></a></div>
-	    <span class="tiny"><em>The number of possible zeroes given the degree. Courtesy of <a href="https://youtu.be/TeoNd1y7hwk?list=PL7CKqtWx7Eq4uy1RhtdKTFBiXEBjQI5wn">Thomas Gribble</a>.</em></span><br><br>
-<br><font color="blue"><strong>Descartes' Rule of Signs:</strong></font><br>
-Gives us an idea of how many real zeros there could be in a polynomial, and whether they are positive or negative.<br><br>
-(1) The number of <strong>positive</strong> real zeros equals the number of variations in signs of the coefficients of P(<strong>x</strong>), or is less the number of variations by a positive even integer.<br>
-(2) The number of <strong>negative</strong> real zeros equals the number of variations in signs of the coefficients of P(<strong>-x</strong>), or is less the number of variations by a positive even integer.<br><br>
-
-Take this polynomial for example: P(x) = x⁴ - 2x³ - 2x² + 3x + 1. In this polynomial there are two sign changes, seen after the first term and third term, and so there are 2 or 0 positive real zeros, given 1) of Descartes' Rule of Signs.<br>
-When you plug in -x in order to find the negative real zeros, you get P(-x) = x⁴ + 2x³ - 2x² - 3x + 1.
-There are also 2 sign changes here, and so there are either 2 or 0 negative real zeros.<br><br>
-Thus, the polynomial can have any of the following:<br>
-2 positive real zeros and 2 negative real zeros<br>
-2 positive real zeros and 2 non-real zeros<br>
-2 negative real zeros and 2 non-real zeros<br>
-4 non-real zeros<br><br>
-This can occasionally be useful when used in conjunction with other theorems.
-<br><br><br>
-
-
+      If F(x) is a polynomial function with integral coefficients and if p/q (a rational number in lowest terms) is a zero of F(x), then p is a factor of the constant term of F(x), and q is a factor of the leading coefficient of F(x).<br>
+      <!--*we can use the Factor and Remainder Theorem in tandem with this.<br>--><br>
+      Take F(x) = 9x³ - 18x² + 11x - 2, for example. The constant term at the end of the function is 2 (always make the number positive, because the list of (p / q) itself will be ±), and so the factors for p are 1 and 2. The leading coefficient of the term with the highest degree is 9, and so q is equal to its factors: 1 and 9, and 3 and 3. The Rational Zeros Theorem says that if there is going to be a rational zero for this polynomial, it must be in the list of P's over Q's:<br><br>
+      p = ± {1, 2}<br>
+      q = ± {1, 3, 9}<br>
+      (p / q) = ± {1/1, 1/3, 1/9, 2/1, 2/3, 2/9}<br><br>
+      Unironically, the best move right now is to plug in each one of the damn p/q's until you find a zero. Once you have at least one, then you can use synthetic division to find the rest:<br><br>
+      F(1) = 0<br>
+      By synthetic division, F(x) / (x - 1) = 9x² - 9x + 2.<br>
+      Thus, 9x² - 6x - 3x + 2<br>
+      3x(3x - 2) - 1(3x -2)<br>
+      (3x - 1)(3x - 2)<br>
+      Thus, <strong>(x - 1)(3x - 1)(3x - 2)</strong> are the zeroes of the function.<br><br>
+      When you have a particularly lengthy problem in which the degree is greater than 3, such as 2x⁴ - 9x³ + 4x² - 35x - 50, applying the Rational Zeros Theorem and then Synthetic Division will still leave you with unfactorable problem: 2x³ - 11x² + 15x - 50. Thus, you simply have to do entire process again on that lower polynomial. Repeat until you reach an easily factorable bottom. If you reach the bottom and have found a non-easily factorable answer, such as, in this case, f(dx) = 2x² - x + 10, use quadratic formula, obviously. If you end up with imaginary answers, then just leave your answer as an unsimplified form using the zeroes you found before using synthetic division: (x + 1)(x - 5)(2x² - x +10).<br><br>
+      In order to find a polynomial from the roots, you just need to multiply the roots (in their x + or - form) and see what you get. For example, given the roots x = 3, x = -4 + 3i, and x = -4 - 3i, then one can multiply them together as so: (x - 3)(x + 4 - 3i)(x + 4 + 3i). This multiplies out to x³ - 5x² - 15x - 27.
+      	    <br><br><br>
+      	    <font color="blue"><strong><a href="#FundamentalAlgebra"><span class="mw-headline" id="FundamentalAlgebra">#</span></a> The Fundamental Theorem of Algebra:</strong></font><br>
+      For every polynomial function with the degree of "n", there are exactly "n" zeros, real or imaginary, rational or irrational.<br>
+      For example, f(x) x²³ - 15x¹⁹ - 1 has 23 zeroes, because of the degree. This can be used in conjunction with another theorem:
+      <br><br><br>
+      
+      <font color="blue"><strong><a href="#ConjugateZeroes"><span class="mw-headline" id="ConjugateZeroes">#</span></a> The Conjugate Zeros Theorem:</strong></font><br>
+      States that if P(x) is a polynomial with real coefficients and if (a + bi) (where a and b are real and b ≠ 0) is a zero of P, then (a - bi) is also a zero of P.<br>
+      Complex roots/solutions/zeros with non-zero imaginary components ALWAYS come in pairs. (a ± bi)
+      <br>
+      You can NEVER only have one zero with an imaginary number. The Conjugate Zeros Theorem will not allow it. See the diagram below for proof (and also for help for Descartes' Rule of Signs):<br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/signchart.png"><img src="/math/img/signchart.png" alt="The number of possible zeroes given the degree. Courtesy of Thomas Gribble." width=45%/></a></div>
+      	    <span class="tiny"><em>The number of possible zeroes given the degree. Courtesy of <a href="https://youtu.be/TeoNd1y7hwk?list=PL7CKqtWx7Eq4uy1RhtdKTFBiXEBjQI5wn">Thomas Gribble</a>.</em></span><br><br><br>
+      	    
+      <font color="blue"><strong><a href="#DescartesRuleSigns"><span class="mw-headline" id="DescartesRuleSigns">#</span></a> Descartes' Rule of Signs:</strong></font><br>
+      Gives us an idea of how many real zeros there could be in a polynomial, and whether they are positive or negative.<br><br>
+      (1) The number of <strong>positive</strong> real zeros equals the number of variations in signs of the coefficients of P(<strong>x</strong>), or is less the number of variations by a positive even integer.<br>
+      (2) The number of <strong>negative</strong> real zeros equals the number of variations in signs of the coefficients of P(<strong>-x</strong>), or is less the number of variations by a positive even integer.<br><br>
+      
+      Take this polynomial for example: P(x) = x⁴ - 2x³ - 2x² + 3x + 1. In this polynomial there are two sign changes, seen after the first term and third term, and so there are 2 or 0 positive real zeros, given 1) of Descartes' Rule of Signs.<br>
+      When you plug in -x in order to find the negative real zeros, you get P(-x) = x⁴ + 2x³ - 2x² - 3x + 1.
+      There are also 2 sign changes here, and so there are either 2 or 0 negative real zeros.<br><br>
+      Thus, the polynomial can have any of the following:<br>
+      2 positive real zeros and 2 negative real zeros<br>
+      2 positive real zeros and 2 non-real zeros<br>
+      2 negative real zeros and 2 non-real zeros<br>
+      4 non-real zeros<br><br>
+      This can occasionally be useful when used in conjunction with other theorems.
+      <br><br><br>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 	    
 	    
 	    </article><hr>
@@ -587,12 +874,18 @@ This can occasionally be useful when used in conjunction with other theorems.
 	    </header>
 	    <article><br>
 	    
-	    <strong><font color="red">Rule 60.</font></strong> As with all other exponents, graphing Vertex-form equations, cubed, has the same rules as when graphing them squared, where values inside the quantity (the parentheses) affect the x opposite to the sign (see Rule 1), and values added/subtracted to the right being reflective to the y and applying as dictated by the sign. Obviously, the shape of a cubed vertex form graph is different than that of a squared one. The basic curve of a cubed function (that is to say y = x³), is this:<br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As with all other exponents, graphing Vertex-form equations, cubed, has the same rules as when graphing them squared, where values inside the quantity (the parentheses) affect the x opposite to the sign (see Rule 1), and values added/subtracted to the right being reflective to the y and applying as dictated by the sign. Obviously, the shape of a cubed vertex form graph is different than that of a squared one. The basic curve of a cubed function (that is to say y = x³), is this:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/cubed.png"><img src="/math/img/cubed.png" alt="A simple graph of x³. Courtesy of TheMathPage." width=40%/></a></div>
 	    <span class="tiny"><em>A simple graph of x³. Courtesy of <a href="https://www.themathpage.com/aPreCalc/graph-of-parabola.htm">TheMathPage</a>.</em></span>
+	    </div><br><br>
 	    
-	    <br><br><br>
-	    <strong><font color="red">Rule 61.</font></strong> To discover whether a function is even or odd (other than the nature of the leading coefficient) given that the function is a Polynomial, plug in -x for y and see what you get. For example, in the equation g(-x) = 3x² - 7, the x is substituted for 3x² - 7, which causes no change as the negative gets squared. As the equation is the same as before the substitution, the equation is even. A guide to determining Positivity/Negativity is below:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To discover whether a function is even or odd (other than the nature of the leading coefficient) given that the function is a Polynomial, plug in -x for y and see what you get. For example, in the equation g(-x) = 3x² - 7, the x is substituted for 3x² - 7, which causes no change as the negative gets squared. As the equation is the same as before the substitution, the equation is even. A guide to determining Positivity/Negativity is below:<br><br>
 	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;Opposite: Odd equation.<br>
 	    <strong>Result is...*</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same: Even equation.<br>
 	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&hairsp;Half: Neither!
@@ -603,35 +896,70 @@ This can occasionally be useful when used in conjunction with other theorems.
 	    Generally the appearance of odd or even functions will follow the below format:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/evenoddneither.jpg"><img src="/math/img/evenoddneither.jpg" alt="Several generic functions and their even/odd/neither nature. Courtesy of Alexander Urrego." width=45%/></a></div>
 	    <span class="tiny"><em>Several generic functions and their even/odd/neither nature. Courtesy of <a href="https://www.youtube.com/watch?v=D-tJJc4ZDDI">Alexander Urrego</a>.</em></span>
-	    <br><br><br>
-	    <strong><font color="red">Rule 62.</font></strong> <strong>Cubic Functions</strong> are functions in which there are three X-method-esque values of x, such as (x - 2)(x + 3)(x + 4). The basic equation that these functions follow is f(x) = a(x - x<sub>1</sub>)(x - x<sub>2</sub>)(x - x<sub>3</sub>). In a basic equation where f(x) = (x + 4)(x - 3)(x - 6), with a being equal to 1 of course, the solutions would be x = -4, x = 3, and x = 6. The coordinates for this equation can be given as (-4 ,0), (3, 0), (6, 0), (0, 0), the final point being the y value that gets plugged in for f(x) so the solutions can be found. One group of coordinates that can be used to reverse create a cubic function is (-4, 0), (1, 0), (3, 0), (0, -6). Since the final point is a value for y, it must be plugged into the f(x) to get the value of a. Thus, the equation will become so: -6 = a(4)(-1)(-3). Plugging in the y point also plugs in zero for x. Simplifying leads to -1/2 = a, resulting in a finished product of f(x) = -1/2(x + 4)(x - 1)(x - 3)<br><br><br>
-	    <strong><font color="red">Rule 63.</font></strong> <strong>Rational Exponents</strong> are essentially properties about how equations regarding exponents can be conducted. There are six main <strong><font color="blue">Holy Properties</font></strong> as it were, while the pt. 2 expansion of the properties contains another three. The first and most prevalent of the properties is the all-powerful:<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Cubic Functions</strong> are functions in which there are three X-method-esque values of x, such as (x - 2)(x + 3)(x + 4). The basic equation that these functions follow is f(x) = a(x - x<sub>1</sub>)(x - x<sub>2</sub>)(x - x<sub>3</sub>). In a basic equation where f(x) = (x + 4)(x - 3)(x - 6), with a being equal to 1 of course, the solutions would be x = -4, x = 3, and x = 6. The coordinates for this equation can be given as (-4 ,0), (3, 0), (6, 0), (0, 0), the final point being the y value that gets plugged in for f(x) so the solutions can be found. One group of coordinates that can be used to reverse create a cubic function is (-4, 0), (1, 0), (3, 0), (0, -6). Since the final point is a value for y, it must be plugged into the f(x) to get the value of a. Thus, the equation will become so: -6 = a(4)(-1)(-3). Plugging in the y point also plugs in zero for x. Simplifying leads to -1/2 = a, resulting in a finished product of f(x) = -1/2(x + 4)(x - 1)(x - 3).
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Rational Exponents</strong> are essentially properties about how equations regarding exponents can be conducted. There are six main <strong><font color="blue">Holy Properties</font></strong> as it were, while the pt. 2 expansion of the properties contains another three. The first and most prevalent of the properties is the all-powerful:<br><br>
 	    <strong><font color="blue">1. a<sup>m/n</sup> = <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">aᵐ</span></span>
 	    </font></strong>
 	    
 	    <br><br>
 	     - the universal property. When in doubt, try <u>Holy Property #1</u>. With this property, a sort of subproperty emerges stemming from how when m = 1, the equation just becomes <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a</span></span>: Simply, <font color="blue">a<sup>1/2</sup> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a</span></span></font>. A constant rule that must be kept in mind for all of the properties is how the properties can be reversed depending on the equation and that transformation needing to be performed. For instance, <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">6</span></span> can just as easily be changed into 6<sup>1/2</sup> as it could be done the other way around. For an example of property #1, 64<sup>4/3</sup> = (<span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">64</span></span>)⁴, which can be further simplified to (4)⁴, with a final answer of 256. One important thing to remember is how negative exponents just place the equation as the denominator in a fraction, for example 5<sup>-2/3</sup> is just equal to (1 / 5<sup>2/3</sup>), where nothing else can be done (Property #1 would render no further results). An example incorporating Property #1 is 16<sup>-5/4</sup>, where (1 / 16<sup>5/4</sup>), = (1 / (<span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">16</span></span>)⁵) = (1 / (2)⁵) = <strong>1 / 32</strong>.
-	    <br><br><br>
-	    <strong><font color="red">Rule 64.</font></strong> Continuation of the ± Rule (see Rule 59). While all "x = " equations with an even exponent create ± scenarios, double answers, Odd exponents only ever lead to direct answers, negative or positive depending on the original equation. For example, x³ = 64, and <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">64</span></span> only has one solution: 4. <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">-64</span></span>, on the other side, also has but one answer, -4. An even exponent/index with a negative radicand, such as <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-64</span></span>, would lead to a complex answer, specifically 8i.<br><br><br>
-	    <strong><font color="red">Rule 65.</font></strong> While for exponents on the same plane of existence that have coefficients being multiplied can simply be added (for example, exponents that are fractions must have their common denominators found to be added, 13<sup>1/3</sup> × 13<sup>1/6</sup> = 13<sup>2/6</sup> × 13<sup>1/6</sup> = 13<sup>1/2</sup>), exponents on the outside of a parenthesis, such as (3⁵)⁶, have their exponents multiplied: 3³⁰. There are multiple planes of existence in which exponents or whatnot can appear: the first plane is within the parenthesis, the second is just outside, and the third is outside the brackets that enclose the previous two planes. For example, [(3⁵)⁶]³ is equivalent to (3³⁰)³, or 3⁹⁰.<br><br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Continuation of the ± Rule (see Rule 59). While all "x = " equations with an even exponent create ± scenarios, double answers, Odd exponents only ever lead to direct answers, negative or positive depending on the original equation. For example, x³ = 64, and <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">64</span></span> only has one solution: 4. <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">-64</span></span>, on the other side, also has but one answer, -4. An even exponent/index with a negative radicand, such as <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">-64</span></span>, would lead to a complex answer, specifically 8i.
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> While for exponents on the same plane of existence that have coefficients being multiplied can simply be added (for example, exponents that are fractions must have their common denominators found to be added, 13<sup>1/3</sup> × 13<sup>1/6</sup> = 13<sup>2/6</sup> × 13<sup>1/6</sup> = 13<sup>1/2</sup>), exponents on the outside of a parenthesis, such as (3⁵)⁶, have their exponents multiplied: 3³⁰. There are multiple planes of existence in which exponents or whatnot can appear: the first plane is within the parenthesis, the second is just outside, and the third is outside the brackets that enclose the previous two planes. For example, [(3⁵)⁶]³ is equivalent to (3³⁰)³, or 3⁹⁰.
+	    </div><br><br>
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp;&thinsp;&hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    <strong><font color="red">Rule 66.</font></strong> The second rule of the holy properties is:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The second rule of the holy properties is:<br><br>
 	    <strong><font color="blue">2. (ab)ᵐ = aᵐbᵐ</font></strong><br><br>
 	    The more advanced brother of property #2 is property #3:<br><br>
 	    <strong><font color="blue">3. (aˣbʸ)ᵐ = aˣᵐbʸᵐ</font></strong><br><br>
 	    An example of this is (5<sup>1/5</sup> × 8<sup>1/3</sup>)⁵, which is equal to (5<sup>1/5</sup>)⁵ × (8<sup>1/3</sup>)⁵, where nothing else can be done. A good reversal of Property #2 can be seen in how 3² × 2² is equal to (6)². With x, Property #3 can still be conducted: (3x²)³ = 3³x⁶ = 27x⁶.
-	    <br><br><br>
-	    <strong><font color="red">Rule 67.</font></strong> The Reason for why the exponent of 0 is equal to 1 in all circumstances is because of base-2: All descending powers of 2 are dividing by 2, ex. 2³ = 8, 2² = 4, and 2¹ = 2. Therefore, it would only make sense if it kept dividing by 2 after that, so 2⁰ = 1, 2⁻¹ = 1/2, 2⁻² = 1/4, and so on. For aesthetics.<br><br><br>
-	    <strong><font color="red">Rule 68.</font></strong> Property #4:<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The Reason for why the exponent of 0 is equal to 1 in all circumstances is because of base-2: All descending powers of 2 are dividing by 2, ex. 2³ = 8, 2² = 4, and 2¹ = 2. Therefore, it would only make sense if it kept dividing by 2 after that, so 2⁰ = 1, 2⁻¹ = 1/2, 2⁻² = 1/4, and so on. For aesthetics.
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Property #4:<br><br>
 	    <strong><font color="blue">4. (aᵐ) / (aⁿ) = aᵐ⁻ⁿ</font></strong><br><br>
 	    This property is the only other completely unique property (in that it is not derived from any of the others) after Property #1, and I consider it the second most important property in terms of usage and all-encompassing nature. While Property #1 covers exponents that are fractions, Property #4 covers exponents within fractions. Of course, the scope of Property #4 is somewhat limmited due to the coefficients in both the numerator and denominators, a, need to be the same. The most simple example of the rule in action would be (4² / 4⁷) = 4⁻⁵, but a better, more intricate example incorporating Property #5:<br><br>
 	    <strong><font color="blue">5. (aᵐ / bᵐ) = (a / b)ᵐ</font></strong><br><br>
 	     (which, upon first glance, may appear to be a spin on Property #4, but is really just another one of the Equivalence Properties) would be (56<sup>1/4</sup> / 8<sup>1/4</sup>)³. Since the coefficients are different but the exponents are the same, Property #5 is used to create a multi-layered triple-plane equation: [(56/8)<sup>1/4</sup>]³. The internal fraction is easily divisible, removing a plane: (7<sup>1/4</sup>)³. With simple multiplication the final answer of 7<sup>3/4</sup> is reached. Another equation specifically for Property #5 is (3x/2)⁴, which requires a reversal from the property. Applying the exponent to a, 3x, means to apply it to both the coefficient and the x: 3⁴x⁴, or 81x⁴. 2⁴ is 16, so the answer is 81x⁴ / 16.
-	    <br><br><br>
-	    <strong><font color="red">Rule <u>69</u>.</font></strong> Finally, Property #6:<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <u><span class="rule-number"></span></u>.</font>
+        </strong> Finally, Property #6:<br><br>
 	    <strong><font color="blue">6. <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">a</span></span> × <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">b</span></span> = <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">ab</span></span></font></strong><br><br>
 	    This property opens the rabbit hole into how square roots can be multiplied and divided, which has many subrules to remember. A simple example for the property is <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">4</span></span> × <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">128</span></span>. Since too much mental power is require to <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">4 × 128</span></span>, you can just factor 128 without multiplying:<br><br>
 	    128┃4<br>
@@ -652,91 +980,111 @@ This can occasionally be useful when used in conjunction with other theorems.
 	    &hairsp;&hairsp;<span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">3</span></span> × <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">9</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;3
 	    <br><br>
 	    The simple way for knowing how to multiply radicals and their coefficients as long as they have the same index/roots is through this example: (3<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">2</span></span>)(5<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>) = 15<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">6</span></span>. As you can see, coefficients and radicals multiply separately.
-	    <br><br><br>
-	    <strong><font color="red">Rule 70.</font></strong> The conjugate is a very useful tool for equations with a radical denominator with multiple unsimplifiable variables. The conjugate is, simply, the denominator with everything the same except for the sign in the middle. For example, the conjugate of <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> - 2 is <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> + 2. The conjugate of -3 - 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">5</span></span> is -3 + 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">5</span></span>. Quite simply, the purpose of the conjugate is to multiply the nominator and denominator of one of these strange equations in order to remove the radical, the conjugate being just a special means to achieve that goal. For example, an actual equation in which the conjugate would be used is 1 / (<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> - 2), simple enough. Multiplying the conjugate is step one:<br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The conjugate is a very useful tool for equations with a radical denominator with multiple unsimplifiable variables. The conjugate is, simply, the denominator with everything the same except for the sign in the middle. For example, the conjugate of <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> - 2 is <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> + 2. The conjugate of -3 - 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">5</span></span> is -3 + 2<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">5</span></span>. Quite simply, the purpose of the conjugate is to multiply the nominator and denominator of one of these strange equations in order to remove the radical, the conjugate being just a special means to achieve that goal. For example, an actual equation in which the conjugate would be used is 1 / (<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> - 2), simple enough. Multiplying the conjugate is step one:<br>
 	    &nbsp;&nbsp;&nbsp;&thinsp;&hairsp;&hairsp;1&nbsp;&nbsp;&nbsp;&thinsp;&hairsp; × (<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> + 2)<br>
 	    ━━━━━━━━━<br>
 	    (<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> - 2) × (<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> + 2)
 	    <br><br>
 	    The bottom, after simplifying and cancellations, is equal to 3. The top, having been one, makes the answer simple: (<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span> + 2) / 3.
-	    <br><br><br>
-	    <strong><font color="red">Rule 71.</font></strong> When conducting an addition or subtraction equation between two radicals and their coefficients, try to simplify to make the radicals the same. In 5<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">12</span></span> - 19<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>, simplifying <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">12</span></span> makes the first variable 10<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>, which can be used in the equation to create -9<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>. Simply put, not having the same radicand initially doesn't mean permanently.<br><br><br>
-	    <strong><font color="red">Rule 72.</font></strong> The second part of the properties of radical equations is mainly just a summary of all the unusual side-effects of the properties from the first part. For example, the first side-effect is that for radicals where <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">xⁿ</span></span>, there are different possibilities for what x is equal to depending on whether n is odd or ever. This is due to negative numbers in even roots being taboo. If n is odd, then <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">xⁿ</span></span> = x, completely free no matter if x is negative or whatnot. <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">5³</span></span> = 5 and <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">(-5)³</span></span> = -5. Free country.<br><br>
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When conducting an addition or subtraction equation between two radicals and their coefficients, try to simplify to make the radicals the same. In 5<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">12</span></span> - 19<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>, simplifying <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">12</span></span> makes the first variable 10<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>, which can be used in the equation to create -9<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">3</span></span>. Simply put, not having the same radicand initially doesn't mean permanently.
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The second part of the properties of radical equations is mainly just a summary of all the unusual side-effects of the properties from the first part. For example, the first side-effect is that for radicals where <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">xⁿ</span></span>, there are different possibilities for what x is equal to depending on whether n is odd or ever. This is due to negative numbers in even roots being taboo. If n is odd, then <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">xⁿ</span></span> = x, completely free no matter if x is negative or whatnot. <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">5³</span></span> = 5 and <span style="white-space: nowrap">&#8731;<span style="text-decoration:overline;">(-5)³</span></span> = -5. Free country.<br><br>
 	    If n is even, however, then <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">xⁿ</span></span> = |x|, the absolute value of x, making it possible every time. <span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">2⁴</span></span> = 2 and <span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">(-2)⁴</span></span> = 2. 1984. <br><br>Keep in mind that when a letter variable like x is an even n equation, the absolute value symbols must remain with it in the answer: <span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">x⁴</span></span> = |x|. Same internal exponent + same index = cancels out. When trying to create a <sup>n</sup><span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">xⁿ</span></span> equation when the second n is greater, GCF the radicand to find something that will be able to be on the outside. Remember that when a variable that still has an exponent attached is spit out of an even n equation with an absolute value around it, such as |y⁴|, if the exponent is even, then the absolute value is to be removed as the exponent will cause it to be even either way. "Assume all variables are positive" relieves you of having to put abslute value. For the exponents of variables in the radicand, simplifying to see what you can't take out is as simple as dividing the exponent by the root, applying the result as the exponent of the variable on the outside, and using the remainder as the exponent of the variable on the inside.
-	    <br><br><br>
-	    <strong><font color="red">Rule 73.</font></strong> This is just another means of simplification you've pretty much solved the equation: If a perfect square/whatnot must be left in its radical (<span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">4</span></span>), you can square or whatever root it internally: <span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">2²</span></span>. Optional.<br><br><br>
-	    <strong><font color="red">Rule 74.</font></strong> <strong><rainbow><span class="tiny">~ The Secret Rule Of Exponents ~</span></rainbow></strong><br>
-	    <strong>Not to be disclosed under ANY CIRCUMSTANCES!</strong><br> If an internal Radicand is a perfect square and the index/root is even (<span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">1296</span></span>), square root the radicand and divide the index by 2: <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">36</span></span>. A Completely Legal move.<br><br><br>
-	    <strong><font color="red">Rule 75.</font></strong> The second side-effect is another relating to fractions, but this is a bit of a tool to help you in solving variable and exponent packed equations. As you know, z⁻² = (1 / z²). As this logic would follow, <font color="blue">(1 / z⁻²) = z²</font>. For example: (16xy<sup>1/3</sup> / 8xz⁻⁴), the z can be moved to the top because it has a negative exponent in the denominator: (16xy<sup>1/3</sup>z⁴ / 8x).<br><br><br>
-	    <strong><font color="red">Rule 76.</font></strong> (x² / x¹⁰) = (1 / x⁸). This is way faster than actually minusing 10 from 2 and going x⁻⁸ = (1 / x⁸). Just denominator exponent - nominator exponent.<br><br><br>
+	    </div><br><br>
 	    
-	    <strong><font color="#006400">One-to-one function</font></strong>: Any function that passes both the vertical and horizontal line test, e.g. it can have an inverse function.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> This is just another means of simplification you've pretty much solved the equation: If a perfect square/whatnot must be left in its radical (<span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">4</span></span>), you can square or whatever root it internally: <span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">2²</span></span>. Optional.
+	    </div><br><br>
 	    
-	    <font color="blue"><strong>Inverse Functions:</strong></font><br><br>
-In an abstract sense, while a function is a relation between an input and an output such that there is only one output, the inverse function is taking the original and performing it in reverse order with the opposite operations. For example, if you have the function f(x) = 3x + 2, you are first multiplying by three and then adding by two. The inverse function would subtract by two and then divide by 3.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong><rainbow><span class="tiny">~ The Secret Rule Of Exponents ~</span></rainbow></strong><br>
+	    <strong>Not to be disclosed under ANY CIRCUMSTANCES!</strong><br> If an internal Radicand is a perfect square and the index/root is even (<span style="white-space: nowrap">&#8732;<span style="text-decoration:overline;">1296</span></span>), square root the radicand and divide the index by 2: <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">36</span></span>. A Completely Legal move.
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The second side-effect is another relating to fractions, but this is a bit of a tool to help you in solving variable and exponent packed equations. As you know, z⁻² = (1 / z²). As this logic would follow, <font color="blue">(1 / z⁻²) = z²</font>. For example: (16xy<sup>1/3</sup> / 8xz⁻⁴), the z can be moved to the top because it has a negative exponent in the denominator: (16xy<sup>1/3</sup>z⁴ / 8x).
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> (x² / x¹⁰) = (1 / x⁸). This is way faster than actually minusing 10 from 2 and going x⁻⁸ = (1 / x⁸). Just denominator exponent - nominator exponent.
+	    </div><br><br>
+	    
+	    <strong><a href="#OneToOneDef"><span class="mw-headline" id="OneToOneDef">#</span></a> <font color="#006400">One-to-one function</font></strong>: Any function that passes both the vertical and horizontal line test, e.g. it can have an inverse function.<br><br><br>
+	    
+	    <font color="blue"><strong><a href="#InverseFunctions"><span class="mw-headline" id="InverseFunctions">#</span></a> Inverse Functions:</strong></font><br><br>
+      In an abstract sense, while a function is a relation between an input and an output such that there is only one output, the inverse function is taking the original and performing it in reverse order with the opposite operations. For example, if you have the function f(x) = 3x + 2, you are first multiplying by three and then adding by two. The inverse function would subtract by two and then divide by 3.<br><br>
+      
+      In a more practical sense, the inverse of the function is that in which the x and f(x) are reversed. For example, if you were to take this to be the output of the original function:<br>
+      x&nbsp;┃&nbsp;y<br>
+      &hairsp;&hairsp;━━╋━━<br>
+      -2┃-4<br>
+      -1┃-1<br>
+      &nbsp;0┃2<br>
+      &nbsp;1┃5<br>
+      &nbsp;2┃8<br><br>
+      Then this would be that of the inverse function:<br><br>
+      x&nbsp;┃&nbsp;y⁻¹<br>
+      &hairsp;&hairsp;━━╋━━<br>
+      -4┃-2<br>
+      -1┃-1<br>
+      &nbsp;2┃0<br>
+      &nbsp;5┃1<br>
+      &nbsp;8┃2<br><br>
+      How do you get the inverse function? Easily. ALl you have to do is take the original function, say y = (x / (x + 2)) and switch around y and x: <br>
+      x = (y / (y + 2)). Then, all you have to do isolate y to find to find the inverse equation:<br><br>
+      (y + 2) × (y / (y + 2)) = (y + 2) × (x)<br>
+      y = xy + 2x<br>
+      y - xy = 2x<br>
+      y(1 - x) = 2x<br>
+      y = 2x / (1 - x)<br><br>
+      As we all know, a graph must pass the <strong>vertical line test</strong> in order to be considered a function. However, there is an additional <strong>horizontal line test</strong> that must be used to determine whether a function has an inverse. Take y = x², for example. This parabola clearly does not pass the horizontal line test, and so does not have an inverse in any official sense. However, if you were to switch around y and x and isolate y as you would for a regular inverse, you would find that the "inverse" is y = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>. However, as we know, this is not a 'real' inverse.<br>
+      If there are five sections of the line for above and below zero, the degree is definitely even. Next, simply transcribe each segment of the graph as shown on the line:<br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/xsquareradx.png"><img src="/math/img/xsquareradx.png" alt="The graphs of x², radical x, and negative radical x. Functions graphed on Desmos." width=35%/></a></div>
+      	    <span class="tiny"><em>The graphs of x², <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>, and -<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>. Functions graphed on <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
+      As you can see, y = x² does not pass the horizontal line test while the combined graph of ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> does not pass the vertical line test. You cannot have an inverse function that is not a function, so x² does not have an inverse, because it is not a one-to-one function. However, we can create a restricted inverse function by creating restrictions upon the domain of y = x² and ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>, x² being restricted to ≥ 0 while <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> is restricted to y ≥ 0.  This creates one-to-one functions in both functions, making them proper inverses of one another.<br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/restrictedx.png"><img src="/math/img/restrictedx.png" alt="The restricted graph of y = x² and radical x." width=35%/></a></div>
+      	    <span class="tiny"><em>The restricted graph of y = x² and <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>. Functions graphed on <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
+      Note the symmetry of the restricted graph - inverse functions always mirror eachother along y = x.<br><br> In order to test whether two functions are inverses of one another, plug in and test these formulas to make sure they are true:<br><br><strong>f(f⁻¹(x)) = x<br>f⁻¹(f(x)) = x</strong><br><br> This is given any x value. Considering how the y values of f(x) are the x values of f⁻¹(x) and vice versa, this approach makes perfect sense.
+      
+      <br><br><br>
+      
+      <font color="blue"><strong><a href="#SummaryOfInverses"><span class="mw-headline" id="SummaryOfInverses">#</span></a> Summary of Inverses:</strong></font><br><br>
+      -The <strong>domain</strong> of a function is the range of its inverse.<br>
+      -The <strong>range</strong> of a function is the domain of its inverse.<br>
+      -The inverse of a function is its reflection across the line y = x.<br>
+      -Domain restrictions must be stated for inverse functions, because <u>only one-to-one functions have inverses without domain restrictions</u>!<br><br>
+      NOTE: The inverse is not always the negative reciprocal. Negative Reciprocals are mainly used to find the slope of a line perpendicular to another, as described in rule [[[[[[[[[[[.
 
-In a more practical sense, the inverse of the function is that in which the x and f(x) are reversed. For example, if you were to take this to be the output of the original function:<br>
-x&nbsp;┃&nbsp;y<br>
-&hairsp;&hairsp;━━╋━━<br>
--2┃-4<br>
--1┃-1<br>
-&nbsp;0┃2<br>
-&nbsp;1┃5<br>
-&nbsp;2┃8<br><br>
-Then this would be that of the inverse function:<br><br>
-x&nbsp;┃&nbsp;y⁻¹<br>
-&hairsp;&hairsp;━━╋━━<br>
--4┃-2<br>
--1┃-1<br>
-&nbsp;2┃0<br>
-&nbsp;5┃1<br>
-&nbsp;8┃2<br><br>
-How do you get the inverse function? Easily. ALl you have to do is take the original function, say y = (x / (x + 2)) and switch around y and x: <br>
-x = (y / (y + 2)). Then, all you have to do isolate y to find to find the inverse equation:<br><br>
-(y + 2) × (y / (y + 2)) = (y + 2) × (x)<br>
-y = xy + 2x<br>
-y - xy = 2x<br>
-y(1 - x) = 2x<br>
-y = 2x / (1 - x)<br><br>
-As we all know, a graph must pass the <strong>vertical line test</strong> in order to be considered a function. However, there is an additional <strong>horizontal line test</strong> that must be used to determine whether a function has an inverse. Take y = x², for example. This parabola clearly does not pass the horizontal line test, and so does not have an inverse in any official sense. However, if you were to switch around y and x and isolate y as you would for a regular inverse, you would find that the "inverse" is y = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>. However, as we know, this is not a 'real' inverse.<br>
-If there are five sections of the line for above and below zero, the degree is definitely even. Next, simply transcribe each segment of the graph as shown on the line:<br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/xsquareradx.png"><img src="/math/img/xsquareradx.png" alt="The graphs of x², radical x, and negative radical x. Functions graphed on Desmos." width=35%/></a></div>
-	    <span class="tiny"><em>The graphs of x², <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>, and -<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>. Functions graphed on <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
-As you can see, y = x² does not pass the horizontal line test while the combined graph of ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> does not pass the vertical line test. You cannot have an inverse function that is not a function, so x² does not have an inverse, because it is not a one-to-one function. However, we can create a restricted inverse function by creating restrictions upon the domain of y = x² and ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>, x² being restricted to ≥ 0 while <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> is restricted to y ≥ 0.  This creates one-to-one functions in both functions, making them proper inverses of one another.<br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/restrictedx.png"><img src="/math/img/restrictedx.png" alt="The restricted graph of y = x² and radical x." width=35%/></a></div>
-	    <span class="tiny"><em>The restricted graph of y = x² and <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>. Functions graphed on <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
-Note the symmetry of the restricted graph - inverse functions always mirror eachother along y = x.<br><br> In order to test whether two functions are inverses of one another, plug in and test these formulas to make sure they are true:<br><br><strong>f(f⁻¹(x)) = x<br>f⁻¹(f(x)) = x</strong><br><br> This is given any x value. Considering how the y values of f(x) are the x values of f⁻¹(x) and vice versa, this approach makes perfect sense.
-
-<br><br><br>
-<font color="blue"><strong>Summary of Inverses:</strong></font><br><br>
--The <strong>domain</strong> of a function is the range of its inverse.<br>
--The <strong>range</strong> of a function is the domain of its inverse.<br>
--The inverse of a function is its reflection across the line y = x.<br>
--Domain restrictions must be stated for inverse functions, because <u>only one-to-one functions have inverses without domain restrictions</u>!<br><br>
-NOTE: The inverse is not always the negative reciprocal. Negative Reciprocals are mainly used to find the slope of a line perpendicular to another, as described in rule [[[[[[[[[[[.
-	    <!--<strong><font color="red">Rule 77.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 78.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 79.</font></strong> <br><br><br>
-	    -->
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    <!--
-	    <strong><font color="red">Rule 0.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 1.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 2.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 3.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 4.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 5.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 6.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 7.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 8.</font></strong> <br><br><br>
-	    <strong><font color="red">Rule 9.</font></strong> <br><br><br>
-	    -->
+
 	  </article>
 	  
-	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -769,7 +1117,7 @@ NOTE: The inverse is not always the negative reciprocal. Negative Reciprocals ar
         <article><strong><a href="/math/algebraII/quadtranslation.html">Quadratic Translation</a></strong> → <strong><a href="/math/algebraII/factoring">Factoring</a></strong> → <strong><a href="/math/algebraII/polyfunctions">Polynomial Functions</a></strong> → <strong><a href="/math/algebraII/longdivision">Long Division</a></strong> → <strong><a href="/math/algebraII/factoring2">Factoring Pt. 2</a></strong> → <strong><a href="/math/algebraII/exponentrules">Rules of Exponents</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 4 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -31,6 +31,36 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
@@ -71,17 +101,25 @@ rainbow {
 	  </article>
 	  <hr>
 	  
+	  <div class="rules" data-start="130">
+	  
 	    <header class="articleHeader"><hr>
-	    <h3><span class="mw-headline" id="Derivative1">?. Derivative.</span></h3>
+	    <h2><span class="mw-headline" id="Derivative1">?. Derivative.</span></h2>
 	  </header>
 	  <article><br>
 	      
-	      <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">Rule 130.</font></strong> A <strong>secant line</strong> is a line that intersects the line at two places. The <em>slope</em> of the secant line is the <u>average rate of change</u> between the two points.
-	     <br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>secant line</strong> is a line that intersects the line at two places. The <em>slope</em> of the secant line is the <u>average rate of change</u> between the two points.
+	     </div><br><br>
 	     
 	     
-	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">Rule 131.</font></strong> A <strong>tangent line</strong> is a line that intersects a curve at exactly one point. The <em>slope</em> of the tangent line is the <u>instantaneous rate of change</u> at a point.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>tangent line</strong> is a line that intersects a curve at exactly one point. The <em>slope</em> of the tangent line is the <u>instantaneous rate of change</u> at a point.
+	    </div><br><br>
 	    
 	    <strong><a href="#DifferenceQuotientDef"><span class="mw-headline" id="DifferenceQuotientDef">#</span></a> <font color="#006400">Difference Quotient</font></strong>: 
 	    $$\frac{f(x + h) - f(x)}{h}$$
@@ -93,10 +131,13 @@ rainbow {
 	    <strong><a href="#NormalLineDef1"><span class="mw-headline" id="NormalLineDef1">#</span></a> <font color="#006400">Normal Line</font></strong>: The line normal to a curve is the line perpendicular to the tangent at that point.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">Rule 132.</font></strong> When the limit exists, it's called the <strong><em>derivative</em></strong> of f at a, or any point. The derivative is f'(x) =
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When the limit exists, it's called the <strong><em>derivative</em></strong> of f at a, or any point. The derivative is f'(x) =
 	    $$\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
 	    provided the limit exists. "Differentiate" means to determine the Derivative.
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    <strong><font color="blue"><a href="#VerbalNotation"><span class="mw-headline" id="VerbalNotation">#</span></a> Verbal Descriptions of Calculus Notation:</font></strong><br>
 	    
@@ -104,27 +145,44 @@ rainbow {
 	    <span class="tiny"><em>A "READ:", "SAY:" chart for f'(x), y', dy/dx, and d/dx.</em></span>
 	    <br><Br><br>
 	    
-	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">Rule 133.</font></strong> 
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	    Graphing the derivative without knowledge of the formulas for dy/dx nor the parent function, is wack:<br><br>
 	    First, get the slope between two points on the original f(x) and find the slope. As x increases, a decreasing f(x) value indicates a negative slope, while an increasing f(x) value indicates a positive slope. Find an x-value in the middle of the two points and use it as the x-value. Use the slope as the y-value and plug into the new graph, and repeat. Fo a graph with "pointy points", known as corners, they are undefined in the derivative graph (the f'(x)), as they do not have local linearity (see [[[).
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">Rule 134.</font></strong> When a fraction has a square root, standard procedure is to multiply it by a conjugate, especially if the square root is on the denominator.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When a fraction has a square root, standard procedure is to multiply it by a conjugate, especially if the square root is on the denominator.
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">Rule 135.</font></strong> For the alternate definition of the derivative, you always want to do all the algebra first before substituting for a at the end. Then, you can do a.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For the alternate definition of the derivative, you always want to do all the algebra first before substituting for a at the end. Then, you can do a.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> Function f(x) is differentiable on a closed interval [a, b] if it has a derivative at every interior point of the interval, and if the limits below exist at the endpoints.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Function f(x) is differentiable on a closed interval [a, b] if it has a derivative at every interior point of the interval, and if the limits below exist at the endpoints.<br><br>
 	    $$\lim_{h \to 0^+} \frac{f(a + h) - f(a)}{h}$$
 	    is the right-hand derivative, and<br><br><br>
 	    
           $$\lim_{h \to 0^-} \frac{f(b + h) - f(b)}{h}$$
 	    is the left-hand derivative.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> The left hand derivative can be found by using the regular f(x), while the right hand derivative is found by using the equation of the f'(x) derivative found from the left hand derivative. If the two derivatives are equal to each other, then the derivative in totality is real<!--extant-->.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The left hand derivative can be found by using the regular f(x), while the right hand derivative is found by using the equation of the f'(x) derivative found from the left hand derivative. If the two derivatives are equal to each other, then the derivative in totality is real<!--extant-->.
+	    </div><br><br>
 	    
 	    <strong><a href="#DifferentiabilityDef"><span class="mw-headline" id="DifferentiabilityDef">#</span></a> <font color="#006400">Differentiability</font></strong>: The ability to find slope at a point, which is necessary to take the derivative.
 	    <br><br><br>
@@ -155,17 +213,25 @@ rainbow {
 
         </ol>
         
-	    <br><Br><br>
+	    <br><Br>
 	    
 	    <strong><a href="#LocalLinearityDef"><span class="mw-headline" id="LocalLinearityDef">#</span></a> <font color="#006400">Local Linearity</font></strong>: If you focus on a point on a curve, if you continuously zoom in on the point, eventually the graph of the curve at the point will resemble a line. Differentiability implies local linearity.
 	    <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> The <strong>symmetric difference quotient</strong> is as follows:
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>symmetric difference quotient</strong> is as follows:
 	    $$f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x - h)}{2h}$$
-	   It is used any time you want the derivative from each side of the tangent line (the distance being h), rather than from just one side.<br><br><br>
+	   It is used any time you want the derivative from each side of the tangent line (the distance being h), rather than from just one side.
+	   </div><br><br>
 	    
-	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> A derivative is a limit. Not only does the limit have to exist, it must also be continuous. The slope on the left being different from the derivative on the right rules out corners from having derivatives. If the slope becomes a vertical line (e.g., slope/m = infinity), then the derivative also does not exist.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A derivative is a limit. Not only does the limit have to exist, it must also be continuous. The slope on the left being different from the derivative on the right rules out corners from having derivatives. If the slope becomes a vertical line (e.g., slope/m = infinity), then the derivative also does not exist.
+	    </div><br><br>
 	    
 	    <strong><font color="blue"><a href="#GeneralDerivative"><span class="mw-headline" id="GeneralDerivative">#</span></a> General Rules of Derivatives:</font></strong><br><br>
         <ol>
@@ -195,9 +261,17 @@ rainbow {
         
 <br><br>
 	    
-	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">Rule 140.</font></strong> For a derivative to be, it must have local linearity. No matter how much you zoom into a corner or cusp, they will never have local linearity, and this is why they are considered "non-differentiable" entities.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For a derivative to be, it must have local linearity. No matter how much you zoom into a corner or cusp, they will never have local linearity, and this is why they are considered "non-differentiable" entities.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">Rule 141.</font></strong> When taking the derivative at zero of any function f(x) = x<sup>even/odd</sup>, for any matching exponent value, it will never exist. x<sup>even/odd</sup> will always produce a corner or cusp at x=0, and thus cannot have a derivative at that point.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When taking the derivative at zero of any function f(x) = x<sup>even/odd</sup>, for any matching exponent value, it will never exist. x<sup>even/odd</sup> will always produce a corner or cusp at x=0, and thus cannot have a derivative at that point.
+	    </div><br><br>
 	    
 	    <strong><a href="#TheoremDiffDef"><span class="mw-headline" id="TheoremDiffDef">#</span></a> <font color="#006400">Theorem of Differentiability</font></strong>: Differentiability implies continuity. However, continuity does not imply differentiability. If f has a derivative at x = a, then f is continuous at x = a.
 	    <br><br><br>
@@ -205,7 +279,10 @@ rainbow {
 	    <strong><a href="#IVTDef"><span class="mw-headline" id="IVTDef">#</span></a> <font color="#006400">Intermediate Value Theorem (for Derivatives)</font></strong>: If a and b are any two points in an interval on which f is differentiable, the f' takes on every value between f'(a) and f'(b).
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule142"><span class="mw-headline" id="Rule142">#</span></a> <font color="red">Rule 142.</font></strong> <strong>Laws of Differentiation</strong><br><Br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Laws of Differentiation</strong><br><Br>
 	    As used below, all functions f(x), g(x), and h(x), are differentiable functions, and n & c are constants.
 	    <ol>
 
@@ -243,9 +320,13 @@ rainbow {
 
         </ol>
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule143"><span class="mw-headline" id="Rule143">#</span></a> <font color="red">Rule 143.</font></strong> In order to find the <strong>horizontal tangents</strong> of a curve, you must find the derivative and then make it equal to 0, and then factor as you see fit.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the <strong>horizontal tangents</strong> of a curve, you must find the derivative and then make it equal to 0, and then factor as you see fit.
+	    </div><br><br>
 	    
 	    <strong><font color="blue"><a href="#ProductRuleDef"><span class="mw-headline" id="ProductRuleDef">#</span></a> Product Rule:</font></strong><br><br>
         <strong>(f × g)' = f'g + fg'</strong>
@@ -273,14 +354,22 @@ rainbow {
         <br><br>
         
 	    
-	    <strong><a href="#Rule144"><span class="mw-headline" id="Rule144">#</span></a> <font color="red">Rule 144.</font></strong> Derivatives are allowed to be plugged in over addition and subtraction operations, such as (d/dx)(7v - 3u), requiring the substitution of the derivatives of v and u into the equation.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Derivatives are allowed to be plugged in over addition and subtraction operations, such as (d/dx)(7v - 3u), requiring the substitution of the derivatives of v and u into the equation.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule145"><span class="mw-headline" id="Rule145">#</span></a> <font color="red">Rule 145.</font></strong> The derivative is the slope (rate of change) at any given point on a curve: If you are given a graph of x and asked to find the graph of the "rate of change", just find the derivative graph: The values to be plugged into the Product or Quotient rules are already given!<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The derivative is the slope (rate of change) at any given point on a curve: If you are given a graph of x and asked to find the graph of the "rate of change", just find the derivative graph: The values to be plugged into the Product or Quotient rules are already given!
+	    </div><br>
 	    
 	    
 	    
 	      </article>
-
+    </div>
 	</div>
 	
 	<div class="General links">
@@ -313,7 +402,7 @@ rainbow {
         <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href=""></a>Derivatives</strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 18 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

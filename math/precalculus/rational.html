@@ -10,6 +10,49 @@
       <div class="wrapper">
       
       <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
@@ -50,43 +93,95 @@
 	    <p>These are my complete notes for Rational Equations in Precalculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
 	  </article>
 	  <hr>
+	  
+	  <div class="rules" data-start="78">
 	    <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Rational">VI. Rational Equations.</span></h2>
 	  </header>
 	  <article><br>
 	      
-	      <strong><font color="#006400">Cross Multiply:</font></strong> Multiplying two fractions diagonally - can be done when two fractions with variables are equivalent.<br><br><br>
-	      <strong><font color="#006400">Least Common Multiple:</font></strong> The smallest number that two or more numbers can divide into evenly.<br><br><br>
+	      <strong><a href="#CrossMultiplyDef"><span class="mw-headline" id="CrossMultiplyDef">#</span></a> <font color="#006400">Cross Multiply</font></strong> Multiplying two fractions diagonally - can be done when two fractions with variables are equivalent.<br><br><br>
 	      
-	      <strong><font color="red">Rule 78.</font></strong> Cross Multiplying is to be done in situations where there are two (2) fractions that are equal, such as (3 / (x + 1)) = (9 / (4x + 5)). This only works when both variables are by themselves.<br><br><br>
+	      <strong><a href="#LCMDef"><span class="mw-headline" id="LCMDef">#</span></a> <font color="#006400">Least Common Multiple</font></strong> The smallest number that two or more numbers can divide into evenly.<br><br><br>
 	      
-	      <strong><font color="red">Rule 79.</font></strong> Another means of finding whether an equation was extraneous or not in the fastest possible way - a rule of thumb is that if you plug in an answer you got for x in the denominator and it does not go to zero (illegal), then it is very likely to be the answer. Only use this trick in a pinch!<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Cross Multiplying is to be done in situations where there are two (2) fractions that are equal, such as (3 / (x + 1)) = (9 / (4x + 5)). This only works when both variables are by themselves.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 80.</font></strong> One of the more convenient aspects of the <strong>least common multiple</strong> is that, in general, it removes the denominator due to the cancelling outs. However, the goal is always to have it so that the denominator for all variables is the same, whether that be 1 or some LCM frankenstein. Always eyball beforehand whether cancelling out will grant an opportunity where all denominators are equal. For example, in the post-LCM equation (20x / x) + (28x / 4) = (-36x / x), the option is available to simplify each equation and therefore to remove all denominators. What out! It is your decision whether to multiply the denominator or not.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Another means of finding whether an equation was extraneous or not in the fastest possible way - a rule of thumb is that if you plug in an answer you got for x in the denominator and it does not go to zero (illegal), then it is very likely to be the answer. Only use this trick in a pinch!
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 81.</font></strong> When you have gotten all variables to agree on a denominator other than 1., remember that you must simply sum the top of its plus & minuses if you want to cancel out more. For example, in the equation (5x + 3(x + 3)(x + 4)) / (6x(x + 3)), (x + 3) cannot be canceled out because there is an addition ongoing in the numerator.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> One of the more convenient aspects of the <strong>least common multiple</strong> is that, in general, it removes the denominator due to the cancelling outs. However, the goal is always to have it so that the denominator for all variables is the same, whether that be 1 or some LCM frankenstein. Always eyball beforehand whether cancelling out will grant an opportunity where all denominators are equal. For example, in the post-LCM equation (20x / x) + (28x / 4) = (-36x / x), the option is available to simplify each equation and therefore to remove all denominators. What out! It is your decision whether to multiply the denominator or not.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 82.</font></strong> All inequalities in regard to x (representative of the domain), such as x ≤ 12 or -4 ≤ x &lt; -1, can be represented through interval notation. Simply, the postion of the number in the coordinates represents where the x is located between. For example, -4 &lt; x &lt; 2 would be (-4, 2). If an equation contains an x that goes in one direction infinitely, such as x > 12, than the infinity is used: (12, ∞). Infinity is always done with a parenthesis, as it cannot be contained. The first variable in the coordinates is the lowest possible value that x can be, naturally, and vice versa goes for the second variable. For greater or equal to symbols in the equation, whichever side has the ≤ (first or second) has a bracket used for it instead of a parenthesis. For example, -8 &lt; x ≤ 20 = (-8, 20]. Remember that infinity can never have brackets. on a number line, a closed circle means not equal to, while a filled one means it is. For equations using the "or", a special character is used to denote these separate possibilities and limits: ∪. The Union symbol. For example, in the equation x ≥ 9 or x &lt; 2, the coordinates would be rendered as (-∞, -2) ∪ [9, ∞). <br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you have gotten all variables to agree on a denominator other than 1., remember that you must simply sum the top of its plus & minuses if you want to cancel out more. For example, in the equation (5x + 3(x + 3)(x + 4)) / (6x(x + 3)), (x + 3) cannot be canceled out because there is an addition ongoing in the numerator.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 83.</font></strong> As is known, a function is that which passes the vertical line test. If a vertical line intersects more than one point on the graph, it is not a function. For example, on a number chart for coordinates, X-values cannot repeat, while y values can repeat and still be a function.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> All inequalities in regard to x (representative of the domain), such as x ≤ 12 or -4 ≤ x &lt; -1, can be represented through interval notation. Simply, the postion of the number in the coordinates represents where the x is located between. For example, -4 &lt; x &lt; 2 would be (-4, 2). If an equation contains an x that goes in one direction infinitely, such as x > 12, than the infinity is used: (12, ∞). Infinity is always done with a parenthesis, as it cannot be contained. The first variable in the coordinates is the lowest possible value that x can be, naturally, and vice versa goes for the second variable. For greater or equal to symbols in the equation, whichever side has the ≤ (first or second) has a bracket used for it instead of a parenthesis. For example, -8 &lt; x ≤ 20 = (-8, 20]. Remember that infinity can never have brackets. on a number line, a closed circle means not equal to, while a filled one means it is. For equations using the "or", a special character is used to denote these separate possibilities and limits: ∪. The Union symbol. For example, in the equation x ≥ 9 or x &lt; 2, the coordinates would be rendered as (-∞, -2) ∪ [9, ∞). 
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 84.</font></strong> For equations where there is an equation to solve regarding y and x, such as y² - 2x = 5, simplify as much as you can for either one and then plug in 1 for the unsimplified side's variable, in this case x: y = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">2x + 5</span></span> = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. Because the value of y is ±, there are two different values of y for one (1) x, making the equation not a function. Simply put, a ± in the value of the y makes it not a function.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As is known, a function is that which passes the vertical line test. If a vertical line intersects more than one point on the graph, it is not a function. For example, on a number chart for coordinates, X-values cannot repeat, while y values can repeat and still be a function.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 85.</font></strong> Believe in yourself! :3<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For equations where there is an equation to solve regarding y and x, such as y² - 2x = 5, simplify as much as you can for either one and then plug in 1 for the unsimplified side's variable, in this case x: y = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">2x + 5</span></span> = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. Because the value of y is ±, there are two different values of y for one (1) x, making the equation not a function. Simply put, a ± in the value of the y makes it not a function.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 86.</font></strong> There are special rules for more abstract equations regarding concepts like square roots that require advanced levels of thinking. For example, in the equation g(t) = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">t - 5</span></span>, you must know that t - 5 ≥ 0 because a negative has no real square root. Therefore, the Domain of this equation is all real numbers that are ≥ 5: [5, ∞). Be creative! For equations that don't involve radicals, such as 3y = 11 - 4x, it is pretty much always a safe bet that the equation is a function. Squares and other regular exponents are also pretty much fine. <br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Believe in yourself! :3
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 87.</font></strong> For f(x)-type equations where you plug in things for x and whatnot, more advanced and spectacular variables can be plugged in for x, just for fun. g(5x + 4) = (5c + 4)² + 8(5c + 4) - 24. Once simplified, you will find 25c² + 80c + 24, totally meaningless.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There are special rules for more abstract equations regarding concepts like square roots that require advanced levels of thinking. For example, in the equation g(t) = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">t - 5</span></span>, you must know that t - 5 ≥ 0 because a negative has no real square root. Therefore, the Domain of this equation is all real numbers that are ≥ 5: [5, ∞). Be creative! For equations that don't involve radicals, such as 3y = 11 - 4x, it is pretty much always a safe bet that the equation is a function. Squares and other regular exponents are also pretty much fine. 
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 88.</font></strong> Another type of equation where there are Domain specificities are those where it is a fraction with a variable involving x on the denominator, such as f(x) = (2 + x) / (x² + 7x). There is nothing really to do in this equation other than finding the values that would make the denominator equal to zero, a fun game. The first step would be to simplify the denominator as much as possible, GCF and all that: x² + 7x = x(x + 7). Off the bat, you can easily tell x can't be 0, and two seconds later that x can't be -7. Therefore, the Domain is all real numbers except for x = 0 & x = 7.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For f(x)-type equations where you plug in things for x and whatnot, more advanced and spectacular variables can be plugged in for x, just for fun. g(5x + 4) = (5c + 4)² + 8(5c + 4) - 24. Once simplified, you will find 25c² + 80c + 24, totally meaningless.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 89.</font></strong> There is a special method for plugging in x into an equation. The best way to think about it is as a computer code conditional if statement. This is a <strong>piecewise</strong>:<br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Another type of equation where there are Domain specificities are those where it is a fraction with a variable involving x on the denominator, such as f(x) = (2 + x) / (x² + 7x). There is nothing really to do in this equation other than finding the values that would make the denominator equal to zero, a fun game. The first step would be to simplify the denominator as much as possible, GCF and all that: x² + 7x = x(x + 7). Off the bat, you can easily tell x can't be 0, and two seconds later that x can't be -7. Therefore, the Domain is all real numbers except for x = 0 & x = 7.
+	      </div><br><br>
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There is a special method for plugging in x into an equation. The best way to think about it is as a computer code conditional if statement. This is a <strong>piecewise</strong>:<br><br>
 	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;1.6x - 41.6, &nbsp;&nbsp;if 63 &lt; x &lt; 66<br>
 	      h(x) = {&nbsp;3x - 132, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 66 ≤ x ≤ 68<br>
 	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;2x - 66, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if x &gt; 68<br><br>
 	      Only one equation belongs to each value of x. You just go ahead with a regular 'plug-in-for-x' type problem once you know what x is. There are no special rules, it is that simple.
+	      </div><br>
 	      </article>
-
+	      
+    </div>
 	</div>
 	
 	<div class="General links">
@@ -119,7 +214,7 @@
         <article><strong>Rational Equations</strong> → <strong><a href="/math/precalculus/symmetricality">Domain and Symmetricality</a></strong> → <strong><a href="/math/precalculus/pci">Parents, Composition, and Inverse</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: December 6 2024</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

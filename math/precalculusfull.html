@@ -32,6 +32,36 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
@@ -87,42 +117,109 @@ rainbow {
 
       </div>
       
+      <div class="rules" data-start="78">
+      
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Rational">VI. Rational Equations.</span></h2>
 	  </header>
 	  <article><br>
 	      
-	      <strong><font color="#006400">Cross Multiply:</font></strong> Multiplying two fractions diagonally - can be done when two fractions with variables are equivalent.<br><br><br>
-	      <strong><font color="#006400">Least Common Multiple:</font></strong> The smallest number that two or more numbers can divide into evenly.<br><br><br>
+	      <strong><a href="#CrossMultiplyDef"><span class="mw-headline" id="CrossMultiplyDef">#</span></a> <font color="#006400">Cross Multiply</font></strong> Multiplying two fractions diagonally - can be done when two fractions with variables are equivalent.<br><br><br>
 	      
-	      <strong><font color="red">Rule 78.</font></strong> Cross Multiplying is to be done in situations where there are two (2) fractions that are equal, such as (3 / (x + 1)) = (9 / (4x + 5)). This only works when both variables are by themselves.<br><br><br>
+	      <strong><a href="#LCMDef"><span class="mw-headline" id="LCMDef">#</span></a> <font color="#006400">Least Common Multiple</font></strong> The smallest number that two or more numbers can divide into evenly.<br><br><br>
 	      
-	      <strong><font color="red">Rule 79.</font></strong> Another means of finding whether an equation was extraneous or not in the fastest possible way - a rule of thumb is that if you plug in an answer you got for x in the denominator and it does not go to zero (illegal), then it is very likely to be the answer. Only use this trick in a pinch!<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Cross Multiplying is to be done in situations where there are two (2) fractions that are equal, such as (3 / (x + 1)) = (9 / (4x + 5)). This only works when both variables are by themselves.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 80.</font></strong> One of the more convenient aspects of the <strong>least common multiple</strong> is that, in general, it removes the denominator due to the cancelling outs. However, the goal is always to have it so that the denominator for all variables is the same, whether that be 1 or some LCM frankenstein. Always eyball beforehand whether cancelling out will grant an opportunity where all denominators are equal. For example, in the post-LCM equation (20x / x) + (28x / 4) = (-36x / x), the option is available to simplify each equation and therefore to remove all denominators. What out! It is your decision whether to multiply the denominator or not.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Another means of finding whether an equation was extraneous or not in the fastest possible way - a rule of thumb is that if you plug in an answer you got for x in the denominator and it does not go to zero (illegal), then it is very likely to be the answer. Only use this trick in a pinch!
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 81.</font></strong> When you have gotten all variables to agree on a denominator other than 1., remember that you must simply sum the top of its plus & minuses if you want to cancel out more. For example, in the equation (5x + 3(x + 3)(x + 4)) / (6x(x + 3)), (x + 3) cannot be canceled out because there is an addition ongoing in the numerator.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> One of the more convenient aspects of the <strong>least common multiple</strong> is that, in general, it removes the denominator due to the cancelling outs. However, the goal is always to have it so that the denominator for all variables is the same, whether that be 1 or some LCM frankenstein. Always eyball beforehand whether cancelling out will grant an opportunity where all denominators are equal. For example, in the post-LCM equation (20x / x) + (28x / 4) = (-36x / x), the option is available to simplify each equation and therefore to remove all denominators. What out! It is your decision whether to multiply the denominator or not.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 82.</font></strong> All inequalities in regard to x (representative of the domain), such as x ≤ 12 or -4 ≤ x &lt; -1, can be represented through interval notation. Simply, the postion of the number in the coordinates represents where the x is located between. For example, -4 &lt; x &lt; 2 would be (-4, 2). If an equation contains an x that goes in one direction infinitely, such as x > 12, than the infinity is used: (12, ∞). Infinity is always done with a parenthesis, as it cannot be contained. The first variable in the coordinates is the lowest possible value that x can be, naturally, and vice versa goes for the second variable. For greater or equal to symbols in the equation, whichever side has the ≤ (first or second) has a bracket used for it instead of a parenthesis. For example, -8 &lt; x ≤ 20 = (-8, 20]. Remember that infinity can never have brackets. on a number line, a closed circle means not equal to, while a filled one means it is. For equations using the "or", a special character is used to denote these separate possibilities and limits: ∪. The Union symbol. For example, in the equation x ≥ 9 or x &lt; 2, the coordinates would be rendered as (-∞, -2) ∪ [9, ∞). <br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you have gotten all variables to agree on a denominator other than 1., remember that you must simply sum the top of its plus & minuses if you want to cancel out more. For example, in the equation (5x + 3(x + 3)(x + 4)) / (6x(x + 3)), (x + 3) cannot be canceled out because there is an addition ongoing in the numerator.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 83.</font></strong> As is known, a function is that which passes the vertical line test. If a vertical line intersects more than one point on the graph, it is not a function. For example, on a number chart for coordinates, X-values cannot repeat, while y values can repeat and still be a function.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> All inequalities in regard to x (representative of the domain), such as x ≤ 12 or -4 ≤ x &lt; -1, can be represented through interval notation. Simply, the postion of the number in the coordinates represents where the x is located between. For example, -4 &lt; x &lt; 2 would be (-4, 2). If an equation contains an x that goes in one direction infinitely, such as x > 12, than the infinity is used: (12, ∞). Infinity is always done with a parenthesis, as it cannot be contained. The first variable in the coordinates is the lowest possible value that x can be, naturally, and vice versa goes for the second variable. For greater or equal to symbols in the equation, whichever side has the ≤ (first or second) has a bracket used for it instead of a parenthesis. For example, -8 &lt; x ≤ 20 = (-8, 20]. Remember that infinity can never have brackets. on a number line, a closed circle means not equal to, while a filled one means it is. For equations using the "or", a special character is used to denote these separate possibilities and limits: ∪. The Union symbol. For example, in the equation x ≥ 9 or x &lt; 2, the coordinates would be rendered as (-∞, -2) ∪ [9, ∞). 
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 84.</font></strong> For equations where there is an equation to solve regarding y and x, such as y² - 2x = 5, simplify as much as you can for either one and then plug in 1 for the unsimplified side's variable, in this case x: y = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">2x + 5</span></span> = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. Because the value of y is ±, there are two different values of y for one (1) x, making the equation not a function. Simply put, a ± in the value of the y makes it not a function.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As is known, a function is that which passes the vertical line test. If a vertical line intersects more than one point on the graph, it is not a function. For example, on a number chart for coordinates, X-values cannot repeat, while y values can repeat and still be a function.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 85.</font></strong> Believe in yourself! :3<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For equations where there is an equation to solve regarding y and x, such as y² - 2x = 5, simplify as much as you can for either one and then plug in 1 for the unsimplified side's variable, in this case x: y = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">2x + 5</span></span> = ±<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">7</span></span>. Because the value of y is ±, there are two different values of y for one (1) x, making the equation not a function. Simply put, a ± in the value of the y makes it not a function.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 86.</font></strong> There are special rules for more abstract equations regarding concepts like square roots that require advanced levels of thinking. For example, in the equation g(t) = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">t - 5</span></span>, you must know that t - 5 ≥ 0 because a negative has no real square root. Therefore, the Domain of this equation is all real numbers that are ≥ 5: [5, ∞). Be creative! For equations that don't involve radicals, such as 3y = 11 - 4x, it is pretty much always a safe bet that the equation is a function. Squares and other regular exponents are also pretty much fine. <br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Believe in yourself! :3
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 87.</font></strong> For f(x)-type equations where you plug in things for x and whatnot, more advanced and spectacular variables can be plugged in for x, just for fun. g(5x + 4) = (5c + 4)² + 8(5c + 4) - 24. Once simplified, you will find 25c² + 80c + 24, totally meaningless.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There are special rules for more abstract equations regarding concepts like square roots that require advanced levels of thinking. For example, in the equation g(t) = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">t - 5</span></span>, you must know that t - 5 ≥ 0 because a negative has no real square root. Therefore, the Domain of this equation is all real numbers that are ≥ 5: [5, ∞). Be creative! For equations that don't involve radicals, such as 3y = 11 - 4x, it is pretty much always a safe bet that the equation is a function. Squares and other regular exponents are also pretty much fine. 
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 88.</font></strong> Another type of equation where there are Domain specificities are those where it is a fraction with a variable involving x on the denominator, such as f(x) = (2 + x) / (x² + 7x). There is nothing really to do in this equation other than finding the values that would make the denominator equal to zero, a fun game. The first step would be to simplify the denominator as much as possible, GCF and all that: x² + 7x = x(x + 7). Off the bat, you can easily tell x can't be 0, and two seconds later that x can't be -7. Therefore, the Domain is all real numbers except for x = 0 & x = 7.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For f(x)-type equations where you plug in things for x and whatnot, more advanced and spectacular variables can be plugged in for x, just for fun. g(5x + 4) = (5c + 4)² + 8(5c + 4) - 24. Once simplified, you will find 25c² + 80c + 24, totally meaningless.
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 89.</font></strong> There is a special method for plugging in x into an equation. The best way to think about it is as a computer code conditional if statement. This is a <strong>piecewise</strong>:<br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Another type of equation where there are Domain specificities are those where it is a fraction with a variable involving x on the denominator, such as f(x) = (2 + x) / (x² + 7x). There is nothing really to do in this equation other than finding the values that would make the denominator equal to zero, a fun game. The first step would be to simplify the denominator as much as possible, GCF and all that: x² + 7x = x(x + 7). Off the bat, you can easily tell x can't be 0, and two seconds later that x can't be -7. Therefore, the Domain is all real numbers except for x = 0 & x = 7.
+	      </div><br><br>
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There is a special method for plugging in x into an equation. The best way to think about it is as a computer code conditional if statement. This is a <strong>piecewise</strong>:<br><br>
 	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;1.6x - 41.6, &nbsp;&nbsp;if 63 &lt; x &lt; 66<br>
 	      h(x) = {&nbsp;3x - 132, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 66 ≤ x ≤ 68<br>
 	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;2x - 66, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if x &gt; 68<br><br>
 	      Only one equation belongs to each value of x. You just go ahead with a regular 'plug-in-for-x' type problem once you know what x is. There are no special rules, it is that simple.
-	      <br><br><br>
+	      </div><br><br>
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      <!--Domain and Symmetricality-->
 	      
 	      </article>
 	    <header class="articleHeader"><hr>
@@ -130,7 +227,10 @@ rainbow {
 	    </header>
 	    <article>
 	      
-	      <strong><font color="red">Rule 90.</font></strong> As is known of Domain and Range, the Domain is all the possible x-values a function covers while Range is all the possible y-values. Specifically, when combining Domain and Range with interval notation, Domain goes Left to Right while Range goes Down to Up. When you have a connected line graph that has no end, both ends stretching into infinity, both the domain and range are (-∞, ∞). This is for graphs that show as follows, with no asymptotes:<br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As is known of Domain and Range, the Domain is all the possible x-values a function covers while Range is all the possible y-values. Specifically, when combining Domain and Range with interval notation, Domain goes Left to Right while Range goes Down to Up. When you have a connected line graph that has no end, both ends stretching into infinity, both the domain and range are (-∞, ∞). This is for graphs that show as follows, with no asymptotes:<br><br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/maxdomain.png"><img src="/math/img/maxdomain.png" alt="A graph, x³, what has a domain and range of negative infinity to positive infinity. Courtesy of Study.com." width=32%/></a></div>
 	    <span class="tiny"><em>A graph, x³, what has a domain and range of negative infinity to positive infinity. Courtesy of <a href="https://study.com/skill/learn/how-to-determine-the-end-behavior-of-the-graph-of-a-polynomial-function-explanation.html">Study.com</a>.</em></span><br><br>
 	      
@@ -140,18 +240,29 @@ rainbow {
 	      
 	      show a puzzle to figure out what is Domain and Range, while other graphs can also use tons of dots at important points to represent whether a high/low point is included in the line. For example, in the given graph, because the highest point of the left part is an empty circle, then that point unincluded in the leftmost interval. The full interval notation would be (-8, -3) ∪ [-1, 5) ∪ (5, 8].
 	      
-	      <br><br><br>
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 91.</font></strong> When you have a disconnected line graph, you may see that there is either a vertical or horizontal flat line. If the flat follows its respective register, such as a flat line following the x-axis when you're writing domain, no problem. But when you come across the same line while writing range, there is a special way of writing it: For a graph like this - <br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you have a disconnected line graph, you may see that there is either a vertical or horizontal flat line. If the flat follows its respective register, such as a flat line following the x-axis when you're writing domain, no problem. But when you come across the same line while writing range, there is a special way of writing it: For a graph like this - <br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/genericgraph1.png"><img src="/math/img/genericgraph1.png" alt="A graph of y = 6 {-3 < x < 3} and y = -x {0 < x}. Made using Desmos." width=42%/></a></div>
 	    <span class="tiny"><em>A graph of y = 6 {-3 &lt; x &lt; 3} and y = -x {0 &lt; x}. Made using <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
 	      the first part of the interval notation would be (-∞, -2) ∪, with the down-to-up rule and all, but the second part would be represented as [6]. For either Domain or Range, brackets or parenthesis on a single digit means flat.
 	      
-	      <br><br><br>
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 92.</font></strong> The y-intercept is found by plugging in 0 for x, f(0). The x-intercept is found by plugging in 0 for y, "0 = ax² + bx + c". X-intercept are also known as the "zeroes" and "roots" of the function. <br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The y-intercept is found by plugging in 0 for x, f(0). The x-intercept is found by plugging in 0 for y, "0 = ax² + bx + c". X-intercept are also known as the "zeroes" and "roots" of the function. 
+	      </div><br><br>
 	      
-	      <strong><font color="red">Rule 93.</font></strong> There is symmetry test that can be conducted for every axis, x, y, and origin.<br><br>
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There is symmetry test that can be conducted for every axis, x, y, and origin.<br><br>
 	      
 	      In relation to the x-axis:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/xaxisrelation.png"><img src="/math/img/xaxisrelation.png" alt="A sideways absolute value function. Made using Desmos." width=42%/></a></div>
@@ -173,18 +284,31 @@ rainbow {
 	      Origin: (x, y) = (-x, -y)<br><br>
 	      
 	      In general, for equations like x = y² - 3 or whatnot, the variable that has the square is immune to becoming negative because of the automatic squaring, so it is highly likely in said situations that a shortcut can be taken to find what axis the equation is symmetrical on. However, it is always safer to plug in the negative for each possibility to discern whether the less obvious possibility is symmetrical as well. Multiple tests should be performed if you are not sure, in order to make sure that your first test was not just a coincidence.
-	      <br><br><br>
+	      </div><br><br>
 	      
-	      <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">Rule 94.</font></strong> There are two ways of checking whether an equation has a symmetricality in any way: Numerically and Algebraically. Numerically, you would plug in actual numbers for x and y and see what the equation would simplify to normally as a control group. For example, y = -x² + 6 is simplified to y = x² + 6. From there, plugging in (2, 2) resolves the equation to 2 = 10. This is the answer to be expected for any symmetry check to be correct - differing sides. Checking the Y-axis, for example, means plugging in (-2, 2), equal to 2 = (-2)² + 6. Simplifying this returns, once again, 2 = 10. These results mean that symmetry hath been confirmed. To check algebraically is much simplier, you need not plug in any values but the exact negativized variables from the original equation - E.g., plugging in (-x, y) for y = - (-x)² +6. Since the outer negative remains as before, symmetry has been proven both ways.<br><br><br>
 	      
-	      <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">Rule 95.</font></strong> A perfect circle centered around the origin, like so:<br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There are two ways of checking whether an equation has a symmetricality in any way: Numerically and Algebraically. Numerically, you would plug in actual numbers for x and y and see what the equation would simplify to normally as a control group. For example, y = -x² + 6 is simplified to y = x² + 6. From there, plugging in (2, 2) resolves the equation to 2 = 10. This is the answer to be expected for any symmetry check to be correct - differing sides. Checking the Y-axis, for example, means plugging in (-2, 2), equal to 2 = (-2)² + 6. Simplifying this returns, once again, 2 = 10. These results mean that symmetry hath been confirmed. To check algebraically is much simplier, you need not plug in any values but the exact negativized variables from the original equation - E.g., plugging in (-x, y) for y = - (-x)² +6. Since the outer negative remains as before, symmetry has been proven both ways.
+	      </div><br><br>
+	      
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A perfect circle centered around the origin, like so:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/perfectcircle.png"><img src="/math/img/perfectcircle.png" alt="A perfect circle. Made using Desmos." width=30%/></a></div>
 	    <span class="tiny"><em>A perfect circle. Made using <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
 	      would be symmetrical by both the x, y, and origin axis. Both the x and the y would be squared in the equation: (x+h)² + (y+k)² = r².
 	      
-	      <br><br><br>
+	      </div><br><br>
 	      
-	      <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">Rule 96.</font></strong> For the symmetries, there are general "odd" and "evens" that can be applied to the symmetry of an equation:<br><br>
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For the symmetries, there are general "odd" and "evens" that can be applied to the symmetry of an equation:<br><br>
 	      Symmetry in respect to X-Axis: <strong>Odd</strong><br>
 	      Symmetry in respect to Y-Axis: <strong>Even</strong><br><br>
 	      
@@ -193,9 +317,27 @@ rainbow {
 	      
 	      Apart from the application of the symmetries, this is a return to Alebra 2, as the x plugged in (checking the Y-axis), gives three possibilities:<br><br>
 	      Odd, if the returned f(x) is equal to the opposite of the original, Even, if the f(x) is the same, and Neither, for those in between.
-	      <br><br><br>
+	      </div><br><br>
 	      
-	      <!--Domain and Symmetricality-->
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
 	      
 	      </article>
 	    <header class="articleHeader"><hr>
@@ -203,16 +345,23 @@ rainbow {
 	    </header>
 	    <article>
 	      
-	      <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">Rule 97.</font></strong> The <strong>Average Rate of Change</strong> is the slope of a line that passes through two points in a line, the slope of a secant line. This is a whole process, and at the end youg et to use a special formula:<br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Average Rate of Change</strong> is the slope of a line that passes through two points in a line, the slope of a secant line. This is a whole process, and at the end youg et to use a special formula:<br><br>
 	      <strong>(f(x₂) - f(x₁)) / (x₂ - x₁)</strong><br><br>
 	      To perform the process, you need two bits of information: The point [x₁, x₂], and the equation.<br><br>
 	      First, keep in mind that [x₁, x₂] = (x₁, f(x₁)) and (x₂, f(x₂)). Then, simply go about plugging in the points in for x of the equation. For example, with the points [-2, -1] and the equation f(x) = -x³ + 3x, -2 would produce 2 and -1 would produce -2, creating the points of (-2, 2), (-1, -2). In plugging in these numbers to the formula, make sure to keep all negatives as the negatives in the formula can be subject to change, such as when f(x₂) or x₂ are negative. For this example, (-2 -2) / (-1 + 2) = -4/1, = -4.<br><br>
 	      You don't need to worry about if the points are both x or not, you just need to find f(x₁) and f(x₂) and plug them into the equation.
 	      
-	      <br><br><br>
+	      </div><br><br>
 	      
 	      
-	      <strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">Rule 98.</font></strong> Families of functions are groups of functions with graphs that display similar characteristics. The <strong>parent function</strong> is the skeleton key function, the simplest of functions in a family. It is the function that is tranformed to create other members in a family of functions. All of the known Parent Functions are located in the "Common Functions & Their Parents" section below.  There are two important concepts that go along with parent functions: The parent function of all parent functions is y = 0. This is a constant function, like y = 2.<br><br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Families of functions are groups of functions with graphs that display similar characteristics. The <strong>parent function</strong> is the skeleton key function, the simplest of functions in a family. It is the function that is tranformed to create other members in a family of functions. All of the known Parent Functions are located in the "Common Functions & Their Parents" section below.  There are two important concepts that go along with parent functions: The parent function of all parent functions is y = 0. This is a constant function, like y = 2.
+	      </div><br><br>
 	      
 	      <strong><font color="blue"><a href="#CommonFuncParents"><span class="mw-headline" id="CommonFuncParents">#</span></a> Common Functions & Their Parents:</font></strong><br><br>
         <strong>Parent function of Parent functions</strong>: y = 0<br><br>
@@ -238,13 +387,16 @@ rainbow {
         <br><br><br>
 	      
 	     
-	     <strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">Rule 99.</font></strong> As remembered from the first Rules of Algebra 2, transformations are the changed in terms of movement on the graph an equation has in relation to the parent function.<br><br> Horizontal and Vertical Translations remain pretty uniform throughout all the different types of functions. Vertical is f(x) + k, regular in that + k is up and -k is down. Horizontal is f(x - h), and is opposite, so f(x - h) is Right and f(x + h) is Left.<br><br> This carries on everywhere, for example in Absolute Value functions, f(x) = |x + 3| is a vertical translation. The absolute function in particular is special in that it is always a positive number:<br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As remembered from the first Rules of Algebra 2, transformations are the changed in terms of movement on the graph an equation has in relation to the parent function.<br><br> Horizontal and Vertical Translations remain pretty uniform throughout all the different types of functions. Vertical is f(x) + k, regular in that + k is up and -k is down. Horizontal is f(x - h), and is opposite, so f(x - h) is Right and f(x + h) is Left.<br><br> This carries on everywhere, for example in Absolute Value functions, f(x) = |x + 3| is a vertical translation. The absolute function in particular is special in that it is always a positive number:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/absvaluefunction.jpg"><img src="/math/img/absvaluefunction.jpg" alt="The absolute value function and its variations. Courtesy of Math LibreTexts" width=30%/></a></div>
 	    <span class="tiny"><em>The absolute value function and its variations. Courtesy of <a href="https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_1e_(OpenStax)/01%3A_Functions/1.06%3A_Absolute_Value_Functions">Math LibreTexts</a>.</em></span><br><br>
 	    
 	    When there is a negative for any function, it goes opposite whatever axis it is situated, mostly the Y-axis. The steps of tranformation are fairly simple, 3 to the left, 4 down, and reflected across the Y-axis if a is negative.
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
 	     <strong><font color="blue"><a href="#HVT1"><span class="mw-headline" id="HVT1">#</span></a> Horizontal Vertical Translations:</font></strong><br><br>
 	     <strong>Vertical</strong>: f(x) + k, regular<br>
@@ -255,7 +407,10 @@ rainbow {
 	     
 	     <br><br><br>
 	     
-	     <strong><a href="#Rule100"><span class="mw-headline" id="Rule100">#</span></a> <font color="red">Rule <u>100</u>!.</font></strong> :)<br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <u><span class="rule-number"></span></u>!.</font>
+        </strong> :)<br>
 	     <strong>Function Operations</strong> and <strong>Compositions</strong> are special ways to dense using f(x) and g(x) to act on eachother in some way. For example:<br><br>
 	     (f + g)(x) = f(x) + g(x): <strong>Sum</strong><br>
 	     (f - g)(x) = f(x) - g(x): <strong>Difference</strong><br>
@@ -263,33 +418,51 @@ rainbow {
 	     (f / g)(x) = f(x) / g(x): <strong>Quotient</strong><br><br>
 	     Of course, f(x) and g(x) are already given by the question. Operations can also be used to find domain. Also, you can input any number for x to find an absolute number, such as (f · g)(-6).
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule101"><span class="mw-headline" id="Rule101">#</span></a> <font color="red">Rule 101.</font></strong> There is one last thing known as a <strong>composition</strong>, or (f ∘ g)(x) = f(g(x)): <strong>Composition</strong>.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There is one last thing known as a <strong>composition</strong>, or (f ∘ g)(x) = f(g(x)): <strong>Composition</strong>.<br><br>
 	     
 	     Again, you plug in any number for x, or not. You first find what g(x) is and thereafter find the value of f(x) with x being whatever value have been gotten from g(x). Simply put: empty circle in f ∘ g means f of g. Filled is multiply. If the result has radical x, the domain is [0, ∞), with whatever changes made, like <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x - 2</span></span> as extra: [2, ∞).
 	     
-	     <br><br><br>
+	     </div><br><br>
 
-        <strong><a href="#Rule102"><span class="mw-headline" id="Rule102">#</span></a> <font color="red">Rule 102.</font></strong> As long as the x-value in a radical is greater than or equal to the minimum possible value of the radical, (such as -2 in the case of the Composition Rule (see Rule 101)), it is a function. Parabolas will always have the domain of (-∞, ∞), as they go forever, containing all x-values. Same for cubic equations. Only when = 0 because of factoring are the values of x not part of the domain. If you have a reciprocal function where x is the denominator, 1/x, 0 must always be excluded: (-∞, 0) ∪ (0, ∞).<br><br><br>
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As long as the x-value in a radical is greater than or equal to the minimum possible value of the radical, (such as -2 in the case of the Composition Rule (see Rule 101)), it is a function. Parabolas will always have the domain of (-∞, ∞), as they go forever, containing all x-values. Same for cubic equations. Only when = 0 because of factoring are the values of x not part of the domain. If you have a reciprocal function where x is the denominator, 1/x, 0 must always be excluded: (-∞, 0) ∪ (0, ∞).
+        </div><br><br>
 	     
-	     <strong><a href="#Rule103"><span class="mw-headline" id="Rule103">#</span></a> <font color="red">Rule 103.</font></strong> Remember that Radicals multiply like normal: <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 8</span></span> · <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 5</span></span> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x² + 13x + 40</span></span>.
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Remember that Radicals multiply like normal: <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 8</span></span> · <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x + 5</span></span> = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x² + 13x + 40</span></span>.
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule104"><span class="mw-headline" id="Rule104">#</span></a> <font color="red">Rule 104.</font></strong> Function f inverse = <strong>f⁻¹</strong>. Only if the function passes the Horizontal Line Test can it have an inverse. Only if it passes the Vertical Line Test can it be a function. For an equation like y = |x - 1|, which has the following graph:<br>
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Function f inverse = <strong>f⁻¹</strong>. Only if the function passes the Horizontal Line Test can it have an inverse. Only if it passes the Vertical Line Test can it be a function. For an equation like y = |x - 1|, which has the following graph:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/absvalx1.png"><img src="/math/img/absvalx1.png" alt="The graph of y = |x - 1|. Made using Desmos." width=30%/></a></div>
 	    <span class="tiny"><em>The graph of y = |x - 1|. Made using <a href="https://www.desmos.com/calculator">Desmos</a>.</em></span><br><br>
 	     In this graph, and the function it represents, there is no inverse because it does not pass the HLT. It is good to memorize the graphs of all the base parent functions, which are located in the "Common Functions & Their Parents" section further above. The inverse of f(x) is f⁻¹(x).
 	     
+	     </div><br><br>
 	     
-	     <br><br><br>
 	     
-	     <strong><a href="#Rule105"><span class="mw-headline" id="Rule105">#</span></a> <font color="red">Rule 105.</font></strong> The Domain of x is the Range of f⁻¹(x), while the Range of x is the Domain of f⁻¹(x). This is shown by this chart:<br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The Domain of x is the Range of f⁻¹(x), while the Range of x is the Domain of f⁻¹(x). This is shown by this chart:<br>
 	      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/inverseandregular.png"><img src="/math/img/inverseandregular.png" alt="The Domain and Range of f(x) and f⁻¹(x). As you can see, they switch." width=38%/></a></div>
-	    <span class="tiny"><em>The Domain and Range of f(x) and f⁻¹(x). As you can see, they switch.</em></span><br><br> 
+	    <span class="tiny"><em>The Domain and Range of f(x) and f⁻¹(x). As you can see, they switch.</em></span>
+	    </div><br><br><br>
 	    
-	    <br><br>
+	    
 	    <hr><br><strong>~~~</strong><br>
 	    It was at this point I ceased writing rules for Precalculus in my notebook, as I had fallen behind in writing notes for past content and was busy with other schoolwork. This was prior to my creation of the more efficient rule-writing system that I would use in the future.<br><br> 
 	    All notes below are WoO notes, explained <a href="/information/color#WoO">here</a>.
@@ -312,78 +485,16 @@ rainbow {
 	     
 	     <!--Continue onward through the rest of the nonlinear inequalities and checking inverses, and then when you get to Logarithms create a new section.-->
 	     
-	    <!--
 	    
-	    <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">Rule 106.</font></strong> <br><br><br>
-	    <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">Rule 107.</font></strong> <br><br><br>
-	    <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">Rule 108.</font></strong> <br><br><br>
-	    <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">Rule 109.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">Rule 110.</font></strong> <br><br><br>
-	    <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">Rule 111.</font></strong> <br><br><br>
-	    <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">Rule 112.</font></strong> <br><br><br>
-	    <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">Rule 113.</font></strong> <br><br><br>
-	    <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">Rule 114.</font></strong> <br><br><br>
-	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">Rule 115.</font></strong> <br><br><br>
-	    <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">Rule 116.</font></strong> <br><br><br>
-	    <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">Rule 117.</font></strong> <br><br><br>
-	    <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">Rule 118.</font></strong> <br><br><br>
-	    <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">Rule 119.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">Rule 120.</font></strong> <br><br><br>
-	    <strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">Rule 121.</font></strong> <br><br><br>
-	    <strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">Rule 122.</font></strong> <br><br><br>
-	    <strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">Rule 123.</font></strong> <br><br><br>
-	    <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">Rule 124.</font></strong> <br><br><br>
-	    <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">Rule 125.</font></strong> <br><br><br>
-	    <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">Rule 126.</font></strong> <br><br><br>
-	    <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">Rule 127.</font></strong> <br><br><br>
-	    <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">Rule 128.</font></strong> <br><br><br>
-	    <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">Rule 129.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">Rule 130.</font></strong> <br><br><br>
-	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">Rule 131.</font></strong> <br><br><br>
-	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">Rule 132.</font></strong> <br><br><br>
-	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">Rule 133.</font></strong> <br><br><br>
-	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">Rule 134.</font></strong> <br><br><br>
-	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">Rule 135.</font></strong> <br><br><br>
-	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> <br><br><br>
-	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> <br><br><br>
-	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> <br><br><br>
-	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">Rule 140.</font></strong> <br><br><br>
-	    <strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">Rule 141.</font></strong> <br><br><br>
-	    <strong><a href="#Rule142"><span class="mw-headline" id="Rule142">#</span></a> <font color="red">Rule 142.</font></strong> <br><br><br>
-	    <strong><a href="#Rule143"><span class="mw-headline" id="Rule143">#</span></a> <font color="red">Rule 143.</font></strong> <br><br><br>
-	    <strong><a href="#Rule144"><span class="mw-headline" id="Rule144">#</span></a> <font color="red">Rule 144.</font></strong> <br><br><br>
-	    <strong><a href="#Rule145"><span class="mw-headline" id="Rule145">#</span></a> <font color="red">Rule 145.</font></strong> <br><br><br>
-	    <strong><a href="#Rule146"><span class="mw-headline" id="Rule146">#</span></a> <font color="red">Rule 146.</font></strong> <br><br><br>
-	    <strong><a href="#Rule147"><span class="mw-headline" id="Rule147">#</span></a> <font color="red">Rule 147.</font></strong> <br><br><br>
-	    <strong><a href="#Rule148"><span class="mw-headline" id="Rule148">#</span></a> <font color="red">Rule 148.</font></strong> <br><br><br>
-	    <strong><a href="#Rule149"><span class="mw-headline" id="Rule149">#</span></a> <font color="red">Rule 149.</font></strong> <br><br><br>
-	    
-	    -->
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ∞  ∪  ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  ∘  ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    <!--
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">Rule 10.</font></strong> <br><br><br>
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">Rule 11.</font></strong> <br><br><br>
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">Rule 12.</font></strong> <br><br><br>
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">Rule 13.</font></strong> <br><br><br>
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">Rule 14.</font></strong> <br><br><br>
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">Rule 15.</font></strong> <br><br><br>
-	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">Rule 16.</font></strong> <br><br><br>
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">Rule 17.</font></strong> <br><br><br>
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">Rule 18.</font></strong> <br><br><br>
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">Rule 19.</font></strong> <br><br><br>
-	    -->
+	    
 	  </article>
 	  
-	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -416,7 +527,7 @@ rainbow {
         <article><strong><a href="/math/precalculus/rational.html">Rational Equations</a></strong> → <strong><a href="/math/precalculus/symmetricality.html">Domain and Symmetricality</a></strong> → <strong><a href="/math/precalculus/pci">Parents, Composition, and Inverse</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 18 2024</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

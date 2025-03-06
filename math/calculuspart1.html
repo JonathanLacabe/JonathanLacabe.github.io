@@ -32,6 +32,36 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
@@ -101,15 +131,18 @@ rainbow {
         
       </div>
       
+      <div class="rules" data-start="106">
+      
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Limits">?. Limits.</span></h2>
 	  </header>
 	  <article><br>
+	  
 	      <strong><a href="#AverageRatesDef"><span class="mw-headline" id="AverageRatesDef">#</span></a> <font color="#006400">Average Rates/Speed</font></strong>: Average Speed is found by dividing the distance covered by the elapsed time.
-	    <br><br><br>
+	      <br><br><br>
 	      
 	      <strong><a href="#LimitDef"><span class="mw-headline" id="LimitDef">#</span></a> <font color="#006400">Limit</font></strong>: The value a function approaches as it becomes closer to a specified point - thus, not necessarily actually being <em>at</em> that point, but rather as close to it as possible with being on it. If a function is continuous near that point, the limit equals the function's value; otherwise, it will describe the behavior of the function even if undefined at that point.
-	    <br><br><br>
+	      <br><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#LimitProperties"><span class="mw-headline" id="LimitProperties">#</span></a> Properties of Limits:</font></strong><br><br>
@@ -150,25 +183,41 @@ rainbow {
 <br><br><br>
 
 
-      <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">Rule 106.</font></strong> The average rate of change IS the slope. The average speed is the distance covered divided by the elapsed time, like miles per hour. Rate of increase is also just the derivative. First rate is first derivative, rate of the rate is second derivative, etc.<br><br><br>
 
-	     <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">Rule 107.</font></strong>Say that 16t² is the free fall motion of an object with no air resistance. It will follow the same (∆y / ∆t) formula as the slope formula.<br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The average rate of change IS the slope. The average speed is the distance covered divided by the elapsed time, like miles per hour. Rate of increase is also just the derivative. First rate is first derivative, rate of the rate is second derivative, etc.
+      </div><br><br>
+
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Say that 16t² is the free fall motion of an object with no air resistance. It will follow the same (∆y / ∆t) formula as the slope formula.<br><br>
 	     
 	     <strong>∆ (Delta)</strong> means as "the change in", so (change in distance / change in time). From 0 to 2 seconds, the rock will travel (6(2)² - (6(0)^2)) / (2 - 0), or 34 ft/sec average speed.
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">Rule 108.</font></strong> To find the instaneous speed/rate of change, the limit formula is as follows:
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the instaneous speed/rate of change, the limit formula is as follows:
 	     $$\lim_{h \to 0} \frac{f(a + h) - f(a)}{h}$$
 	     
 	     You know a and the equation at first, plug in (a + h) to the equation and complete formula. Then, plug in 0 for h to find instantaneous velocity/speed.
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">Rule 109.</font></strong> Speed is the time rate at which an object is moving along a path, while velocity is the rate and direction of an object's movement.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Speed is the time rate at which an object is moving along a path, while velocity is the rate and direction of an object's movement.
+	     </div><br><br>
 	     
 	     
-	     
-	     
-	     <strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">Rule 110.</font></strong> There are nine holy truths of limits that must always be remembered and and held immutable. They are similar to the mystical factoring rules, and some are versions of the <a href="#LimitProperties">Limit Properties</a> referenced previously:
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> There are nine holy truths of limits that must always be remembered and and held immutable. They are similar to the mystical factoring rules, and some are versions of the <a href="#LimitProperties">Limit Properties</a> referenced previously:
 	     
 	      
 	     <br><br>
@@ -212,13 +261,20 @@ rainbow {
 
   </ol>
 	     
-	     <br><br>
+	     </div><br>
 	     
-	     <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">Rule 111.</font></strong> The one-sided limit is allowed to be infinity, while two-sided limits cannot be infinity and must not be a number.
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The one-sided limit is allowed to be infinity, while two-sided limits cannot be infinity and must not be a number.
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">Rule 112.</font></strong> <strong>The Squeeze Theorem</strong>:<br><br>
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The Squeeze Theorem</strong>:<br><br>
 	     When the limit can't be found directly, find it indirectly using the squeeze theorem. The way this theorem works, is to 'squeeze' function f (which has the uncertain limit) between two functions, h and g, and find their limits. Definitionally, this is written as follows:<br><br>
 	     
 	     If g(x) ≤ f(x) ≤ h(x), where x ≠ c in some interval around c, then:
@@ -227,17 +283,29 @@ rainbow {
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/squeezediagram.png"><img src="/math/img/squeezediagram.png" alt="The demonstration of how the squeeze theorem may work on a function f, with the functions h and g above and below 'squeezing' the position of f at a point, thus requiring the limit of f to match that of h and g at that point. Courtesy of Cooper's Calculus." width=44%/></a></div>
 	    <span class="tiny"><em>The demonstration of how the squeeze theorem may work on a function f, with the functions h and g above and below 'squeezing' the position of f at a point, thus requiring the limit of f to match that of h and g at that point. Courtesy of <a href="https://www.youtube.com/watch?v=ZH60sVXj2eg">Cooper's Calculus</a>.</em></span><br>
 	      The key idea of the Squeeze Theorem is that if h(x), which is above f(x), has its limit at c with the same y-value as g(x), then f(x) would also have to have that limit because it is between g(x) and h(x).
-	     <br><br><br>
+	     </div><br><br>
+	     
 	     
 	     <strong><a href="#InfinityDef"><span class="mw-headline" id="InfinityDef">#</span></a> <font color="#006400">Infinity/∞</font></strong>: The term 'infinity' does not refer - it describes the behavior of a function. Infinity means an increasing distance forever.
 	    <br><br><br>
 	     
 	     
-	     <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">Rule 113.</font></strong> The squeeze theorem also works for infinite limits.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The squeeze theorem also works for infinite limits.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">Rule 114.</font></strong> To find the horizontal asymptote, you can take the biggest thing on top, and divide it by the biggest thing on the bottom, or you could factor out the biggest base (with exponent), even if it makes every divisor weird. Then, factor to find the vertical asymptote, just plug in zero for the bottom, or cheat by using a graph.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the horizontal asymptote, you can take the biggest thing on top, and divide it by the biggest thing on the bottom, or you could factor out the biggest base (with exponent), even if it makes every divisor weird. Then, factor to find the vertical asymptote, just plug in zero for the bottom, or cheat by using a graph.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">Rule 115.</font></strong> <strong>End Behavior Models</strong><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>End Behavior Models</strong><br><br>
 	     
 	     You can determine the end behavior of a complicated polynomial by looking at a similar one that acts exactly the same for extremely large values of x. For all polynomials, <strong>g(x) = a<sub>n</sub> × xⁿ</strong> is the end behavior.<br><br>
 	     The function g must be:<br><br>
@@ -245,13 +313,25 @@ rainbow {
 	     <br><br><br>
 	     b) a left end behavior model for f if $$\lim_{x \to -∞} \frac{f(x)}{g(x)} = 1$$
 	     
-	     <br><br>
+	     </div><br>
 	     
-	     <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">Rule 116.</font></strong> If the EBM is a constant, then it is a horizontal asymptote.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If the EBM is a constant, then it is a horizontal asymptote.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">Rule 117.</font></strong> A function's right & left end behavior models are not always the same function.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A function's right & left end behavior models are not always the same function.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">Rule 118.</font></strong> Tradition dictates that for an equation with only two polynomials, the <u>left</u> one is the REBM and the <u>right</u> is the LEBM. Yes, opposite of what one may immediately think.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Tradition dictates that for an equation with only two polynomials, the <u>left</u> one is the REBM and the <u>right</u> is the LEBM. Yes, opposite of what one may immediately think.
+	     </div><br><br>
 	     
 	     <strong><font color="blue"><a href="#ReciprocalSubstitution"><span class="mw-headline" id="ReciprocalSubstitution">#</span></a> Reciprocal Substitution:</font></strong><br><br>
         There is a very specific and unique characteristic of Limits that must always be kept in mind when performing problems. Reciprocal substitution can be performed by taking the variable of the limit (90% of the time being x), flip it to its reciprocal (e.g., 1/x for x), and switch the term of the limit as shown below. This reciprocal is performed even for x's inside of trig. functions - it is done for <u>all instances</u>.<br><br>
@@ -261,12 +341,43 @@ rainbow {
         <br>Infinity goes to Zero-Right, as Negative Infinity goes to Zero-Left. The nature of the reciprocal is not specific a specific side - either infinity or the zero could have 1/x or x.
         <br><br><br>
 	     
-	     <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">Rule 119.</font></strong> Rampant idiocracy<!--"Liberalism", as I put it in the book--> has softened testing policy enough that you may be able to, in essence, <u>cheat</u> and look at the graph to determine values like the end behavior mode and asymptotes<!--, even on the AP test-->.
-	     <br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Rampant idiocracy has softened testing policy enough that you may be able to, in essence, <u>cheat</u> and look at the graph to determine values like the end behavior mode and asymptotes<!--, even on the AP test-->.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">Rule 120.</font></strong> If the assumed number for the LEDM of some two-polynomialed equation doesn't work, then try the answer for the REBM. Same for the issue vice-versa.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If the assumed number for the LEDM of some two-polynomialed equation doesn't work, then try the answer for the REBM. Same for the issue vice-versa.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">Rule 121.</font></strong> For piecewise functions, even if x is ≥ or ≤ or &gt; or whatever to 0, a (Lim x→0⁻) will make the function go to the f(x) for less than zero, and (Lim x→0⁺) makes it go to x > 0. Think of it like the plus and negative signs -0.1 or add 0.1 to the value.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For piecewise functions, even if x is ≥ or ≤ or &gt; or whatever to 0, a (Lim x→0⁻) will make the function go to the f(x) for less than zero, and (Lim x→0⁺) makes it go to x > 0. Think of it like the plus and negative signs -0.1 or add 0.1 to the value.
+	     </div><br><br>
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
 	     
 	     </article>
 	    <header class="articleHeader"><hr>
@@ -278,9 +389,16 @@ rainbow {
 	     <strong><a href="#ContinuousFuncDef"><span class="mw-headline" id="ContinuousFuncDef">#</span></a> <font color="#006400">Continuous Functions</font></strong>: A function is continuous on an interval if it is continuous at every of the interval. A continuous <em>function</em> is a function that is continuous everywhere on its domain.
 	    <br><br><br>
 	    
-	     <strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">Rule 122.</font></strong> Any function y = f(x) whose graph y = f(x) can be sketched in one continuous motion without lifting the pencil is an example of a <strong>continuous function</strong>.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Any function y = f(x) whose graph y = f(x) can be sketched in one continuous motion without lifting the pencil is an example of a <strong>continuous function</strong>.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">Rule 123.</font></strong> There are two RULES of CONTINUITY, which if both met, establish UNIVERSAL CONTINUITY for a function.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> There are two RULES of CONTINUITY, which if both met, establish UNIVERSAL CONTINUITY for a function.<br><br>
 	     
 	     <ol type="a">
 
@@ -302,13 +420,16 @@ rainbow {
           </li> 
 
         </ol>
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">Rule 124.</font></strong> Continuous Function are continuous everywhere on their domains. Properties of Continuous Functions f & g are continuous at x = c.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Continuous Function are continuous everywhere on their domains. Properties of Continuous Functions f & g are continuous at x = c.<br><br>
 	     
 	     All polynomial and Radical functions are continuous everywhere with no Points of Discontinuities. On the other hand, all rational and trig. functions are only continuous along their domain; they have Points of Discontinuities wherever the denominator equals 0. 
 	     
-	     <br><br><br>
+	     </div><br><br>
 	     
 	     
 	     
@@ -339,22 +460,54 @@ rainbow {
         
 <br><br>
 	     
-	     <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">Rule 125.</font></strong> If f is continuous at c, and g is continuous at f(c), then the composite g ∘ f is continuous at c.
-	     <br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If f is continuous at c, and g is continuous at f(c), then the composite g ∘ f is continuous at c.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">Rule 126.</font></strong> A function is continuous even if it has Points of Discontinuity, as long as these points are not within the domain. For example, 1/x is considered to be continuous along its domain, despite the absurdity of its graph.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A function is continuous even if it has Points of Discontinuity, as long as these points are not within the domain. For example, 1/x is considered to be continuous along its domain, despite the absurdity of its graph.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">Rule 127.</font></strong> A function passes the <strong>Intermediate value theorem</strong> if it never takes on two values without taking on every value in between. A continuous function f on a closed interval [a, b] will take on every y-value between f(a) and f(b), given no discontinuities.
-	     <br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> A function passes the <strong>Intermediate value theorem</strong> if it never takes on two values without taking on every value in between. A continuous function f on a closed interval [a, b] will take on every y-value between f(a) and f(b), given no discontinuities.
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">Rule 128.</font></strong> <strong>Jump Discontinuities:</strong> Where the left & right side limits are not equal.<br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Jump Discontinuities:</strong> Where the left & right side limits are not equal.<br><br>
 	     
 	     <strong>Infinite Discontinuities</strong>: Where the discontinuity is an asymptote.<Br><br>
 	     <strong>Removable Discontinuities</strong>: A detached dot, floating on the plane, where the limit continues to be a real number.<Br><br>
 	     <strong>Oscillating Discontinuities</strong>: A discontinuity that oscillates back and forth, son. Examples include sin(1/x). These functions are discontinuities because no matter how far you zoom in, it will still be oscilliating, thus lacking local linearity.
-	     <br><br><br>
+	     </div><br><br>
 	     
-	     <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">Rule 129.</font></strong> For Discontinuities: Jump beats hole. Infinite beats Jump. Oscillating is in a league of its own, as it can only be sin(1/x) or something of the sort.<br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> For Discontinuities: Jump beats hole. Infinite beats Jump. Oscillating is in a league of its own, as it can only be sin(1/x) or something of the sort.
+	     </div><br><br>
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
 	     
 	     </article>
 	    <header class="articleHeader"><hr>
@@ -363,12 +516,18 @@ rainbow {
 	    <article>
 	     
 	     
-	     <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">Rule 130.</font></strong> A <strong>secant line</strong> is a line that intersects the line at two places. The <em>slope</em> of the secant line is the <u>average rate of change</u> between the two points.
-	     <br><br><br>
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>secant line</strong> is a line that intersects the line at two places. The <em>slope</em> of the secant line is the <u>average rate of change</u> between the two points.
+	     </div><br><br>
 	     
 	     
-	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">Rule 131.</font></strong> A <strong>tangent line</strong> is a line that intersects a curve at exactly one point. The <em>slope</em> of the tangent line is the <u>instantaneous rate of change</u> at a point.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A <strong>tangent line</strong> is a line that intersects a curve at exactly one point. The <em>slope</em> of the tangent line is the <u>instantaneous rate of change</u> at a point.
+	    </div><br><br>
 	    
 	    <strong><a href="#DifferenceQuotientDef"><span class="mw-headline" id="DifferenceQuotientDef">#</span></a> <font color="#006400">Difference Quotient</font></strong>: 
 	    $$\frac{f(x + h) - f(x)}{h}$$
@@ -380,10 +539,13 @@ rainbow {
 	    <strong><a href="#NormalLineDef1"><span class="mw-headline" id="NormalLineDef1">#</span></a> <font color="#006400">Normal Line</font></strong>: The line normal to a curve is the line perpendicular to the tangent at that point.
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">Rule 132.</font></strong> When the limit exists, it's called the <strong><em>derivative</em></strong> of f at a, or any point. The derivative is f'(x) =
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When the limit exists, it's called the <strong><em>derivative</em></strong> of f at a, or any point. The derivative is f'(x) =
 	    $$\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
 	    provided the limit exists. "Differentiate" means to determine the Derivative.
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    <strong><font color="blue"><a href="#VerbalNotation"><span class="mw-headline" id="VerbalNotation">#</span></a> Verbal Descriptions of Calculus Notation:</font></strong><br>
 	    
@@ -391,27 +553,44 @@ rainbow {
 	    <span class="tiny"><em>A "READ:", "SAY:" chart for f'(x), y', dy/dx, and d/dx.</em></span>
 	    <br><Br><br>
 	    
-	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">Rule 133.</font></strong> 
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	    Graphing the derivative without knowledge of the formulas for dy/dx nor the parent function, is wack:<br><br>
 	    First, get the slope between two points on the original f(x) and find the slope. As x increases, a decreasing f(x) value indicates a negative slope, while an increasing f(x) value indicates a positive slope. Find an x-value in the middle of the two points and use it as the x-value. Use the slope as the y-value and plug into the new graph, and repeat. Fo a graph with "pointy points", known as corners, they are undefined in the derivative graph (the f'(x)), as they do not have local linearity (see [[[).
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">Rule 134.</font></strong> When a fraction has a square root, standard procedure is to multiply it by a conjugate, especially if the square root is on the denominator.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When a fraction has a square root, standard procedure is to multiply it by a conjugate, especially if the square root is on the denominator.
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">Rule 135.</font></strong> For the alternate definition of the derivative, you always want to do all the algebra first before substituting for a at the end. Then, you can do a.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For the alternate definition of the derivative, you always want to do all the algebra first before substituting for a at the end. Then, you can do a.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> Function f(x) is differentiable on a closed interval [a, b] if it has a derivative at every interior point of the interval, and if the limits below exist at the endpoints.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Function f(x) is differentiable on a closed interval [a, b] if it has a derivative at every interior point of the interval, and if the limits below exist at the endpoints.<br><br>
 	    $$\lim_{h \to 0^+} \frac{f(a + h) - f(a)}{h}$$
 	    is the right-hand derivative, and<br><br><br>
 	    
           $$\lim_{h \to 0^-} \frac{f(b + h) - f(b)}{h}$$
 	    is the left-hand derivative.
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> The left hand derivative can be found by using the regular f(x), while the right hand derivative is found by using the equation of the f'(x) derivative found from the left hand derivative. If the two derivatives are equal to each other, then the derivative in totality is real<!--extant-->.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The left hand derivative can be found by using the regular f(x), while the right hand derivative is found by using the equation of the f'(x) derivative found from the left hand derivative. If the two derivatives are equal to each other, then the derivative in totality is real<!--extant-->.
+	    </div><br><br>
 	    
 	    <strong><a href="#DifferentiabilityDef"><span class="mw-headline" id="DifferentiabilityDef">#</span></a> <font color="#006400">Differentiability</font></strong>: The ability to find slope at a point, which is necessary to take the derivative.
 	    <br><br><br>
@@ -442,17 +621,25 @@ rainbow {
 
         </ol>
         
-	    <br><Br><br>
+	    <br><Br>
 	    
 	    <strong><a href="#LocalLinearityDef"><span class="mw-headline" id="LocalLinearityDef">#</span></a> <font color="#006400">Local Linearity</font></strong>: If you focus on a point on a curve, if you continuously zoom in on the point, eventually the graph of the curve at the point will resemble a line. Differentiability implies local linearity.
 	    <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> The <strong>symmetric difference quotient</strong> is as follows:
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>symmetric difference quotient</strong> is as follows:
 	    $$f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x - h)}{2h}$$
-	   It is used any time you want the derivative from each side of the tangent line (the distance being h), rather than from just one side.<br><br><br>
+	   It is used any time you want the derivative from each side of the tangent line (the distance being h), rather than from just one side.
+	   </div><br><br>
 	    
-	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> A derivative is a limit. Not only does the limit have to exist, it must also be continuous. The slope on the left being different from the derivative on the right rules out corners from having derivatives. If the slope becomes a vertical line (e.g., slope/m = infinity), then the derivative also does not exist.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A derivative is a limit. Not only does the limit have to exist, it must also be continuous. The slope on the left being different from the derivative on the right rules out corners from having derivatives. If the slope becomes a vertical line (e.g., slope/m = infinity), then the derivative also does not exist.
+	    </div><br><br>
 	    
 	    <strong><font color="blue"><a href="#GeneralDerivative"><span class="mw-headline" id="GeneralDerivative">#</span></a> General Rules of Derivatives:</font></strong><br><br>
         <ol>
@@ -482,9 +669,17 @@ rainbow {
         
 <br><br>
 	    
-	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">Rule 140.</font></strong> For a derivative to be, it must have local linearity. No matter how much you zoom into a corner or cusp, they will never have local linearity, and this is why they are considered "non-differentiable" entities.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For a derivative to be, it must have local linearity. No matter how much you zoom into a corner or cusp, they will never have local linearity, and this is why they are considered "non-differentiable" entities.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">Rule 141.</font></strong> When taking the derivative at zero of any function f(x) = x<sup>even/odd</sup>, for any matching exponent value, it will never exist. x<sup>even/odd</sup> will always produce a corner or cusp at x=0, and thus cannot have a derivative at that point.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When taking the derivative at zero of any function f(x) = x<sup>even/odd</sup>, for any matching exponent value, it will never exist. x<sup>even/odd</sup> will always produce a corner or cusp at x=0, and thus cannot have a derivative at that point.
+	    </div><br><br>
 	    
 	    <strong><a href="#TheoremDiffDef"><span class="mw-headline" id="TheoremDiffDef">#</span></a> <font color="#006400">Theorem of Differentiability</font></strong>: Differentiability implies continuity. However, continuity does not imply differentiability. If f has a derivative at x = a, then f is continuous at x = a.
 	    <br><br><br>
@@ -492,7 +687,10 @@ rainbow {
 	    <strong><a href="#IVTDef"><span class="mw-headline" id="IVTDef">#</span></a> <font color="#006400">Intermediate Value Theorem (for Derivatives)</font></strong>: If a and b are any two points in an interval on which f is differentiable, the f' takes on every value between f'(a) and f'(b).
 	    <br><br><br>
 	    
-	    <strong><a href="#Rule142"><span class="mw-headline" id="Rule142">#</span></a> <font color="red">Rule 142.</font></strong> <strong>Laws of Differentiation</strong><br><Br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Laws of Differentiation</strong><br><Br>
 	    As used below, all functions f(x), g(x), and h(x), are differentiable functions, and n & c are constants.
 	    <ol>
 
@@ -530,9 +728,13 @@ rainbow {
 
         </ol>
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule143"><span class="mw-headline" id="Rule143">#</span></a> <font color="red">Rule 143.</font></strong> In order to find the <strong>horizontal tangents</strong> of a curve, you must find the derivative and then make it equal to 0, and then factor as you see fit.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the <strong>horizontal tangents</strong> of a curve, you must find the derivative and then make it equal to 0, and then factor as you see fit.
+	    </div><br><br>
 	    
 	    <strong><font color="blue"><a href="#ProductRuleDef"><span class="mw-headline" id="ProductRuleDef">#</span></a> Product Rule:</font></strong><br><br>
         <strong>(f × g)' = f'g + fg'</strong>
@@ -560,9 +762,31 @@ rainbow {
         <br><br>
         
 	    
-	    <strong><a href="#Rule144"><span class="mw-headline" id="Rule144">#</span></a> <font color="red">Rule 144.</font></strong> Derivatives are allowed to be plugged in over addition and subtraction operations, such as (d/dx)(7v - 3u), requiring the substitution of the derivatives of v and u into the equation.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Derivatives are allowed to be plugged in over addition and subtraction operations, such as (d/dx)(7v - 3u), requiring the substitution of the derivatives of v and u into the equation.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule145"><span class="mw-headline" id="Rule145">#</span></a> <font color="red">Rule 145.</font></strong> The derivative is the slope (rate of change) at any given point on a curve: If you are given a graph of x and asked to find the graph of the "rate of change", just find the derivative graph: The values to be plugged into the Product or Quotient rules are already given!<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The derivative is the slope (rate of change) at any given point on a curve: If you are given a graph of x and asked to find the graph of the "rate of change", just find the derivative graph: The values to be plugged into the Product or Quotient rules are already given!
+	    </div><br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    
@@ -572,8 +796,11 @@ rainbow {
 	    </header>
 	    <article>
 	    
-	    <strong><a href="#Rule146"><span class="mw-headline" id="Rule146">#</span></a> <font color="red">Rule 146.</font></strong> If s(t) represents the position of an object, then the velocity of the object is given by v(t) = s'(t). If v'(t) represents the velocity of an object, then the object's speed is given by the absolute value of velocity. speed = |v(t)| = |s'(t)|.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If s(t) represents the position of an object, then the velocity of the object is given by v(t) = s'(t). If v'(t) represents the velocity of an object, then the object's speed is given by the absolute value of velocity. speed = |v(t)| = |s'(t)|.
+	    </div><br><br>
 	    
 	    <!--The real Rule 146 has been expunged, as it is totally nonsensical and I have no idea of why I ever wrote it down. What is given here in Rule 146 was originally a definition and has replaced the original.-->
 	    
@@ -582,9 +809,14 @@ rainbow {
 	    <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule147"><span class="mw-headline" id="Rule147">#</span></a> <font color="red">Rule 147.</font></strong> <strong>Velocity</strong> is the speed in <em>relation</em> to something, so a ball can have negative and positive velocity as it is thrown in the air. <strong>Speed</strong> is just how fast it's going, and nothing can ever go negative speed. <br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Velocity</strong> is the speed in <em>relation</em> to something, so a ball can have negative and positive velocity as it is thrown in the air. <strong>Speed</strong> is just how fast it's going, and nothing can ever go negative speed. <br><br>
 	    
-	    <strong>Acceleration</strong> is the derivative of velocity, is the derivative of speed. Acceleration is positive wherever the line of the velocity graph is increasing and negative when decreasing.<br><br><br>
+	    <strong>Acceleration</strong> is the derivative of velocity, is the derivative of speed. Acceleration is positive wherever the line of the velocity graph is increasing and negative when decreasing.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#FundamentalParticle"><span class="mw-headline" id="FundamentalParticle">#</span></a> Fundamental Particle Motion Terms:</font></strong><br><br>
         <strong>Displacement</strong>: S(t<sub>f</sub>) - S(t<sub>i</sub>), in effect (Position<sub>Final</sub> - Position<sub>Initial</sub>)<br><br>
@@ -593,46 +825,80 @@ rainbow {
         
         <strong>Instantaneous Velocity</strong>: (ds/dt), v(t) = s'(t)
         <br><br><br>
+        
 	    
-	    <strong><a href="#Rule148"><span class="mw-headline" id="Rule148">#</span></a> <font color="red">Rule 148.</font></strong> <strong>Displacement</strong> is the distance between where you started from and where you ended up.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Displacement</strong> is the distance between where you started from and where you ended up.<br><br>
 	    
-	    <strong>Total distance</strong> is how much distance you covered. For example, the displacement can be zero because you can end up exactly where you started.<br><br><br>
+	    <strong>Total distance</strong> is how much distance you covered. For example, the displacement can be zero because you can end up exactly where you started.
+	    </div><br><br>
+	    
 	    
 	    <strong><font color="blue"><a href="#ApplicationCost"><span class="mw-headline" id="ApplicationCost">#</span></a> Application of Calculus: Cost Modeling:</font></strong><br><br>
         In manufacturing, the <strong>cost of production</strong> c(x) represents the cost of producing x number of units. The <strong>marginal cost</strong> is the rate of change, or "the cost to produce one more item". Marginal cost is the derivative of cost: c'(x).<br><br>
         <strong>Revenue</strong>, r(x) is the total amount of money collected for the sales of a product. <strong>Marginal Reveue</strong> is the total amount collected from selling one more unit. r'(x) = Marginal Revenue.
         
         <br><br><br>
+        
 	    
 	    <strong><font color="blue"><a href="#SinCosLoop"><span class="mw-headline" id="SinCosLoop">#</span></a> Sine-Cosine Derivative Loop:</font></strong><br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/sincosderiv.jpg"><img src="/math/img/sincosderiv.jpg" alt="The loop in which the derivatives (and antiderivatives, which are elucidated in [[[) of sinx and cosx are shown to be recursive. Courtesy of MathNStuff." width=29%/></a></div>
 	    <span class="tiny"><em>The loop in which the derivatives (and antiderivatives, which are elucidated in [[[) of sinx and cosx are shown to be recursive. Courtesy of <a href="https://www.mathnstuff.com/math/spoken/here/2class/420/sincos.htm">MathNStuff</a>.</em></span><br>
         
         <br><br><br>
+        
 	    
-	    <strong><a href="#Rule149"><span class="mw-headline" id="Rule149">#</span></a> <font color="red">Rule 149.</font></strong> To find when a particle is <strong>moving forward or backward</strong>, make a number line for the x's of the velocity graph and find when it is negative or positive: positive is forward, negative is backward.<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find when a particle is <strong>moving forward or backward</strong>, make a number line for the x's of the velocity graph and find when it is negative or positive: positive is forward, negative is backward.<br><br>
 	    
 	    For where the particle is speeding up or slowing down, if the particle has v(t) > 0 & a(t) &lt; 0, or v(t) &lt; 0 & a(t) > 0 (e.g., the signs do not match between the velocity and acceleration), then the particle is <strong>slowing down</strong>.<br><br>
 	    If the particle has v(t) &lt; 0 & a(t) &lt; 0 or v(t) > 0 & a(t) > 0 (matching signs between velocity and acceleration) then the particle is <strong>speeding up</strong>.
 	    
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule150"><span class="mw-headline" id="Rule150">#</span></a> <font color="red">Rule 150.</font></strong> 
-	    For equations that have two functions that are just sum or difference and not product nor quotient, you can find the derivative of each individual function and continue the sum and difference as so:<br>f(x) = sin(x) - cos(x)
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For equations that have two functions that are just sum or difference and not product nor quotient, you can find the derivative of each individual function and continue the sum and difference as so:<br>f(x) = sin(x) - cos(x)
 	    <br>
 	    f'(x) = cos(x) + sin(x)
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule151"><span class="mw-headline" id="Rule151">#</span></a> <font color="red">Rule 151.</font></strong> 
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> 
 	    <strong>Particle Motion in a Nutshell</strong>:<br><br>
 	    <strong>Displacement</strong>: The change in position of the particle. S(t<sub>f</sub>) - S(t<sub>i</sub>)<br><br>
 	    <strong>Total Distance</strong>: The cumulative distance traveled between the starting and ending points of the particle. Found by finding every point in which the velocity changes sign, and absolute valuing all distances traveled under negative velocities while summing everything up.<br><br>
 	    <strong>Speeding up</strong>: The v(t) and a(t) of the particle have the same sign.<br><br>
 	    <strong>Slowing down</strong>: The v(t) and a(t) of the particle have differing signs.
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    
@@ -643,7 +909,10 @@ rainbow {
 	    </header>
 	    <article>
 	    
-	    <strong><a href="#Rule152"><span class="mw-headline" id="Rule152">#</span></a> <font color="red">Rule 152.</font></strong> Steps for <strong>Implicit Differentiation</strong>:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Steps for <strong>Implicit Differentiation</strong>:<br>
 	    <ol>
 	    
 	      <li>
@@ -664,28 +933,41 @@ rainbow {
 	      
 	    </ol>
 	    
-	    <br>
+	    </div><br>
 	    
-	    <strong><a href="#Rule153"><span class="mw-headline" id="Rule153">#</span></a> <font color="red">Rule 153.</font></strong> 
-	    For Implicit Differentiation, only when finding the derivative of y do you need to get dy/dx and use the chain rule. For x, you can just find the derivative with the power rule.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For Implicit Differentiation, only when finding the derivative of y do you need to get dy/dx and use the chain rule. For x, you can just find the derivative with the power rule.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule154"><span class="mw-headline" id="Rule154">#</span></a> <font color="red">Rule 154.</font></strong> 
-	    When writing powers of trigonometric functions, like y = sin³(x), always rewrite the function like y = (sin(x))³. This will make it easier to take derivatives, if needed, and is just a simpler way of seeing the exponential.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When writing powers of trigonometric functions, like y = sin³(x), always rewrite the function like y = (sin(x))³. This will make it easier to take derivatives, if needed, and is just a simpler way of seeing the exponential.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule155"><span class="mw-headline" id="Rule155">#</span></a> <font color="red">Rule 155.</font></strong> 
-	    To find the <strong>derivative of the inverse</strong> of a function, use the formula 1/f'(g(x)) without multiplying by the derivative of the inner function.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the <strong>derivative of the inverse</strong> of a function, use the formula 1/f'(g(x)) without multiplying by the derivative of the inner function.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule156"><span class="mw-headline" id="Rule156">#</span></a> <font color="red">Rule 156.</font></strong> To find the implicit differentiation of trigonometric functions, you just take the derivative of the function itself multiplied by the y': sin(y) = cos(y) × dy/dx.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the implicit differentiation of trigonometric functions, you just take the derivative of the function itself multiplied by the y': sin(y) = cos(y) × dy/dx.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule157"><span class="mw-headline" id="Rule157">#</span></a> <font color="red">Rule 157.</font></strong> The inverse of the function f(x) = y is found simply by reversing the x & y values in the function. If f is differentiable at every point of an interval I, and df/dx is never zero along I, then f has an inverse and f<sup>-1</sup> is differentiable at every point on interval f(I).<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The inverse of the function f(x) = y is found simply by reversing the x & y values in the function. If f is differentiable at every point of an interval I, and df/dx is never zero along I, then f has an inverse and f<sup>-1</sup> is differentiable at every point on interval f(I).<br><br>
 	    
 	    df/dx is never zero because a function only <em>has</em> an inverse when it is ALWAYS increasing or decreasing. ([[[must past horiz. and vert. line test]]])<br><br>
 	    
 	    df/dx = 0 means a horizontal tangent not increasing or decreasing at that point. Horizontal tangents can denote a change in direction of the function, as long as the sign of df/dx changes from before and after the found horizontal tangent point.
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#InverseTrigDeriv"><span class="mw-headline" id="InverseTrigDeriv">#</span></a> Inverse Trigonometric Derivatives:</font></strong><br><br>
@@ -710,9 +992,31 @@ rainbow {
 	    
         <br><br><br>
 	    
-	    <strong><a href="#Rule158"><span class="mw-headline" id="Rule158">#</span></a> <font color="red">Rule 158.</font></strong> In order to find the derivative of the inverse of a function when only knowing the x-value & the function formula, plug in the x-value into the function to get the y-value, and then do 1/f'(y).
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the derivative of the inverse of a function when only knowing the x-value & the function formula, plug in the x-value into the function to get the y-value, and then do 1/f'(y).
 	    
-	    <br><br> In doing so, you find the derivative of the function while plugging in the y-value under f⁻¹(x) = 1/f'(y).<br><br><br>
+	    <br><br> In doing so, you find the derivative of the function while plugging in the y-value under f⁻¹(x) = 1/f'(y).
+	    </div><br><br>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    </article>
@@ -733,22 +1037,48 @@ rainbow {
         <br><br><br>
         
 	    
-	    <strong><a href="#Rule159"><span class="mw-headline" id="Rule159">#</span></a> <font color="red">Rule 159.</font></strong> (e<sup>x</sup>)<sup>1</sup> is just e<sup>x</sup>. Whenever finding the derivative of an equation involving e<sup>x</sup>, just copy that original e<sup>x</sup> expression and multiply by the chain rule.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> (e<sup>x</sup>)<sup>1</sup> is just e<sup>x</sup>. Whenever finding the derivative of an equation involving e<sup>x</sup>, just copy that original e<sup>x</sup> expression and multiply by the chain rule.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule160"><span class="mw-headline" id="Rule160">#</span></a> <font color="red">Rule 160.</font></strong> For other expressions where x is part of the exponent, like 9<sup>-x</sup> or 3<sup>csc(x)</sup>, you copy the original equation, multiply by ln of the base, and by the derivative of the exponent: 3<sup>csc(x)</sup> = ln(3) × 3<sup>csc(x)</sup> × -csc(x)cot(x). See the Integers with Exponential Powers blue section.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For other expressions where x is part of the exponent, like 9<sup>-x</sup> or 3<sup>csc(x)</sup>, you copy the original equation, multiply by ln of the base, and by the derivative of the exponent: 3<sup>csc(x)</sup> = ln(3) × 3<sup>csc(x)</sup> × -csc(x)cot(x). See the Integers with Exponential Powers blue section.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule161"><span class="mw-headline" id="Rule161">#</span></a> <font color="red">Rule 161.</font></strong> For finding the derivative of an equation with ln, know that (ln(x))' = 1/x, with the x changing as needed. The derivative is just the changed value of 1/x multiplied by the derivative of the x-value: (ln(x²))' = (1/x²) × 2x.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For finding the derivative of an equation with ln, know that (ln(x))' = 1/x, with the x changing as needed. The derivative is just the changed value of 1/x multiplied by the derivative of the x-value: (ln(x²))' = (1/x²) × 2x.
+	    </div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the derivative of a logarithm, for a &gt; 0 and a ≠ 1, you must use the chain rule:
+	    
+	    $$\frac{d}{dx} \left( \log_a x \right) = \frac{1}{x \ln(a)} \times x'$$
+	    
+	    This means that after 1/xln(a), the chain rule would be applied for 2nd value (not the base - in this case a is the base).<br><br>
+	    Example: (log<sub>4</sub>2x)' = (1 / 2xln(4)) × 2
+	    <br>
+	    = 1/xln(4)
+	    <br><br>
+	    It is the ln of the 1st value (the base) of the logarithm that is used.
+	    
+	    </div><br><br>
 	    
 	    
-	    
-	    
-	    
+	   
 	    
 	    
 	    
 	    
 	    <!--
-	    <strong><a href="#Rule162"><span class="mw-headline" id="Rule162">#</span></a> <font color="red">Rule 162.</font></strong> <br><br><br>
+	    
 	    <strong><a href="#Rule163"><span class="mw-headline" id="Rule163">#</span></a> <font color="red">Rule 163.</font></strong> <br><br><br>
 	    <strong><a href="#Rule164"><span class="mw-headline" id="Rule164">#</span></a> <font color="red">Rule 164.</font></strong> <br><br><br>
 	    <strong><a href="#Rule165"><span class="mw-headline" id="Rule165">#</span></a> <font color="red">Rule 165.</font></strong> <br><br><br>
@@ -799,7 +1129,7 @@ rainbow {
 	    -->
 	  </article>
 	  
-	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -832,7 +1162,7 @@ rainbow {
         <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 18 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

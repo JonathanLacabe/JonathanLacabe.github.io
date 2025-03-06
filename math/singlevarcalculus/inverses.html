@@ -31,6 +31,36 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
@@ -71,12 +101,17 @@ rainbow {
 	  </article>
 	  <hr>
 	  
+	  <div class="rules" data-start="152">
+	  
 	    <header class="articleHeader"><hr>
-	    <h3><span class="mw-headline" id="Inverses">?. Inverses.</span></h3>
+	    <h2><span class="mw-headline" id="Inverses">?. Inverses.</span></h2>
 	  </header>
 	  <article><br>
 	      
-	      <strong><a href="#Rule152"><span class="mw-headline" id="Rule152">#</span></a> <font color="red">Rule 152.</font></strong> Steps for <strong>Implicit Differentiation</strong>:<br><br>
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Steps for <strong>Implicit Differentiation</strong>:<br>
 	    <ol>
 	    
 	      <li>
@@ -97,28 +132,41 @@ rainbow {
 	      
 	    </ol>
 	    
-	    <br>
+	    </div><br>
 	    
-	    <strong><a href="#Rule153"><span class="mw-headline" id="Rule153">#</span></a> <font color="red">Rule 153.</font></strong> 
-	    For Implicit Differentiation, only when finding the derivative of y do you need to get dy/dx and use the chain rule. For x, you can just find the derivative with the power rule.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For Implicit Differentiation, only when finding the derivative of y do you need to get dy/dx and use the chain rule. For x, you can just find the derivative with the power rule.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule154"><span class="mw-headline" id="Rule154">#</span></a> <font color="red">Rule 154.</font></strong> 
-	    When writing powers of trigonometric functions, like y = sin³(x), always rewrite the function like y = (sin(x))³. This will make it easier to take derivatives, if needed, and is just a simpler way of seeing the exponential.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When writing powers of trigonometric functions, like y = sin³(x), always rewrite the function like y = (sin(x))³. This will make it easier to take derivatives, if needed, and is just a simpler way of seeing the exponential.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule155"><span class="mw-headline" id="Rule155">#</span></a> <font color="red">Rule 155.</font></strong> 
-	    To find the <strong>derivative of the inverse</strong> of a function, use the formula 1/f'(g(x)) without multiplying by the derivative of the inner function.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the <strong>derivative of the inverse</strong> of a function, use the formula 1/f'(g(x)) without multiplying by the derivative of the inner function.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule156"><span class="mw-headline" id="Rule156">#</span></a> <font color="red">Rule 156.</font></strong> To find the implicit differentiation of trigonometric functions, you just take the derivative of the function itself multiplied by the y': sin(y) = cos(y) × dy/dx.<br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the implicit differentiation of trigonometric functions, you just take the derivative of the function itself multiplied by the y': sin(y) = cos(y) × dy/dx.
+	    </div><br><br>
 	    
-	    <strong><a href="#Rule157"><span class="mw-headline" id="Rule157">#</span></a> <font color="red">Rule 157.</font></strong> The inverse of the function f(x) = y is found simply by reversing the x & y values in the function. If f is differentiable at every point of an interval I, and df/dx is never zero along I, then f has an inverse and f<sup>-1</sup> is differentiable at every point on interval f(I).<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The inverse of the function f(x) = y is found simply by reversing the x & y values in the function. If f is differentiable at every point of an interval I, and df/dx is never zero along I, then f has an inverse and f<sup>-1</sup> is differentiable at every point on interval f(I).<br><br>
 	    
 	    df/dx is never zero because a function only <em>has</em> an inverse when it is ALWAYS increasing or decreasing. ([[[must past horiz. and vert. line test]]])<br><br>
 	    
 	    df/dx = 0 means a horizontal tangent not increasing or decreasing at that point. Horizontal tangents can denote a change in direction of the function, as long as the sign of df/dx changes from before and after the found horizontal tangent point.
-	    <br><br><br>
+	    </div><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#InverseTrigDeriv"><span class="mw-headline" id="InverseTrigDeriv">#</span></a> Inverse Trigonometric Derivatives:</font></strong><br><br>
@@ -143,14 +191,19 @@ rainbow {
 	    
         <br><br><br>
 	    
-	    <strong><a href="#Rule158"><span class="mw-headline" id="Rule158">#</span></a> <font color="red">Rule 158.</font></strong> In order to find the derivative of the inverse of a function when only knowing the x-value & the function formula, plug in the x-value into the function to get the y-value, and then do 1/f'(y).
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the derivative of the inverse of a function when only knowing the x-value & the function formula, plug in the x-value into the function to get the y-value, and then do 1/f'(y).
 	    
-	    <br><br> In doing so, you find the derivative of the function while plugging in the y-value under f⁻¹(x) = 1/f'(y).<br><br><br>
+	    <br><br> In doing so, you find the derivative of the function while plugging in the y-value under f⁻¹(x) = 1/f'(y).
+	    </div><br>
 	    
 	    
 	    
 	      </article>
 
+    </div>
 	</div>
 	
 	<div class="General links">
@@ -183,7 +236,7 @@ rainbow {
         <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong>Inverses</strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 18 2025</span><br>
+      	<span class="tiny">Last Change: March 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

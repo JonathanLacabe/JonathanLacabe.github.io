@@ -3,6 +3,10 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 6 2025: Calculus work. Considerable work in Physics as well, patching the remaining holes before Electric Potential.
+Rules Added: Physics, Electromagnetism - Rule 189, 190.
+Rules Added: Mathematics, Single Variable Calculus - Rule 163.
+
 March 5 2025: I have completed the conversion of all Algebra 2, Precalculus, & Single-Variable Calculus Rules (all of math) to the new javascript rule numbering system. Additionally, I added a Calculus Rule - I intend to rebegin the rule-per-day system for adding the existing Calculus Rules, as there certainly is no shortage of paper notes remaining to be digitized.
 Rules Added: Mathematics, Single Variable Calculus - Rule 162.
 

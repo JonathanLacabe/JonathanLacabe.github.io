@@ -32,6 +32,36 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
 <img src="/_other/logos/Symmetric_Encryption.png" width=36%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em>Art by Shoaib Pasha.</em></span><hr>
@@ -183,7 +213,7 @@ rainbow {
       
       <br>
       
-      
+      <div class="rules" data-start="1">
       
       <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Introductions">I. Introductions</span></h2>
@@ -218,7 +248,11 @@ Until 1976, this was the only form of cryptography in existence, and describes t
 <br><br><br>
 
 
-<strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">C. Rule 1.</font></strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br><br>
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.
+</div><br><br>
 
 <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmission from interception is the goal of cryptography.
 <br><br><br>
@@ -235,7 +269,10 @@ Until 1976, this was the only form of cryptography in existence, and describes t
 	    <article>
 	    
 	  
-	  <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">C. Rule 2.</font></strong> Symmetric Cryptography
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Symmetric Cryptography
 	  
 	  
 	  <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
@@ -264,10 +301,13 @@ In order for Bob to not simply decrypt the ciphertext immediately using the decr
 	    
 <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong>/<strong>key length</strong> of the algorithm: If it produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
 	    
-	    
-<br><br><br>
+</div><br><br>	    
 
-<strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
 
 
 This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br><br>
@@ -277,7 +317,8 @@ This is the central principle of a foundational law in Cryptography, postulated 
 
 
 In Practice: Never use an untested Crypto algorithm! Furthermore, never roll your own crypto!
-<br><br><br>
+</div><br><br>
+
 
 <strong><a href="#EndToEndDef"><span class="mw-headline" id="EndToEndDef">#</span></a> <font color="#006400">End-Eo-End Encryption (E2EE)</font></strong>: A system of encryption widely used in modern communication services (like internet messaging sites), in which all data sent from Alice to Bob (party #1 to party #2) is never decrypted at any point along its route until it reaches Bob. <br><br>
 Thus, all parties intercepting/eavesdropping will be unable to read or manipulate the message, even if they control any of the base stations the message goes through.<br><br>
@@ -291,8 +332,12 @@ Thus, all parties intercepting/eavesdropping will be unable to read or manipulat
 	    </header>
 	    <article>
 	    
-<strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
-In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.<br><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.
+</div><br><br>
 
 <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
@@ -312,7 +357,10 @@ These attacks are most relevant when the attacker has physical access to a piece
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
 <br><br><br>
 
-<strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">C. Rule 5.</font></strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -330,17 +378,20 @@ As of 2010 (very recent), the largest keyspace that can be searched in a relativ
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
 	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span>
 
-<br><br><br>
+</div><br><br>
 
 <strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.
 <br><br><br>
 
 
-<strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">C. Rule 6.</font></strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
 The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
 There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
-<br><br><br>
+</div><br><br>
 
 
 
@@ -1283,6 +1334,9 @@ Salsa20/20 (hereafter referred to as "Salsa20") supports key lengths of either 1
 	  
 	  
 	  
+	  
+	  
+	  
 	  </article>
 	    <header class="articleHeader"><hr><hr>
 	    <h2><span class="mw-headline" id="BlockCiphers">IV. Block Ciphers.</span></h2>
@@ -1592,103 +1646,15 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
 	    
 	    
 	    <!--
-	    
-	    
-	    
-	    
-	    <strong><a href="#Rule47"><span class="mw-headline" id="Rule47">#</span></a> <font color="red">C. Rule 47.</font></strong> <br><br><br>
-	    <strong><a href="#Rule48"><span class="mw-headline" id="Rule48">#</span></a> <font color="red">C. Rule 48.</font></strong> <br><br><br>
-	    <strong><a href="#Rule49"><span class="mw-headline" id="Rule49">#</span></a> <font color="red">C. Rule 49.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule50"><span class="mw-headline" id="Rule50">#</span></a> <font color="red">C. Rule 50.</font></strong> <br><br><br>
-	    <strong><a href="#Rule51"><span class="mw-headline" id="Rule51">#</span></a> <font color="red">C. Rule 51.</font></strong> <br><br><br>
-	    <strong><a href="#Rule52"><span class="mw-headline" id="Rule52">#</span></a> <font color="red">C. Rule 52.</font></strong> <br><br><br>
-	    <strong><a href="#Rule53"><span class="mw-headline" id="Rule53">#</span></a> <font color="red">C. Rule 53.</font></strong> <br><br><br>
-	    <strong><a href="#Rule54"><span class="mw-headline" id="Rule54">#</span></a> <font color="red">C. Rule 54.</font></strong> <br><br><br>
-	    <strong><a href="#Rule55"><span class="mw-headline" id="Rule55">#</span></a> <font color="red">C. Rule 55.</font></strong> <br><br><br>
-	    <strong><a href="#Rule56"><span class="mw-headline" id="Rule56">#</span></a> <font color="red">C. Rule 56.</font></strong> <br><br><br>
-	    <strong><a href="#Rule57"><span class="mw-headline" id="Rule57">#</span></a> <font color="red">C. Rule 57.</font></strong> <br><br><br>
-	    <strong><a href="#Rule58"><span class="mw-headline" id="Rule58">#</span></a> <font color="red">C. Rule 58.</font></strong> <br><br><br>
-	    <strong><a href="#Rule59"><span class="mw-headline" id="Rule59">#</span></a> <font color="red">C. Rule 59.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule60"><span class="mw-headline" id="Rule60">#</span></a> <font color="red">C. Rule 60.</font></strong> <br><br><br>
-	    <strong><a href="#Rule61"><span class="mw-headline" id="Rule61">#</span></a> <font color="red">C. Rule 61.</font></strong> <br><br><br>
-	    <strong><a href="#Rule62"><span class="mw-headline" id="Rule62">#</span></a> <font color="red">C. Rule 62.</font></strong> <br><br><br>
-	    <strong><a href="#Rule63"><span class="mw-headline" id="Rule63">#</span></a> <font color="red">C. Rule 63.</font></strong> <br><br><br>
-	    <strong><a href="#Rule64"><span class="mw-headline" id="Rule64">#</span></a> <font color="red">C. Rule 64.</font></strong> <br><br><br>
-	    <strong><a href="#Rule65"><span class="mw-headline" id="Rule65">#</span></a> <font color="red">C. Rule 65.</font></strong> <br><br><br>
-	    <strong><a href="#Rule66"><span class="mw-headline" id="Rule66">#</span></a> <font color="red">C. Rule 66.</font></strong> <br><br><br>
-	    <strong><a href="#Rule67"><span class="mw-headline" id="Rule67">#</span></a> <font color="red">C. Rule 67.</font></strong> <br><br><br>
-	    <strong><a href="#Rule68"><span class="mw-headline" id="Rule68">#</span></a> <font color="red">C. Rule 68.</font></strong> <br><br><br>
-	    <strong><a href="#Rule69"><span class="mw-headline" id="Rule69">#</span></a> <font color="red">C. Rule 69.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule70"><span class="mw-headline" id="Rule70">#</span></a> <font color="red">C. Rule 70.</font></strong> <br><br><br>
-	    <strong><a href="#Rule71"><span class="mw-headline" id="Rule71">#</span></a> <font color="red">C. Rule 71.</font></strong> <br><br><br>
-	    <strong><a href="#Rule72"><span class="mw-headline" id="Rule72">#</span></a> <font color="red">C. Rule 72.</font></strong> <br><br><br>
-	    <strong><a href="#Rule73"><span class="mw-headline" id="Rule73">#</span></a> <font color="red">C. Rule 73.</font></strong> <br><br><br>
-	    <strong><a href="#Rule74"><span class="mw-headline" id="Rule74">#</span></a> <font color="red">C. Rule 74.</font></strong> <br><br><br>
-	    <strong><a href="#Rule75"><span class="mw-headline" id="Rule75">#</span></a> <font color="red">C. Rule 75.</font></strong> <br><br><br>
-	    <strong><a href="#Rule76"><span class="mw-headline" id="Rule76">#</span></a> <font color="red">C. Rule 76.</font></strong> <br><br><br>
-	    <strong><a href="#Rule77"><span class="mw-headline" id="Rule77">#</span></a> <font color="red">C. Rule 77.</font></strong> <br><br><br>
-	    <strong><a href="#Rule78"><span class="mw-headline" id="Rule78">#</span></a> <font color="red">C. Rule 78.</font></strong> <br><br><br>
-	    <strong><a href="#Rule79"><span class="mw-headline" id="Rule79">#</span></a> <font color="red">C. Rule 79.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule80"><span class="mw-headline" id="Rule80">#</span></a> <font color="red">C. Rule 80.</font></strong> <br><br><br>
-	    <strong><a href="#Rule81"><span class="mw-headline" id="Rule81">#</span></a> <font color="red">C. Rule 81.</font></strong> <br><br><br>
-	    <strong><a href="#Rule82"><span class="mw-headline" id="Rule82">#</span></a> <font color="red">C. Rule 82.</font></strong> <br><br><br>
-	    <strong><a href="#Rule83"><span class="mw-headline" id="Rule83">#</span></a> <font color="red">C. Rule 83.</font></strong> <br><br><br>
-	    <strong><a href="#Rule84"><span class="mw-headline" id="Rule84">#</span></a> <font color="red">C. Rule 84.</font></strong> <br><br><br>
-	    <strong><a href="#Rule85"><span class="mw-headline" id="Rule85">#</span></a> <font color="red">C. Rule 85.</font></strong> <br><br><br>
-	    <strong><a href="#Rule86"><span class="mw-headline" id="Rule86">#</span></a> <font color="red">C. Rule 86.</font></strong> <br><br><br>
-	    <strong><a href="#Rule87"><span class="mw-headline" id="Rule87">#</span></a> <font color="red">C. Rule 87.</font></strong> <br><br><br>
-	    <strong><a href="#Rule88"><span class="mw-headline" id="Rule88">#</span></a> <font color="red">C. Rule 88.</font></strong> <br><br><br>
-	    <strong><a href="#Rule89"><span class="mw-headline" id="Rule89">#</span></a> <font color="red">C. Rule 89.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule90"><span class="mw-headline" id="Rule90">#</span></a> <font color="red">C. Rule 90.</font></strong> <br><br><br>
-	    <strong><a href="#Rule91"><span class="mw-headline" id="Rule91">#</span></a> <font color="red">C. Rule 91.</font></strong> <br><br><br>
-	    <strong><a href="#Rule92"><span class="mw-headline" id="Rule92">#</span></a> <font color="red">C. Rule 92.</font></strong> <br><br><br>
-	    <strong><a href="#Rule93"><span class="mw-headline" id="Rule93">#</span></a> <font color="red">C. Rule 93.</font></strong> <br><br><br>
-	    <strong><a href="#Rule94"><span class="mw-headline" id="Rule94">#</span></a> <font color="red">C. Rule 94.</font></strong> <br><br><br>
-	    <strong><a href="#Rule95"><span class="mw-headline" id="Rule95">#</span></a> <font color="red">C. Rule 95.</font></strong> <br><br><br>
-	    <strong><a href="#Rule96"><span class="mw-headline" id="Rule96">#</span></a> <font color="red">C. Rule 96.</font></strong> <br><br><br>
-	    <strong><a href="#Rule97"><span class="mw-headline" id="Rule97">#</span></a> <font color="red">C. Rule 97.</font></strong> <br><br><br>
-	    <strong><a href="#Rule98"><span class="mw-headline" id="Rule98">#</span></a> <font color="red">C. Rule 98.</font></strong> <br><br><br>
-	    <strong><a href="#Rule99"><span class="mw-headline" id="Rule99">#</span></a> <font color="red">C. Rule 99.</font></strong> <br><br><br>
-	    
-	    
-	    
-	    
-	    
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">C. Rule 10.</font></strong> <br><br><br>
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">C. Rule 11.</font></strong> <br><br><br>
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">C. Rule 12.</font></strong> <br><br><br>
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">C. Rule 13.</font></strong> <br><br><br>
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">C. Rule 14.</font></strong> <br><br><br>
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">C. Rule 15.</font></strong> <br><br><br>
-	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">C. Rule 16.</font></strong> <br><br><br>
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <br><br><br>
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> <br><br><br>
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> <br><br><br>
-	    
-	    
-	    
-	    
-	    <strong><a href="#Rule0"><span class="mw-headline" id="Rule0">#</span></a> <font color="red">C. Rule 0.</font></strong> <br><br><br>
-	    <strong><a href="#Rule1"><span class="mw-headline" id="Rule1">#</span></a> <font color="red">C. Rule 1.</font></strong> <br><br><br>
-	    <strong><a href="#Rule2"><span class="mw-headline" id="Rule2">#</span></a> <font color="red">C. Rule 2.</font></strong> <br><br><br>
-	    <strong><a href="#Rule3"><span class="mw-headline" id="Rule3">#</span></a> <font color="red">C. Rule 3.</font></strong> <br><br><br>
-	    <strong><a href="#Rule4"><span class="mw-headline" id="Rule4">#</span></a> <font color="red">C. Rule 4.</font></strong> <br><br><br>
-	    <strong><a href="#Rule5"><span class="mw-headline" id="Rule5">#</span></a> <font color="red">C. Rule 5.</font></strong> <br><br><br>
-	    <strong><a href="#Rule6"><span class="mw-headline" id="Rule6">#</span></a> <font color="red">C. Rule 6.</font></strong> <br><br><br>
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">C. Rule 7.</font></strong> <br><br><br>
-	    <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">C. Rule 8.</font></strong> <br><br><br>
-	    <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">C. Rule 9.</font></strong> <br><br><br>
-	    
-	    -->
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> </div><br><br>
+	  -->
 	    
 	  </article>
 	  
-	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -1721,7 +1687,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: February 26 2025</span><br>
+      	<span class="tiny">Last Change: March 6 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

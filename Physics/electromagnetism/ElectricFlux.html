@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (){
       </div>
       
 	  
-	  <div class="rules" data-start="181">
+	  <div class="rules" data-start="183">
 	  <hr>
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="ElectricFlex">XIV. Electric Flux</span></h2>
@@ -149,14 +149,14 @@ This use of language is jarring at first, but can be quickly accustomed to by th
 
 <strong>Φ<sub>E</sub></strong> = The magnitude of Electric Flux over a Uniform Electric Field (see definition below).<br><br>
 
-<strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of a uniform electric field, the amount of which (see Rule 181) is measured over a surface and not just at an individual point in space (though, being uniform, it will have the same strength at any individual point in space). Given how the existing Electric Field equation (see Rule 171) only specifically calculates the magnitude of an electric force at a point, this equation is overly idealized in assuming a <em>uniform</em> electric field (therefore not a point charge or anything similar). <br><br>
+<strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of a uniform electric field, the amount of which (see Rule 183) is measured over a surface and not just at an individual point in space (though, being uniform, it will have the same strength at any individual point in space). Given how the existing Electric Field equation (see Rule 171) only specifically calculates the magnitude of an electric force at a point, this equation is overly idealized in assuming a <em>uniform</em> electric field (therefore not a point charge or anything similar). <br><br>
 
 <span class="vecteur"><strong>A</strong></span> = The magnitude of the area of the surface through which the uniform electric field is passing. AREA, not VOLUME (explained in def.).<br><br>
 
 <strong>θ</strong> = The angle between the directions of the electric field and the direction of the area (area having its direction perpendicular to the plane, and directed outward for closed surfaces). This value, given that all other values in the equation are positive magnitudes, determines whether the flux is positive or negative.<br><br><br>
 <!--they say I'm a yapper but I'm bad with words -  One Lacabe = one word per hour. If I speak any faster, it is because I am saying nonsense, don't listen to a word I say. It is with extreme effort I produce HumanKnowledge essays.-->
 
-<u><strong>Definition</strong></u>: <strong>Electric flux</strong> is the measure of the <em>amount of electric field</em> (see Rule 181) which passes through a defined area. The given equation is specifically for uniform electric fields, something that is totally idealized and never really happens in reality.<br><br>
+<u><strong>Definition</strong></u>: <strong>Electric flux</strong> is the measure of the <em>amount of electric field</em> (see Rule 183) which passes through a defined area. The given equation is specifically for uniform electric fields, something that is totally idealized and never really happens in reality.<br><br>
 
 This equation in particular is the result of a dot product between the electric field and the surface - this is why the result of the equation is a scalar, and why a cosine is used for the theta.<br><br>
 
@@ -164,7 +164,7 @@ Because this equation is a dot product, that means the two variables are vectors
 
 Note that this equation uses <strong>AREA</strong>, not VOLUME. When the electric field is passing a multi-sided object, the electric flux must be determined for each side of the object and summed thereafter, forming Φ<sub>total</sub>.<br><br>
 
-Generally, using this equation to determine electric flux is optimal when the flux is passing through some sort of <u>closed surface</u> (see Rule 184).
+Generally, using this equation to determine electric flux is optimal when the flux is passing through some sort of <u>closed surface</u> (see Rule 186).
 
         
         </div><br><br>
@@ -172,7 +172,7 @@ Generally, using this equation to determine electric flux is optimal when the fl
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> If the surface of which the electric field is passing through is perpendicular to the electric field, then since the angle created between the surface and the field will be 90° (and as cos(90) = 0), there will be a net zero electric flux acting upon that surface. This is true for both uniform (see Rule 182) and nonuniform (see Rule 185) electric fields.</div><br><br>
+        </strong> If the surface of which the electric field is passing through is perpendicular to the electric field, then since the angle created between the surface and the field will be 90° (and as cos(90) = 0), there will be a net zero electric flux acting upon that surface. This is true for both uniform (see Rule 184) and nonuniform (see Rule 187) electric fields.</div><br><br>
         
         
         <div class="rule"><strong>
@@ -194,11 +194,11 @@ Generally, using this equation to determine electric flux is optimal when the fl
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> Nonuniform Electric Fields are the standard form of Electric Fields: a field emanating outward (from a point charge or CCD), decreasing in strength with distance (symbolized in the 'r' of the Law of Electric Force (see Rule 162)).<br><br>
 
-A new equation, an adapted form of the Uniform Electric Flux equation (see Rule 182) will account for this previously irreconcilable difference. Again, <!--in the same vein--> as was done for Electric Fields with Continuous Charge Distribution (Rule 174), this adaptation/rethinking will be done using Calculus.<br><br>
+A new equation, an adapted form of the Uniform Electric Flux equation (see Rule 184) will account for this previously irreconcilable difference. Again, <!--in the same vein--> as was done for Electric Fields with Continuous Charge Distribution (Rule 174), this adaptation/rethinking will be done using Calculus.<br><br>
 
 Infinitesimally small areas of the surface plane, d<span class="vecteur"><strong>A</strong></span>, will replace <span class="vecteur"><strong>A</strong></span>.<!--Likewise--> Correspondingly, infinitesimally small fluxes dΦ<sub>E</sub> (created by the electric field) will pass through d<span class="vecteur"><strong>A</strong></span>.<br><br>
 
-Substituting these values into the original uniform equation (see Rule 182), and then integrating both sides, will produce the new, revolutionary Nonuniform Electric Flux equation (though you could use it for uniform fields if you really wanted to):<br>
+Substituting these values into the original uniform equation (see Rule 184), and then integrating both sides, will produce the new, revolutionary Nonuniform Electric Flux equation (though you could use it for uniform fields if you really wanted to):<br>
 
 $$\Phi_E = \oint \vec{E} d\vec{A} \cos\theta = \frac{q_{\text{enclosed}}}{\varepsilon_0}$$
 
@@ -211,7 +211,7 @@ $$\Phi_E = \oint \vec{E} d\vec{A} \cos\theta = \frac{q_{\text{enclosed}}}{\varep
 
 <strong>θ</strong> = The angle between the directions of the electric field and the direction of the infinitesimally small area d<span class="vecteur">A</span> (area having its direction perpendicular to the plane, and directed outward for closed surfaces). This value, given that all other values in the equation are positive magnitudes, determines whether the flux is positive or negative.<br><br>
 
-<strong>q<sub>enclosed</sub></strong> = The charge enclosed in the Gaussian Surface (see Rule 186).<br><br>
+<strong>q<sub>enclosed</sub></strong> = The charge enclosed in the Gaussian Surface (see Rule 188).<br><br>
 
 <strong>ε<sub>0</sub></strong> = The Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).  (see Rule 164).<br><br><br>
 
@@ -220,7 +220,7 @@ $$\Phi_E = \oint \vec{E} d\vec{A} \cos\theta = \frac{q_{\text{enclosed}}}{\varep
 
 This equation is known as Gauss's Law, hereafter referred to as the <strong>Charge-Flux Law</strong>. This law, in serving nonuniform electric fields (all real ones), relates electric flux through a "Gaussian surface" to the charge enclosed by said surface.<br><br>
 
-The shapes of these surfaces can be specifically chosen for characteristics that significantly simplify calculations in specific problems. See Rule 186 for what these characteristics entail.<br><br>
+The shapes of these surfaces can be specifically chosen for characteristics that significantly simplify calculations in specific problems. See Rule 188 for what these characteristics entail.<br><br>
 
 The loop on the integral sign denotes a <strong>closed surface integral</strong> (see Math Rule [[[), meaning that one must integrate over the entire closed surface to get the net flux through the surface.<br><br>
 
@@ -237,7 +237,7 @@ The only major difference from this to integrating normally is that you essentia
         
       In most cases, all references to a "Gaussian Surface" can be replaced by a simple description of a closed surface - there is <u></u>nothing particularly unique or individual the distinguishes a ""Gaussian"" surface from any other imaginary closed surface. It is just a generic surface purpose-built as a template for flux calculations - the electromagnetic industry standard for surfaces that do not carry the usual electric properties of conductors or nonconductors.<br><br>
       
-      Typically, the shapes of these surfaces are chosen such that the electric field generated by the enclosed charge is either perpendicular or parallel to the sides of the Gaussian surface. This greatly simplifies the surface integral because all the angles are multiples of 90 degrees and the cosine of those angles have a value of -1, 0, or 1. The spherical Gaussian surface is chosen so that it is concentric with the charge distribution, making the electric field constant for reasons outlined in Rule 188.<br><br>
+      Typically, the shapes of these surfaces are chosen such that the electric field generated by the enclosed charge is either perpendicular or parallel to the sides of the Gaussian surface. This greatly simplifies the surface integral because all the angles are multiples of 90 degrees and the cosine of those angles have a value of -1, 0, or 1. The spherical Gaussian surface is chosen so that it is concentric with the charge distribution, making the electric field constant for reasons outlined in Rule 190.<br><br>
       
       As long as the amount of charge enclosed in a Gaussian surface is constant, the total electric flux through the Gaussian surface does not depend on the size of the Gaussian surface.<br><br>
       
@@ -255,7 +255,7 @@ The only major difference from this to integrating normally is that you essentia
         
         This is the result of Gaussian Surfaces purely being constructs solely intended for the calculation of the <em>magnitude</em> of the electric field or flux produced by any charged object. As such, a "Gaussian Shell" is never used, since shells only have purpose in electric field calculations when there is an internal charge to the shell that can affect the net electric field/flux at a point, which is null and irrelevant with regard to Gaussian Surfaces, which can have all spherical distances/calculations accounted for solely using Gaussian Spheres.<br><br>
         
-        In effect, Gaussian Surfaces are mere mathematical, superimposed bodies exploiting symmetry, with no effect of their own on anything: bodies in space whose only purpose is the use of their positioning, whether through symmetry or whatever (see Rule 186), to calculate flux or field at a particular distance from a charge in space, free from the interference of some internal charge. </div><br><br>
+        In effect, Gaussian Surfaces are mere mathematical, superimposed bodies exploiting symmetry, with no effect of their own on anything: bodies in space whose only purpose is the use of their positioning, whether through symmetry or whatever (see Rule 188), to calculate flux or field at a particular distance from a charge in space, free from the interference of some internal charge. </div><br><br>
         
         
         <strong><a href="#ConcentricDef"><span class="mw-headline" id="ConcentricDef">#</span></a> <font color="#006400">Concentric</font></strong>: The state of objects sharing the same center. Objects are said to be <em>concentric</em> to one another when they share the same center.
@@ -268,9 +268,9 @@ The only major difference from this to integrating normally is that you essentia
 
 Thus, for all concentric entities surrounding a point charge, where each point on the circle or sphere are at a constant distance from the point charge, the strength of the point charge at each point along the entity will be constant.<br><br>
 
-In such cases (limited specifically to circular and circularly-shaped object), the <span class="vecteur"><strong>E</strong></span> variable of the Nonuniform Electric Flux equation (see Rule 185) can be moved outside of the integral, since it will be a constant.<br><br>
+In such cases (limited specifically to circular and circularly-shaped object), the <span class="vecteur"><strong>E</strong></span> variable of the Nonuniform Electric Flux equation (see Rule 187) can be moved outside of the integral, since it will be a constant.<br><br>
 
-Additionally, in these cases, the cos(θ) will equal one and thus be removed, since the angle between the electric field and every area d<span class="vecteur"><strong>A</strong></span> will equal zero, since they are both outward and in the same direction.<!-- Note the absence of the cos(θ) that previously resulted from the dot product. , --></div><br><br>
+Additionally, in these cases, the cos(θ) will equal one and thus be removed, since the angle between the electric field and every area d<span class="vecteur"><strong>A</strong></span> will equal zero, since they are both outward and in the same direction.<!-- Note the absence of the cos(θ) that previously resulted from the dot product. , --></div><br>
       
       
       
@@ -308,7 +308,7 @@ Additionally, in these cases, the cos(θ) will equal one and thus be removed, si
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong>Electric Flux</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 3 2025</span><br>
+      	<span class="tiny">Last Change: March 7 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

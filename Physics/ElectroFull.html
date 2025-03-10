@@ -387,7 +387,7 @@ The actual meaning of this 'permittivity of free space' value, is that it measur
 	    <strong><a href="#ElectricityDef"><span class="mw-headline" id="ElectricityDef">#</span></a> <font color="#006400">Electricity</font></strong>: The flow of electrons through a conductor.
 	    <br><br><br>
 	    
-	    <strong><a href="#ConductorDef"><span class="mw-headline" id="ConductorDef">#</span></a> <font color="#006400">Conductor</font></strong>: Something that can conduct electricity, like a wire. On the outside of a wire, there is rubber or plastic that serves as an <strong>insulator</strong>: something that doesn't conduct electricity very well or at all.
+	    <strong><a href="#ConductorDef"><span class="mw-headline" id="ConductorDef">#</span></a> <font color="#006400">Conductor</font></strong>: Something that can conduct electricity, like a wire. On the outside of a wire, there is rubber or plastic that serves as an <strong>insulator/nonconductor</strong>: something that doesn't conduct electricity very well or at all.
 	    <br><br><br>
 	  
 	  <strong><a href="#SemiconductorDef"><span class="mw-headline" id="SemiconductorDef">#</span></a> <font color="#006400">Semiconductor</font></strong>: A material that holds both qualities of a conductor and insulator and can be tailored to be a better conductor or insulator. Depending on electrical signals, it can be conducting or insulating. Examples: Silicon, Germanium.
@@ -409,7 +409,7 @@ An <strong>Earth Ground</strong> is created when a circuit has a physical connec
 
 The end result of a ground is an electrically neutral system.<br><br>
 
-In electrical engineering, all circuits require a Ground to function - it is often referred to as "GND", and has its own symbol for use in diagrams (see Rule [[[). In many electrical situations, without the availability of a physical connection to the Earth, a "<strong>Floating Ground</strong>" can be used, which simply serves as a type of '0V reference line' (see def. of Voltage) that acts as a return path for current back to the negative side of the power supply.</div><br><br>
+In electrical engineering, all circuits require a Ground to function - it is often referred to as "GND", and has its own symbol for use in diagrams (see E.E. Rule [[[). In many electrical situations, without the availability of a physical connection to the Earth, a "<strong>Floating Ground</strong>" can be used, which simply serves as a type of '0V reference line' (see def. of Voltage) that acts as a return path for current back to the negative side of the power supply.</div><br><br>
 	  
 	  
 	  <div class="rule">
@@ -461,21 +461,24 @@ Electric force caused by the polarization of a conductor is typically larger tha
 	  <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Shells:</strong><br><br>
-        
-        The nature & positioning of the charges of <strong><em>shells</em></strong>, spherical entities of a specified thickness and a hollow interior, differs depending on whether the shell is a conductor or insulator - there is no other possibility.<br><br><!--unironically took an hour of brainpower to crank out these words.-->
+        </strong> <strong>Placement of Charge within Conductors & Nonconductors:</strong><br><br>
 
-<strong>Conductive</strong> shells spread out all excess charge (read: electrons) uniformly over the external surface of the shell. This is because the conduction electrons of the conductor (see Rule 161) and the excess charge electrons will repel from one another, causing the excess charge electrons to spread over and uniformly distribute across the farthest possible surface.<br><br>
+The nature & positioning of the charge within the thickness of an object (like a shell or thick cylinder) differs depending on whether the material of the object is a conductor or insulator; there is no other possibility.<br><br> <!--unironically took an hour of brainpower to crank out these words.-->
+
+<strong>Conductive</strong> objects (enclosed shapes) spread out all excess charge (read: electrons) over their external surface. This is because the conduction electrons of the conductor (see Rule 161) and the excess charge electrons will repel from one another, causing the excess charge electrons to spread over and uniformly distribute across the farthest possible surface.<br><br>
+
+<strong>!!!NOTE!!!</strong>: Unless the conductor is spherical, the charge will <u>not distribute itself <em>uniformly</em></u>. This is a matter of symmetricality, an attribute that leads spheres (shell or solid) to naturally become uniformly distributed in charge, but not for any other shape. This is not to say that a question will not simply say "assume a uniform charge density" for some ridiculous, nonspherical shape, violating the laws of physics for the sake of examining<!--torturing--> the physicist. In such a case, you would do as told and use the given information appropriately. The surface charge density σ (charge per unit area) varies over the surface of any nonspherical conductor. The electric field (see section XIII) immediately outside of the surface of the nonspherical shape can be determined quite easily however, as described in Rule 194.<br><br>
 
 This concentration of charge on the external surface is the same for both positive and negative excess charge. If there is an excess positive charge (imagine the conduction electrons have been removed), then the positive charge will then spread uniformly across the surface.<br><br>
 
 In the state of uniform charge distribution, the conductor will be in a state of <em>electrostatic equilibrium</em> - see Rule [[[ for a complete explanation involving Electric Fields.<br><br>
 
-<strong>Nonconductive</strong>/Insulating shells, which do not allow free movement of charge, bind electrons to their atoms and thus do not move to redistribute excess charge. When an excess charge is added, there are conduction electrons that would even allow for the charge to be moved, and so the excess charge will simply remain wherever it is placed.<br><br>
+<strong>Nonconductive</strong>/Insulating objects (enclosed shapes), which do not allow free movement of charge, bind electrons to their atoms and thus do not move to redistribute excess charge. When an excess charge is added, there are conduction electrons that would even allow for the charge to be moved, and so the excess charge will simply remain wherever it is placed.<br><br>
 
 Thus, the excess charge <em>can</em> be uniformly distributed if that is the state in which it is added, and questions oftentime instruct the physicist<!--that's you!--> to assume such a condition. However, if the charge is concentrated in a particular region, it will not naturally redistribute itself as it would in a conductor.<br><br>
 
-Nonconductive shells are <em>not</em> in a state of electrostatic equilibrium (see Rule [[[), unlike Conductive shells.
+For a continuation of this Rule, with respect to how the conductor/nonconductor dispersal of charge affects electric field distribution, see Rule 193.
+
 </div><br><br>
         
         
@@ -484,9 +487,14 @@ Nonconductive shells are <em>not</em> in a state of electrostatic equilibrium (s
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Shell Theorems of Electric Force:</strong><br><br>
+        <strong><em>Shells</em></strong>, spherical entities of a specified thickness and a hollow interior (like a ring rotated 180° along the x-axis), retain the same importance they had in Mechanics for Electromagnetism.<br><br>
+
 Akin to the Shell Theorem for Internal Gravitation (see Rule 151), there are TWO Shell Theorems for Electric Fields - yet another similarity between electric force and gravitational force (see Rule 162 for the first). They are relatively straightforward, but are only applicable under the specified conditions.<br><br>
 
-Fundamental to the understanding of these theorems is the nature of charge distribution on shells, which itself depends on whether the shell is conductive or not. See Rule 169 for a full treatment of these principles.
+These theorems literally <u>do not work</u> for any shape other than a shell/sphere - there is a particular symmetry with those specific shapes that allow these theorems to be used. They are not true for just any irregular, wack shape.<br><br>
+
+Fundamental to the understanding of these theorems is the nature of charge distribution on shells, which itself depends on whether the shell is conductive or not. 
+See Rule 169 for a full, generalized treatment of these principles. Nonconductive shells are <em>not</em> in a state of electrostatic equilibrium (see Rule [[[), unlike Conductive shells.
 <br><br>
 
 <strong>1.</strong> A charged particle <u><strong>outside</strong></u> of a shell with charge uniformly distributed on its surface (e.g., a conductor) is attracted or repelled as if the shell’s charge were concentrated as a particle at its center. This is assuming the charge on the shell is much greater than the charge of the particle, thus not interfering with the distribution of charge on the shell (an issue detailed in Rule 169).
@@ -736,7 +744,7 @@ All of this component business requires that there be some reference position, a
         
         <ol>
         
-          <li><strong>Internal Charge within Enclosed Shapes</strong>: As everyone knows, the charge within an enclosed shape for conductors and nonconductors differs as a result of charge placement in the solid part of the shape, like the shell part of a hollow shell - see Rule 169. Conductors have zero electric field within themselves, and nonconductors do have some.
+          <li><strong>Internal Charge within Enclosed Shapes</strong>: As everyone knows, the charge within an enclosed shape for conductors and nonconductors differs as a result of charge placement in the solid part of the shape (like the shell part of a hollow shell) - see Rule 169. Conductors have zero electric field within themselves, and nonconductors do have some.
         
           </li><br>
         
@@ -936,7 +944,10 @@ Generally, using this equation to determine electric flux is optimal when the fl
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> If the surface of which the electric field is passing through is perpendicular to the electric field, then since the angle created between the surface and the field will be 90° (and as cos(90) = 0), there will be a net zero electric flux acting upon that surface. This is true for both uniform (see Rule 184) and nonuniform (see Rule 187) electric fields.</div><br><br>
+        </strong> If the surface of which the electric field is passing through is perpendicular to the electric field, then since the angle created between the surface and the field will be 90° (and as cos(90) = 0), there will be a net zero electric flux acting upon that surface. This is true for both uniform (see Rule 184) and nonuniform (see Rule 187) electric fields.<br><br>
+        
+NEVER, ever assume that a net zero electric flux means net zero electric <em>field</em> - it just means that all the electric field entering into the surface is passing through and out of it, which furthermore just means there is no inner charge. There can still be a net electric field at the individual points inside the surface.
+</div><br><br>
         
         
         <div class="rule"><strong>
@@ -975,16 +986,15 @@ $$\Phi_E = \oint \vec{E} d\vec{A} \cos\theta = \frac{q_{\text{enclosed}}}{\varep
 
 <strong>θ</strong> = The angle between the directions of the electric field and the direction of the infinitesimally small area d<span class="vecteur">A</span> (area having its direction perpendicular to the plane, and directed outward for closed surfaces). This value, given that all other values in the equation are positive magnitudes, determines whether the flux is positive or negative.<br><br>
 
-<strong>q<sub>enclosed</sub></strong> = The charge enclosed in the Gaussian Surface (see Rule 188).<br><br>
+<strong>q<sub>enclosed</sub></strong> = The charge enclosed in the Gaussian Surface (see Rule 189).<br><br>
 
 <strong>ε<sub>0</sub></strong> = The Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).  (see Rule 164).<br><br><br>
 
 
 
-
 This equation is known as Gauss's Law, hereafter referred to as the <strong>Charge-Flux Law</strong>. This law, in serving nonuniform electric fields (all real ones), relates electric flux through a "Gaussian surface" to the charge enclosed by said surface.<br><br>
 
-The shapes of these surfaces can be specifically chosen for characteristics that significantly simplify calculations in specific problems. See Rule 188 for what these characteristics entail.<br><br>
+The shapes of these surfaces can be specifically chosen for characteristics that significantly simplify calculations in specific problems. See Rule 189 for what these characteristics entail.<br><br>
 
 The loop on the integral sign denotes a <strong>closed surface integral</strong> (see Math Rule [[[), meaning that one must integrate over the entire closed surface to get the net flux through the surface.<br><br>
 
@@ -995,17 +1005,23 @@ The only major difference from this to integrating normally is that you essentia
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> If the net charge (q<sub>enclosed</sub>) inside a closed surface, Gaussian or otherwise, is zero, then the net electric flux through that surface/shape is zero. This is because all of the electric field entering into the shape exits right through the other side. There must be some charge coming from the inside of the object for there to be any electric flux.<br><br>
+
+          Never confuse electric field for electric flux! The Charge-Flux Law can just as easily be used to isolate net electric field as it can be used to find electric flux; indeed, the net electric field of an object is as dependent on outside charges as internal ones - 'tis what the <em>net</em> electric field acting upon an object means.</div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> A <strong>Gaussian surface</strong> is a three-dimensional closed surface in which flux of any kind is calculated.<br><br>
         
         Generally, these surfaces, when used in problems, are imaginary, though, <u>according to legend</u>, they could be real physical surfaces. Such an event, apart from the surface coinciding exactly with an actual physical surface (in which case there would be no point bothering with the Gaussian surface at all), is never used or asked for ever, and thus one should always consider Gaussian surfaces as nonexistent, imagined surfaces without the burden of it's own charge conflicting with that of another (as is the case with shells that have internal point charges).<br><br>
         
       In most cases, all references to a "Gaussian Surface" can be replaced by a simple description of a closed surface - there is <u></u>nothing particularly unique or individual the distinguishes a ""Gaussian"" surface from any other imaginary closed surface. It is just a generic surface purpose-built as a template for flux calculations - the electromagnetic industry standard for surfaces that do not carry the usual electric properties of conductors or nonconductors.<br><br>
       
-      Typically, the shapes of these surfaces are chosen such that the electric field generated by the enclosed charge is either perpendicular or parallel to the sides of the Gaussian surface. This greatly simplifies the surface integral because all the angles are multiples of 90 degrees and the cosine of those angles have a value of -1, 0, or 1. The spherical Gaussian surface is chosen so that it is concentric with the charge distribution, making the electric field constant for reasons outlined in Rule 190.<br><br>
+      Typically, the shapes of these surfaces are chosen such that the electric field generated by the enclosed charge is either perpendicular or parallel to the sides of the Gaussian surface. This greatly simplifies the surface integral because all the angles are multiples of 90 degrees and the cosine of those angles have a value of -1, 0, or 1. The spherical Gaussian surface is chosen so that it is concentric with the charge distribution, making the electric field constant for reasons outlined in Rule 191.<br><br>
       
-      As long as the amount of charge enclosed in a Gaussian surface is constant, the total electric flux through the Gaussian surface does not depend on the size of the Gaussian surface.<br><br>
-      
-      If the net charge inside a closed Gaussian surface (q<sub>enclosed</sub>) is zero, then the net electric flux through the Gaussian surface is zero. This is because all of the electric field entering into the object exits right through the other side. There must be some charge coming from the inside of the object for there to be any electric flux.
+      As long as the amount of charge enclosed in a Gaussian surface is constant, the total electric flux through the Gaussian surface does not depend on the size of the Gaussian surface. Gaussian Surfaces also follow the "outside charge = zero electric flux" rule, described in Rule 188.
       </div><br><br>
         
         
@@ -1015,11 +1031,11 @@ The only major difference from this to integrating normally is that you essentia
         </strong> Gaussian surfaces, for all intents and purposes, are theoretical constructs and are exclusively used as such.<br><br><!--Only if a question/problem explicitly states that the surface should be treated as a physical solid (which is all of <u>never</u> since they will instead describe a solid object )<br><br>
         It may be stating the obvious, but understand that future me is the most clueless baboon-brained marsupial to have tread this godforsaken earth.-->
         
-        Unlike regular solid shells/spheres/closed surfaces, Gaussian surfaces do not interact with nor influence internal or external charges whatsoever and cannot contribute <strong><em><u>ANY</u></em></strong> charge - they only contain/reflect charge from internal/outside sources. Charge upon the surface of a Gaussian sphere from any such outer source is unimpeded, it is just Gaussian Surfaces themselves produce none of it. Conductive and nonconductive solid spheres, which do contain charge which produce electric fields, have their own developed systems<!-- specific parameters--> for dealing with these intervening forces in calculations (see Rule [[[).<br><br>
+        Unlike regular solid shells/spheres/closed surfaces, Gaussian surfaces do not interact with nor influence internal or external charges whatsoever and cannot contribute <strong><em><u>ANY</u></em></strong> charge - they only contain/reflect charge from internal/outside sources. Charge upon the surface of a Gaussian sphere from any such outer source is unimpeded, it is just Gaussian Surfaces themselves produce none of it. Conductive and nonconductive solid spheres, which do contain charge which produce electric fields, have their own developed systems<!-- specific parameters--> for dealing with these intervening forces in calculations (see Rule 193).<br><br>
         
         This is the result of Gaussian Surfaces purely being constructs solely intended for the calculation of the <em>magnitude</em> of the electric field or flux produced by any charged object. As such, a "Gaussian Shell" is never used, since shells only have purpose in electric field calculations when there is an internal charge to the shell that can affect the net electric field/flux at a point, which is null and irrelevant with regard to Gaussian Surfaces, which can have all spherical distances/calculations accounted for solely using Gaussian Spheres.<br><br>
         
-        In effect, Gaussian Surfaces are mere mathematical, superimposed bodies exploiting symmetry, with no effect of their own on anything: bodies in space whose only purpose is the use of their positioning, whether through symmetry or whatever (see Rule 188), to calculate flux or field at a particular distance from a charge in space, free from the interference of some internal charge. </div><br><br>
+        In effect, Gaussian Surfaces are mere mathematical, superimposed bodies exploiting symmetry, with no effect of their own on anything: bodies in space whose only purpose is the use of their positioning, whether through symmetry or whatever (see Rule 189), to calculate flux or field at a particular distance from a charge in space, free from the interference of some internal charge. </div><br><br>
         
         
         <strong><a href="#ConcentricDef"><span class="mw-headline" id="ConcentricDef">#</span></a> <font color="#006400">Concentric</font></strong>: The state of objects sharing the same center. Objects are said to be <em>concentric</em> to one another when they share the same center.
@@ -1035,6 +1051,102 @@ Thus, for all concentric entities surrounding a point charge, where each point o
 In such cases (limited specifically to circular and circularly-shaped object), the <span class="vecteur"><strong>E</strong></span> variable of the Nonuniform Electric Flux equation (see Rule 187) can be moved outside of the integral, since it will be a constant.<br><br>
 
 Additionally, in these cases, the cos(θ) will equal one and thus be removed, since the angle between the electric field and every area d<span class="vecteur"><strong>A</strong></span> will equal zero, since they are both outward and in the same direction.<!-- Note the absence of the cos(θ) that previously resulted from the dot product. , --></div><br><br>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The individual locations of the charges within an enclosed surface are irrelevant to calculating electric flux or any variable (like Electric Field) using the Charge-Flux Law. All that is needed is the net electric charge within the surface/object - positioning is meaningless, the charges could be in each corner of a cube and it wouldn't matter.<br><br>
+
+The net Electric Field, however, does require knowledge of the position of the charges, whether they are inside or outside of the enclosed object (due to the nature of the net electric field reflecting the collective influence of all electric fields surrounding the object, which is to say, every charge).<br><br>
+
+This, of course, is given that you are calculating for electric field in particular, and not for electric flux itself, in which case outside charges contribute zero net flux to an object and thus do not need to be accounted for (see Rule 188).</div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Electric Fields, as influenced by the Placement of Charge within Conductors & Nonconductors:</strong><br><br>
+        
+        The placement of charge on the surface and thickness of an object as a result of its material (conductor or nonconductor, as previously described in Rule 169), is of considerable effect on the electric field produced by the object.<br><br>
+
+Note that for the purposes of this section, an "<em>internal electric field</em>" is the electric field contained within the hollow part of an object, whether that object be a shell or whatever.<br><br>
+
+Since the charge of a <strong>conductor</strong> is solely dispersed along the surface of the object, the internal electric field of a charged, isolated conductor is zero, and the external field (at nearby points) is perpendicular to the surface and has a magnitude that depends on the surface charge density <strong>σ</strong>.<br><br>
+
+Within the thickness of a conducting <em>shell</em>, the electric field will remain zero, since the charge will remain concentrated on the surface of the charge and thus will not produce <em>anything</em> internally, regardless of whether "internal" means the hollow part of the shell or the material itself.<br><br>
+
+Though nonspherical conductors do not have uniform charge density, even at their surface (as described in Rule 169), a general equation for the electric field immediately outside of the surface of the nonspherical shape can be determined quite easily, elaborated upon and derived in Rule 194.<br><Br>
+
+
+<strong>Nonconductors</strong>, which have their charge distributed in their thickness wherever it is placed (generally expressed in problems as following a particular formula involving radius, or as simply a matter of uniform volumetric charge density), will have an internal electric field in practically all circumstances, the only exception being situations in which the charge is solely placed on the surface.<br><br>
+
+<!--
+The reason for this can be visualized simply: if you were to imagine a Gaussian Surface around the hollow part of a shell or similarly internal part of a shape, you will find that with there being zero electric charge on the inside of the surface, there can be zero electric flux (see Rule 188). However, as noted in Rule 185, zero electric flux does NOT mean zero electric field, just that all electric field going in is leaving.<br><br>
+-->
+
+
+
+<!--
+Only while a conductor is <em>being</em> charged, while it is <em>in the process</em> of being charged (which rarely apppears in problems), does there appear an internal electric field. Of course, the added charge will distribute itself along the surface extremely quickly.
+-->
+
+
+<!--
+For a uniformly charged nonconducting <em>shell</em> specifically, questions will occasionally demand you assume all the charge is 
+
+The Charge-Flux Law still applies in determining the electric field at points inside and outside the shell. Inside the hollow region, the electric field remains zero, just as in the conductive case.
+-->
+
+
+Within the shell’s thickness (between the hollow interior and the surface), the field is nonzero and varies based on the charge distribution. Outside the shell, a uniformly charged nonconducting shell behaves similarly to a conductive shell, producing an external field equivalent to that of a point charge located at the shell’s center (Shell Theorem #1 - see Rule 170).</div><br><br>
+        
+        
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> The equation for the electric field on the surface of any conducting object, spherical or nonspherical, can be easily determined using the Charge-Flux Law.<br><br>
+
+Imagine a conducting object of any shape. By the laws explained<!--previously "discovered"--> in Rule 169 (and noted again in Rule 193), this object, if nonspherical, will not have uniform charge density at its surface, though its charge will still be <em>concentrated</em> at its surface under the laws outlined in Rule 169.<br><br>
+
+Through the creation of an extremely small cylinder perpendicularly bisecting the surface of the conducting object at a particular point (the size of bisection being small enough that, there, the object's surface can be considered flat, and the electric field thus perfectly perpendicular), one can discover that the only electric flux being produced is upon the cap of the cylinder, since the curved sides of the cylinder will be perpendicular to the object (nullifying the cosine of the Charge-Flux equation - see Rule 193).<br><br>
+
+Thus, in using the uniform Charge-Flux Theorem (uniform because the cylinder is small enough and directly upon the surface that the electric field can be considered perfectly perpendicular and constant at exactly that point/scale), all one needs to do is find the electric flux occurring on the cap of the cylinder, which will lead directly to an equation for the electric field.<br><br>
+
+The flux of the cap of the cylinder, being such a small distance away from the surface itself, can be taken to be the flux of that cap-shaped portion of the surface of the object itself. From there, the derivation of the equation simply follows these logical movements:<br><br>
+
+The charge q<sub>enc</sub> enclosed by the Gaussian surface lies on the conductor’s surface in an area A. If σ is the charge per unit area, then q<sub>enc</sub> is equal to σA. In the uniform Charge-Flux Law, substituting EA in for flux (since the cosine is nullified by the perpendicular electric field - see Rule 185), and σA in for q<sub>enc</sub>, will produce the following equation (after simplification):<br><br>
+
+<strong>E = (σ / ε<sub>0</sub>)</strong><br><br>
+
+<strong>E</strong> = The electric field on the surface of a conductor.<br>
+<strong>σ</strong> = The charge per unit area on the surface of the conductor.<br>
+<strong>ε<sub>0</sub></strong> = The Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).
+
+</div><br><br>
+        
+        
+        
+        <strong><font color="blue"><a href="#ElectricInfiniteLine"><span class="mw-headline" id="ElectricInfiniteLine">#</span></a> Electric Field Near Infinite Charged Line:</font></strong><br><br>
+
+The electric field at a point near (read: not infinitely away from) an infinite line of charge (or charged rod) with uniform linear charge density 𝜆 is <u>perpendicular</u> to the line, and is defined by the following equation:
+
+$$E = \frac{\lambda}{2\pi \varepsilon_0 r}$$
+
+<strong>E</strong> = The magnitude of the electric field near (at a distance r from) a charged rod.<br>
+<strong>λ</strong> = Linear Charge Density. See treatise <a href="#LinearChargeDensity">here</a>.<br>
+<strong>ε<sub>0</sub></strong> = The Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).
+<br>
+<strong>r</strong> = The perpendicular distance from the line to the point.<br><br>
+
+
+The derivation is fairly simple, using a cylinder to find the electric field of the radial point in space (the infinite line running along the central axis of the cylinder), from there using the Charge-Flux Law as one normally would, nullifying the caps of the cylinder as being perpendicular to the electric field produced by the line (and thus giving no flux - see Rule 185) and only using the area of the curved side (2πrh) in the calculations. The enclosed charge being substituted for λh (since the linear charge density is uniform), this all simplifies down to the equation given.<br><Br>
+
+This equation also approximates the field of a <em>finite</em> line of charge at points that are not too near the ends, in relation to the distance r from the line.<br><br>
+
+If the rod has a uniform volume charge density ρ, a similar procedure can be used to find the magnitude of the electric field <strong>inside</strong> the rod (given the rod is not purely a flat axial line). All that would need to be done is to shrink the  cylinder until it itself is inside the rod: as a result, the charge q<sub>enc</sub> enclosed by the cylinder would  be proportional to the volume of the rod enclosed by the cylinder, since the charge density is uniform. From there, apply the Charge-Flux Law as before, the caps of the cylinder again getting nullified, r still being the radius of the cylinder itself (effectively the distance between the center of the rod to the edge of the cylinder).
+
+<br><br><br>
+        
         
         
         
@@ -1088,7 +1200,7 @@ Additionally, in these cases, the cos(θ) will equal one and thus be removed, si
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 6 2025</span><br>
+      	<span class="tiny">Last Change: March 9 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

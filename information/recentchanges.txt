@@ -2,6 +2,10 @@ CHANGE LOG
 
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
+
+March 10 2025: A total revision of Physics Rule 193, which led to the creation of a new Rule dealing with Asymmetric Charge Distribution, as to cover a topic that was becoming too large to be all described within Rule 193 itself. That, alongside the addition of a new subsection to deal with the new electric fields created using the Charge-Flux Law that were impossible to derive before.
+Rules Added: Physics, Electromagnetism - Rule 195.
+
 March 9 2025: Physics work, to a degree that has not been seen in some time and what must be replicated everyday in the future - akin to what was accomplished during late December/early January for Cryptography. I have come to a level of confusion on a particular subject (that of the internal electric field of a nonconducting shell), only exacerbated by the supposed "educational tool" of the internet: multitudes of contradicting answers and conflicting explanations, from artificial intelligence, to the incomplete and vague explanation in the textbooks, to those given on Physics forums by the woefully incompetent and neglectful of the fact that net zero electric flux does not mean net zero electric field, nor does it necessarily imply it. Thus only goes to show the inherant value of the Human Knowledge Project in presenting an unadulterably true and absolute description and elaboration on scientific/physical concepts, backed up purely using the already known principles and equations. Cutting through the noise to present a simple, intuitive understanding - this will realize the internet for its highest and greatest possible purpose, a potential, as shown, that is currently unfulfilled. I will have to seek help from an expert on the topic, of whom the closest to which will be my physics teacher.
 Rules Added: Physics, Electromagnetism - Rule 193, 194.
 

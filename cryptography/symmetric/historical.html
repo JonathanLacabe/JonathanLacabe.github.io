@@ -139,9 +139,10 @@ document.addEventListener("DOMContentLoaded", function (){
 <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">C. Rule 7.</font></strong> 
-	    
-	    <strong>Substitution Cipher</strong><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Substitution Cipher</strong><br><br>
 A historical cipher, operating purely on letters, in which every plaintext letter is replaced by a fixed ciphertext letter. It is just scrambling the letters, nothing more.<br><br>
 
 The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext letter decreases the remaining number of possible letters. Thus, a brute-force attack would be out of the question for modern computers.<br><br>
@@ -150,7 +151,8 @@ Since the different letters of the English alphabet have different frequencies, 
 
 This is an example of a cipher/algorithm in which an Analytical Attack is most effective.
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    </article>
 	    <header class="articleHeader"><hr>
@@ -158,7 +160,10 @@ This is an example of a cipher/algorithm in which an Analytical Attack is most e
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">C. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Modular Arithmetic</strong>:<br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 <em>(a, r, m) ∈ <strong>ℤ</strong><br>
@@ -184,9 +189,13 @@ For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
 
 The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.
 
-<br><br><br>
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">C. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
 	  To find the remainder when m and a are large, burdensome numbers, there is an exact, algorithmic definition:<br><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
@@ -204,9 +213,13 @@ Thus, a - r = q × m<br><br>
 <strong>r</strong> = The remainder.<br>
 <strong>m</strong> = The modulus, the highest possible number in the set.<BR><br>
 The final equation is precisely the same as what was discovered before, and q is not involved whatsoever - all that matters is the remainder.
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">C. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Equivalence Classes</strong>:<br><br>
 
 While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. This is because, while the remainders may not exactly be the difference between 'a' (12) and the <u>highest</u> multiple of m lesser than a (9), they all still return true in the Modular Arithmetic formula (see Rule 8):<br><br>
 
@@ -223,9 +236,13 @@ If any of these values were to be substituted in for r (3) in 3 mod 9, it would 
 
 Note: There are 'm' equivalence classes for each possible remainder (0 through m-1), which collectively contain all possible integers. The difference between any two neighboring values in an equivalence class will be the modulus, as shown above.
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">C. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Modular Reduction</strong>:<br><br>
 	  Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions in mathematical operations that use the modulus operator can be performed, simplifying them.<br><br>
 
 Take (13 × 16) - 8, with modulus 5. While the full number can be computed (200) and an answer derived from there (0 mod 5), that is lame and time-consuming. A much cooler, faster, 21st century means of solving the problem is to substitute in for each term the simplest member of their respective equivalence classes:<br><br>
@@ -248,10 +265,14 @@ Substraction<br><br>
 Exponentials<br>
 Division
 	  
+	  </div><br><br>
 	  
-	  <br><br><br>
 	  
-	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">C. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.
+	  </div><br><br>
 	  
 	  
 	  </article>
@@ -264,8 +285,10 @@ Division
       <br><br><br>
 	    
 	  
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">C. Rule 13.</font></strong> 
-	    <strong>Algebraic Modular Arithmetic</strong>:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Algebraic Modular Arithmetic</strong>:<br><br>
 
 Modular Arithmetic can be defined in the form of an integer ring:<br><br><br>
 <em>
@@ -277,7 +300,8 @@ The integer ring <strong>ℤ</strong><sub>m</sub> consists of the following char
 </em><br><br><br>
 
 There are many overshadowing rules that every ring has to fulfill, seen in the section "RULES OF THE RING" below.
-	    <br><br><br>
+	    </div><br><br>
+	    
 	  
 	  <div title="You WILL accept these as true. You WON'T try to figure out how they were derived."><strong><font color="blue"><a href="#RingRules"><span class="mw-headline" id="RingRules">#</span></a> RULES OF THE RING:</font></strong></div><br>
   These following rules hold true for all integer rings in general, not just modular arithmetic.<br><br>
@@ -314,17 +338,25 @@ If there exists an inverse for a, then, a rare usage of division in the modular 
 </ol>
 
 <br><br>
+
 	  
-	  <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">C. Rule 14.</font></strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
 <br><br>
 
 If <strong>gcd(a, m) = 1</strong>, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br><br>
 If <strong>gcd(a, m) ≠ 1</strong>, then there does <u>NOT</u> exist a⁻¹.<br><br>
 If m is prime, then gcd(a, m) will always equal to 1, for all nonzero 'a' values, and thus every 'a' value will have an inverse in those rings. The inverse of an integer completely depends on the ring, and thus the modulus.
 
-	  <br><br><br>
+	  </div><br><br>
 	  
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">C. Rule 15.</font></strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in RULE OF THE RING #7):<br><br>
+	  
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in RULE OF THE RING #7):<br><br>
 
 <strong>a × a⁻¹ ≡ 1 mod m</strong>
 <br><br>
@@ -333,7 +365,8 @@ Though the multiplicative inverse of a is literally shown as a⁻¹, it is almos
 
 Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is not included in the set. A different inverse must be found specific to the modulus; if the modulus were 3, then an inverse of '2' would work:<br><br>
 <strong>2 × 2 ≡ 1 mod 3</strong>
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    
 	  
@@ -344,7 +377,10 @@ Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is 
 	    <article>
 	    
 	  
-	  <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">C. Rule 16.</font></strong> <strong>Shift Cipher:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Shift Cipher:</strong><br><br>
 	  
 	  
 	  <strong><u>Mathematical Definition</u></strong>:<br><br>
@@ -377,9 +413,13 @@ As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the 
 
 It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (previously explained in relation to Substitution Ciphers - see Rule 7) and brute-force attacks (see Rule 5).
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Vigenère Cipher</strong><br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Vigenère Cipher</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -404,8 +444,6 @@ It should be obvious to all this is an extremely unsecure cryptosystem, with a k
 
 <br><br><br>
 
-
-
 <strong><u>Explanation:</u></strong><br><br>
 
 A mere variation of the Shift cipher, in which the shift for each letter is determined by a secret code word 'c', which has 'l' letters. Each character in the code word c represents a number of shifts rightward according to its cipher.<br><br>
@@ -417,7 +455,7 @@ This dictates that the length of the code word must be the same or larger than t
 
 The decryption function, of course, is just the opposite of the encryption function, moving each character of the ciphertext backward by the value in the positional counterpart of the code word 'c'.
 
-<br><br><br>
+</div><br><br>
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -425,7 +463,10 @@ The decryption function, of course, is just the opposite of the encryption funct
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> <strong>Affine Cipher:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Affine Cipher:</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -466,16 +507,23 @@ The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to br
 Furthermore, letter frequency also remains preserved (since any of a particular character (plaintext) will always be converted to another specific character (ciphertext), despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
 
 Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule 43).
-<br><br><br>
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
-	  <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">C. Rule 20.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
 Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
-<br><br>
+</div><br>
 	    
 	    </article>
 	  </div>
@@ -511,7 +559,7 @@ Also recall that the mod operator will simply remain in place - it can be practi
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 6 2025</span><br>
+      	<span class="tiny">Last Change: March 12 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

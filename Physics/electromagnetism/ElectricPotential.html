@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Electric Potential (Electromagnetism) Summary</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
+  </head>
+<body>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
+
+<img src="/_other/logos/Electro_Magnetism.png" width=45%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><em>Art by Shoaib Pasha.</em></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Electric Potential (Electromagnetism)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Electric Potential in Electromagnetism. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  
+	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#VoltageSection">XV.I Voltage.</a>
+        </div>
+        
+        <div class="toc-column">
+          
+        </div>
+        
+      </div>
+      
+	  
+	  <div class="rules" data-start="197">
+	  <hr>
+	  <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="ElectricPotential">XV. Electric Potential</span></h2>
+    	<h3><span class="mw-headline" id="VoltageSection">XV.I Voltage.</span></h3>
+	  </header>
+	  <article>
+	  
+	  <strong><font color="blue"><a href="#ElectricPotentialIntro"><span class="mw-headline" id="ElectricPotentialIntro">#</span></a> Introduction to Electric Potential:</font></strong><br><br>
+
+          Electric potential energy works much the same as gravitational potential energy. As an object has greater gravitational potential energy the farther away it is from the source of its atraction, two oppositely charged objects, attracted to one another, will have greater <em>electric</em> potential energy the farther they are from one another. Their attraction inherently transforms this potential energy into kinetic energy as they attract, a result of the Conservation of Mechanical Energy.<br><br>
+
+            Obversely, two charged objects that repel will have their greatest potential energy when they are closest, increasing in kinetic energy as they farthern from one another.<br><br>
+            
+            This is the essence of electric potential energy: the potential for two charged objects to attract or repel from one another, to <em>move</em> as a result of the electric force produced by their interacting electric fields.
+          
+          <br><br><br>
+	  
+	        
+	        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Finding an equation to express electric potential is no difficult task at all. As a conservative force, the electric force can have all of the existing equations for potential energy and work (see Rule 100) applied:<br><br>
+
+        <strong>F<sub>E</sub> = -(dU<sub>e</sub> / dr)</strong>
+        
+        The electric force equals the negative of the derivative of the "electric potential energy" with respect to position (the infinitesimally small change in position dr).<br><br>
+        
+        By simplifying this equation slightly, as in moving variables around, integrating both sides, and substituting in values for electric force, a new and improved Change in Electric Potential equation can be developed:
+        
+        $$\Delta U_e = -q \int_{A}^{B} E \cos\theta \, dr$$
+        
+        <strong>∆U<sub>e</sub></strong> = The change in electric potential energy. It does <u>not</u> depend on the path taken between point A and point B - rather, all that is required is the displacement itself.<br><br>
+        
+        <strong>q</strong> = The magnitude of the charge/charged particle of the particular point being measured.<br><br>
+        
+        <strong>A</strong> = A generic starting point of a path taken in an electric field.<br><br>
+        
+        <strong>B</strong> = A generic ending point of a path taken in an electric field.<br><br>
+        
+        <strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of the electric field at a particular point.<br><br>
+        
+        <strong>θ</strong> = The angle between the directions of the electric field and the direction of the infinitesimally small displacement dr. When the charge is moving in the direction opposite that of the electric field, the angle will be 180°, and the negative of the resulting cosine will cancel out with the one outside the integral.<br><br><br>
+        
+        The potential energy of a positive charge increases as it moves opposite the direction of the electric field, while the potential energy of the negative charge will decrease as it moves opposite the direction of the field.</div><br>
+      
+      
+      
+	    </article>
+	</div>
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+      <br>
+        <strong><a href="/Physics/Electromagnetism.html">Electromagnetism</a></strong><br>
+        <article><strong><a href="/Physics/ElectroFull.html">Complete Electromagnetism</a></strong></article>
+        <br>
+        <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong>Electric Potential</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: March 17 2025</span><br>
+      	<span class="tiny">Jonathan Lacabe 2025</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

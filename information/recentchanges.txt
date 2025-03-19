@@ -3,6 +3,14 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 17 2025: SAT tomorrow, and I've been focused on it solely for the past few days - now is currently the dark ages, soon to become the great golden age of the Human Knowledge Project - the rest of Electric Potential, Capacitance, and Circuitry for Physics, and then the entirety of Cryptography over the next few weeks. Today, only some minor upkeep actions were taken, some old to-do list activities: changing referencing to sections (like X) and subsections (X.II) to reflect the correct naming schemes (which had been neglected and randomly applied), for example.
+
+March 12 2025: The conversion of all pages to the new javascript Rule numbering system has completed, finishing with Block Ciphers in Cryptography. The finishing of it was delayed by a few days with increased concentration in Physics studies, but has now been completed and will likely not see any tweaks/changes for the forseeable future. Additionally, Physics work as always, with work particularly focusing in Electric Potential. Furthermore, all units that involve names (like "Newtons" and "Coulombs") have been capitalized. The Table of Contents for Mechanics was also fixed to have complete linking to all sections and subsections. I also realized that since there are going to be multiple sections to Electromagnetism (of which I have only worked on Electrostatics thus far), and that considering that the current "Complete Notes" page is getting considerably long, it would be best to add multiple pages for the complete notes as I did for Classical Mechanics.
+Rules Added: Physics, Electromagnetism - Rule 197.
+
+March 11 2025: A full treatise on Electric fields within and outside of spherical shells has been included (proving the shell theorems of P. Rule 170), though full proofs for the mathematics will have to be completed at another time and linked as an aside reference - for now, the equations themselves are enough. This concludes all of the "new electric fields" derivable using the Charge-Flux Law, a somewhat trivial series that has been enclosed within its own section. Now onto Electric Potential proper.
+Rules Added: Physics, Electromagnetism - Rule 196.
+
 March 10 2025: A total revision of Physics Rule 193, which led to the creation of a new Rule dealing with Asymmetric Charge Distribution, as to cover a topic that was becoming too large to be all described within Rule 193 itself. That, alongside the addition of a new subsection to deal with the new electric fields created using the Charge-Flux Law that were impossible to derive before.
 Rules Added: Physics, Electromagnetism - Rule 195.
 
@@ -18,7 +26,7 @@ March 6 2025: Calculus work. Considerable work in Physics as well, patching the 
 Rules Added: Physics, Electromagnetism - Rule 189, 190.
 Rules Added: Mathematics, Single Variable Calculus - Rule 163.
 
-March 5 2025: I have completed the conversion of all Algebra 2, Precalculus, & Single-Variable Calculus Rules (all of math) to the new javascript rule numbering system. Additionally, I added a Calculus Rule - I intend to rebegin the rule-per-day system for adding the existing Calculus Rules, as there certainly is no shortage of paper notes remaining to be digitized.
+March 5 2025: I have completed the conversion of all Algebra 2, Precalculus, & Single-Variable Calculus Rules (all of math) to the new javascript Rule numbering system. Additionally, I added a Calculus Rule - I intend to rebegin the rule-per-day system for adding the existing Calculus Rules, as there certainly is no shortage of paper notes remaining to be digitized.
 Rules Added: Mathematics, Single Variable Calculus - Rule 162.
 
 March 4 2025: The main page was updated to have the internal pages be the first thing available, which really should have been done a while ago. It looks a bit simple right now, but I might improve it soon after I get feedback from users. 

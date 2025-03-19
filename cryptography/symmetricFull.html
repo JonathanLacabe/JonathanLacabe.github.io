@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function (){
 Until 1976, this was the only form of cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Hash functions are somewhat similar to symmetric algorithms, though they can be considered an independent, <em>third</em> type of Cryptographic algorithm.
 <br><br><br>
 
-<strong><a href="#AsymmetricDef"><span class="mw-headline" id="AsymmetricDef">#</span></a> <font color="#006400">Asymmetric/Public-Key Algorithms</font></strong>: The new cryptography, which all modern cryptosystems and what much of the infrastructure of the Internet, is based on. Invented by the Diffie-Hellman team in 1976, Public-Key Cryptography functions by having each party have <strong>TWO</strong> keys, a private key and a public key. <br><br>For more detail on how these functions work, see the "Public-Key Cryptography" section ([[[[[), but know they are used in a variety of fashions: digital signatures, key establishment/management, and more!
+<strong><a href="#AsymmetricDef"><span class="mw-headline" id="AsymmetricDef">#</span></a> <font color="#006400">Asymmetric/Public-Key Algorithms</font></strong>: The new cryptography, which all modern cryptosystems and what much of the infrastructure of the Internet, is based on. Invented by the Diffie-Hellman team in 1976, Public-Key Cryptography functions by having each party have <strong>TWO</strong> keys, a private key and a public key. <br><br>For more detail on how these functions work, see the "Public-Key Cryptography" Section ([[[[[), but know they are used in a variety of fashions: digital signatures, key establishment/management, and more!
 <br><br><br>
 
 <strong><a href="#ProtocolsDef"><span class="mw-headline" id="ProtocolsDef">#</span></a> <font color="#006400">Protocols</font></strong>: Collective cryptographic algorithms that serve a complex security function, like a library of algorithms that work together for a common goal. For example - the Transport Layer Security scheme (TLS) and the Hypertext Transfer Protocol (HTTP) are used in every web browser.<br><br> In the words of Edward Snowden, "[The Internet of Things and countless] protocols have given us the means to digitize and put online damn near everything in the world that we don’t eat, drink, wear, or dwell in." 
@@ -340,8 +340,8 @@ In order for a cryptosystem to be considered secure, it must be resistant agains
 </div><br><br>
 
 <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See section I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both type have their own strengths and weaknesses.
 <br><br><br>
@@ -437,9 +437,10 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
 <br><br><br>
 	    
 	    
-	    <strong><a href="#Rule7"><span class="mw-headline" id="Rule7">#</span></a> <font color="red">C. Rule 7.</font></strong> 
-	    
-	    <strong>Substitution Cipher</strong><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Substitution Cipher</strong><br><br>
 A historical cipher, operating purely on letters, in which every plaintext letter is replaced by a fixed ciphertext letter. It is just scrambling the letters, nothing more.<br><br>
 
 The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext letter decreases the remaining number of possible letters. Thus, a brute-force attack would be out of the question for modern computers.<br><br>
@@ -448,7 +449,8 @@ Since the different letters of the English alphabet have different frequencies, 
 
 This is an example of a cipher/algorithm in which an Analytical Attack is most effective.
 	    
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    </article>
 	    <header class="articleHeader"><hr>
@@ -456,7 +458,10 @@ This is an example of a cipher/algorithm in which an Analytical Attack is most e
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule8"><span class="mw-headline" id="Rule8">#</span></a> <font color="red">C. Rule 8.</font></strong> <strong>Modular Arithmetic</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Modular Arithmetic</strong>:<br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 <em>(a, r, m) ∈ <strong>ℤ</strong><br>
@@ -482,9 +487,13 @@ For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
 
 The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.
 
-<br><br><br>
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule9"><span class="mw-headline" id="Rule9">#</span></a> <font color="red">C. Rule 9.</font></strong><strong> Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Modular Arithmetic: Computation of the Remainder.</strong><br><Br>
 	  To find the remainder when m and a are large, burdensome numbers, there is an exact, algorithmic definition:<br><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
@@ -502,9 +511,13 @@ Thus, a - r = q × m<br><br>
 <strong>r</strong> = The remainder.<br>
 <strong>m</strong> = The modulus, the highest possible number in the set.<BR><br>
 The final equation is precisely the same as what was discovered before, and q is not involved whatsoever - all that matters is the remainder.
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">C. Rule 10.</font></strong> <strong>Equivalence Classes</strong>:<br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Equivalence Classes</strong>:<br><br>
 
 While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. This is because, while the remainders may not exactly be the difference between 'a' (12) and the <u>highest</u> multiple of m lesser than a (9), they all still return true in the Modular Arithmetic formula (see Rule 8):<br><br>
 
@@ -521,9 +534,13 @@ If any of these values were to be substituted in for r (3) in 3 mod 9, it would 
 
 Note: There are 'm' equivalence classes for each possible remainder (0 through m-1), which collectively contain all possible integers. The difference between any two neighboring values in an equivalence class will be the modulus, as shown above.
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">C. Rule 11.</font></strong> <strong>Modular Reduction</strong>:<br><br>
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Modular Reduction</strong>:<br><br>
 	  Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions in mathematical operations that use the modulus operator can be performed, simplifying them.<br><br>
 
 Take (13 × 16) - 8, with modulus 5. While the full number can be computed (200) and an answer derived from there (0 mod 5), that is lame and time-consuming. A much cooler, faster, 21st century means of solving the problem is to substitute in for each term the simplest member of their respective equivalence classes:<br><br>
@@ -546,10 +563,14 @@ Substraction<br><br>
 Exponentials<br>
 Division
 	  
+	  </div><br><br>
 	  
-	  <br><br><br>
 	  
-	  <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">C. Rule 12.</font></strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.<br><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class for your final answer.
+	  </div><br><br>
 	  
 	  
 	  </article>
@@ -562,8 +583,10 @@ Division
       <br><br><br>
 	    
 	  
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">C. Rule 13.</font></strong> 
-	    <strong>Algebraic Modular Arithmetic</strong>:<br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Algebraic Modular Arithmetic</strong>:<br><br>
 
 Modular Arithmetic can be defined in the form of an integer ring:<br><br><br>
 <em>
@@ -575,7 +598,8 @@ The integer ring <strong>ℤ</strong><sub>m</sub> consists of the following char
 </em><br><br><br>
 
 There are many overshadowing rules that every ring has to fulfill, seen in the section "RULES OF THE RING" below.
-	    <br><br><br>
+	    </div><br><br>
+	    
 	  
 	  <div title="You WILL accept these as true. You WON'T try to figure out how they were derived."><strong><font color="blue"><a href="#RingRules"><span class="mw-headline" id="RingRules">#</span></a> RULES OF THE RING:</font></strong></div><br>
   These following rules hold true for all integer rings in general, not just modular arithmetic.<br><br>
@@ -612,17 +636,25 @@ If there exists an inverse for a, then, a rare usage of division in the modular 
 </ol>
 
 <br><br>
+
 	  
-	  <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">C. Rule 14.</font></strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:
 <br><br>
 
 If <strong>gcd(a, m) = 1</strong>, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br><br>
 If <strong>gcd(a, m) ≠ 1</strong>, then there does <u>NOT</u> exist a⁻¹.<br><br>
 If m is prime, then gcd(a, m) will always equal to 1, for all nonzero 'a' values, and thus every 'a' value will have an inverse in those rings. The inverse of an integer completely depends on the ring, and thus the modulus.
 
-	  <br><br><br>
+	  </div><br><br>
 	  
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">C. Rule 15.</font></strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in RULE OF THE RING #7):<br><br>
+	  
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in RULE OF THE RING #7):<br><br>
 
 <strong>a × a⁻¹ ≡ 1 mod m</strong>
 <br><br>
@@ -631,7 +663,8 @@ Though the multiplicative inverse of a is literally shown as a⁻¹, it is almos
 
 Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is not included in the set. A different inverse must be found specific to the modulus; if the modulus were 3, then an inverse of '2' would work:<br><br>
 <strong>2 × 2 ≡ 1 mod 3</strong>
-	    <br><br><br>
+	    </div><br><br>
+	    
 	    
 	    
 	  
@@ -642,7 +675,10 @@ Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is 
 	    <article>
 	    
 	  
-	  <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">C. Rule 16.</font></strong> <strong>Shift Cipher:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Shift Cipher:</strong><br><br>
 	  
 	  
 	  <strong><u>Mathematical Definition</u></strong>:<br><br>
@@ -675,9 +711,13 @@ As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the 
 
 It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (previously explained in relation to Substitution Ciphers - see Rule 7) and brute-force attacks (see Rule 5).
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">C. Rule 17.</font></strong> <strong>Vigenère Cipher</strong><br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Vigenère Cipher</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -702,8 +742,6 @@ It should be obvious to all this is an extremely unsecure cryptosystem, with a k
 
 <br><br><br>
 
-
-
 <strong><u>Explanation:</u></strong><br><br>
 
 A mere variation of the Shift cipher, in which the shift for each letter is determined by a secret code word 'c', which has 'l' letters. Each character in the code word c represents a number of shifts rightward according to its cipher.<br><br>
@@ -715,7 +753,7 @@ This dictates that the length of the code word must be the same or larger than t
 
 The decryption function, of course, is just the opposite of the encryption function, moving each character of the ciphertext backward by the value in the positional counterpart of the code word 'c'.
 
-<br><br><br>
+</div><br><br>
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -723,7 +761,10 @@ The decryption function, of course, is just the opposite of the encryption funct
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">C. Rule 18.</font></strong> <strong>Affine Cipher:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Affine Cipher:</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -764,16 +805,26 @@ The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to br
 Furthermore, letter frequency also remains preserved (since any of a particular character (plaintext) will always be converted to another specific character (ciphertext), despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
 
 Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule 43).
-<br><br><br>
+</div><br><br>
+
 	  
-	  <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">C. Rule 19.</font></strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
-	  <strong><a href="#Rule20"><span class="mw-headline" id="Rule20">#</span></a> <font color="red">C. Rule 20.</font></strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
 Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
-<br><br><br>
+</div><br><br>
+	  
+	  
+	  
 	  
 	  
 	  
@@ -793,10 +844,13 @@ Also recall that the mod operator will simply remain in place - it can be practi
 	  <article><br>
 
 <strong>Fig. 3. - Symmetric Cryptography Hierarchy:</strong><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and see Rule 5 for Cryptanalysis." width=58%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See section I.I for the full tree, and see Rule 5 for Cryptanalysis.</em></span><br><br><br>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 5 for Cryptanalysis." width=58%/></a></div>
+	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 5 for Cryptanalysis.</em></span><br><br><br>
 	  
-	  <strong><a href="#Rule21"><span class="mw-headline" id="Rule21">#</span></a> <font color="red">C. Rule 21.</font></strong> <strong>Stream Ciphers</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Stream Ciphers</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -829,7 +883,6 @@ Using this symbol, the encryption and decryption functions of the basic stream c
 	    <span class="tiny"><em>A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function.</em></span><br><br>
 
 
-
 If the key bit is zero, then the plaintext bit will pass through unchanged, but if the key bit is 1, then the plaintext bit will flip (like binary). Thus, if the keystream (by divine intervention) is straight 0's, then the plaintext will go unencrypted. <br><br>
 The central complexity of the Stream Cipher is the generation of the "Key Stream", e.g. the stream of bits with which the plaintext is encrypted. This generation must be performed through <em>Random Numbers</em> - see Rule 23.
 <!--Most beautiful 90 seconds in cryptography:
@@ -838,7 +891,8 @@ https://youtu.be/AELVJL0axRs?list=PL2jrku-ebl3H50FiEPr4erSJiJHURM9BX&t=1520
 the Mozart Piano Concerto #21 Andante of cryptography lecture segments
 
 -->
-	  <br><br><br>
+	  </div><br><br>
+	  
 	  
 	  <strong><a href="#KeyStreamDef"><span class="mw-headline" id="KeyStreamDef">#</span></a> <font color="#006400">Key Stream</font></strong>: A <u><em>stream</em></u> of characters that is combined with the plaintext to produce the ciphertext in a Stream Cipher, or, in the case of asynchronous stream ciphers, combined with a previous ciphertext to produce a new ciphertext.<br><br>
 
@@ -852,11 +906,15 @@ The key stream is <u>derived</u> from the <em>key</em> and the seed. Generally, 
 	  <strong><a href="#AsynchronousStreamDef"><span class="mw-headline" id="AsynchronousStreamDef">#</span></a> <font color="#006400">Asynchronous Stream Cipher</font></strong>: A Stream Cipher in which the key stream depends on the ciphertext in addition to the key - the key generation is reliant on previous ciphertext, making it a risky operation. An example is the Cipher Feedback (CFB) mode.
 <br><br><br>
 	  
-	  <strong><a href="#Rule22"><span class="mw-headline" id="Rule22">#</span></a> <font color="red">C. Rule 22.</font></strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br>
 	  
 	  Note that this does <STRONG>NOT</STRONG> extend to the modulus of any other number - only for two. See the Vigenère Cipher (see Rule 17), which works akin to a stream cipher, for proof.
 	  
-	  <br><br><br>
+	  </div><br><br>
+	  
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -864,7 +922,10 @@ The key stream is <u>derived</u> from the <em>key</em> and the seed. Generally, 
 	    </header>
 	    <article>
 	  
-	  <strong><a href="#Rule23"><span class="mw-headline" id="Rule23">#</span></a> <font color="red">C. Rule 23.</font></strong> <strong>Random Number Generators (RNG)</strong>:<br><br> The means with which a system can generate random numbers, for the purposes of constructing/filling a keystream with random bits, are split into three main mechanisms:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Random Number Generators (RNG)</strong>:<br><br> The means with which a system can generate random numbers, for the purposes of constructing/filling a keystream with random bits, are split into three main mechanisms:<br><br>
 
 <ol>
 <li> <strong>True Random Number Generators (TRNGs)</strong>: "True" random numbers stem from random physical processes that cannot be reproduced. <Br><br>
@@ -902,7 +963,8 @@ While in most applications, PRNG systems are perfectly fine and suited to create
 </li>
 
 </ol>
-<br><br>
+</div><br>
+
 
 <strong><a href="#UnconditionalSecurityDef"><span class="mw-headline" id="UnconditionalSecurityDef">#</span></a> <font color="#006400">Unconditional Security</font></strong>: A cipher is "unconditionally secure" (or "information-theoretically secure") if it cannot be broken even with <u>infinite</u> computing resources. <br><br>
 
@@ -913,7 +975,10 @@ Thus, though there are very many ciphers that are "practically" secure (forming 
 <strong><a href="#ComputationalSecurityDef"><span class="mw-headline" id="ComputationalSecurityDef">#</span></a> <font color="#006400">Computational Security</font></strong>: A cryptosystem is computationally secure if the best known algorithm for breaking it requires at least t operations, where 't' is some ridiculous number far beyond the reach of modern brute-force computational abilities.
 <br><br><br>
 	  
-	  <strong><a href="#Rule24"><span class="mw-headline" id="Rule24">#</span></a> <font color="red">C. Rule 24.</font></strong> <strong>One Time Pad (OTP)</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>One Time Pad (OTP)</strong><br><br>
 The <strong>One Time Pad</strong> (also referred to as the "<strong>Vernam cipher</strong>"), as it were, is the unconditionally secure, perfect encryption algorithm, unbreakable in any meaningful way. The OTP is a stream cipher with the following properties:<br><br>
 1) The Keystream bits s<sub>i</sub> must originate from a TRNG.<br><br>
 2) Each Key stream bit must be used only once.<br><br>
@@ -922,7 +987,9 @@ Knowledge of the Key Stream must be exclusively limited to the involved parties,
 
 The security of cryptosystem draws from the fact that, without knowledge of the keystream, even a brute-force attack would be futile, because any two text strings are equally as probable to be a particular word in the plaintext: if a four letter word were to be encrypted, it is equally probable for it to be "when", "stop", or "abcd".<br><br>
 
-There is one fundamental drawback of the OTP, however, that prevents its universal application: since keystream bits cannot be reused, <strong>the key has to be as long as the plaintext</strong>. A 400MB file, 8 bits to the byte, would entail a 3.2GB key.<br><br><br>
+There is one fundamental drawback of the OTP, however, that prevents its universal application: since keystream bits cannot be reused, <strong>the key has to be as long as the plaintext</strong>. A 400MB file, 8 bits to the byte, would entail a 3.2GB key.
+</div><br><br>
+
 	  
 	  <strong>Fig. 4. - Practical Stream Ciphers:</strong><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/PracticalStream.png"><img src="/cryptography/img/PracticalStream.png" alt="A diagram of how all practical stream ciphers should function, with the modular 2 addition highlighted and the key stream generator (which varies from cipher to cipher) displayed." width=79%/></a></div>
@@ -931,7 +998,10 @@ There is one fundamental drawback of the OTP, however, that prevents its univers
 	  <strong><a href="#BitLengthDef"><span class="mw-headline" id="BitLengthDef">#</span></a> <font color="#006400">Bit-length</font></strong>: The number of bits required to represent an integer as a binary number. The capital letter 'A', for example, has an ASCII value of 65, which is 1000001, meaning a bit-length of 7. It is often calculated using log<sub>2</sub>, since binary positions are dictated by powers of two.
 <br><br><br>
 	  
-	  <strong><a href="#Rule25"><span class="mw-headline" id="Rule25">#</span></a> <font color="red">C. Rule 25.</font></strong> <strong>Linear Congruential Generator (LCG)</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Linear Congruential Generator (LCG)</strong>:<br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -968,10 +1038,13 @@ Of course, separate from the nature of the function/equation itself, note that t
 
 <!--Easily the hardest rule(s) I have had to write so far in Cryptography, 25 & 26. Took several hours of total concentration and thinking power, requiring the rewriting of portions of past rules and definitions as well.-->
 
+	  </div><br><br>
 	  
-	  <br><br><br>
 	  
-	  <strong><a href="#Rule26"><span class="mw-headline" id="Rule26">#</span></a> <font color="red">C. Rule 26.</font></strong> <strong>HOW TO CRACK A LINEAR CONGRUENTIAL GENERATOR (LCG):</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>HOW TO CRACK A LINEAR CONGRUENTIAL GENERATOR (LCG):</strong><br><br>
 
 In order to crack a rudimentary LCG system and discover the full keystream to decrypt the system, the attacker only needs to know three characters of the plaintext that were encrypted (along with all of the ciphertext). Generally, in encrypting a document (such as Microsoft Word or Excel), there will be file or protocol header information at the start (like the version number), which will always be the same initial symbols being encrypted. Therefore, knowledge of the attacker of these plaintext characters, in addition to the ciphertext, can be assumed.<br><br>
 
@@ -987,7 +1060,8 @@ S<sub>2</sub> ≡ ((A × S<sub>1</sub>) + B) mod m<br><br>
 
 After finding A and B, all that would be left to be done is to brute-force m as previously described, and the system would be cracked.
 
-<br><br><br>
+</div><br><br>
+
 	  
 	  </article>
 	    <header class="articleHeader"><hr>
@@ -1000,7 +1074,10 @@ After finding A and B, all that would be left to be done is to brute-force m as 
 <br><br><br>
 	    
 	  
-	  <strong><a href="#Rule27"><span class="mw-headline" id="Rule27">#</span></a> <font color="red">C. Rule 27.</font></strong> A "<strong>Flip-flop</strong>" is a clocked storage element that stores a single bit. There is an input, an output, and a <strong>Clock Input</strong> that determines whether any inputted bit is to be stored or not.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> A "<strong>Flip-flop</strong>" is a clocked storage element that stores a single bit. There is an input, an output, and a <strong>Clock Input</strong> that determines whether any inputted bit is to be stored or not.<br><br>
 
 The general symbology used in diagrams for a flip-flop is as follows:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-flip-flop-basics.png"><img src="/cryptography/img/D-flip-flop-basics.png" alt="A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of buildcircuitelectronics." width=53%/></a></div>
@@ -1010,8 +1087,8 @@ And here is a diagram showing how the output relies on clock signals to accept a
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-type_flip-flop_impulse_diagram.png"><img src="/cryptography/img/D-type_flip-flop_impulse_diagram.png" alt="A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of Wikipedia." width=58%/></a></div>
 	    <span class="tiny"><em>A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:D-type_flip-flop_impulse_diagram.png">Wikipedia</a>.</em></span>
 	  
+	  </div><br><br>
 	  
-	  <br><br><br>
 	  
 	  <strong><a href="#ShiftRegisterDef"><span class="mw-headline" id="ShiftRegisterDef">#</span></a> <font color="#006400">Shift Register</font></strong>: A "shift register" is akin to a system, a concatentation of several individual flip-flops, each sending a signal to the next until the final flip-flop, which will produce each bit of the output. It is one half of an LFSR.<br><br>
 
@@ -1025,7 +1102,10 @@ An example of a shift register, with three flip-flops, with every new value sent
 	  
 	  
 	  
-	  <strong><a href="#Rule28"><span class="mw-headline" id="Rule28">#</span></a> <font color="red">C. Rule 28.</font></strong> <strong>Linear Feedback Shift Registers</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Linear Feedback Shift Registers</strong>:<br><br>
 
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
@@ -1080,7 +1160,7 @@ Very important to notice in the progress of an LFSR is that there will be a dist
 
 The specific mathematical formula of the key produced by the LFSR depicted is:<br> <strong>S<sub>i+3</sub> ≡ (s<sub>i+1</sub> + s<sub>i</sub>) mod 2</strong>.
 
-<br><br><br>
+</div><br><br>
 
 
 <strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, helps form an LFSR. 
@@ -1092,7 +1172,10 @@ The specific mathematical formula of the key produced by the LFSR depicted is:<b
 <br><br><br>
 
 
-<strong><a href="#Rule29"><span class="mw-headline" id="Rule29">#</span></a> <font color="red">C. Rule 29.</font></strong> <strong>LFSR Generalization:</STRONG><br><br> 
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>LFSR Generalization:</STRONG><br><br> 
 
 To generalize the LFSR so that a general equation can be applied, several new mathematical operations must be introduced.<br><br>
 
@@ -1132,12 +1215,16 @@ $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<b
 <strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
 
 <strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
-<br><br><br>
+</div><br><br>
+
 	  
 	  <strong><a href="#PrimitivePolyDef"><span class="mw-headline" id="PrimitivePolyDef">#</span></a> <font color="#006400">Primitive Polynomials</font></strong>: A form of irreducible polynomials, akin to a "prime" polynomial, with the only "factors" being 1 and the polynomial itself. [[[[[[[EXPLAIN IN A MORE COHESIVE AND FULLY ELABORATED MANNER[[[[[[[[.
 <br><br><br>
 	  
-	  <strong><a href="#Rule30"><span class="mw-headline" id="Rule30">#</span></a> <font color="red">C. Rule 30.</font></strong> <strong>Types of LFSRs:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Types of LFSRs:</strong><br><br>
 	  In practice, there are three types of LFSRs, the properties of which are the result of the feedback coefficients and degree.
 	  
 	  <ol>
@@ -1156,11 +1243,13 @@ $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<b
 	  
 	  </ol>
 	  
-	  <br>
+	  </div>
 	  
 	  
-	  <strong><a href="#Rule31"><span class="mw-headline" id="Rule31">#</span></a> <font color="red">C. Rule 31.</font></strong> 
-	  The <strong>Period</strong> is the number of different strings of numbers that can occur in a specific LFSR before repeating. In a generic LFSR with 3 flip-flops, (such as that given in the LFSR Exposition - see Rule 28), this number is 7, e.g. all possible states.<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Period</strong> is the number of different strings of numbers that can occur in a specific LFSR before repeating. In a generic LFSR with 3 flip-flops, (such as that given in the LFSR Exposition - see Rule 28), this number is 7, e.g. all possible states.<br><br>
 	  A simple principle can thus be derived: <strong>The maximum <em><u>possible</u></em> period (or sequence length) generated by an LFSR of degree m is 2<sup>m</sup> - 1.</strong><br><br>
 	  
 	  As soon as a previous bit pattern/sequence (a 'state') is reached, then the cycle will repeat itself. Only certain feedback configurations (P<sub>m-1</sub>, ..., P<sub>0</sub>) yield maximum length sequences, regardless of the initial bit pattern/state (!). For any LFSR with a set number of flip-flops, m, and a given positioning/number of XOR gates, no matter what the initial state is, the period will always be the same.<br><br>
@@ -1168,14 +1257,20 @@ $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<b
 This is why the given value is the maximum <em>possible</em> period of an LFSR - only some reach it.<br><br>
 There are patterns within the LFSR, specifically that of the positioning of the XOR gates with respect to the degree m, that can be used to determine if an LFSR will produce a maximum-length period or not - see Rule 34 for more information. These patterns require knowledge of the Polynomial Representation of LFSR's - see Rule 32.
 
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
-	    <strong><a href="#Rule32"><span class="mw-headline" id="Rule32">#</span></a> <font color="red">C. Rule 32.</font></strong> 
-	    The only string of bits that can never appear in an LFSR is straight 0's. Such a thing is only possible if the initial setting is all straight 0's, which is a ridiculous thought not to be entertained.
-	    <br><br><br>
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> The only string of bits that can never appear in an LFSR is straight 0's. Such a thing is only possible if the initial setting is all straight 0's, which is a ridiculous thought not to be entertained.
+	    </div><br><br>
+	    
 	  
-	  <strong><a href="#Rule33"><span class="mw-headline" id="Rule33">#</span></a> <font color="red">C. Rule 33.</font></strong> <strong>Polynomial Representation of LFSR's</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Polynomial Representation of LFSR's</strong>:<br><br>
 	  All that is needed to represent the nature of an LFSR (devoid of the initial state) is the degree m (the number of flip-flops), and the feedback coefficients. These characteristics can be represented in simple polynomial form:<br><br>
 
 <strong>P(x) = x<sup>m</sup> + P<sub>m-1</sub> × x<sup>m-1</sup> + ... + P<sub>1</sub> × x + P<sub>0</sub></strong>
@@ -1191,9 +1286,12 @@ Even if there were no XOR gates in the entire LFSR, then the equation would stil
 What you are really looking at when you see a polynomial expression of an LSFR is the degree of the first term, and all of the terms in between the first term and the last term, because there is always going to be a +1 at the end. Otherwise, the output would not be incorporated into the feedback path, which is utterly preposterous and is never seen in the real world.<br><br>
 
 There are patterns in LFSR polynomials that can be used to determine whether the LFSR has a maximum-length period or not: see Rule 34.
-	  <br><br><br>
+	  </div><br><br>
 	  
-	  <strong><a href="#Rule34"><span class="mw-headline" id="Rule34">#</span></a> <font color="red">C. Rule <U>34.</u><!--a wonderful milestone in any category.--></font></strong> <strong>Deriving Maximum-Length Periods from LFSR Polynomials:</strong><br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <u><span class="rule-number"></span></u>.<!--a wonderful milestone in any subject.--></font>
+        </strong> <strong>Deriving Maximum-Length Periods from LFSR Polynomials:</strong><br><br>
 	  <strong>Only LFSR's with primitive polynomials</strong> (see definition) <strong>yield maximum-length sequences.</strong> <br><br>
 
 Below is a table showcasing an example primitive polynomial for each m value 2-128. Note that there are multitudes of primitive polynomials for any given m value, too many to produce a complete list. There are 6.92 × 10⁷ primitive polynomials for an LFSR of m 31.<br><br>
@@ -1201,13 +1299,15 @@ In the table below, take the values as representing the degrees in reverse order
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/LFSRTable.png"><img src="/cryptography/img/LFSRTable.png" alt="A table showcasing an example primitive polynomial for each m value 2-128." width=78%/></a></div>
 	    <span class="tiny"><em>A table showcasing an example primitive polynomial for each m value 2-128.</em></span>
 
-
-	  
-	  <br><br><br>
+      </div><br><br>
 	  
 	  
-	  <strong><a href="#Rule35"><span class="mw-headline" id="Rule35">#</span></a> <font color="red">C. Rule 35.</font></strong> <strong>HOW TO CRACK A LINEAR FEEDBACK SHIFT REGISTER (LFSR):</strong><br><br>
 	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>HOW TO CRACK A LINEAR FEEDBACK SHIFT REGISTER (LFSR):</strong><br><br>
 	  
 	  While Linear Feedback Shift Register's have the properties of relative randomness and are exceedingly efficient (with 100 flip-flops, a miniscule amount of space in hardware, producing a period of 2¹⁰⁰ - 1), it fails on the last hurdle: <em>unpredictability</em>. <br><br>
 	  
@@ -1253,7 +1353,7 @@ He can determine the initial state using the output bits that are already known 
 With the keystream, Oscar will now, of course, be able to recover the full plaintext:<br><br>
 
 <strong>x<sub>i</sub> ≡ (y<sub>i</sub> + s<sub>i</sub>) mod 2</strong>
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
 	  
@@ -1280,8 +1380,10 @@ During the 1990s, stream ciphers were a center of attention for many cryptanalys
 	  <strong><a href="#NonceDef"><span class="mw-headline" id="NonceDef">#</span></a> <font color="#006400">"Nonce"</font></strong>: A number used only once.
 <br><br><br>
 	  
-	  <strong><a href="#Rule36"><span class="mw-headline" id="Rule36">#</span></a> <font color="red">C. Rule 36.</font></strong> <strong>Salsa20:</strong><br><br>
-
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Salsa20:</strong><br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -1299,29 +1401,35 @@ Salsa20/20 (hereafter referred to as "Salsa20") supports key lengths of either 1
 
 [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
 	  
-	  <br><br><br>
+	  </div><br><br>
 	  
 	  
-	  <strong><a href="#Rule37"><span class="mw-headline" id="Rule37">#</span></a> <font color="red">C. Rule 37.</font></strong> 
-	  [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
-	  
-	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
-	  
-	  <br><br><br>
-	  
-	  
-	    <strong><a href="#Rule38"><span class="mw-headline" id="Rule38">#</span></a> <font color="red">C. Rule 38.</font></strong> 
-	    [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
 	  
 	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
-	    <br><br><br>
+	  
+	  </div><br><br>
+	  
+	  
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
+	  
+	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
+	    </div><br><br>
 	    
 	    
-	    <strong><a href="#Rule39"><span class="mw-headline" id="Rule39">#</span></a> <font color="red">C. Rule 39.</font></strong> 
-	    [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[
 	  
 	  [[[[[To be completed at a later date. I have determined this topic: <strong>"Salsa20, ChaCha, and Trivium"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[<br><br>
-	    <br><br><br>
+	    </div><br><br>
 	  
 	  
 	  
@@ -1344,8 +1452,10 @@ Salsa20/20 (hereafter referred to as "Salsa20") supports key lengths of either 1
 	  </header>
 	  <article><br>
 	  
-	  <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">C. Rule 40.</font></strong> 
-<strong>Block Ciphers</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Block Ciphers</strong>:<br><br>
 
 A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit would be a stream cipher). Thus, the encryption of any plaintext bit in the block depends on the nature of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy.<br><br>
 
@@ -1354,7 +1464,7 @@ Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (
 
 Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
 
-<br><br><br>
+</div><br><br>
 
 
 <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table</font></strong>: A Substitution table - an algorithm in which every input is paired with a particular value/address, and has that value outputted. It is not a requirement that the number of output bits match the number of inputted bits - in the DES Feistel cipher, for example, table S<sub>1</sub> produces 4 output bits from 6 input bits.
@@ -1364,7 +1474,10 @@ Block Ciphers are more commonly used than Stream Ciphers in modern computer encr
 <br><br><br>
 
 
-<strong><a href="#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">C. Rule 41.</font></strong> <strong>Confusion & Diffusion</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Confusion & Diffusion</strong>:<br><br>
 
 <!--Claude Shannon (inventor of Information Theory),-->During the postwar Cryptographic research boom, stemming from the rush of funding for military science, it was postulated in a classified paper that there were two atomic operations that all good block ciphers should perform:
 <br><br>
@@ -1388,7 +1501,7 @@ Block Ciphers are more commonly used than Stream Ciphers in modern computer encr
 
 In order to make a truly "secure" cryptosystem using block ciphers, you need to combine both confusion & diffusion elements into the algorithm many times over, in the form of a product cipher.
 
-<br><br><br>
+</div><br><br>
 
 
 </article>
@@ -1399,7 +1512,10 @@ In order to make a truly "secure" cryptosystem using block ciphers, you need to 
 	    
 
 
-<strong><a href="#Rule42"><span class="mw-headline" id="Rule42">#</span></a> <font color="red">C. Rule 42.</font></strong> <strong>Feistel Ciphers</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Feistel Ciphers</strong>:<br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -1438,7 +1554,7 @@ A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm us
 
 The bulk of the modern ciphers currently in use were built using feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (see Rule [[[[[[[[). In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and requires a key, instead of merely producing the key (like the LFSR).<bR><BR>
 
-Devoid of the more specialized characteristics (particular those relating to DES, described in section IV.III), the system by which the "standard", unadorned Feistel Cipher encrypts data is simple:
+Devoid of the more specialized characteristics (particular those relating to DES, described in Subsection IV.III), the system by which the "standard", unadorned Feistel Cipher encrypts data is simple:
 
 <ol>
 
@@ -1467,7 +1583,7 @@ Devoid of the more specialized characteristics (particular those relating to DES
   
   </li>
 
-</ol><br>
+</ol></div>
 <!--
 Unfinished part I decided was unnecessary.
 
@@ -1492,12 +1608,15 @@ The nature of the Feistel Network is such that the only distinguishing character
 
 
 
-<strong><a href="#Rule43"><span class="mw-headline" id="Rule43">#</span></a> <font color="red">C. Rule 43.</font></strong> <strong>Data Encryption Standard (DES):</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Data Encryption Standard (DES):</strong><br><br>
 
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
-
+[[[[[<br><br>
 
 <strong><u>Explanation:</u></strong><br><br>
 
@@ -1507,9 +1626,12 @@ The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, 
 
 The keysize of DES is 56 bits (and thus has a keyspace of only 2^56), highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern cryptography in its embryonic state. The subkeys used in DES for the Feistel Network are only 48 bits - see Rule [[[[ for why that is.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule44"><span class="mw-headline" id="Rule44">#</span></a> <font color="red">C. Rule 44.</font></strong> <strong>History of the Data Encryption Standard (DES):</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>History of the Data Encryption Standard (DES):</strong><br><br>
 
 Proposed in 1974 by IBM (in coordination with the NSA), DES was the cryptographic standard for the U.S. government between 1977 and 1998, making it the most studied cipher in the world.<br><br>
 
@@ -1517,9 +1639,13 @@ The DES was the first ever "secure" cryptosystem made public by a national gover
 
 Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to the short length of its key (56 bits), 3DES has a very long key, and as such is immune to such attacks.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule45"><span class="mw-headline" id="Rule45">#</span></a> <font color="red">C. Rule 45.</font></strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
 The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 43) is that the operation undergone by data travelling through the cipher is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
 
 IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>: the bits are scrambled and assigned to different placements in the data than they were before. This just the algorithmic term for a crosswiring. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x), cancelling eachother out.<br><br>
@@ -1529,10 +1655,13 @@ The purpose of the DES bit permutation functions is simple: while serving no cry
 	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
 Thus, the bit permutations were merely placed in the DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
 
-<br><br><br>
+</div><br><br>
 
 
-<strong><a href="#Rule46"><span class="mw-headline" id="Rule46">#</span></a> <font color="red">C. Rule 46.</font></strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
 
 The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to the a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche. Below are the complete contents of the f function:<br><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=48%/></a></div>
@@ -1581,8 +1710,9 @@ All that remains within the f function is a simple bit permutation, in the same 
 </li>
 
 </ol>
+</div><br>
 
-<br><br>
+
 
 <strong><a href="#MSBDef"><span class="mw-headline" id="MSBDef">#</span></a> <font color="#006400">Most Significant Bit (MSB)</font></strong>: The leftmost bit in a binary number - the largest value representation in the binary place value system. This varies from system to system.
 <br><br><br>
@@ -1687,7 +1817,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 6 2025</span><br>
+      	<span class="tiny">Last Change: March 17 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

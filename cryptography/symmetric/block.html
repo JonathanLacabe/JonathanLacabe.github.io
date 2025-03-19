@@ -122,8 +122,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	  </header>
 	  <article>
 	  
-	  <strong><a href="#Rule40"><span class="mw-headline" id="Rule40">#</span></a> <font color="red">C. Rule 40.</font></strong> 
-<strong>Block Ciphers</strong>:<br><br>
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Block Ciphers</strong>:<br><br>
 
 A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit would be a stream cipher). Thus, the encryption of any plaintext bit in the block depends on the nature of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy.<br><br>
 
@@ -132,7 +134,7 @@ Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (
 
 Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
 
-<br><br><br>
+</div><br><br>
 
 
 <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table</font></strong>: A Substitution table - an algorithm in which every input is paired with a particular value/address, and has that value outputted. It is not a requirement that the number of output bits match the number of inputted bits - in the DES Feistel cipher, for example, table S<sub>1</sub> produces 4 output bits from 6 input bits.
@@ -142,7 +144,10 @@ Block Ciphers are more commonly used than Stream Ciphers in modern computer encr
 <br><br><br>
 
 
-<strong><a href="#Rule41"><span class="mw-headline" id="Rule41">#</span></a> <font color="red">C. Rule 41.</font></strong> <strong>Confusion & Diffusion</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Confusion & Diffusion</strong>:<br><br>
 
 <!--Claude Shannon (inventor of Information Theory),-->During the postwar Cryptographic research boom, stemming from the rush of funding for military science, it was postulated in a classified paper that there were two atomic operations that all good block ciphers should perform:
 <br><br>
@@ -166,7 +171,7 @@ Block Ciphers are more commonly used than Stream Ciphers in modern computer encr
 
 In order to make a truly "secure" cryptosystem using block ciphers, you need to combine both confusion & diffusion elements into the algorithm many times over, in the form of a product cipher.
 
-<br><br><br>
+</div><br><br>
 
 
 </article>
@@ -177,7 +182,10 @@ In order to make a truly "secure" cryptosystem using block ciphers, you need to 
 	    
 
 
-<strong><a href="#Rule42"><span class="mw-headline" id="Rule42">#</span></a> <font color="red">C. Rule 42.</font></strong> <strong>Feistel Ciphers</strong>:<br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Feistel Ciphers</strong>:<br><br>
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
@@ -216,7 +224,7 @@ A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm us
 
 The bulk of the modern ciphers currently in use were built using feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (see Rule [[[[[[[[). In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and requires a key, instead of merely producing the key (like the LFSR).<bR><BR>
 
-Devoid of the more specialized characteristics (particular those relating to DES, described in section IV.III), the system by which the "standard", unadorned Feistel Cipher encrypts data is simple:
+Devoid of the more specialized characteristics (particular those relating to DES, described in Subsection IV.III), the system by which the "standard", unadorned Feistel Cipher encrypts data is simple:
 
 <ol>
 
@@ -245,7 +253,7 @@ Devoid of the more specialized characteristics (particular those relating to DES
   
   </li>
 
-</ol><br>
+</ol></div>
 <!--
 Unfinished part I decided was unnecessary.
 
@@ -270,12 +278,15 @@ The nature of the Feistel Network is such that the only distinguishing character
 
 
 
-<strong><a href="#Rule43"><span class="mw-headline" id="Rule43">#</span></a> <font color="red">C. Rule 43.</font></strong> <strong>Data Encryption Standard (DES):</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Data Encryption Standard (DES):</strong><br><br>
 
 
 <strong><u>Mathematical Definition</u></strong>:<br><br>
 
-
+[[[[[<br><br>
 
 <strong><u>Explanation:</u></strong><br><br>
 
@@ -285,9 +296,12 @@ The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, 
 
 The keysize of DES is 56 bits (and thus has a keyspace of only 2^56), highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern cryptography in its embryonic state. The subkeys used in DES for the Feistel Network are only 48 bits - see Rule [[[[ for why that is.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule44"><span class="mw-headline" id="Rule44">#</span></a> <font color="red">C. Rule 44.</font></strong> <strong>History of the Data Encryption Standard (DES):</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>History of the Data Encryption Standard (DES):</strong><br><br>
 
 Proposed in 1974 by IBM (in coordination with the NSA), DES was the cryptographic standard for the U.S. government between 1977 and 1998, making it the most studied cipher in the world.<br><br>
 
@@ -295,9 +309,13 @@ The DES was the first ever "secure" cryptosystem made public by a national gover
 
 Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to the short length of its key (56 bits), 3DES has a very long key, and as such is immune to such attacks.
 
-<br><br><br>
+</div><br><br>
 
-<strong><a href="#Rule45"><span class="mw-headline" id="Rule45">#</span></a> <font color="red">C. Rule 45.</font></strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
+
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
 The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 43) is that the operation undergone by data travelling through the cipher is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
 
 IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>: the bits are scrambled and assigned to different placements in the data than they were before. This just the algorithmic term for a crosswiring. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x), cancelling eachother out.<br><br>
@@ -307,10 +325,13 @@ The purpose of the DES bit permutation functions is simple: while serving no cry
 	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
 Thus, the bit permutations were merely placed in the DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
 
-<br><br><br>
+</div><br><br>
 
 
-<strong><a href="#Rule46"><span class="mw-headline" id="Rule46">#</span></a> <font color="red">C. Rule 46.</font></strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
+<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
 
 The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to the a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche. Below are the complete contents of the f function:<br><br>
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=48%/></a></div>
@@ -359,8 +380,9 @@ All that remains within the f function is a simple bit permutation, in the same 
 </li>
 
 </ol>
+</div><br>
 
-<br><br>
+
 
 <strong><a href="#MSBDef"><span class="mw-headline" id="MSBDef">#</span></a> <font color="#006400">Most Significant Bit (MSB)</font></strong>: The leftmost bit in a binary number - the largest value representation in the binary place value system. This varies from system to system.
 <br><br><br>
@@ -445,7 +467,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 6 2025</span><br>
+      	<span class="tiny">Last Change: March 17 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title>Extreme Values (Differential Calculus)</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico">
+  </head>
+<body><style>
+rainbow {
+  margin-top: 0px;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+      <div class="wrapper">
+      
+      <header class="site" style="color: green; font-family: arial; line-height: 0em;">                                                                                                                      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    },
+    "HTML-CSS": {
+      scale: 100, //Scale math to match surrounding text
+    },
+    displayAlign: "left", //Align equations to the left
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
+
+<img src="logo.png" width=28%><!--ALSO SPRACH ZARATHUSTRA.-->
+<hr>
+      	<span><a href="javascript:history.back(1)" style="cursor:w-resize">Back</a></span><hr>
+      </header>
+
+      <div class="inner">
+	<nav>
+		<div class="cont">
+		  <a href="/index.html">Home</a><br>
+		  <a href="/sitemap.txt">Sitemap</a><br>
+		  <hr>
+		  <a href="/Physics/physics.html">Physics</a><br>
+		  <a href="/math/mathematics.html">Math</a><br>
+		  <a href="/cryptography/cryptography.html">Crypto.</a><br>
+		  <a href="/engineering/electric.html">Electric</a><br><!--It looks better as "Electric", considering Nuclear is without a period as well-->
+		  <a href="/astronomy/astronomy.html">Astronomy</a><br>
+		  <a href="/engineering/aeronautics.html">Aero.</a><br>
+		  <a href="/engineering/nuclear.html">Nuclear</a><br>
+		  <hr><!--Internal Pages-->
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
+		  <a href="/information/about.html">About</a><br>
+		  <hr><!--Special Github Mirror-->
+		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
+		</div>
+	</nav>
+	
+	<div class="content">
+	  <header class="articleHeader">
+	    <h2>Summary of Extreme Values (Differential Calculus)</h2>
+	    <!--<h3><em>Theory > Application.</em></h3>-->
+	  </header>
+	  <hr>
+	  <article>
+	    <p>These are my complete notes for Extreme Values in Differential Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>.</p>
+	  </article>
+	  <hr>
+	    
+	    <div class="rules" data-start="164">
+	    
+	    <header class="articleHeader"><hr>
+	    <h2><span class="mw-headline" id="ExtremeValues">?. Extreme Values.</span></h2>
+	  </header>
+	  <article><br>
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The derivative does not exist where the function does not. The tangent line at a point represents the slope of that point, as made possible by local linearity (see definition).</div><br><br>
+	    
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find at which point of a curve the tangent line is PARALLEL to another line, just find the derivative of the first line to get the slope of the tangent line. Then, just set that derivative equal to the slope of the 2nd line. To find when a tangent line is PERPENDICULAR to another line, do the same thing except set the first line derivative equal to the negative reciprocal of the 2nd line slope.</div><br><br>
+	    
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the slope of a line that passes through the origin or any other point that is tangent to a curve, you have to set 2 equations equal to eachother.<br><br>
+        First, for example, if y = ln(x/2) and the line passes through (0,0), the slope of the line at that point will equal:<br>
+        
+        $$\text{m} = \frac{ln(\frac{x}{2})-0}{x-0} = \frac{ln(x) - ln(2)}{x}$$
+        
+        Secondly, find the derivative of the curve, which is (2/x) × (1/2) or 1/x.<br><br>
+        
+        Finally, you set the two equations equal to eachother:<br>
+        
+        $$\frac{1}{x} = \frac{ln(x) - ln(2)}{x}$$
+        
+        1 = ln(x) - ln(2)<br>
+        ln(x) = 1 + ln(2)<br>
+        e<sup>ln(x)</sup> = e<sup>1 + ln(2)</sup><br>
+        x = e × e<sup>ln(2)</sup><br>
+        x = 2e<br>
+        m = 1 / 2e<br><br>
+        
+        Remember to put the result back into the derivative of the equation at the end.
+        
+        </div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the domain of a derivative, remember it conforms to the domain of the function as well. For example, if a vertical function is x ≠ 4 and x > 0, then the full domain is x > 0 and x ≠ 4.</div><br><br>
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When there's an x in the base and the exponent, such as with y = x<sup>x</sup>, you have to go the long way around with the ln (or log, if that's how you want to do it) to bring down the exponent and isolate x:<br><br>
+        ln(y) = ln(x<sup>x</sup>)<br>
+        (1/y) × (dy/dx) = ln(x) + (x × 1/x)<br>
+        (dy/dx) = y(ln(x) + 1)<br>
+        (dy/dx) = x<sup>x</sup>(ln(x) + 1)<br><br>
+        
+        The same sort of thing works with trigonometric functions in the exponent.
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Steps for determining the graph of a derivative:</strong><br><br>
+        First, find when the graph is flat, when the curve is parallel to the x-axis. These points will be the zeroes of the derivative graph.<br><br>
+        
+        Remember that the derivative graph represents the speed with which the slope of the function is changing, the <em>rate</em> of the rate of change.<br><br>
+        
+        For example, the derivative graph of:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/simplefunction.png"><img src="/math/img/simplefunction.png" alt="The graph of a standard function, perhaps that of a polynomial. Courtesy of Calcworkshop." width=36%/></a></div>
+	    <span class="tiny"><em>The graph of a standard function, perhaps that of a polynomial. Courtesy of <a href="https://calcworkshop.com/application-derivatives/derivative-graph/">Calcworkshop</a>.</em></span><br><br><br>
+        
+        
+        
+        Would be:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/simplefuncderiv.png"><img src="/math/img/simplefuncderiv.png" alt="The graph of the derivative of the function given above. Courtesy of Calcworkshop." width=36%/></a></div>
+	    <span class="tiny"><em>The graph of the derivative of the function given above. Courtesy of <a href="https://calcworkshop.com/application-derivatives/derivative-graph/">Calcworkshop</a>.</em></span><br><br>
+        <!--[[[n: 16-19, 19-20 m25[[[-->
+        </div><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Absolute (Global) Extreme Values:</strong><br><br>
+        
+        Let f be a function with Domain "D". Then f(c) is the:<br><br>
+        
+        <ol type="a">
+        
+        <li><strong>absolute maximum value</strong> on D if & only if f(x) ≤ f(c) for all x in D. Every y-value is less than particular y-value of f(c).
+        
+        </li><br><br>
+        
+        <li><strong>absolute minimum value</strong> on D if & only if f(x) ≥ f(c) for all x in D.
+        
+        </li><br>
+        </ol>
+        
+        Examples of both Absolute Minimum and Maximum values can be seen below:<br><br>
+        
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/maxandmin.jpg"><img src="/math/img/maxandmin.jpg" alt="The Absolute Maximum and Absolute Minimum values for a restricted portion of a function. Courtesy of Lumen Learning." width=52%/></a></div>
+	    <span class="tiny"><em>The Absolute Maximum and Absolute Minimum values for a restricted portion of a function. Courtesy of <a href="https://courses.lumenlearning.com/odessa-collegealgebra/chapter/use-a-graph-to-locate-the-absolute-maximum-and-absolute-minimum/">Lumen Learning</a>.</em></span><br>
+        
+        </div><br><br>
+        
+        <strong><a href="#AbsoluteExtremaDef"><span class="mw-headline" id="AbsoluteExtremaDef">#</span></a> <font color="#006400">Absolute Extrema</font></strong>: Average Speed is found by dividing the distance covered by the elapsed time. Consequently, there also exists <strong>relative extrema</strong> (also known as <strong>local extrema</strong>) for maximum and minimum values that are not <em>absolutes</em> of their function (see Rule 172).
+	      <br><br><br>
+        
+        
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Extreme Value Theorem</strong>:<br><br>
+        If f is continuous on a closed interval [a, b], then f has both a minimum and a maximum value on the interval.
+        
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Local Extreme Values</strong>:<br><br>
+        
+        Let c be an interior point on the domain of the function f. Then, f(c) is a:
+        <ol type="i">
+        
+        <li><strong>local maximum value</strong> at c if & only if f(x) ≤ f(c) in the same interval containing c.
+        
+        </li><br><br>
+        
+        <li><strong>local minimum value</strong> at c if & only if f(x) ≥ f(c) in some open interval containing c.
+        
+        </li>
+        </ol>
+        
+        </div><br>
+	    
+	    
+	    
+	    
+	      </article>
+
+    </div>
+	</div>
+	
+	<div class="General links">
+		links
+		<hr>
+		Programming
+		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
+		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
+		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
+		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
+		MIDI<br>
+		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
+		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
+		Physics<br>
+		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<hr>
+		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+	</div>
+      
+</div>
+      <footer class="site">
+        <br>
+        <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
+        <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong><a href="/math/calculuspart2.html">Integral Calculus & Calculus 2</a></strong></article>
+        <br>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong> → <strong>Extreme Values</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+      	<br>
+      	<hr>
+      	<span class="tiny">Last Change: March 22 2025</span><br>
+      	<span class="tiny">Jonathan Lacabe 2025</span><br>
+      	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
+      	<img src="/_other/with_love%20(1).gif" width=9%>
+      </footer>
+      </div>
+   </body>
+</html>

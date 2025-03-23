@@ -3,7 +3,33 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-March 17 2025: SAT tomorrow, and I've been focused on it solely for the past few days - now is currently the dark ages, soon to become the great golden age of the Human Knowledge Project - the rest of Electric Potential, Capacitance, and Circuitry for Physics, and then the entirety of Cryptography over the next few weeks. Today, only some minor upkeep actions were taken, some old to-do list activities: changing referencing to sections (like X) and subsections (X.II) to reflect the correct naming schemes (which had been neglected and randomly applied), for example.
+March 22 2025: Calculus Work. A specific "Extreme Values" section has been carved out of the latest digitizations for Calculus. There remain perhaps 1-2 months of Calculus  at the current rate of digitizing before my existing Multivariable Calculus notes will begin being processed - Cryptography and Physics are taking up the bulk of my time, and I will need to find some level of comfort in the comprehensiveness & degree of accessible-language of the content relating to these subjects (what this level will be, I will gauge as time goes on) before a concentrated digitization effort of more than one math Rule per day can be established. I would also like to use OCR technology in order to digitize the notes in a faster and more efficient way - I am researching tesseract right now.
+Rule Added: Mathematics, Single Variable Calculus - Rule 172.
+
+March 21 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 171.
+
+March 20 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 170.
+
+March 19 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 168, 169.
+
+March 18 2025: The section/subsection fixings has finished, with the final one being in Astronomy. 
+
+March 17 2025: The rest of Electric Potential, Capacitance, and Circuitry for Physics, and then the entirety of Cryptography (specifically, the content for the remaining outlined sections, which may be expanded after the fact to account for recent developments in the subject (post-quantum cryptography, in particular)) will be added over the next few weeks. Today, only some minor upkeep actions were taken, some old to-do list activities: changing referencing to sections (like X) and subsections (X.II) to reflect the correct naming schemes (which had been neglected and randomly applied), for example.
+
+March 16 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 167.
+
+March 15 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 166.
+
+March 14 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 165.
+
+March 13 2025: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 164.
 
 March 12 2025: The conversion of all pages to the new javascript Rule numbering system has completed, finishing with Block Ciphers in Cryptography. The finishing of it was delayed by a few days with increased concentration in Physics studies, but has now been completed and will likely not see any tweaks/changes for the forseeable future. Additionally, Physics work as always, with work particularly focusing in Electric Potential. Furthermore, all units that involve names (like "Newtons" and "Coulombs") have been capitalized. The Table of Contents for Mechanics was also fixed to have complete linking to all sections and subsections. I also realized that since there are going to be multiple sections to Electromagnetism (of which I have only worked on Electrostatics thus far), and that considering that the current "Complete Notes" page is getting considerably long, it would be best to add multiple pages for the complete notes as I did for Classical Mechanics.
 Rules Added: Physics, Electromagnetism - Rule 197.

@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#Limits">?. Limits.</a>
         </div>
         <div class="toc-column">
-          <a href="#ParticleMotion">?. Particle Motion.</a>
+          <a href="#Inverses">?. Inverses.</a>
         </div>
 
       </div>
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#Continuity1">?. Continuity.</a>
         </div>
         <div class="toc-column">
-          <a href="#Inverses">?. Inverses.</a>
+          <a href="#ChainRule1">?. Chain Rule.</a>
         </div>
         
       </div>
@@ -126,7 +126,17 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#Derivative1">?. Derivatives.</a>
         </div>
         <div class="toc-column">
-          <a href="#ChainRule1">?. Chain Rule.</a>
+          <a href="#ExtremeValues">?. Extreme Values.</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#ParticleMotion">?. Particle Motion.</a>
+        </div>
+        <div class="toc-column">
+          
         </div>
         
       </div>
@@ -1072,8 +1082,31 @@ document.addEventListener("DOMContentLoaded", function (){
 	    </div><br><br>
 	    
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If you have to find the derivative of a function that requires using the chain rule to multiply by the derivative of a part of the function, and that part of the function is a constant such as ln(2) or log<sub>2</sub>2, e.g. nowhere there is an x, then the derivative equals zero. e<sup>ln(2)</sup>, for example.</div><br><br>
 	    
-	    <!--Extreme Values-->
+	    
+	    
+	    
+	    
+	    <!---->
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="ExtremeValues">?. Extreme Values.</span></h3>
+	    </header>
+	    <article>
+	    
+	    
 	    
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -1081,16 +1114,140 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> The derivative does not exist where the function does not. The tangent line at a point represents the slope of that point, as made possible by local linearity (see definition).</div><br><br>
 	    
 	    
-	    <!--<strong><a href="#MaximumRateDef"><span class="mw-headline" id="MaximumRateDef">#</span></a> <font color="#006400">Maximum Rate</font></strong>: Set the second derivative equal to zero. Wait, what?
-	    <br><br><br>-->
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find at which point of a curve the tangent line is PARALLEL to another line, just find the derivative of the first line to get the slope of the tangent line. Then, just set that derivative equal to the slope of the 2nd line. To find when a tangent line is PERPENDICULAR to another line, do the same thing except set the first line derivative equal to the negative reciprocal of the 2nd line slope.</div><br><br>
 	    
 	    
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In order to find the slope of a line that passes through the origin or any other point that is tangent to a curve, you have to set 2 equations equal to eachother.<br><br>
+        First, for example, if y = ln(x/2) and the line passes through (0,0), the slope of the line at that point will equal:<br>
+        
+        $$\text{m} = \frac{ln(\frac{x}{2})-0}{x-0} = \frac{ln(x) - ln(2)}{x}$$
+        
+        Secondly, find the derivative of the curve, which is (2/x) × (1/2) or 1/x.<br><br>
+        
+        Finally, you set the two equations equal to eachother:<br>
+        
+        $$\frac{1}{x} = \frac{ln(x) - ln(2)}{x}$$
+        
+        1 = ln(x) - ln(2)<br>
+        ln(x) = 1 + ln(2)<br>
+        e<sup>ln(x)</sup> = e<sup>1 + ln(2)</sup><br>
+        x = e × e<sup>ln(2)</sup><br>
+        x = 2e<br>
+        m = 1 / 2e<br><br>
+        
+        Remember to put the result back into the derivative of the equation at the end.
+        
+        </div><br><br>
 	    
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the domain of a derivative, remember it conforms to the domain of the function as well. For example, if a vertical function is x ≠ 4 and x > 0, then the full domain is x > 0 and x ≠ 4.</div><br><br>
 	    
-	    
-	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When there's an x in the base and the exponent, such as with y = x<sup>x</sup>, you have to go the long way around with the ln (or log, if that's how you want to do it) to bring down the exponent and isolate x:<br><br>
+        ln(y) = ln(x<sup>x</sup>)<br>
+        (1/y) × (dy/dx) = ln(x) + (x × 1/x)<br>
+        (dy/dx) = y(ln(x) + 1)<br>
+        (dy/dx) = x<sup>x</sup>(ln(x) + 1)<br><br>
+        
+        The same sort of thing works with trigonometric functions in the exponent.
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Steps for determining the graph of a derivative:</strong><br><br>
+        First, find when the graph is flat, when the curve is parallel to the x-axis. These points will be the zeroes of the derivative graph.<br><br>
+        
+        Remember that the derivative graph represents the speed with which the slope of the function is changing, the <em>rate</em> of the rate of change.<br><br>
+        
+        For example, the derivative graph of:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/simplefunction.png"><img src="/math/img/simplefunction.png" alt="The graph of a standard function, perhaps that of a polynomial. Courtesy of Calcworkshop." width=36%/></a></div>
+	    <span class="tiny"><em>The graph of a standard function, perhaps that of a polynomial. Courtesy of <a href="https://calcworkshop.com/application-derivatives/derivative-graph/">Calcworkshop</a>.</em></span><br><br><br>
+        
+        
+        
+        Would be:<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/simplefuncderiv.png"><img src="/math/img/simplefuncderiv.png" alt="The graph of the derivative of the function given above. Courtesy of Calcworkshop." width=36%/></a></div>
+	    <span class="tiny"><em>The graph of the derivative of the function given above. Courtesy of <a href="https://calcworkshop.com/application-derivatives/derivative-graph/">Calcworkshop</a>.</em></span><br><br>
+        <!--[[[n: 16-19, 19-20 m25[[[-->
+        </div><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Absolute (Global) Extreme Values:</strong><br><br>
+        
+        Let f be a function with Domain "D". Then f(c) is the:<br><br>
+        
+        <ol type="a">
+        
+        <li><strong>absolute maximum value</strong> on D if & only if f(x) ≤ f(c) for all x in D. Every y-value is less than particular y-value of f(c).
+        
+        </li><br><br>
+        
+        <li><strong>absolute minimum value</strong> on D if & only if f(x) ≥ f(c) for all x in D.
+        
+        </li><br>
+        </ol>
+        
+        Examples of both Absolute Minimum and Maximum values can be seen below:<br><br>
+        
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/maxandmin.jpg"><img src="/math/img/maxandmin.jpg" alt="The Absolute Maximum and Absolute Minimum values for a restricted portion of a function. Courtesy of Lumen Learning." width=52%/></a></div>
+	    <span class="tiny"><em>The Absolute Maximum and Absolute Minimum values for a restricted portion of a function. Courtesy of <a href="https://courses.lumenlearning.com/odessa-collegealgebra/chapter/use-a-graph-to-locate-the-absolute-maximum-and-absolute-minimum/">Lumen Learning</a>.</em></span><br>
+        
+        </div><br><br>
+        
+        <strong><a href="#AbsoluteExtremaDef"><span class="mw-headline" id="AbsoluteExtremaDef">#</span></a> <font color="#006400">Absolute Extrema</font></strong>: Average Speed is found by dividing the distance covered by the elapsed time. Consequently, there also exists <strong>relative extrema</strong> (also known as <strong>local extrema</strong>) for maximum and minimum values that are not <em>absolutes</em> of their function (see Rule 172).
+	      <br><br><br>
+        
+        
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The <strong>Extreme Value Theorem</strong>:<br><br>
+        If f is continuous on a closed interval [a, b], then f has both a minimum and a maximum value on the interval.
+        
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Local Extreme Values</strong>:<br><br>
+        
+        Let c be an interior point on the domain of the function f. Then, f(c) is a:
+        <ol type="i">
+        
+        <li><strong>local maximum value</strong> at c if & only if f(x) ≤ f(c) in the same interval containing c.
+        
+        </li><br><br>
+        
+        <li><strong>local minimum value</strong> at c if & only if f(x) ≥ f(c) in some open interval containing c.
+        
+        </li>
+        </ol>
+        
+        </div><br>
+        
+        
+	  
+	  
 	  
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ ° ≠ ≈  ≤,  ≥   ÷, the roof is &#x302; -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
@@ -1137,10 +1294,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong>Differential Calculus</strong> → <strong><a href="/math/calculuspart2">Integral Calculus & Calculus 2</a></strong></article>
         <br>
-        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong> → <strong><a href="/math/singlevarcalculus/extremevalues.html">Extreme Values</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 12 2025</span><br>
+      	<span class="tiny">Last Change: March 22 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

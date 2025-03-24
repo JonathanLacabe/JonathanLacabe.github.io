@@ -1,6 +1,13 @@
-All pages as of January 1 2025.
+All pages as of March 22 2025.
 
 Home                                                 - https://humanknowledge.neocities.org/
+~Recent Changes                                      - https://humanknowledge.neocities.org/information/recentchanges.txt
+~Color Code                                          - https://humanknowledge.neocities.org/information/color
+~Logos                                               - https://humanknowledge.neocities.org/information/art
+~About                                               - https://humanknowledge.neocities.org/information/about
+~~OpenCourseWare Courses                             - https://humanknowledge.neocities.org/information/opencourse.txt
+
+
 
 Physics                                              - https://humanknowledge.neocities.org/Physics/physics
 ~List of Physics Equations                           - https://humanknowledge.neocities.org/Physics/physicseq
@@ -23,6 +30,13 @@ Physics                                              - https://humanknowledge.ne
 ---Oscillations                                      - https://humanknowledge.neocities.org/Physics/mechanics/oscillations
 
 -Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
+--Electromagnetism Table of Contents                 - https://humanknowledge.neocities.org/Physics/EMtoc
+--Full Electromagnetism, Part 1: Electrostatics      - https://humanknowledge.neocities.org/Physics/ElectroFull
+---Law of Electric Force                             - https://humanknowledge.neocities.org/Physics/electromagnetism/LawElectric
+---Electric Fields                                   - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricFields
+---Electric Flux                                     - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricFlux
+---Electric Potential                                - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricPotential
+
 
 
 
@@ -47,8 +61,18 @@ Mathematics                                          - https://humanknowledge.ne
 
 -Single-Variable Calculus                            - https://humanknowledge.neocities.org/math/singlevarcalculus
 --Full Differential Calculus                         - https://humanknowledge.neocities.org/math/calculuspart1
---Full Integral Calculus                             - https://humanknowledge.neocities.org/math/calculuspart2
 ---Limits                                            - https://humanknowledge.neocities.org/math/singlevarcalculus/limits
+---Continuity                                        - https://humanknowledge.neocities.org/math/singlevarcalculus/continuity
+---Derivatives                                       - https://humanknowledge.neocities.org/math/singlevarcalculus/derivatives
+---Particle Motion                                   - https://humanknowledge.neocities.org/math/singlevarcalculus/particlemotion
+---Inverses                                          - https://humanknowledge.neocities.org/math/singlevarcalculus/inverses
+---Chain Rule                                        - https://humanknowledge.neocities.org/math/singlevarcalculus/chainrule
+---Extreme Values                                    - https://humanknowledge.neocities.org/math/singlevarcalculus/extremevalues
+--Full Integral Calculus                             - https://humanknowledge.neocities.org/math/calculuspart2
+
+-Multivariable Calculus                              - https://humanknowledge.neocities.org/math/multivariable
+--Full Multivariable Calculus                        - https://humanknowledge.neocities.org/math/multivariablefull
+
 
 
 
@@ -62,11 +86,28 @@ Cryptography                                         - https://humanknowledge.ne
 ---Stream Ciphers                                    - https://humanknowledge.neocities.org/cryptography/symmetric/stream.html
 ---Block Ciphers                                     - https://humanknowledge.neocities.org/cryptography/symmetric/block.html
 
+-Public-Key Cryptography                             - https://humanknowledge.neocities.org/cryptography/publickey
+--Full Public-Key Cryptography                       - https://humanknowledge.neocities.org/cryptography/publickeyFull
+
+-Hash Functions & Digital Signatures                 - https://humanknowledge.neocities.org/cryptography/digital
+--Full Hash Functions & Digital Signatures           - https://humanknowledge.neocities.org/cryptography/digitalFull
+
+-Message Authentication                              - https://humanknowledge.neocities.org/cryptography/authentication
+--Full Message Authentication                        - https://humanknowledge.neocities.org/cryptography/authenticationFull
+
+-Key Management                                      - https://humanknowledge.neocities.org/cryptography/keymanage
+--Full Key Management                                - https://humanknowledge.neocities.org/cryptography/keymanageFull
+
+-Post-Quantum Cryptography                           - https://humanknowledge.neocities.org/cryptography/PostQuantum
+--Full Post-Quantum Cryptography                     - https://humanknowledge.neocities.org/cryptography/PostQuantumFull
+
+
 
 
 Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
 ~Electrical Symbols                                  - https://humanknowledge.neocities.org/engineering/electrik/symbols
 ~List of Electrical Engineering Equations            - https://humanknowledge.neocities.org/engineering/electrik/electriceq
+
 
 
 
@@ -80,7 +121,9 @@ Astronomy                                            - https://humanknowledge.ne
 
 
 
+
 Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics
+
 
 
 

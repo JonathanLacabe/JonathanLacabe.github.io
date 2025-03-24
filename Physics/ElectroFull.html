@@ -198,7 +198,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <strong><a href="#ExcessChargeDef"><span class="mw-headline" id="ExcessChargeDef">#</span></a> <font color="#006400">Excess Charge</font></strong>: The state of an object being more positively or negatively charged due to a lack or oversupply of negatively-charged electrons, the movement of which can be facilitated by rubbing objects together (<u>charging by friction</u>). Since positive ions are fixed in place, an object can only change in charge through the removal or addition of negative charges.<br><br>
 	    
-	    An "excess positive charge" is slang for an electron deficit, while an "excess negative charge" means an oversupply of electrons.
+	    An "excess positive charge" is slang for an electron deficit, while an "excess negative charge" means an oversupply of electrons.<br><br>
+	    
+	    Note that the excess charge is effectively the total charge of the object, considering how an object without excess charge is considered to have a net-zero charge (neutral).
 	    <br><br><br>
 	    
 	    
@@ -356,7 +358,7 @@ The Law of Electric Force determines the repulsive or attractive force acting on
 <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Permittivity of Free Space</strong>:<br><br>The Coulomb Constant, 'k', 8.99 × 10⁹ (N × m²) / (C²), used in such equations as the Law of Electric Force (see Rule 162) and all it's applications, has a special fixed relationship with another constant. This other constant is  the <strong>permittivity constant</strong>, also just known as the <strong>permittivity of free space</strong>.<br><br>
+        </strong> <strong>Permittivity of Free Space</strong>:<br><br>The Coulomb Constant, 'k', 8.99 × 10⁹ (N × m²) / (C²), used in such equations as the Law of Electric Force (see Rule 162) and all its applications, has a special fixed relationship with another constant. This other constant is  the <strong>permittivity constant</strong>, also just known as the <strong>permittivity of free space</strong>.<br><br>
 
 It is represented as ε<sub>0</sub> ("Epsilon Naught"), and is defined using the following relation:<br><br>
 
@@ -506,12 +508,11 @@ See Rule 169 for a full, generalized treatment of these principles. Nonconductiv
 
 <ol>
 
-<li> A charged particle <u><strong>outside</strong></u> of a shell with charge uniformly distributed on its surface (e.g., a conductor) is attracted or repelled as if the shell’s charge were concentrated as a particle at its center.<br><br>
-This is assuming the charge on the shell is much greater than the charge of the particle, thus not interfering with the distribution of charge on the shell (an issue detailed in Rule 169).</li>
+<li> A charged particle <u><strong>outside</strong></u> of a shell with charge uniformly distributed on its surface (e.g., a conductor) is attracted or repelled as if the shell’s charge were concentrated as a particle at its center. This is assuming the charge on the shell is much greater than the charge of the particle, thus not interfering with the distribution of charge on the shell (an issue detailed in Rule 169).</li>
 
 <br><br>
 
-<li> A charged particle inside a shell with charge uniformly distributed on its surface (e.g., any conductor, and any nonconstructor created in such a way) will have no net force acting on it due to the shell. The charge from the particle cancels out with an equivalent portion of charge from the shell, which is added in addition to the charge on the surface of the shell as to maintain balance and symmetry, a mechanism detailed in Rule [[[[the future electrostatic equilibrium rule]]].</li>
+<li> A charged particle inside a shell with charge uniformly distributed on its surface (e.g., any conductor, and any nonconstructor created in such a way) will have no net force acting on it due to the shell. <!--The charge from the particle cancels out with an equivalent portion of charge from the shell, which is added in addition to the charge on the surface of the shell as to maintain balance and symmetry, a mechanism detailed in Rule [[[[the future electrostatic equilibrium rule]]].--></li>
 
 
 </ol>
@@ -694,7 +695,7 @@ That pesky 'dq' thing can be switched out by taking the derivative of any of the
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <!--the android rule. one of my greatest masterpieces, a testament to my power of elucidation. unironically took me 4 hours of writing and revision as I was learning a concept for the first time.-->
-The given integral equation for CCDs (continuous charge distributions, see Rule 174) is only applicable when <u>every infinitesimal charge has its electric field pointing in the same direction when it is pointing toward the test point</u>. For example: when the CCD is a flat line, and the test charge is on it's same axis.<br><br>
+The given integral equation for CCDs (continuous charge distributions, see Rule 174) is only applicable when <u>every infinitesimal charge has its electric field pointing in the same direction when it is pointing toward the test point</u>. For example: when the CCD is a flat line, and the test charge is on its same axis.<br><br>
 
 There are some workarounds in which the above stipulation is technically still respected, allowing the integral to still be used even for shapes like rings. This is when all components in all other directions cancel out, leaving only the components in a specific direction. For example, in a uniformly charged ring, the horizontal components of the field from symmetric charge elements cancel, leaving only the vertical (axial) component.<br><br>
 
@@ -806,9 +807,11 @@ All of this component business requires that there be some reference position, a
         
         $$E = \frac{\sigma}{2\varepsilon_0}$$
         
-        By virtue of the shape being infinite (passing Equivalence Characteristic #1, see Rule 178), this equation is true for both conductor and nonconductor infinite planes.<br><br>
+        Note that despite the equation specifically being for disks and circular 2d shapes, the very act of making the radius infinite will create a plane, and thus make it being a circle, irrelevant.<br><br>
         
-        Note that despite the equation specifically being for disks and circular 2d shapes, the very act of making the radius infinite will create a plane, and thus make it being a circle, irrelevant.</div><br><br>
+        By virtue of the shape being infinite (passing Equivalence Characteristic #1, see Rule 178), this equation is true for both conductor and nonconductor infinite planes. Furthermore, know that this is also the equation for the electric field at the surface of a nonconductor, as explained in Rule 195.
+        
+        </div><br><br>
 	  
 	  
 	  
@@ -867,11 +870,11 @@ The 'qd' from the Dipole Electric Field equation (see Rule 180) is known as the 
 
 The Dipole Moment is defined as the magnitude of the dipole, purely a matter of charge and distance. This is separate from the magnitude of the electric field of the dipole at a point - that already has its own equation established, see Rule 180. The electric field generated by the dipole is proportional to the dipole moment, though they are <u>always</u> in opposite directions, since the electric field points from the positive charge to the negative charge.<br><br>
 
-<!-- What is significant about it, however, detached from it's dictionary definition, is how it effectively functions both centrally and independently to the electric field equation, highlighted in Rule 181.
+<!-- What is significant about it, however, detached from its dictionary definition, is how it effectively functions both centrally and independently to the electric field equation, highlighted in Rule 181.
 
 no idea where I was going with this. too tired for this nonsense.-->
 
-The Electric Dipole Moment is to the Dipole Electric Field equation, what the Discriminant is to the Quadratic Formula (see Math Rule 33), perhaps even to a further degree in which the electric dipole moment can be considered even more important than it's forebear.<br><br>
+The Electric Dipole Moment is to the Dipole Electric Field equation, what the Discriminant is to the Quadratic Formula (see Math Rule 33), perhaps even to a further degree in which the electric dipole moment can be considered even more important than its forebear.<br><br>
 
 The direction of <span class="vecteur"><strong>p</strong></span> is simply the axis on which the dipole resides, while the <em>sense</em> (see Math Rule [[[) is pointing from the negative toward the positive charge of the dipole.
 
@@ -910,6 +913,7 @@ The direction of <span class="vecteur"><strong>p</strong></span> is simply the a
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> 
         
+        <!--This Rule is one of the high points in the entire Human Knowledge canon. This Rule is the highest tower, the brightest beacon in the shining city on a hill, the posterchild encompassing and summarizing the sacred goal and purpose of this project.-->
 
 In defining "<strong>Electric Flux</strong>", the focus of this section, one must understand a fundamental reconsideration of how one views <em>electric fields</em> themselves - if not, the following definitions and descriptions of Electric Flux will seem nonsensical.<br><br>
 
@@ -1030,7 +1034,7 @@ The only major difference from this to integrating normally is that you essentia
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> A <strong>Gaussian surface</strong> is a three-dimensional closed surface in which flux of any kind is calculated.<br><br>
         
-        Generally, these surfaces, when used in problems, are imaginary, though, <u>according to legend</u>, they could be real physical surfaces. Such an event, apart from the surface coinciding exactly with an actual physical surface (in which case there would be no point bothering with the Gaussian surface at all), is never used or asked for ever, and thus one should always consider Gaussian surfaces as nonexistent, imagined surfaces without the burden of it's own charge conflicting with that of another (as is the case with shells that have internal point charges).<br><br>
+        Generally, these surfaces, when used in problems, are imaginary, though, <u>according to legend</u>, they could be real physical surfaces. Such an event, apart from the surface coinciding exactly with an actual physical surface (in which case there would be no point bothering with the Gaussian surface at all), is never used or asked for ever, and thus one should always consider Gaussian surfaces as nonexistent, imagined surfaces without the burden of its own charge conflicting with that of another (as is the case with shells that have internal point charges).<br><br>
         
       In most cases, all references to a "Gaussian Surface" can be replaced by a simple description of a closed surface - there is <u></u>nothing particularly unique or individual the distinguishes a ""Gaussian"" surface from any other imaginary closed surface. It is just a generic surface purpose-built as a template for flux calculations - the electromagnetic industry standard for surfaces that do not carry the usual electric properties of conductors or nonconductors.<br><br>
       
@@ -1162,19 +1166,22 @@ Within the shell’s thickness (between the hollow interior and the surface), th
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> The equation for the electric field on the surface of any conducting object, spherical or nonspherical, can be easily determined using the Charge-Flux Law.<br><br>
-
-        Imagine a conducting object of any shape. By the laws explained<!--previously "discovered"--> in Rule 169 (and noted again in Rule 193), this object, if nonspherical, will not have uniform charge density at its surface, though its charge will still be <em>concentrated</em> at its surface under the laws outlined in Rule 169.<br><br>
+        </strong> <strong>Electric Field on an Object's Surface (Conductor & Nonconductor!)</strong>:<br><br>
         
-        Through the creation of an extremely small cylinder perpendicularly bisecting the surface of the conducting object at a particular point (the size of bisection being small enough that, there, the object's surface can be considered flat, and the electric field thus perfectly perpendicular), one can discover that the only electric flux being produced is upon the cap of the cylinder, since the curved sides of the cylinder will be perpendicular to the object (nullifying the cosine of the Charge-Flux equation - see Rule 193).<br><br>
+        The equations for the electric field on the surface of any object, spherical or nonspherical, can be easily determined using the Charge-Flux Law. Although the equations are derived in the same fashion, as a result of internal differences relating to charge distribution, the equations differ between conductors and nonconductors.<br><br>
+        
+        Imagine two objects, one a conductor and the other a nonconductor. By the laws explained in Rule 169 (and noted again in Rule 193), the conductor, if nonspherical, will not have uniform charge density at its surface, though its charge will still be <em>concentrated</em> at its surface under the laws outlined in Rule 169.<br><br>
+        
+        Through the creation of an extremely small cylinder perpendicularly bisecting the surface of either object at a particular point (the size of bisection being small enough that, there, the object's surface can be considered flat, and the electric field thus perfectly perpendicular), one can discover that the only electric flux being produced is upon the cap of the cylinder, since the curved sides of the cylinder will be perpendicular to the object (nullifying the cosine of the Charge-Flux equation - see Rule 193).<br><br>
         
         Thus, in using the uniform Charge-Flux Theorem (uniform because the cylinder is small enough and directly upon the surface that the electric field can be considered perfectly perpendicular and constant at exactly that point/scale), all one needs to do is find the electric flux occurring on the cap of the cylinder, which will lead directly to an equation for the electric field.<br><br>
         
-        The flux of the cap of the cylinder, being such a small distance away from the surface itself, can be taken to be the flux of that cap-shaped portion of the surface of the object itself. From there, the derivation of the equation simply follows these logical movements:<br><br>
+        The flux of the cap of the cylinder, being such a small distance away from the surface itself, can be taken to be the flux of that cap-shaped portion of the surface of the object itself. From there, the derivation of the equations (for a conducting object and a nonconducting object) simply follows these logical movements:<br><br>
         
-        The charge q<sub>enc</sub> enclosed by the Gaussian surface lies on the conductor’s surface in an area A. If σ is the charge per unit area, then q<sub>enc</sub> is equal to σA. In the uniform Charge-Flux Law, substituting EA in for flux (since the cosine is nullified by the perpendicular electric field - see Rule 185), and σA in for q<sub>enc</sub>, will produce the following equation (after simplification):<br><br>
+        The charge q<sub>enc</sub> enclosed by the Gaussian surface lies on the object’s surface in an area A. If σ is the charge per unit area, then q<sub>enc</sub> is equal to σA. In the uniform Charge-Flux Law, substituting EA in for flux (since the cosine is nullified by the perpendicular electric field - see Rule 185), and σA in for q<sub>enc</sub>, will produce the following equations (after simplification):<br><br>
         
-        <strong>E = (σ / ε<sub>0</sub>)</strong><br><br>
+        <strong>Conductor: E = (σ / ε<sub>0</sub>)</strong><br><br>
+        <strong>Nonconductor: E = (σ / 2ε<sub>0</sub>)</strong><br><br>
         
         <strong>E</strong> = The electric field on the surface of a conductor.<br>
         <strong>σ</strong> = The charge per unit area on the surface of the conductor.<br>
@@ -1229,7 +1236,7 @@ Within the shell’s thickness (between the hollow interior and the surface), th
         <strong>q</strong> = The total enclosed charge, namely that within the shell's material.<br>
         <strong>r</strong> = The distance to the point of measurement from the center of the shell, retricted to where r ≥ b.<br><br>
         
-        Through a small amount of effort, one can find that this field is the very same as the field created by a shell with all of it's charge concentrated in a particle of charge q in the center. Thus, the <strong>first theorem is proved</strong>.
+        Through a small amount of effort, one can find that this field is the very same as the field created by a shell with all of its charge concentrated in a particle of charge q in the center. Thus, the <strong>first theorem is proved</strong>.
         <br><br><br>
         
         
@@ -1265,7 +1272,7 @@ Within the shell’s thickness (between the hollow interior and the surface), th
     	  <article>
 	  
 	  
-	      <strong><font color="blue"><a href="#ElectricPotentialIntro"><span class="mw-headline" id="ElectricPotentialIntro">#</span></a> Introduction to Electric Potential:</font></strong><br><br>
+	      <strong><font color="blue"><a href="#ElectricPotentialIntro"><span class="mw-headline" id="ElectricPotentialIntro">#</span></a> Introduction to Electric Potential Energy:</font></strong><br><br>
 
           Electric potential energy works much the same as gravitational potential energy. As an object has greater gravitational potential energy the farther away it is from the source of its atraction, two oppositely charged objects, attracted to one another, will have greater <em>electric</em> potential energy the farther they are from one another. Their attraction inherently transforms this potential energy into kinetic energy as they attract, a result of the Conservation of Mechanical Energy.<br><br>
 
@@ -1279,33 +1286,176 @@ Within the shell’s thickness (between the hollow interior and the surface), th
 	        <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> Finding an equation to express electric potential is no difficult task at all. As a conservative force, the electric force can have all of the existing equations for potential energy and work (see Rule 100) applied:<br><br>
+        </strong> Finding an equation to express electric potential energy is no difficult task at all. As a conservative force, the electric force can have all of the existing equations for potential energy and work (see Rule 100) applied:<br><br>
 
-        <strong>F<sub>E</sub> = -(dU<sub>e</sub> / dr)</strong>
+        <strong>F<sub>E</sub> = -(dU<sub>e</sub> / dr)</strong><br><br>
         
-        The electric force equals the negative of the derivative of the "electric potential energy" with respect to position (the infinitesimally small change in position dr).<br><br>
+        E.g., the electric force equals the negative of the derivative of the "electric potential energy" with respect to position (the infinitesimally small change in position dr).<br><br>
         
         By simplifying this equation slightly, as in moving variables around, integrating both sides, and substituting in values for electric force, a new and improved Change in Electric Potential equation can be developed:
         
-        $$\Delta U_e = -q \int_{A}^{B} E \cos\theta \, dr$$
+        $$\Delta U_e = -q \int_{i}^{f} E \cos\theta \, dr$$
         
         <strong>∆U<sub>e</sub></strong> = The change in electric potential energy. It does <u>not</u> depend on the path taken between point A and point B - rather, all that is required is the displacement itself.<br><br>
         
         <strong>q</strong> = The magnitude of the charge/charged particle of the particular point being measured.<br><br>
         
-        <strong>A</strong> = A generic starting point of a path taken in an electric field.<br><br>
+        <strong>i</strong> = A generic starting point of a path taken in an electric field.<br><br>
         
-        <strong>B</strong> = A generic ending point of a path taken in an electric field.<br><br>
+        <strong>f</strong> = A generic ending point of a path taken in an electric field.<br><br>
         
-        <strong><span class="vecteur"><strong>E</strong></span></strong> = The magnitude of the electric field at a particular point.<br><br>
+        <strong>E</strong> = The magnitude of the electric field at a particular point.<br><br>
         
-        <strong>θ</strong> = The angle between the directions of the electric field and the direction of the infinitesimally small displacement dr. When the charge is moving in the direction opposite that of the electric field, the angle will be 180°, and the negative of the resulting cosine will cancel out with the one outside the integral.<br><br><br>
+        <strong>θ</strong> = The angle between the directions of the electric field and the direction of the infinitesimally small displacement dr. When the charge is moving in the direction opposite that of the electric field, the angle will be 180°, and the negative of the resulting cosine will cancel out with the one outside the integral.<br><br>
         
-        The potential energy of a positive charge increases as it moves opposite the direction of the electric field, while the potential energy of the negative charge will decrease as it moves opposite the direction of the field.</div><br><br>
+        <strong>d<span class="vecteur"><strong>r</strong></span></strong> = The infinitesimally small displacement of the charge, essentially its position.<br><br><br>
+        
+        The potential energy of a positive charge increases as it moves opposite the direction of the electric field, while the potential energy of the negative charge will decrease as it moves opposite the direction of the field. E.g., change in potential energy will be positive for a positive charge, and negative for a negative charge.</div><br><br>
 	  
 	  
+	  <!--note: dithering makes everything better-->
+	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Voltage (Electric Potential)</strong>: SCALAR (though an attribute of a vector Electric Field).<br><br>
+
+<u><strong>Units</strong></u>: Volts, e.g. Joules / Coulombs. The symbol for the volts unit, hilariously, is the same as the symbol for electric potential: <em><strong>V</strong></em>.<br><br><br>
+	  
+
+<u><strong>Equation</strong></u>:<br><br> 
+
+<strong>V = (U<sub>e</sub> / q)</strong><br><br>
+
+<strong>V</strong> = Electric Potential, the measure of electric potential energy experienced per unit charge in an electric field. Measured in Volts.<br>
+<strong>U<sub>e</sub></strong> = The magnitude Electric Potential Energy, explained in detail in Rule 197 and in the introduction directly above. Note that this refers to the p.e. of a single point.<br>
+<strong>q</strong> = The magnitude of the charge/charged particle of the particular point being measured.
+
+<br><br><br>
+
+
+<u><strong>Definition</strong></u>:
+
+The Electric Potential is a measure of the electric potential energy experienced per unit charge in an electric field. V and ΔU are indeed different - they have the same relationship as electric field and electric force. The electric potential energy is what <em>creates</em> the electric potential. <!--I could probably write something more substantive here, but it will do for now.--><br><br>
+
+In the same manner in which an electric field is defined by the force experienced by a small, positive test charge (see Subsection XIII.I), the electric potential is defined by the <em>energy</em> experienced by a small, positive test charge.<br><br>
+
+Of considerable importance and inherent relation to electric potential is <em>Electric Potential Difference</em>, aka, voltage. For more information, see Rule 199.</div><br><br>
+	  
+	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Voltage/Electric Potential Difference</strong>:<br><br>
+
+        The <em>change</em> in electric potential, derived from the Electric Potential described in Rule 198, is arguably more important and used than electric potential by itself.<br><br>
+        
+        Represented by <strong>∆V</strong>, the Electric Potential Difference (also known as <strong>Voltage</strong>) is the difference in the electric potential between two points: ∆V = V<sub>f</sub> - V<sub>i</sub>.<br><br>
+        
+        Inherently, a charge does not need to move from one point to another in order for the difference to exist; ∆V's existence is only dependent on the electric field itself.<br><br>
+        
+        Equations representing ∆V, slightly reworked from those of Rule 198 & Rule 197, is as follows:<br>
+        $$\Delta V = \frac{\Delta U_e}{q}$$
+        $$\Delta V = - \int_{i}^{f} \vec{E} \cdot d\vec{r}$$
+        
+        <strong>∆V</strong> = The Electric Potential Difference, the difference between the electric potentials of two points in an electric fields. Measured in Volts.<br><br>
+        
+        <strong>∆U<sub>e</sub></strong> = The change in electric potential energy. It does <u>not</u> depend on the path taken between point A and point B - rather, all that is required is the displacement itself.<br><br>
+        
+        <strong>q</strong> = The magnitude of the charge/charged particle of the particular point being measured.<br><br>
+        
+        <strong>i</strong> = A generic "starting" point in the electric field for measuring the electric potential difference.<br><br>
+        
+        <strong>f</strong> = A generic "ending" point in the electric field for measuring the electric potential difference.<br><br>
+        
+        <strong><span class="vecteur"><strong>E</strong></span></strong> = The electric field at a particular point, the one that is generating the electric potential.<br><br>
+        
+        <strong>d<span class="vecteur"><strong>r</strong></span></strong> = The infinitesimally small displacement of the charge, essentially its position.<br><br><br></div><br><br>
         
         <!--2nd best language in everything is python, the 1st is specific to each niche-->
+        
+        
+        <strong><font color="blue"><a href="#FieldPotentialEq"><span class="mw-headline" id="FieldPotentialEq">#</span></a> Additional Equation relating Electric Field & Potential:</font></strong><br><br>
+
+        Using the 2nd equation outlined in Rule 199, a new equation isolating Electric Field with respect to Electric Potential can be derived:<br><br>
+        
+        <strong>E<sub>r</sub> = -(dV / dr)</strong><br><br>
+        
+        <strong>E<sub>r</sub></strong> = The magnitude of the electric field in the direction of r. It can be considered in the traditional units of N/C, but note that V/m are also legal units to apply.<br><br>
+        
+        <strong>dV</strong> = The derivative of Electric Potential (instantaneous electric potential at a point in space & time, though time is irrelevant since this is electrostatic).<br><br>
+        
+        <strong>dr</strong> = The infinitesimally small displacement of the charge, essentially its position.<!--now with less direction!-->
+                  
+        <br><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Kinetic Energy through Charge Movement</strong>:<br><br>
+
+          There are two equations that can be used to find the kinetic energy of a charged object with an electric potential difference, one for if only conservative forces are acting on it, and one for if nonconservative ones are as well.<br><br>
+          
+          If the charged object moves through an electric potential difference ∆V without an applied force acting on it (moving purely through electric attraction), then only conservative forces are acting upon it. Applying the conservation of mechanical energy equation gives the following equation for change in kinetic energy:<br><br><br>
+          
+          <strong>∆K = -q × ∆V</strong><br><br><br>
+          
+          <strong>∆K</strong> = Change in Electric Kinetic Energy.<br><br>
+          <strong>q</strong> = The magnitude of the electric charge carried by the object, which is irrelevant to the positioning/movement of the object.<br><br>
+          <strong>∆V</strong> = The electric potential differene between two points in an electric field.<br><br><br><br><br>
+          
+          
+          
+          If, instead, an external/applied force is acting on the charged object, creating nonconservative work, then the change in kinetic energy is as follows:<br><br><br>
+          
+          <strong>∆K = (-q × ∆V) + W<sub>nonc</sub></strong><br><br><br>
+          
+          <strong>∆K</strong> = Change in Electric Kinetic Energy.<br><br>
+          
+          <strong>q</strong> = The magnitude of the electric charge carried by the object, which is irrelevant to the positioning/movement of the object.<br><br>
+          
+          <strong>∆V</strong> = The electric potential differene between two points in an electric field.<br><br>
+          
+          <strong>W<sub>nonc</sub></strong> = The work produced by the external, nonconservative force, breaking the conservation of mechanical energy.<br><br><br>
+          
+          
+          A special case can emerge in which ∆K equals to zero. Then, and only then, can W<sub>nonc</sub> be isolated in a very simple manner, just moving variables to the other side. For more details, see Rule 201.</div><br><br>
+          
+          
+          
+          
+          <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Work in moving a Charged Object</strong>:<br><br>
+
+
+If a charged object is moved from an initial point to a final point (differing points, obviously) via an external force, then the external force is performing work on the object. Furthermore, this work will change the electric potential energy of the charge.<br><br>
+
+There is an equation that can be used to find this work value in relation to electric potential difference - however, it requires that there be no change in the kinetic energy of the charge. Thus, it mandates the breaking of the conservation of Mechanical Energy. Since an external force is being applied (in order for there to even <em>be</em> work), this was already assumed and isn't much of an issue.<br><br>
+
+Therefore, under these circumstances, work equals the magnitude of the charged object's charge, multiplied by the electric potential difference the charge went through:<br><br><br>
+
+<strong>W<sub>nonc</sub> = q × ∆V</strong><br><br><br>
+
+<strong>W<sub>nonc</sub></strong> = The work produced by the external, nonconservative force, breaking the conservation of mechanical energy.<br><br>
+
+<strong>q</strong> = The magnitude of the electric charge carried by the object, which is irrelevant to the positioning/movement of the object.<br><br>
+
+<strong>∆V</strong> = The electric potential difference between two points in an electric field.<br><br><br>
+
+Note that this equation is the negative of the work produced by an electric field, which itself can be derived by applying Rule 100 equations for potential energy to the 1st equation found in Rule 199. 
+</div><br><br>
+          
+          
+          
+          
+          
+          
+          
         
 	  
 	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
@@ -1354,7 +1504,7 @@ Within the shell’s thickness (between the hollow interior and the surface), th
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 17 2025</span><br>
+      	<span class="tiny">Last Change: March 23 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

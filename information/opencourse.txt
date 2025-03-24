@@ -1,4 +1,5 @@
-All of the MIT OpenCourseWare courses I, Jonathan Lacabe, have studied in their entirety. Soon (within the next few years, if I go really hardcore (which I intend to)), this page should be incorporative of all science courses MIT has to offer.
+==OpenCourseWare Courses==
+These are all of the MIT OpenCourseWare courses I, Jonathan Lacabe, have studied in their entirety. Soon (within the next few years, if I go really hardcore (which I intend to)), this page should be incorporative of all science courses MIT has to offer.
 
 
 Physics (8):

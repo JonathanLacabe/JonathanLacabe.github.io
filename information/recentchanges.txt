@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 23 2025: Physics work, electromagnetic revisions + additions.
+Rules Added: Physics, Electromagnetism - Rule 198, 199, 200, 201.
+
 March 22 2025: Calculus Work. A specific "Extreme Values" section has been carved out of the latest digitizations for Calculus. There remain perhaps 1-2 months of Calculus  at the current rate of digitizing before my existing Multivariable Calculus notes will begin being processed - Cryptography and Physics are taking up the bulk of my time, and I will need to find some level of comfort in the comprehensiveness & degree of accessible-language of the content relating to these subjects (what this level will be, I will gauge as time goes on) before a concentrated digitization effort of more than one math Rule per day can be established. I would also like to use OCR technology in order to digitize the notes in a faster and more efficient way - I am researching tesseract right now.
 Rule Added: Mathematics, Single Variable Calculus - Rule 172.
 

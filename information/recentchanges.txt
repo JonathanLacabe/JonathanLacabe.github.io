@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 26 2025: Work has officially begun on the Mathematics equations page, which has gone neglected since it was created - I believe it was the first page of its kind, predating the decked-out Cryptography and Physics equations pages. Afterward, I began working on a new section of Electromagnetism: Electrostatic Equilibrium. I intend to finish this section fully tomorrow, and afterwards Capacitance.
+
 March 25 2025: The missing prerequisites for Electromagnetism were finally added. A grammar mistake I made across several pages was also corrected.
 Rules Added: Physics, Electromagnetism - Rule 203, 204.
 

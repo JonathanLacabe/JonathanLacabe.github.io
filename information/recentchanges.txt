@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 25 2025: The missing prerequisites for Electromagnetism were finally added. A grammar mistake I made across several pages was also corrected.
+Rules Added: Physics, Electromagnetism - Rule 203, 204.
+
 March 24 2025: The Physics train continues. Intensive work on Electromagnetism will continue until Friday (most likely), when I try to begin shifting focus unto Cryptography.
 Rules Added: Physics, Electromagnetism - Rule 202.
 

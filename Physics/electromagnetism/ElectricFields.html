@@ -238,32 +238,39 @@ On the flip side, if the point charge is negative, then the test charge will be 
       <strong>V</strong> = The total volume of the object.<br><br>
       <!-- what serves one clown serves the whole circus - humanknowledge in a nutshell-->
       Treat ρ as a constant when taking the derivative. Note, however, that the given equation can be transmuted into a derivative form: <strong>ρ = (dQ / dV)</strong>. This is because the ratio remains the same: total charge divided by total length is equal to the infinitesimally small individual charge over the <!--infinitesimally small individual--> volume thereof.
-      <br><br><br>
+      <br><br><br><br>
 	    
 	  <div class="rule">
         <strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> A <strong>Continuous Charge Distribution</strong> (CCD) is a simple concept that elaborates the simple 'point' model of charges into one that uses calculus to account for more chargetype possibilities, furthering this all-consuming journey in human knowledge.<br><br>
+        </strong> <strong>Continuous Charge Distribution (CCD)</strong>: VECTOR.<br><br>
+        
+        <u><strong>Units</strong></u>: Newtons / Coulombs. It is a type of electric field.<br><br><br>
+        
+        
+        <u><strong>Equation</strong></u>:<br>
+          $$E_{CCD} = k \int \frac{dq}{r^2} \hat{r}$$
 
-All a 'continuous charge distribution' is, is a charge that <em>isn't</em> a point charge; e.g., a charge with a shape and an electric charge continuously distributed throughout the object. <!--The shape and charge of the CCD will, of course, hugely impact the strength of the electric field at various points.--><br><br>
-
-The electric field that exists around a continuous charge distribution can be determined through a rethinking of the standard Electric Field-Law of Electric Force combined equation (see Rule 171), using Calculus:<br><br>
-
-Since the charged object is made up of an infinite number of infinitesimally small point charges ('dq' representing them individually), the therefore infinite number of electric fields can be calculated using an integral.<br><br>
-
-$$E_{CCD} = k \int \frac{dq}{r^2} \hat{r}$$
-
+<br>
+<strong>E<sub>CCD</sub></strong> = The electric field that exists around a continuous charge distribution, calculated at point r in space.<br><br>
 <strong>k</strong> = The Coulomb constant, equal to 8.99 × 10⁹ (N × m²) / (C²).<br><br>
 <strong>dq</strong> = The infinitesimally small point charges, of which there is an infinite number of. This value can be substituted for any of the equivalent charge density derivatives (see <a href="#LinearChargeDensity">Linear</a>, <a href="#SurfaceChargeDensity">Surface</a>, and <a href="#VolumetricChargeDensity">Volumetric</a>), pursuant to the nature of a particular problem.<br><br>
 <strong>r</strong> = The distance between the infinitesimal charge dq and the point where the electric field is being calculated. Unlike the Law of Electric Force, this r is a function that varies depending on the charge, since there is technically an <em>infinite</em> number of charges (dq).<br><br>
 <strong>r&#x302;</strong> = The unit vector pointing from dq (whichever charge) toward the test charge - this is most applicable post-integral, when you can have a test charge to calculate the strength of the electric field with respect to. The direction points radially outward for positive dq, and inward for negative dq.<br><br><br><br>
 
+
+        <u><strong>Definition</strong></u>: A <strong>Continuous Charge Distribution</strong> (CCD) is a simple concept that elaborates the simple 'point' model of charges into one that uses calculus to account for more chargetype possibilities, furthering the infinite journey into human knowledge.<br><br>
+
+A 'continuous charge distribution' is simply a charge that <em>isn't</em> a point charge; e.g., a charge with a shape and an electric charge continuously distributed throughout the object. <!--The shape and charge of the CCD will, of course, hugely impact the strength of the electric field at various points.--><br><br>
+
+The electric field that exists around a continuous charge distribution can be determined through a rethinking of the standard Electric Field-Law of Electric Force combined equation (see Rule 171) using Calculus. Since the charged object is made up of an infinite number of infinitesimally small point charges ('dq' representing them individually), the therefore infinite number of electric fields can be calculated using an integral.<br><br>
+
 There are very specific use cases for this integral: it is not applicable everywhere. See Rule 175 for a detailed treatise on this cases and their exceptions.
 
 The limits of integration of the integral are specific to each problem and can be determined through ingenuity and through the power of the indomitable human spirit.<br><br>
 
-That pesky 'dq' thing can be switched out by taking the derivative of any of the charge densities (see <a href="#LinearChargeDensity">linear</a>, <a href="#SurfaceChargeDensity">surface</a>, and <a href="#VolumetricChargeDensity">volumetric</a>), depending on what one is looking for.</div><br><br>
+That pesky 'dq' thing can be switched out by taking the derivative of any of the charge densities (see <a href="#LinearChargeDensity">linear</a>, <a href="#SurfaceChargeDensity">surface</a>, and <a href="#VolumetricChargeDensity">volumetric</a>), depending on what one is looking for.</div><br><br><br>
         
         
         <div class="rule">
@@ -271,7 +278,7 @@ That pesky 'dq' thing can be switched out by taking the derivative of any of the
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <!--the android rule. one of my greatest masterpieces, a testament to my power of elucidation. unironically took me 4 hours of writing and revision as I was learning a concept for the first time.-->
-The given integral equation for CCDs (continuous charge distributions, see Rule 174) is only applicable when <u>every infinitesimal charge has its electric field pointing in the same direction when it is pointing toward the test point</u>. For example: when the CCD is a flat line, and the test charge is on its same axis.<br><br>
+The integral equation for CCDs (continuous charge distributions, see Rule 174) is only applicable when <u>every infinitesimal charge has its electric field pointing in the same direction when it is pointing toward the test point</u>. For example: when the CCD is a flat line, and the test charge is on its same axis.<br><br>
 
 There are some workarounds in which the above stipulation is technically still respected, allowing the integral to still be used even for shapes like rings. This is when all components in all other directions cancel out, leaving only the components in a specific direction. For example, in a uniformly charged ring, the horizontal components of the field from symmetric charge elements cancel, leaving only the vertical (axial) component.<br><br>
 
@@ -358,14 +365,20 @@ All of this component business requires that there be some reference position, a
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Disks & Infinite Planes</strong>:<br><br>
-
-        <!--derived using simple magic,--> 
-        The Electric Field due to a (flat) <strong>uniformly charged disk</strong> and due to an <strong>infinite sheet</strong> are, in fact, closely related, the latter effectively being derived from the former.<br><br>
+        </strong> <strong>Disks & Infinite Planes</strong>: VECTORS.<br><br>
         
-        The equation below gives the electric field magnitude on the central axis through a flat, circular, uniformly charged disk. The equation is derived in a logical and most annoying manner, found <a href="https://archive.is/QHxKN">here</a> (offsite).<!--https://www.physics.udel.edu/~watson/phys208/exercises/kevan/efield1.html--><br><br>
+        <u><strong>Units</strong></u>: Newtons / Coulombs. They are types of electric fields.<br><br><br>
         
-        $$E = \frac{\sigma}{2\varepsilon_0} \left( 1 - \frac{z}{\sqrt{z^2 + R^2}} \right)$$
+        
+        <u><strong>Equation</strong></u>:<br>
+        $$E_{disk} = \frac{\sigma}{2\varepsilon_0} \left( 1 - \frac{z}{\sqrt{z^2 + R^2}} \right)$$
+        
+        $$E_{plane} = \frac{\sigma}{2\varepsilon_0}$$
+        <br>
+        
+        <strong>E<sub>disk</sub></strong> = The magnitude of the electric field produced by a uniformly charged disk, calculated at some point z from the central axis of said disk.<br><br>
+        
+        <strong>E<sub>plane</sub></strong> = The magnitude of the electric field of an infinite plane, independent of distance from the plane (interestingly).<br><br>
         
         <strong>σ</strong> = Surface charge density. See treatise<!--elaboration--> <a href="#SurfaceChargeDensity">here</a>.<br><br>
         
@@ -378,14 +391,16 @@ All of this component business requires that there be some reference position, a
         <br><br><br><br>
         
         
+        <!--derived using simple magic,--> 
+        <u><strong>Definition</strong></u>: The Electric Field due to a (flat) <strong>uniformly charged disk</strong> and due to an <strong>infinite sheet</strong> are, in fact, closely related, the latter effectively being derived from the former.<br><br>
         
-        If one were to plug in infinity for R, letting the radius rise to infinity while keeping the z value finite, then the equation would simplify to that of the following, the equation for an <strong>infinite plane</strong>:
+        The first equation gives the electric field magnitude on the central axis through a flat, circular, uniformly charged disk. The equation is derived in a highly logical and annoying manner, found <a href="https://archive.is/QHxKN">here</a> (offsite).<!--https://www.physics.udel.edu/~watson/phys208/exercises/kevan/efield1.html--><br><br>
         
-        $$E = \frac{\sigma}{2\varepsilon_0}$$
+        If one were to plug in infinity for R, letting the radius rise to infinity while keeping the z value finite, then the equation would simplify to that of the equation for the electric field of an <strong>infinite plane</strong>, the second given equation. By their very nature, all fields produced by infinite planes will be uniform, and thus will not change with respect to distance. The straight, parallel field lines will neither converge nor diverge from their source (the plane), and as such the field intensity will never change.<br><br>
         
-        Note that despite the equation specifically being for disks and circular 2d shapes, the very act of making the radius infinite will create a plane, and thus make it being a circle, irrelevant.<br><br>
+        Note that despite the equation specifically being for disks and circular 2d shapes, the very act of making the radius infinite will create a plane, and thus makes its circular origins irrelevant.<br><br>
         
-        By virtue of the shape being infinite (passing Equivalence Characteristic #1, see Rule 178), this equation is true for both conductor and nonconductor infinite planes. Furthermore, know that this is also the equation for the electric field at the surface of a nonconductor, as explained in Rule 195.
+        By virtue of the shape being infinite (passing Equivalence Characteristic #1, see Rule 178), the infinite plane equation is true for both conductor and nonconductor infinite planes. Furthermore, know that it is also the equation for the electric field at the surface of a nonconductor, as explained in Rule 196.
         
         </div><br><br>
 	  
@@ -403,32 +418,45 @@ All of this component business requires that there be some reference position, a
 	  <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Electric Dipole:</strong><br><br>
+        </strong> <strong>Electric Dipole, Electric Field (along dipole axis):<!--bc,nr--></strong> VECTOR.<br><br>
+        
+        <u><strong>Units</strong></u>: Newtons / Coulombs. It is a type of electric field.<br><br><br>
+        
+        <u><strong>Equation</strong></u>:<br><br>
+        
+        <strong><span class="vecteur"><strong>E</strong></span><sub>dipole</sub> = (1 / 2πε<sub>0</sub>) × (qd / z³)</strong><br><br>
 
-An <strong>Electric Dipole</strong> is an arrangement of two particles (point charges) with equal charge magnitudes but opposite signs. The particles are separated by distance <strong><em>d</em></strong> and lie along the <strong>dipole axis</strong>, an axis of symmetry going through both particles.<br><br>
+      <strong><span class="vecteur"><strong>E</strong></span><sub>dipole</sub></strong> = The electric field produced by a dipole along its axis, calculated with respect to the distance between the test charge and the dipole midpoint.<br>
+      <strong>ε<sub>0</sub></strong> = The Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).<br>
+      <strong>q</strong> = The absolute value of the charge of either particle.<br>
+      <strong>d</strong> = The distance between the particles.<br>
+      <strong>z</strong> = The distance between the test charge (the point at which the electric field is being calculated, which, being somewhere on the dipole axis, will be directly above or below the particles) and the dipole midpoint (d/2). z MUST be >>> to d, for reasons detailed in the proof (see below).<br><br><br>
 
-<!--C.A.S. - Dreaming Of You-->
-A simple graphic of what this entails is seen below:
 
-<br><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dipole.png"><img src="/Physics/img/dipole.png" alt="An example dipole moment, with the dipole axis running straight through the center." width=23%/></a></div>
-	    <span class="tiny"><em>An example dipole moment, with the dipole axis running straight through the center.</em></span><br><br>
-
-<!--IGOR-->
-The electric field produced by a dipole is determined using the following equation:<br><br>
-
-<strong><span class="vecteur"><strong>E</strong></span> = (1 / 2πε<sub>0</sub>) × (qd / z³)</strong><br><br>
-
-<strong>ε<sub>0</sub></strong> = The Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).<br>
-<strong>q</strong> = The absolute value of the charge of either particle.<br>
-<strong>d</strong> = The distance between the particles.<br>
-<strong>z</strong> = The distance between the point P and the dipole midpoint (d/2).<br><br>
-
-There is a simple proof of this equation, done through finding the strength of the net electric field produced by the two particles at an arbitrary point P along the dipole axis. It can be found <a href="/Physics/img/DipoleProof.png">here</a>.<br><br>
-
-The internal force on the electric dipole (<span class="vecteur"><strong>F</strong></span><sub>net</sub>) will equal to zero, since the attractive forces between the particles are equal and opposite in magnitude, forming a Newton's Third Law Force Pair.<br><br>
-
-The product qd on the right side of the equation is known as the "electric dipole moment", a concept discussed in Rule 182.</div><br><br>
+      <u><strong>Definition</strong></u>:
+      
+      An <strong>Electric Dipole</strong> is an arrangement of two particles (point charges) with equal charge magnitudes but opposite signs. The particles are separated by distance <strong><em>d</em></strong> and lie along the <strong>dipole axis</strong>, an axis of symmetry going through both particles.<br><br>
+      
+      <!--C.A.S. - Dreaming Of You-->
+      A simple graphic of what this entails is seen below:
+      
+      <br><br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/dipole.png"><img src="/Physics/img/dipole.png" alt="An example dipole moment, with the dipole axis running straight through the center." width=23%/></a></div>
+      	    <span class="tiny"><em>An example dipole moment, with the dipole axis running straight through the center.</em></span><br><br>
+      
+      <!--IGOR-->
+      
+      
+      The equation for the electric field produced by a dipole along its axis (and NOWHERE ELSE) is presented above. The electric field created at other points involves much more difficult, <a href="https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Essential_Graduate_Physics_-_Classical_Electrodynamics_(Likharev)/03%3A_Dipoles_and_Dielectrics/3.01%3A_Electric_Dipole">graduate-level math</a> (offsite), and thus is dealt with much later in Physics (see Rule [[[).<br><br>
+      
+      There is a simple proof of the given equation, done through finding the strength of the net electric field produced by the two particles at an arbitrary point P (the test charge) along the dipole axis. It can be found <a href="/Physics/img/DipoleProof.png">here</a> (onsite).<br><br>
+      
+      The internal force on the electric dipole (<span class="vecteur"><strong>F</strong></span><sub>net</sub>) will equal to zero, since the attractive forces between the particles are equal and opposite in magnitude, forming a Newton's Third Law Force Pair. They will thus be in equilibrium.<br><br>
+      
+      The product qd on the right side of the equation is known as the "electric dipole moment", a concept discussed in Rule 182.<br><br>
+      
+      The electric potential produced by an electric dipole is detailed in Rule [[[.
+      </div><br><br>
 	  
 	  
 	  <div class="rule"><strong>
@@ -496,7 +524,7 @@ The direction of <span class="vecteur"><strong>p</strong></span> is simply the a
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong>Electric Fields</strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 25 2025</span><br>
+      	<span class="tiny">Last Change: March 29 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

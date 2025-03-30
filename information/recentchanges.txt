@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 29 2025: I found, while reviewing some older Rules, that they were somewhat difficult to read and comprehend as a result of the equations and variable explanations bleeding into the rest of the equation description. Thus, I revised several Rules and converted them into the Units/Equation/Definition system that I used prolifically in Mechanics Pt. 3. The page is much easier to read now.
+Rules Added: Physics, Electromagnetism - Rule 206.
+
 March 28 2025: Work on Physics, many Rules revised to account for new additions.
 Rules Added: Physics, Electromagnetism - Rule 205.
 

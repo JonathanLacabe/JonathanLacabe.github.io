@@ -1,0 +1,143 @@
+
+<html><head>
+<style>
+* {
+ margin: 0;
+ padding: 0;
+}
+</style>
+<script type="application/x-javascript">
+
+var tau = 2 * Math.PI;
+
+function sin(a,r) { return(+r*Math.sin(tau*a)); }
+function cos(a,r) { return(-r*Math.cos(tau*a)); }
+
+function spot(c,a,r) {
+ var x = sin(a,r);
+ var y = cos(a,r);
+ c.fillStyle = "rgba(0.5,0.5,0.5,0.1)";
+ c.beginPath();
+ c.moveTo(x,y);
+ c.arc(x,y,0.05,0,tau,true);
+ c.fill()
+}
+
+var spotr = 0.03;
+var expo = 2;
+var dspotr = Math.pow(spotr,expo);
+
+var prevT, prevI, T, I, H, M;
+
+var particle = {};
+
+function gravitate(s,p,dt) {
+  var dx = s.x - p.x;
+  var dy = s.y - p.y;
+  var dd = Math.pow(dx*dx + dy*dy, expo/2);
+  if (dd < dspotr) dd = dspotr;
+  var mass = 0.005;
+  p.vx += mass * dt * dx / dd;
+  p.vy += mass * dt * dy / dd;
+}
+
+function tick() {
+ prevT = T;
+ prevI = I;
+
+ var d = new Date();
+ I = d.getSeconds();
+ T = d.getTime() / 1000;
+
+ // range of all these is between 0 and 1
+ var ms = d.getMilliseconds() / 1000;
+ var s = (I + ms) / 60;
+ var m = (d.getMinutes() + s) / 60;
+ var h = (d.getHours() % 12 + m) / 12;
+
+ M = { x: sin(m,0.7), y: cos(m,0.7) };
+ H = { x: sin(h,0.5), y: cos(h,0.5) };
+
+ dt = T - prevT;
+
+ for(var i = 0; i < 60; i++) {
+  gravitate(M,particle[i],dt);
+  gravitate(H,particle[i],dt);
+  particle[i].x += particle[i].vx * dt;
+  particle[i].y += particle[i].vy * dt;
+ }
+
+ if(prevI !== I) {
+  particle[I] = {
+   x: sin(I/60,0.9),
+   y: cos(I/60,0.9),
+   vx: 0,
+   vy: 0,
+  };
+ }
+
+ var c = document.getElementById("canvas").getContext("2d");
+ c.save();
+
+ c.fillStyle = "#ffffff";
+
+ c.beginPath();
+ c.arc(M.x,M.y,spotr,0,tau,true);
+ c.fill();
+
+ c.beginPath();
+ c.arc(H.x,H.y,spotr,0,tau,true);
+ c.fill();
+
+ for(var i = 0; i < 60; i++) {
+  c.fillStyle = "hsl("+i*6+",40%,50%)";
+  c.beginPath();
+  c.arc(particle[i].x,particle[i].y,0.01,0,tau,true);
+  c.fill();
+ }
+
+ c.restore();
+}
+
+function reset() {
+ var cs = document.getElementById("canvas").style;
+ var wh = window.innerHeight;
+ var ww = window.innerWidth;
+ cs.height = wh;
+ cs.width = ww;
+ var pr = window.devicePixelRatio == 2 ? 2 : 1;
+ var ch = canvas.height = pr * wh;
+ var cw = canvas.width = pr * ww;
+
+ var c = document.getElementById("canvas").getContext("2d");
+
+ var size = cw < ch ? cw : ch;
+ c.translate(cw / 2, ch / 2);
+ c.scale(size/2,size/2);
+}
+
+function go() {
+ onresize = reset;
+ reset();
+
+ for(var i = 0; i < 60; i++)
+  particle[i] = {
+   x: sin(i/60,1000),
+   y: cos(i/60,1000),
+   vx: 0,
+   vy: 0,
+  };
+
+ var d = new Date();
+ I = d.getSeconds();
+ T = d.getTime() / 1000;
+
+ setInterval(tick,10);
+}
+
+</script>
+</head><body onload="go()">
+
+<canvas id="canvas" />
+
+</body></html>

@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+March 31 2025: Physics work. Subsection XV.II of Electromagnetism was completely finished. Furthermore, work began and almost totally finished on Capacitance, a fully new section that was added today. Huge day for Physics, all said and done.
+Rules Added: Physics, Electromagnetism - Rule 209, 210, 211, 212, 213, 214.
+
 March 30 2025: Physics work.
 Rules Added: Physics, Electromagnetism - Rule 207, 208.
 

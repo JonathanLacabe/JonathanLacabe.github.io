@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 1 2025: Very productive day for Physics - With every addition to the new sections (Capacitance), I find I have to go back and revise a previous section in some way, while still keeping in mind the level of knowledge that had been reached by that section, and thus referring to future knowledge sparingly and with pointing references if needed. In any case, the dragon that is the dielectric Rules has been conquered, and the sun has almost totally set on Capacitance as a topic.
+Rules Added: Physics, Electromagnetism - Rule 215, 216, 217.
+
 March 31 2025: Physics work. Subsection XV.II of Electromagnetism was completely finished. Furthermore, work began and almost totally finished on Capacitance, a fully new section that was added today. Huge day for Physics, all said and done.
 Rules Added: Physics, Electromagnetism - Rule 209, 210, 211, 212, 213, 214.
 

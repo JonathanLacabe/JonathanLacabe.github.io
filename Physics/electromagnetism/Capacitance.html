@@ -123,9 +123,29 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> If not otherwise stated, all Parallel Plates have <strong>charges of equal magnitude</strong> and <strong>opposite signs</strong>.<br><br>
+        </strong> <strong>Parallel Plates:</strong><br><br>
+        
+        If not otherwise stated, all Parallel Plates have <strong>charges of equal magnitude</strong> and <strong>opposite signs</strong>.<br><br>
 
-        The Parallel Plate is the most basic example of a capacitor - two conductors a distance away from eachother, creating electric fields pointing towards the negative plate. Anywhere in the field, there will electric potential energy stored (zero at the negative plate, and maximum at the positive plate). See Rule [[[ for more information.</div><br><br><br>
+        The Parallel Plate is the most basic example of a capacitor - two conductors a distance away from eachother, creating a <strong>UNIFORM</strong> electric field pointing towards the negative plate. Anywhere in the field, there will electric potential energy stored (zero at the negative plate, and maximum at the positive plate). See Rule [[[ for more information.<br><br>
+        
+        The electric field between the two plates is always constant due to them being planes (see Rule 179), and, since the electric fields of the positive and negative plates add together, will always end up equalling σ / ε, with ε only being ε<sub>0</sub> when there is no dielectric (see end of Rule [[[).</div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Electric Permittivity</strong>:<br><br>
+        
+        <strong>Electric Permittivity</strong>, previously famous solely for its association with the great Permittivity of Free Space constant, is a measurement of how much a material is able to be polarized (see Rule 168) when it is placed in an electric field. This is the more appropriate definition for the form of electric permittivity used in relation to capacitance, and specifically the dielectric constant - see Rule [[[.<br><br>
+        
+        In all circumstances in which an equation uses the permittivity of free space constant, if the object/electric field has a different electric permittivity, then that new permittivity will replace ε<sub>0</sub>. For Capacitance, capacitors that don't have dielectric materials (see Rule [[[) use ε<sub>0</sub> as their permittivity, while dielectric capacitors have their own special permittivity that is inherently related to the free space constant - see Rule [[[.<br><br>
+        
+        In all cases, do not be afraid of removing a permittivity constant to replace it with another constant when the situation calls for it. The Permittivity of Free Space is no longer that all-powerful ubiquitous entity that it once was.
+
+<!--[[[I will probably have to expand this Rule in the future anyway, better to leave it open to revision than to have it as a definition that will be warped into an ugly blue section to avoid inconveniencing myself.-->
+        </div><br><br><br>
+        
         
         
         <div class="rule"><strong>
@@ -165,11 +185,11 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <u><strong>Equation</strong></u>:<br><br> 
       
-      <strong>C<sub>plates</sub> ≡ (ε<sub>0</sub> × A) / d</strong><br><br>
+      <strong>C<sub>plates</sub> = (ε × A) / d</strong><br><br>
       
       <strong>C</strong> = Capacitance. The measure of how much charge must be given to two parallel plates to produce a certain potential difference between them. Always Positive.<br>
       
-	<strong>ε<sub>0</sub></strong> = Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).<br>
+	<strong>ε</strong> = Permittivity (see Rule [[[) of the capacitor. If there is no Dielectric (see Rule [[[), then it is the Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).<br>
 
       <strong>A</strong> = The total surface area of either plate (imagined to be infinitely thin).<br>
       
@@ -180,13 +200,15 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <u><strong>Definition</strong></u>: Parallel Plate Capacitors are the most common form of capacitor in Physics, and are amongst spherical and cylindrical capacitors as the only capacitor forms worth knowing in baby freshman Physics (alongside some additional features and tricks - see dielectrics in Rule [[[ & Rule [[[).<br><br>
 
-The capacitance of a parallel plate measures how much charge must be given to the plates to produce a certain potential difference between them. The given equation was found by substituting in an equation specific to the characteristics of the parallel plates (the electric field at the surface of a conductor - Rule 196) into the uniform voltage equation of Rule 200, and then substituting in that entire mess into the generalized capacitance equation of Rule 211.<br><br>
+The capacitance of a parallel plate measures how much charge must be given to the plates to produce a certain potential difference between them. The given equation was found by substituting in an equation specific to the characteristics of the parallel plates (the electric field at the surface of a conductor - Rule 196) into the uniform voltage equation of Rule 200, and then substituting in that entire mess into the generalized capacitance equation of Rule [[[Capacitance (General)[[[.<br><br>
       
       A parallel plate capacitor functions by separating the charge onto the two plates, the very act of which is performing work to keep them in place (since the plates are attracted toward eachother) and putting electric potential energy into the system.<br><br>
       
       The <em>net</em> charge on a capacitor, being composed of a negative and positive plate of equal charge magnitudes, will be zero. However, not to worry: all that is necessary for any capacitance-related calculations is the q of a single plate.<br><br>
+      
+      <strong>The Electric Field between the plates is always uniform</strong>, as described in Rule 210. It is always equal to <strong>σ / ε</strong>, also derived in Rule 210.<br><br>
 
-Note that through usage of the permittivity of free space constant,  all parallel plate capacitors will be considered as being within a vacuum (for reasons explained in Rule 164). This has important implications for things like the dielectric, explained in Rule [[[.
+Note that through usage of the permittivity of free space constant,  all parallel plate capacitors will be considered as being within a vacuum (for reasons explained in Rule 164). However, if a dielectric material (see Rule [[[) is added between the plates, then the vacuum is rendered null and a different permittivity is used.
       
       </div><br><br><br>
         
@@ -203,29 +225,96 @@ Note that through usage of the permittivity of free space constant,  all paralle
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Full Dielectric Analysis.</strong><br><br>
+        </strong> <strong>Full Dielectric Analysis (for Parallel Plates).</strong><br><br>
         <!--we're getting to bottom of this dielectric business, and won't stop until the bottom of the ocean is drained and all time has ceased-->
         
         A dielectric is an insulating material placed between the plates of a capacitor, helping to physically separate the two plates and increase the capacitance through a process known as <strong>polarization</strong> (the very same that was described in Rule 168, that makes balloons stick on walls).<br><br>
         
-        When a dielectric is placed within the electric field between the plates, the electric field arranges the molecules in the dielectric according to the law of charges. <br><br>
+        When a dielectric is placed within the (uniform) electric field between the plates, the electric field arranges the molecules in the dielectric according to the law of charges. <br><br>
         
         The positive sides of the molecules in the dielectric material are attracted to the negative plate of the capacitor, while the negative sides of the molecules are attracted to the positive plate.<br><br>
         
-        As a result, the dielectric becomes <u>polarized</u>, with the arranged molecules forming what is known as an <strong>induced field</strong> opposite the direction of the original electric field.<br><br>
+        As a result, the dielectric becomes <u>polarized</u>, with the arranged molecules forming what is known as an <strong>induced field</strong> opposite the direction of the original electric field. This new, induced field is inherently nonuniform, and while it does not outright replace the original field, it changes the scheme of what the net electric field within the parallel plates IS, and thus changes any and all calculations involving such.<br><br>
         
-        As a result of the induced field being opposite in direction of the original, the net electric field of a capacitor with a dielectric is <em>smaller</em> than the original electric field:<br><br>
+        <!--No idea what I was talking about here, I was in a latenitePhysics-induced delirium: The net electric field will of course now be nonuniform as well, since it incorporates the changes made to the original electric field by the nonuniform induced field.-->As a result of the induced field being opposite in direction of the original, the net electric field of a capacitor with a dielectric is <em>smaller</em> than the original electric field:<br><br>
         
-        <strong>E = E<sub>original</sub> - E<sub>induced</sub></strong><br><br>
+        <strong>E<sub>net</sub> = E<sub>original</sub> - E<sub>induced</sub></strong><br><br>
         
-        Thus, a smaller electric field will lead to a lower electric potential difference (because of the uniform equation of Rule 200).<br><br>
+        Thus, a smaller electric field will lead to a lower electric potential difference (because of the uniform equation of Rule 200). This net electric field will still retain the <strong>σ / ε</strong> equation, despite the influence of the nonuniform induced electric field.<br><br>
         
-        If the capacitor is not part of a circuit (see Rule [[[), then the dielectric will <u>not</u> change the charge on the capacitor. Thus, <strong>capacitance will actually increase</strong> when there is a dielectric in place, since the electric potential difference is in the denominator of the capacitance equation (see Rule 211).<br><br>
+        If the capacitor is not part of a circuit (see Rule [[[), then the dielectric will <u>not</u> change the charge on the capacitor. Thus, <strong>capacitance will actually increase</strong> when there is a dielectric in place, since the electric potential difference is in the denominator of the capacitance equation (see Rule [[[Capacitance (General)[[[).<br><br>
         
         If the capacitor IS part of a circuit however, then its a totally different story.<br><br> 
         <!--[[[fix this nonsense when the time comes will a little expalantion bleeding into a "for more information" reference.-->
         
-        Mathematically, the effect of the dielectric is represented using its own constant (which can be then used to create a new version of the capacitance equation), described in detail in Rule [[[+1.</div><br><br>
+        Mathematically, the effect of the dielectric is represented using its own constant (which can be then used to create a new version of the capacitance equation), described in detail in Rule [[[+1.</div><br><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Dielectric Constant</strong>: SCALAR.<br><br><!--you're incomparable, like a...-->
+
+      <u><strong>Units</strong></u>: None! They cancel out.<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      
+      <strong>κ</strong> = (ε<sub>dielectric</sub> / ε<sub>0</sub>)<br>
+      <strong>κ</strong> = (E<sub>vacuum</sub> / E<sub>dielectric</sub>)<br><br><br>
+
+
+    	<strong>κ</strong> = Dielectric Constant. Represents the effect of the dielectric on the capacitor, as well as the relationship between the capacitor's permittivity and ε<sub>0</sub>.<br><br>
+    
+    	<strong>ε<sub>dielectric</sub></strong> = The Electric Permittivity (see Rule [[[) of the dielectric material.<br><br>
+    	
+    	<strong>ε<sub>0</sub></strong> = Permittivity of Free Space, equal to 8.85 × 10⁻¹² (C²) / (N × m²).<br><br>
+
+      <strong>E<sub>vacuum</sub></strong> = The magnitude of the Uniform Electric Field of the capacitor when there is no dielectric. Always σ / ε, with ε being ε<sub>0</sub> for non-dielectric capacitors.<br><br>
+      
+      <strong>E<sub>dielectric</sub></strong> = The magnitude of the (net & still uniform) Electric Field of the capacitor when there is a dielectric. Always σ / ε, but ε ≠ ε<sub>0</sub>.
+      
+      <br><br><br><!--THE BABY PANDA IS A 10/10/10/10/10/10 SONG-->
+      
+      
+      <u><strong>Definition</strong></u>: The Dielectric Constant, also known as the <strong>Relative Permittivity</strong> of a dielectric, isn't really a constant in the traditional <em>constant</em> sense, in that it fluctuates from dielectric to dielectric. While it is inherent to all capacitors that have an internal, insulating dielectric material, it depends on the characteristics and electric permittivity of that dielectric.<br><br>
+      
+      Do not confuse relative permittivity as the actual permittivity of a capacitor with a dielectric - relative permittivity is simply the constant that, when multiplied by the permittivity of free space, gives the special dielectric permittivity value ε<sub>dielectric</sub>.<br><br>
+
+      The dielectric constant represents the effect and power of the dielectric on the capacitor, and is used in several equations, most notably the Dielectric Capacitance equation (see Rule [[[). The easier it is for electrons to change configuration in a material (e.g., for them to move into polarized positions within a dielectric, represented by the dielectric's permittivity), the larger the dielectric constant.<br><br>
+      
+      The equation given for the electric fields is contingent on there being different electric permittivity values for the non-dielectric and dielectric electric fields, since if they were the same then the equation would equal 1. <STRONG>IF THE CAPACITOR IS PARALLEL PLATES</STRONG>, then the electric field equations for both values (as noted in Rule 210) is equal to σ / ε, and since charge and area will remain the same regardless of a dielectric, then ε must be the only thing that changes. Note that the electric permittivity of the non-dielectric vacuum electric field is, indeed, the Permittivity of Free Space.
+      <!--Some of the most belabored notes ever taken in human history. With every sentence, I made some discovery or realization that led to me going back and revising some old Rule for twenty minutes, making meticulous and careful changes to reflect that revisal everywhere that that Rule was referenced. I have never been happier.-->
+      
+      </div><br><br><br> <!-- (2/3rds of the way done.) This dielectric shit is sucking the lifeforce out of me. Only a few more more chapters until electromagnetism is done, and then focusing fully on cool stuff like cryptography before I will be called back unto the trenches of vibrations et waves.-->
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Dielectric Capacitors (Parallel Plates)</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: Farads, e.g. Coulombs / Volts.<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      
+      <strong>C<sub>dielectric</sub> = (κ × ε × A) / d</strong><br><br>
+      
+      <strong>C<sub>dielectric</sub></strong> = Capacitance of a dielectric capacitor. The measure of how much charge must be given to two parallel plates to produce a certain potential difference between them. Always Positive.<br>
+      
+    	<strong>κ</strong> = Dielectric Constant. Represents the effect of the dielectric on the capacitor, as well as the relationship between the capacitor's permittivity and ε<sub>0</sub>.<br>
+    
+    	<strong>ε</strong> = Permittivity (see Rule [[[) of the capacitor.<br>
+
+      <strong>A</strong> = The total surface area of either plate (imagined to be infinitely thin).<br>
+      
+      <strong>d</strong> = The distance between the two plates. This is also the distance upon which the electric potential difference of the general equation is taken.
+      
+      <br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Derived by just plugging in the equation for the dielectric constant (Rule [[[) into the parallel plates capacitance equation (see Rule [[[), the capacitance of a dielectric parallel plates capacitor is simply that of a regular parallel plates capacitor with the dielectric constant attached. Fascinating.<!--Iamgoingtoexplode-->
+      
+      </div><br><br>
 	  
 	  
 	  
@@ -266,7 +355,7 @@ Note that through usage of the permittivity of free space constant,  all paralle
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong> → <strong>Capacitance</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: March 31 2025</span><br>
+      	<span class="tiny">Last Change: April 1 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 5 2025: Calculus work - one Rule added.
+Rule Added: Mathematics, Single Variable Calculus - Rule 173.
+
 April 2 2025: Capacitance Completed. Now comes the age of Electrodynamics in the Physics section, as the electrostatics of old are now antiquated and completely finished as a subject. This new section shall be the focus until approximately one (1) week from today, at which point it too will be completed and drained of all possible new things to learn, and then I shall move unto Magnetostatics. Thus proceeds the passage of time for the Physicist, with novelty never being in short-supply, as there are infinite things to learn and infinite fields to pursue. Work on Current and Resistance, the latest section, has begun.
 Rules Added: Physics, Electromagnetism - Rule 218, 219.
 

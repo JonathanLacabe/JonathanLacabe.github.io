@@ -3,6 +3,9 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 6 2025: Physics work. Today is there first day in which Current and Resistance work has truly began in earnest, and the entirety of subsection XVII.I has been completed, while resistance is going well.
+Rules Added: Physics, Electromagnetism - Rule 220, 221, 222, 223, 224, 225, 226.
+
 April 5 2025: Calculus work - one Rule added.
 Rule Added: Mathematics, Single Variable Calculus - Rule 173.
 

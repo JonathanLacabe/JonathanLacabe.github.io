@@ -6,6 +6,6 @@ As "True greatness is when your name is spelled with a lower case letter", Units
 Hooke's Law -> Law of Elasticity
 Coulomb's Law -> Law of Electric Force
 Gauss's Law -> Charge-Flux Law
-
+Ohm's Law -> VCR Law (it encapsulates the three things relevant to the law, and it already sounds familiar, because VCR)
 
 

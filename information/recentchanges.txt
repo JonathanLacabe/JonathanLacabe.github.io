@@ -3,7 +3,10 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 8 2025: Considerable work in the Physics Equations page, incorporating most of Section XII.
+
 April 7 2025: Electromagnetism work continues. I did a small amount of work on the Physics Equations page (which needs every Electromagnetism equation added, which could be done in a single uninterrupted session tomorrow) and continued work on Resistance.
+Rules Added: Physics, Electromagnetism - Rule 227, 228, 229, 230, 231.
 
 April 6 2025: Physics work. Today is there first day in which Current and Resistance work has truly began in earnest, and the entirety of subsection XVII.I has been completed, while resistance is going well.
 Rules Added: Physics, Electromagnetism - Rule 220, 221, 222, 223, 224, 225, 226.

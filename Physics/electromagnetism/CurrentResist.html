@@ -100,9 +100,15 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#ElectricCurrent">XVII.I Electric Current.</a>
         </div>
         <div class="toc-column">
-          <!--<a href="#ElectricForce1">XII.III Electric Force.</a>-->
+          <a href="#PowerSection">XVII.III Electric Power.</a>
         </div>
         
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+            <a href="#ResistanceSection">XVII.II Resistance & The VCR Law.</a>
+          </div>
       </div>
       
       
@@ -115,7 +121,404 @@ document.addEventListener("DOMContentLoaded", function (){
 	  </header>
 	  <article>
 	  
-	  
+	  <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Electric Current</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: Amperes, I (Coulombs / Second).<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+
+      
+      <strong>I<sub>average</sub> = (∆Q / ∆t)</strong><br>
+      <strong>I<sub>instantaneous</sub> = (dq / dt)</strong><br><br>
+      
+      <strong>I<sub>average</sub></strong> = Average Current, the average rate at which the charge flows at a specific time.<br>
+      <strong>I<sub>instantaneous</sub></strong> = Instantaneous Current, the instantaneous rate at which charge flows.<br>
+
+      <strong>∆Q</strong> = Change in Charge, see Rule 223 for a complete analysis. Generally, referring to the positive charge (see below).<br>
+      
+      <strong>∆t</strong> = Change in Time.<br>
+      
+      <strong>dq</strong> = Instantaneous charge, the total charge which passes through a flat cross-sectional area during an infinitesimally small time dt.<br>
+      
+      <strong>dt</strong> = Instantaneous time (an exact time).<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Current is the rate at which charges flow through a conductor at a particular cross-sectional area and time, with the conventional <em>conventional current</em> (see Rule 221) specifically measuring positive charge. The rate at which charge flows through a cross-sectional area can differ over time if the current is a function of time (A.C. - see Rule 222), while it will always remain the same if the current is constant with respect to time (D.C. - also see Rule 222).<br><br>
+
+	    There are several key aspects that must be remembered when dealing with current - in particular, current direction (see Rule 221) and current type (see Rule 222).<br><br>
+	    
+	    Electric current will only occur when there is an electric potential difference across a wire - that imbalance is what is causing the electrons to be attracted to a particular side and thus for charge to move. If there is zero electric potential difference, current does not flow.<br><br>
+	    
+	    While current requires a potential difference to flow, the absence of current does not necessarily imply no electric potential difference. Current also depends on other annoying factors, such as whether a conductive path is available and how much resistance is present. Only if (in addition to no current) there is no resistance, and if the conductor is working fine, is it safe to assume no electric potential difference.<br><Br>
+	    
+	    There is an alternate equation for Average Current that uses variables substituted from drift velocity (see Rule 223) and ∆Q (Rule 223), suitable for situations in which [[[[[  <!--either have 4/5 vairables-->. The equation can be found in the blue section titled "Alternate Equation for Current".
+      
+      </div><br><br><br>
+	    
+	    
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Current Direction</strong>:<br><br>
+
+        The direction of the current, e.g. the direction in which the current is flowing, has several names and specificities that are important to understand.<br><br>
+        
+        In a battery, which has a positive and a negative terminal and a wire connecting the two, the standard current (without any outside interference) would flow from the negative to the positive. The electrons would be attracted to the positive end and would move toward it, obviously.<br><Br>
+        
+        The electrons themselves are moving towards the positive end. Thus, the negative charge is flowing toward the positive end, while the positive charge is flowing towards the negative end. <strong>Conventional Current</strong> is the current in the direction that the positive charges would flow, which would thus be in the negative direction.<br><br>
+        
+        <strong>In all circumstances, the assumed current will be conventional current, which flows toward the negative end/plate/terminal</strong>. In rare circumstances, a question will specify that they want another non-conventional direction (such as that of negative charge) to be considered. Always remember to express the charge as a positive value unless otherwise directed.<br><br>
+        
+        Positive charge moves in the opposite direction of the electrons. In this sense, several pranksters masquerading as leading textbook publishers have written that "positive charge is when negative charges flow in the negative direction", which is just a more confusing way of stating what has been explained above.<br><br><!--but god I love some people sometimes, because people are very, very special.-->
+        
+        <!--Of course, "positive charge" is a misnomer that really only means that the electrons are moving in a "<em>negative</em>" direction, negative meaning-->
+        
+        Never confuse the direction that charge is flowing in with the direction that the electrons themselves are flowing in.<Br><Br>
+        
+        Of course, if the charges flowing in the conductor are positive, then under conventional current, the current produced will be flowing in the same direction as the charged particles themselves.
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Types of Current</strong>:<br><br>
+        There are two different types of current: Alternating Current, and Direct Current. In real life (the fantasy land in which Physics laws are unideal), AC is typically supplied to buildings from the power grid on a broader scale and then converted to DC for individual appliances. This is more practical, as DC loses power over distance, while AC does not.<br><br>
+        
+        <strong>Alternating Current</strong> is current that changes as a function of time, working akin to a frequency and generally as a cosine or sine wave.<br><Br>
+        
+        <strong>Direct Current</strong> is current that is a <u>constant</u> as a function of time. Thus, the ∆Q of any identical-length space in the conductor at any time will be the same.
+        
+        </div><br><br>
+        
+        
+        
+        <strong><font color="blue"><a href="#ChargeCarrierDensity"><span class="mw-headline" id="ChargeCarrierDensity">#</span></a> Charge Carrier Density:</font></strong><br><br>
+
+        <strong>n = (# / V)</strong><br><br>
+  
+        <strong>n</strong> = Charge Carrier Density.<br>
+        <strong>#</strong> = Number of charge carriers within a particular space.<br>
+        <strong>V</strong> = Volume of the space.
+        <br><br><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>∆Q & dq</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: Coulombs.<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      
+      <strong>∆Q = n × A × ∆x × q</strong><br>
+      <strong>dq = n × A × ∆x × q</strong><br><br>
+
+      <strong>∆Q</strong> = Average Change in Charge.<br>
+
+      <strong>dq</strong> = Instantaneous charge, the total charge which passes through a flat cross-sectional area during an infinitesimally small time dt.<br>
+      
+      <strong>n</strong> = Charge Carrier Density (see blue section).<br>
+
+    	<strong>A</strong> = The cross-sectional area that the charge is passing through.<br>
+    
+    	<strong>∆x</strong> = [[[write out full treatise reflecting what I find out on 4/7/2025. Incorporate this knowledge into the definition, revising as necessary[[[.<br>
+    
+    	<strong>q</strong> = The charge per individual carrier.<br><br><br>
+    
+    
+    <u><strong>Definition</strong></u>: Electric Current incorporates "Change in Charge" (∆Q or dt, depending on rate type) into its equation. This variable represents the total amount of charge that <u>passes through</u> a cross-sectional area in the conductor during a specific amount of time.<br><br>
+    
+    It is not a volume of the space that is being considered, rather only a slice straight through - thus is the definition of a "cross-sectional area". This is regardless of whether the charge is average or instantaneous, all that matters is how much charge is moving through <em>that infinitesimally small slice of conductor</em> in however much time.<br><br>
+    
+    For instantaneous current, the rate of change of charge with respect to time is taken as time approaches zero, while the cross-sectional area remains the same. For average current, the total charge that crosses through a cross-sectional area over a particular<!--finite--> amount of time is used.<br><br>
+    
+    Thus, ∆Q or dq equals the number of charge carriers (at a point for instantaneous and in a space for average) multiplied by the charge per carrier. Furthermore, through substituting charge carrier density times volume in for number of charge carriers, and then area times displacement in for volume, the final equation is found.<br><br>
+    
+    As described in Rule 221, ∆Q generally refers to the total <em><u>positive</u></em> charge moving through the cross-sectional area at a particular time, as the majority of wires/circuits described in problems use conventional current. In the rare fringe case that a problem says to calculate the negative charge, then a negative sign will be used and everything else will be the same.
+    
+    <!--I regret that fact that I am effectively treating Physics as an instrument of solving strange homework problems rather than as an actual tool for understanding the universe. Perhaps it is becoming to abstracted, or that I am focusing too much on the student aspect of learning the material.--></div><br><br><br>
+    
+    
+    
+    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Drift Velocity</strong>: VECTOR.<br><br>
+      <u><strong>Units</strong></u>: Meters / Second.<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      <strong>V<sub>d</sub> = (∆x / ∆t)</strong><br><br>
+      
+      
+      <strong>V<sub>d</sub></strong> = Drift Velocity, the average velocity of charge carriers in a conductor.<br>
+
+      <strong>∆x</strong> = A displacement (an actual space in the wire, as opposed to a mere cross-section).<br>
+      
+      <strong>∆t</strong> = Change in Time (the time it takes for the charge to move through the displacement).<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>:  
+
+Drift Velocity is the average velocity of the charge carriers in a conductor with current. It is quite possibly the most useless concept learned in Electromagnetism. It used all of once and then never again.<!--tell 'em, dave. ps I heard this in class, I didn't just make this up--><br><br>
+
+	The charge carriers within a conductor are always scurrying about; when there is no current, however, they are scurrying in all different directions and thus produce a net zero drift velocity.<Br><br>
+
+When there is a current (and an electrical potential difference to produce it), then the charge carriers all (practically) begin moving in the same direction, and so a drift velocity greater than zero appears in the direction of the current.
+      
+      </div><br><br><br>
+      
+      
+      
+      
+
+    <strong><font color="blue"><a href="#AlternateCurrentEq"><span class="mw-headline" id="AlternateCurrentEq">#</span></a> Alternate Equation for Current:</font></strong> SCALAR.<br><br>
+        
+        <u><strong>Units</strong></u>: Newtons / Coulombs. It is a type of electric field.<br><br><br>
+        
+        <u><strong>Equation</strong></u>:<br><br>
+        <strong>I<sub>average</sub> = n × A × v<sub>d</sub> × q</strong><br><br>
+        
+        <strong>I<sub>average</sub></strong> = Average Current, the average rate at which the charge flows at a specific time.<br>
+      
+      <strong>n</strong> = Charge Carrier Density (see blue section).<br>
+
+    	<strong>A</strong> = The cross-sectional area that the charge is passing through.<br>
+    
+    	<strong>V<sub>d</sub></strong> = Drift Velocity, the average velocity of charge carriers in a conductor.<br>
+    
+    	<strong>q</strong> = The charge per individual carrier.<br><br><br>
+        
+        <u><strong>Definition</strong></u>: This equation was found by substituting the drift velocity equation (Rule 224) into the change in charge equation (Rule 223), and then substituting that monstrosity into the electric current equation (Rule 220). Lord have mercy.<!--I say this irreligiously, in the typical American humor way, figure of speech. There is no better phrase to convey the emotion I want to get across.-->
+        
+        <br><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Current Density</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: Amperes per Meter Squared (A / m²).<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+	<strong>J = I / A</strong><br>
+      <strong>J = n × v<sub>d</sub> × q</strong><br>
+	<strong>J = σ × E</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(only VCRtic conductors)<br><br>
+      
+	<strong>J</strong> = Current Density.<br>
+
+	<strong>I</strong> = Electric Current, Average or Instantaneous depending on the circumstance.<br>
+
+	<strong>A</strong> = The cross-sectional area that the charge is passing through.<br>
+
+	<strong>n</strong> = Charge Carrier Density (see blue section).<br>
+      
+      <strong>v<sub>d</sub></strong> = Drift Velocity, the average velocity of charge carriers in a conductor.<br>
+
+	<strong>q</strong> = The charge per individual carrier.<br>
+
+      <strong>σ</strong> = The material's conductivity.<br><!--Same symbol as surface charge density-->
+      
+      <strong>E</strong> = The magnitude of the uniform electric field.<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Conductivity is the conductive equivalent to resistivity, and measures how little a material opposes the movement of electric charge.<br><br>
+
+      Like Resistivity, Conductivity is a <strong>material property</strong> inherent to the material composing an object.<br><br>
+      
+      Note that conductivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule [[[ for more information.
+      	</div><br><br><br>
+        
+        
+        
+    
+        
+        
+        </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="ResistanceSection">XVII.II Resistance & The VCR Law.</span></h3>
+  	    </header>
+  	    <article>
+  	    
+  	    
+  	    <strong><a href="#ResistanceDef"><span class="mw-headline" id="ResistanceDef">#</span></a> <font color="#006400">Resistance</font></strong>: A property in some electric components that allows them to "resist" the flow of electric current. The equation for resistance is apart of the VCR Law, see Rule 226.
+    	    <br><br><br>
+    	    
+	    
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>VCR Law (Ohm's Law)</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: Three separate types for each involved variable:<br>
+      Electric Potential Difference: <strong>Volts</strong>, V (Joules / Coulombs).<br>
+      Electric Current: <strong>Amperes</strong>, I (Coulombs / Second).<br>
+      Resistance: <strong>Ohms</strong>, R || Ω (Volts / Amperes)
+      
+      
+      <br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+
+      
+      <strong>R = (∆V / I)</strong><br><br>
+      
+      <strong>R</strong> = Resistance, an electric component's ability to resist electric current, measured in Ohms.<br>
+
+      <strong>∆V</strong> = Electric Potential Difference, measured in Volts.<br>
+      
+      <strong>I</strong> = Electric Current, measured in Amperes.<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Ohm's Law, from here on forth referred to as the VCR Law, is the defining law relating Electric Potential Difference (Voltage), Electric Current, and Resistance.<br><br>
+
+      Substances that follow the VCR Law are known as VCRtic substances <!--let the record show: I laughed my ass off when I thought of this term last night. 10pm-ish, april 7 2025-->, while those that do not are non-VCRtic. All substances should be assumed to be VCRtic unless otherwise stated.
+      
+      </div><br><br><br>
+      
+      
+      
+    	    
+    	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Resistivity</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: Ohm Meters (Ω × m).<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      <strong>R = (ρ × L) / A</strong><br><br>
+      
+      
+      <strong>R</strong> = Resistance, an electric component's ability to resist electric current, measured in Ohms.<br>
+
+      <strong>ρ</strong> = The material's Resistivity.<br><!--Same symbol as density-->
+
+	<strong>L</strong> = The object's length (e.g., the variable that when multiplied by A would produce a volume).<br>
+      
+      <strong>A</strong> = The cross-sectional area that the charge is passing through.<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Resistance ≠ Resistivity.<br><br>
+
+      While Resistance itself (the extent to which an object limits current flow) is a <em>physical property</em> of an object, the much cooler and less-discussed <strong>RESISTIVITY</strong> is a material property.<br><br><br>
+      
+      <strong>Physical Property</strong>: A property characteristic of the <em>object</em>, like Resistance. Can be measured/observed without changing the material's composition.<br><br>
+      
+      <strong>Material Property</strong>: A property inherent to the material composing an object - something like the metal plates of a parallel plate capacitor, or resistivity.<br><br><br>
+      
+      
+      Resistance and Resistivity are of course closely related (directly proportional to eachother, as shown in the equation), but they refer to fundamentally different aspects of how matter resists current. The difference between Resistance and Resistivity is the difference between software and hardware.<!--Grow up.--><br><br>
+      
+      For more information regarding the inherent proportionalities that resistivity equation implies, see Rule [[[.<!--learning about history gets one in a profound mood. Everything in the early 20th century is connected - art, literature, music, all reflecting an age and continent that was steadily marching towards its own destruction. There is an insane antediluvian feeling to it, trivialities that tie into the most devastating events to have occurred in human history, that universal moment in which all aspects of everything, every individual is involved in a single event. Épigraphes Antiques--><br><br>
+      
+      Note that resistivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule [[[ for more information.<br><br>
+      
+      Electrical Components with resistance usually convert electric potential energy to thermal energy which can increase the temperature of the resistor and can increase the temperature of the resistor's environment. Don't worry about this, unless told to in a problem.
+      	</div><br><br><br>
+    	    
+    	    
+    	    
+    	    
+    	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Resistance Proportionalities</strong>.
+
+          Several proportionalities between Resistance and other variables are revealed through analysis of the Resistivity equation, divine'd<!--divine the answer--> in Rule [[[-1.<br><br>
+          
+          In addition to Resistivity, Resistance is linearly proportional to the length of the resistor, which should already be intuitive since a longer resistor would inherently have greater resistance as the charges would have to travel a longer distance through the resistor.<br><Br>
+          
+          Furthermore, resistance is inversely proportional to the cross-sectional area, obvious considering how greater cross-sectional areas have more space for the current to flow through and therefore less resistance to flow.<br><br>
+          
+          The greater the <strong>Resistivity</strong>, the <strong>greater</strong> the Resistance.<br>
+          
+          The greater the <strong>Length</strong>, the <strong>greater</strong> the Resistance.<br>
+          
+          The greater the <strong>Cross-Sectional Area</strong>, the <strong>lower</strong> the Resistance.</div><br><br>
+    	    
+    	    
+    	    
+    	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Semiconductors</strong>:<br><br>
+
+        Materials that have Resistivities between those of Conductors and Insulators, like Germanium and Silicon, are known as Semiconductors.<br><br>
+        
+        Semiconductors are typically used in electrical components like diodes, transistors, and microchips. Depending on the electrical signals sent to it, as well as by altering its chemical makeup, a semiconductor can be made more of a conductor or an insulator.<br><Br>
+        
+        The vast majority of modern electronics make heavy use of the conducting/insulating capabilities of the semiconductor. Also note that temperature works the opposite for semiconductors as they do for conductors: as the temperature of the semiconductor increases, the resistivity of the semiconductor goes down.</div><br><br>
+    	    
+    	    
+    	    <!--Nichrome: A metal formed by an alloy of nickel and chromium. A fine conductor.-->
+    	    
+    	    
+    	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Conductivity</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: 1 / Ohm Meters (precisely the opposite of resistivity).<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      <strong>R = L / (σ × A)</strong><br><br>
+      
+      
+      <strong>R</strong> = Resistance, an electric component's ability to resist electric current, measured in Ohms.<br>
+
+	<strong>L</strong> = The object's length (e.g., the variable that when multiplied by A would produce a volume).<br>
+
+      <strong>σ</strong> = The material's conductivity.<br><!--Same symbol as surface charge density-->
+      
+      <strong>A</strong> = The cross-sectional area that the charge is passing through.<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Conductivity is the conductive equivalent to resistivity, and measures how little a material opposes the movement of electric charge.<br><br>
+
+Like Resistivity, Conductivity is a <strong>material property</strong> inherent to the material composing an object.<br><br><br>
+
+Note that conductivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule [[[ for more information.
+	</div><br><br>
+	
+	
+	      </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="PowerSection">XVII.III Electric Power.</span></h3>
+  	    </header>
+  	    <article>
+  	    
+  	    
+	
+	<div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Electric Power</strong>: SCALAR.<br><br>
+      <u><strong>Units</strong></u>: (Joules / Seconds), known as <strong>Watts</strong>.<br><br><br>
+      
+      <u><strong>Equation</strong></u>:<br><br> 
+      <strong>P = I × ∆V</strong><br><br>
+      
+      
+      <strong>P</strong> = Electric Power.<br>
+
+      <strong>I</strong> = Electric Current.<br>
+      
+      <strong>∆V</strong> = Electric Potential Difference.<br><br><br>
+      
+      
+      <u><strong>Definition</strong></u>: Electric Power is the rate at which electric potential energy is converted into nonconservative energy (namely heat, light, and sound) using an electric component like a resistor.<Br><Br>
+
+This equation was derived as follows: The Power equation from Subsection VII.II is (W / ∆t). The electric equivalent of power would thus be is (∆U<sub>electric</sub> / ∆t). ∆U<sub>electric</sub> in terms of the electric potential difference is already known from from the original definition of voltage from Rule 200. Substituting that in produces (q × ∆V) / t, and since (q / t) equals I, the end product of P = I × ∆V is then easily achievable.<br><Br>
+
+Note that the equation can be altered into various other (mathematically equivalent) forms by substituting in the isolated forms of I and ∆V from the VCR Rule, depending on whatever variables one has/needs. <strong>(I × ∆V) = (∆V² / R) = (I² × R)</strong>, but you only need one to derive all of the others.
+	
+      </div><br><br><br>
+      
+      
+      
+      <strong><a href="#KilowattHourDef"><span class="mw-headline" id="KilowattHourDef">#</span></a> <font color="#006400">Kilowatt-Hour</font></strong>: A unit of measurement equivalent to 3.6M Watt Seconds, which just means 3.6M Joules. It is thus actually a measure of <strong><em>energy</em></strong> instead of power, since all time variables cancel out. This is the most common unit of measurement in measuring electricity consumption in one's home, for whatever reason.
+
+    	    <br><br>
 	  
 	  
 	  
@@ -154,10 +557,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/Physics/Electromagnetism.html">Electromagnetism</a></strong><br>
         <article><strong><a href="/Physics/ElectroFull.html">Pt. 1: Electrostatics</a></strong> → <strong><a href="/Physics/ElectroFull2.html">Pt. 2: Electrodynamics</a></strong></article>
         <br>
-        <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong> → <strong><a href="/Physics/electromagnetism/Capacitance.html">Capacitance</a></strong><br> → <strong>Current and Resistance</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong> → <strong><a href="/Physics/electromagnetism/Capacitance.html">Capacitance</a></strong><br> → <strong>Current and Resistance</strong> → <strong><a href="/Physics/electromagnetism/Circuitry.html">Circuitry</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 2 2025</span><br>
+      	<span class="tiny">Last Change: April 9 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

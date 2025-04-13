@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 11 2025 - Further work on the Physics equations page, getting all the way to XVI and halfway through Electrostatics as a whole. I will pause upon getting to Electrodynamics, and then continue adding equations after Electrodynamics is totally settled.
+
 April 9 2025: Physics work.
 Rules Added: Physics, Electromagnetism - Rule 232, 233, 234.
 

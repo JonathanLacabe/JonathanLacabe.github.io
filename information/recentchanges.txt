@@ -3,6 +3,12 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 14 2025 - Following thorough revision, I was able to add several new sections and Rules that had been in my drafts for several days as I editted and improved them while figuring out the best way to place them in relation to the greater section and page as a whole. I plan to finish the entirety of circuitry and resistance (XVIII) by midday Wednesday.
+Rules Added: Physics, Electromagnetism - Rule 236, 237, 238, 239, 240, 241, 242, 243, 244.
+
+April 13 2025 - Edits and revisal of existing Rules, making way for some already written Rules (saved in a notepad file) to be placed in their relevant pages.
+Rules Added: Physics, Electromagnetism - Rule 235.
+
 April 11 2025 - Further work on the Physics equations page, getting all the way to XVI and halfway through Electrostatics as a whole. I will pause upon getting to Electrodynamics, and then continue adding equations after Electrodynamics is totally settled.
 
 April 9 2025: Physics work.

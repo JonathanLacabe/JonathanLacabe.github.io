@@ -145,15 +145,17 @@ document.addEventListener("DOMContentLoaded", function (){
       <strong>dt</strong> = Instantaneous time (an exact time).<br><br><br>
       
       
-      <u><strong>Definition</strong></u>: Current is the rate at which charges flow through a conductor at a particular cross-sectional area and time, with the conventional <em>conventional current</em> (see Rule 221) specifically measuring positive charge. The rate at which charge flows through a cross-sectional area can differ over time if the current is a function of time (A.C. - see Rule 222), while it will always remain the same if the current is constant with respect to time (D.C. - also see Rule 222).<br><br>
+      <u><strong>Definition</strong></u>: Current is the rate at which charges flow through a conductor at a particular cross-sectional area and time, most commonly in the form of the aptly-named <em>conventional current</em> (see Rule 221), specifically measuring the flow of positive charge.<br><br>
+      
+      The rate at which charge flows through a cross-sectional area can differ over time if the current is a function of time (AC - see Rule 222), while it will always remain the same if the current is constant with respect to time (DC - also see Rule 222). As stated in Rule 222, current should be assumed to be in DC unless otherwise stated.<br><br>
 
 	    There are several key aspects that must be remembered when dealing with current - in particular, current direction (see Rule 221) and current type (see Rule 222).<br><br>
 	    
-	    Electric current will only occur when there is an electric potential difference across a wire - that imbalance is what is causing the electrons to be attracted to a particular side and thus for charge to move. If there is zero electric potential difference, current does not flow.<br><br>
+	    Electric current will only occur when there is an electric potential difference across a wire - that imbalance is what causes the electrons to be attracted to a particular side and thus for charge to move. If there is zero electric potential difference, current does not flow.<br><br>
 	    
-	    While current requires a potential difference to flow, the absence of current does not necessarily imply no electric potential difference. Current also depends on other annoying factors, such as whether a conductive path is available and how much resistance is present. Only if (in addition to no current) there is no resistance, and if the conductor is working fine, is it safe to assume no electric potential difference.<br><Br>
+	    While current requires a potential difference to flow, the absence of current does not necessarily imply no electric potential difference. Current also depends on other annoying factors, such as whether a conductive path is available and how much resistance is present. Only if (in addition to no current) there is no resistance, and if the conductor/wire is working fine, is it safe to assume no electric potential difference.<br><Br>
 	    
-	    There is an alternate equation for Average Current that uses variables substituted from drift velocity (see Rule 223) and ∆Q (Rule 223), suitable for situations in which [[[[[  <!--either have 4/5 vairables-->. The equation can be found in the blue section titled "Alternate Equation for Current".
+	    There is an alternate equation for Average Current that uses variables substituted from drift velocity (see Rule 223) and ∆Q (Rule 223), suitable for situations in which you know the material properties of the object, such as charge carrier density and drift velocity. The equation can be found in the blue section titled "Alternate Equation for Current".
       
       </div><br><br><br>
 	    
@@ -169,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         The electrons themselves are moving towards the positive end. Thus, the negative charge is flowing toward the positive end, while the positive charge is flowing towards the negative end. <strong>Conventional Current</strong> is the current in the direction that the positive charges would flow, which would thus be in the negative direction.<br><br>
         
-        <strong>In all circumstances, the assumed current will be conventional current, which flows toward the negative end/plate/terminal</strong>. In rare circumstances, a question will specify that they want another non-conventional direction (such as that of negative charge) to be considered. Always remember to express the charge as a positive value unless otherwise directed.<br><br>
+        <strong>In all circumstances, the assumed current of a circuit will be conventional current, with charge flowing from the positive toward the negative end/plate/terminal</strong>. In rare circumstances, a question will specify that they want another non-conventional direction (such as that of negative charge) to be considered. Always remember to express the charge as a positive value unless otherwise directed.<br><br>
         
         Positive charge moves in the opposite direction of the electrons. In this sense, several pranksters masquerading as leading textbook publishers have written that "positive charge is when negative charges flow in the negative direction", which is just a more confusing way of stating what has been explained above.<br><br><!--but god I love some people sometimes, because people are very, very special.-->
         
@@ -189,7 +191,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong>Alternating Current</strong> is current that changes as a function of time, working akin to a frequency and generally as a cosine or sine wave.<br><Br>
         
-        <strong>Direct Current</strong> is current that is a <u>constant</u> as a function of time. Thus, the ∆Q of any identical-length space in the conductor at any time will be the same.
+        <strong>Direct Current</strong> is current that is a <u>constant</u> as a function of time. Thus, the ∆Q of any identical-length space in the conductor at any time will be the same.<br><br>
+        
+        Unless otherwise stated, every circuit (see Rule [[[) and application of current & voltage should be assumed to be in DC current, with current constant as it moves from the battery (Rule [[[).
         
         </div><br><br>
         
@@ -276,7 +280,7 @@ When there is a current (and an electrical potential difference to produce it), 
 
     <strong><font color="blue"><a href="#AlternateCurrentEq"><span class="mw-headline" id="AlternateCurrentEq">#</span></a> Alternate Equation for Current:</font></strong> SCALAR.<br><br>
         
-        <u><strong>Units</strong></u>: Newtons / Coulombs. It is a type of electric field.<br><br><br>
+        <u><strong>Units</strong></u>: Amperes, I (Coulombs / Second).<br><br><br>
         
         <u><strong>Equation</strong></u>:<br><br>
         <strong>I<sub>average</sub> = n × A × v<sub>d</sub> × q</strong><br><br>
@@ -291,9 +295,9 @@ When there is a current (and an electrical potential difference to produce it), 
     
     	<strong>q</strong> = The charge per individual carrier.<br><br><br>
         
-        <u><strong>Definition</strong></u>: This equation was found by substituting the drift velocity equation (Rule 224) into the change in charge equation (Rule 223), and then substituting that monstrosity into the electric current equation (Rule 220). Lord have mercy.<!--I say this irreligiously, in the typical American humor way, figure of speech. There is no better phrase to convey the emotion I want to get across.-->
+        <u><strong>Definition</strong></u>: This equation was found by substituting the drift velocity equation (Rule 224) into the change in charge equation (Rule 223), and then substituting that monstrosity into the electric current equation (Rule 220). 
         
-        <br><br><br>
+        <br><br><br><br>
         
         
         <div class="rule"><strong>
@@ -324,11 +328,11 @@ When there is a current (and an electrical potential difference to produce it), 
       <strong>E</strong> = The magnitude of the uniform electric field.<br><br><br>
       
       
-      <u><strong>Definition</strong></u>: Conductivity is the conductive equivalent to resistivity, and measures how little a material opposes the movement of electric charge.<br><br>
+      <u><strong>Definition</strong></u>: Conductivity is the conductive equivalent to resistivity (see Rule 227), and measures how little a material opposes the movement of electric charge.<br><br>
 
       Like Resistivity, Conductivity is a <strong>material property</strong> inherent to the material composing an object.<br><br>
       
-      Note that conductivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule [[[ for more information.
+      Note that conductivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule 229 for more information.
       	</div><br><br><br>
         
         
@@ -343,7 +347,9 @@ When there is a current (and an electrical potential difference to produce it), 
   	    <article>
   	    
   	    
-  	    <strong><a href="#ResistanceDef"><span class="mw-headline" id="ResistanceDef">#</span></a> <font color="#006400">Resistance</font></strong>: A property in some electric components that allows them to "resist" the flow of electric current. The equation for resistance is apart of the VCR Law, see Rule 226.
+  	    <strong><a href="#ResistanceDef"><span class="mw-headline" id="ResistanceDef">#</span></a> <font color="#006400">Resistance</font></strong>: A property in some electric components that allows them to "resist the flow of electric current". The equation for resistance is apart of the VCR Law, see Rule 226.<br><br> 
+  	    
+  	    Resistance is physically actualized through resistors, electrical components that can be placed on a circuit; see Subsection XVIII.III for the complete analysis and the indescribably important "Understanding at the heart of Resistance" (Rule [[[).
     	    <br><br><br>
     	    
 	    
@@ -372,8 +378,10 @@ When there is a current (and an electrical potential difference to produce it), 
       
       
       <u><strong>Definition</strong></u>: Ohm's Law, from here on forth referred to as the VCR Law, is the defining law relating Electric Potential Difference (Voltage), Electric Current, and Resistance.<br><br>
+      
+      This law applies both to the circuit (Section [[[) as a whole, as well as to the individual components of the circuit: with current always being constant within a circuit (explained in Rule [[[understandingheart[[[), it is the electric potential difference that differs with respect to particular components, calculated using resistance as well as the voltage of the wire leading toward the component (which, itelf, must be calculated backward until the wire directly after the battery).<br><br>
 
-      Substances that follow the VCR Law are known as VCRtic substances <!--let the record show: I laughed my ass off when I thought of this term last night. 10pm-ish, april 7 2025-->, while those that do not are non-VCRtic. All substances should be assumed to be VCRtic unless otherwise stated.
+      Substances that follow the VCR Law are known as VCRtic substances<!--let the record show: I laughed my ass off when I thought of this term last night. 10pm-ish, april 7 2025-->, while those that do not are non-VCRtic. All substances should be assumed to be VCRtic unless otherwise stated.
       
       </div><br><br><br>
       
@@ -396,7 +404,7 @@ When there is a current (and an electrical potential difference to produce it), 
 
 	<strong>L</strong> = The object's length (e.g., the variable that when multiplied by A would produce a volume).<br>
       
-      <strong>A</strong> = The cross-sectional area that the charge is passing through.<br><br><br>
+      <strong>A</strong> = The cross-sectional area that the charge is passing through. Must be uniform for the entire length of the wire, see below.<br><br><br>
       
       
       <u><strong>Definition</strong></u>: Resistance ≠ Resistivity.<br><br>
@@ -408,11 +416,13 @@ When there is a current (and an electrical potential difference to produce it), 
       <strong>Material Property</strong>: A property inherent to the material composing an object - something like the metal plates of a parallel plate capacitor, or resistivity.<br><br><br>
       
       
-      Resistance and Resistivity are of course closely related (directly proportional to eachother, as shown in the equation), but they refer to fundamentally different aspects of how matter resists current. The difference between Resistance and Resistivity is the difference between software and hardware.<!--Grow up.--><br><br>
+      Resistance and Resistivity are of course closely related (directly proportional to eachother, as shown in the equation), but they refer to fundamentally different aspects of how matter resists current. The difference between Resistance and Resistivity is the difference between software and hardware.<br><br>
       
-      For more information regarding the inherent proportionalities that resistivity equation implies, see Rule [[[.<!--learning about history gets one in a profound mood. Everything in the early 20th century is connected - art, literature, music, all reflecting an age and continent that was steadily marching towards its own destruction. There is an insane antediluvian feeling to it, trivialities that tie into the most devastating events to have occurred in human history, that universal moment in which all aspects of everything, every individual is involved in a single event. Épigraphes Antiques--><br><br>
+      This equation can only be used when the wire has a uniform cross-sectional area, constant over the entire length of the wire.
       
-      Note that resistivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule [[[ for more information.<br><br>
+      Two objects can have the same resistivity but different resistances. They can be made of the same material, but if they have different lengths or cross sectional areas, the resistance will be different. For more information regarding the inherent proportionalities that the resistivity equation implies, see Rule 228.<!--learning about history gets one in a profound mood. Everything in the early 20th century is connected - art, literature, music, all reflecting an age and continent that was steadily marching towards its own destruction. There is an insane antediluvian feeling to it, trivialities that tie into the most devastating events to have occurred in human history, that universal moment in which all aspects of everything, every individual is involved in a single event. Épigraphes Antiques--><br><br>
+      
+      Note that resistivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule 229 for more information.<br><br>
       
       Electrical Components with resistance usually convert electric potential energy to thermal energy which can increase the temperature of the resistor and can increase the temperature of the resistor's environment. Don't worry about this, unless told to in a problem.
       	</div><br><br><br>
@@ -425,7 +435,7 @@ When there is a current (and an electrical potential difference to produce it), 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Resistance Proportionalities</strong>.
 
-          Several proportionalities between Resistance and other variables are revealed through analysis of the Resistivity equation, divine'd<!--divine the answer--> in Rule [[[-1.<br><br>
+          Several proportionalities between Resistance and other variables are revealed through analysis of the Resistivity equation, divine'd<!--divine the answer--> in Rule 227.<br><br>
           
           In addition to Resistivity, Resistance is linearly proportional to the length of the resistor, which should already be intuitive since a longer resistor would inherently have greater resistance as the charges would have to travel a longer distance through the resistor.<br><Br>
           
@@ -473,11 +483,9 @@ When there is a current (and an electrical potential difference to produce it), 
       <strong>A</strong> = The cross-sectional area that the charge is passing through.<br><br><br>
       
       
-      <u><strong>Definition</strong></u>: Conductivity is the conductive equivalent to resistivity, and measures how little a material opposes the movement of electric charge.<br><br>
+      <u><strong>Definition</strong></u>: Conductivity is the conductive equivalent to resistivity, and measures how little a material opposes the movement of electric charge. Like Resistivity, Conductivity is a <strong>material property</strong> inherent to the material composing an object.<br><br>
 
-Like Resistivity, Conductivity is a <strong>material property</strong> inherent to the material composing an object.<br><br><br>
-
-Note that conductivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule [[[ for more information.
+Note that conductivity is temperature dependent: as the temperature of a conductor/insulator increases, the current in the wire decreases. The exact opposite is true for semiconductors; see Rule 229 for more information.
 	</div><br><br>
 	
 	
@@ -487,7 +495,9 @@ Note that conductivity is temperature dependent: as the temperature of a conduct
   	    </header>
   	    <article>
   	    
-  	    
+  	    <strong><a href="#KilowattHourDef"><span class="mw-headline" id="KilowattHourDef">#</span></a> <font color="#006400">Kilowatt-Hour</font></strong>: A unit of measurement equivalent to 3.6M Watt Seconds, which just means 3.6M Joules. It is thus actually a measure of <strong><em>energy</em></strong> instead of power, since all time variables cancel out. This is the most common unit of measurement in measuring electricity consumption in one's home, for whatever reason.
+
+    	    <br><br><br><br>
 	
 	<div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -512,13 +522,7 @@ This equation was derived as follows: The Power equation from Subsection VII.II 
 
 Note that the equation can be altered into various other (mathematically equivalent) forms by substituting in the isolated forms of I and ∆V from the VCR Rule, depending on whatever variables one has/needs. <strong>(I × ∆V) = (∆V² / R) = (I² × R)</strong>, but you only need one to derive all of the others.
 	
-      </div><br><br><br>
-      
-      
-      
-      <strong><a href="#KilowattHourDef"><span class="mw-headline" id="KilowattHourDef">#</span></a> <font color="#006400">Kilowatt-Hour</font></strong>: A unit of measurement equivalent to 3.6M Watt Seconds, which just means 3.6M Joules. It is thus actually a measure of <strong><em>energy</em></strong> instead of power, since all time variables cancel out. This is the most common unit of measurement in measuring electricity consumption in one's home, for whatever reason.
-
-    	    <br><br>
+      </div><br>
 	  
 	  
 	  
@@ -560,7 +564,7 @@ Note that the equation can be altered into various other (mathematically equival
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong> → <strong><a href="/Physics/electromagnetism/Capacitance.html">Capacitance</a></strong><br> → <strong>Current and Resistance</strong> → <strong><a href="/Physics/electromagnetism/Circuitry.html">Circuitry</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 9 2025</span><br>
+      	<span class="tiny">Last Change: April 14 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

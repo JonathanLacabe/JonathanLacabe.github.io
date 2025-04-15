@@ -133,7 +133,27 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#ComponentSymbolism">XVIII.I Components & Symbolism.</a>
         </div>
         <div class="toc-column">
-          <a href="#KeyConcepts">XVIII.II Key Concepts.</a>
+          <a href="#CapacitorSection">XVIII.IV Capacitors.</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Batteries">XVIII.II Batteries.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#SeriesParallel">XVIII.V Series & Parallel.</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#Resistors">XVIII.III Resistors.</a>
+        </div>
+        <div class="toc-column">
+          <!--<a href="#KeyConcepts">XVIII.IV Key Concepts.</a>-->
         </div>
         
       </div><br>
@@ -175,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <u><strong>Definition</strong></u>: Current is the rate at which charges flow through a conductor at a particular cross-sectional area and time, most commonly in the form of the aptly-named <em>conventional current</em> (see Rule 221), specifically measuring the flow of positive charge.<br><br>
       
-      The rate at which charge flows through a cross-sectional area can differ over time if the current is a function of time (A.C. - see Rule 222), while it will always remain the same if the current is constant with respect to time (D.C. - also see Rule 222).<br><br>
+      The rate at which charge flows through a cross-sectional area can differ over time if the current is a function of time (AC - see Rule 222), while it will always remain the same if the current is constant with respect to time (DC - also see Rule 222). As stated in Rule 222, current should be assumed to be in DC unless otherwise stated.<br><br>
 
 	    There are several key aspects that must be remembered when dealing with current - in particular, current direction (see Rule 221) and current type (see Rule 222).<br><br>
 	    
@@ -219,7 +239,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong>Alternating Current</strong> is current that changes as a function of time, working akin to a frequency and generally as a cosine or sine wave.<br><Br>
         
-        <strong>Direct Current</strong> is current that is a <u>constant</u> as a function of time. Thus, the ∆Q of any identical-length space in the conductor at any time will be the same.
+        <strong>Direct Current</strong> is current that is a <u>constant</u> as a function of time. Thus, the ∆Q of any identical-length space in the conductor at any time will be the same.<br><br>
+        
+        Unless otherwise stated, every circuit (see Rule [[[) and application of current & voltage should be assumed to be in DC current, with current constant as it moves from the battery (Rule [[[).
         
         </div><br><br>
         
@@ -373,7 +395,9 @@ When there is a current (and an electrical potential difference to produce it), 
   	    <article>
   	    
   	    
-  	    <strong><a href="#ResistanceDef"><span class="mw-headline" id="ResistanceDef">#</span></a> <font color="#006400">Resistance</font></strong>: A property in some electric components that allows them to "resist" the flow of electric current. The equation for resistance is apart of the VCR Law, see Rule 226. Resistance is physically actualized through resistors, electrical components that can be placed on a circuit; see Rule [[[.
+  	    <strong><a href="#ResistanceDef"><span class="mw-headline" id="ResistanceDef">#</span></a> <font color="#006400">Resistance</font></strong>: A property in some electric components that allows them to "resist the flow of electric current". The equation for resistance is apart of the VCR Law, see Rule 226.<br><br> 
+  	    
+  	    Resistance is physically actualized through resistors, electrical components that can be placed on a circuit; see Subsection XVIII.III for the complete analysis and the indescribably important "Understanding at the heart of Resistance" (Rule [[[).
     	    <br><br><br>
     	    
 	    
@@ -402,8 +426,10 @@ When there is a current (and an electrical potential difference to produce it), 
       
       
       <u><strong>Definition</strong></u>: Ohm's Law, from here on forth referred to as the VCR Law, is the defining law relating Electric Potential Difference (Voltage), Electric Current, and Resistance.<br><br>
+      
+      This law applies both to the circuit (Section [[[) as a whole, as well as to the individual components of the circuit: with current always being constant within a circuit (explained in Rule [[[understandingheart[[[), it is the electric potential difference that differs with respect to particular components, calculated using resistance as well as the voltage of the wire leading toward the component (which, itelf, must be calculated backward until the wire directly after the battery).<br><br>
 
-      Substances that follow the VCR Law are known as VCRtic substances <!--let the record show: I laughed my ass off when I thought of this term last night. 10pm-ish, april 7 2025-->, while those that do not are non-VCRtic. All substances should be assumed to be VCRtic unless otherwise stated.
+      Substances that follow the VCR Law are known as VCRtic substances<!--let the record show: I laughed my ass off when I thought of this term last night. 10pm-ish, april 7 2025-->, while those that do not are non-VCRtic. All substances should be assumed to be VCRtic unless otherwise stated.
       
       </div><br><br><br>
       
@@ -517,7 +543,9 @@ Note that conductivity is temperature dependent: as the temperature of a conduct
   	    </header>
   	    <article>
   	    
-  	    
+  	    <strong><a href="#KilowattHourDef"><span class="mw-headline" id="KilowattHourDef">#</span></a> <font color="#006400">Kilowatt-Hour</font></strong>: A unit of measurement equivalent to 3.6M Watt Seconds, which just means 3.6M Joules. It is thus actually a measure of <strong><em>energy</em></strong> instead of power, since all time variables cancel out. This is the most common unit of measurement in measuring electricity consumption in one's home, for whatever reason.
+
+    	    <br><br><br><br>
 	
 	<div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -542,13 +570,11 @@ This equation was derived as follows: The Power equation from Subsection VII.II 
 
 Note that the equation can be altered into various other (mathematically equivalent) forms by substituting in the isolated forms of I and ∆V from the VCR Rule, depending on whatever variables one has/needs. <strong>(I × ∆V) = (∆V² / R) = (I² × R)</strong>, but you only need one to derive all of the others.
 	
-      </div><br><br><br>
+      </div><br><br>
       
       
       
-      <strong><a href="#KilowattHourDef"><span class="mw-headline" id="KilowattHourDef">#</span></a> <font color="#006400">Kilowatt-Hour</font></strong>: A unit of measurement equivalent to 3.6M Watt Seconds, which just means 3.6M Joules. It is thus actually a measure of <strong><em>energy</em></strong> instead of power, since all time variables cancel out. This is the most common unit of measurement in measuring electricity consumption in one's home, for whatever reason.
-
-    	    <br><br><br>
+      
 
 
           
@@ -581,7 +607,7 @@ Note that the equation can be altered into various other (mathematically equival
 
         <strong><a href="#CircuitDef"><span class="mw-headline" id="CircuitDef">#</span></a> <font color="#006400">Circuit</font></strong>: A circuit is a path in which current takes from a positive end to the negative end of a battery, typically with several intervening components complicating the process.<br><br>
 
-          An electric circuit is generally composed of electrical loops which can include wires, batteries (Rule [[[), resistors (Rule [[[), lightbulbs, capacitors (Rule [[[), switches (Rule [[[), ammeters (Rule [[[), voltmeters (Rule [[[), and inductors (Rule [[[).<br><br>
+          An electric circuit is generally composed of electrical loops which can include wires, batteries (Rule [[[), resistors (Rule [[[), lightbulbs (Rule [[[), capacitors (Rule [[[), switches (Rule [[[), ammeters (Rule [[[), voltmeters (Rule [[[), and inductors (Rule [[[).<br><br>
           
           These components are all represented with their own symbols in <em><strong>circuit diagrams</strong></em>. The below illustration displays the most popularly used components in diagrams.<br><br>
       <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/Electrocomponents.jpg"><img src="/Physics/img/diagrams/Electrocomponents.jpg" alt="The most commonly used electric component symbols, most explained individually within the Rules of this section. Courtesy of NextPCB." width=80%/></a></div>
@@ -599,70 +625,66 @@ Note that the equation can be altered into various other (mathematically equival
 
     	    <br><br><br>
     	    
-    	    <strong><a href="#SwitchDef"><span class="mw-headline" id="SwitchDef">#</span></a> <font color="#006400">Switch</font></strong>: An electrical component that only serves to close or open a circuit. When the switch is shut, it closes the circuit, and when it is open, then the circuit is open as well, resulting in all of the aforementioned effects (see above definitions). It is represented using the following symbol:
+    	    <strong><a href="#SwitchDef"><span class="mw-headline" id="SwitchDef">#</span></a> <font color="#006400">Switch</font></strong>: An electrical component that only serves to close or open a circuit. When the switch is shut, it closes the circuit, and when it is open, then the circuit is open as well, resulting in all of the aforementioned effects (see above definitions). It is represented using the following symbol:<br><Br>
+        
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/SwitchSymbol.jpg"><img src="/Physics/img/diagrams/SwitchSymbol.jpg" alt="The electric symbol for a switch. Courtesy of NextPCB." width=30%/></a></div>
+        	    <span class="tiny"><em>The electric symbol for a switch. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span>
 
     	    <br><br><br>
-        
-        
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Battery:</strong><br><br>
-  The source of the electric potential difference between the positive and negative ends of a circuit. It is, thus, inherently the source of the electromotive force (when idealized), described in Rule [[[.<br><br>
-  
-  The electric potential difference supplied by the battery is determined by the number of "cells" within a battery. Each cell produces a fixed amount of electric potential difference, and by adding more, the total electric potential difference of the battery (and thus the circuit) will increase, allowing it to drive a greater level of current. Illustrated below are the symbols for single-cell and double-cell batteries.<br><br>
-  
-  <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/BatterySymbols.jpg"><img src="/Physics/img/diagrams/BatterySymbols.jpg" alt="The electric symbols for single-cell and double-cell batteries. Courtesy of NextPCB." width=60%/></a></div>
-        	    <span class="tiny"><em>The electric symbols for single-cell and double-cell batteries. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br>
-
-        The long line of the battery is the positive terminal, while the short line is the negative terminal. These will usually be labeled when the symbol is used in a circuit. Furthermore, when the battery is ideal and has no internal resistance, the electromotive force symbol (see Rule [[[) is placed near the battery on the circuit, since the battery is the starting and ending point of the electric potential difference. For more details as to internal resistance and how one should deal with it, see Rule [[[.<br><br>
-        
-        In a circuit diagram, a battery is represented with two plates, with the positive and negative sides clearly labeled. When viewing a circuit, it should ALWAYS be followed as having the current start from the positive end (for the reasons originally noted in Rule [[[) and move along the circuit towards the negative end.<br><Br>
-        
-        When a battery is said to have some sort of "internal resistance", just imagine that there is a resistor immediately following the positive terminal of the battery (which no inbetween wire). See Rule [[[ for relevant information about internal resistance.
-        </div><br><br>
-        
-        
-        
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Resistors</strong>:<br><br>
-
-      The electrical component that acts as an instrument of resistance to the current. It is THE resistor, nobly standing against a raging electric potential energy.<br><br>
-      
-      When a charge passes through a resistor, the electric potential difference will change (as potential energy gets dissipated) while the current will remain constant. Current will remain the same as after and before the resistor, conserving charge.<br><br>
-      
-      Consider the VCR Law (Rule [[[) on a localized scale, only considering a single resistor. In this scenario, the VCR Law would produce the specs for the state of the charge in the wire immediately following the resistor - this is the data that must be used to discern the effect of any electrical component immediately following the resistor.<br><br>
-      
-      Below is the standard depiction of a resistor in circuit diagrams. Occasionally, resistors will be represented as a lame rectangular box instead of a zigzag, the box being small enough that it would not be confused for a junction of wires.<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/ResistorDiagram.jpg"><img src="/Physics/img/diagrams/ResistorDiagram.jpg" alt="The symbol for the resistor electrical component. Courtesy of NextPCB." width=32%/></a></div>
-      	    <span class="tiny"><em>The symbol for the resistor electrical component. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br></div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
         </article>
   	    <header class="articleHeader"><hr>
-  	      <h3><span class="mw-headline" id="KeyConcepts">XVIII.II Key Concepts.</span></h3>
+  	      <h3><span class="mw-headline" id="Batteries">XVIII.II Batteries.</span></h3>
   	    </header>
   	    <article>
   	    
   	    
-  	    
-  	    
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Battery:</strong><br><br>
+        Batteries are the source of the electric potential difference between the positive and negative ends of a circuit. It is, thus, inherently the source of the electromotive force (when idealized), described in Rule [[[.<br><br>
+        
+        In a circuit diagram, a battery is represented with two plates of differing signs, with the positive and negative sides clearly labeled. When viewing a circuit, it should ALWAYS be followed as having the current start from the positive end (for the reasons originally noted in Rule [[[) and move along the circuit towards the negative end.<br><Br>
+        
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/BatterySymbols.jpg"><img src="/Physics/img/diagrams/BatterySymbols.jpg" alt="The electric symbols for single-cell and double-cell batteries. Courtesy of NextPCB." width=60%/></a></div>
+        	    <span class="tiny"><em>The electric symbols for single-cell and double-cell batteries. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br>
+        	    
+        The long line of the battery is the positive terminal, while the short line is the negative terminal. Furthermore, when the battery is ideal and has no internal resistance, the electromotive force symbol (see Rule [[[) is placed near the battery on the circuit, since the battery is the starting and ending point of the electric potential difference. For more details as to internal resistance and how one should deal with it, see Rule [[[.<br><br>
+        
+        For information as to battery "cells", see Rule [[[+1. See Rule [[[ for relevant information about internal resistance.
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Battery Cells:</strong><br><br>
+          The electric potential difference supplied by the battery is determined by the number of "<strong>cells</strong>" within a battery. Each cell produces a fixed amount of electric potential difference, and by adding more, the total electric potential difference of the battery (and thus the circuit) will increase, allowing it to drive a greater level of current. Illustrated above in Rule [[[-1 are the symbols for single-cell and double-cell batteries.
+        
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Current and Voltage in a Circuit</strong>:<br><br>
+
+        Within a circuit, the <strong>electric current</strong> will always remain constant. The reason for this is explained in Rule [[[.<br><br>
+        
+        The <strong>Electric Potential Difference</strong>  (Voltage) will, of course, fluctuate as the charge moves from one end of the circuit to the other, as the "difference" will inherently decrease between the two ends of the battery (for example, a "5V" circuit has an electric potential of 5 volts on the positive terminal and 0 volts on the negative terminal). Voltage will only lower, however, as the charge passes through an electrical component, and not while going through a resistance-less wire (see Rule [[[).<br><br>
+        
+        The difference in electric potential between the positive and negative ends of a battery is such that the electric potential <em>has</em> to decrease as the charge traverses the circuit, decreasing with every electrical component.<br><br>
+        
+        It is standard convention to treat the negative terminal of a battery as a <strong>zero-volt reference point</strong>, with the positive terminal having x number of volts to start with, and by the time it gets to the end of the circuit loop, reaching zero. Of course, a 9V circuit could have 10 V on the positive and 1 V on the negative (since difference is relative), but where not otherwise stated, <u>assume the circuit has the negative terminal set as a 0 V reference point</u>.
+        
+        In [[[kirchhoff's 2nd law - create a little narrative here giving an exact scientific reason for why voltage must cancel out and whatever[[[
+        
+        </div><br><br><br>
+        
         
         
         <div class="rule"><strong>
@@ -688,16 +710,11 @@ Note that the equation can be altered into various other (mathematically equival
         
         <u><strong>Definition</strong></u>:
         
-        
-        
         Terminal Voltage is the total <em>measured</eM> electric potential difference supplied between the positive and negative terminals of the battery. Note that this represents the <em>actual</em>, measured value of the potential difference, which, in an ideal battery, would be unimpeded by such things like internal resistance and would reflect the greatest possible electric potential difference between the terminals, known as the <u>electromotive force</u> (see Rule [[[).<br><br>
         
         The difference between the terminal voltage of a non-ideal battery and the ideal electromotive force (see Rule [[[) is the electric potential difference of the internal resistance of the battery, ΔV<sub>r</sub>. This electric potential difference is then simplified into into its components by the VCR law (Rule [[[), thus creating the non-ideal equation seen above.<BR><br>
 
-        For all non-ideal batteries, the terminal voltage across the battery will decrease as the current through the battery increases, forming an inverse relationship.<br><br>
-        
-        
-        As one can figure out after momentary analysis, when there is no current in a non-ideal battery, the terminal voltage would equal to that of the electromotive force (as internal resistance would equal to zero).
+        For all non-ideal batteries, the terminal voltage across the battery will decrease as the current through the battery increases, forming an inverse relationship. As one can figure out after momentary analysis, when there is no current in a non-ideal battery, the terminal voltage would equal to that of the electromotive force (as internal resistance would equal to zero).
         
         </div><br><br><br>
         
@@ -712,12 +729,161 @@ Note that the equation can be altered into various other (mathematically equival
         
         In all non-ideal batteries, the emf will be greater than the actual electrical potential difference of the circuit (the <em>terminal voltage</em>, see definition), since internal resistance will screw with it and ruin the perfection. In all <strong>ideal batteries</strong> however, terminal velocity is equivalent to electric potential difference.<br><br>
         
-        Lowercase r is typically the symbol of internal resistance of a battery, and when the internal resistance is nonzero, as the current increases the terminal voltage decreases (as ∆V<sub>t</sub> = Ɛ - I<sub>internal</sub>, see Rule [[[-1). Thus, with a nonzero internal resistance the only way to get emf equal to terminal voltage is for there to be zero current.<br><br>
+        Importantly, note that <strong>electromotive force is not a force</strong>. The cabal PURPOSELY named it like that so that you would get confused and include it on your free-body diagram. THIS IS EXACTLY WHAT THEY WANT YOU TO DO. It is only a reference to the max electric potential difference, <u>not</u> a force.    
         
-        Most problems will deal with ideal batteries, and will otherwise inform you of such unideal attributes like internal resistance.<br><Br>
         
-        Finally, but most importantly, <strong>electromotive force is not a force</strong>. The cabal PURPOSELY named it like that so that you would get confused and include it on your free-body diagram. THIS IS EXACTLY WHAT THEY WANT YOU TO DO. It is only a reference to the max electric potential difference, <u>not</u> a force.</div><br><br>
+        </div><br><br>
         
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Internal Resistance</strong>:<br><br>
+        
+        Idealized batteries, the most commonly used in Physics, are totally without internal resistance. Batteries with internal resistance are known as <strong>"Nonideal batteries"</strong>, while any circuit that has internal resistance of any kind (whether in a battery or within a wire) is known as a "<strong>Nonideal circuit</strong>".<br><br>
+        
+        When a <strong>battery</strong> is said to have some sort of "internal resistance", just imagine that there is a resistor immediately following the positive terminal of the battery (with no inbetween wire). If a <strong>WIRE</strong> is said to have internal resistance, just do the same - fashion a resistor at the very beginner of the wire, and it will have the same effect.<br><br>
+        
+        Lowercase <strong>r</strong> is typically the symbol of internal resistance of a battery. When the internal resistance is nonzero, the electrical current will increase as the terminal voltage decreases (as ∆V<sub>t</sub> = Ɛ - I<sub>internal</sub>, see Rule [[[-1). Thus, with a nonzero internal resistance the only way to get emf equal to terminal voltage is for there to be zero current.<br><br>
+        
+        Most problems will deal with ideal batteries, and will otherwise inform you of such unideal attributes like internal resistance.
+        
+        
+        
+        
+        </div><br><br>
+        
+        
+        
+        
+        
+        </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="Resistors">XVIII.III Resistors.</span></h3>
+  	    </header>
+  	    <article>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>The Understanding At The Heart Of Resistors</strong>:<br><br>
+
+          Resistors are the electrical components that have the property of resistance, causing the electric current of the circuit to decrease.<br><br>
+          
+          The cabal has cleverly defined resistance as "the ability to resist the flow of electric current". This <!--hogwash-->loses all meaning when one discovers that electrical current is the exact same before and after passing through a resistor. It begs the question: <strong>What exactly does a resistor do?</strong><br><Br>
+          
+          The best way to imagine the effect of the resistor is to realize that it, through the VCR Law, will have a <em>universal effect</em>. When a charge goes through a resistor, it will indeed get slower, and thus have a lower electrical current. HOWEVER: because all the charges in the circuit are jammed packed together in a line, all of the charges behind those in the resistor will slow down, as they cannot move any faster. As a result, <u>every charge in the circuit</u> will move at the <em>exact same speed</em>.<br><br>
+          
+          In other words, <strong>the constant electric current of a circuit is dependent on the total resistance of the circuit</strong>. The greater the strength of a single resistor on one end of the circuit, the lesser the strength of the current throughout the <u>entire</u>. <u>circuit</u>.<br><br>
+          
+          It helps to not imagine the charges as individuals detached from the whole, but rather as a <strong>sludge</strong>, moving together at a constant rate.
+          </div><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Resistors</strong>:<br><br>
+
+      The electrical component that acts as an instrument of resistance to the current. It is THE resistor, nobly standing against a raging electric potential energy.<br><br>
+      
+      When a charge passes through a resistor, the electric potential difference will change (as potential energy gets dissipated) while the current will remain constant. Current will remain the same as after and before the resistor, conserving charge.<br><br>
+      
+      Consider the VCR Law (Rule [[[) on a localized scale, only considering a single resistor. In this scenario, the VCR Law would produce the specs for the state of the charge in the wire immediately following the resistor - this is the data that must be used to discern the effect of any electrical component immediately following the resistor.<br><br>
+      
+      Below is the standard depiction of a resistor in circuit diagrams. Occasionally, resistors will be represented as a lame rectangular box instead of a zigzag, the box being small enough that it would not be confused for a junction of wires.<br><br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/ResistorDiagram.jpg"><img src="/Physics/img/diagrams/ResistorDiagram.jpg" alt="The symbol for the resistor electrical component. Courtesy of NextPCB." width=32%/></a></div>
+      	    <span class="tiny"><em>The symbol for the resistor electrical component. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br>
+      	    
+      	    </div><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Unless otherwise stated, all wires are considered ideal and have zero resistance.<br><br>
+
+Under ideal conditions, wires are considered to have zero resistance, and so electrical potential difference will remain the same from one end of the wire to the other, so long as there are no intervening electric components in between. The second there is an electrical component, <em>then</em> there will be a change in electrical potential.<br><Br>
+
+There must always be an electric potential difference between the beginning and end of the circuit, obviously. The ending Electric Potential must be different from the beginning. Otherwise, there would be no current.
+
+
+<!--Whispers of wanton dollarcrime drift in the Pacific breeze ...--></div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Lightbulbs:</strong><br><br>
+
+          Where there is a symbol for a lightbulb (oftentimes denoted as a "lamp"), treat it as a resistor (Rule [[[).<br><br>The brightness of a lightbulb increases with high electric power, and decreases with low electric power, which is obvious considering that brightness is just the dissipation of heat, a euphemism for electric power (see Rule [[[).<br><br>
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/LampDiagram.jpg"><img src="/Physics/img/diagrams/LampDiagram.jpg" alt="The electrical component symbol for a Lamp, also known as a lightbulb. Courtesy of NextPCB." width=31%/></a></div>
+      	    <span class="tiny"><em>The electrical component symbol for a Lamp, also known as a lightbulb. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br>
+      	    
+      	    </div><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Electrical Load:</strong><br><br>
+
+         The part of the circuit which converts electric potential energy into heat, sound, or light, effectively dissipating it into nonconservative energy lost to the system. This part can be the resistor or anything else that has resistance.<br><Br>
+      
+          The battery can <em>never</em> be a part of electrical load, because it is an electrical power source (the origin of all electric potential difference).</div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Short Circuit</strong>:<br><br>
+
+          A circuit which has a very small resistance and thus a very large current is known as a <strong>"short circuit"</strong>. This makes some unstable, since with little resistance and constant voltage the electric power can be very large and dangerous, as discernable by the equation presented in Rule 231.<br><Br>
+          
+          A circuit cannot be a circuit if it does not have any resistance. Judging by the VCR Law, a circuit with zero resistance would have infinite current, which is preposterous. All circuits must have some form of resistance, internal/resistor or otherwise.
+          </div><br><br>
+        
+        
+        
+        
+        
+        </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="CapacitorSection">XVIII.IV Capacitors.</span></h3>
+  	    </header>
+  	    <article>
+  	    
+        
+        </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="SeriesParallel">XVIII.V Series & Parallel.</span></h3>
+  	    </header>
+  	    <article>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> Circuits can be generalized into two specific patterns/relations that can occur between its constituent components:<br><br>
+
+        <ol>
+        	<li><strong>Series</strong>: A situation between two electrical components in which the charge going through the first component <u>must</u> go through the second component. E.g., the components form a direct path with one another.
+        
+        	</li><br><br>
+        
+        
+        	<li><strong>Parallel</strong>: A situation between two electrical components in which the charge, as a result of a junction, will either go through one component or the other. The paths of the two components will then reconverge without going through another element.
+        
+        	</li>
+        </ol><br>
+        
+        Below, there can be seen an example of <em>resistors</em> in series and parallel. Note that the same patterns hold for capacitors and all other components that may get into series and parallel:<br><br>
+              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/SeriesAndParallel.png"><img src="/Physics/img/SeriesAndParallel.png" alt="Resistors in Series and Parallel. Courtesy of AllAboutCircuits." width=37%/></a></div>
+      	    <span class="tiny"><em>Resistors in Series and Parallel. Courtesy of <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-5/what-are-series-and-parallel-circuits/">AllAboutCircuits</a>.</em></span><br><br>
+      	    
+      	    
+      	    </div><br>
         
         
         
@@ -772,7 +938,7 @@ Note that the equation can be altered into various other (mathematically equival
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong> → <strong><a href="/Physics/electromagnetism/Capacitance.html">Capacitance</a></strong><br> → <strong><a href="/Physics/electromagnetism/CurrentResist.html">Current and Resistance</a></strong> → <strong><a href="/Physics/electromagnetism/Circuitry.html">Circuitry</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 13 2025</span><br>
+      	<span class="tiny">Last Change: April 14 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

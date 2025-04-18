@@ -3,6 +3,11 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+April 17 2025 - The treatise on Series and Parallel sets of Resistors and Capacitors has been completed. I included both Full Analysis and Truncated version, for ease of reference depending on whether one is studying the concept as a whole or just needs a refresher on the gist of the concept.
+Rules Added: Physics, Electromagnetism - Rule 245, 246, 247, 248.
+
+April 16 2025 - Thorough revisals in Electromagnetism, such as the "sludge" analogy of Rule 238. Additionally, a minor fix was made to the About page.
+
 April 14 2025 - Following thorough revision, I was able to add several new sections and Rules that had been in my drafts for several days as I editted and improved them while figuring out the best way to place them in relation to the greater section and page as a whole. I plan to finish the entirety of circuitry and resistance (XVIII) by midday Wednesday.
 Rules Added: Physics, Electromagnetism - Rule 236, 237, 238, 239, 240, 241, 242, 243, 244.
 

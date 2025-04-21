@@ -3,374 +3,377 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-April 18 2025 - Calculus Work.
+April 20, 2025: Physics Revisals, Physics Rule additions. Furthermore, a "Neocities" link was added to left sidebar of every page, below the "Github". I have decided to undergo a temporary pause on work for the website in preparation for my upcoming examinations.
+Rules Added: Physics, Electromagnetism - Rule 249, 250, 251
+
+April 18, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 174.
 
-April 17 2025 - The treatise on Series and Parallel sets of Resistors and Capacitors has been completed. I included both Full Analysis and Truncated version, for ease of reference depending on whether one is studying the concept as a whole or just needs a refresher on the gist of the concept.
+April 17, 2025: The treatise on Series and Parallel sets of Resistors and Capacitors has been completed. I included both Full Analysis and Truncated version, for ease of reference depending on whether one is studying the concept as a whole or just needs a refresher on the gist of the concept.
 Rules Added: Physics, Electromagnetism - Rule 245, 246, 247, 248.
 
-April 16 2025 - Thorough revisals in Electromagnetism, such as the "sludge" analogy of Rule 238. Additionally, a minor fix was made to the About page.
+April 16, 2025: Thorough revisals in Electromagnetism, such as the "sludge" analogy of Rule 238. Additionally, a minor fix was made to the About page.
 
-April 14 2025 - Following thorough revision, I was able to add several new sections and Rules that had been in my drafts for several days as I editted and improved them while figuring out the best way to place them in relation to the greater section and page as a whole. I plan to finish the entirety of circuitry and resistance (XVIII) by midday Wednesday.
+April 14, 2025: Following thorough revision, I was able to add several new sections and Rules that had been in my drafts for several days as I editted and improved them while figuring out the best way to place them in relation to the greater section and page as a whole. I plan to finish the entirety of circuitry and resistance (XVIII) by midday Wednesday.
 Rules Added: Physics, Electromagnetism - Rule 236, 237, 238, 239, 240, 241, 242, 243, 244.
 
-April 13 2025 - Edits and revisal of existing Rules, making way for some already written Rules (saved in a notepad file) to be placed in their relevant pages.
+April 13, 2025: Edits and revisal of existing Rules, making way for some already written Rules (saved in a notepad file) to be placed in their relevant pages.
 Rules Added: Physics, Electromagnetism - Rule 235.
 
-April 11 2025 - Further work on the Physics equations page, getting all the way to XVI and halfway through Electrostatics as a whole. I will pause upon getting to Electrodynamics, and then continue adding equations after Electrodynamics is totally settled.
+April 11, 2025: Further work on the Physics equations page, getting all the way to XVI and halfway through Electrostatics as a whole. I will pause upon getting to Electrodynamics, and then continue adding equations after Electrodynamics is totally settled.
 
-April 9 2025: Physics work.
+April 9, 2025: Physics work.
 Rules Added: Physics, Electromagnetism - Rule 232, 233, 234.
 
-April 8 2025: Considerable work in the Physics Equations page, incorporating most of Section XII. I have also reached a very exciting stage in circuitry and Electromagnetism as a whole - whereas before I found myself afflicted with a sense of confusion with several concepts, I now (after working very hard to understand them) find the rest of the remaining material much more tedious than confusing & laborious with regard to incorporating it into the website, which makes the creation of the notes not particularly a matter of huge concentration and brainpower, but rather one of simple repetition akin to maintenance work - there are very few new questions to be asked at this specific point. It is almost as if Circuitry has become an exhausted subject.
+April 8, 2025: Considerable work in the Physics Equations page, incorporating most of Section XII. I have also reached a very exciting stage in circuitry and Electromagnetism as a whole - whereas before I found myself afflicted with a sense of confusion with several concepts, I now (after working very hard to understand them) find the rest of the remaining material much more tedious than confusing & laborious with regard to incorporating it into the website, which makes the creation of the notes not particularly a matter of huge concentration and brainpower, but rather one of simple repetition akin to maintenance work - there are very few new questions to be asked at this specific point. It is almost as if Circuitry has become an exhausted subject.
 
-April 7 2025: Electromagnetism work continues. I did a small amount of work on the Physics Equations page (which needs every Electromagnetism equation added, which could be done in a single uninterrupted session tomorrow) and continued work on Resistance.
+April 7, 2025: Electromagnetism work continues. I did a small amount of work on the Physics Equations page (which needs every Electromagnetism equation added, which could be done in a single uninterrupted session tomorrow) and continued work on Resistance.
 Rules Added: Physics, Electromagnetism - Rule 227, 228, 229, 230, 231.
 
-April 6 2025: Physics work. Today is there first day in which Current and Resistance work has truly began in earnest, and the entirety of subsection XVII.I has been completed, while resistance is going well.
+April 6, 2025: Physics work. Today is there first day in which Current and Resistance work has truly began in earnest, and the entirety of subsection XVII.I has been completed, while resistance is going well.
 Rules Added: Physics, Electromagnetism - Rule 220, 221, 222, 223, 224, 225, 226.
 
-April 5 2025: Calculus work - one Rule added.
+April 5, 2025: Calculus work - one Rule added.
 Rule Added: Mathematics, Single Variable Calculus - Rule 173.
 
-April 2 2025: Capacitance Completed. Now comes the age of Electrodynamics in the Physics section, as the electrostatics of old are now antiquated and completely finished as a subject. This new section shall be the focus until approximately one (1) week from today, at which point it too will be completed and drained of all possible new things to learn, and then I shall move unto Magnetostatics. Thus proceeds the passage of time for the physicist, with novelty never being in short-supply, as there are infinite things to learn and infinite fields to pursue. Work on Current and Resistance, the latest section, has begun.
+April 2, 2025: Capacitance Completed. Now comes the age of Electrodynamics in the Physics section, as the electrostatics of old are now antiquated and completely finished as a subject. This new section shall be the focus until approximately one (1) week from today, at which point it too will be completed and drained of all possible new things to learn, and then I shall move unto Magnetostatics. Thus proceeds the passage of time for the physicist, with novelty never being in short-supply, as there are infinite things to learn and infinite fields to pursue. Work on Current and Resistance, the latest section, has begun.
 Rules Added: Physics, Electromagnetism - Rule 218, 219.
 
-April 1 2025: Very productive day for Physics - With every addition to the new sections (Capacitance), I find I have to go back and revise a previous section in some way, while still keeping in mind the level of knowledge that had been reached by that section, and thus referring to future knowledge sparingly and with pointing references if needed. In any case, the dragon that is the dielectric Rules has been conquered, and the sun has almost totally set on Capacitance as a topic.
+April 1, 2025: Very productive day for Physics - With every addition to the new sections (Capacitance), I find I have to go back and revise a previous section in some way, while still keeping in mind the level of knowledge that had been reached by that section, and thus referring to future knowledge sparingly and with pointing references if needed. In any case, the dragon that is the dielectric Rules has been conquered, and the sun has almost totally set on Capacitance as a topic.
 Rules Added: Physics, Electromagnetism - Rule 215, 216, 217.
 
-March 31 2025: Physics work. Subsection XV.II of Electromagnetism was completely finished. Furthermore, work began and almost totally finished on Capacitance, a fully new section that was added today. Huge day for Physics, all said and done.
+March 31, 2025: Physics work. Subsection XV.II of Electromagnetism was completely finished. Furthermore, work began and almost totally finished on Capacitance, a fully new section that was added today. Huge day for Physics, all said and done.
 Rules Added: Physics, Electromagnetism - Rule 209, 210, 211, 212, 213, 214.
 
-March 30 2025: Physics work.
+March 30, 2025: Physics work.
 Rules Added: Physics, Electromagnetism - Rule 207, 208.
 
-March 29 2025: I found, while reviewing some older Rules, that they were somewhat difficult to read and comprehend as a result of the equations and variable explanations bleeding into the rest of the equation description. Thus, I revised several Rules and converted them into the Units/Equation/Definition system that I used prolifically in Mechanics Pt. 3. The page is much easier to read now.
+March 29, 2025: I found, while reviewing some older Rules, that they were somewhat difficult to read and comprehend as a result of the equations and variable explanations bleeding into the rest of the equation description. Thus, I revised several Rules and converted them into the Units/Equation/Definition system that I used prolifically in Mechanics Pt. 3. The page is much easier to read now.
 Rules Added: Physics, Electromagnetism - Rule 206.
 
-March 28 2025: Work on Physics, many Rules revised to account for new additions.
+March 28, 2025: Work on Physics, many Rules revised to account for new additions.
 Rules Added: Physics, Electromagnetism - Rule 205.
 
-March 27 2025: A long "[[[" state has finally been removed from Electromagnetism, as equilibrium work progresses. Several previous Rules were revised as well to account for this.
+March 27, 2025: A long "[[[" state has finally been removed from Electromagnetism, as equilibrium work progresses. Several previous Rules were revised as well to account for this.
 
-March 26 2025: Work has officially begun on the Mathematics equations page, which has gone neglected since it was created - I believe it was the first page of its kind, predating the decked-out Cryptography and Physics equations pages. Afterward, I began working on a new section of Electromagnetism: Electrostatic Equilibrium. I intend to finish this section fully tomorrow, and afterwards Capacitance.
+March 26, 2025: Work has officially begun on the Mathematics equations page, which has gone neglected since it was created - I believe it was the first page of its kind, predating the decked-out Cryptography and Physics equations pages. Afterward, I began working on a new section of Electromagnetism: Electrostatic Equilibrium. I intend to finish this section fully tomorrow, and afterwards Capacitance.
 
-March 25 2025: The missing prerequisites for Electromagnetism were finally added. A grammar mistake I made across several pages was also corrected.
+March 25, 2025: The missing prerequisites for Electromagnetism were finally added. A grammar mistake I made across several pages was also corrected.
 Rules Added: Physics, Electromagnetism - Rule 203, 204.
 
-March 24 2025: The Physics train continues. Intensive work on Electromagnetism will continue until Friday (most likely), when I try to begin shifting focus unto Cryptography.
+March 24, 2025: The Physics train continues. Intensive work on Electromagnetism will continue until Friday (most likely), when I try to begin shifting focus unto Cryptography.
 Rules Added: Physics, Electromagnetism - Rule 202.
 
-March 23 2025: Physics work, electromagnetic revisions + additions. Additionally, the not found page was totally revamped, and a bunch of other minor quality-of-life changes improved the site in general.
+March 23, 2025: Physics work, electromagnetic revisions + additions. Additionally, the not found page was totally revamped, and a bunch of other minor quality-of-life changes improved the site in general.
 Rules Added: Physics, Electromagnetism - Rule 198, 199, 200, 201.
 
-March 22 2025: Calculus Work. A specific "Extreme Values" section has been carved out of the latest digitizations for Calculus. There remain perhaps 1-2 months of Calculus  at the current rate of digitizing before my existing Multivariable Calculus notes will begin being processed - Cryptography and Physics are taking up the bulk of my time, and I will need to find some level of comfort in the comprehensiveness & degree of accessible-language of the content relating to these subjects (what this level will be, I will gauge as time goes on) before a concentrated digitization effort of more than one math Rule per day can be established. I would also like to use OCR technology in order to digitize the notes in a faster and more efficient way - I am researching tesseract right now.
+March 22, 2025: Calculus Work. A specific "Extreme Values" section has been carved out of the latest digitizations for Calculus. There remain perhaps 1-2 months of Calculus  at the current rate of digitizing before my existing Multivariable Calculus notes will begin being processed - Cryptography and Physics are taking up the bulk of my time, and I will need to find some level of comfort in the comprehensiveness & degree of accessible-language of the content relating to these subjects (what this level will be, I will gauge as time goes on) before a concentrated digitization effort of more than one math Rule per day can be established. I would also like to use OCR technology in order to digitize the notes in a faster and more efficient way - I am researching tesseract right now.
 Rule Added: Mathematics, Single Variable Calculus - Rule 172.
 
-March 21 2025: Calculus Work.
+March 21, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 171.
 
-March 20 2025: Calculus Work.
+March 20, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 170.
 
-March 19 2025: Calculus Work.
+March 19, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 168, 169.
 
-March 18 2025: The section/subsection fixings has finished, with the final one being in Astronomy. 
+March 18, 2025: The section/subsection fixings has finished, with the final one being in Astronomy. 
 
-March 17 2025: The rest of Electric Potential, Capacitance, and Circuitry for Physics, and then the entirety of Cryptography (specifically, the content for the remaining outlined sections, which may be expanded after the fact to account for recent developments in the subject (post-quantum cryptography, in particular)) will be added over the next few weeks. Today, only some minor upkeep actions were taken, some old to-do list activities: changing referencing to sections (like X) and subsections (X.II) to reflect the correct naming schemes (which had been neglected and randomly applied), for example.
+March 17, 2025: The rest of Electric Potential, Capacitance, and Circuitry for Physics, and then the entirety of Cryptography (specifically, the content for the remaining outlined sections, which may be expanded after the fact to account for recent developments in the subject (post-quantum cryptography, in particular)) will be added over the next few weeks. Today, only some minor upkeep actions were taken, some old to-do list activities: changing referencing to sections (like X) and subsections (X.II) to reflect the correct naming schemes (which had been neglected and randomly applied), for example.
 
-March 16 2025: Calculus Work.
+March 16, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 167.
 
-March 15 2025: Calculus Work.
+March 15, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 166.
 
-March 14 2025: Calculus Work.
+March 14, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 165.
 
-March 13 2025: Calculus Work.
+March 13, 2025: Calculus Work.
 Rule Added: Mathematics, Single Variable Calculus - Rule 164.
 
-March 12 2025: The conversion of all pages to the new javascript Rule numbering system has completed, finishing with Block Ciphers in Cryptography. The finishing of it was delayed by a few days with increased concentration in Physics studies, but has now been completed and will likely not see any tweaks/changes for the forseeable future. Additionally, Physics work as always, with work particularly focusing in Electric Potential. Furthermore, all units that involve names (like "Newtons" and "Coulombs") have been capitalized. The Table of Contents for Mechanics was also fixed to have complete linking to all sections and subsections. I also realized that since there are going to be multiple sections to Electromagnetism (of which I have only worked on Electrostatics thus far), and that considering that the current "Complete Notes" page is getting considerably long, it would be best to add multiple pages for the complete notes as I did for Classical Mechanics.
+March 12, 2025: The conversion of all pages to the new javascript Rule numbering system has completed, finishing with Block Ciphers in Cryptography. The finishing of it was delayed by a few days with increased concentration in Physics studies, but has now been completed and will likely not see any tweaks/changes for the forseeable future. Additionally, Physics work as always, with work particularly focusing in Electric Potential. Furthermore, all units that involve names (like "Newtons" and "Coulombs") have been capitalized. The Table of Contents for Mechanics was also fixed to have complete linking to all sections and subsections. I also realized that since there are going to be multiple sections to Electromagnetism (of which I have only worked on Electrostatics thus far), and that considering that the current "Complete Notes" page is getting considerably long, it would be best to add multiple pages for the complete notes as I did for Classical Mechanics.
 Rules Added: Physics, Electromagnetism - Rule 197.
 
-March 11 2025: A full treatise on Electric fields within and outside of spherical shells has been included (proving the shell theorems of P. Rule 170), though full proofs for the mathematics will have to be completed at another time and linked as an aside reference - for now, the equations themselves are enough. This concludes all of the "new electric fields" derivable using the Charge-Flux Law, a somewhat trivial series that has been enclosed within its own section. Now onto Electric Potential proper.
+March 11, 2025: A full treatise on Electric fields within and outside of spherical shells has been included (proving the shell theorems of P. Rule 170), though full proofs for the mathematics will have to be completed at another time and linked as an aside reference - for now, the equations themselves are enough. This concludes all of the "new electric fields" derivable using the Charge-Flux Law, a somewhat trivial series that has been enclosed within its own section. Now onto Electric Potential proper.
 Rules Added: Physics, Electromagnetism - Rule 196.
 
-March 10 2025: A total revision of Physics Rule 193, which led to the creation of a new Rule dealing with Asymmetric Charge Distribution, as to cover a topic that was becoming too large to be all described within Rule 193 itself. That, alongside the addition of a new subsection to deal with the new electric fields created using the Charge-Flux Law that were impossible to derive before.
+March 10, 2025: A total revision of Physics Rule 193, which led to the creation of a new Rule dealing with Asymmetric Charge Distribution, as to cover a topic that was becoming too large to be all described within Rule 193 itself. That, alongside the addition of a new subsection to deal with the new electric fields created using the Charge-Flux Law that were impossible to derive before.
 Rules Added: Physics, Electromagnetism - Rule 195.
 
-March 9 2025: Physics work, to a degree that has not been seen in some time and what must be replicated everyday in the future - akin to what was accomplished during late December/early January for Cryptography. I have come to a level of confusion on a particular subject (that of the internal electric field of a nonconducting shell), only exacerbated by the supposed "educational tool" of the internet: multitudes of contradicting answers and conflicting explanations, from artificial intelligence, to the incomplete and vague explanation in the textbooks, to those given on Physics forums by the woefully incompetent and neglectful of the fact that net zero electric flux does not mean net zero electric field, nor does it necessarily imply it. Thus only goes to show the inherant value of the Human Knowledge Project in presenting an unadulterably true and absolute description and elaboration on scientific/physical concepts, backed up purely using the already known principles and equations. Cutting through the noise to present a simple, intuitive understanding - this will realize the internet for its highest and greatest possible purpose, a potential, as shown, that is currently unfulfilled. I will have to seek help from an expert on the topic, of whom the closest to which will be my physics teacher.
+March 9, 2025: Physics work, to a degree that has not been seen in some time and what must be replicated everyday in the future - akin to what was accomplished during late December/early January for Cryptography. I have come to a level of confusion on a particular subject (that of the internal electric field of a nonconducting shell), only exacerbated by the supposed "educational tool" of the internet: multitudes of contradicting answers and conflicting explanations, from artificial intelligence, to the incomplete and vague explanation in the textbooks, to those given on Physics forums by the woefully incompetent and neglectful of the fact that net zero electric flux does not mean net zero electric field, nor does it necessarily imply it. Thus only goes to show the inherant value of the Human Knowledge Project in presenting an unadulterably true and absolute description and elaboration on scientific/physical concepts, backed up purely using the already known principles and equations. Cutting through the noise to present a simple, intuitive understanding - this will realize the internet for its highest and greatest possible purpose, a potential, as shown, that is currently unfulfilled. I will have to seek help from an expert on the topic, of whom the closest to which will be my physics teacher.
 Rules Added: Physics, Electromagnetism - Rule 193, 194.
 
-March 8 2025: Further work on Electromagnetism - my work was limited today, as I was at the SCALE conference and attending talks for the entire day.
+March 8, 2025: Further work on Electromagnetism - my work was limited today, as I was at the SCALE conference and attending talks for the entire day.
 
-March 7 2025: Electric Potential proper work, in addition to further Electric Flux elaborations. 
+March 7, 2025: Electric Potential proper work, in addition to further Electric Flux elaborations. 
 Rules Added: Physics, Electromagnetism - Rule 191, 192.
 
-March 6 2025: Calculus work. Considerable work in Physics as well, patching the remaining holes before Electric Potential.
+March 6, 2025: Calculus work. Considerable work in Physics as well, patching the remaining holes before Electric Potential.
 Rules Added: Physics, Electromagnetism - Rule 189, 190.
 Rules Added: Mathematics, Single Variable Calculus - Rule 163.
 
-March 5 2025: I have completed the conversion of all Algebra 2, Precalculus, & Single-Variable Calculus Rules (all of math) to the new javascript Rule numbering system. Additionally, I added a Calculus Rule - I intend to rebegin the rule-per-day system for adding the existing Calculus Rules, as there certainly is no shortage of paper notes remaining to be digitized.
+March 5, 2025: I have completed the conversion of all Algebra 2, Precalculus, & Single-Variable Calculus Rules (all of math) to the new javascript Rule numbering system. Additionally, I added a Calculus Rule - I intend to rebegin the rule-per-day system for adding the existing Calculus Rules, as there certainly is no shortage of paper notes remaining to be digitized.
 Rules Added: Mathematics, Single Variable Calculus - Rule 162.
 
-March 4 2025: The main page was updated to have the internal pages be the first thing available, which really should have been done a while ago. It looks a bit simple right now, but I might improve it soon after I get feedback from users. 
+March 4, 2025: The main page was updated to have the internal pages be the first thing available, which really should have been done a while ago. It looks a bit simple right now, but I might improve it soon after I get feedback from users. 
 
-March 3 2025: Updated the individual Electromagnetism pages to reflect the many changes made to the Complete Notes page over the past few days. This, alongside preparing for Electric Potential, which is the next concept to be incorporated.
+March 3, 2025: Updated the individual Electromagnetism pages to reflect the many changes made to the Complete Notes page over the past few days. This, alongside preparing for Electric Potential, which is the next concept to be incorporated.
 
-March 2 2025: Part 2 of Electromagnetism revisal. All of Electric Dipoles, and a bunch more.
+March 2, 2025: Part 2 of Electromagnetism revisal. All of Electric Dipoles, and a bunch more.
 Rules Added: Physics, Electromagnetism - Rule 184, 185, 186, 187, 188.
 
-March 1 2025: Upon reviewing notes, I found several parts difficult to understand. In the process of learning the material, I tend to add content sequentially, which may pose a challenge to my future self if I find that the content is difficult to understand. As such, I have begun revising the existing electromagnetism content, adding significantly more content and making the old make sense with new elaborations. I intend to finish this project tomorrow.
+March 1, 2025: Upon reviewing notes, I found several parts difficult to understand. In the process of learning the material, I tend to add content sequentially, which may pose a challenge to my future self if I find that the content is difficult to understand. As such, I have begun revising the existing electromagnetism content, adding significantly more content and making the old make sense with new elaborations. I intend to finish this project tomorrow.
 Rules Added: Physics, Electromagnetism - Rule 182, 183.
 
-February 28 2025: The rule change has been completed for Mechanics Pt. 3, and all associated pages.
+February 28, 2025: The rule change has been completed for Mechanics Pt. 3, and all associated pages.
 The last few days have been highly unfortunate, and are not to be repeated.
 
-February 26 2025: My crusade in standardizing inter-Rule referencing continues - to faciliate ease in editing Rule numbering after any future change, all instances of "Rules x & y" has been removed and changed to be "Rule x & Rule y", making it much easier to search via Ctrl-F. In adding the javascript rule numbering system, I succeeded in converting over Mechanics Complete Rules pages 1 & 2, as well as their associated section pages. #3, as well as all other applicable pages, will soon be finished.
+February 26, 2025: My crusade in standardizing inter-Rule referencing continues - to faciliate ease in editing Rule numbering after any future change, all instances of "Rules x & y" has been removed and changed to be "Rule x & Rule y", making it much easier to search via Ctrl-F. In adding the javascript rule numbering system, I succeeded in converting over Mechanics Complete Rules pages 1 & 2, as well as their associated section pages. #3, as well as all other applicable pages, will soon be finished.
 
-February 25 2025: Added the missing Permittivity of Free Space Rule, which had been bugging me for its absence for the last few days. All Rule numberings were instantly changed through the new Javascript system. The only thing that needed to be changed were the references to Rules within other Rules, which only took a minute.
+February 25, 2025: Added the missing Permittivity of Free Space Rule, which had been bugging me for its absence for the last few days. All Rule numberings were instantly changed through the new Javascript system. The only thing that needed to be changed were the references to Rules within other Rules, which only took a minute.
 Rules Added: Physics, Electromagnetism - Rule 181.
 
-February 24 2025: The lengthy drafting and revising process of the new Electric Flux Physics rules has been completed. The Rules have all been added, and the new "Electric Flux" section fully incorporated into the site, all pages linked appropriately.
+February 24, 2025: The lengthy drafting and revising process of the new Electric Flux Physics rules has been completed. The Rules have all been added, and the new "Electric Flux" section fully incorporated into the site, all pages linked appropriately.
 Rules Added: Physics, Electromagnetism - Rule 178, 179, 180.
 
-February 23 2025: Much work on Physics, though the individual Rules written today would be uploaded em masse the next day. Necessary edits for this incoming information was made, facilitating the new Rules. An earlier Rule was split into two to make this addition easier.
+February 23, 2025: Much work on Physics, though the individual Rules written today would be uploaded em masse the next day. Necessary edits for this incoming information was made, facilitating the new Rules. An earlier Rule was split into two to make this addition easier.
 Rules Added: Physics, Electromagnetism - Rule 177.
 
-February 22 2025: Work on Physics (Electric Flux). Additionally, I added two new questions to the FAQ page - a single thought on a issue I had with inaccessible learning resources spiraled into several hours of writing and revising, enlargening a previously somewhat limited page.
+February 22, 2025: Work on Physics (Electric Flux). Additionally, I added two new questions to the FAQ page - a single thought on a issue I had with inaccessible learning resources spiraled into several hours of writing and revising, enlargening a previously somewhat limited page.
 Rules Added: Physics, Electromagnetism - Rule 174, 175, 176.
 
-February 20 2025: In working on the yet-to-be-named new Physics section (focused on Gauss's Law, which I will rename into something inhuman soon), I have been able to finish a sort of philosophical rule I have been drafted and rewriting for the past few days, framing it into something I could imagine Herbert Gross himself saying. The rest of Electric Flux, I hope, will be finished tomorrow, February 21st, 2025. Additionally, I made some small elaborations to a FAQ question.
+February 20, 2025: In working on the yet-to-be-named new Physics section (focused on Gauss's Law, which I will rename into something inhuman soon), I have been able to finish a sort of philosophical rule I have been drafted and rewriting for the past few days, framing it into something I could imagine Herbert Gross himself saying. The rest of Electric Flux, I hope, will be finished tomorrow, February 21st, 2025. Additionally, I made some small elaborations to a FAQ question.
 Rules Added: Physics, Electromagnetism - Rule 173.
 
-February 19 2025: I fixed the website by removing all unneccessary human references in scientific laws - I am unable to remove units named after people, though I have made sure to capitalize them. I am working on a comprehensive renaming scheme that will be published in the near future. My crusade against improper Rule referencing continued today, finishing out Mathematics and moving through Cryptography.
+February 19, 2025: I fixed the website by removing all unneccessary human references in scientific laws - I am unable to remove units named after people, though I have made sure to capitalize them. I am working on a comprehensive renaming scheme that will be published in the near future. My crusade against improper Rule referencing continued today, finishing out Mathematics and moving through Cryptography.
 
-February 18 2025: The missing Electric Fields page was added to account for the new section. All appropriate pages were updated. Also some Calculus work to make up for a few missed days.
+February 18, 2025: The missing Electric Fields page was added to account for the new section. All appropriate pages were updated. Also some Calculus work to make up for a few missed days.
 Rules Added: Mathematics, Single Variable Calculus - Rule 159, 160, 161.
 Rules Added: Physics, Electromagnetism - Rule 169, 170, 171, 172.
 
-February 17 2025: Physics Work.
+February 17, 2025: Physics Work.
 Rules Added: Physics, Electromagnetism - Rule 168.
 
-February 14 2025: Further work on Physics.
+February 14, 2025: Further work on Physics.
 
-February 13 2025: Began Electric Fields section of Physics.
+February 13, 2025: Began Electric Fields section of Physics.
 Rules Added: Physics, Electromagnetism - Rule 166, 167.
 
-February 12 2025: Progress in Physics, particularly in Electric force. This should be completed by tomorrow, and electric fields began in proper.
+February 12, 2025: Progress in Physics, particularly in Electric force. This should be completed by tomorrow, and electric fields began in proper.
 Rules Added: Physics, Electromagnetism - Rule 163, 164, 165.
 
-February 11 2025: Physics work!!!!
+February 11, 2025: Physics work!!!!
 Rules Added: Physics, Electromagnetism - Rule 161, 162.
 
-February 10 2025: The mass fixing of Rules to standardize references to other Rules, in order to facilitate the coming shift onto the javascript-Rule system, is progressing full steam ahead. Work in Math was done today. While performing these edits, I have had the opportunity to fix many errors and typos.
+February 10, 2025: The mass fixing of Rules to standardize references to other Rules, in order to facilitate the coming shift onto the javascript-Rule system, is progressing full steam ahead. Work in Math was done today. While performing these edits, I have had the opportunity to fix many errors and typos.
 
-February 9 2025: Elaborated and revised many earlier Physics Rules. All references to Rules in other Rules have been changed to reflect the "see Rule x" string that makes my life 10000x easier in changing rule numberings - this is across all pages, and thus far has only been completed for Physics (and should be completed over the next few days). This tedious and repetitive task helped to cope with Death Grips breaking up. Furthermore, Electromagnetism in Physics has officially opened for business, with rules and the like being added.
+February 9, 2025: Elaborated and revised many earlier Physics Rules. All references to Rules in other Rules have been changed to reflect the "see Rule x" string that makes my life 10000x easier in changing rule numberings - this is across all pages, and thus far has only been completed for Physics (and should be completed over the next few days). This tedious and repetitive task helped to cope with Death Grips breaking up. Furthermore, Electromagnetism in Physics has officially opened for business, with rules and the like being added.
 Rules Added: Physics, Electromagnetism - Rule 157, 158, 159, 160.
 
-February 8 2025: This project is in the midst of a huge linking update. I succeeded in a test run on the Astronomy pages, which have been fully converted onto this new system. Now, when a Rule needs to be placed in the middle of many other rules, the numbering all those rules afterward will be adjusted instantly. This may end up nullifying the need for the WoO notes, and greatly simplify the process with which the "First Edition" of the Human Knowledge Project will be deployed (see January 18 2025). The underlying purpose for "reserving Rules" (see December 29 2024) has also probably been rendered meaningless, although I believe that reserving can still serve a symbolic purpose of showing un-accessibilized knowledge. All scientific knowledge will be sequenced into the great Human Knowledge aggregator, where it is made understandable and accessible to all.
+February 8, 2025: This project is in the midst of a huge linking update. I succeeded in a test run on the Astronomy pages, which have been fully converted onto this new system. Now, when a Rule needs to be placed in the middle of many other rules, the numbering all those rules afterward will be adjusted instantly. This may end up nullifying the need for the WoO notes, and greatly simplify the process with which the "First Edition" of the Human Knowledge Project will be deployed (see January 18 2025). The underlying purpose for "reserving Rules" (see December 29 2024) has also probably been rendered meaningless, although I believe that reserving can still serve a symbolic purpose of showing un-accessibilized knowledge. All scientific knowledge will be sequenced into the great Human Knowledge aggregator, where it is made understandable and accessible to all.
 Rules Added: Physics, Classical Mechanics - Rule 156.
 
-February 7 2025: Calculus Work, accounting for past missing ones. Rewrote part of the frontpage description text.
+February 7, 2025: Calculus Work, accounting for past missing ones. Rewrote part of the frontpage description text.
 Rules Added: Mathematics, Single Variable Calculus - Rule 157, 158.
 
-February 6 2025: Physics Additions.
+February 6, 2025: Physics Additions.
 Rules Added: Physics, Classical Mechanics - Rule 155.
 
-February 3 2025: Calculus Work.
+February 3, 2025: Calculus Work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 156.
 
-February 2 2025: Back after a few days focused on applications, etc. All Calculus work that would have been added in the missing days was added today. Considerable work was done in Physics for the first time in a while, as I began doing Oscillations in Simple Harmonic Motion.
+February 2, 2025: Back after a few days focused on applications, etc. All Calculus work that would have been added in the missing days was added today. Considerable work was done in Physics for the first time in a while, as I began doing Oscillations in Simple Harmonic Motion.
 Rules Added: Mathematics, Single Variable Calculus - Rule 150, 151, 152, 153, 154, 155.
 Physics, Classical Mechanics - Rule 152, 153, 154.
 
-January 27 2025: Calculus Work. Minor edits elsewhere.
+January 27, 2025: Calculus Work. Minor edits elsewhere.
 Rules Added: Mathematics, Single Variable Calculus - Rule 149.
 
-January 26 2025: Calculus Work.
+January 26, 2025: Calculus Work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 148.
 
-January 25 2025: Calculus Work.
+January 25, 2025: Calculus Work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 147.
 
-January 24 2025: Calculus Work. Created the Particle Motion page in addition. Some additions to the Math Symbols page.
+January 24, 2025: Calculus Work. Created the Particle Motion page in addition. Some additions to the Math Symbols page.
 Rules Added: Mathematics, Single Variable Calculus - Rule 145, 146.
 
-January 23 2025: Calculus Work.
+January 23, 2025: Calculus Work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 144.
 
-January 22 2025: Calculus Work.
+January 22, 2025: Calculus Work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 143.
 
-January 21 2025: Calculus Work. Considerable work on the Mathematical Symbols page, particularly in Constants.
+January 21, 2025: Calculus Work. Considerable work on the Mathematical Symbols page, particularly in Constants.
 Rules Added: Mathematics, Single Variable Calculus - Rule 142.
 
-January 20 2025: Calculus Work. Minor changes to the Physics Equations page, additionally.
+January 20, 2025: Calculus Work. Minor changes to the Physics Equations page, additionally.
 Rules Added: Mathematics, Single Variable Calculus - Rule 141.
 
-January 19 2025: Calculus Work. Improvements were made to some Physics page and to the homepage.
+January 19, 2025: Calculus Work. Improvements were made to some Physics page and to the homepage.
 Rules Added: Mathematics, Single Variable Calculus - Rule 140.
 
-January 18 2025: Calculus Work. I have been thinking about how I am going to deal with adding new sections to older parts of the site, entailing the renumbering of huge amounts of rules and entire sections, and I have come to the conclusion that this process can be yearly, taking place as a part of a yearly "Edition" updating. Think of the current incarnation of the site as being a v0.15 or something of the sort, like how a developer update register would label updates. Since this website is, in effect, rewriting textbooks and incorporating huge amounts of often disconnected pieces of knowledge into a cohesive and, most importantly, accessible whole, the "first edition" as it were will be formed whenever I finish incorporating all of the missing Precalculus sections, which will likely require years, since that is low on my priority register. When the Precalulus section is fully fitted, I am going to update all of the section numbers accordingly, and will painstakingly go through the entire process of renumbering all necessary rules, and catalog all references to rules in each page in order to fix all linkings. This will entail making every single WoO a fully fledged rule, which I feel is necessary to make the site more encyclopedic.
+January 18, 2025: Calculus Work. I have been thinking about how I am going to deal with adding new sections to older parts of the site, entailing the renumbering of huge amounts of rules and entire sections, and I have come to the conclusion that this process can be yearly, taking place as a part of a yearly "Edition" updating. Think of the current incarnation of the site as being a v0.15 or something of the sort, like how a developer update register would label updates. Since this website is, in effect, rewriting textbooks and incorporating huge amounts of often disconnected pieces of knowledge into a cohesive and, most importantly, accessible whole, the "first edition" as it were will be formed whenever I finish incorporating all of the missing Precalculus sections, which will likely require years, since that is low on my priority register. When the Precalulus section is fully fitted, I am going to update all of the section numbers accordingly, and will painstakingly go through the entire process of renumbering all necessary rules, and catalog all references to rules in each page in order to fix all linkings. This will entail making every single WoO a fully fledged rule, which I feel is necessary to make the site more encyclopedic.
 Rules Added: Mathematics, Single Variable Calculus - Rule 139.
 
-January 17 2025: Calculus Work. 
+January 17, 2025: Calculus Work. 
 Rules Added: Mathematics, Single Variable Calculus - Rule 138.
 
-January 16 2025: Calculus Work. 
+January 16, 2025: Calculus Work. 
 Rules Added: Mathematics, Single Variable Calculus - Rule 137.
 
-January 15 2025: Calculus Work. 
+January 15, 2025: Calculus Work. 
 Rules Added: Mathematics, Single Variable Calculus - Rule 136.
 
-January 14 2025: Calculus Work. Furthermore, I created the rest of the Cryptography pages in preparation for the rest of them being worked on and completed after Symmetric Encryption - I am currently shooting for a Late March completion date for all six Cryptography categories that are currently up, and for the OCR program to be up and running before the end of January. Note that the completion of the given Cryptography pages does not specifically mean that Cryptography as a subject has been cohesively incorporated, in all of its knowledge, into the site, only that the series I am following has concluded. More series, textbooks, and whatnot will supply additionall knowledge until some point in the future where all knowable information regarding Cryptography is incorporated in the page, in a highly-accessible manner (accessible because I have created explanations that I myself can understand, and I am a fool). By late March, however, a very good general overview of the six existing cryptography subjects will be cohesively established.
+January 14, 2025: Calculus Work. Furthermore, I created the rest of the Cryptography pages in preparation for the rest of them being worked on and completed after Symmetric Encryption - I am currently shooting for a Late March completion date for all six Cryptography categories that are currently up, and for the OCR program to be up and running before the end of January. Note that the completion of the given Cryptography pages does not specifically mean that Cryptography as a subject has been cohesively incorporated, in all of its knowledge, into the site, only that the series I am following has concluded. More series, textbooks, and whatnot will supply additionall knowledge until some point in the future where all knowable information regarding Cryptography is incorporated in the page, in a highly-accessible manner (accessible because I have created explanations that I myself can understand, and I am a fool). By late March, however, a very good general overview of the six existing cryptography subjects will be cohesively established.
 Rules Added: Mathematics, Single Variable Calculus - Rule 135.
 
-January 13 2025: Calculus Work. I created the Derivative page to incorporate some of the newer rules being added.
+January 13, 2025: Calculus Work. I created the Derivative page to incorporate some of the newer rules being added.
 Rules Added: Mathematics, Single Variable Calculus - Rule 134.
 
-January 12 2025: Calculus Work. Minor edits to the about page.
+January 12, 2025: Calculus Work. Minor edits to the about page.
 Rules Added: Mathematics, Single Variable Calculus - Rule 133.
 
-January 11 2025: Calculus, Single-Variable and Multivariable work, along with what should be my final adjustments to the older Physics pages for the time being.
+January 11, 2025: Calculus, Single-Variable and Multivariable work, along with what should be my final adjustments to the older Physics pages for the time being.
 Rules Added: Mathematics, Single Variable Calculus - Rule 132.
 
-January 10 2025: Calculus Work. Further modification and modernization of the Physics notes was done, as I progress in Multivariable Calculus (Herbert Gross is a real one).
+January 10, 2025: Calculus Work. Further modification and modernization of the Physics notes was done, as I progress in Multivariable Calculus (Herbert Gross is a real one).
 Rules Added: Mathematics, Single Variable Calculus - Rule 131.
 
-January 9 2025: Added the Symmetric Encryption logo to the main page, as well as some Calculus work.
+January 9, 2025: Added the Symmetric Encryption logo to the main page, as well as some Calculus work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 130.
 
-January 8 2025: Continual Calculus Work, with lots (!!!) of Multivariable Calculus work done on paper. Further work on the Math Symbols page as well, 'finishing' (in terms of all the symbols I had listed) the Non-Constant Symbols section, and beginning significant work on the 'Constants' section. Furthermore, the logo for the Symmetric Cryptography category was finished and added to all applicable pages.
+January 8, 2025: Continual Calculus Work, with lots (!!!) of Multivariable Calculus work done on paper. Further work on the Math Symbols page as well, 'finishing' (in terms of all the symbols I had listed) the Non-Constant Symbols section, and beginning significant work on the 'Constants' section. Furthermore, the logo for the Symmetric Cryptography category was finished and added to all applicable pages.
 Rules Added: Mathematics, Single Variable Calculus - Rule 129.
 
-January 7 2025: Calculus work. 
+January 7, 2025: Calculus work. 
 Rules Added: Mathematics, Single Variable Calculus - Rule 128.
 
-January 6 2025: Considerable work was done on the Math Symbols page. Furthermore, I created the Multivariable Calculus pages, and worked on them on paper.
+January 6, 2025: Considerable work was done on the Math Symbols page. Furthermore, I created the Multivariable Calculus pages, and worked on them on paper.
 Rules Added: Mathematics, Single Variable Calculus - Rule 127.
 
-January 5 2025: Calculus work. Today, I worked on Multivariable Calculus in my paper notes. In doing so, I revised some of my Physics notes regarding Dot Product (which were some of the first non-math notes added to the site), making it flow and look much better.
+January 5, 2025: Calculus work. Today, I worked on Multivariable Calculus in my paper notes. In doing so, I revised some of my Physics notes regarding Dot Product (which were some of the first non-math notes added to the site), making it flow and look much better.
 Rules Added: Mathematics, Single Variable Calculus - Rule 126.
 
-January 4 2025: Calculus work.
+January 4, 2025: Calculus work.
 Rules Added: Mathematics, Single Variable Calculus - Rule 125.
 
-January 3 2025: Formalization of the website has begun - several older, non-educational, disused pages (which merely take up space on the site) have been removed. Additional, minor updates to the Calculus page have been performed as a part of the new program/goal I am forwarding with regard to my paper Math notes, which continue to increase in the amount remaining to be digitized. In formalizing the site, a major update to the About page was done.
+January 3, 2025: Formalization of the website has begun - several older, non-educational, disused pages (which merely take up space on the site) have been removed. Additional, minor updates to the Calculus page have been performed as a part of the new program/goal I am forwarding with regard to my paper Math notes, which continue to increase in the amount remaining to be digitized. In formalizing the site, a major update to the About page was done.
 Rules Added: Mathematics, Single Variable Calculus - Rule 124.
 
-January 2 2025: Added a rule for Calculus, and created the long-overdue "Limits" section page.
+January 2, 2025: Added a rule for Calculus, and created the long-overdue "Limits" section page.
 Rules Added: Mathematics, Single Variable Calculus - Rule 123.
 
-January 1 2025: New year. I edited the pages to reflect this. I made everything up to its most current version (specifically, all of the cryptography sub-pages getting their most recent version from the full "complete notes" cutting room floor page). While no rules were added to the website, today was focused on Calculus. I will begin experimenting tomorrow with a mechanism to ensure permanent, continuous additions to the website, alongside other ideas/plans I have (which will be shared at a later time).
+January 1, 2025: New year. I edited the pages to reflect this. I made everything up to its most current version (specifically, all of the cryptography sub-pages getting their most recent version from the full "complete notes" cutting room floor page). While no rules were added to the website, today was focused on Calculus. I will begin experimenting tomorrow with a mechanism to ensure permanent, continuous additions to the website, alongside other ideas/plans I have (which will be shared at a later time).
 
-December 31 2024: Work on Cryptography, developing the DES section significantly, but also some on Calculus (in my own notebook, to be transferred to the site soon). By the end of 2025, I hope for all of Calculus, Multivariable Calculus, and Linear Algebra to be finished on the Math side, all of Electromagnetism (and some entry into Quantum Physics) on the Physics side, and for all of the currently established Cryptography sections (Symmetric Cryptography through Post-Quantum) to be finished as well. A tall order, but there is a considerable amount of time between then and now.
+
+December 31, 2024: Work on Cryptography, developing the DES section significantly, but also some on Calculus (in my own notebook, to be transferred to the site soon). By the end of 2025, I hope for all of Calculus, Multivariable Calculus, and Linear Algebra to be finished on the Math side, all of Electromagnetism (and some entry into Quantum Physics) on the Physics side, and for all of the currently established Cryptography sections (Symmetric Cryptography through Post-Quantum) to be finished as well. A tall order, but there is a considerable amount of time between then and now.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 43, 44, 45, 46.
 
-December 30 2024: Significant work in Block Ciphers, specifically regarding the Feistel Network.
+December 30, 2024: Significant work in Block Ciphers, specifically regarding the Feistel Network.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 39, 40, 41, 42.
 
-December 29 2024: Wrapping up Stream Ciphers. Minor changes to some Internal metapages. In examining the Salsa20 and ChaCha ciphers, I noted that understanding of these specific ciphers is more specific and in-depth into a certain sector of Cryptography, and not necessary for the development of an understanding of the fundamentals of Cryptography alone, since I would like to focus more on Post-Quantum attributes of Cryptography. Thus, in order to save time (while noting using the '[' system the unfinishedness of the content), I reserved four rules (a reasonable estimate) for future development of that section, with all additional rules created (if any) being subject to the WoO system. Onto block ciphers.
+December 29, 2024: Wrapping up Stream Ciphers. Minor changes to some Internal metapages. In examining the Salsa20 and ChaCha ciphers, I noted that understanding of these specific ciphers is more specific and in-depth into a certain sector of Cryptography, and not necessary for the development of an understanding of the fundamentals of Cryptography alone, since I would like to focus more on Post-Quantum attributes of Cryptography. Thus, in order to save time (while noting using the '[' system the unfinishedness of the content), I reserved four rules (a reasonable estimate) for future development of that section, with all additional rules created (if any) being subject to the WoO system. Onto block ciphers.
   Additionally, a priority register for me to log all future "unfinished sections" that come about has been created: https://humanknowledge.neocities.org/_other/register.txt
   As for low-priority intake, this allows me to recognize content that should be added to the project, and that its absence is not merely the result of me not having heard about it in the first place.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 35 (reserved), 36 (reserved), 37 (reserved), 38 (reserved),
 
-
-December 28 2024: Finished Cryptography Equations, and LFSR. 
+December 28, 2024: Finished Cryptography Equations, and LFSR. 
 Rules Added: Cryptography, Symmetric Cryptography - Rule 32, 33, 34.
 
-December 27 2024: Created the Cryptography Equations page, and updated the ordering of the Cryptography so that Post-Quantum is the last (currently, I may add more after it). All relevant pages were changed to reflect this. On the main Cryptography information front, almost of Linear Feedback Shift Registers was completed.
+December 27, 2024: Created the Cryptography Equations page, and updated the ordering of the Cryptography so that Post-Quantum is the last (currently, I may add more after it). All relevant pages were changed to reflect this. On the main Cryptography information front, almost of Linear Feedback Shift Registers was completed.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 30, 31.
 
-December 26 2024: Stream Cipher work, primarily in Linear Congruential Generators and Linear Feedback Shift Registers.
+December 26, 2024: Stream Cipher work, primarily in Linear Congruential Generators and Linear Feedback Shift Registers.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 23, 24, 25, 26, 27, 28, 29.
 
-December 25 2024: More work on Cryptography, this time solely in Stream Ciphers. Furthermore, a new section was added to the "Mathematical Symbols" page, "Expressions".
+December 25, 2024: More work on Cryptography, this time solely in Stream Ciphers. Furthermore, a new section was added to the "Mathematical Symbols" page, "Expressions".
 Rules Added: Cryptography, Symmetric Cryptography - Rule 20, 21, 22.
 
-December 24 2024: Edits to I.I in Cryptography, I.II totally completed, I.III began, changes to the "About" page, general all-around work day. The Stream Ciphers section was began and was added to all relevant pages.
+December 24, 2024: Edits to I.I in Cryptography, I.II totally completed, I.III began, changes to the "About" page, general all-around work day. The Stream Ciphers section was began and was added to all relevant pages.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 16, 17, 18, 19.
 
-December 23 2024: Arch linux successfully installed. (Almost) full day's work on Symmetric Cryptography.
+December 23, 2024: Arch linux successfully installed. (Almost) full day's work on Symmetric Cryptography.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 9, 10, 11, 12, 13, 14, 15.
 
-December 22 2024:
+December 22, 2024:
 Rules Added: Cryptography, Symmetric Cryptography - Rule 7, 8.
 
-December 21 2024. I remove the Cryptographic Classification page, as I realized that there was too little material to warrant it being an entire section of Cryptography, since it almost immediately leads into Symmetric Cryptography anyway. Furthermore, I updated all the physics pages to incorporate oscillations, which I intend to do after a solid foundation of Cryptography has been established.
+December 21, 2024. I remove the Cryptographic Classification page, as I realized that there was too little material to warrant it being an entire section of Cryptography, since it almost immediately leads into Symmetric Cryptography anyway. Furthermore, I updated all the physics pages to incorporate oscillations, which I intend to do after a solid foundation of Cryptography has been established.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 1, 2, 3, 4, 5, 6.
 
-December 20 2024. Work on the Human Knowledge Project can be a slow-moving bureaucracy, but once the pages and all the miscellania done to improve the general look and quality-of-life of users on the website (such as the humorous and/or inspirational quotes under each section), real work is relatively steady. Work on Cryptography had begun. The main pages have been created, and the art for Cryptography has already been created as well. Furthermore, the "Aerospace Engineering" logo was created in advance of the page actually being created, making today extremely productive in terms of Project Art.
+December 20, 2024. Work on the Human Knowledge Project can be a slow-moving bureaucracy, but once the pages and all the miscellania done to improve the general look and quality-of-life of users on the website (such as the humorous and/or inspirational quotes under each section), real work is relatively steady. Work on Cryptography had begun. The main pages have been created, and the art for Cryptography has already been created as well. Furthermore, the "Aerospace Engineering" logo was created in advance of the page actually being created, making today extremely productive in terms of Project Art.
 
-December 19 2024. Substantial work to previous Physics pages, with clarifications and revisions. Additionally, I updated the art page to include Astronomy. Current goal: 20-25, Cryptography. 26-28, Calculus. 29-31, Remaining Physics, 1-4, unity, 5-6, Break assignments.
+December 19, 2024. Substantial work to previous Physics pages, with clarifications and revisions. Additionally, I updated the art page to include Astronomy. Current goal: 20-25, Cryptography. 26-28, Calculus. 29-31, Remaining Physics, 1-4, unity, 5-6, Break assignments.
 
-December 18 2024. Adding equations to the Physics equations page, as well as general reformating of the page to make it easier to quickly find equations and definitions. Minor edits to some physics pages naturally came of this as I inspected some rules and noticed typos/minor errors. Furthermore, Astronomy finally received its logo, after a month of deliberations with the mastermind artist of his generation, Shoaib Pasha.
+December 18, 2024. Adding equations to the Physics equations page, as well as general reformating of the page to make it easier to quickly find equations and definitions. Minor edits to some physics pages naturally came of this as I inspected some rules and noticed typos/minor errors. Furthermore, Astronomy finally received its logo, after a month of deliberations with the mastermind artist of his generation, Shoaib Pasha.
 
-December 16 2024. Updating of many more Physics pages as I finish the homework for Gravitation.
+December 16, 2024. Updating of many more Physics pages as I finish the homework for Gravitation.
 
-December 15 2024. Updated all relevant pages to show Gravitation (Classical Mechanics) has been finished, and that work on Oscillations has begun. 
+December 15, 2024. Updated all relevant pages to show Gravitation (Classical Mechanics) has been finished, and that work on Oscillations has begun. 
 Rules Added: Physics, Classical Mechanics - Rule 150, 151.
 
-December 14 2024: Work on Physics.
+December 14, 2024: Work on Physics.
 Rules Added: Physics, Classical Mechanics - Rule 144, 145, 146, 147, 148, 149.
 
-December 13 2024: Work both on Physics and Calculus.
+December 13, 2024: Work both on Physics and Calculus.
 Rules Added: Physics, Classical Mechanics - Rule 142, 143.
 Rules Added: Mathematics, Single Variable Calculus - Rule 119, 120, 121, 122.
 
-December 12 2024: Topic Refocusing - goal will shift from Astronomy to Calculus and Physics from now on. Over the next few weeks, I plan to go very extensive with my Physics coverage, as well as (hopefully) Cryptography and possibly some Electrical Engineering. There are only so many hours in the day, but 23 days is a long time. Today, work was performed on Calculus.
+December 12, 2024: Topic Refocusing - goal will shift from Astronomy to Calculus and Physics from now on. Over the next few weeks, I plan to go very extensive with my Physics coverage, as well as (hopefully) Cryptography and possibly some Electrical Engineering. There are only so many hours in the day, but 23 days is a long time. Today, work was performed on Calculus.
 Rules Added: Mathematics, Single Variable Calculus - Rule 116, 117, 118. 
 
-December 11 2024: Finished with astronomy temporaria, and removed it.
+December 11, 2024: Finished with astronomy temporaria, and removed it.
 
-December 10 2024: Began adding ~temporaria~ astronomy material that will be removed shortly. I am currently processing a large amount of data, and it will be removed after I finish. 
+December 10, 2024: Began adding ~temporaria~ astronomy material that will be removed shortly. I am currently processing a large amount of data, and it will be removed after I finish. 
 
-December 9 2024: More work on Astronomy - this is my plan until Wednesday. A small amount of work was also done in Calculus as well.
+December 9, 2024: More work on Astronomy - this is my plan until Wednesday. A small amount of work was also done in Calculus as well.
 Rules Added: Astronomy, Classical Astronomy - Rule 35, 36, 37, 38, 39, 40, 41.
 Rules Added: Mathematics, Single Variable Calculus - Rule 113, 114, 115.
 
-December 8 2024: Astronomy-focused day. Everything in Astronomy was updated, fixing all sorts of inconsistencies, types, irregularities, and beyond. I can now comprehend it much better, which is most important.
+December 8, 2024: Astronomy-focused day. Everything in Astronomy was updated, fixing all sorts of inconsistencies, types, irregularities, and beyond. I can now comprehend it much better, which is most important.
 
-December 6 2024: Further work on Calculus. Additionally, every page on the website was updated to incorporate the new Art page, which should be the last major site-wide update until the summer plan (or until I think of something else). The Sitemap was also updated for the first time in a while.
+December 6, 2024: Further work on Calculus. Additionally, every page on the website was updated to incorporate the new Art page, which should be the last major site-wide update until the summer plan (or until I think of something else). The Sitemap was also updated for the first time in a while.
 Rules Added: Mathematics, Single Variable Calculus - Rule 109, 110, 111, 112.
 
-December 5 2024: Work on the Calculus page, largely.
+December 5, 2024: Work on the Calculus page, largely.
 Rules Added: Mathematics, Single Variable Calculus - Rule 106, 107, 108.
 
-December 4 2024: Some additions to the Math Symbols page.
+December 4, 2024: Some additions to the Math Symbols page.
 
-December 3 2024: Work on Calculus has begun; the rest of Precalculus must be done slowly over time, similar to the math symbols page, as I will have to do my own research into the subject after the fact in order to fill in the missing content (since I wrote almost no Rules for the subject when I took it). Furthermore, I obtained permission from Mr. Kim to add him to the Special Thanks page. I began experimenting with a new information page, which may entail another updating of every page...
+December 3, 2024: Work on Calculus has begun; the rest of Precalculus must be done slowly over time, similar to the math symbols page, as I will have to do my own research into the subject after the fact in order to fill in the missing content (since I wrote almost no Rules for the subject when I took it). Furthermore, I obtained permission from Mr. Kim to add him to the Special Thanks page. I began experimenting with a new information page, which may entail another updating of every page...
 Rules Added: Astronomy, Classical Astronomy - Rule 33.
 
-December 2 2024: Several revisions were made to the About page, including the addition of Mr. Cooper after I was given permission to add him.
+December 2, 2024: Several revisions were made to the About page, including the addition of Mr. Cooper after I was given permission to add him.
 
-December 1 2024: Made some minor revisions and additions in order to remove missing references ('[' symbols) from Rule 68. Furthermore, I fixed an issue that was causing mathJax (used extensively in the Physics pages) to not load correctly on the GitHub mirror. All Physics pages were changed to reflect this fix, as well as some math pages.
+December 1, 2024: Made some minor revisions and additions in order to remove missing references ('[' symbols) from Rule 68. Furthermore, I fixed an issue that was causing mathJax (used extensively in the Physics pages) to not load correctly on the GitHub mirror. All Physics pages were changed to reflect this fix, as well as some math pages.
 Rules Added: Physics, Classical Mechanics - Rule 141.
 
-November 30 2024: Changes, fixes, and elaborations to Classical Mechanics IX.
+November 30, 2024: Changes, fixes, and elaborations to Classical Mechanics IX.
 Rules Added: Physics, Classical Mechanics - None, just lots of revisions.
 
-November 29 2024: Finished torque, and some Quality of life changes to make myself easier to understand. Created the page for Gravitation and linked it everywhere.
+November 29, 2024: Finished torque, and some Quality of life changes to make myself easier to understand. Created the page for Gravitation and linked it everywhere.
 Rules Added: Physics, Classical Mechanics - Rule 137, 138, 139, 140.
 
-November 28 2024: Total efforts toward torque.
+November 28, 2024: Total efforts toward torque.
 Rules Added: Physics, Classical Mechanics - Rule 130, 131, 132, 133, 134, 135, 136.
 
-November 27 2024: Edited the About page further, adding "Flipping Physics" to the Special Thanks register and trimming one of the answers in the FAQ. Much work was done today in Rotational Dynamics of Classical Mechanics, particularly in the Torque section.
+November 27, 2024: Edited the About page further, adding "Flipping Physics" to the Special Thanks register and trimming one of the answers in the FAQ. Much work was done today in Rotational Dynamics of Classical Mechanics, particularly in the Torque section.
 Rules Added: Physics, Classical Mechanics - Rule 125, 126, 127, 128, 129.
 
-November 26 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics, particularly in Rotational Motion. Added Disclaimer to the Special Thanks section of the About page, alongside other edits. 
+November 26, 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics, particularly in Rotational Motion. Added Disclaimer to the Special Thanks section of the About page, alongside other edits. 
 Rules Added: Physics, Classical Mechanics - Rule 55 (finished the Rotational Motion section), 124.
 
-November 25 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics. 
+November 25, 2024: Made several changes/corrections to various rules in Physics, Classical Mechanics. 
 Rules Added: Physics, Classical Mechanics - Rule 53, 54.
 
-November 24 2024: Finished these internal pages: Color Coding. About (for the most part - it is now in a 'working' version available to the public).
+November 24, 2024: Finished these internal pages: Color Coding. About (for the most part - it is now in a 'working' version available to the public).
 Furthermore, I changed the front page logo from one that said "J. Lacabe" to one that says "Human Knowledge", since this is not my personal blog. I left the original "J. Lacabe" image on the About page, for perpetuity. Additionally, every page on the site received an edit to account for the new internal pages, including sidebar additions and changed beginning paragraphs for the pages that reference color coding for the notes.
 
-November 23 2024: Began forming what would become the About, FAQ, Color Coding, and Recent Changes pages. This all spawned from my need to create a page explaining the new WoO system, which reawoke my desire to create an FAQ page, and from there the ideas began forming. The individual pages were created, but they were not completed in any form.
+November 23, 2024: Began forming what would become the About, FAQ, Color Coding, and Recent Changes pages. This all spawned from my need to create a page explaining the new WoO system, which reawoke my desire to create an FAQ page, and from there the ideas began forming. The individual pages were created, but they were not completed in any form.
 
-July 31 - November 22 2024:  I hadn't created this page yet. Most of the work performed on the site during this period is saved in the various commits made to the Github mirror, where the differences between each revision made to the site can be seen: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/?since=2024-08-27&until=2024-11-22
+July 31 - November 22, 2024:  I hadn't created this page yet. Most of the work performed on the site during this period is saved in the various commits made to the Github mirror, where the differences between each revision made to the site can be seen: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/?since=2024-08-27&until=2024-11-22

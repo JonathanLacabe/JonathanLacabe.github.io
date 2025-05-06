@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#Resistors">XVIII.III Resistors.</a>
         </div>
         <div class="toc-column">
-          <!--<a href="#KeyConcepts">XVIII.IV Key Concepts.</a>-->
+          <a href="#CCP">XVIII.VI C.C.P..</a><!---->
         </div>
         
       </div>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	    <strong><a href="#CircuitDef"><span class="mw-headline" id="CircuitDef">#</span></a> <font color="#006400">Circuit</font></strong>: A circuit is a path in which current takes from a positive end to the negative end of a battery, typically with several intervening components complicating the process.<br><br>
 
-          An electric circuit is generally composed of electrical loops which can include wires, batteries (Rule [[[), resistors (Rule [[[), lightbulbs (Rule [[[), capacitors (Rule [[[), switches (Rule [[[), ammeters (Rule [[[), voltmeters (Rule [[[), and inductors (Rule [[[).<br><br>
+          An electric circuit is generally composed of electrical loops which can include wires, batteries (Rule [[[), resistors (Rule [[[), lightbulbs (Rule [[[), capacitors (Rule [[[), switches (Rule [[[), ammeters (Rule [[[), Voltmeters (Rule [[[), and inductors (Rule [[[).<br><br>
           
           These components are all represented with their own symbols in <em><strong>circuit diagrams</strong></em>. The below illustration displays the most popularly used components in diagrams.<br><br>
       <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/Electrocomponents.jpg"><img src="/Physics/img/diagrams/Electrocomponents.jpg" alt="The most commonly used electric component symbols, most explained individually within the Rules of this section. Courtesy of NextPCB." width=80%/></a></div>
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     	    <br><br><br>
     	    
-    	    <strong><a href="#SwitchDef"><span class="mw-headline" id="SwitchDef">#</span></a> <font color="#006400">Switch</font></strong>: An electrical component that only serves to close or open a circuit. When the switch is shut, it closes the circuit, and when it is open, then the circuit is open as well, resulting in all of the aforementioned effects (see above definitions). It is represented using the following symbol:<br><Br>
+    	    <strong><a href="#SwitchDef"><span class="mw-headline" id="SwitchDef">#</span></a> <font color="#006400">Switch</font></strong>: An electrical component that only serves to close or open a circuit. When the switch is shut, it closes the circuit, and when it is open, then the circuit is open as well, resulting in all of the aforementioned effects (see above definitions). Switches are represented using the following symbol:<br><Br>
         
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/SwitchSymbol.jpg"><img src="/Physics/img/diagrams/SwitchSymbol.jpg" alt="The electric symbol for a switch. Courtesy of NextPCB." width=30%/></a></div>
         	    <span class="tiny"><em>The electric symbol for a switch. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span>
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> <strong>Battery Cells:</strong><br><br>
           The electric potential difference supplied by the battery is determined by the number of "<strong>cells</strong>" within a battery. Each cell produces a fixed amount of electric potential difference, and by adding more, the total electric potential difference of the battery (and thus the circuit) will increase, allowing it to drive a greater level of current. Illustrated above in Rule [[[-1 are the symbols for single-cell and double-cell batteries.
         
-        </div><br><br>
+        </div><br><br><br>
         
         
         <div class="rule"><strong>
@@ -204,18 +204,35 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Current and Voltage in a Circuit</strong>:<br><br>
 
-        Within a circuit, the <strong>electric current</strong> will always remain constant. The reason for this is explained in Rule [[[.<br><br>
+        Within a circuit, the <strong>electric current</strong> will always remain constant when the path is undivided. On an individual level, current is constant across each electrical component (whether resistor or capacitor or whatever). The reason for this is explained in Rule [[[understandingheart[[[.<br><br>
         
-        The <strong>Electric Potential Difference</strong>  (Voltage) will, of course, fluctuate as the charge moves from one end of the circuit to the other, as the "difference" will inherently decrease between the two ends of the battery (for example, a "5V" circuit has an electric potential of 5 volts on the positive terminal and 0 volts on the negative terminal). Voltage will only lower, however, as the charge passes through an electrical component, and not while going through a resistance-less wire (see Rule [[[).<br><br>
+        The only times in which the current running through a circuit can differ at two places is when the circuit path is divided - i.e., when the circuit has a junction (a splitting of the wires onto separate paths), with the electrical components along the paths being "<eM>parallel</em>". See Rule [[[ for more information regarding this phenomenon. The circuit will always have its paths reconverge by the time the negative terminal is reached, and so the current through both terminals is always the same.<br><br><br>
         
-        The difference in electric potential between the positive and negative ends of a battery is such that the electric potential <em>has</em> to decrease as the charge traverses the circuit, decreasing with every electrical component.<br><br>
+        The <strong>Electric Potential Difference</strong> (Voltage) will, of course, fluctuate as the charge moves from one end of the circuit to the other, as the "difference" will inherently decrease between the two ends of the battery (for example, a "5V" circuit has an electric potential of 5 Volts on the positive terminal and 0 Volts on the negative terminal).<br><br>
         
-        It is standard convention to treat the negative terminal of a battery as a <strong>zero-volt reference point</strong>, with the positive terminal having x number of volts to start with, and by the time it gets to the end of the circuit loop, reaching zero. Of course, a 9V circuit could have 10 V on the positive and 1 V on the negative (since difference is relative), but where not otherwise stated, <u>assume the circuit has the negative terminal set as a 0 V reference point</u>.
+        Voltage will only lower, however, as the charge passes through an electrical component, and not while going through a resistance-less wire (see Rule [[[). Thus, the electric potential difference between the farthest extent of the wire connected to the positive terminal and the wire connected to the negative terminal will be the same as that between the terminals (the Terminal Voltage).<br><br>
         
-        In [[[kirchhoff's 2nd law - create a little narrative here giving an exact scientific reason for why voltage must cancel out and whatever[[[
+        Electric potential decreases with every electrical component, decreasing the electric potential difference between the charge position and the negative terminal with each component passed through.<!--it does not decrease by just passing through a junction.--><br><br>
+        
+        It's important to note that across the different paths of a <strong>parallel set</strong> (see Rule [[[), Voltage will be the same. This is true regardless of how unbalanced the component distribution is between the paths - regardless of whether there are five components on one path and two components on the other. Thus, for parallel paths, as the Voltage is the same, if the components on the paths are not identical to eachother, then the current will differ between the two paths to compensate for the different resistance (under the VCR Law, Rule [[[), retaining the same Voltage across the paths.<br><br>
+        
+        It is standard convention to treat the negative terminal of a battery as a <strong>zero-Volt reference point</strong>, with the positive terminal having x number of Volts to start with, and by the time it gets to the end of the circuit loop, reaching zero. Of course, a 9V circuit could have 10 V on the positive and 1 V on the negative (since difference is relative), but where not otherwise stated, <u>assume the circuit has the negative terminal set as a 0 V reference point</u>.
+        
+        In [[[kirchhoff's 2nd law - create a little narrative here giving an exact scientific reason for why Voltage must cancel out and whatever[[[
         
         </div><br><br><br>
         
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <!--These sorts of Rules are some of the most fun to make. Though arguably less vital than my myriad of masterpieces, they allow me to complain about the things that annoy me, the minutiae of question phrasing and terminology. The uncountable/countable rule for electric potential is just that in a more cohesive, actually generally useful form that has more application to what generally annoys me and what is more confusing at a greater level. These Rules would be impossible to make if I were not a moron. gratful.-->
+
+        Upon occasion, a foolish question will ask you to find the Voltage/electric potential difference of a component. In these cases, just mentally rephrase the question to ask for the "Voltage <em>across</em>" the component, which is a more logical phrasing of such a question.<br><br>
+        
+        Of course, it is perfectly logical to ask for the current of a component, or the resistance/capacitance of a component, but since Voltage is inherently a <em>difference</em> between two points (the effect of the component on which is being measured), it is more accurate to ask for the Voltage across.
+        
+        </div><br><br><br>
         
         
         <div class="rule"><strong>
@@ -223,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Terminal Voltage</strong>: SCALAR.<br><br>
         
-        <u><strong>Units</strong></u>: Volts, e.g. Joules / Coulombs. The symbol for the volts unit, hilariously, is the same as the symbol for electric potential: <em><strong>V</strong></em>.<br><br><br>
+        <u><strong>Units</strong></u>: Volts, e.g. Joules / Coulombs. The symbol for the Volts unit, hilariously, is the same as the symbol for electric potential: <em><strong>V</strong></em>.<br><br><br>
         
         <u><strong>Equation</strong></u>:<br><br>
         <strong>ΔV<sub>t</sub> = Ɛ</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(when in an ideal battery)<br>
@@ -243,9 +260,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Terminal Voltage is the total <em>measured</eM> electric potential difference supplied between the positive and negative terminals of the battery. Note that this represents the <em>actual</em>, measured value of the potential difference, which, in an ideal battery, would be unimpeded by such things like internal resistance and would reflect the greatest possible electric potential difference between the terminals, known as the <u>electromotive force</u> (see Rule [[[).<br><br>
         
-        The difference between the terminal voltage of a non-ideal battery and the ideal electromotive force (see Rule [[[) is the electric potential difference of the internal resistance of the battery, ΔV<sub>r</sub>. This electric potential difference is then simplified into into its components by the VCR law (Rule [[[), thus creating the non-ideal equation seen above.<BR><br>
+        The difference between the Terminal Voltage of a non-ideal battery and the ideal electromotive force (see Rule [[[) is the electric potential difference of the internal resistance of the battery, ΔV<sub>r</sub>. This electric potential difference is then simplified into into its components by the VCR law (Rule [[[), thus creating the non-ideal equation seen above.<BR><br>
 
-        For all non-ideal batteries, the terminal voltage across the battery will decrease as the current through the battery increases, forming an inverse relationship. As one can figure out after momentary analysis, when there is no current in a non-ideal battery, the terminal voltage would equal to that of the electromotive force (as internal resistance would equal to zero).
+        For all non-ideal batteries, the Terminal Voltage across the battery will decrease as the current through the battery increases, forming an inverse relationship. As one can figure out after momentary analysis, when there is no current in a non-ideal battery, the Terminal Voltage would equal to that of the electromotive force (as internal resistance would equal to zero).
         
         </div><br><br><br>
         
@@ -258,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         The maximum possible electric potential difference a battery can provide between its negative and positive terminals is known as the <strong>electromotive force</strong>, known as "<strong>emf</strong>" to the commonfolk. Represented using <strong>Ɛ</strong>.<br><br>
         
-        In all non-ideal batteries, the emf will be greater than the actual electrical potential difference of the circuit (the <em>terminal voltage</em>, see definition), since internal resistance will screw with it and ruin the perfection. In all <strong>ideal batteries</strong> however, terminal velocity is equivalent to electric potential difference.<br><br>
+        In all non-ideal batteries, the emf will be greater than the actual electrical potential difference of the circuit (the <em>Terminal Voltage</em>, see definition), since internal resistance will screw with it and ruin the perfection. In all <strong>ideal batteries</strong> however, terminal velocity is equivalent to electric potential difference.<br><br>
         
         Importantly, note that <strong>electromotive force is not a force</strong>. The cabal PURPOSELY named it like that so that you would get confused and include it on your free-body diagram. THIS IS EXACTLY WHAT THEY WANT YOU TO DO. It is only a reference to the max electric potential difference, <u>not</u> a force.    
         
@@ -275,16 +292,64 @@ document.addEventListener("DOMContentLoaded", function (){
         
         When a <strong>battery</strong> is said to have some sort of "internal resistance", just imagine that there is a resistor immediately following the positive terminal of the battery (with no inbetween wire). If a <strong>WIRE</strong> is said to have internal resistance, just do the same - fashion a resistor at the very beginner of the wire, and it will have the same effect.<br><br>
         
-        Lowercase <strong>r</strong> is typically the symbol of internal resistance of a battery. When the internal resistance is nonzero, the electrical current will increase as the terminal voltage decreases (as ∆V<sub>t</sub> = Ɛ - I<sub>internal</sub>, see Rule [[[-1). Thus, with a nonzero internal resistance the only way to get emf equal to terminal voltage is for there to be zero current.<br><br>
+        Lowercase <strong>r</strong> is typically the symbol of internal resistance of a battery. When the internal resistance is nonzero, the electrical current will increase as the Terminal Voltage decreases (as ∆V<sub>t</sub> = Ɛ - I<sub>internal</sub>, see Rule [[[-1). Thus, with a nonzero internal resistance the only way to get emf equal to Terminal Voltage is for there to be zero current.<br><br>
         
         Most problems will deal with ideal batteries, and will otherwise inform you of such unideal attributes like internal resistance.
-        
-        
-        
         
         </div><br><br>
         
         
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Voltmeter</strong>:<br><br>
+
+The Voltmeter component is used to measure electric potential difference. 
+
+It can be strategically placed in the circuit to obtain a value that reflects the Voltage across another component, as a result of Voltage being the same for all components in parallel (see Rule [[[Current and Voltage in a Circuit[[[).<br><br>
+
+The Voltmeter must be placed in <strong>parallel</strong> with the electrical component it is measuring the 'Voltage-across' of.<br><br>
+
+The resistance of a Voltmeter is near infinite (infinite for all intents and purposes), as it must prevent ANY current from moving onto its path (under the current divider law of Rule [[[), as otherwise it will actually provide a parallel path to the component being measured and will decrease the equivalent resistance of the circuit, increasing the current and ruining everything (and interfering with the purely observatory nature of the Voltmeter).<br><br>
+
+Voltmeters are represented using the following symbol:<br><Br>
+        
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/VoltmeterDiagram.jpg"><img src="/Physics/img/diagrams/VoltmeterDiagram.jpg" alt="The electric symbol for a Voltmeter. Courtesy of NextPCB." width=30%/></a></div>
+        	    <span class="tiny"><em>The electric symbol for a Voltmeter. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br>
+        	    
+        	    </div><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Ammeter</strong>:<br><br>
+<!--(not 'ampmeter')-->
+The Ammeter component is used to measure <strong>current</strong>, or the number of amperes moving through the circuit at a point. It can be strategically placed in the circuit to obtain a value that reflects the current of another component, as a result of current being the same for all components in series (see Rule [[[Current and Voltage in a Circuit[[[).<br><br>
+
+<!--idiosyncratic is one way to describe it-->
+The ammeter must be placed in <strong>series</strong> with the electrical component it is measuring the 'current-passing-through' of.<br><br>
+
+The resistance of an ammeter is near zero (relatively zero for all intents and purposes), as otherwise the equivalent resistance of the circuit will increase and thus the current will decrease, interfering with the purely observatory nature of the ammeter.<br><br>
+
+Ammeters are represented using the following symbol:<br><Br>
+        
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/AmmeterDiagram.jpg"><img src="/Physics/img/diagrams/AmmeterDiagram.jpg" alt="The electric symbol for an ammeter. Courtesy of NextPCB." width=30%/></a></div>
+        	    <span class="tiny"><em>The electric symbol for an ammeter. Courtesy of <a href="https://www.nextpcb.com/blog/electrical-electronic-symbols">NextPCB</a>.</em></span><br><br>
+        	    
+        	    </div><br>
+        
+        
+        <strong><font color="blue"><a href="#AmVoltTable"><span class="mw-headline" id="AmVoltTable">#</span></a> Ammeter/Voltmeter Memorization Table:</font></strong><br><br>
+
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/AmmeterVoltmeter.png"><img src="/Physics/img/AmmeterVoltmeter.png" alt="The differences and simplification of the characteristics of the Ammeter and Voltmeter. Courtesy of NextPCB." width=60%/></a></div>
+        	    <span class="tiny"><em>The differences and simplification of the characteristics of the Ammeter and Voltmeter. Courtesy of <a href="https://www.flippingphysics.com/ammeter-Voltmeter.html">Flipping Physics</a>.</em></span><br><br>
+        	    
+        	    <br>
+          
+          
+          
         
         
         
@@ -303,11 +368,14 @@ document.addEventListener("DOMContentLoaded", function (){
           
           The cabal has cleverly defined resistance as "the ability to resist the flow of electric current". This <!--hogwash-->loses all meaning when one discovers that electrical current is the exact same before and after passing through a resistor. It begs the question: <strong>What exactly does a resistor do?</strong><br><Br>
           
-          The best way to imagine the effect of the resistor is to realize that it, through the VCR Law, will have a <em>universal effect</em>. When a charge goes through a resistor, it will indeed get slower, and thus have a lower electrical current. HOWEVER: because all the charges in the circuit are jammed packed together in a line, all of the charges behind those in the resistor will slow down, as they cannot move any faster. As a result, <u>every charge in the circuit</u> will move at the <em>exact same speed</em>.<br><br>
+          The best way to imagine the effect of the resistor is to realize that it, through the VCR Law, will have a <em>universal effect</em>. When a charge goes through a resistor, it will indeed get slower, and thus will have a lower electrical current. HOWEVER: because all the charges in the circuit are jammed packed together in a line, all of the charges behind those in the resistor will slow down, as they cannot move any faster. As a result, <u>every charge in the circuit</u> will move at the <em>exact same speed</em> when following an individed path (i.e., in series).<br><br>
           
-          In other words, <strong>the constant electric current of a circuit is dependent on the total resistance of the circuit</strong>. The greater the strength of a single resistor on one end of the circuit, the lesser the strength of the current throughout the <u>entire</u>. <u>circuit</u>.<br><br>
+          In other words, <strong>the constant electric current of a circuit is dependent on the total resistance (the equivalent resistance) of the circuit</strong>. The greater the strength of a single resistor on one end of the circuit, the lesser the strength of the current throughout the <u>entire</u>. <u>circuit</u>.<br><br>
           
-          It helps to not imagine the charges as individuals detached from the whole, but rather as a <strong>sludge</strong>, moving together at a constant rate.
+          All components in series will have the same current, while it will differ between components in parallel (explained below).<br><br>
+          
+          <!--this following section is an excuse for me to use "sludge" in an analogy. CULT OF LUNA RULES!!!!!!!!!-->
+          It helps to not imagine the charges as individuals detached from the whole, but rather as a <strong>sludge</strong>, moving together at a constant rate (the current). This sludge, when divided into multiple paths (such as through a junction, which creates parallel components along its individual paths - see Rule [[[), can indeed <em>become</em> slower in its split form along its individual paths (the division of speed of which unto the different paths in fact not being equal, but rather calculated in a specific manner (Rule [[[)), but if the path remains undivided, the sludge will always move at a constant rate.
           </div><br><br>
         
         
@@ -319,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
       The electrical component that acts as an instrument of resistance to the current. It is THE resistor, nobly standing against a raging electric potential energy.<br><br>
       
-      When a charge passes through a resistor, the electric potential difference will change (as potential energy gets dissipated) while the current will remain constant. Current will remain the same as after and before the resistor, conserving charge.<br><br>
+      When a charge passes through a resistor, the electric potential difference will change (as potential energy gets dissipated) while the current will remain constant. Current will remain the same before and after passing through the resistor, conserving charge.<br><br>
       
       Consider the VCR Law (Rule [[[) on a localized scale, only considering a single resistor. In this scenario, the VCR Law would produce the specs for the state of the charge in the wire immediately following the resistor - this is the data that must be used to discern the effect of any electrical component immediately following the resistor.<br><br>
       
@@ -371,7 +439,7 @@ There must always be an electric potential difference between the beginning and 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Short Circuit</strong>:<br><br>
 
-          A circuit which has a very small resistance and thus a very large current is known as a <strong>"short circuit"</strong>. This makes some unstable, since with little resistance and constant voltage the electric power can be very large and dangerous, as discernable by the equation presented in Rule 231.<br><Br>
+          A circuit which has a very small resistance and thus a very large current is known as a <strong>"short circuit"</strong>. This makes some unstable, since with little resistance and constant Voltage the electric power can be very large and dangerous, as discernable by the equation presented in Rule 231.<br><Br>
           
           A circuit cannot be a circuit if it does not have any resistance. Judging by the VCR Law, a circuit with zero resistance would have infinite current, which is preposterous. All circuits must have some form of resistance, internal/resistor or otherwise.
           </div><br><br>
@@ -385,6 +453,18 @@ There must always be an electric potential difference between the beginning and 
   	      <h3><span class="mw-headline" id="CapacitorSection">XVIII.IV Capacitors.</span></h3>
   	    </header>
   	    <article>
+  	    
+  	    <strong><font color="blue"><a href="#RoleCapacitors"><span class="mw-headline" id="RoleCapacitors">#</span></a> The Role Capacitors Play in Freshman Electrodynamics:</font></strong><br><br>
+
+          Capacitors store electric potential energy within their electric field, something that gives them unique properties in circuitry. The actual purpose for capacitors in doing so within a circuit, as is taught and is fundamental to Electric Engineering (see E.E. Rule [[[), has to do with Voltage regulation, as current from a battery will come in little bursts rather than in a coherent flow.<br><br>
+          
+          However, in freshman Physics, which deals only with the most idealized circuits imaginable, and almost entirely with DC circuits (constant current, see Rule 222), this purpose is all but neglected.<br><br>
+          
+          Instead, the more potent and relevant attributes of capacitors, particularly how they play into series and parallel circuits, will be described here somewhat detached from their actual purpose - indeed, this section reflects <em>how to solve problems involving capacitors</em> and their application in Physics rather than anything geared toward actual engineering.<br><br>
+          
+          Unless told otherwise (and as previously stated in Rule [[[), every circuit and application of current & Voltage should be assumed to be in DC current (see Rule [[[), with current constant as it moves from the battery.
+          
+          <br><br><br>
   	    
         
         </article>
@@ -409,12 +489,262 @@ There must always be an electric potential difference between the beginning and 
         	</li>
         </ol><br>
         
+        Rather amusingly, as seen in Rule [[[resistor[[[ and Rule [[[capacitor[[[, the equations for equivalent resistance and equivalent capacitance are reversed with respect to series and parallel.<br><br>
+        
         Below, there can be seen an example of <em>resistors</em> in series and parallel. Note that the same patterns hold for capacitors and all other components that may get into series and parallel:<br><br>
-              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/SeriesAndParallel.png"><img src="/Physics/img/SeriesAndParallel.png" alt="Resistors in Series and Parallel. Courtesy of AllAboutCircuits." width=37%/></a></div>
+              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/SeriesAndParallel.png"><img src="/Physics/img/diagrams/SeriesAndParallel.png" alt="Resistors in Series and Parallel. Courtesy of AllAboutCircuits." width=44%/></a></div>
       	    <span class="tiny"><em>Resistors in Series and Parallel. Courtesy of <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-5/what-are-series-and-parallel-circuits/">AllAboutCircuits</a>.</em></span><br><br>
       	    
       	    
-      	    </div><br>
+      	    </div><br><br>
+      	    
+      	    
+      	    <strong><a href="#SetDef"><span class="mw-headline" id="SetDef">#</span></a> <font color="#006400">Set</font></strong>: The particular parameterized region in which the components in series or parallel are located. The 'set' of the left circuit in the image shown at the bottom of Rule [[[-1 extends from the wire directly before R<sub>1</sub> to the wire directly after R<sub>2</sub>.<br><br>
+
+              The total Voltage of a 'set' in series only reflects the electric potential difference between those beginning and ending points - not the electric potential difference of the circuit as a whole (though, if the beginning and ending wires connect to the terminals, the Voltage of set will indeed be the Voltage of the circuit).
+
+    	    <br><br><br>
+      	    
+      	    <strong><a href="#EquivalentResistanceDef"><span class="mw-headline" id="EquivalentResistanceDef">#</span></a> <font color="#006400">Equivalent Resistance</font></strong>: Typically denoted using <strong>R<sub>eq</sub></strong>, Equivalent Resistance is the total summed values of all resistances within a circuit (measured in Ohms), summed with respect to their nature as resistors in series or parallel (see Rule [[[full analysis[[[). It is calculated using a substitution of the VCR Law.<br><br>
+
+              The "Equivalent Resistance" of two or a specific set of resistors is just the summed total of those specific resistors, excluding all others in the circuit.
+
+    	    <br><br><br>
+        
+        
+        <strong><a href="#EquivalentCapacitanceDef"><span class="mw-headline" id="EquivalentCapacitanceDef">#</span></a> <font color="#006400">Equivalent Capacitance</font></strong>: Typically denoted using <strong>C<sub>eq</sub></strong>, Equivalent Capacitance is the total summed values of all capacitances within a circuit (measured in Farads), summed with respect to their nature as capacitors in series or parallel (see Rule [[[full analysis[[[). It is calculated using a substitution of the capacitance equation (Rule 212).<br><br>
+
+          The "Equivalent Capacitance" of two or a specific set of capacitors is just the summed total of those specific capacitors, excluding all others in the circuit.
+
+    	    <br><br><br>
+        
+        
+        
+        
+        <strong><a href="#JunctionDef"><span class="mw-headline" id="JunctionDef">#</span></a> <font color="#006400">Junction</font></strong>: A point in which the wire of a circuit splits into two or more paths.
+          <br><br>
+          
+          All parallel sections of a circuit have a diverging junction and a reconverging junction, specifically only involving a splitting into two paths/wires max - see Rule [[[big original one[[[.
+
+    	    <br><br><br><br><br>
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Resistors in Series & Parallel (Full Analysis)</strong>:<br><br>
+              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/SeriesAndParallel.png"><img src="/Physics/img/diagrams/SeriesAndParallel.png" alt="Resistors in Series and Parallel. Courtesy of AllAboutCircuits." width=44%/></a></div>
+      	    <span class="tiny"><em>Resistors in Series and Parallel. Courtesy of <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-5/what-are-series-and-parallel-circuits/">AllAboutCircuits</a>.</em></span><br><br>
+
+        The left circuit above depicts two resistors in <strong>series</strong>, while the right circuit depicts two resistors in <strong>parallel</strong>.<br><br>
+        
+        Finding Equivalent Resistance for series and parallel sets requires finding other relationships, involving the likes of electric potential energy and current, in order to cancel out values using the VCR Law. See the "Series" and "Parallel" sections below for how this is done, and see Rule [[[ for a truncated version that only includes the equations for quick reference.
+        
+        <br><br><Br>
+        
+        <h3><strong>Resistors in Series:</strong></h3> When two resistors are in series, the current running through them is the same:<br>
+        <strong>I<sub>T</sub> = I<sub>1</sub> = I<sub>2</sub></strong>, where I<sub>1</sub> & I<sub>2</sub> are the currents running through the two resistors, and I<sub>T</sub> is the general current running through the terminals of the battery.<br><br>
+        
+        When the two resistors are in series, the electric potential difference between the wire directly before the first resistor and the wire directly after the second resistor (which would be the wires connected to the terminals if there are no other components in the circuit) is equivalent to to the summed electric potential difference across the two resistors.<br><br>
+        
+        In short, as depicted below, <strong>Ɛ = ΔV<sub>1</sub> + ΔV<sub>2</sub></strong>, with Ɛ being ΔV<sub>set</sub> when there are more components in the circuit than just the two resistors.<br><br>
+              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/ResistorSeries.png"><img src="/Physics/img/diagrams/ResistorSeries.png" alt="A simple circuit in which two resistors are in series. Courtesy of Flipping Physics." width=35%/></a></div>
+              	    <span class="tiny"><em>A simple circuit in which two resistors are in series. Courtesy of <a href="https://www.flippingphysics.com/resistor-series-parallel.html">Flipping Physics</a>.</em></span><br><br>
+        
+        By substituting in values from the VCR Law into the aforementioned equation, and then canceling out current (since the current is equal everywhere in series), the following equation can be established for equivalent resistance of a particular resistor set (for an '<em>n</em>' number of resistors in series):<br><br>
+        
+        $$R_{\text{set series}} = \sum_n R_n = R_1 + R_2 + \dots$$
+        <br>
+        Thus, when a resistor is added into a series, the equivalent resistance <u>increases</u>.
+        
+        <br><br><br>
+        
+        
+        
+        
+        
+        <h3><strong>Resistors in Parallel:</strong></h3>
+        
+        When resistors are in parallel, the electric potential difference across each resistor is equal to that of the electric potential difference between the wire before the diverging junction and the wire after the reconverging junction:<br><br>
+        
+        <strong>ΔV<sub>set</sub> = ΔV<sub>1</sub> = ΔV<sub>2</sub></strong><br><br>
+        
+        As for the current that moves through the split paths of a junction, it <u>cannot</u> be assumed that the current will split evenly between the two paths. In fact, all that is known about the individual path currents is the conservation of charge, delineated in the following equation:<br><br>
+        <!--the 2am brain is a crazy thing. I am typing relatively freely, but I was also doing so at 10pm. I may just be a night person, sadly.-->
+        
+        <strong>I<sub>t</sub> = I<sub>1</sub> + I<sub>2</sub></strong><br><br>
+        
+        I<sub>t</sub>, of course, is referring to the current before the diverging junction and after the converging junction. It is only ever represents the current running through the terminals if there are no other components in the circuit than the resistors in parallel.<br><br>
+        
+        In the same manner as was done before for series (now simply using different variables), the values of the VCR equation can be substituted into the above equation, and then have Voltage canceled out everywhere (since it was previously shown to be the same across every component). Thus, the following equation can be established, describing the equivalent resistance of 'n' resistors in parallel:<br><br>
+        
+        $$R_{\text{set parallel}} = \left( \sum_n \frac{1}{R_n} \right)^{-1} = \left( \frac{1}{R_1} + \frac{1}{R_2} + \dots \right)^{-1}$$
+        <br>
+        
+        I.E., for resistors in parallel, the equivalent resistance is equal to the <strong>inverse</strong> of the <em>sum of the inverses</em> of all resistors in the set. Remember that in order to be parallel, there must only be <u>one</u> component on each split path before they reconverge. <!--Note that this is the opposite of capacitors in parallel.--><br><br>
+        
+        Thus, when a resistor is added in parallel, the equivalent resistance <U>decreases</u>.
+        
+        </div><br><br><br>
+    	    
+    	    
+    	    
+    	    
+    	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Resistors in Series & Parallel (Truncated)</strong>:<br><Br>
+
+
+        <h3><strong>Series:</strong></h3>
+        
+        <strong>I<sub>T</sub> = I<sub>1</sub> = I<sub>2</sub></strong><br><br>
+        
+        <strong>ΔV<sub>set</sub> = ΔV<sub>1</sub> + ΔV<sub>2</sub></strong><br>
+        
+        $$R_{\text{set series}} = \sum_n R_n = R_1 + R_2 + \dots$$
+        
+        
+        
+        <br><br>
+        
+        <h3><strong>Parallel:</strong></h3>
+        
+        <strong>I<sub>t</sub> = I<sub>1</sub> + I<sub>2</sub></strong><br><br>
+        
+        <strong>ΔV<sub>set</sub> = ΔV<sub>1</sub> = ΔV<sub>2</sub></strong>
+        
+        $$R_{\text{set parallel}} = \left( \sum_n \frac{1}{R_n} \right)^{-1} = \left( \frac{1}{R_1} + \frac{1}{R_2} + \dots \right)^{-1}$$
+        
+        
+        </div><br><br><br><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Capacitors in Series & Parallel (Full Analysis)</strong>:<br><br>
+              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/CapacitorSP.png"><img src="/Physics/img/diagrams/CapacitorSP.png" alt="Capacitors in Series and Parallel. Courtesy of Electric Shocks." width=37%/></a></div>
+      	    <span class="tiny"><em>Capacitors in Series and Parallel. Courtesy of <a href="https://electric-shocks.com/capacitors-parallel/">Electric Shocks</a>.</em></span><br><br>
+
+        The top circuit above depicts two capacitors in <strong>series</strong>, while the bottom circuit depicts two capacitors in <strong>parallel</strong>.<br><br>
+        
+        Finding Equivalent Capacitance for series and parallel sets requires finding other relationships, involving the likes of electric potential energy and charge, in order to cancel out values using the capacitance equation of Rule 212. See the "Series" and "Parallel" sections below for how this is done, and see Rule [[[ for a truncated version that only includes the equations for quick reference.
+        
+        <br><br><Br>
+        
+        
+        
+        <h3><strong>Capacitors in Series:</strong></h3> When two capacitors are in series, the current running through them is the same: <strong>I<sub>T</sub> = I<sub>1</sub> = I<sub>2</sub></strong>, where I<sub>1</sub> & I<sub>2</sub> are the currents running through the two capacitors, and I<sub>T</sub> is the general current running through the terminals of the battery.<br><br>
+        
+        When the two capacitors are in series, the electric potential difference between the wire directly before the first capacitor and the wire directly after the second capacitor (which would be the wires connected to the terminals if there are no other components in the circuit) is equivalent to to the summed electric potential difference across the two capacitors. In short, as depicted below, <strong>Ɛ = ΔV<sub>1</sub> + ΔV<sub>2</sub></strong>, with Ɛ being ΔV<sub>set</sub> when there are more components in the circuit than just the two capacitors.<br><br>
+              <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/diagrams/CapacitorSeries.png"><img src="/Physics/img/diagrams/CapacitorSeries.png" alt="A simple circuit in which two capacitors are in series. Courtesy of Flipping Physics." width=35%/></a></div>
+              	    <span class="tiny"><em>A simple circuit in which two capacitors are in series. Courtesy of <a href="https://www.flippingphysics.com/capacitor-series-parallel.html">Flipping Physics</a>.</em></span><br><br>
+        
+        As such, since the charges moved by the battery will have to pass through the plates of both capacitors equally, the magnitude of the charge is same for each capacitor:<br><br>
+        
+        <strong>Q<sub>set</sub> = Q<sub>1</sub> = Q<sub>2</sub></strong><br><br>
+        
+        Finally, by substituting in values from the standard capacitance equation (Rule 212) into the aforementioned equation, and then canceling out charge (since charge is equal everywhere in series), the following equation can be established for equivalent capacitance of a particular capacitor set (for an '<em>n</em>' number of capacitors in series):<br><br>
+        
+        $$C_{\text{set series}} = \left( \sum_{n} \frac{1}{C_n} \right)^{-1} 
+            = \left( \frac{1}{C_1} + \frac{1}{C_2} + \dots \right)^{-1}$$
+        <br>
+        
+        I.E., for capacitors in series, the equivalent capacitance is equal to the <strong>inverse</strong> of the <em>sum of the inverses</em> of all capacitors in the set. <!--Note that this is the opposite of resistors in series.--><br><br>
+        
+        Thus, when a capacitor is added in series, the equivalent capacitance <U>decreases</u>.
+        
+        <br><br><br>
+        
+        
+        
+        
+        
+        
+        <h3><strong>Capacitors in Parallel:</strong></h3>
+        
+        When capacitors are in parallel, the electric potential difference across each capacitor is equal to that of the electric potential difference between the wire before the diverging junction and the wire after the reconverging junction:<br><br>
+        
+        <strong>ΔV<sub>set</sub> = ΔV<sub>1</sub> = ΔV<sub>2</sub></strong><br><br>
+        
+        As for the current that moves through the split paths of a junction, it <u>cannot</u> be assumed that the current will split evenly between the two paths. In fact, all that is known about the individual path currents is the conservation of charge, delineated in the following equation:<br><br>
+        
+        <strong>I<sub>t</sub> = I<sub>1</sub> + I<sub>2</sub></strong><br><br>
+        
+        I<sub>t</sub>, of course, is referring to the current before the diverging junction and after the converging junction. It is only ever represents the current running through the terminals if there are no other components in the circuit than the capacitors in parallel.<br><br>
+        
+        Furthermore, because the charges moved by the battery to the junction are going to be split between the two paths (between the two capacitors), the charge moved by the battery to the diverging junction (and by conservation of charge, the charge at the converging junction) is equal to the sum of charges across each individual capacitor:<br><br>
+        
+        <STRONG>Q<sub>set</sub> = Q<sub>1</sub> + Q<sub>2</sub> + ...</STRONG><br><br>
+        
+        
+        The values of the capacitance equation can then be substituted in for charge, leaving only Voltage and Capacitance. Since electric potential energy has already been determined to be the same for all values, it can be canceled out, leaving only the following equation for the <strong>equivalent capacitance</strong> of a set of 'n' capacitors in parallel:<br><br>
+        
+        $$C_{\text{set parallel}} = \sum_{n} C_n = C_1 + C_2 + \dots$$
+        <br><br>
+        
+        
+        Thus, when a capacitor is added in parallel, the equivalent capacitance <U>increases</u>.
+        
+        </div><br><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Capacitors in Series & Parallel (Truncated)</strong>:<br><Br>
+
+
+          <h3><strong>Series:</strong></h3>
+          
+          <strong>I<sub>T</sub> = I<sub>1</sub> = I<sub>2</sub></strong><br><br>
+          
+          <strong>ΔV<sub>set</sub> = ΔV<sub>1</sub> + ΔV<sub>2</sub></strong><br><br>
+          
+          <strong>Q<sub>set</sub> = Q<sub>1</sub> = Q<sub>2</sub></strong>
+          
+          $$C_{\text{set series}} = \left( \sum_{n} \frac{1}{C_n} \right)^{-1} 
+            = \left( \frac{1}{C_1} + \frac{1}{C_2} + \dots \right)^{-1}$$
+          
+          <br><br><br>
+          
+          
+          
+          <h3><strong>Parallel:</strong></h3>
+          
+          <strong>I<sub>T</sub> = I<sub>1</sub> + I<sub>2</sub></strong><br><br><!--I<sub>T</sub> represents the current running through the terminals and not just the current of the set, because a point must be made that the conservation of charges stipulates that even if current diverges when parallel, it will remain the same before and after the set, as always.-->
+          
+          <strong>ΔV<sub>set</sub> = ΔV<sub>1</sub> = ΔV<sub>2</sub></strong><br><br>
+          
+          <STRONG>Q<sub>set</sub> = Q<sub>1</sub> + Q<sub>2</sub> + ...</STRONG>
+          
+          $$C_{\text{set parallel}} = \sum_{n} C_n = C_1 + C_2 + \dots$$
+          
+          </div><br><br><br>
+        
+        
+        
+        
+        </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="CCP">XVIII.VI Circuitry Conservation Principles.</span></h3>
+  	    </header>
+  	    <article>
+        
+        <strong><font color="blue"><a href="#CCPIntro"><span class="mw-headline" id="CCPIntro">#</span></a> Circuitry Conservation Principles, CCP (Kirchhoff's Laws):</font></strong><br><br>
+        <!--I named it this because CCP sounds like the chinese communist party, and that's a good way to remember it-->
+        
+        Kirchhoff's Laws, hereafter referred to as the Circuitry Conservation Principles (CCP), are a set of two rules that describe basic characteristics about circuitry that can be applied in practically all circumstances (all circumstances that will be faced by the junior physicist<!--never capitalize "physicist" - humanizing Physics is a disgrace-->).<br><br>
+        
+        There are two fundamental rules of the CCP that must always be kept in mind when doing circuitry problems: the <strong>Loop Rule</strong> and the <strong>Junction Rule</strong>, described in Rule [[[+1 and Rule [[[+2, respectively.
+          
+          <br><br>
 	  
 	  
 	  
@@ -456,7 +786,7 @@ There must always be an electric potential difference between the beginning and 
         <article><strong><a href="/Physics/electromagnetism/LawElectric.html">Law of Electric Force</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFields.html">Electric Fields</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricFlux.html">Electric Flux</a></strong> → <strong><a href="/Physics/electromagnetism/ElectricPotential.html">Electric Potential</a></strong> → <strong><a href="/Physics/electromagnetism/Capacitance.html">Capacitance</a></strong><br> → <strong><a href="/Physics/electromagnetism/CurrentResist.html">Current and Resistance</a></strong> → <strong>Circuitry</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 20 2025</span><br>
+      	<span class="tiny">Last Change: May 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

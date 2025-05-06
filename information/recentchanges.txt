@@ -2,6 +2,7 @@ CHANGE LOG
 
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
+May 6, 2025: Several minor changes I made over the past few weeks (not any major additions) have been mirrored on the Github. I intend to resume full-scale work on May 17th.
 
 April 20, 2025: Physics Revisals, Physics Rule additions. Furthermore, a "Neocities" link was added to left sidebar of every page, below the "Github". I have decided to undergo a temporary pause on work for the website in preparation for my upcoming examinations.
 Rules Added: Physics, Electromagnetism - Rule 249, 250, 251

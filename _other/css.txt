@@ -16,6 +16,11 @@ Vector symbol on top:
 
 
 
+The Spoilers span was added to the main css, since it has a more universal applicability (e.g., to the information pages).
+
+
+
+
 Rainbow gradient:
 <rainbow>beautiful morning</rainbow>
 

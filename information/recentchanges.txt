@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+June 14th, 2025: Extensive Physics Revisals. Additionally, after over five months since the last logo addition, the beautiful Mathematics logo has finally been created and added to the site. See it here: https://humanknowledge.neocities.org/_other/logos/Mathematics.png. This logo required outside attribution as a result of its incorporation of a Vecteezy jpg. Furthermore, on the programming side of things, I further kludged the already weirdly formatted css to incorporate Spoilers, which I came up with a need for as a result of the answers for example problems, a small number of which exist in the Rules (the "Dimensional Analysis Comprehension Problem" of Classical Mechanics for example). In classic CSS fashion, this change took forever to be reflect onto the pages using it.
+
 June 13th, 2025: Significant revisals have been going on over the past week, just unnotated here. Mainly in Physics, I have been drastically improving the accessibility of the writing and rewording particularly confusing passages. This will continue over the next two months, alongside intensive work with regard to Cryptography (and potentially the addition of new Physics sections).
 
 June 1st, 2025: Addition of another Calculus Rule, alongside some other minor site changes.

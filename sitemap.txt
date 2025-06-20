@@ -1,4 +1,4 @@
-All pages as of March 22 2025.
+All pages as of June 19 2025.
 
 Home                                                 - https://humanknowledge.neocities.org/
 ~Recent Changes                                      - https://humanknowledge.neocities.org/information/recentchanges.txt
@@ -15,15 +15,15 @@ Physics                                              - https://humanknowledge.ne
 -Classical Mechanics                                 - https://humanknowledge.neocities.org/Physics/Mechanics
 --Classical Mechanics Table of Contents              - https://humanknowledge.neocities.org/Physics/toc
 --Full Classical Mechanics, Part 1: Kinematics       - https://humanknowledge.neocities.org/Physics/MechanicsFull
---Full Classical Mechanics, Part 2: Dynamics         - https://humanknowledge.neocities.org/Physics/MechanicsFull2
---Full Classical Mechanics, Part 3: Dynamics (cont.) - https://humanknowledge.neocities.org/Physics/MechanicsFull3
 ---Velocity, Speed, Acceleration                     - https://humanknowledge.neocities.org/Physics/mechanics/velspaccel
 ---Free Fall                                         - https://humanknowledge.neocities.org/Physics/mechanics/freefall
 ---Vectors and Projectile Motion                     - https://humanknowledge.neocities.org/Physics/mechanics/vectors
 ---Range & Relative Motion                           - https://humanknowledge.neocities.org/Physics/mechanics/range
 ---Rotational Motion                                 - https://humanknowledge.neocities.org/Physics/mechanics/rotational
+--Full Classical Mechanics, Part 2: Dynamics         - https://humanknowledge.neocities.org/Physics/MechanicsFull2
 ---Force                                             - https://humanknowledge.neocities.org/Physics/mechanics/force
 ---Energy and Work                                   - https://humanknowledge.neocities.org/Physics/mechanics/energy
+--Full Classical Mechanics, Part 3: Dynamics (cont.) - https://humanknowledge.neocities.org/Physics/MechanicsFull3
 ---Momentum & Center of Mass                         - https://humanknowledge.neocities.org/Physics/mechanics/momentum
 ---Rotational Dynamics                               - https://humanknowledge.neocities.org/Physics/mechanics/rotationaldynamics
 ---Gravitation                                       - https://humanknowledge.neocities.org/Physics/mechanics/gravitation
@@ -36,6 +36,10 @@ Physics                                              - https://humanknowledge.ne
 ---Electric Fields                                   - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricFields
 ---Electric Flux                                     - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricFlux
 ---Electric Potential                                - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricPotential
+---Capacitance                                       - https://humanknowledge.neocities.org/Physics/electromagnetism/Capacitance
+--Full Electromagnetism, Part 2: Electrodynamics     - https://humanknowledge.neocities.org/Physics/ElectroFull2
+---Current and Resistance                            - https://humanknowledge.neocities.org/Physics/electromagnetism/CurrentResist
+---Circuitry                                         - https://humanknowledge.neocities.org/Physics/electromagnetism/Circuitry
 
 
 

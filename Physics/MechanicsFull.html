@@ -508,97 +508,136 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    
 	    
+	    
 	    </article>
 	    <header class="articleHeader"><hr>
 	      <h3><span class="mw-headline" id="VSA">I.IV Displacement and Velocity, Speed, Acceleration.</span></h3>
 	    </header>
 	    <article><!--It looked good with only <br><br>, but I'm worried that someone directly linking to it will be confused by the huge displacement that appears immediately visibly instead of the magnitude definition, so I slightly increased the distance between them to be the standardized amount.-->
 	    <strong><a href="#Magnitude"><span class="mw-headline" id="Magnitude">#</span></a> <font color="#006400">Magnitude</font></strong>: The amount without direction.<br><br><br>
+	    <!--ain't broke, don't fix it-->
 	    
 	    
-	    <!--[[[REWRite to be a bit more cohesive. include generealized descriptions of total distance (which may require its own whole definition, or going into the calculus Rules to extract something usable)-->
+	    <!--This is like the dictionary definition of 'set', which is super long because there is a billion different definitions of set. I try to clear up every possible confusion in the most bloated definition of all time. no regrets-->
+	    <strong><a href="#Displacement"><span class="mw-headline" id="Displacement">#</span></a> <font color="#006400">Displacement</font></strong>: The change in position of an object. Mathematically, this means the straight-line distance between the initial and final points, also including direction<strong>*</strong>. <strong>∆x</strong> ("delta-x") is the symbol for displacement and change in position, defined as position<sub>final</sub> - position<sub>initial</sub>.<br><br>
 	    
-	    <!--The total distance traveled will always be greater or equal to the magnitude of displacement.-->
-	    <strong><a href="#Displacement"><span class="mw-headline" id="Displacement">#</span></a> <font color="#006400">Displacement</font></strong>: <!--This is like the dictionary definition of 'set', which is super long because there is a billion different definitions of set. I try to clear up every possible confusion in the most bloated definition of all time. no regrets-->
-	    
-	    The straight-line distance between initial and final points, also including direction. <strong>∆x</strong> ("delta-x") is the symbol for displacement and change in position, defined as position<sub>final</sub> - position<sub>initial</sub>.<br><br>
-	    
-	    Although referred to as ∆x, displacement can have both x <em>and</em> y distance, as ∆x is in reference to POSITION and not just the x-value. This can be somewhat confusing at times, and to add to the confusion, some problems will use ∆x to refer to movement in only the x-direction (such as U.A.M. problems, which will be discussed in more detail in Subsection I.V), while others as positional change as a whole. It is up to you to use your proper judgment to discern the context as to what the ∆x of a problem represents.<br><br>
-	    
-	    Displacement is a VECTOR (see Section III, on vectors), meaning that it incorporates direction in addition to magnitude. It can be negative or positive, depending on the direction travelled from the initial position.<br><br>
-	    
-	    The equation for displacement (using <span class="vecteur"><strong>d</strong></span> for displacement) in terms of unit vectors (see Rule 23) is <span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)i&#x302; + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)j&#x302;. This equation describes displacement in terms of its component vectors on the x-axis and y-axis. These component vectors indicate the direction and magnitude of the displacement.<br><br>
-	    
-	    In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions: this will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rule 21 & Rule 22). <br><br>The following equation can be used to find the magnitude of the displacement in the explicit numerical/graphical sense - the exact straight-line distance between any two points: <br>
-	    |<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span><br><br> 
-	    
-	    Use this equation when prompted to find the <em>magnitude</em> of the displacement - the direction can be determined by the component vectors themselves; see Rule 23.<br><br>
-	    
-	    NOTE THAT THE DISPLACEMENT EQUATION AND SEEING DISPLACEMENT AS A VECTOR IS NOT NECESSARY IF THE OBJECT IS ONLY MOVING ALONG A SINGLE AXIS. If the position is only moving along one axis, then you only need to subtract y<sub>final</sub> by y<sub>initial</sub> or x<sub>final</sub> by x<sub>initial</sub> to find displacement. If the equation is in 2D, then you want to use the equation as stated, and if it is in 3D, then you should just add + (<span class="vecteur"><strong>z₂</strong></span> - <span class="vecteur"><strong>z₁</strong></span>)k&#x302;, if you are are calculating displacement in unit vectors, or + z², if you are calculating the magnitude. <a href="https://www.youtube.com/watch?v=zpK50co6ZcY">Useful proof</a>.
-	    <br><br><br>
-	    
-	    <strong><font color="blue"><a href="#AROCContext"><span class="mw-headline" id="AROCContext">#</span></a> Average Rate of Change (Contextualized):</font></strong><br> When used in different context, the '<strong>Average Rate of Change</strong>' (<strong>A.R.O.C.</strong>) can mean different things:<br><br>
-	    
-      When used in terms of <eM>f(x)</eM>:<br> A.R.O.C. = <strong>Average Velocity</strong> = (Displacement / change in time).<br><br>
-      When used in terms of <eM>f'(x)</eM>:<br> A.R.O.C. = <strong>Average Acceleration</strong> = (Change in Velocity / change in time).<br><br>
-      
-	    Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.
-	    <br><br><br><br>
+	    Although referred to as ∆x, displacement can have both x <em>and</em> y distance, as ∆x is in reference to <strong>position</strong> and not just the x-value. This can be somewhat confusing at times, and to add to the confusion, some problems will use ∆x to refer specifically to movement in the x-direction (such as U.A.M. problems, which will be discussed in Subsection I.V), while others use it to refer to positional change as a whole. It is up to you to use your proper judgment to discern the context as to what the ∆x of a problem represents.<br><br><br>
 	    
 	    
-	    <strong><a href="#VelocityDef"><span class="mw-headline" id="VelocityDef">#</span></a> <font color="#006400">Velocity</font></strong>: The rate of change of position, utilizing displacement. It has both magnitude and direction, as shown in the below equation:<br><br>
+	    <strong>*</strong>Displacement is a <strong>VECTOR</strong> (see Section III, on vectors), meaning that it incorporates direction in addition to magnitude. Thus, displacement can be negative or positive, depending on the direction traveled from the initial position. Vectors, as shown below, are depicted with an arrow above the variable.<br><br>
 	    
-	    <strong>V</strong> = (∆x / ∆t) = (change in position) / (change in time) = (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br><br><br>
-	    
-	    
-	    <strong><a href="#Slope"><span class="mw-headline" id="Slope">#</span></a> <font color="#006400">Slope</font></strong>: The rate of change of a line in a graph, visually identifiable as the steepness of the line. The steepness of the line at a particular point is the instantaneous slope, better known as the instantaneous velocity (if the line is from the position graph).  The slope of a 'position as a function of the time' graph is the velocity, while the slope of a 'velocity vs. time' graph is acceleration. See "The Truth About Velocity & Displacement" for further elaboration.<br><Br>
-	    
-	    Slope = m = (rise / run) = (∆y / ∆x) = (change in position / change in time). 
-	    <br><br><br>
+	    <strong>Unit Vectors</strong> are a simplification of x and y positions into their respective directions, detailed in Rule 23. The equation for displacement (using <span class="vecteur"><strong>d</strong></span> for displacement) <u>in terms of unit vectors</u> is <strong><span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)i&#x302; + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)j&#x302;</strong><br><br> 
+	    This equation describes displacement in terms of its <u>component vectors</u> on the x-axis and y-axis (see Rule 21). These component vectors indicate the direction and magnitude of the displacement.<br><br><br>
 	    
 	    
-	    <strong><a href="#AccelerationDef"><span class="mw-headline" id="AccelerationDef">#</span></a> <font color="#006400">Acceleration</font></strong>: The rate of change of velocity. Since velocity is in meters over seconds, then acceleration is in (meters over seconds) over seconds, which is equal to meters over second². Acceleration, as a function of velocity, has both magnitude and direction.<br><br>
+	    In order to find the magnitude of the displacement in the graphical sense, where you have two dots on a graph (the start and end points) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions. This will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rule 21 & Rule 22):<br><br>
+	    <strong>|<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span></strong><br><br> 
 	    
-	    a = (∆v / ∆t) = (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)
-	    <br><br><br>
+	    Use this equation when prompted to find the <em>magnitude</em> of the displacement - the direction can be determined by the component vectors themselves; see Rule 23.<br><br><br><br>
 	    
 	    
-	    
-	    <!--better place this one [[[[ in relation to velocity, because it goes over fundamental aspects of velocity that can probably be incorporated into a joint velocity/speed Rule.-->
+	    <!--a Rule cut out from the greatest definition of all time to try to reduce atleast some of the bloat. still keeping all of the equations in the definition though-->
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Speed</strong>:<br><br>
+        </strong> 
+	    <strong>NOTE THAT THE DISPLACEMENT EQUATION IS NOT NECESSARY IF THE OBJECT IS ONLY MOVING ALONG A SINGLE AXIS</strong>. If the position is only moving along one axis, then you only need to subtract y<sub>final</sub> by y<sub>initial</sub>, x<sub>final</sub> by x<sub>initial</sub>, or z<sub>final</sub> by z<sub>initial</sub> to find displacement.<br><br>
+	    
+	    If not one-dimensional, then the displacement will have to be fully acknowledged as a vector, making use of the given equations above. If the movement is in 2D, then you want to use the magnitude equation as stated, and if it is in 3D, then you should just add + (<span class="vecteur"><strong>z₂</strong></span> - <span class="vecteur"><strong>z₁</strong></span>)² is using the magnitude equation or + (<span class="vecteur"><strong>z₂</strong></span> - <span class="vecteur"><strong>z₁</strong></span>)k&#x302; if using the unit vector equation. <a href="https://www.youtube.com/watch?v=zpK50co6ZcY">Useful proof</a>.
+	    </div><br><br><br>
+	    
+	    
+	    <strong><a href="#TotalDistance"><span class="mw-headline" id="TotalDistance">#</span></a> <font color="#006400">Total Distance</font></strong>: The cumulative distance traveled between the starting and ending points of the particle.<br><br>
+	    
+	    The total distance traveled will always be greater or equal to the magnitude of displacement, as a result of the fact that total distance accounts for the path taken by the object, and not just the difference between the initial and final positions.
+	    <br><br><br>
+	    
+	    
+	    
+	    <strong><a href="#VelocityDef"><span class="mw-headline" id="VelocityDef">#</span></a> <font color="#006400">Velocity</font></strong>: The rate of change of an object's position, utilizing displacement. Velocity has both magnitude and direction (thus making it a <strong>vector</strong>, described more in Section III), as shown in the below equalities:
+	    <br><br>
+	    
+	    <strong></strong>Velocity = <strong><span class="vecteur"><strong>V</strong></span></strong><br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (∆x / ∆t)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (Change in Position) / (Change in Time)
+	    
+	    <br><br><br><br>
+	    
+	    
+	    <strong><a href="#Slope"><span class="mw-headline" id="Slope">#</span></a> <font color="#006400">Slope</font></strong>: The rate of change of a line in a graph, visually identifiable as the steepness of the line. Because the slope is merely a characteristic of a line (its steepness) rather than an actual quantity with direction, it is not a vector and is merely a numerical value (a "scalar", as will described in Subsection III.I).<br><br>
+	    
+	    The steepness of the line at a particular point is the instantaneous slope, better known as the instantaneous velocity (if the line is from the position graph). Below are the equalities for average slope:<br><Br> 
+	    
+	    <strong></strong>Slope = <strong>m</strong><br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (rise / run)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (∆y / ∆x)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (y<sub>F</sub> - y<sub>i</sub>) / (x<sub>F</sub> - x<sub>i</sub>)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (Change in Position / Change in Time).<br><Br>
+	    
+	    In much the same way as Average Rate of Change (as detailed in the "Average Rate of Change (Contextualized)" blue section), the slope of a "<em>position as a function of the time</em>" graph is the velocity, while the slope of a "<em>velocity vs. time</em>" graph is acceleration. See "The Truth About Velocity & Displacement" for further elaboration.
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#AccelerationDef"><span class="mw-headline" id="AccelerationDef">#</span></a> <font color="#006400">Acceleration</font></strong>: The rate of change of velocity. Since velocity is in meters over seconds, acceleration is in (meters over seconds) over seconds, which is equal to meters over seconds². Acceleration, as a function of velocity, has both magnitude and direction.<br><br>
+	    
+	    Acceleration = <strong><span class="vecteur"><strong>a</strong></span></strong><br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (∆v / ∆t)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (Change in Velocity) / (Change in Time)
+	    <br><br><br><br>
+	    
+	    
+	    <strong><font color="blue"><a href="#AROCContext"><span class="mw-headline" id="AROCContext">#</span></a> Average Rate of Change (Contextualized):</font></strong><br> When used in different contexts, the '<strong>Average Rate of Change</strong>' (<strong>A.R.O.C.</strong>) can mean different things:<br><br>
+	    
+      When used in terms of <eM>f(x)</eM>:<br> A.R.O.C. = <strong>Average Velocity</strong> = (Displacement / Change in Time).<br><br>
+      When used in terms of <eM>f'(x)</eM>:<br> A.R.O.C. = <strong>Average Acceleration</strong> = (Change in Velocity / Change in Time).
+      
+	    <!--<br><br>Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.-->
+	    <br><br><br><br>
+	    
+	    
+	    <!--better to block all explictly related content together after all the prereq subjects are covered (here, velocity and accel for rule 9) instead of cutting them up into parts that are all placed at strange parts. I am not able to put the speed definition right after the velocity definition as a result of Rule 9, which is a fundamental Rule lifted from calculus
+	    
+	    I think it is fine as an educational thing to put speed at the tailend of the position-displacement-velocity-accel sequence, since it incorporates parts from all four previous, at least from the calculus angle.
+	    -->
+	    <strong><a href="#SpeedDef"><span class="mw-headline" id="SpeedDef">#</span></a> <font color="#006400">Speed</font></strong>: The magnitude-only version of velocity, utilizing the total distance traveled by an object instead of displacement.<br><br>
         
-        <strong>Speed</strong> is the magnitude version of velocity, utilizing the total distance traveled by an object instead of displacement. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. 
+        Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when the object is moving in a straight line. Velocity specifically uses straight-line distance, so even if the line is curved, the start and end points would still be the only things used to calculate velocity. However, the speed of that curve uses the length of the entire line, all of the distance traveled between point a and point b.<br><br>
         
-        Speed = v = (total distance) / (time).<br><br>
+        Speed = <strong>v</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (total distance) / (time).<br><br>
         
-        As seen above, speed using the same symbol as velocity, with the specific one being used in a given question being discernable by the context of the problem.
+        As shown above, speed generally uses the same symbol as velocity. The specific symbol being used in a given question is always discernable by the context of the problem.<!--if it is a good one-->
         
-	    </div><br><br>
+	    <br><br><br>
 	    
 	    
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> The object is speeding up whenever velocity and acceleration are in the same direction (e.g. they are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.
-	    </div><br><br>
+	    </div><br><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#TheTruth"><span class="mw-headline" id="TheTruth">#</span></a> The Truth About Velocity & Displacement:</font></strong><br>
-	     In your reading of Velocity and Slope, you have no doubt read these two truths:<br><br>
+	     In your reading of Velocity and Slope, you have no doubt encountered these three truths:<br><br>
+	     
 	     <strong>Velocity = ∆x / ∆t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Displacement / Change in Time)<br>
-	     Slope = ∆y / ∆x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Change in Y / Change in X)<br>
-	     Velocity = Slope</strong>
-	     <br><br>
-	    The '∆x' of slope is not referring to displacement, but rather the change in the x position. This is constant cause of confusion, but know that in the majority of cases unless expressly obvious otherwise, '∆x' is in reference to displacement, the change in position.<br>
+	     Slope&nbsp;&nbsp;&nbsp;&hairsp; = ∆y / ∆x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Change in Y / Change in X)<br>
+	     Velocity = Slope</strong><br><br>
+	     
+	    The '∆x' of the slope equation is not referring to displacement, but rather the change in the x-position. As stated in the displacement definition, ∆x will not uniformly represent displacement in every problem you come across, and even in the given equality there are two different usages of ∆x: displacement and change in x-position. In Physics, you must always use your best judgment to ascertain what the ∆x of a problem represents.<br><br>
+	    
 	    Here are the two equations shown as equivalent:<br><br>
+	    
 	    ∆x<sub>1</sub>&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;∆y<br>
 	    ━━&nbsp;&nbsp;=&nbsp;&nbsp;&thinsp;━━<br>
 	    ∆t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hairsp;∆x<sub>2</sub><br><br>
 	    
-	    Since the two equations are known to be equivalent, we known that the ∆x<sub>1</sub> of displacement and ∆x<sub>2</sub> of slope are not the same, as if we were to cancel out the ∆x of the right side by multiplying it by both sides, we would find that ∆x² / ∆t is equal to ∆y, which is total nonsense. The key to understanding how this statement is true (and how the ∆x is referring to two things simultaneously) is to realize that both equations are stating the same ratio, just in terms of different graphs.<br>
+	    In addition to knowing that the two equations are equivalent, we know that the ∆x<sub>1</sub> of displacement and ∆x<sub>2</sub> of slope are not the same, as they refer to displacement and change in x-position, respectively. if we were to cancel out the ∆x of the right side by multiplying it by both sides, we would find that ∆x² / ∆t is equal to ∆y, which is total nonsense.<br><br>
+	    
+	    The key to understanding how the equality is true (and how the ∆x is referring to two things simultaneously) is to realize that both equations are stating the same ratio, just in terms of different graphs.<br><br>
 	    
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/directions.jpg"><img src="/Physics/img/directions.jpg" alt="A graph of the slope of a line in terms of y and x. Courtesy of Texas Gateway." width=33%/></a></div>
 	    <span class="tiny"><em>A graph of the slope of a line in terms of y and x. Courtesy of <a href="https://www.texasgateway.org/resource/23-position-vs-time-graphs">Texas Gateway</a>.</em></span><br><br>
@@ -606,7 +645,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <span class="tiny"><em>A graph of position versus time, identical to the graph above. Courtesy of <a href="https://www.texasgateway.org/resource/23-position-vs-time-graphs">Texas Gateway</a>.</em></span><br><br>
 	    
 	    
-	    The equations are both output/input, and so they produce velocity. If the graphs were from the standpoint of velocity, then they would produce acceleration (see the "Important Note").
+	    The equations are both output/input, and they both produce velocity when the slope is calculated between any two points. If the graphs were from the standpoint of velocity, then they would both produce acceleration (see the "Average Rate of Change (Contextualized)" blue section).
 	    
 	    <br><br><br>
 	    
@@ -616,7 +655,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Coordinate/Direction Types:</strong><br><br>
         
-        There are three types of directions/coordinates that are critical to ones directional understanding in Physics and life in general: Cartesian, Relative, and Cardinal.<br><br><br>
+        There are three types of directions/coordinates that are critical to one's directional understanding in Physics and life in general: Cartesian, Relative, and Cardinal.<br><br><br>
         
         <strong>Cartesian Coordinates</strong>: (x, y).<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cartesian.png"><img src="/Physics/img/cartesian.png" alt="A graph with random cartesian coordinates." width=25%/></a></div>
@@ -624,9 +663,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <strong>Relative Coordinates</strong>: (Left, Right).<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/relative.png"><img src="/Physics/img/relative.png" alt="A graph with relative directions like right and back superimposed over them." width=25%/></a></div>
-	    <span class="tiny"><em>A graph with relative directions like right and back superimposed over them.</em></span><br><br><br>
+	    <span class="tiny"><em>A graph with relative directions like right and back superimposed over it.</em></span><br><br><br>
 	    
-	    <strong>Cardinal Direction</strong>: (North, West)<br>
+	    <strong>Cardinal Direction</strong>: (North, South)<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cardinal.jpg"><img src="/Physics/img/cardinal.jpg" alt="A compass, with each of the cardinal directions labeled." width=25%/></a></div>
 	    <span class="tiny"><em>A compass, with each of the cardinal directions labeled.</em></span><br><br>
 	    
@@ -932,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    Take this North of East vector for example:<br>
 	    <span class="vecteur"><strong>d</strong></span> = 90.0 cm @ 32° N of E.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/examplevector.gif"><img src="/Physics/img/vectors/examplevector.gif" alt="A graph with a vector d and its component vectors labeled." width=25%/></a></div>
-	    The vector <span class="vecteur"><strong>d</strong></span> has two component vectors, <span class="vecteur"><strong>d<sub>x</sub></strong></span> and <span class="vecteur"><strong>d<sub>y</sub></strong></span>.
+	    The vector <span class="vecteur"><strong>d</strong></span> has two <u>component vectors</u>, <span class="vecteur"><strong>d<sub>x</sub></strong></span> and <span class="vecteur"><strong>d<sub>y</sub></strong></span>.
 	    <br><br>sinθ = (O / H) = (<span class="vecteur"><strong>d<sub>y</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>y</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>sinθ = 90sin(32) = 47.693 ≈ 48cm.<br><br>
 	    
 	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
@@ -1812,7 +1851,7 @@ You may wonder, "Why bother with the R.R.H.R. anyways? Can't you just memorize t
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong>  → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: June 19 2025</span><br>
+      	<span class="tiny">Last Change: June 21 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

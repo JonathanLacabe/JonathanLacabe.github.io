@@ -3,6 +3,10 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+June 21st, 2025: Most of I.IV finished being revised, with one Rule added and one Rule converted into a definition to maintain uniformity in the content.
+
+June 20th, 2025: A small amount of revision of the earlier Physics Rules.
+
 June 19th, 2025: Revisal of the Displacement definition of Physics, which has been completely rewritten 3-4 times in the past and, I hope, can finally see a final version in the current revisals initiative. Additionally, the sitemap was updated for the first time in a while.
 
 June 18th, 2025: Physics Revisals for I.II. and I.III. were completed, alongside an addition of a Rule that required bumping forward by one almost every single Physics Rule reference on the entire site. Perhaps they may a better way to do this using javascript...

@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	  The conversion factor is the fraction being multiplied regardless of the coefficient of the original unit, as shown in how two minutes, 40 minutes, and 542 minutes will all have the same conversion factor when converting into seconds.<br><Br>
 	  
-	  Conversion factors, thus, include the desired final unit (or at least a unit closer to the unit you are trying to get to) in the equivalent ratio with the previous unit, either the one you started with or the previous unit in the conversion factor sequence. Inherently, every conversion factor must equal to one, as the top and bottom are the same value, just expressed in different ways.
+	  Conversion factors, thus, include the desired final unit (or atleast a unit closer to the unit you are trying to get to) in the equivalent ratio with the previous unit, either the one you started with or the previous unit in the conversion factor sequence. Inherently, every conversion factor must equal to one, as the top and bottom are the same value, just expressed in different ways.
 	  <br><br><br>
 	  
 	  
@@ -264,13 +264,31 @@ document.addEventListener("DOMContentLoaded", function (){
         In Physics, it is convention to use sig. fig.'s in all numerical answers, with the number of significant figures in the answer being equal to the <eM><strong>least</strong></eM> number of figures in any of the numerical values given in the question. However, <strong><u>never</u></strong> use sig. fig.'s to alter the values used in your actual calculations; only use them to alter your final answer, and even thereafter, if you need to use that answer in another part of the problem, use the un-sigfig'd version to perform your calculations.<br><Br>
         
         <!--A section on scientific notation? Unnecessary for now, I think that is scratching elementary levels of obviousness. It is not quantum mechanics levels of complicated that everything needs to be explained in extraordinary detail with dozens of analogies, I think that it is fairly inherent knowledge, a prerequisite to the prerequisite, like knowing multiplication to do dimensional analysis-->
+        
+        <!--If ever change mind, do dual-thing combining orders of magnitude with scietntific ntoation, which can possibly be made into a blue section to obviate the need for a 100000 Rule movement-->
+        <!--[[[
+        
+        Order of Magnitude elaboration, with a whole definition and everything.
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Orders of Magnitude</strong>:<br><br>
+        
+        put some definition here. 
+        
+        Order of Magnitude estimates (using the scientific notation × 10ˣ) are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only the power of ten, adding one if rounding up. <em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.
+	    </div><br><br>
+	    
+        -->
+        
+        
 	  
-	  Examples:<br>
-	  0.000001 has <strong>ONE</strong> sig. fig., as a result of guideline 3.<br>
-	  1200 with 3 significant figures: 1.20 x 10³<br>
-	  0.002 with 3 significant figures: 2.00 x 10⁻³
-	  
-	  </div><br><br>
+    	  Examples:<br>
+    	  0.000001 has <strong>ONE</strong> sig. fig., as a result of guideline 3.<br>
+    	  1200 with 3 significant figures: 1.20 x 10³<br>
+    	  0.002 with 3 significant figures: 2.00 x 10⁻³
+    	  
+    	  </div><br><br>
 	  
 	  
 	      <div class="rule"><strong>
@@ -279,10 +297,9 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> <strong><u>THE ARCANE ROUNDING RULE</u></strong>:<br><br>
         
         <strong>When rounding, if the number ends in a perfect 5, round to the even number.</strong><br><br>
-        
-        Examples:<br>
-	      275 with 2 Significant figures: 280<br>
-	      1030 x 5.1 = 5300
+          Examples:<br>
+  	      275 with 2 Significant figures: 280<br>
+  	      1030 x 5.1 = 5300
 	      
 	      </div><br><br>
 	  
@@ -309,7 +326,35 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <br><br>
 	    
+	    <!--
 	    <strong><a href="#TangentLine"><span class="mw-headline" id="TangentLine">#</span></a> <font color="#006400">Tangent Line</font></strong>: A straight line that touches a curve at a point but does not cross the curve.<br><br><br>
+	    -->
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Coordinate/Direction Types:</strong><br><br>
+        
+        There are three types of directions/coordinates that are critical to one's directional understanding in Physics and life in general: Cartesian, Relative, and Cardinal.<br><br><br>
+        
+        <strong>Cartesian Coordinates</strong>: (x, y).<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cartesian.png"><img src="/Physics/img/cartesian.png" alt="A graph with random cartesian coordinates." width=25%/></a></div>
+	    <span class="tiny"><em>A graph with random cartesian coordinates. Courtesy of <a href="https://gissimplified.in/what-is-cartesian-coordinate-system/">GIS</a>.</em></span><br><br><br>
+	    
+	    <strong>Relative Coordinates</strong>: (Left, Right).<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/relative.png"><img src="/Physics/img/relative.png" alt="A graph with relative directions like right and back superimposed over them." width=25%/></a></div>
+	    <span class="tiny"><em>A graph with relative directions like right and back superimposed over it.</em></span><br><br><br>
+	    
+	    <strong>Cardinal Direction</strong>: (North, South)<br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cardinal.jpg"><img src="/Physics/img/cardinal.jpg" alt="A compass, with each of the cardinal directions labeled." width=25%/></a></div>
+	    <span class="tiny"><em>A compass, with each of the cardinal directions labeled.</em></span><br><br>
+	    
+	    
+	    <!--You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0.-->
+	    </div><br>
+	    
+	    
+	    
 	    
 	    
 	    
@@ -417,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         <strong>However:</strong> Know that, in practically all cases, this ±1 of whatever unit is not the answer they are looking for. The question will oftentimes phrase the question cleverly, asking for the approximate uncertainty of a shape as a whole but only giving the radius as the given value, causing the ±1 assumption to only be in reference to the radius and requiring additional work to find the approximate uncertainty of the shape.<br><Br>
         
-        The question will likely want you to plug in the positive and negative versions of the assumed estimated uncertainty (individually added onto the main value to create two separate values) into another equation in order to find a <em>final</em> approximate uncertainty. This process is detailed in Rule 8, which uses a circle as its example equation.
+        The question will likely want you to plug in the positive and negative versions of the assumed estimated uncertainty (individually added onto the main value to create two separate values) into another equation in order to find a <em>final</em> approximate uncertainty. This process is detailed in Rule 9, which uses a circle as its example equation.
         <!--I labored much more than I should have in making this section, for some reason I found it extremely confusing to wrap my head around--> </div><br><br>
         
 	    
@@ -428,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         For example, if you want to find the approximate uncertainty of a circle given the radius, use πr² as your area formula.<br><br>
         
-        As a general problem example, you are asked to find the approximate uncertainty of a circle with the radius r = 3.8 × 10⁴ m. Of course, A = 4.5 × 10⁹ m². From there, since no percent uncertainty is given, then (as stipulated in Rule 7) you would assume an approximate uncertainty of 0.1 of the original units, ± 0.1 × 10⁴ m. This finds the approximate uncertainty in relation to the radius, but now what must be found is the approximate uncertainty of the circle itself.<br><Br>
+        As a general problem example, you are asked to find the approximate uncertainty of a circle with the radius r = 3.8 × 10⁴ m. Of course, A = 4.5 × 10⁹ m². From there, since no percent uncertainty is given, then (as stipulated in Rule 8) you would assume an approximate uncertainty of 0.1 of the original units, ± 0.1 × 10⁴ m. This finds the approximate uncertainty in relation to the radius, but now what must be found is the approximate uncertainty of the circle itself.<br><Br>
         
         From there, you would plug in two values for r into the area equation: the given radius with the approximate uncertainty added (<strong>A<sub>max</sub></strong>), and with the approximate uncertainty subtracted (<strong>A<sub>min</sub></strong>). This will produce two distinct areas: A<sub>max</sub> = 4.8 × 10⁹. A<sub>min</sub> = 4.3 × 10⁹.<br><br>
         
@@ -442,95 +487,156 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    
 	    
+	    
+	    
+	    
 	    </article>
 	    <header class="articleHeader"><hr>
 	      <h3><span class="mw-headline" id="VSA">I.IV Displacement and Velocity, Speed, Acceleration.</span></h3>
 	    </header>
 	    <article><!--It looked good with only <br><br>, but I'm worried that someone directly linking to it will be confused by the huge displacement that appears immediately visibly instead of the magnitude definition, so I slightly increased the distance between them to be the standardized amount.-->
 	    <strong><a href="#Magnitude"><span class="mw-headline" id="Magnitude">#</span></a> <font color="#006400">Magnitude</font></strong>: The amount without direction.<br><br><br>
+	    <!--ain't broke, don't fix it-->
 	    
 	    
-	    <!--[[[REWRite to be a bit more cohesive. include generealized descriptions of total distance (which may require its own whole definition, or going into the calculus Rules to extract something usable)-->
+	    <!--This is like the dictionary definition of 'set', which is super long because there is a billion different definitions of set. I try to clear up every possible confusion in the most bloated definition of all time. no regrets-->
+	    <strong><a href="#Displacement"><span class="mw-headline" id="Displacement">#</span></a> <font color="#006400">Displacement</font></strong>: The change in position of an object. Mathematically, this means the straight-line distance between the initial and final points, also including direction<strong>*</strong>. <strong>∆x</strong> ("delta-x") is the symbol for displacement and change in position, defined as position<sub>final</sub> - position<sub>initial</sub>.<br><br>
 	    
-	    <!--The total distance traveled will always be greater or equal to the magnitude of displacement.-->
-	    <strong><a href="#Displacement"><span class="mw-headline" id="Displacement">#</span></a> <font color="#006400">Displacement</font></strong>: 
-	    
-	    The straight-line distance between initial and final points, also including direction. <strong>∆x</strong> ("delta-x") is the symbol for displacement and change in position, defined as position<sub>final</sub> - position<sub>initial</sub>. It can be negative, positive, in feet, meters, etc.<br><br>
-	    
-	    Displacement is a VECTOR (see Section III, on vectors). It has both x and y distance, even though it is written as ∆x, which is in reference to POSITION, not just the x-value.<br><br>
-	    
-	    The equation for displacement (using <span class="vecteur"><strong>d</strong></span> for displacement) in terms of unit vectors (see Rule 23) is <span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)i&#x302; + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)j&#x302;. This equation describes displacement in terms of its component vectors on the x-axis and y-axis. These component vectors indicate the direction and magnitude of the displacement.<br><br>
-	    
-	    In order to find displacement in the graphical sense, where you have two dots on a graph (the start and endpoints) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions: this will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rule 21 & Rule 22). <br><br>The following equation can be used to find the magnitude of the displacement in the explicit numerical/graphical sense - the exact straight-line distance between any two points: <br>
-	    |<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span><br><br> 
-	    
-	    Use this equation when prompted to find the <em>magnitude</em> of the displacement - the direction can be determined by the component vectors themselves; see Rule 23.<br><br>
-	    
-	    NOTE THAT THE DISPLACEMENT EQUATION AND SEEING DISPLACEMENT AS A VECTOR IS NOT NECESSARY IF THE OBJECT IS ONLY MOVING ALONG A SINGLE AXIS. If the position is only moving along one axis, then you only need to subtract y<sub>final</sub> by y<sub>initial</sub> or x<sub>final</sub> by x<sub>initial</sub> to find displacement. If the equation is in 2D, then you want to use the equation as stated, and if it is in 3D, then you should just add + (<span class="vecteur"><strong>z₂</strong></span> - <span class="vecteur"><strong>z₁</strong></span>)k&#x302;, if you are are calculating displacement in unit vectors, or + z², if you are calculating the magnitude. <a href="https://www.youtube.com/watch?v=zpK50co6ZcY">Useful proof</a>.
-	    <br><br><br>
-	    
-	    <strong><font color="blue"><a href="#AROCContext"><span class="mw-headline" id="AROCContext">#</span></a> Average Rate of Change (Contextualized):</font></strong><br> When used in different context, the '<strong>Average Rate of Change</strong>' (<strong>A.R.O.C.</strong>) can mean different things:<br><br>
-	    
-      When used in terms of <eM>f(x)</eM>:<br> A.R.O.C. = <strong>Average Velocity</strong> = (Displacement / change in time).<br><br>
-      When used in terms of <eM>f'(x)</eM>:<br> A.R.O.C. = <strong>Average Acceleration</strong> = (Change in Velocity / change in time).<br><br>
-      
-	    Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.
-	    <br><br><br><br>
+	    Although referred to as ∆x, displacement can have both x <em>and</em> y distance, as ∆x is in reference to <strong>position</strong> and not just the x-value. This can be somewhat confusing at times, and to add to the confusion, some problems will use ∆x to refer specifically to movement in the x-direction (such as U.A.M. problems, which will be discussed in Subsection I.V), while others use it to refer to positional change as a whole. It is up to you to use your proper judgment to discern the context as to what the ∆x of a problem represents.<br><br><br>
 	    
 	    
-	    <strong><a href="#VelocityDef"><span class="mw-headline" id="VelocityDef">#</span></a> <font color="#006400">Velocity</font></strong>: The rate of change of position, utilizing displacement. It has both magnitude and direction, as shown in the below equation:<br><br>
+	    <strong>*</strong>Displacement is a <strong>VECTOR</strong> (see Section III, on vectors), meaning that it incorporates direction in addition to magnitude. Thus, displacement can be negative or positive, depending on the direction traveled from the initial position. Vectors, as shown below, are depicted with an arrow above the variable.<br><br>
 	    
-	    <strong>V</strong> = (∆x / ∆t) = (change in position) / (change in time) = (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br><br><br>
-	    
-	    
-	    <strong><a href="#Slope"><span class="mw-headline" id="Slope">#</span></a> <font color="#006400">Slope</font></strong>: The rate of change of a line in a graph, visually identifiable as the steepness of the line. The steepness of the line at a particular point is the instantaneous slope, better known as the instantaneous velocity (if the line is from the position graph).  The slope of a 'position as a function of the time' graph is the velocity, while the slope of a 'velocity vs. time' graph is acceleration. See "The Truth About Velocity & Displacement" for further elaboration.<br><Br>
-	    
-	    Slope = m = (rise / run) = (∆y / ∆x) = (change in position / change in time). 
-	    <br><br><br>
+	    <strong>Unit Vectors</strong> are a simplification of x and y positions into their respective directions, detailed in Rule 20. The equation for displacement (using <span class="vecteur"><strong>d</strong></span> for displacement) <u>in terms of unit vectors</u> is <strong><span class="vecteur"><strong>d</strong></span> = (<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)i&#x302; + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)j&#x302;</strong><br><br> 
+	    This equation describes displacement in terms of its <u>component vectors</u> on the x-axis and y-axis (see Rule 18). These component vectors indicate the direction and magnitude of the displacement.<br><br><br>
 	    
 	    
-	    <strong><a href="#AccelerationDef"><span class="mw-headline" id="AccelerationDef">#</span></a> <font color="#006400">Acceleration</font></strong>: The rate of change of velocity. Since velocity is in meters over seconds, then acceleration is in (meters over seconds) over seconds, which is equal to meters over second². Acceleration, as a function of velocity, has both magnitude and direction.<br><br>
+	    In order to find the magnitude of the displacement in the graphical sense, where you have two dots on a graph (the start and end points) and you need to find the straight-line distance between them, you must first find the component vectors in the x and y directions. This will allow you to find the hypotenuse of the right triangle formed by the x and y component vectors (see Rule 18 & Rule 19):<br><br>
+	    <strong>|<span class="vecteur"><strong>d</strong></span>| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">((<span class="vecteur"><strong>x₂</strong></span> - <span class="vecteur"><strong>x₁</strong></span>)² + (<span class="vecteur"><strong>y₂</strong></span> - <span class="vecteur"><strong>y₁</strong></span>)²)</span></span></strong><br><br> 
 	    
-	    a = (∆v / ∆t) = (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)
-	    <br><br><br>
+	    Use this equation when prompted to find the <em>magnitude</em> of the displacement - the direction can be determined by the component vectors themselves; see Rule 20.<br><br><br><br>
 	    
 	    
-	    
-	    <!--better place this one [[[[ in relation to velocity, because it goes over fundamental aspects of velocity that can probably be incorporated into a joint velocity/speed Rule.-->
+	    <!--a Rule cut out from the greatest definition of all time to try to reduce atleast some of the bloat. still keeping all of the equations in the definition though-->
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Speed</strong>:<br><br>
+        </strong> 
+	    <strong>NOTE THAT THE DISPLACEMENT EQUATION IS NOT NECESSARY IF THE OBJECT IS ONLY MOVING ALONG A SINGLE AXIS</strong>. If the position is only moving along one axis, then you only need to subtract y<sub>final</sub> by y<sub>initial</sub>, x<sub>final</sub> by x<sub>initial</sub>, or z<sub>final</sub> by z<sub>initial</sub> to find displacement.<br><br>
+	    
+	    If not one-dimensional, then the displacement will have to be fully acknowledged as a vector, making use of the given equations above. If the movement is in 2D, then you want to use the magnitude equation as stated, and if it is in 3D, then you should just add + (<span class="vecteur"><strong>z₂</strong></span> - <span class="vecteur"><strong>z₁</strong></span>)² is using the magnitude equation or + (<span class="vecteur"><strong>z₂</strong></span> - <span class="vecteur"><strong>z₁</strong></span>)k&#x302; if using the unit vector equation. <a href="https://www.youtube.com/watch?v=zpK50co6ZcY">Useful proof</a>.
+	    </div><br><br><br>
+	    
+	    
+	    <strong><a href="#TotalDistance"><span class="mw-headline" id="TotalDistance">#</span></a> <font color="#006400">Total Distance</font></strong>: The cumulative distance traveled between the starting and ending points of the particle.<br><br>
+	    
+	    The total distance traveled will always be greater or equal to the magnitude of displacement, as a result of the fact that total distance accounts for the path taken by the object, and not just the difference between the initial and final positions.
+	    <br><br><br>
+	    
+	    
+	    
+	    <strong><a href="#VelocityDef"><span class="mw-headline" id="VelocityDef">#</span></a> <font color="#006400">Velocity</font></strong>: The rate of change of an object's position, utilizing displacement. Velocity has both magnitude and direction (thus making it a <strong>vector</strong>, described more in Section III), as shown in the below equalities:
+	    <br><br>
+	    
+	    <strong></strong>Velocity = <strong><span class="vecteur"><strong>V</strong></span></strong><br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (∆x / ∆t)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (x<sub>F</sub> - x<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (Change in Position) / (Change in Time)
+	    
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#InstantVelocity"><span class="mw-headline" id="InstantVelocity">#</span></a> <font color="#006400">Instantaneous Velocity</font></strong>: The velocity at a specific point in time. The Velocity<sub>final</sub> and Velocity<sub>initial</sub> from the U.A.M. equations (see section I.V) are instantaneous velocities because they represent the object's velocity at a specific point in time.<br><br><br>
+	    
+	    
+	    <strong><a href="#AverageVelocity"><span class="mw-headline" id="AverageVelocity">#</span></a> <font color="#006400">Average Velocity</font></strong>: The velocity over a time period. The velocity definition, change in position over change in time, is an average velocity itself.<br><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5 sec</sub>, specifies an interval on the graph to find the velocity of.
+	    </div><br><br><br>
+	    
+	    
+	    <strong><a href="#Slope"><span class="mw-headline" id="Slope">#</span></a> <font color="#006400">Slope</font></strong>: The rate of change of a line in a graph, visually identifiable as the steepness of the line. Because the slope is merely a characteristic of a line (its steepness) rather than an actual quantity with direction, it is not a vector and is merely a numerical value (a "scalar", as will described in Subsection III.I).<br><br>
+	    
+	    The steepness of the line at a particular point is the instantaneous slope, better known as the instantaneous velocity (if the line is from the position graph). Below are the equalities for average slope:<br><Br> 
+	    
+	    <strong></strong>Slope = <strong>m</strong><br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (rise / run)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (∆y / ∆x)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (y<sub>F</sub> - y<sub>i</sub>) / (x<sub>F</sub> - x<sub>i</sub>)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (Change in Position / Change in Time).<br><Br>
+	    
+	    In much the same way as Average Rate of Change (as detailed in the "Average Rate of Change (Contextualized)" blue section), the slope of a "<em>position as a function of the time</em>" graph is the velocity, while the slope of a "<em>velocity vs. time</em>" graph is acceleration. See "The Truth About Velocity & Displacement" for further elaboration.
+	    <br><br><br>
+	    
+	    
+	    <strong><a href="#AccelerationDef"><span class="mw-headline" id="AccelerationDef">#</span></a> <font color="#006400">Acceleration</font></strong>: The rate of change of velocity. Since velocity is in meters over seconds, acceleration is in in meters per seconds <em>per second</em>, or <strong>m/s²</strong>. Acceleration, as a function of velocity, has both magnitude and direction.<br><br>
+	    
+	    Acceleration = <strong><span class="vecteur"><strong>a</strong></span></strong><br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (∆v / ∆t)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (v<sub>F</sub> - v<sub>i</sub>) / (t<sub>F</sub> - t<sub>i</sub>)<br>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (Change in Velocity) / (Change in Time)<br><br>
+	            
+      Imagine a ball is rolling on an incline, and assume it has a constant acceleration of 2 meters per second squared. What this means is that with each passing second, the velocity will increase by 2 m/s. The ball will start at 0 m/s in velocity and, after 1 second, will get to 2 m/s.<br><br>
+      
+       Since this example uses a constant acceleration, finding the position of the ball at each of those times is as simple as using the <u>second U.A.M. equation</u> (detailed in Subsection I.V).
+	    
+	    <br><br><br><br>
+	    
+	    
+	    <strong><font color="blue"><a href="#AROCContext"><span class="mw-headline" id="AROCContext">#</span></a> Average Rate of Change (Contextualized):</font></strong><br> When used in different contexts, the '<strong>Average Rate of Change</strong>' (<strong>A.R.O.C.</strong>) can mean different things:<br><br>
+	    
+      When used in terms of <eM>f(x)</eM>:<br> A.R.O.C. = <strong>Average Velocity</strong> = (Displacement / Change in Time).<br><br>
+      When used in terms of <eM>f'(x)</eM>:<br> A.R.O.C. = <strong>Average Acceleration</strong> = (Change in Velocity / Change in Time).
+      
+	    <!--<br><br>Using it in relation to the second derivative would mean to take the third derivative, which is frankly ridiculous.-->
+	    <br><br><br><br>
+	    
+	    
+	    <!--better to block all explictly related content together after all the prereq subjects are covered (here, velocity and accel for rule 9) instead of cutting them up into parts that are all placed at strange parts. I am not able to put the speed definition right after the velocity definition as a result of Rule 9, which is a fundamental Rule lifted from calculus
+	    
+	    I think it is fine as an educational thing to put speed at the tailend of the position-displacement-velocity-accel sequence, since it incorporates parts from all four previous, at least from the calculus angle.
+	    -->
+	    <strong><a href="#SpeedDef"><span class="mw-headline" id="SpeedDef">#</span></a> <font color="#006400">Speed</font></strong>: The magnitude-only version of velocity, utilizing the total distance traveled by an object instead of displacement.<br><br>
         
-        <strong>Speed</strong> is the magnitude version of velocity, utilizing the total distance traveled by an object instead of displacement. Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when moving in a straight line. The velocity is specifically in straight-line distance, so if the line is curved, the end point and the initial point are the only things that are going to be used in a velocity calculation. However, the speed of that curve would be the length of the entire line, all of distance traveled between point a and point b. 
+        Because Velocity accounts for displacement, but speed only for distance traveled, they will only share the same magnitude when the object is moving in a straight line. Velocity specifically uses straight-line distance, so even if the line is curved, the start and end points would still be the only things used to calculate velocity. However, the speed of that curve uses the length of the entire line, all of the distance traveled between point a and point b.<br><br>
         
-        Speed = v = (total distance) / (time).<br><br>
+        Speed = <strong>v</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (total distance) / (time).<br><br>
         
-        As seen above, speed using the same symbol as velocity, with the specific one being used in a given question being discernable by the context of the problem.
+        As shown above, speed generally uses the same symbol as velocity. The specific symbol being used in a given question is always discernable by the context of the problem.<!--if it is a good one-->
         
-	    </div><br><br>
+	    <br><br><br>
 	    
 	    
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> The object is speeding up whenever velocity and acceleration are in the same direction (e.g. they are the same sign), while it is slowing down whenever velocity and acceleration are in opposite directions/signs.
-	    </div><br><br>
+	    </div><br><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#TheTruth"><span class="mw-headline" id="TheTruth">#</span></a> The Truth About Velocity & Displacement:</font></strong><br>
-	     In your reading of Velocity and Slope, you have no doubt read these two truths:<br><br>
+	     In your reading of Velocity and Slope, you have no doubt encountered these three truths:<br><br>
+	     
 	     <strong>Velocity = ∆x / ∆t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Displacement / Change in Time)<br>
-	     Slope = ∆y / ∆x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Change in Y / Change in X)<br>
-	     Velocity = Slope</strong>
-	     <br><br>
-	    The '∆x' of slope is not referring to displacement, but rather the change in the x position. This is constant cause of confusion, but know that in the majority of cases unless expressly obvious otherwise, '∆x' is in reference to displacement, the change in position.<br>
+	     Slope&nbsp;&nbsp;&nbsp;&hairsp; = ∆y / ∆x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Change in Y / Change in X)<br>
+	     Velocity = Slope</strong><br><br>
+	     
+	    The '∆x' of the slope equation is not referring to displacement, but rather the change in the x-position. As stated in the displacement definition, ∆x will not uniformly represent displacement in every problem you come across, and even in the given equality there are two different usages of ∆x: displacement and change in x-position. In Physics, you must always use your best judgment to ascertain what the ∆x of a problem represents.<br><br>
+	    
 	    Here are the two equations shown as equivalent:<br><br>
+	    
 	    ∆x<sub>1</sub>&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;∆y<br>
 	    ━━&nbsp;&nbsp;=&nbsp;&nbsp;&thinsp;━━<br>
 	    ∆t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hairsp;∆x<sub>2</sub><br><br>
 	    
-	    Since the two equations are known to be equivalent, we known that the ∆x<sub>1</sub> of displacement and ∆x<sub>2</sub> of slope are not the same, as if we were to cancel out the ∆x of the right side by multiplying it by both sides, we would find that ∆x² / ∆t is equal to ∆y, which is total nonsense. The key to understanding how this statement is true (and how the ∆x is referring to two things simultaneously) is to realize that both equations are stating the same ratio, just in terms of different graphs.<br>
+	    In addition to knowing that the two equations are equivalent, we know that the ∆x<sub>1</sub> of displacement and ∆x<sub>2</sub> of slope are not the same, as they refer to displacement and change in x-position, respectively. if we were to cancel out the ∆x of the right side by multiplying it by both sides, we would find that ∆x² / ∆t is equal to ∆y, which is total nonsense.<br><br>
+	    
+	    The key to understanding how the equality is true (and how the ∆x is referring to two things simultaneously) is to realize that both equations are stating the same ratio, just in terms of different graphs.<br><br>
 	    
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/directions.jpg"><img src="/Physics/img/directions.jpg" alt="A graph of the slope of a line in terms of y and x. Courtesy of Texas Gateway." width=33%/></a></div>
 	    <span class="tiny"><em>A graph of the slope of a line in terms of y and x. Courtesy of <a href="https://www.texasgateway.org/resource/23-position-vs-time-graphs">Texas Gateway</a>.</em></span><br><br>
@@ -538,33 +644,18 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <span class="tiny"><em>A graph of position versus time, identical to the graph above. Courtesy of <a href="https://www.texasgateway.org/resource/23-position-vs-time-graphs">Texas Gateway</a>.</em></span><br><br>
 	    
 	    
-	    The equations are both output/input, and so they produce velocity. If the graphs were from the standpoint of velocity, then they would produce acceleration (see the "Important Note").
+	    The equations are both output/input, and they both produce velocity when the slope is calculated between any two points. If the graphs were from the standpoint of velocity, then they would both produce acceleration (see the "Average Rate of Change (Contextualized)" blue section).
 	    
 	    <br><br><br>
 	    
 	    
-	    <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Coordinate/Direction Types:</strong><br><br>
-        
-        There are three types of directions/coordinates that are critical to ones directional understanding in Physics and life in general: Cartesian, Relative, and Cardinal.<br><br><br>
-        
-        <strong>Cartesian Coordinates</strong>: (x, y).<br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cartesian.png"><img src="/Physics/img/cartesian.png" alt="A graph with random cartesian coordinates." width=25%/></a></div>
-	    <span class="tiny"><em>A graph with random cartesian coordinates. Courtesy of <a href="https://gissimplified.in/what-is-cartesian-coordinate-system/">GIS</a>.</em></span><br><br><br>
-	    
-	    <strong>Relative Coordinates</strong>: (Left, Right).<br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/relative.png"><img src="/Physics/img/relative.png" alt="A graph with relative directions like right and back superimposed over them." width=25%/></a></div>
-	    <span class="tiny"><em>A graph with relative directions like right and back superimposed over them.</em></span><br><br><br>
-	    
-	    <strong>Cardinal Direction</strong>: (North, West)<br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/cardinal.jpg"><img src="/Physics/img/cardinal.jpg" alt="A compass, with each of the cardinal directions labeled." width=25%/></a></div>
-	    <span class="tiny"><em>A compass, with each of the cardinal directions labeled.</em></span><br><br>
 	    
 	    
-	    <!--You walk two meters east. You have a displacement of 2 m east, and a distance traveled of 2 meters. Magnitude is the same.<br>If you walk 2 meters east and moon walk back, then your displacement is 0 m, directionless, magnitude is also 0.-->
-	    </div><br>
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    </article>
@@ -573,41 +664,79 @@ document.addEventListener("DOMContentLoaded", function (){
 	    </header>
 	    <article>
 	    
-	    <strong><font color="blue"><a href="#UAMBasics"><span class="mw-headline" id="UAMBasics">#</span></a> U.A.M. Basics:</font></strong><br>
-	    The <strong>Uniformly Accelerated Motion</strong> (<strong>U.A.M.</strong>) equations are only to be used when an object is moving with an acceleration that is constant. E.g., in calculus terms, the object has a position represented by an equation with an exponent no higher than two (a quadratic) in its time graph. U.A.M. allows the physicist to use 5 special equations not allowed otherwise:<br><br>
+	    <strong><font color="blue"><a href="#UAMIntro"><span class="mw-headline" id="UAMIntro">#</span></a> Introduction to Uniformly Accelerated Motion:</font></strong><br><br>
+
+          Finally, the first unquestionably Physics-specific content can be described after several preliminary sections. All of the previously covered material can be found in other, not necessarily Physics-focused courses, from freshman Calculus to an 8th grade science unit covering the scientific method and uncertainty - now comes the time for the explicit Physics proper, where the skills learned over the previous sections will come into full use.<br><br>
+          
+          The following section, regarding Uniformly Accelerated Motion, entails the basic fundamental equations that govern motion (when ignoring things like drag/air resistance - see Subsection III.IV for that), and can be used for both one-dimensional and two-dimensional motion (see Subsection III.III for 2D).
+          
+          <br><br><br>
 	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Uniformly Accelerated Motion</strong>:<br><br>
+        
+        The <strong>Uniformly Accelerated Motion</strong> (<strong>U.A.M.</strong>) equations, also known as the <strong>Kinematic equations</strong>, are a set of four equations that can be used when a given object/system is moving with a <u>constant acceleration</u>. In calculus terms, an object is in constant acceleration when the highest exponent of the position equation is 2 or below (a quadratic or smaller). If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion.<br><br>
+        
+        If the position equation is not given, but constant acceleration can be otherwise assumed, U.A.M. can be freely used.<br><br>
+        
+        Oft used as a memorization tool for the specifications of U.A.M. is the following mantra: <strong>There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy Physics student.</strong><br><br>
+	    
+	      If you are analyzing the movements of two objects, and they share three U.A.M. variable values, then you will know that the other two variables have to be the same as well, and that the movements of the two objects must be identical.<br><br>
+	      
+	      For example, in the classic bullet problem, where a bullet fired horizontally and a bullet dropped from the same height both have a Δy of -h, a y-direction acceleration of -9.81 m/s², and a V<sub>iy</sub> of 0, it can easily be determined that the rest of the y-direction variables (including the time it would take them to hit the ground) would be the same. This is spite of the fact that the bullets travel different x-distances, as time is the same for the x-direction and y-direction U.A.M. - see Rule 25 and the rest of Projectile Motion for more information.
+	    </div><br><br>
+	    
+	    
+	    
+	    <strong><font color="blue"><a href="#UAMBasics"><span class="mw-headline" id="UAMBasics">#</span></a> U.A.M. Equations:</font></strong><br><br>
+	    
+	    U.A.M. allows the physicist to use 5 special equations not allowed otherwise. When using the equations, know that they only account for the displacement in a particular direction, and that the variables for movement in the x and y-directions do not necessarily translate between the directions (with the exception of time, as stated in Rule 25).<br><br>
+
+      Solving for any variables (other than time) with regard to movement in one direction does not mean that you can use the values for that variables for the other direction.<br><br>
+      
+      For example - if a rocket is launched directly upward, then the V<sub>f</sub> of the y-directional movement will be a very large number, while the V<sub>f</sub> of the x-directional movement will be 0.<br><br>
+      
+      This is very important information, critical for some applications of U.A.M., such as Profectile Motion, which will be covered shortly. In particular, this directional difference is dealt with in more thorough detail in Subsection III.III.<br><br>
+      
+      In summary, <strong>IN ANY OF THE GIVEN EQUATIONS, YOU CAN CHANGE DISPLACEMENT TO BE CHANGE IN Y IF THE CIRCUMSTANCES OF THE QUESTION DEMANDS IT<!--SUCH AS IN FREE FALL QUESTIONS-->.</strong><br><br><br><br>
+      
+      
 	    1. <strong>V<sub>F</sub> = V<sub>i</sub> + (a × ∆t).</strong><br>
-	    Velocity Final is equal to velocity initial plus the acceleration multiplied by the change in time.<br><br>
-      2. <strong>∆x = (V<sub>i</sub> × ∆t) + (1/2 × a × ∆t²)</strong><br>
+	    Velocity Final is equal to velocity initial, plus the acceleration multiplied by the change in time.<br><br>
+	    
+      2. <strong>∆x = (V<sub>i</sub> × ∆t) + ½(a × ∆t²)</strong><br>
 	    Displacement is equal to velocity initial multiplied by the change in time, plus 1/2 multiplied by acceleration and the change in time squared.<br><br>
+	    
       3. <strong>V<sub>F</sub>² = V<sub>i</sub>² + (2 × a × ∆x)</strong><br>
-	    Velocity final squared is equal to velocity initial squared plus two multiplied by the acceleration and the displacement.<br><br>
-      4. <strong>∆x = (1/2) × (V<sub>F</sub> + V<sub>i</sub>) × ∆t</strong><br>
-	    The change in position is equal to one half times the quantity of velocity final plus velocity initial.<br><br>
-	    <strong>V<sub>F</sub></strong> = Velocity final<br>
-	    <strong>V<sub>i</sub></strong> = Velocity initial<br>
+	    Velocity final squared is equal to velocity initial squared, plus two multiplied by the acceleration and the displacement.<br><br>
+	    
+      4. <strong>∆x = ½(V<sub>F</sub> + V<sub>i</sub>) × ∆t</strong><br>
+	    The change in position is equal to one half, times the quantity of velocity final plus velocity initial, times the change in time.<br><br>
+	    
+	    <strong>V<sub>F</sub></strong> = Velocity Final (Instantaneous)<br>
+	    <strong>V<sub>i</sub></strong> = Velocity Initial (Instantaneous)<br>
 	    <strong>a</strong> = Acceleration<br>
-	    <strong>∆t</strong> = Change in time<br>
-	    <strong>∆x</strong> = Displacement (or change in position)<br><br>
-	    <strong>YOU CAN CHANGE DISPLACEMENT TO BE CHANGE IN Y IF YOU NEED TO, SUCH AS IN FREE FALL EQUATIONS.</strong><br><br><br>
-	    Additionally, there are some lame 'alternate' versions of these equations using slightly different variables that are useful for deriving and integrating the equations:<br>
+	    <strong>∆t</strong> = Change in Time<br>
+	    <strong>∆x</strong> = Displacement (or change in position)<br><br><br><br>
+	    
+	    
+	    
+	    
+	    
+	    Additionally, there are some <!--no-doubt--> lame 'alternate' versions of these equations using slightly different variables, useful for deriving and integrating the equations:<br>
 	    v = v<sub>0</sub> + at<br>
-	    x = x<sub>0</sub> + v<sub>0</sub>t + (1/2) × at²<br>
+	    x = x<sub>0</sub> + v<sub>0</sub>t + ½at²<br>
 	    v² = v<sub>0</sub>² + 2a(x - x<sub>0</sub>)<br>
-	    x = x<sub>0</sub> + (1/2) × (v + v<sub>0</sub>) × t<br>
+	    x = x<sub>0</sub> + ½(v + v<sub>0</sub>) × t
 	    
     <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆ -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    
-	    <br><br>
+	    <br><br><br><br>
 	    
-	    <!--[[[Oft used as a memorization tool for the specifications of UAM is the following mantra:-->
-	    <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> There are 5 U.A.M. variables, and there are 4 equations. If you know 3 variables, you can find the other 2, leaving 1 happy Physics student. The highest exponent in the position equation must be 2 or below for U.A.M. to be active. If the highest exponent is three or above, the object is not in Uniformly Accelerated Motion. These are also referred to as the <strong>kinematic equations</strong>, the equations that govern motion (when ignoring thing like drag/air resistance - see Subsection III.IV for that). For motion in two dimensions, see Subsection III.III.
-	    <br><br> If you have two equations, and you know they have three of the same U.A.M. variables, you will know that the other two have to be the same as well. In the classic bullet equation, where we knew the fired bullet and dropped bullet had a Δy of -h, an acceleration of -9.81 m/s², and a V<sub>iy</sub> of 0, we could determine that the time it would tell them to hit the ground would be the same (considering how time is the same for the x-direction and y-direction - see Rule 28 and the rest of Projectile Motion for more information).
-	    </div><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#UAMMemory"><span class="mw-headline" id="UAMMemory">#</span></a> Memorization songs for U.A.M. Equations:</font></strong><br>
@@ -621,7 +750,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    vi times change in t plus one half times a change in t, squared,<br>
       vi times change in t plus one half times a change-in-t squared.<br><br>	
 	    <strong>3.</strong> To the theme of <a href="https://www.youtube.com/watch?v=ePRZC_OulYc">Mozart's Dies Irae</a>:<br>
-	    Vf squared equals, (da da da) vi squared plus, (da da da) 2 times a times, change in x equals vi SQUARED plus 2a change in time.
+	    Vf squared equals, (da da da da) vi squared plus, (da da da da) 2 times a times, change in x equals vi SQUARED plus 2a change in time.
 	    <br><br>
 	   <strong>4.</strong> To the theme of Satie's <a href="https://www.youtube.com/watch?v=6ceAkkpsui8">Gnossienne No. 5</a><br>
 	   Delta x, ~~~~  equals one slash two, ~~~~~~~~~~~~~~~ times velocity final plus vi, times change, in time...
@@ -631,77 +760,55 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <br><br>
 	    
-	    
-	    
-	    <!--[[[get my shit together. there is an acceleration definition here and this entire section is a total mess. Combine all that is acceleration, render to caesar what is caesar's and have everything organized in its own place and not all randomly placed everywhere. organization.-->
-	    <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Acceleration</strong> refers to the change in meters per seconds <em>per second</em>, or <strong>m/s²</strong>.<br><br>
-        
-        Imagine a ball is rolling on an incline, and assume it has a constant acceleration of 2 meters per second squared. What this means is that each second, the velocity will increase by 2 m/s.<br><br>
-        
-        The ball will start at 0 m/s in velocity and, after 1 second, will get to 2 m/s. With each passing second, the velocity will increase by 2 m/s. Finding the position for those times is just as simple as using the second U.A.M. equation, which in this case leaves you with each change in position equaling the change in time squared.
-	    </div><br><br>
-	    
-	    
-	    
-	    <!--Reasses the [[[ whole necessity of this Rule. These early Rules/everythings were created before the actual ideal and writing system was really developed for hk, so maybe some rethinking and combining of Rules/cutting of fat would be in order.-->
-	    
-	    <!--[[[This one is going to be a full Order of Magnitude elaboration Rule, with a whole definition and everything.-->
-	    <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>Orders of Magnitude</strong>:<br><br>
-        
-        <!--put some definition here. [[[-->
-        
-        Order of Magnitude estimates are the most simple estimates possible, with only one significant figure. If the 'order' of magnitude itself is needed, then round to have only the power of ten, adding one if rounding up. <em><a href="https://www.nagwa.com/en/videos/216165264935/">External Link</a></em>.
-	    </div><br><br>
-	    
-	    
 	    <strong><font color="blue"><a href="#EsotericUAM"><span class="mw-headline" id="EsotericUAM">#</span></a> Esoteric U.A.M. Problem:</font></strong><br>
-	    A use of the U.A.M. equations that is not immediately apparent:<br><br> <em>Two trains, each having a speed of 30 km/h, are headed at each other on the same straight track. A bird that can fly 60 km/h flies off the front of one train when they are 60 km apart and heads directly for the other train. On reaching the other train, the (crazy) bird flies directly back to the first train, and so forth. What is the total distance the bird travels before the trains collide?</em><br><br>
+	    A use of the U.A.M. equations that is not immediately apparent:<br><br> <em>Two trains, each having a constant speed of 30 km/h, are headed toward eachother on the same straight track. A bird that can fly 60 km/h flies off the front of one train when they are 60 km apart and heads directly for the other train. Upon reaching the other train, the (crazy) bird flies directly back to the first train, and so forth. What is the total distance traveled by the bird before the trains collide?</em><br><br><br>
 	    
-	    This question has several traits that force the physicist to utilize critical thinking skills instead of plugging in numbers into formulas mindlessly, which one may get in the habit of if asked too many uninspired questions. <br><br>
-	    For one, velocity cannot replace speed in most circumstances due to the inherent differences of velocity being straight-line difference and speed being the total distance traveled, but there is one exception: If the object (or objects, in this case) travel in a straight-line, which is to say in one dimension, then the speed is equal to the velocity and they are interchangeable.<br><br>
-	    The specific parameters of the problem make it easier to solve: image the trains as being simple objects with directionless speed (as stated in the problem), for example. From the perspective of the conductor of the first train, the second train is going 60 kilometers per hour. We can replace the entire two train scenario (which has perfect symmetry and identical U.A.M. variables) and replace it with a single moving object - the trains are individually moving 30 km/hr towards eachother at a starting distance of 60 km from eachother - this is equal to a single train moving at 60 km/hr toward a brick wall 60 km away. Mathematically, these conclusions can be derived as follows:<br><br>
+	    <strong>Answer(s):</strong><br><br>
+	    
+	    <span class="spoiler"><strong>60 km</strong></span><br><br><br>
+	    
+	    
+	    <strong>Explanation</strong>:<br><br>
+	    
+	    This question has several traits that force the physicist to utilize critical thinking skills instead of just plugging in numbers into formulas mindlessly, which one may get in the habit of if asked too many uninspired questions. <br><br>
+	    
+	    For one, velocity cannot replace speed in most circumstances due to the inherent differences of velocity using straight-line difference and speed using the total distance traveled, but there is one exception: If the object (or objects, in this case) travel in a straight-line, which is to say in one dimension, then the speed is equal to the velocity and they are interchangeable, atleast with regard to magnitude (since velocity is a vector). This is stated in the speed definition.<br><br>
+	    
+	    Utilizing vector addition (see Rule 16) would not work, because the directions would cause the train velocities to cancel out.<br><br>
+	    
+	    The specific parameters of the problem make it easier to solve: imagine the trains as being simple objects with directionless speed (as stated in the problem), for example. From the perspective of the conductor of the first train, the second train is going 60 kilometers per hour, relative to the first train. We can replace the entire two train scenario (which has perfect symmetry and identical U.A.M. variables) and replace it with a single moving object - the trains are individually moving 30 km/hr towards eachother at a starting distance of 60 km from eachother, and as such are equivalent to a single train moving at 60 km/hr toward a brick wall 60 km away. Mathematically, these conclusions can be derived as follows, as a <u><strong>unique result</strong></u> of the symmetry between the movement of the trains:<br><br>
 	    
 	    Speed<sub>Total</sub> = Speed<sub>1</sub> + Speed<sub>2</sub><br>
 	    Speed<sub>Total</sub> = 30 km/hr + 30 km/hr<br>
-	    Speed<sub>Total</sub> = 60 km/hr
+	    Speed<sub>Total</sub> = 60 km/hr<br><br>
 	    
-	    <br><br>
-	    Thus, in this question, V<sub>iT</sub> and V<sub>FT</sub> are in reference to the single moving train, are all equal to 60 km/hr. Additionally, the change in x has been changed to 60 km, and considering the doubled speed of the single train, this works out perfectly with the original scenario. Since there are three known variables, we can find the other two.<br>
-	    <br>For this question only, it seems more logical to remain in km/hr instead of converting into m/s as is the usual.<br><br>
-	    We will first try to get the acceleration out of the train's U.A.M. equations - each equation has acceleration, so we need it to get to what we really want - the change in time.<br><br>
+	    
+	    Thus, in this question, V<sub>iT</sub> and V<sub>FT</sub> are in reference to the single moving train, and are both equal to 60 km/hr. Additionally, the change in x (displacement) has been changed to 60 km, and considering the doubled speed of the single train, this works out perfectly with the original scenario. Since there are three known U.A.M. variables, we can find the other two.<br><br>
+	    
+	    For this question only, it is more logical to remain in km/hr instead of converting into m/s as is the usual.<br><br>
+	    
+	    We will first try to determine the acceleration using the train's U.A.M. equations - each U.A.M. equation has acceleration, so it is needed to get what is really wanted: the change in time.<br><br>
+	    
 	    V<sub>F1</sub>² = V<sub>i1</sub>² + 2 × a × ∆x<br>
 	    (60 km/hr)² = (60 km/hr)² + 2 × a × 60 km.<br>
 	    0 = 2 × a × 60 km.<br>
 	    a = 0<br><br>
-	    This simplifies things significantly. Thus, for the second equation, which has two parts, both with the change in time, and the second with acceleration as a multiplier, is best suited for this scenario, as it can directly reveal the change in time.<br><br>
-	    ∆x = V<sub>i1</sub> × ∆t + (1 / 2) × a × (∆t)²<br>
+	    
+	    This simplifies things significantly, and was totally obvious considering that the final velocity is the same as the initial velocity. Thus, for the second equation, which has two parts, both with the change in time (and the second with acceleration as a multiplier, nullifying it), the 2nd U.A.M. equation is best suited for this scenario, as it can quickly isolate the change in time.<br><br>
+	    
+	    ∆x = V<sub>i1</sub> × ∆t + ½(a × ∆t²)<br>
 	    60 km = (60 km/hr) × ∆t<br>
 	    ∆t = 1<br><br>
 	    
-	    This is also very useful. If we were to consider the flying bird, we would find that it is flying at the same speed as the train and would thus go 60 km/hr for one hour before crashing into the wall, which is clearly equal to 1 hours worth of flight and thus 60 km of flight distance.
-	    <br> Utilizing vector addition (see Rule 19) would not work, because the directions would cause the train velocities to cancel out.
+	    This is the last real mathematical step - lastly, some dreaded logic must be performed. If we were to consider the flying bird, we would find that it is flying at the same speed as the train and would thus go 60 km/hr for one hour before crashing into the wall, which is clearly equal to 1 hours worth of flight and thus <strong>60 km of flight distance</strong>. Regardless of the original red herring complexity of how the bird would be moving back and forth between the trains, all one really needs to understand is that the bird will fly for 60 minutes at 60 km/hr before the trains hit eachother. Indeed, this problem has a hidden trick to solving it, although <a href="/Physics/img/quickness.png">it is not necessary for some</a>. <!--embarrassingly, I first heard this problem at 16, and not knowing its background as a famous problem posed to physicists, I worked confusedly for about 30 minutes, got nowhere, and then used g p t. How the times have changed.-->
     <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    <br><br><br><br>
 	    
-	    <strong><a href="#InstantVelocity"><span class="mw-headline" id="InstantVelocity">#</span></a> <font color="#006400">Instantaneous Velocity</font></strong>: The velocity at a specific point in time. The Velocity<sub>final</sub> and Velocity<sub>initial</sub> from the U.A.M. equations are instantaneous velocities because they represent the object's velocity at a specific point in time.<br><br>
 	    
-	    <strong><a href="#AverageVelocity"><span class="mw-headline" id="AverageVelocity">#</span></a> <font color="#006400">Average Velocity</font></strong>: The velocity over a time period. The velocity definition, change in position over change in time, is an average velocity itself.<br><br><br>
 	    
-	    <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> An average velocity written as V<sub>(5-10 sec)</sub> is just (x<sub>10</sub> - x<sub>5</sub>) / (t<sub>10</sub> - t<sub>5</sub>). This style of writing, although can be misinterpreted as meaning V<sub>-5</sub>, specifies an interval on the graph to find the velocity of.
-	    </div><br><br><br>
-	    
-	    <!--[[[ BLUE SECTION WARNING. also make it more obvious that it is referring to the Physics sections.-->
-	    ALL OF THE INFORMATION ABOUT DERIVATIVES WILL APPLY IN THE NEXT SECTION. MAKE SURE YOU KNOW AT LEAST THE DERIVATIVE PART OF <a href="/math/singlevarcalculus.html">SINGLE-VARIABLE CALCULUS</a> BEFORE CONTINUING ONTO FREE FALL.<br><br>
+	    <strong><font color="blue"><a href="#WARNING"><span class="mw-headline" id="WARNING">#</span></a> WARNING:</font></strong><br><br>
+	    KNOWLEDGE REGARDING CALCULUS-CONCEPTS SUCH AS DERIVATIVES WILL BECOME FULLY PREREQUISITE IN THE NEXT PHYSICS SECTION (II). MAKE SURE YOU KNOW ATLEAST THE DERIVATIVE PART OF <a href="/math/singlevarcalculus.html">SINGLE-VARIABLE CALCULUS</a> BEFORE CONTINUING ONTO FREE FALL.<br><br>
 	    
 	    </article>
 	</div></div>
@@ -736,7 +843,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Velocity, Speed, Acceleration</strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: June 19 2025</span><br>
+      	<span class="tiny">Last Change: June 23 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

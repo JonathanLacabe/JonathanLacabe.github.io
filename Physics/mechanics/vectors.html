@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </div>
       </div>
 
-    <div class="rules" data-start="19">
+    <div class="rules" data-start="16">
     
     
 	  <header class="articleHeader"><hr><hr>
@@ -133,17 +133,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	  </header>
 	  <article>
 	  
-	    <strong><a href="#VectorDef"><span class="mw-headline" id="VectorDef">#</span></a> <font color="#006400">Vector</font></strong>: A quantity having both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum. Vectors cannot be negative - their magnitude must always be positive by the virtue of their existence. Their direction is what can make them seem 'negative', meaning that they are in the opposite direction of another vector, potentially resulting in a smaller resultant vector (see Rule 19). It is all relative.
+	    <strong><a href="#VectorDef"><span class="mw-headline" id="VectorDef">#</span></a> <font color="#006400">Vector</font></strong>: A quantity with both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum. Vectors cannot be negative - their magnitude must always be positive by the virtue of their existence. Their direction is what can make them seem 'negative', meaning that they are in the opposite direction of another vector, potentially resulting in a smaller resultant vector (see Rule 16). It is all relative.
 	    <br><br>
 	    
-	    <strong><a href="#ScalarDef"><span class="mw-headline" id="ScalarDef">#</span></a> <font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density.
+	    <strong><a href="#ScalarDef"><span class="mw-headline" id="ScalarDef">#</span></a> <font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density. Inherently, every magnitude is a scalar.
 	    <br><br><br>
 	    
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
-	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. This tells you the <strong>resultant vector</strong>.<br><br> If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (see Rule 21) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
+	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. This tells you the <strong>resultant vector</strong>.<br><br> If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (see Rule 18) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
 	    Here are two vectors utilizing the vector symbols:<br><br>
 	    <span class="vecteur"><strong>A</strong></span> = 49 (mm/s) North<br>
 	    <span class="vecteur"><strong>B</strong></span> = 42 (mm/s) East <br>
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    ||<span class="vecteur"><strong>C</strong></span>|| = 65 mm/s.<br><br>
 	    Since a vector has direction, we need to find it trigonometrically:<br>
 	    tanθ = (O / A) = (<span class="vecteur"><strong>B</strong></span> / <span class="vecteur"><strong>A</strong></span>) = (42 / 49)<br>
-	    θ = tan⁻¹(42/49) = 40.601° = East of North (see Rule 20).<br>
+	    θ = tan⁻¹(42/49) = 40.601° = East of North (see Rule 17).<br>
 	    Thus, the object is moving at a resultant vector of 65 mm/s East of North.
 	    </div><br><br>
 	    
@@ -191,11 +191,11 @@ document.addEventListener("DOMContentLoaded", function (){
 	    Take this North of East vector for example:<br>
 	    <span class="vecteur"><strong>d</strong></span> = 90.0 cm @ 32° N of E.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/examplevector.gif"><img src="/Physics/img/vectors/examplevector.gif" alt="A graph with a vector d and its component vectors labeled." width=25%/></a></div>
-	    The vector <span class="vecteur"><strong>d</strong></span> has two component vectors, <span class="vecteur"><strong>d<sub>x</sub></strong></span> and <span class="vecteur"><strong>d<sub>y</sub></strong></span>.
+	    The vector <span class="vecteur"><strong>d</strong></span> has two <u>component vectors</u>, <span class="vecteur"><strong>d<sub>x</sub></strong></span> and <span class="vecteur"><strong>d<sub>y</sub></strong></span>.
 	    <br><br>sinθ = (O / H) = (<span class="vecteur"><strong>d<sub>y</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>y</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>sinθ = 90sin(32) = 47.693 ≈ 48cm.<br><br>
 	    
 	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
-	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.<br><br> The COMPONENTS of a VECTOR are <strong>ALSO VECTORS</strong>. There are just in a single direction, represented in unit vectors like so: [0i&#x302; + 5j&#x302;] or [5i&#x302; + 0j&#x302;] (see Rule 23).
+	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.<br><br> The COMPONENTS of a VECTOR are <strong>ALSO VECTORS</strong>. There are just in a single direction, represented in unit vectors like so: [0i&#x302; + 5j&#x302;] or [5i&#x302; + 0j&#x302;] (see Rule 20).
 	    
 	    </div><br><br>
 	    
@@ -247,7 +247,7 @@ In a mechanism similar to Vector Subtraction, create your own vector that has th
 	    
 	    ∆<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> - <span class="vecteur"><strong>r<sub>1</sub></strong></span>
 	    <br><br>
-	    You do not need to move either of the original vectors to find the distance between them - you simply need to create a new vector that bridges their endpoints. Then, find the length of that vector by using the pythagorean strategies taught before - see Rule 20 and Rule 21. The vectors may look similar to this:<br><br>
+	    You do not need to move either of the original vectors to find the distance between them - you simply need to create a new vector that bridges their endpoints. Then, find the length of that vector by using the pythagorean strategies taught before - see Rule 17 and Rule 18. The vectors may look similar to this:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/pablo1.png"><img src="/Physics/img/vectors/pablo1.png" alt="A graph with two vectors with no other information." width=18%/></a></div>
 	    <span class="tiny"><em>A graph with two vectors with no other information. Courtesy of <a href="https://www.flippingphysics.com/r-position-velocity-acceleration.html">Flipping Physics</a>.</em></span><br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/PABLO2.png"><img src="/Physics/img/vectors/PABLO2.png" alt="A graph with two vectors with no other information, except now with the connecting vector created." width=18%/></a></div>
@@ -256,22 +256,22 @@ In a mechanism similar to Vector Subtraction, create your own vector that has th
 	    From this point, you can either find the answer in terms of unit vectors or in terms of magnitude & direction. Of course, the unsimplified unit vector form will always be faster and simpler. Here is an example problem carried out to fruition using unit vectors:<br>
 	    <p><span class="vecteur"><strong>r<sub>1</sub></strong></span> = 15.0m @ 55.0° <strong>E</strong> of <strong>N</strong><br><span class="vecteur"><strong>r<sub>2</sub></strong></span> = 25.0m @ 45.0° <strong>N</strong> of <strong>E</strong></p>
 
-THE UNIT VECTOR DECOMPOSITION OF THE <strong>FIRST</strong> VECTOR:
-<p><span class="vecteur"><strong>r<sub>1</sub></strong></span> = [r<sub>1</sub>sinθ<sub>1</sub><strong>i&#x302;</strong> + r<sub>1</sub>cosθ<sub>1</sub><strong>j&#x302;</strong>] <br>= [(15)sin(55)<strong>i&#x302;</strong> + (15)cos(55)<strong>j&#x302;</strong>]m <br>= [12.2872<strong>i&#x302;</strong> + 8.60365<strong>j&#x302;</strong>]m</p>
-THE UNIT VECTOR DECOMPOSITION OF THE <strong>SECOND</strong> VECTOR:
-<p><span class="vecteur"><strong>r<sub>2</sub></strong></span> = [r<sub>2</sub>cosθ<sub>2</sub><strong>i&#x302;</strong> + r<sub>2</sub>sinθ<sub>2</sub><strong>j&#x302;</strong>] <br>= [(25)cos(45)<strong>i&#x302;</strong> + (25)sin(45)<strong>j&#x302;</strong>]m <br>= [17.6777<strong>i&#x302;</strong> + 17.6777<strong>j&#x302;</strong>]m</p>
-
-
-<p>Δ<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> − <span class="vecteur"><strong>r<sub>1</sub></strong></span> = [12.2872<strong>i&#x302;</strong> + 8.60365<strong>j&#x302;</strong>] − [17.6777<strong>i&#x302;</strong> + 17.6777<strong>j&#x302;</strong>]<br>
-= Δ<span class="vecteur"><strong>r</strong></span> = [5.39040<strong>i&#x302;</strong> + 9.07405<strong>j&#x302;</strong>]m<br><br>
-
-Because change in r is also change in position, this vector is also the displacement between the two original vectors: <br>
-Δ<span class="vecteur"><strong>r</strong></span> ≈ [5.39<strong>i&#x302;</strong> + 9.07<strong>j&#x302;</strong>]m</p>
-
-Because the question asked for the distance, we need to find the magnitude of the displacement using that specific equation; see the definition of displacement in Subsection I.IV for a better understanding of what is being done here.
-
-<p>||Δ<span class="vecteur"><strong>r</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(5.39040)² + (9.07405)²</span></span></p>
-<p>||Δ<span class="vecteur"><strong>r</strong></span>|| = 10.5544 ≈ 10.6m</p>
+        THE UNIT VECTOR DECOMPOSITION OF THE <strong>FIRST</strong> VECTOR:
+        <p><span class="vecteur"><strong>r<sub>1</sub></strong></span> = [r<sub>1</sub>sinθ<sub>1</sub><strong>i&#x302;</strong> + r<sub>1</sub>cosθ<sub>1</sub><strong>j&#x302;</strong>] <br>= [(15)sin(55)<strong>i&#x302;</strong> + (15)cos(55)<strong>j&#x302;</strong>]m <br>= [12.2872<strong>i&#x302;</strong> + 8.60365<strong>j&#x302;</strong>]m</p>
+        THE UNIT VECTOR DECOMPOSITION OF THE <strong>SECOND</strong> VECTOR:
+        <p><span class="vecteur"><strong>r<sub>2</sub></strong></span> = [r<sub>2</sub>cosθ<sub>2</sub><strong>i&#x302;</strong> + r<sub>2</sub>sinθ<sub>2</sub><strong>j&#x302;</strong>] <br>= [(25)cos(45)<strong>i&#x302;</strong> + (25)sin(45)<strong>j&#x302;</strong>]m <br>= [17.6777<strong>i&#x302;</strong> + 17.6777<strong>j&#x302;</strong>]m</p>
+        
+        
+        <p>Δ<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> − <span class="vecteur"><strong>r<sub>1</sub></strong></span> = [12.2872<strong>i&#x302;</strong> + 8.60365<strong>j&#x302;</strong>] − [17.6777<strong>i&#x302;</strong> + 17.6777<strong>j&#x302;</strong>]<br>
+        = Δ<span class="vecteur"><strong>r</strong></span> = [5.39040<strong>i&#x302;</strong> + 9.07405<strong>j&#x302;</strong>]m<br><br>
+        
+        Because change in r is also change in position, this vector is also the displacement between the two original vectors: <br>
+        Δ<span class="vecteur"><strong>r</strong></span> ≈ [5.39<strong>i&#x302;</strong> + 9.07<strong>j&#x302;</strong>]m</p>
+        
+        Because the question asked for the distance, we need to find the magnitude of the displacement using that specific equation; see the definition of displacement in Subsection I.IV for a better understanding of what is being done here.
+        
+        <p>||Δ<span class="vecteur"><strong>r</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(5.39040)² + (9.07405)²</span></span></p>
+        <p>||Δ<span class="vecteur"><strong>r</strong></span>|| = 10.5544 ≈ 10.6m</p>
 
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
@@ -283,11 +283,11 @@ Because the question asked for the distance, we need to find the magnitude of th
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> The r position vector, <span class="vecteur"><strong>r</strong></span>, is used to identify the location of an object in multiple dimensions.<br><br>
-<span class="vecteur"><strong>r</strong></span> = x<strong>i&#x302;</strong> + y<strong>j&#x302;</strong> + z<strong>k&#x302;</strong> identifies the location of an object in 3-dimensional space.<br><br>
-<span class="vecteur"><strong>&#916;r</strong></span> = <span class="vecteur"><strong>r<sub>f</sub></strong></span> - <span class="vecteur"><strong>r<sub>i</sub></strong></span> is the displacement of an object in 3-dimensional space.<br><br>
-<span class="vecteur"><strong>&#916;r</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>v</strong></span><sub>average</sub> & <strong>d<span class="vecteur">r</span></strong>/dt = <span class="vecteur"><strong>v</strong></span><sub>instantaneous</sub><br>
-<span class="vecteur"><strong>&#916;v</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>a</strong></span><sub>average</sub> & <strong>d<span class="vecteur">v</span></strong>/dt = <span class="vecteur"><strong>a</strong></span><sub>instantaneous</sub>
-</div><br><br>
+        <span class="vecteur"><strong>r</strong></span> = x<strong>i&#x302;</strong> + y<strong>j&#x302;</strong> + z<strong>k&#x302;</strong> identifies the location of an object in 3-dimensional space.<br><br>
+        <span class="vecteur"><strong>&#916;r</strong></span> = <span class="vecteur"><strong>r<sub>f</sub></strong></span> - <span class="vecteur"><strong>r<sub>i</sub></strong></span> is the displacement of an object in 3-dimensional space.<br><br>
+        <span class="vecteur"><strong>&#916;r</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>v</strong></span><sub>average</sub> & <strong>d<span class="vecteur">r</span></strong>/dt = <span class="vecteur"><strong>v</strong></span><sub>instantaneous</sub><br>
+        <span class="vecteur"><strong>&#916;v</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>a</strong></span><sub>average</sub> & <strong>d<span class="vecteur">v</span></strong>/dt = <span class="vecteur"><strong>a</strong></span><sub>instantaneous</sub>
+        </div><br><br>
 
 
 
@@ -398,7 +398,7 @@ If <strong>180° &lt; ϕ &lt; 360°</strong> or if <strong>-180° &lt; ϕ &lt; 0
 
  If the vectors are parallel or antiparallel, then the cross product results in a zero vector.<br><br>
  
- The magnitude of <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>, which can be written as |<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>|, is maximum when <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span> are perpendicular to each other.<br><br>
+ The magnitude of <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>, which can be written as |<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>|, is maximum when <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span> are perpendicular to eachother.<br><br>
 
 If the vector is parallel, the resultant magnitude is 0, and if it is perpendicular, the result is maximized. Dot product is the opposite.<br><br>
 <br><br><br><br>
@@ -518,7 +518,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> Any U.A.M. variable that is a vector (everything other than time) can be decomposed to find its x and y-direction component vectors. This is most useful when you need to find the movement of an object in both directions during projectile motion. For example, if an object were to be launched with an initial speed of 3.25 m/s at an angle of 61.7°, you can easily find the initial velocity in the x-direction and y-direction by using decomposition tricks - see Rule 21.
+        </strong> Any U.A.M. variable that is a vector (everything other than time) can be decomposed to find its x and y-direction component vectors. This is most useful when you need to find the movement of an object in both directions during projectile motion. For example, if an object were to be launched with an initial speed of 3.25 m/s at an angle of 61.7°, you can easily find the initial velocity in the x-direction and y-direction by using decomposition tricks - see Rule 18.
 	    </div><br><br>
 	    
 	    
@@ -527,8 +527,8 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> When doing calculations with unit vectors, as could be done in the previous question, the 2nd U.A.M. equation (and all others, for that matter) can be easily converted into a more useful form:<br><br>
 	    <strong><span class="vecteur">r</span><sub>F</sub> = <span class="vecteur">r</span><sub>i</sub> + <span class="vecteur">V</span><sub>i</sub> × t + (1/2) × <span class="vecteur">a</span> × t²</strong><br>
-	    <br>Of course, this equation was created by recognizing <strong><span class="vecteur">r</span></strong> as being the displacement (∆x), and splitting it into its final and initial forms and moving the initial to the right side, as can be done for ∆x or acceleration at any time. Whereas before we were not writing the vector symbols in the U.A.M. equations, we are taking specific note of their vector status now. <br><br>'<span class="vecteur">r</span>' is a <strong>displacement vector</strong>, representing the change in position of the object - see Rule 25 for more uses of it. <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are <strong>position vectors</strong>, in that they describe the object's location at specific points in time, each being the sum of its components in the x and y directions (and potentially z direction in 3D space). <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are of course representative of the initial and final positions of the object, respectively. The displacement vector <strong><span class="vecteur">r</span></strong> indicates the direct path and distance between these two positions.<br><br>
-	    Recall that when you are working in unit vectors, U.A.M. equations are done with the x and y component vectors of each vector. For example, <span class="vecteur"><strong>V<sub>i</sub></strong></span> can have the value [1.32i&#x302; + 4.24j&#x302;] (or anything of the sort) plugged in to any equation. These form a more fun equation to solve, because you are plugging in the x and y forms simultaneously into the equation (for an example and a neat trick, see Rule 33). 
+	    <br>Of course, this equation was created by recognizing <strong><span class="vecteur">r</span></strong> as being the displacement (∆x), and splitting it into its final and initial forms and moving the initial to the right side, as can be done for ∆x or acceleration at any time. Whereas before we were not writing the vector symbols in the U.A.M. equations, we are taking specific note of their vector status now. <br><br>'<span class="vecteur">r</span>' is a <strong>displacement vector</strong>, representing the change in position of the object - see Rule 22 for more uses of it. <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are <strong>position vectors</strong>, in that they describe the object's location at specific points in time, each being the sum of its components in the x and y directions (and potentially z direction in 3D space). <strong><strong><span class="vecteur">r</span><sub>i</sub></strong> and <span class="vecteur">r</span><sub>F</sub></strong> are of course representative of the initial and final positions of the object, respectively. The displacement vector <strong><span class="vecteur">r</span></strong> indicates the direct path and distance between these two positions.<br><br>
+	    Recall that when you are working in unit vectors, U.A.M. equations are done with the x and y component vectors of each vector. For example, <span class="vecteur"><strong>V<sub>i</sub></strong></span> can have the value [1.32i&#x302; + 4.24j&#x302;] (or anything of the sort) plugged in to any equation. These form a more fun equation to solve, because you are plugging in the x and y forms simultaneously into the equation (for an example and a neat trick, see Rule 30). 
 	    <br><br><strong><u><font style="font-size:140%;">EXTREMELY IMPORTANT, READ THIS</font></u></strong>: <br>You can easily get very confused when you draw the curved trajectory of an object in projectile motion, and then you draw a vector with a straight line. No, the vector you drew for whichever variable is not saying that the object moved in that same straight line. That is not what vectors mean - vectors represent direction and magnitude, not the actual path of motion. If you have the initial velocity for an object and you draw the vector to find the x and y components, you are only drawing a visualization of a position vector, (as described above), of how much the velocity or whatever is directed horizontally or vertically. <br><br>
 	    
 	    The vector right triangle is not the actual trajectory of the object on a graph.<br>
@@ -542,7 +542,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> There is something very beautiful, the result of the independence of the x and y-directions, that must be experienced as a mathematician or Physicist to appreciate its true beauty.<br><br>
 	    
-	    Say you have plugged in the unit vectors for each of the variables in the 2nd U.A.M. equation (see Rule 32 for how this can be done), and you get the following: <br><br> [0.93i&#x302; + yj&#x302;] = [0i&#x302; + 0j&#x302;] + [1.54079i&#x302; + 2.86155j&#x302;]t + (1/2) × [-9.81j&#x302;]t²<br>0.93i&#x302; + yj&#x302; = 1.54079ti&#x302; + 2.86155tj&#x302; - 4.905t²j&#x302;<br><br>
+	    Say you have plugged in the unit vectors for each of the variables in the 2nd U.A.M. equation (see Rule 29 for how this can be done), and you get the following: <br><br> [0.93i&#x302; + yj&#x302;] = [0i&#x302; + 0j&#x302;] + [1.54079i&#x302; + 2.86155j&#x302;]t + (1/2) × [-9.81j&#x302;]t²<br>0.93i&#x302; + yj&#x302; = 1.54079ti&#x302; + 2.86155tj&#x302; - 4.905t²j&#x302;<br><br>
 	    
 	    <!--perhaps a reference to the partial fraction decomposition thing, which is a similar concept that can be reference as a further example of how this concept is used across the knowledge-verse. -->
 	    
@@ -550,7 +550,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    
 	    0.93 = 1.54079t<br><br> 
 	    
-	    From here, the process is simple, isolating time and whatnot (which, as we learned in past revelations (see Rule 28), is a directionless scalar quantity that can be used in both the x and y directions). Of course, we can repeat this process by isolating the y-direction, where we can now plug in the newly found time.
+	    From here, the process is simple, isolating time and whatnot (which, as we learned in past revelations (Rule 25), is a directionless scalar quantity that can be used in both the x and y directions). Of course, we can repeat this process by isolating the y-direction, where we can now plug in the newly found time.
 	    
 	    </div><br><br>
 	    
@@ -629,7 +629,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    <h3 style="font-size:135%;">&Sigma;&hairsp;F<sub>x</sub> = -F<sub>drag x</sub> = m × a<sub>x</sub><br>a<sub>x</sub> = -((1/2) × ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × A)<br>a<sub>x</sub> = -(ρ<sub>air</sub> × (V<sub>ix</sub>)² × D × (πr²)) / 2m<br>a<sub>x</sub> = -(1.275 × 4.4694² × 0.5 × (π × (0.031835)²))&nbsp;&nbsp;/&nbsp;&nbsp;2 × (0.14529)<br>a<sub>x</sub> = -0.13953 m/s²
 	    <br>
 	    </h3>
-	    There is only one force in the x-direction, the drag, which is of course going in the opposite direction of the object in the x-direction and so is negative. This is the net force of the ball, and by <u>Newton's Second Law of Motion</u> (see Rule 71), we know that the net force is equal to the mass of the ball times the acceleration in the x-direction. Continuing onward, we can substitute in the drag equation to be equal to mass times acceleration. From there, the algebra is simple, and you just need to plug in all of your variables to find the answer.<br><br>
+	    There is only one force in the x-direction, the drag, which is of course going in the opposite direction of the object in the x-direction and so is negative. This is the net force of the ball, and by <u>Newton's Second Law of Motion</u> (see Rule 68), we know that the net force is equal to the mass of the ball times the acceleration in the x-direction. Continuing onward, we can substitute in the drag equation to be equal to mass times acceleration. From there, the algebra is simple, and you just need to plug in all of your variables to find the answer.<br><br>
 	    As a result, we have found the acceleration in the x-direction, which DOES NOT EXIST in projectile motion. Since you now know acceleration, Velocity initial, and change in time (1/100 sec), you find 4.6805 m/s as your velocity final. Therefore, compared to the Velocity initial of this 0.01 second period of 4.4694, the velocity in the x-direction (which we took to be constant) has decreased by 1.4 thousandths of a meter per second, accounting for air resistance in our calculations and contrary to what the standard U.A.M. equations for projectile motion would suggest.<br><br>
 	    ∆x = x<sub>F</sub> - x<sub>i</sub> = V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>x<sub>F</sub> = x<sub>i</sub> + V<sub>ix</sub> × ∆t + (1/2) × a<sub>x</sub> × (∆t)²<br>
 	    x = (0)+(4.4694) × (0.01) + (1/2) × (-0.13953) × (0.01)²<br>
@@ -642,7 +642,10 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    <strong><font color="blue"><a href="#TERMINALVELOCITY"><span class="mw-headline" id="TERMINALVELOCITY">#</span></a> TERMINAL VELOCITY:</font></strong><br>
 	    <!--Blessed be the 30th of September, when I realized how balanced forces will only result in there being no acceleration, not that the object would not move. Thanks be to the cat of Page 131 for this enlightenment.-->
 	    "The speed at which a falling body will cease accelerating and begin moving at a constant speed downward, as a result of the effects of drag."<br><br>
-	    As a body falls, the drag force gradually increases in magnitude (from zero) as the speed of the body increases. If the body falls long enough, the force of drag will eventually equal to the force of gravity, ideally. In the real world, the force of gravity will never exactly equal the force of drag, of course, but the acceleration will become small enough that it will be negligible for any calculations. <br><br>Though the forces will cancel eachother out, this does not mean that the object will stop moving (see Rule 77 for the Third Law of Motion) - it only means that the object will have no acceleration, and that it will be in equilibrium, in the sense that the velocity will be constant. <br><br>From this point onward, the body will fall at a constant speed, known as the terminal velocity <span class="vecteur"><strong>V<sub>T</sub></strong></span>.<br>
+	    
+	    As a body falls, the drag force gradually increases in magnitude (from zero) as the speed of the body increases. If the body falls long enough, the force of drag will eventually equal to the force of gravity, ideally. In the real world, the force of gravity will never exactly equal the force of drag, of course, but the acceleration will become small enough that it will be negligible for any calculations. <br><br>Though the forces will cancel eachother out, this does not mean that the object will stop moving (see Rule 74 for the Third Law of Motion) - it only means that the object will have no acceleration, and that it will be in equilibrium, in the sense that the velocity will be constant.<br><br>
+	    
+	    From this point onward, the body will fall at a constant speed, known as the terminal velocity <span class="vecteur"><strong>V<sub>T</sub></strong></span>.<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/terminalcat.png"><img src="/Physics/img/terminalcat.png" alt="The fall of a cat, and the drag force that will eventually bring it to terminal velocity." width=40%/></a></div>
 	    <span class="tiny"><em>The fall of a cat, and the drag force that will eventually bring it to terminal velocity.</em></span><br><br><br>
 	    
@@ -712,7 +715,7 @@ Because the average acceleration on the way up is lower than the average acceler
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong>Vectors and Projectile Motion</strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: June 19 2025</span><br>
+      	<span class="tiny">Last Change: June 23 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

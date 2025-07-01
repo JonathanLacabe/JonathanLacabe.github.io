@@ -227,39 +227,42 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br> 
 	    
 	    
-	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security; The protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
+	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security - the protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
 	    
 	    All IT Security follows the <strong>CIA Triad</strong>: Confidentiality, Integrity and Availability of information. Security is largely focused on attackers, while system safety & reliability is focused on protecting against random technical failures.
-<br><br><br>
-
-<strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
-<br><br><br>
-
-<strong><a href="#CryptanalysisDef"><span class="mw-headline" id="CryptanalysisDef">#</span></a> <font color="#006400">Cryptanalysis</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The reductive counterpart to Cryptography, the science of 'breaking' encryption and bypassing the cryptographic security. Though it is the medium of hackers and cybercriminals, it is also a serious scientific field for researchers to test the security of cryptosystems, e.g. systems established using Cryptography. This is the <u>only</u> to absolutely ensure the security of the cryptosystem - remember <a href="https://www.schneier.com/blog/archives/2011/04/schneiers_law.html">Schneier's Law</a>.
-<br><br><br>
-
-<strong><a href="#SymmetricAlgDef"><span class="mw-headline" id="SymmetricAlgDef">#</span></a> <font color="#006400">Symmetric Algorithms</font></strong>: The classic form of Cryptography - two parties hold a secret key, enabling one party to encrypt a message and the other party to decrypt it. Thus, the same key is used for both encryption and decryption.<br><br>
-Until 1976, this was the only form of cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Hash functions are somewhat similar to symmetric algorithms, though they can be considered an independent, <em>third</em> type of Cryptographic algorithm.
-<br><br><br>
-
-<strong><a href="#AsymmetricDef"><span class="mw-headline" id="AsymmetricDef">#</span></a> <font color="#006400">Asymmetric/Public-Key Algorithms</font></strong>: The new cryptography, which all modern cryptosystems and what much of the infrastructure of the Internet, is based on. Invented by the Diffie-Hellman team in 1976, Public-Key Cryptography functions by having each party have <strong>TWO</strong> keys, a private key and a public key. <br><br>For more detail on how these functions work, see the "Public-Key Cryptography" Section ([[[[[), but know they are used in a variety of fashions: digital signatures, key establishment/management, and more!
-<br><br><br>
-
-<strong><a href="#ProtocolsDef"><span class="mw-headline" id="ProtocolsDef">#</span></a> <font color="#006400">Protocols</font></strong>: Collective cryptographic algorithms that serve a complex security function, like a library of algorithms that work together for a common goal. For example - the Transport Layer Security scheme (TLS) and the Hypertext Transfer Protocol (HTTP) are used in every web browser.<br><br> In the words of Edward Snowden, "[The Internet of Things and countless] protocols have given us the means to digitize and put online damn near everything in the world that we don’t eat, drink, wear, or dwell in." 
-<br><br><br>
+      <br><br><br>
+      
+      <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
+      <br><br><br>
+      
+      <strong><a href="#CryptanalysisDef"><span class="mw-headline" id="CryptanalysisDef">#</span></a> <font color="#006400">Cryptanalysis</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The reductive counterpart to Cryptography, the science of 'breaking' encryption and bypassing the cryptographic security. Though it is the medium of hackers and cybercriminals, it is also a serious scientific field for researchers to test the security of <u>cryptosystems</u>, i.e. systems established using Cryptography (see definition). This is the <u>only</u> to absolutely ensure the security of the cryptosystem - remember <a href="https://www.schneier.com/blog/archives/2011/04/schneiers_law.html">Schneier's Law</a>.
+      <br><br><br>
+      
+      <strong><a href="#CryptosystemDef"><span class="mw-headline" id="CryptosystemDef">#</span></a> <font color="#006400">Cryptosystem</font></strong>: An application/implementation of a set of cryptographic algorithms (incorporating encryption, decryption, <!--key generation-->and other mechanisms).
+      <br><br><br>
+      
+      <strong><a href="#SymmetricAlgDef"><span class="mw-headline" id="SymmetricAlgDef">#</span></a> <font color="#006400">Symmetric Algorithms</font></strong>: The classic form of Cryptography - two parties hold a secret key, enabling one party to encrypt a message and the other party to decrypt it. Thus, the same key is used for both encryption and decryption.<br><br>
+      Until 1976, this was the only form of cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Hash functions are somewhat similar to symmetric algorithms, though they can be considered an independent, <em>third</em> type of Cryptographic algorithm.
+      <br><br><br>
+      
+      <strong><a href="#AsymmetricDef"><span class="mw-headline" id="AsymmetricDef">#</span></a> <font color="#006400">Asymmetric/Public-Key Algorithms</font></strong>: The new cryptography, which all modern cryptosystems and what much of the infrastructure of the Internet, is based on. Invented by the Diffie-Hellman team in 1976, Public-Key Cryptography functions by having each party have <strong>TWO</strong> keys, a private key and a public key. <br><br>For more detail on how these algorithms work, see the "Public-Key Cryptography" Section ([[[[[), but know they are used in a variety of fashions: digital signatures, key establishment/management, and more!
+      <br><br><br>
+      
+      <strong><a href="#ProtocolsDef"><span class="mw-headline" id="ProtocolsDef">#</span></a> <font color="#006400">Protocols</font></strong>: Collective cryptographic algorithms that serve a complex security function, like a library of algorithms that work together for a common goal. For example - the Transport Layer Security scheme (TLS) and the Hypertext Transfer Protocol (HTTP) are used in every web browser.<br><br> In the words of Edward Snowden, "[The Internet of Things and countless] protocols have given us the means to digitize and put online damn near everything in the world that we don’t eat, drink, wear, or dwell in." 
+      <br><br><br>
 
 
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.
-</div><br><br>
-
-<strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmission from interception is the goal of cryptography.
-<br><br><br>
-
-<strong><a href="#HybridSchemeDef"><span class="mw-headline" id="HybridSchemeDef">#</span></a> <font color="#006400">Hybrid Schemes</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both type have their own strengths and weaknesses.
-<br><br><br>
+      </div><br><br>
+      
+      <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmission from interception is the goal of cryptography.
+      <br><br><br>
+      
+      <strong><a href="#HybridSchemeDef"><span class="mw-headline" id="HybridSchemeDef">#</span></a> <font color="#006400">Hybrid Schemes</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both type have their own strengths and weaknesses.
+      <br><br><br>
 
 
 
@@ -273,12 +276,12 @@ Until 1976, this was the only form of cryptography in existence, and describes t
 	  <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> Symmetric Cryptography
+        </strong> <strong>Symmetric Cryptosystem</strong>:
 	  
 	  
-	  <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
+	    <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
 
-Say <strong>Alice</strong> and <strong>Bob</strong> connect through the internet (which is an open channel due to the potential of package rerouting/interception) and transfer data. An opponent, <strong>Oscar</strong>, can read their communications by intercepting the data before it reaches Bob.<br><br>
+      Say <strong>Alice</strong> and <strong>Bob</strong> connect through the internet (which is an open channel due to the potential of package rerouting/interception) and transfer data. An opponent, <strong>Oscar</strong>, can read their communications by intercepting the data before it reaches Bob.<br><br>
 
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/alicebobunsecure.png"><img src="/cryptography/img/alicebobunsecure.png" alt="A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar.</em></span><br><br> 
@@ -1818,7 +1821,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: June 9 2025</span><br>
+      	<span class="tiny">Last Change: June 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -131,10 +131,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security - the protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
 	    
-	    All IT Security follows the <strong>CIA Triad</strong>: <u>Confidentiality</u>, <u>Integrity</u> and <u>Availability</u> of information. Security is largely focused on attackers, while system safety & reliability is focused on protecting against random technical failures.
+	    All IT Security follows the <strong>CIA Triad</strong>: <u>Confidentiality</u>, <u>Integrity</u> and <u>Availability</u> of information. Security is largely focused on protecting against attackers, while system safety & reliability is focused on protecting against random technical failures.
       <br><br><br>
       
-      <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
+      <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis<!--chosen over cryptanalytic--> efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
       <br><br><br>
       
       <strong><a href="#CryptanalysisDef"><span class="mw-headline" id="CryptanalysisDef">#</span></a> <font color="#006400">Cryptanalysis</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>
@@ -145,16 +145,26 @@ document.addEventListener("DOMContentLoaded", function (){
       <strong><a href="#CryptosystemDef"><span class="mw-headline" id="CryptosystemDef">#</span></a> <font color="#006400">Cryptosystem</font></strong>: An application/implementation of a set of cryptographic algorithms (incorporating encryption, decryption, <!--key generation, -->and other mechanisms).
       <br><br><br>
       
+      
       <strong><a href="#SymmetricAlgDef"><span class="mw-headline" id="SymmetricAlgDef">#</span></a> <font color="#006400">Symmetric Algorithms</font></strong>: A sub-field of <em>Cryptography</em>;<br><br>
       
       The classic form of Cryptography - two parties hold a secret key, enabling one party to encrypt a message and the other party to decrypt it. Thus, the same key is used for both encryption and decryption.<br><br>
-      Until 1976, this was the only form of cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Hash functions are somewhat similar to symmetric algorithms, though they can be considered an independent, <em>third</em> type of Cryptographic algorithm.
+      
+      Until 1976, this was the only form of cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Although it is indeed the <em>classic</em> form of cryptography, it is still highly relevant today, as AES remains an industry standard even <a href="https://eprint.iacr.org/2019/272.pdf">into the quantum age</a>.<br><br>
+      
+      Hash functions are somewhat similar to symmetric algorithms, though they can be considered an independent, <em>third</em> type of Cryptographic algorithm.
       <br><br><br>
+      
       
       <strong><a href="#AsymmetricDef"><span class="mw-headline" id="AsymmetricDef">#</span></a> <font color="#006400">Asymmetric/Public-Key Algorithms</font></strong>: A sub-field of <em>Cryptography</em>;<br><br>
       
-      The new cryptography, which all modern cryptosystems and what much of the infrastructure of the Internet, is based on. Invented by the Diffie-Hellman team in 1976, Public-Key Cryptography functions by having each party have <strong>TWO</strong> keys, a private key and a public key. <br><br>For more detail on how these algorithms work, see the "Public-Key Cryptography" Section ([[[[[), but know they are used in a variety of fashions: digital signatures, key establishment/management, and more!
+      The great cryptographic breakthrough of the <u style="text-decoration:underline dotted" title="For that of the 21st century, see the &ldquo;Post-Quantum Cryptography&rdquo; Subcategory.">20th century</u>, Asymmetric Cryptography (a.k.a. "Public Key Cryptography"<!--a perhaps more descriptive name-->) is the backbone of most modern cryptosystems and is what much of the infrastructure of the Internet (protocols, in particular) is based on.<br><br>
+      
+      Invented by the Diffie-Hellman team in 1976, Public-Key Cryptography functions by having each party have <strong>TWO</strong> keys, a private key and a public key. <br><br>
+      
+      For more detail on how these algorithms work, see the "Public-Key Cryptography" Subcategory ([[[[[), but know they are used in a variety of fashions: digital signatures, key establishment/management, and more!
       <br><br><br>
+      
       
       <strong><a href="#ProtocolsDef"><span class="mw-headline" id="ProtocolsDef">#</span></a> <font color="#006400">Protocols</font></strong>: A sub-field of <em>Cryptography</em>;<br><br>
       
@@ -165,13 +175,17 @@ document.addEventListener("DOMContentLoaded", function (){
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> Cryptographic '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to the same thing in slightly different ways: schemes used to represent data. Primitives are the basic cryptographic functions (building blocks of an algorithm), ciphers are the implementation of an encryption scheme, and algorithms are the combined procedures of primitives and ciphers to create the greater cryptosystem.
+        </strong> In Cryptography, '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to different parts of the same process: the components of to assist in both encrypting and decrypting the data schemes that process data.<br><br>
+        
+        <strong><u>Primitives</u></strong> are the basic cryptographic functions (building blocks of an algorithm), <strong><u>Ciphers</u></strong> are the implementation of an encryption scheme, and <strong><u>Algorithms</u></strong> are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br>
+        
+        For example, a well-formed algorithm may use the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
       </div><br><br>
       
-      <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmission from interception is the goal of cryptography.
+      <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmitted data from being intercepted, and from being intercepted in any meaningful form, is the goal of cryptography.
       <br><br><br>
       
-      <strong><a href="#HybridSchemeDef"><span class="mw-headline" id="HybridSchemeDef">#</span></a> <font color="#006400">Hybrid Schemes</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both types have their own strengths and weaknesses.
+      <strong><a href="#HybridSchemeDef"><span class="mw-headline" id="HybridSchemeDef">#</span></a> <font color="#006400">Hybrid Schemes</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both types have their own strengths and weaknesses (See [[[<!--should be a sort of comparison between the two types, something created at the end of public-key Cryptography to round off the two major forms as a whole-->).
       <br><br><br>
 
 
@@ -189,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> <strong>Symmetric Cryptosystem</strong>:
 	  
 	  
-	    <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an 'open channel') without having their communications be intercepted by a third-party?<br><br>
+	    <br><br>The ancient problem presents itself: How can two parties communicate over an <strong>insecure channel</strong> (an '<strong>open channel</strong>') without having their communications intercepted by a third-party?<br><br>
 
       Say <strong>Alice</strong> and <strong>Bob</strong> connect through the internet (which is an open channel due to the potential of package rerouting/interception) and transfer data. An opponent, <strong>Oscar</strong>, can read their communications by intercepting the data before it reaches Bob.<br><br>
 
@@ -198,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    To stop Oscar from reading the message, an encryption algorithm can be established, converting the plaintext message (x) into a ciphertext message (y), and then sending it through the insecure channel. Oscar would only see a stream of random characters/bits as a result of the encryption. Bob, using a decryption function, would convert the ciphertext back into plaintext, thus completing the data transfer without interception.<br><br>
 
-      In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which should be made publicly available - see Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
+      In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which, counterintuitively, should actually be made publicly available - see Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
 
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/AliceBobSecure.png"><img src="/cryptography/img/AliceBobSecure.png" alt="A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions.</em></span><br><br> 
@@ -213,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong>K</strong> = The Key fed into the encryption and decryption functions.<br><br>
       	    
-      <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong>/<strong>key length</strong> of the algorithm: If it produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
+      <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong>/<strong>key length</strong> of the algorithm - if the algorithm produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
       	    
       </div><br><br>	    
       
@@ -221,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <div class="rule"><strong>
           <a href="#Rule"><span class="hash">#</span></a> 
           <font color="red">C. Rule <span class="rule-number"></span>.</font>
-      </strong> Keeping the encryption/decryption algorithms 'e' and 'd' secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so it can be analyzed by cryptanalysts</strong>.<br><br>
+      </strong> Keeping the encryption/decryption algorithms 'e' and 'd'<!--looks better like this than with ()--> secret, preventing their cryptanalysis by the enemy (known as <strong>Security by Obscurity</strong>), was standard procedure for the ~4000 year history of Cryptography prior to the discovery of public-key Cryptography. However, <strong>the only way of ensuring the security of the algorithms is to make them public so that they can be analyzed by cryptanalysts</strong>.<br><br>
 
 
         This is the central principle of a foundational law in Cryptography, postulated in 1883 by Auguste Kerckhoffs:<br><br><br>
@@ -234,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </div><br><br>
         
         
-        <strong><a href="#EndToEndDef"><span class="mw-headline" id="EndToEndDef">#</span></a> <font color="#006400">End-Eo-End Encryption (E2EE)</font></strong>: A system of encryption widely used in modern communication services (like internet messaging sites), in which all data sent from Alice to Bob (party #1 to party #2) is never decrypted at any point along its route until it reaches Bob. <br><br>
+        <strong><a href="#EndToEndDef"><span class="mw-headline" id="EndToEndDef">#</span></a> <font color="#006400">End-To-End Encryption (E2EE)</font></strong>: A system of encryption widely used in modern communication services (like internet messaging sites), in which all data sent from Alice to Bob (party #1 to party #2) is never decrypted at any point along its route until it reaches Bob. <br><br>
         
         Thus, all parties intercepting/eavesdropping will be unable to read or manipulate the message, even if they control any of the base stations the message goes through.<br><br>
         
@@ -265,59 +279,60 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
 	    
 	    [[[[[[[
-<br><br><br>
-
-<strong><a href="#SocialEngineeringDef"><span class="mw-headline" id="SocialEngineeringDef">#</span></a> <font color="#006400">Social Engineering</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
-
-The process of bypassing the protections of a cryptosystem by going directly after the humans that have access to the secret key. Obtaining the key can range from kidnapping and forcing them to tell the key/password, to a simple phishing scheme over the phone or through email.
-<br><br><br>
-
-<strong><a href="#ImplementationAttacksDef"><span class="mw-headline" id="ImplementationAttacksDef">#</span></a> <font color="#006400">Implementation Attacks</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
-
-Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important relation relating to the key.<br><br>
-
-For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a signal processing technique can be used to recover the key. The run time behavior can also indicate information regarding the key, which is why many cryptographers ensure constant run times in embedded cryptosystems.<br><br>
-These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
-<br><br><br>
+      <br><br><br>
+      
+      <strong><a href="#SocialEngineeringDef"><span class="mw-headline" id="SocialEngineeringDef">#</span></a> <font color="#006400">Social Engineering</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
+      
+      The process of bypassing the protections of a cryptosystem by going directly after the humans that have access to the secret key. Obtaining the key can range from kidnapping and forcing them to tell the key/password, to a simple phishing scheme over the phone or through email.
+      <br><br><br>
+      
+      <strong><a href="#ImplementationAttacksDef"><span class="mw-headline" id="ImplementationAttacksDef">#</span></a> <font color="#006400">Implementation Attacks</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
+      
+      Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important relation relating to the key.<br><br>
+      
+      For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a signal processing technique can be used to recover the key. The run time behavior can also indicate information regarding the key, which is why many cryptographers ensure constant run times in embedded cryptosystems.<br><br>
+      These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
+      <br><br><br>
 	    
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
-<br><br><br>
-
-<div class="rule"><strong>
+      <br><br><br>
+      
+      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
 
-<strong><u>Mathematical Definition</u></strong>:<br><br>
-
-<em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
-
-If the equality holds, a possible correct key is found; if not, proceed with the next key.
-</em>
-<br><br><br>
-
-<strong><u>Explanation:</u></strong><br><br>
-
-The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
-<br><br>
-As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
+      <strong><u>Mathematical Definition</u></strong>:<br><br>
+      
+      <em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
+      
+      If the equality holds, a possible correct key is found; if not, proceed with the next key.
+      </em>
+      <br><br><br>
+      
+      <strong><u>Explanation:</u></strong><br><br>
+      
+      The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
+      <br><br>
+      As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
 	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span>
 
-</div><br><br>
-
-<strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.
-<br><br><br>
-
-
-<div class="rule"><strong>
+      </div><br><br>
+      
+      <strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.
+      <br><br><br>
+      
+      
+      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
-The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
-There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
-</div><br><br>
+      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
+      
+      There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
+      </div><br><br>
 
 
 
@@ -327,19 +342,19 @@ There is no 'equation' for Analytical Attacks, because they are specific and uni
 	    </header>
 	    <article>
 
-At a minimum, an attacker will always know the ciphertext. There are four generic types of Analytic Attacks that specify what information the attacker possesses in addition (if anything):<br><br><br>
-
-<strong><a href="#CiphertextOnlyDef"><span class="mw-headline" id="CiphertextOnlyDef">#</span></a> <font color="#006400">Ciphertext-only Attack</font></strong>: An attack in which the adversary only has knows the ciphertext.
-<br><br><br>
-
-<strong><a href="#KnownPlaintextDef"><span class="mw-headline" id="KnownPlaintextDef">#</span></a> <font color="#006400">Known-plaintext Attack</font></strong>: In addition to the ciphertext, the adversary also knows some pieces of the plaintext (e.g., header information of an encrypted file or email).
-<br><br><br>
-
-<strong><a href="#ChosenPlaintextDef"><span class="mw-headline" id="ChosenPlaintextDef">#</span></a> <font color="#006400">Chosen-plaintext Attack</font></strong>: An attack in which the adversary can choose the plaintext that is being encrypted and also has access to the corresponding ciphertext, found through possession of the decryption function (whether aware of its internal workings or not).
-<br><br><br>
-
-<strong><a href="#ChosenCiphertextDef"><span class="mw-headline" id="ChosenCiphertextDef">#</span></a> <font color="#006400">Chosen-ciphertext Attack</font></strong>: An attack in which the adversary can choose ciphertexts and obtain the corresponding plaintexts, the goal being (typically) to recover the secret key.
-<br><br>
+      At a minimum, an attacker will always know the ciphertext. There are four generic types of Analytic Attacks that specify what information the attacker possesses in addition (if anything):<br><br><br>
+      
+      <strong><a href="#CiphertextOnlyDef"><span class="mw-headline" id="CiphertextOnlyDef">#</span></a> <font color="#006400">Ciphertext-only Attack</font></strong>: An attack in which the adversary only has knows the ciphertext.
+      <br><br><br>
+      
+      <strong><a href="#KnownPlaintextDef"><span class="mw-headline" id="KnownPlaintextDef">#</span></a> <font color="#006400">Known-plaintext Attack</font></strong>: In addition to the ciphertext, the adversary also knows some pieces of the plaintext (e.g., header information of an encrypted file or email).
+      <br><br><br>
+      
+      <strong><a href="#ChosenPlaintextDef"><span class="mw-headline" id="ChosenPlaintextDef">#</span></a> <font color="#006400">Chosen-plaintext Attack</font></strong>: An attack in which the adversary can choose the plaintext that is being encrypted and also has access to the corresponding ciphertext, found through possession of the decryption function (whether aware of its internal workings or not).
+      <br><br><br>
+      
+      <strong><a href="#ChosenCiphertextDef"><span class="mw-headline" id="ChosenCiphertextDef">#</span></a> <font color="#006400">Chosen-ciphertext Attack</font></strong>: An attack in which the adversary can choose ciphertexts and obtain the corresponding plaintexts, the goal being (typically) to recover the secret key.
+      <br><br><br>
 	    
 	    </article>
 	  </div>
@@ -375,7 +390,7 @@ At a minimum, an attacker will always know the ciphertext. There are four generi
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 1 2025</span><br>
+      	<span class="tiny">Last Change: July 4 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

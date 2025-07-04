@@ -3,6 +3,8 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+July 3rd, 2025: More serious, continual revisal work on Symmetric Cryptography. All of Subsections I.I and I.II were revised, though not much needed to be changed. Additionally, some changes and fixes were made to the Math Symbols page.
+
 July 1st, 2025: More serious, continual revisal work on Symmetric Cryptography than what I was able to do during my time at the camp.
 
 June 26th, 2025: Some small revisions to Symmetric Cryptography. I am currently at a summer camp, which is why my ability to edit has been minimal over the past few days. I will be able to do some small amount of work early and later in the days, however.

@@ -360,18 +360,22 @@ document.addEventListener("DOMContentLoaded", function (){
   	    </header>
   	    <article>
   	    
+  	    <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+	        <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
+	        
 	    
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+        </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
         
-          In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.
+        For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+        
+          In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
           </div><br><br>
           
-          <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
-          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
+          
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
 	    
@@ -391,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function (){
       These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
       <br><br><br>
 	    
-	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
+	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem; the <em>types</em> of cryptanalysis that can be used, including (but not limited to) those shown in Fig. 2.
       <br><br><br>
       
       <div class="rule"><strong>
@@ -500,7 +504,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Since the different letters of the English alphabet have different frequencies, and these frequencies are preserved even after scrambling (just different letters will <em>have</em> the frequencies), <strong>Letter Frequency Analysis</strong> can be conducted as an attack on the substitution cipher, making it rather simple.<br><br>
         
-        This is an example of a cipher/algorithm in which an Analytical Attack is most effective.
+        This is an example of a cipher/algorithm in which an Analytical Attack is most effective.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/English_letter_frequency_(alphabetic).png"><img src="/cryptography/img/English_letter_frequency_(alphabetic).png" alt="A generalized distribution of letters in the english language. In substitution ciphers, the frequencies remain the same, with only the letters that represent them changing. Courtesy of Wikimedia." width=58%/></a></div>
+	    <span class="tiny"><em>A generalized distribution of letters in the english language. In substitution ciphers, the frequencies remain the same, with only the letters that represent them changing. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:English_letter_frequency_(alphabetic).svg">Wikimedia</a>.</em></span>
 	    
 	    </div><br><br>
 	    
@@ -1871,7 +1877,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 3 2025</span><br>
+      	<span class="tiny">Last Change: July 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

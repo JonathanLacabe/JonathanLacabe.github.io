@@ -263,39 +263,47 @@ document.addEventListener("DOMContentLoaded", function (){
   	    </header>
   	    <article>
   	    
+  	    <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+	        <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
+	        
 	    
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that if just one attack works, then the entire cryptosystem crumbles and fails. While a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+        </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
         
-          In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks must be instituted.
+        For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 7).<br><br>
+        
+          In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
           </div><br><br>
           
-          <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
-          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
+          
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
 	    
-	    [[[[[[[
+	    The basic, algorithm-focused approach to cryptanalysis in which you analyze the inputs and outputs to probe a viable attack vector. This is the "<em>real</em>" cryptanalysis in the eyes of the cryptography snobs<!--cryptography snobs been real quiet since this dropped-->, in which you try to poke holes in the design of the cryptosystem itself.
       <br><br><br>
+      
       
       <strong><a href="#SocialEngineeringDef"><span class="mw-headline" id="SocialEngineeringDef">#</span></a> <font color="#006400">Social Engineering</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
       
       The process of bypassing the protections of a cryptosystem by going directly after the humans that have access to the secret key. Obtaining the key can range from kidnapping and forcing them to tell the key/password, to a simple phishing scheme over the phone or through email.
       <br><br><br>
       
+      
       <strong><a href="#ImplementationAttacksDef"><span class="mw-headline" id="ImplementationAttacksDef">#</span></a> <font color="#006400">Implementation Attacks</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
       
-      Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important relation relating to the key.<br><br>
+      Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important information relating to the key.<br><br>
       
-      For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a signal processing technique can be used to recover the key. The run time behavior can also indicate information regarding the key, which is why many cryptographers ensure constant run times in embedded cryptosystems.<br><br>
+      For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a <STRONG>signal processing technique</STRONG> can be used to recover the key (see E.E. [[[[[<!--not one hundred percent sure, just certain that I want o have somewhere that foes over this topic. perhaps electric engineering may have something on the subject? in the far future? https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/pages/syllabus/-->). The runtime behavior can also indicate information regarding the key, which is why many cryptographers ensure constant runtimes in embedded cryptosystems.<br><br>
       These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
       <br><br><br>
 	    
-	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem.
+	    
+	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem; the <em>types</em> of cryptanalysis that can be used, including (but not limited to) those shown in Fig. 2.
       <br><br><br>
+      
       
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -312,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong><u>Explanation:</u></strong><br><br>
       
-      The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
+      The testing of all possible keys in a given keyspace with the decryption function, to find the key that will produce the plaintext. This is akin to thinking of the cryptosystem as a <strong>black box</strong>, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
       <br><br>
       As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
@@ -329,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
-      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
+      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses that could enable reconstruction of the plaintext message, such as <u>Letter Frequency Analysis</u> (for the Substitution Cipher, see Rule 7) and <u>Differential Cryptanalysis</u> (for Block and Stream Ciphers, see Rule [[[[<!--an actual Rule fully going over differential cryptanalysis.-->).<br><br>
       
       There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
       </div><br><br>
@@ -354,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <br><br><br>
       
       <strong><a href="#ChosenCiphertextDef"><span class="mw-headline" id="ChosenCiphertextDef">#</span></a> <font color="#006400">Chosen-ciphertext Attack</font></strong>: An attack in which the adversary can choose ciphertexts and obtain the corresponding plaintexts, the goal being (typically) to recover the secret key.
-      <br><br><br>
+      <br><br>
 	    
 	    </article>
 	  </div>
@@ -390,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 5 2025</span><br>
+      	<span class="tiny">Last Change: July 6 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

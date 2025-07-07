@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    All IT Security follows the <strong>CIA Triad</strong>: <u>Confidentiality</u>, <u>Integrity</u> and <u>Availability</u> of information. Security is largely focused on protecting against attackers, while system safety & reliability is focused on protecting against random technical failures.
       <br><br><br>
       
-      <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis<!--chosen over cryptanalytic--> efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then cryptography is the engine.
+      <strong><a href="#CryptographyDef"><span class="mw-headline" id="CryptographyDef">#</span></a> <font color="#006400">Cryptography</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>The science of securing communication through encryption, especially against the cryptanalysis<!--chosen over cryptanalytic--> efforts of an adversary. Cryptographic algorithms are the bedrock of all cybersecurity systems - if cybersecurity is a car, then Cryptography is the engine.
       <br><br><br>
       
       <strong><a href="#CryptanalysisDef"><span class="mw-headline" id="CryptanalysisDef">#</span></a> <font color="#006400">Cryptanalysis</font></strong>: A sub-field of <em>Cryptology</em>;<br><br>
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       The classic form of Cryptography - two parties hold a secret key, enabling one party to encrypt a message and the other party to decrypt it. Thus, the same key is used for both encryption and decryption.<br><br>
       
-      Until 1976, this was the only form of cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Although it is indeed the <em>classic</em> form of cryptography, it is still highly relevant today, as AES remains an industry standard even <a href="https://eprint.iacr.org/2019/272.pdf">into the quantum age</a>.<br><br>
+      Until 1976, this was the only form of Cryptography in existence, and describes the basic nature of all historical ciphers (such as the shift/caesar cipher and affine cipher) and Stream Ciphers, Block Ciphers, and DES & AES. Although it is indeed the <em>classic</em> form of Cryptography, it is still highly relevant today, as AES remains an industry standard even <a href="https://eprint.iacr.org/2019/272.pdf">into the quantum age</a>.<br><br>
       
       Hash functions are somewhat similar to symmetric algorithms, though they can be considered an independent, <em>third</em> type of Cryptographic algorithm.
       <br><br><br>
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function (){
         For example, a well-formed algorithm may use the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
       </div><br><br>
       
-      <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmitted data from being intercepted, and from being intercepted in any meaningful form, is the goal of cryptography.
+      <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmitted data from being intercepted, and from being intercepted in any meaningful form, is the goal of Cryptography.
       <br><br><br>
       
       <strong><a href="#HybridSchemeDef"><span class="mw-headline" id="HybridSchemeDef">#</span></a> <font color="#006400">Hybrid Schemes</font></strong>: The combined usage of both asymmetric and symmetric algorithms in a cryptosystem, since both types have their own strengths and weaknesses (See [[[<!--should be a sort of comparison between the two types, something created at the end of public-key Cryptography to round off the two major forms as a whole-->).
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
         
-        For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack (with its 2^88 keyspace), it collapses against letter frequency analysis.<br><br>
+        For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 7).<br><br>
         
           In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
           </div><br><br>
@@ -379,24 +379,28 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    <strong><a href="#ClassicalCryptanalysisDef"><span class="mw-headline" id="ClassicalCryptanalysisDef">#</span></a> <font color="#006400">Classical Cryptanalysis</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
 	    
-	    [[[[[[[
+	    The basic, algorithm-focused approach to cryptanalysis in which you analyze the inputs and outputs to probe a viable attack vector. This is the "<em>real</em>" cryptanalysis in the eyes of the cryptography snobs<!--cryptography snobs been real quiet since this dropped-->, in which you try to poke holes in the design of the cryptosystem itself.
       <br><br><br>
+      
       
       <strong><a href="#SocialEngineeringDef"><span class="mw-headline" id="SocialEngineeringDef">#</span></a> <font color="#006400">Social Engineering</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
       
       The process of bypassing the protections of a cryptosystem by going directly after the humans that have access to the secret key. Obtaining the key can range from kidnapping and forcing them to tell the key/password, to a simple phishing scheme over the phone or through email.
       <br><br><br>
       
+      
       <strong><a href="#ImplementationAttacksDef"><span class="mw-headline" id="ImplementationAttacksDef">#</span></a> <font color="#006400">Implementation Attacks</font></strong>: A sub-field of <em>Cryptanalysis</em> (see Fig. 2);<br><br>
       
-      Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important relation relating to the key.<br><br>
+      Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important information relating to the key.<br><br>
       
-      For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a signal processing technique can be used to recover the key. The run time behavior can also indicate information regarding the key, which is why many cryptographers ensure constant run times in embedded cryptosystems.<br><br>
+      For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a <STRONG>signal processing technique</STRONG> can be used to recover the key (see E.E. [[[[[<!--not one hundred percent sure, just certain that I want o have somewhere that foes over this topic. perhaps electric engineering may have something on the subject? in the far future? https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/pages/syllabus/-->). The runtime behavior can also indicate information regarding the key, which is why many cryptographers ensure constant runtimes in embedded cryptosystems.<br><br>
       These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
       <br><br><br>
 	    
+	    
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem; the <em>types</em> of cryptanalysis that can be used, including (but not limited to) those shown in Fig. 2.
       <br><br><br>
+      
       
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -413,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong><u>Explanation:</u></strong><br><br>
       
-      The testing of all possible keys in a given keyspace with the decryption function, to see if they produce the plaintext. This is akin to thinking of the cryptosystem as a black box, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
+      The testing of all possible keys in a given keyspace with the decryption function, to find the key that will produce the plaintext. This is akin to thinking of the cryptosystem as a <strong>black box</strong>, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
       <br><br>
       As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
@@ -430,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
-      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses in the function that could enable reconstruction of the plaintext message, such as Letter Frequency Analysis (for the Substitution Cipher) and Differential Cryptanalysis (for Block and Stream Ciphers).<br><br>
+      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses that could enable reconstruction of the plaintext message, such as <u>Letter Frequency Analysis</u> (for the Substitution Cipher, see Rule 7) and <u>Differential Cryptanalysis</u> (for Block and Stream Ciphers, see Rule [[[[<!--an actual Rule fully going over differential cryptanalysis.-->).<br><br>
       
       There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
       </div><br><br>
@@ -490,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  <article>
 	  
 	  
-	    <strong><a href="#HistoricalCipherDef"><span class="mw-headline" id="HistoricalCipherDef">#</span></a> <font color="#006400">Historical Cipher</font></strong>: A cipher that was used before the development of modern cryptography, operating on letters instead of bits/bytes. Every one of these ciphers are easily crackable, from the Enigma Code to the Caesar Cipher.
+	    <strong><a href="#HistoricalCipherDef"><span class="mw-headline" id="HistoricalCipherDef">#</span></a> <font color="#006400">Historical Cipher</font></strong>: A cipher that was used before the development of modern Cryptography, operating on letters instead of bits/bytes. Every one of these ciphers is easily crackable, from the Enigma Code to the Caesar Cipher.
       <br><br><br>
 	    
 	    
@@ -502,9 +506,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         The Keyspace is 26!, or 2^88, as each plaintext letter that maps to a ciphertext letter decreases the remaining number of possible letters. Thus, a brute-force attack would be out of the question for modern computers.<br><br>
         
-        Since the different letters of the English alphabet have different frequencies, and these frequencies are preserved even after scrambling (just different letters will <em>have</em> the frequencies), <strong>Letter Frequency Analysis</strong> can be conducted as an attack on the substitution cipher, making it rather simple.<br><br>
+        Since the different letters of the English alphabet have different frequencies of appearance (see the image below), and these frequencies are preserved even after scrambling (just different letters will <em>have</em> the frequencies), <strong>Letter Frequency Analysis</strong> can be conducted as an attack on the substitution cipher, making cracking the cipher rather simple.<br><br>
         
-        This is an example of a cipher/algorithm in which an Analytical Attack is most effective.<br><br>
+        This is an example of a cipher/algorithm in which an Analytical Attack (see Rule 6) is most effective.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/English_letter_frequency_(alphabetic).png"><img src="/cryptography/img/English_letter_frequency_(alphabetic).png" alt="A generalized distribution of letters in the english language. In substitution ciphers, the frequencies remain the same, with only the letters that represent them changing. Courtesy of Wikimedia." width=58%/></a></div>
 	    <span class="tiny"><em>A generalized distribution of letters in the english language. In substitution ciphers, the frequencies remain the same, with only the letters that represent them changing. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:English_letter_frequency_(alphabetic).svg">Wikimedia</a>.</em></span>
 	    
@@ -539,12 +543,17 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
         
-        Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or remainder operator, see below), in effect 'wrapping' the number around the modulus, with respect to the difference between the number and any multiple of the modulus, known as the <em>remainder</em>.<br><br>
+        <!--avoid editing if possible, there is a very strange coincidental phenomeon occuring with the text on my particularly sized webpage that is very pleasing to the eye-->
+        Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. Any number greater than the modulus is rewritten using the <strong>modulus operator</strong> (or <strong>remainder operator</strong>) with respect to the difference between the number and any multiple<strong>*</strong> of the modulus (known as the <em>remainder</em>). Using modular representation is a bit jarring at first, as its effectively 'wrapping' the chosen number around the modulus, but frequent use (as it is a part of every cryptosystem) will make it second nature to the beginning cryptographer.<br><br>
         
-        The <em>preferred</em> multiple for finding the remainder (indeed, the exact one that would be found by division (see two paragraphs below)) is the greatest one lower than the number, but any will work - see Rule 10, Equivalence Classes.<br><br>
-        For example, with a modulus of 12, 61 would be represented as 1 mod 12.<br><br>
+        The best example for understanding modular arithmetic is something most are already familiar with: time on a clock. On clocks, the highest number is 12, and going any higher just loops back to the beginning. In effect, a clock is a modular arithmetic system using a set of {1, 2, ... 12} with a modulus of 12. 13 hours, for example, is represented as <strong>1 mod 12</strong>, using the modulus operator as specified in the mathematical definition.<br><br>
         
-        The process of finding the modular equivalent of a number is simple: divide the chosen number by the modulus, and find the remainder. The remainder will then be the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator.
+        The process of finding the modular equivalent of a number (in relation to an already known modulus/set) is simple: divide the chosen number by the modulus, and find the remainder (see Rule 9). The remainder will then be placed as the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator. For example, the modular representation of 4 in the clock example (mod 12) is just 4.<br><br>
+        
+        <!--an exceptionally rare triple emphasis on "preferred", with u, strong, and em all tagged simultaneously-->
+        <strong>*</strong>The <u><strong><em>preferred</em> multiple</strong></u> of the modulus for finding the remainder is <strong>the greatest multiple lower than the chosen number</strong>, allowing for the remainder to be as small as possible (0 ≤ r &lt; m). However, any multiple of the modulus will work (if with a larger remainder) - see Rule 10, Equivalence Classes. The preferred multiple just allows for the most simplified version of a modular representation, which is the version th This preferred multiple is also the one that would be most easily determined by division, as described in the paragraph above.<br><br>
+        
+        For example, with a modulus of 12, 61 would be represented as 1 mod 12, since 61 has a remainder of 1 in relation to <u>60</u>, the highest multiple of 12 below 61 (meaning that 60 is the preferred multiple). With respect to a clock, this means that 61 hours after 12 A.M. would be either 1 A.M. or 1 P.M., exactly <em>which</em> can be determined by mod 2 of the remainder (0 for A.M.; 1 for P.M.).<!--stroke of genius-->
         
         </div><br><br>
 
@@ -559,9 +568,8 @@ document.addEventListener("DOMContentLoaded", function (){
         <em>
         (a, m) ∈ <strong>ℤ</strong><br>
         0 ≤ r &lt; m <br><br>
-        a = q × m + r<br>
-        Thus, a - r = q × m<br><br>
-        <strong>m|(a − r)</strong>
+        <strong>a = (q × m) + r</strong><br>
+        Thus, <strong>a - (q × m) = r</strong>
         </em><BR><br><Br>
         
         <strong>ℤ</strong> = The set of all integers.<br>
@@ -569,6 +577,8 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong>q</strong> = The quotient, which produces a multiple of the modulus.<br>
         <strong>r</strong> = The remainder.<br>
         <strong>m</strong> = The modulus, the highest possible number in the set.<BR><br>
+        
+        
         The final equation is precisely the same as what was discovered before, and q is not involved whatsoever - all that matters is the remainder.
         
         </div><br><br>
@@ -896,6 +906,16 @@ Also recall that the mod operator will simply remain in place - it can be practi
 	  
 	  
 	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  </article>
 	    <header class="articleHeader"><hr><hr>
 	    <h2><span class="mw-headline" id="StreamCiphers">III. Stream Ciphers.</span></h2>
@@ -945,10 +965,10 @@ Using this symbol, the encryption and decryption functions of the basic stream c
 
 If the key bit is zero, then the plaintext bit will pass through unchanged, but if the key bit is 1, then the plaintext bit will flip (like binary). Thus, if the keystream (by divine intervention) is straight 0's, then the plaintext will go unencrypted. <br><br>
 The central complexity of the Stream Cipher is the generation of the "Key Stream", e.g. the stream of bits with which the plaintext is encrypted. This generation must be performed through <em>Random Numbers</em> - see Rule 23.
-<!--Most beautiful 90 seconds in cryptography:
+<!--Most beautiful 90 seconds in Cryptography:
 https://youtu.be/AELVJL0axRs?list=PL2jrku-ebl3H50FiEPr4erSJiJHURM9BX&t=1520
 
-the Mozart Piano Concerto #21 Andante of cryptography lecture segments
+the Mozart Piano Concerto #21 Andante of Cryptography lecture segments
 
 -->
 	  </div><br><br>
@@ -1017,7 +1037,7 @@ The rand() function in C is a PRNG and uses a seed of 12345, with the following 
 
 Given n output bits (s<sub>i</sub>, s<sub>i+1</sub>, ..., s<sub>i+(n-1)</sub>), it is computationally infeasible to construct s<sub>i+n</sub>.<br><br>
 
-While in most applications, PRNG systems are perfectly fine and suited to create 'random' numbers for whatever purpose, they form very unsecure cryptosystems, and thus in cryptography, the additional property of unpredictability is required.
+While in most applications, PRNG systems are perfectly fine and suited to create 'random' numbers for whatever purpose, they form very unsecure cryptosystems, and thus in Cryptography, the additional property of unpredictability is required.
 
 
 </li>
@@ -1684,7 +1704,7 @@ The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, 
 <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
 	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key.</em></span><br><br>
 
-The keysize of DES is 56 bits (and thus has a keyspace of only 2^56), highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern cryptography in its embryonic state. The subkeys used in DES for the Feistel Network are only 48 bits - see Rule [[[[ for why that is.
+The keysize of DES is 56 bits (and thus has a keyspace of only 2^56), highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in DES for the Feistel Network are only 48 bits - see Rule [[[[ for why that is.
 
 </div><br><br>
 
@@ -1877,7 +1897,7 @@ The design of the S-boxes in the DES cipher, both the mechanism for determining 
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 5 2025</span><br>
+      	<span class="tiny">Last Change: July 6 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

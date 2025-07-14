@@ -582,12 +582,16 @@ document.addEventListener("DOMContentLoaded", function (){
           <strong>m</strong> = The modulus, the highest possible number in the set.<br><br><br>
         
         <strong><u>Explanation:</u></strong><br><br>
-        To find the remainder in a modular arithmetic system (see Rule 8) when only the chosen number and the modulus (a and m) are known, there is an exact, algorithmic definition. Note that there are <em><strong>two</strong></em> unknown variables in this equation - the quotient and the remainder (q & r). As such, the quotient will have to be computed first in order to find the remainder.<br><br>
+        To find the remainder in a modular arithmetic system (see Rule 8) when only the chosen number and the modulus (a and m) are known, there is an exact, algorithmic definition. Note that there are <em><strong>two</strong></em> unknown variables in this equation - the quotient and the remainder (q & r). As such, the quotient will have to be determined first in order to find the remainder.<br><br>
         
-        Any integer will work for the quotient (as a result of equivalence classes, which will be discussed later in Rule 10), but the <em>preferred</em> quotient will be the one that produces the <em>preferred multiple</em> (once multiplied with m), which will then produce the <em>smallest positive remainder</em>. This is just a complicated way of saying that there is a particular quotient value that, when multiplied by the modulus, will produce <u>a <!--particular-->remainder with the chosen value</u> that will allow for the modular representation (the Rule 8 equation with the modulus operator) to be in its most simplified form. The specificities of how this "preferred muliple" formed by the quotient and the modulus functions are elaborated upon below.<br><br><!--rewritten, parts move up and down, excessively belabored. I tried to be as simple and understandable as possible while minimizing bloat, but as usual, the bloat seems to have won.-->
+        Any integer will work for the quotient (as a result of equivalence classes, which will be discussed later in Rule 10), but the <em>preferred</em> quotient will be the one that produces the <em>preferred multiple</em> (once multiplied with m), which will then produce the <em>smallest positive remainder</em> (known as the <em>preferred</em> remainder).<br><Br>
+        
+        This is just a complicated way of saying that there is a particular quotient value that, when multiplied by the modulus, will produce <u>a <!--particular-->remainder with the chosen value</u> that will allow for the modular representation (the Rule 8 equation with the modulus operator) to be in its most simplified form. The specificities of how this "preferred muliple" (formed by the quotient and the modulus) functions are elaborated upon below.<br><br><!--rewritten, parts move up and down, excessively belabored. I tried to be as simple and understandable as possible while minimizing bloat, but as usual, the bloat seems to have won.-->
         
         <!--an exceptionally rare triple emphasis on "preferred", with u, strong, and em all tagged simultaneously-->
         The <u><strong><em>preferred</em> multiple</strong></u> of the modulus for finding the remainder is <strong>the greatest multiple lower than the chosen number</strong>, allowing for the remainder to be as small as possible: 0 ≤ r &lt; m. Thus, the preferred multiple is mathematically the greatest (q × m) lower than a, which means finding the correct q given that m is a constant.<br><br>
+        
+        The difference between the preferred multiple and the chosen number is the <strong>smallest positive remainder</strong>, which is thus the <strong>preferred remainder</strong>.<br><br>
         
         For example, with a modulus of 12, 61 would be represented as 1 mod 12, since 61 has a remainder of 1 in relation to <u>60</u>, the highest multiple of 12 below 61 (meaning that 60 is the preferred multiple). With respect to a clock, this means that 61 hours after 12 A.M. would be either 1 A.M. or 1 P.M., exactly <em>which</em> can be determined by mod 2 of the remainder (0 for A.M.; 1 for P.M.).<!--stroke of genius--><br><br>
         
@@ -602,18 +606,18 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Equivalence Classes</strong>:<br><br>
 
-        While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. This is because, while the remainders may not exactly be the difference between 'a' (12) and the <u>highest</u> multiple of m lesser than a (9), they all still return true in the Modular Arithmetic formula (see Rule 8):<br><br>
+        While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. Although these remainders may not be the <em>preferred</em> remainder of 3 (see Rule 9), they all still return true in the Modular Arithmetic formula (see Rule 8):<br><br>
         
         12 ≡ 3 mod 9, 3 is a valid remainder since 9|(12−3)<br>
         12 ≡ 21 mod 9, 21 is a valid remainder since 9|(12−21)<br>
         12 ≡ −6 mod 9, −6 is a valid remainder since 9|(12−(−6))<br><br>
         
-        The set of all values that behave 'equivalently' for a particular modulus, in that they can be simplified down to the smallest possible positive number for r, form what is known as an <strong>Equivalence Class</strong>, an infinite set/series of values.<br><br>
+        The given remainder values can all be simplified down to their smallest possible positive number using the preferred multiple of the modulus, as detailed in Rule 9. Thus, all of these modular representations are inherently equal as they all have the same 'root' preferred remainder. The set of all remainder values that behave 'equivalently' for a particular modulus form what is known as an <strong>Equivalence Class</strong>, an infinite set/series of values.<br><br>
         
         For 3 mod 9, the equivalence class of r values is an infinite set, a partial series of which is as follows:<br>
         {..., -24, -15, -6, 3, 12, 21, 30, ...}<br><br>
         
-        If any of these values were to be substituted in for r (3) in 3 mod 9, it would be equivalent, the same value, because of the mod operator.<br><br>
+        If any of these values were to be substituted in for r (3) in 3 mod 9, it would be equivalent, the same value, because of the mod operator.<!--All of the values behave equivalently modulus 9.--><br><br>
         
         Note: There are 'm' equivalence classes for each possible remainder (0 through m-1), which collectively contain all possible integers. The difference between any two neighboring values in an equivalence class will be the modulus, as shown above.
 	  
@@ -624,7 +628,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#Rule"><span class="hash">#</span></a> 
           <font color="red">C. Rule <span class="rule-number"></span>.</font>
       </strong> <strong>Modular Reduction</strong>:<br><br>
-        Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions in mathematical operations that use the modulus operator can be performed, simplifying them.<br><br>
+        Because any value in an equivalence class acts the same with regard to the mod operator of a given modulus, then substitutions can be made in mathematical operations that use the modulus operator, simplifying them.<br><br>
 
         Take (13 × 16) - 8, with modulus 5. While the full number can be computed (200) and an answer derived from there (0 mod 5), that is lame and time-consuming. A much cooler, faster, 21st century means of solving the problem is to substitute in for each term the simplest member of their respective equivalence classes:<br><br>
         
@@ -634,8 +638,8 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Therefore, the same calculation can be performed with simply (3 × 1) - 3, which returns 0 mod 5, the same answer as before, but found much easier-ly.<br><br><br>
         
-        Note that this substitution trick does <u>not</u> equally extend to all mathematical operations. Exponentials, for example, cannot be simplified with the modulus:<br><br>
-        For the problem 3⁸ mod 7, the exponent '8' cannot be simplfied down to 1 mod 7, and the entire problem to 3 mod 7. Exponents simply cannot have the substitution performed.<br><br>
+        Note that this substitution trick does <u>not</u> extend equally to all mathematical operations. Exponentials, for example, cannot be simplified with the modulus:<br><br>
+        For the problem 3⁸ mod 7, the exponent '8' cannot be simplified down to 1 mod 7<!--, and the entire problem to 3 mod 7-->. Exponents simply cannot have the substitution performed, while the base can (as shown in the example below).<br><br>
         For all exponentials, simplification into smaller components (using the 2nd Holy Property of Exponents - see Math Rule 66) must be performed to simplify. For ex.: 3⁸ = (3²)⁴ = (9)⁴ = (2)⁴ = 16 mod 7 = <strong>2 mod 7</strong>, which is the answer.<br><br><br>
         
         <strong>Operations where equivalence class substitutions are allowed:</strong><Br><br>
@@ -643,7 +647,7 @@ document.addEventListener("DOMContentLoaded", function (){
         Addition<br>
         Substraction<br><br>
         <strong>Operations where equivalence class substitutions are banned:</strong><br><br>
-        Exponentials<br>
+        Exponentials (for the exponent itself, not including the base)<br>
         Division
       	  
   	  </div><br><br>
@@ -652,7 +656,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class (see Rule 10) for your final answer. Whether for a homework/test answer or for 'in-the-field' cryptography work, it is the standard to use the most simplified version of the class.<!--This smallest member is found using the preferred multiple, which is extensively discussed in Rule 9.-->
+        </strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class (see Rule 10) for your final answer. Whether for a homework/test answer or for 'in-the-field' cryptography work, it is convention to use the most simplified version of the class.<!--This smallest member is found using the preferred multiple, which is extensively discussed in Rule 9.-->
 	      </div><br><br>
 	  
 	  
@@ -664,7 +668,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <article>
 	    
 	    
-  	    <strong><a href="#IntegerRingDef"><span class="mw-headline" id="IntegerRingDef">#</span></a> <font color="#006400">Integer Ring</font></strong>: A set of elements which can have basic arithmetic operations performed upon them, such as addition and multiplication, so that the natural properties expected of addition and multiplication all hold. There are ring definitions/interpretations of polynomials, matrixes, and modular arithmetic (see Rule 13). Rings are a fundamental part of Ring Theory, a field of Abstract algebra. ([[[[[[)
+  	    <strong><a href="#IntegerRingDef"><span class="mw-headline" id="IntegerRingDef">#</span></a> <font color="#006400">Integer Ring</font></strong>: A set of elements which can have basic arithmetic operations performed upon them, such as addition and multiplication, so that the natural properties expected of addition and multiplication all hold. There are ring definitions/interpretations of polynomials, matrixes, and modular arithmetic (see Rule 13). Rings are a fundamental part of Ring Theory, a field of Abstract Algebra (see Math section [[[[[). <!--It will go multivariable -> linear algebra -> abstract algebra, with the harvard lecture series forming the brunt of the final: https://www.youtube.com/watch?v=VdLhQs_y_E8&list=PLelIK3uylPMGzHBuR3hLMHrYfMqWWsmx5&index=2-->
         <br><br><br>
 	    
 	  
@@ -676,39 +680,39 @@ document.addEventListener("DOMContentLoaded", function (){
           Modular Arithmetic can be defined in the form of an integer ring:<br><br><br>
           <em>
           The integer ring <strong>ℤ</strong><sub>m</sub> consists of the following characteristics:<br><br>
-          <strong>1.</strong> The set <strong>ℤ</strong><sub>m</sub> = {0, 1, ..., m-1}<br><br>
-          <strong>2.</strong> Two arithmetic operators, "+" and "×", hold for all (a, b, c, d) ∈ <strong>ℤ</strong><sub>m</sub> that:<br>
+          <strong>1.</strong> The set <strong>ℤ</strong><sub>m</sub> = {0, 1, ..., m-1}<!--this is a perfectly formed sentence, meant to be read outloud--><br><br>
+          <strong>2.</strong> Two arithmetic operators, "+" and "×", hold for all (a, b, c, d) ∈ <strong>ℤ</strong><sub>m</sub> such that:<br>
           &nbsp;&nbsp;<strong>i)</strong>&nbsp; a + b ≡ c mod m<br>
           &nbsp;&nbsp;<strong>ii)</strong> a × b ≡ d mod m
           </em><br><br><br>
           
           There are many overshadowing rules that every ring has to fulfill, seen in the section "RULES OF THE RING" below.
-	      </div><br><br>
+	      </div><br><br><br>
 	    
 	  
 	    <div title="You WILL accept these as true. You WON'T try to figure out how they were derived."><strong><font color="blue"><a href="#RingRules"><span class="mw-headline" id="RingRules">#</span></a> <u style="text-decoration:underline dotted">RULES OF THE RING:</u></font></strong></div><br>
-        These following rules hold true for all integer rings in general, not just modular arithmetic.<br><br>
+        These following rules hold true for all integer rings in general, not just those pertaining to modular arithmetic.<br><br>
       <ol>
 
-        <li> The ring should be closed: if any two numbers from the set are multiplied or added together, the result must be in the ring. This is ensured by the modulus operator.</li><br>
+        <li> The ring should be closed: if any two numbers from the set are multiplied or added together, the result must be in the ring. This is ensured by the modulus operator, which always pulls the number back into the set to a value below m.</li><br>
         
-        <li> Addition and multiplication are associative properties: For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a + (b + c) = (a + b) + c, and a × (b × c) = (a × b) × c.</li><br><br>
+        <li> Addition and multiplication are associative properties: For all (a, b, c) ∈ <strong>ℤ</strong><sub>m</sub>, a + (b + c) = (a + b) + c, and a × (b × c) = (a × b) × c.</li><br><br><br>
         
-        <strong>Addition:</strong><br><br><br>
+        <u><strong>Addition:</strong></u><br><br>
         
         <li> Addition is commutative for all (a, b) ∈ <strong>ℤ</strong><sub>m</sub>: a + b = b + a.</li>
         <br>
         
-        <li>There is an <strong>additive neutral element</strong>, 0. For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a + 0 ≡ a mod m</strong>.</li>
+        <li>There is an <strong>additive neutral element</strong>, 0. For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a + 0 ≡ a mod m</strong>. It is used to define the additive inverse.</li>
         <br>
         <!--ajj- backpack playing in my head all day-->
         
         <li>The <strong>additive inverse</strong> always exists: for any element a in the ring, there is always a negative element '-a' such that <strong>a + (-a) ≡ 0 mod m</strong>, the neutral element.</li>
-        <br><br>
+        <br><br><br>
         
-        <strong>Multiplication</strong>:<br><br><br>
+        <u><strong>Multiplication</strong></u>:<br><br>
         
-        <li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m.</strong></li><br>
+        <li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m</strong>. It is used to define the multiplicative inverse.</li><br>
         
         <li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in the Inverse Rules - see Rule 14 & Rule 15.<br><br>
         
@@ -726,27 +730,37 @@ document.addEventListener("DOMContentLoaded", function (){
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> To determine if an inverse exists for a specific 'a' of a specific modulus, simply find the gcd (Greatest Common Divisor) of the two values:<br><br>
+        </strong> <strong>Multiplicative Inverse Eligibility Test</strong>:<!--eligibility worker reference--><br><br>
+        
+        To determine if an inverse exists for a specific 'a' of a particular modulus, simply find the gcd (Greatest Common Divisor) of the two values:<br><br>
 
           If <strong>gcd(a, m) = 1</strong>, then there exists a⁻¹, and a & m are said to be "<strong>relatively prime</strong>", or "<strong>coprime</strong>".<br><br>
           If <strong>gcd(a, m) ≠ 1</strong>, then there does <u>NOT</u> exist a⁻¹.<br><br>
-          If m is prime, then gcd(a, m) will always equal to 1, for all nonzero 'a' values, and thus every 'a' value will have an inverse in those rings. The inverse of an integer completely depends on the ring, and thus the modulus.
+          
+          If m is prime, then gcd(a, m) will always equal to 1, for all nonzero 'a' values, and thus every 'a' value will have an inverse in that ring. The inverse of an integer completely depends on the ring, and thus the modulus.
 
-	      </div><br><br>
+	      </div><br><br><br>
+	  
 	  
 	  
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> Finding the <strong>Multiplicative Inverse</strong> of a has the following formula (as described in RULE OF THE RING #7):<br><br>
+        </strong> <strong>Application of Multiplicative Inverses</strong>:<br><br>
+        
+        Finding the <strong></strong>Multiplicative Inverse of 'a' has the following formula (as described in RULE OF THE RING #7):<br><br>
 
           <strong>a × a⁻¹ ≡ 1 mod m</strong>
           <br><br>
           
-          Though the multiplicative inverse of a is literally shown as a⁻¹, it is almost never the actual reciprocal of a. The reason for this is simple: All reciprocals other than -1 and 1 are not integers, and are thus not included in the set.<br><br>
+          Though the multiplicative inverse of a is literally shown as a⁻¹, it is almost never the actual reciprocal of a. The reason for this is simple: All reciprocals other than -1 and 1 are not integers, and are thus not included in the set (under part 1 of the ring definition given in Rule 13).<br><br>
           
-          Take a = 2, for example. The supposed inverse '1/2' is incorrect, because it is not included in the set. A different inverse must be found specific to the modulus; if the modulus were 3, then an inverse of '2' would work:<br><br>
-          <strong>2 × 2 ≡ 1 mod 3</strong>
+          Take a = 5, for example. The supposed inverse '1/5' is incorrect in any context, because it is not included in the set. A different inverse must be found specific to the modulus. For example, if the modulus were 7, then (as the given values pass the multiplicative eligibility test of Rule 14) the true multiplicative inverse can be found:<br><br>
+          <strong>5 × 5⁻¹ ≡ 1 mod 7</strong><br><br>
+          <strong>5 × 3 ≡ 1 mod 7</strong><br><br>
+          <strong>5⁻¹ = 3</strong><br><br>
+          
+          As shown<!-- and as described--> above, when used in regards to algebraic rings, the concept of an 'inverse' bears no relation to its common usage in representing reciprocals.<!--unnecessary bloat overexplanation: Instead, it is merely used in rings to represent any value that fulfills the given inverse definition, whether in terms of the additive or multiplicative definitions-->
 	      </div><br><br>
 	    
 	    
@@ -775,17 +789,17 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong>x</strong> = Plaintext message.<br>
         <strong>y</strong> = Ciphertext.<br>
-        <strong>k</strong> = The Key fed into the encryption and decryption functions.<br>
+        <strong>k</strong> = The Key fed into the encryption and decryption functions. Here, it represents the number of times that the characters of the plaintext are shifted rightward, using the alphabet<!--(or whatever)--> as the set. Variations may use an expanded set, including numbers and special characters.<br>
         <strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
         <strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
         <strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
-        <strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
+        <strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26. Variations may use an expanded set, including numbers or special characters, in which case the '26' would change accordingly.
     	  <br><br><br>
     	  
     	  
     	  <strong><u>Explanation:</u></strong><br><br>
     	  
-    	  A simplified form or special case of the Substitution Cipher, the <strong>Shift Cipher</strong> (or <strong>Caesar Cipher</strong>) merely shifts every plaintext letter however many so positions rightward in the alphabet, wrapping around when it reaches the end (modular arithmetic!). This is occasionally known as the "ROT" Cipher, and the most well-known example is <a href="https://rot13.com/">ROT13</a>, which shifts rightward precisely halfway through the alphabet.<br><br>
+    	  A simplified form or special case of the Substitution Cipher (Rule 7), the <strong>Shift Cipher</strong> (or <strong>Caesar Cipher</strong>) merely shifts every plaintext letter however many so positions rightward in the alphabet, wrapping around when it reaches the end (modular arithmetic!). This is occasionally known as the "ROT" Cipher (short for "rotate"), and the most well-known example is <a href="https://rot13.com/">ROT13</a>, which shifts rightward precisely halfway through the alphabet.<br><br>
     
         As a generic example, with a key of 1, some shifts would be as follows:<br><br>
         a -> b<br>
@@ -1930,7 +1944,7 @@ The nature of the Feistel Network is such that the only distinguishing character
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 9 2025</span><br>
+      	<span class="tiny">Last Change: July 13 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

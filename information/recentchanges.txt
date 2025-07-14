@@ -3,6 +3,20 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+July 13th, 2025: Further Cryptography work. I expect reivisals to finish tomorrow, and the addition of new content to begin as well.
+
+July 12th, 2025: Additional work in Crytography, particularly in Symmetric Cryptography Section II.
+
+July 9th, 2025: Rules 8 and 9 in Symmetric Cryptography (relating to Modular Arithmetic) were completely revised, and the two were particularly troublesome considering the inadequacy of the previous writings for them. Additionally, I have begun preparing for newer Physics subcategories, such as Vibrations and Waves. There is no logo yet, but I have already prepared a quote for it on the main Physics page.
+
+July 8th, 2025: Further Cryptography and Physics work. Additionally, I made several revisions to the Electromagnetism subcategory of Physics as I found some missing information regarding the electric fields produced by cylinders.
+
+July 7th, 2025: More cryptography revision, concentrated in Section II. 
+
+July 6th, 2025: Significant work done on the Cryptography pages. Sections I through II were almost completely revised. 
+
+July 5th, 2025: Further Cryptography Work.
+
 July 3rd, 2025: More serious, continual revisal work on Symmetric Cryptography. All of Subsections I.I and I.II were revised, though not much needed to be changed. Additionally, some changes and fixes were made to the Math Symbols page.
 
 July 1st, 2025: More serious, continual revisal work on Symmetric Cryptography than what I was able to do during my time at the camp.

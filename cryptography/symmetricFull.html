@@ -272,12 +272,13 @@ document.addEventListener("DOMContentLoaded", function (){
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> In Cryptography, '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to different parts of the same process: the components of to assist in both encrypting and decrypting the data schemes that process data.<br><br>
+        </strong> In Cryptography, '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to different parts of the same process: the components of a cryptosystem at different scales, algorithms being the largest scale component and primitives being the smallest.<br><br>
         
         <strong><u>Primitives</u></strong> are the basic cryptographic functions (building blocks of an algorithm), <strong><u>Ciphers</u></strong> are the implementation of an encryption scheme, and <strong><u>Algorithms</u></strong> are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br>
         
-        For example, a well-formed algorithm may use the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
+        For example, a well-formed algorithm may incorporate the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
       </div><br><br>
+      
       
       <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmitted data from being intercepted, and from being intercepted in any meaningful form, is the goal of Cryptography.
       <br><br><br>
@@ -559,6 +560,9 @@ document.addEventListener("DOMContentLoaded", function (){
         Using modular representation is a bit jarring at first, as it effectively 'wraps' the chosen number around the modulus, but frequent use (as it is used in practically every cryptosystem) will make it second nature to the beginning cryptographer.
         
         </div><br><br>
+        
+        <strong><a href="#CyclicShiftDef"><span class="mw-headline" id="CyclicShiftDef">#</span></a> <font color="#006400">Cyclic Shift/Cyclical Shift</font></strong>: A fancy term essentially just denoting the usage of modular arithmetic in a particular context, with sets wrapping around once they reach an overflow value and whatnot.
+          <br><br><br>
 
 	  
 	  
@@ -764,6 +768,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	      </div><br><br>
 	    
 	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> Always, as a rule of life, write denominators as (x)⁻¹<!--when dealing with division--> (instead of as below a line). With the importance of the inverse operation, it is always critical to recognize all denominators as just being inverses of their values. 1/a = a⁻¹.
+	      </div><br><br>
+	    
 	    
 	  
 	  </article>
@@ -810,8 +820,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (previously explained in relation to Substitution Ciphers - see Rule 7) and brute-force attacks (see Rule 5).
         
-        </div><br><br>
-
+        </div><br><br><br>
+        
+        
 
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -830,27 +841,31 @@ document.addEventListener("DOMContentLoaded", function (){
           </em><br><br><br>
           
           <strong>x</strong> = Plaintext message.<br>
-          <strong>y</strong> = Ciphertext.<br>
-          <strong>k</strong> = The Key/codeword fed into the encryption and decryption functions, which, like the plaintext, is a series of letters (represented by their numerical value, 0-25) that are used by their i position.<br>
-          <strong>i</strong> = The position in the string of both the key and the plaintext.<br>
-          <strong>l</strong> = The length of the codeword.<br>
-          <strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
+          <strong>y</strong> = Ciphertext.<br><br>
+          <strong>k</strong> = The Key/codeword fed into the encryption and decryption functions, which, like the plaintext, is a series of letters (represented by their numerical value, 0-25) that are referred to by their i position. The key may have less, more, or the same number of characters as the plaintext (see 'l').<br><br>
+          <strong>i</strong> = The position in the string of the plaintext, and regardless of the length of l (as a result of the mod operator), the key.<br><br>
+          <strong>mod l</strong> = 'l' represents the length of the codeword. The mod operator functions such that if there are less characters in the codeword than in the plaintext, then the codeword characters will wrap around so that they can continue being used to produce ciphertext indefinitely.<br><br>
+          <strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br><br>
           <strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
           <strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
           <strong>mod 26</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to 26.
           
           <br><br><br>
           
+          
           <strong><u>Explanation:</u></strong><br><br>
           
-          A mere variation of the Shift cipher, in which the shift for each letter is determined by a secret code word 'c', which has 'l' letters. Each character in the code word c represents a number of shifts rightward according to its cipher.<br><br>
-          The letters of the code word are denoted as (c<sub>0</sub>, c<sub>1</sub>, ..., c<sub>l - 1</sub>), and as the keys, they are also represented as (k<sub>0</sub>, k<sub>1</sub>, ..., k<sub>l - 1</sub>), respectively.<br><br>
+          A mere variation of the Shift cipher, in which the shift for each letter is determined by a secret codeword 'c', which has 'l' characters. Each character in the code word c represents a number of shifts rightward according to the numerical value. For example, 'a' would represent a rightward shift of zero places, while 'z' would represent a shift of 25 places.<br><br>
           
-          The encryption function works as follows: Each character in the plaintext string 'x' is applied a rightward shift according to its respective letter (identical position) in the key text (a cyclic shift, if the addition of the key letter produces a number greater than 26).<br><br>
+          The encryption function works as follows: Each character in the plaintext string 'x' is applied a rightward shift according to its respective letter (identical position) in the key text. This is a <em>cyclic</em> shift (see definition), for if the addition of the key-character value produces a number greater than 26, then the alphabet will wrap around to the beginning. For example, the plaintext character 'z' plus the codeword character 'b' will produce the ciphertext character 'a'. An interesting side-effect of this is that if the keytext is just a string of 'a' ("aaaaaaaa"), then the ciphertext will be identical to the plaintext.<!--idk why I added that little tidbit, I just thought it was sort of neat when I was doing my own little thought experiments on the subject--><br><br>
           
-          This dictates that the length of the code word must be the same or larger than that of the actual code itself, which is somewhat inefficient for longer plaintexts. E.g., |x| ≤ l.<br><br>
+          The decryption function, of course, is just the opposite of the encryption function, moving each character of the ciphertext backward by the value in the positional counterpart of the code word 'c'.<br><br>
           
-          The decryption function, of course, is just the opposite of the encryption function, moving each character of the ciphertext backward by the value in the positional counterpart of the code word 'c'.
+          Because of the way the equation is written, the key does not necessarily need to have the same number of characters as the plaintext. The mod operator on the 'l', the number of characters in the codeword, causes any short codeword to wrap around to account for any longer plaintext strings. For example, for a plaintext of "lingonberry" and a codeword of "sup", the mod operator would cause the codeword to effectively become "supsupsupsu", accounting for each character of the plaintext. Likewise, any codeward longer than the plaintext has any characters beyond the length of the plaintext ignored.<br><br>
+          
+          For each value of i within l, the characters of the codeword are mathematically denoted as {c<sub>0</sub>, c<sub>1</sub>, ..., c<sub>l - 1</sub>}, and the keys are similarly represented as {k<sub>0</sub>, k<sub>1</sub>, ..., k<sub>l - 1</sub>}.
+          
+          
           
           </div><br><br>
 	  
@@ -879,10 +894,10 @@ document.addEventListener("DOMContentLoaded", function (){
           
           <strong>x</strong> = Plaintext message.<br>
           <strong>y</strong> = Ciphertext.<br>
-          <strong>K</strong> = (symbol not depicted) The key, which has been split into two parts: a and b.<br>
+          <strong>K</strong> = The key, which has been split into two parts: a and b.<br>
           <strong>a</strong> = The multiplied value of the key. The number of possible 'a' values is limited by the necessity of the inverse (for the decryption function), as explained below.<br>
           <strong>a⁻¹</strong> = The inverse of a, necessary for the decryption function.<br>
-          <strong>b</strong> = The "shift parameter" value of the key, only in addition and subtraction operations. There are 26 possible values for b, explained below.<br>
+          <strong>b</strong> = The "shift parameter" value of the key, used only in addition and subtraction operations. There are 26 possible values for b, explained below.<br>
           <strong><strong>ℤ</strong><sub>26</sub></strong> = A ring of the first 26 integers (including 0), matching the 26 characters of the alphabet.<br>
           <strong>e<sub>k</sub>(x)</strong> = Encryption function, a mathematical formula that converts x into y.<br>
           <strong>d<sub>k</sub>(y)</strong> = Decryption function, a mathematical formula that converts y into x.<br>
@@ -893,35 +908,31 @@ document.addEventListener("DOMContentLoaded", function (){
           
           <strong><u>Explanation:</u></strong><br><br>
           
-          The <strong>Affine Cipher</strong> is an attempted improvement of the shift cipher, done by complicating the encryption function through the addition of multiple parameters, but is still extremely easy to break. The affine cipher is performed by splitting the key into two parts:<br><br>
+          The <strong>Affine Cipher</strong> is an attempted improvement of the shift cipher, done by complicating the encryption function through the addition of multiple parameters. However, it is still extremely easy to break. The affine cipher is performed by splitting the key into two parts:<br><br>
           
           <strong>K = (a, b)</strong><br><br>
           
           The number of possible b values in the system is 26, as it is merely the shift parameter (as shown in the definition equations).<br><br>
           
-          The number of possible a values is limited by the condition explicated in the gcd inverse Rule (see Rule 14), with m being 26: only when gcd(a, 26) = 1 is 'a' an inverse, and thus contributive to the number of possible values. Counting all possible values of a (1, 3, 5, 7, 9, ...), all odd numbers 1-26 other than 13, produces an end result of 12 possible 'a' values.<br><br>
+          The number of possible a values, as a result of the inverse in the decryption function, is limited by the condition explicated in the multiplicative inverse eligibility test of Rule 14, with m being 26: only when gcd(a, 26) = 1 is 'a' an inverse, and thus contributive to the number of possible values. Counting all possible values of a (1, 3, 5, 7, 9, ...), all odd numbers 1-26 other than 13, produces an end result of 12 possible 'a' values.<br><br>
           
           The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to break using a brute-force attack (see Rule 5).<br><br> 
           
-          Furthermore, letter frequency also remains preserved (since any of a particular character (plaintext) will always be converted to another specific character (ciphertext), despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
+          Furthermore, letter frequency also remains preserved (since every instance of a particular plaintext character will be converted into the same corresponding ciphertext character, despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
           
-          Though multiple encryption will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule 43).
-          </div><br><br>
+          Though multiple encryption (i.e., running the ciphertext produced by encryption function <em>back into</em> the encryption function to encrypt it again) will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule 43).
+          </div><br><br><br>
 
 	  
-	      <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> Always, as a rule of life, write denominators as (x)⁻¹ instead of as below a line. With the importance of the inverse operation, it always critical to recognize all divisors as being inverses of their variable. 1/a = a⁻¹.
-	  
-	      </div><br><br>
-	  
 	  
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> Note: You can ALWAYS derive the decryption function from the encryption function in mathematical definitions of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
-        Also recall that the mod operator will simply remain in place - it can be practically ignored until the end of the isolation, with it not playing a part in moving variables from side to side and whatnot.
+        </strong> Note: You can ALWAYS derive the decryption function from the encryption function of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
+        
+        In doing so, always recall that dividing by a variable (as can occur when dividing both sides as a part of the isolation process) makes that variable into its inverse, as foretold in the lesson of Rule 16 and as demonstrated in the mathematical definition of Rule 19.<br><br><!--EXTREMELY 2096 wording. This is the writing of the future.-->
+        
+        Know that when doing any algebra with an encryption/decryption equation, the mod operator will simply remain in place on whichever side it was on originally. The mod can be effectively ignored until the end of the isolation process, with it not playing a part in the moving of variables from side to side and whatnot. It will continue to act upon whichever variables are on its side of the equation.
         </div><br><br>
 	  
 	  
@@ -957,7 +968,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
       <strong>Fig. 3. - Symmetric Cryptography Hierarchy:</strong><br>
       <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 5 for Cryptanalysis." width=58%/></a></div>
-	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 5 for Cryptanalysis.</em></span><br><br><br>
+	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 5 for Cryptanalysis.</em></span><br><br><br><br>
 	  
 	  
 	      <div class="rule"><strong>
@@ -988,7 +999,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <strong><u>Explanation:</u></strong><br><br>
       A cipher that encrypts bits individually, processing one bit after another in a sequence. This is opposed to a Block Cipher (see Section IV), which takes in large amounts of bits all at once.<br><br>
       
-      The modular 2 operation (see Rule 22) has its own symbol in cryptographic diagrams: a circle with a cross. In electrical engineering, the mod 2 function is known as the XOR gate, a type of binary gate ([[[[[). <br><br>
+      The modular 2 operation (see Rule 22) has its own symbol in cryptographic diagrams: a circle with a cross. In electrical engineering, the mod 2 function is known as the XOR gate, a type of binary gate (see E.E. [[[[[). <br><br>
       
       Using this symbol, the encryption and decryption functions of the basic stream cipher can be depicted as shown:<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/StreamDiagram.png"><img src="/cryptography/img/StreamDiagram.png" alt="A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function." width=73%/></a></div>
@@ -1023,9 +1034,11 @@ document.addEventListener("DOMContentLoaded", function (){
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br>
+        </strong> <strong>Modular 2 Operations</strong>:<br><br>
+        
+          Mod 2 addition and subtraction are the same operation (an XOR gate). Multiplication complicates things, but in all instances where the mod 2 function is limited to addition or subtraction, the results will be identical no matter which operation is applied.<br><br>
 	  
-      	  Note that this does <STRONG>NOT</STRONG> extend to the modulus of any other number - only for two. See the Vigenère Cipher (see Rule 17), which works akin to a stream cipher, for proof.
+      	  Note that this does <STRONG>NOT</STRONG> extend to the modulus of any other number - only for two. See the Vigenère Cipher (see Rule 18), which works akin to a stream cipher, for proof.
       	  
       	  </div><br><br>
 	  
@@ -1944,7 +1957,7 @@ The nature of the Feistel Network is such that the only distinguishing character
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 13 2025</span><br>
+      	<span class="tiny">Last Change: July 15 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

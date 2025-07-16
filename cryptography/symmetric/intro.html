@@ -175,12 +175,13 @@ document.addEventListener("DOMContentLoaded", function (){
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> In Cryptography, '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to different parts of the same process: the components of to assist in both encrypting and decrypting the data schemes that process data.<br><br>
+        </strong> In Cryptography, '<strong>Primitives</strong>', '<strong>Ciphers</strong>', and '<strong>Algorithms</strong>' all refer to different parts of the same process: the components of a cryptosystem at different scales, algorithms being the largest scale component and primitives being the smallest.<br><br>
         
         <strong><u>Primitives</u></strong> are the basic cryptographic functions (building blocks of an algorithm), <strong><u>Ciphers</u></strong> are the implementation of an encryption scheme, and <strong><u>Algorithms</u></strong> are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br>
         
-        For example, a well-formed algorithm may use the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
+        For example, a well-formed algorithm may incorporate the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
       </div><br><br>
+      
       
       <strong><a href="#ChannelDef"><span class="mw-headline" id="ChannelDef">#</span></a> <font color="#006400">Channel</font></strong>: A transmission medium for data to pass through. Examples include the Internet, airways, and Wi-Fi. Securing transmitted data from being intercepted, and from being intercepted in any meaningful form, is the goal of Cryptography.
       <br><br><br>
@@ -263,20 +264,21 @@ document.addEventListener("DOMContentLoaded", function (){
   	    </header>
   	    <article>
   	    
-  	    <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
-          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
-	        <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
-	        
-	    
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
+  	    
+	    <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+        <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
         
-        For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 7).<br><br>
-        
-          In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
-          </div><br><br>
+    
+      <div class="rule"><strong>
+          <a href="#Rule"><span class="hash">#</span></a> 
+          <font color="red">C. Rule <span class="rule-number"></span>.</font>
+      </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
+      
+      For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 7).<br><br>
+      
+        In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
+        </div><br><br>
           
           
 	    
@@ -305,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <br><br><br>
       
       
-        <div class="rule"><strong>
+      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #1: Brute-Force Attack/Exhaustive Key search</strong>:<br><br>
@@ -398,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 7 2025</span><br>
+      	<span class="tiny">Last Change: July 15 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

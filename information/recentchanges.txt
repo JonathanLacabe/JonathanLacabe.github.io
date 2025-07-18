@@ -3,6 +3,15 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+July 17th, 2025: The addition of an additional Rule to Symmetric Cryptography in order to tie up some lose ends that appear that later on. 
+Rules Added: Cryptography, Symmetric Cryptography - Rule 47.
+
+July 16th, 2025: Revisals of Section III.II completed.
+
+July 15th, 2025: Revisals of Symmetric Cryptography Section II have been completed.
+
+July 14th, 2025: Further cryptography work, as well as on the math symbols page.
+
 July 13th, 2025: Further Cryptography work. I expect revisals to finish tomorrow, and the addition of new content to begin as well.
 
 July 12th, 2025: Additional work in Crytography, particularly in Symmetric Cryptography Section II.

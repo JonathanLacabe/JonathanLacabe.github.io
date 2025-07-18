@@ -124,9 +124,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	  </header>
 	  <article><br>
 	  
-	    <strong>Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
-	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 5, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br><br> 
+	    <strong><a href="#Fig1"><span class="mw-headline" id="Fig1">#</span></a> Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 6, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
+	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 6, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br><br> 
 	    
 	    
 	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security - the protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    To stop Oscar from reading the message, an encryption algorithm can be established, converting the plaintext message (x) into a ciphertext message (y), and then sending it through the insecure channel. Oscar would only see a stream of random characters/bits as a result of the encryption. Bob, using a decryption function, would convert the ciphertext back into plaintext, thus completing the data transfer without interception.<br><br>
 
-      In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which, counterintuitively, should actually be made publicly available - see Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
+      In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which, counterintuitively, should actually be made publicly available - see Rule 4), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
 
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/AliceBobSecure.png"><img src="/cryptography/img/AliceBobSecure.png" alt="A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions.</em></span><br><br> 
@@ -228,9 +228,43 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong>K</strong> = The Key fed into the encryption and decryption functions.<br><br>
       	    
-      <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 5). The keyspace corresponds to the <strong>key size</strong>/<strong>key length</strong> of the algorithm - if the algorithm produces a 168-bit key (see Rule [[[[), then there are 2^168 possible keys.
+      <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 6), and entails other characteristics detailed in Rule 3.
       	    
-      </div><br><br>	    
+      </div><br><br><br>
+      
+      
+      
+      <strong><a href="#BitsOfEntropyDef"><span class="mw-headline" id="CryptosystemDef">#</span></a> <font color="#006400">Bits of Entropy</font></strong>: ⌈log<sub>2</sub> 𝒦⌉, where 𝒦 is the keyspace of a cryptosystem (the number of possible keys). For example, if a cryptosystem has 2^100 keys, then that cryptosystem has 100 bits of entropy. It really is just a term used to flex security, not in reference to anything tangible other than the size of the keyspace itself - it is a self-referential term, actively disguising useful information behind additional artificial buzzwords.<br><br>
+      
+      It happens to share the same equation as the keylength (as detailed in Rule 3 below), but note that "bits of entropy" is not a term chained to any particular requirement and can thus be applied to any cryptosystem, while the concept of a keylength has several prerequisites that limit its usage.
+      
+      <br><br><br><br>
+      
+      
+      
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong><strong>Keyspace Mathematics</strong>:<br><br>
+        In Symmetric Cryptography, there is an inherent relation between the keyspace of a cryptosystem (|K| or 𝒦), and the <em>length</em> of the key (L) that the cryptosystem uses. It is fairly simple and intuitive, but has some key caveats.<br><br>
+        
+        If the algorithm uses a 168-bit key, then there are 2^168 possible keys. Mathematically, that is represented using either of the following equations:<br><br>
+        <strong>𝒦 = 2ᴸ</strong><br>
+        <strong>L = ⌈log<sub>2</sub> 𝒦⌉</strong><br><br>
+        
+        These two equations are equivalent, with the latter being derived from taking the log of both sides. The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out a small number of symmetric cryptosystems with selective application of their keys/keybits<!--gives 2012 tumblr vibes idk--> - see Rule [[[.<!--[[[ update this when the thing with DES is completely done. it takes in 64 bits but only uses 56, which is why it has a keyspace of 2^56, as the other 8 are used for other purposes; parity tests.--><br><br>
+        
+        There are some limitations that narrow the applicability of this relation - in effect, it only really applies to <em>modern symmetric</em> cryptosystems (unless specified otherwise, like the aforementioned DES). First, all ciphers that do not explicitly <em>have</em> a key-length, such as those that operate on letters instead of bits (e.g., every historical cipher in Section II), do not qualify. A cipher must structure its keys in the form of <u>binary strings with fixed lengths</u> in order for the relation to be applicable.<br><br>
+        
+        <!--The professor continued with great emphasis: "-->
+        The very concept of "<strong>keybits</strong>" is dependent on the fact that the cipher is using a key made from binary bits - any ciphers that do not meet that requirement are instantly null in regards to the given relation.<br><br>
+        
+        For example, the Shift Cipher has a keyspace of 26, but that in no way means that the "key-length" of the cipher is log<sub>2</sub> 26 (though it will indeed have log<sub>2</sub> 26 "bits of entropy"). For non-bit cryptosystems, there is no real key-length, but these ciphers are nonsense cryptography that are not to be taken seriously anyways<!--just felt like airing that out there. the world needs to know-->.<br><br>
+        
+        Furthermore, this relation does not hold for asymmetric cryptography: There is a significant difference between symmetric keys and asymmetric keys: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key. For information as to why this is, see Rule [[[.<!--ended up getting rid of some brackets hust to add more brackets. good idea for the future though, to illustrate why this is the way that it is.-->
+        
+        </div><br><br>
+      
       
       
       <div class="rule"><strong>
@@ -265,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function (){
   	    <article>
   	    
   	    
-	    <strong>Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
+	    <strong><a href="#Fig2"><span class="mw-headline" id="Fig2">#</span></a> Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
         <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
         
@@ -275,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <font color="red">C. Rule <span class="rule-number"></span>.</font>
       </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
       
-      For example, while a substitution cipher (see Rule 7) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 7).<br><br>
+      For example, while a substitution cipher (see Rule 8) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 8).<br><br>
       
         In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
         </div><br><br>
@@ -306,6 +340,11 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem; the <em>types</em> of cryptanalysis that can be used, including (but not limited to) those shown in Fig. 2.
       <br><br><br>
       
+      <strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.<br><br>
+      
+      This is especially relevant for cryptanalysis requiring intensive computing power, such as brute-force attacks (see Rule 6 below).
+      <br><br><br><br>
+      
       
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
@@ -314,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
       <strong><u>Mathematical Definition</u></strong>:<br><br>
       
-      <em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the key space of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
+      <em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the keyspace of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
       
       If the equality holds, a possible correct key is found; if not, proceed with the next key.
       </em>
@@ -324,14 +363,15 @@ document.addEventListener("DOMContentLoaded", function (){
       
       The testing of all possible keys in a given keyspace with the decryption function, to find the key that will produce the plaintext. This is akin to thinking of the cryptosystem as a <strong>black box</strong>, in which the only significant factor to decoding an encrypted message is the number of possible keys the message could have been created with. 
       <br><br>
-      As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all key bits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key.<br><br>
+      
+      As shown in the illustration below, different keyspaces take different amounts of time to crack using brute-force. As such, only algorithms with a sufficiently large keyspace can be considered secure against brute-force, though not necessarily against any other form of attack.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
-	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span>
+	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span><br><br>
+	    
+	    As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all keybits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key, as noted in Rule [[[<!--3-->. For why this is, see Rule [[[.<!--Same as from Rule 3.-->
 
       </div><br><br>
       
-      <strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.
-      <br><br><br>
       
       
       <div class="rule"><strong>
@@ -339,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
-      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses that could enable reconstruction of the plaintext message, such as <u>Letter Frequency Analysis</u> (for the Substitution Cipher, see Rule 7) and <u>Differential Cryptanalysis</u> (for Block and Stream Ciphers, see Rule [[[[<!--an actual Rule fully going over differential cryptanalysis.-->).<br><br>
+      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses that could enable reconstruction of the plaintext message, such as <u>Letter Frequency Analysis</u> (for the Substitution Cipher, see Rule 8) and <u>Differential Cryptanalysis</u> (for Block and Stream Ciphers, see Rule [[[[<!--an actual Rule fully going over differential cryptanalysis.-->).<br><br>
       
       There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
       </div><br><br>
@@ -400,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 15 2025</span><br>
+      	<span class="tiny">Last Change: July 18 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

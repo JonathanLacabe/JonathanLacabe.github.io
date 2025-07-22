@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#Terminology">I.I Classification & Terminology.</a>
         </div>
         <div class="toc-column">
-          <a href="#AnalysisBasics">I.III Cryptanalysis Basics.</a>
+          <a href="#AnalysisBasics">I.IV Cryptanalysis Basics.</a>
         </div>
         
       </div>
@@ -111,7 +111,17 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#SymmetricBasics">I.II Symmetric Crypto. Basics.</a>
         </div>
         <div class="toc-column">
-          <a href="#GenericAttacks">I.IV Generic Analytical Attacks.</a>
+          <a href="#GenericAttacks">I.V Generic Analytical Attacks.</a>
+        </div>
+        
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#KeyTerminology">I.III Key Terminology.</a>
+        </div>
+        <div class="toc-column">
+          <!--<a href="#GenericAttacks">I.IV Generic Analytical Attacks.</a>-->
         </div>
         
       </div>
@@ -125,8 +135,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	  <article><br>
 	  
 	    <strong><a href="#Fig1"><span class="mw-headline" id="Fig1">#</span></a> Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 6, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
-	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 6, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br><br> 
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 7, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
+	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 7, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br><br> 
 	    
 	    
 	    <strong><a href="#CryptologyDef"><span class="mw-headline" id="CryptologyDef">#</span></a> <font color="#006400">Cryptology/Cybersecurity</font></strong>: IT Security - the protection of digital information against misuse, incorporating technical, organizational, and implementation-specific aspects. This is the modern, digital theater of the much greater field of 'Security'<!--monied elites protection force-->.<br><br>
@@ -213,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    To stop Oscar from reading the message, an encryption algorithm can be established, converting the plaintext message (x) into a ciphertext message (y), and then sending it through the insecure channel. Oscar would only see a stream of random characters/bits as a result of the encryption. Bob, using a decryption function, would convert the ciphertext back into plaintext, thus completing the data transfer without interception.<br><br>
 
-      In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which, counterintuitively, should actually be made publicly available - see Rule 4), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
+      In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which, counterintuitively, should actually be made publicly available - see Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
 
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/AliceBobSecure.png"><img src="/cryptography/img/AliceBobSecure.png" alt="A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions.</em></span><br><br> 
@@ -228,42 +238,10 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong>K</strong> = The Key fed into the encryption and decryption functions.<br><br>
       	    
-      <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 6), and entails other characteristics detailed in Rule 3.
+      <strong>|K|, 𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem. This matters significantly with regard to brute-force Cryptanalysis (see Rule 8), and entails other characteristics detailed in Rule 6.
       	    
       </div><br><br><br>
       
-      
-      
-      <strong><a href="#BitsOfEntropyDef"><span class="mw-headline" id="CryptosystemDef">#</span></a> <font color="#006400">Bits of Entropy</font></strong>: ⌈log<sub>2</sub> 𝒦⌉, where 𝒦 is the keyspace of a cryptosystem (the number of possible keys). For example, if a cryptosystem has 2^100 keys, then that cryptosystem has 100 bits of entropy. It really is just a term used to flex security, not in reference to anything tangible other than the size of the keyspace itself - it is a self-referential term, actively disguising useful information behind additional artificial buzzwords.<br><br>
-      
-      It happens to share the same equation as the keylength (as detailed in Rule 3 below), but note that "bits of entropy" is not a term chained to any particular requirement and can thus be applied to any cryptosystem, while the concept of a keylength has several prerequisites that limit its usage.
-      
-      <br><br><br><br>
-      
-      
-      
-      <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong><strong>Keyspace Mathematics</strong>:<br><br>
-        In Symmetric Cryptography, there is an inherent relation between the keyspace of a cryptosystem (|K| or 𝒦), and the <em>length</em> of the key (L) that the cryptosystem uses. It is fairly simple and intuitive, but has some key caveats.<br><br>
-        
-        If the algorithm uses a 168-bit key, then there are 2^168 possible keys. Mathematically, that is represented using either of the following equations:<br><br>
-        <strong>𝒦 = 2ᴸ</strong><br>
-        <strong>L = ⌈log<sub>2</sub> 𝒦⌉</strong><br><br>
-        
-        These two equations are equivalent, with the latter being derived from taking the log of both sides. The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out a small number of symmetric cryptosystems with selective application of their keys/keybits<!--gives 2012 tumblr vibes idk--> - see Rule [[[.<!--[[[ update this when the thing with DES is completely done. it takes in 64 bits but only uses 56, which is why it has a keyspace of 2^56, as the other 8 are used for other purposes; parity tests.--><br><br>
-        
-        There are some limitations that narrow the applicability of this relation - in effect, it only really applies to <em>modern symmetric</em> cryptosystems (unless specified otherwise, like the aforementioned DES). First, all ciphers that do not explicitly <em>have</em> a key-length, such as those that operate on letters instead of bits (e.g., every historical cipher in Section II), do not qualify. A cipher must structure its keys in the form of <u>binary strings with fixed lengths</u> in order for the relation to be applicable.<br><br>
-        
-        <!--The professor continued with great emphasis: "-->
-        The very concept of "<strong>keybits</strong>" is dependent on the fact that the cipher is using a key made from binary bits - any ciphers that do not meet that requirement are instantly null in regards to the given relation.<br><br>
-        
-        For example, the Shift Cipher has a keyspace of 26, but that in no way means that the "key-length" of the cipher is log<sub>2</sub> 26 (though it will indeed have log<sub>2</sub> 26 "bits of entropy"). For non-bit cryptosystems, there is no real key-length, but these ciphers are nonsense cryptography that are not to be taken seriously anyways<!--just felt like airing that out there. the world needs to know-->.<br><br>
-        
-        Furthermore, this relation does not hold for asymmetric cryptography: There is a significant difference between symmetric keys and asymmetric keys: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key. For information as to why this is, see Rule [[[.<!--ended up getting rid of some brackets hust to add more brackets. good idea for the future though, to illustrate why this is the way that it is.-->
-        
-        </div><br><br>
       
       
       
@@ -280,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         
         In Practice: Never use an untested Crypto algorithm! Furthermore, never roll your own crypto!
-        </div><br><br>
+        </div><br><br><br>
         
         
         <strong><a href="#EndToEndDef"><span class="mw-headline" id="EndToEndDef">#</span></a> <font color="#006400">End-To-End Encryption (E2EE)</font></strong>: A system of encryption widely used in modern communication services (like internet messaging sites), in which all data sent from Alice to Bob (party #1 to party #2) is never decrypted at any point along its route until it reaches Bob. <br><br>
@@ -291,10 +269,169 @@ document.addEventListener("DOMContentLoaded", function (){
         	    <span class="tiny"><em>An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme.</em></span>
         <br><br><br>
         
+      
+      
+      
+      
+      
+          </article>
+    	    <header class="articleHeader"><hr>
+    	      <h3><span class="mw-headline" id="KeyTerminology">I.III Key Terminology.</span></h3>
+    	    </header>
+    	    <article>
+      
+      <!--Below is a visual representation of what happens when I get confused upon one minor thing, which then leads me down a rabbit hole of further confusion and horror as I realize I had a very tenuous grasp on some of the most fundamental principles underpinning all of the subject I am learning. Thus is the curse of the LCG - literally this entire section was produced as a result of me trying to revise one random RNG Rule, which I also had problems with in the past.-->
+      
+      <!--quite possibly the hardest I have ever cooked, ever-->
+      
+      <strong><font color="blue"><a href="#Binary"><span class="mw-headline" id="Binary">#</span></a> Binary:</font></strong><br><br>
+        Binary is a crucial element of how most (and practically all modern) cryptosystems work, and several phrases commonly used in cryptographic discussions directly reference this inherent nature. As such, let it be known: all references to 'bits' of any kind are made in regard to 1s and 0s.
+        <!--I am not going to teach you what binary is, that is csp crap. I've added it to the prereq's.-->
+        
+        <br><br><br><br>
+        
+        
+        
+        
+        
+        
+        <!--This became so unbelievably bloated I had to make it into not one, but two Rules.-->
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Bit-Length</strong>:<br><br>
+
+          <strong><u>Mathematical Definition</u></strong>:<br><br>
+          
+          <em>
+          <strong>Value-based Bit-length = ⌊log<sub>2</sub> N⌋ + 1</strong><br>
+          <strong>Set-based Bit-length = ⌈log<sub>2</sub> S⌉</strong>
+          
+          </em><br><br><br>
+          
+          <strong>N</strong> = Any given number.<br>
+          <strong>S</strong> = Any given set.<br><!-- In addition, any number that could be <em>perceived</em> to represent a set, such as modular-->
+          <strong>⌊, ⌋</strong> = The Floor function, which returns the greatest integer less than or equal to the given value.<br>
+          <strong>⌈, ⌉</strong> = The Ceiling function, which returns the smallest integer larger than or equal to the given value.
+          <br><br><br>
+          
+          <strong><u>Explanation:</u></strong><br><br>
+          
+          
+          
+          
+        Bit-length is a mathematical term with two definitions and two associated equations, the application of which depends on the context of what you are trying to find the bit-length <em>of</em>. Apart from being able to determine when to apply either definition, bit-length is a remarkably simple concept that hinges on comprehension of binary.<br><br><br>
+        
+        The first definition is value-based, while the second is set-based.<br><br>
+        
+        The <strong>bit-length <u><em>of a value</em></u></strong> is the # of bits required to represent a given number.<br>
+        The <strong>bit-length <u><em>of a set</em></u></strong> is the # of bits necessary to represent the <em>number of values</em> within the set.<br><br>
+        
+        While the value-based definition is most popular in computer science (such as in the bit_length() method in Python), the set-based definition is the most popular and relevant in Cryptography. Thus, in cryptographic discussions, it is practically always safe to assume that the term 'bit-length' is being used in regard to the set-based definition.<br><br>
+        
+        As such, two distinct equations emerge to represent these binary operations. As shown in the mathematical definition, the value-based bit-length uses the <strong><u>floor</u></strong> function while the set-based bit-length uses the <strong><u>ceiling</u></strong> function, rounding downward and upward for any decimal value, respectively. <!-- who cares?: Note that these equations produce the same value whenever the given keyspace is not a power of two.--><br><br><br>
+        
+        For an example of the two in practice, a keyspace of 2^3 (8 values) would have a <strong><u>value-based bit-length of 4</u></strong>, since 8 is 1000 in binary, and would have a <strong><u>set-based bit-length of 3</u></strong>, since exactly 3 bits would be required to account for every value within the keyspace: 000 through 111 represent a total of 8 values, reaching a highest value of 𝒦-1.<br><br>
+        
+        With regards to set-based bit-length, this does not mean that each individual value requires three bits to represent it; the value of 1 only "<em>requires</em>" 1 bit to represent it, for example. The set-based bit-length only really means the total number of bits necessary to represent 𝒦-1, which thus accounts for all of the values before it (through the nature of binary representation).<br><br>
+        <!--which makes perfect sense for a modular system, which can only go up to the highest number before the modulus.-->
+        
+        </div><br><br><br>
+        
+        
+        
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Key-Length</strong>:<br><br>
+
+          <strong><u>Mathematical Definition</u></strong>:<br><br>
+          
+          <em>
+          <strong>Key-length = ⌈log<sub>2</sub> 𝒦⌉</strong>
+          
+          </em><br><br><br>
+          
+          <strong>𝒦</strong> = Keyspace, the total number of possible keys in a cryptosystem.<br>
+          <strong>⌈, ⌉</strong> = The Ceiling function, which returns the smallest integer larger than or equal to the given value.
+          <br><br><br>
+          
+          <strong><u>Explanation:</u></strong><br><br>
+          
+          Key-Length is a concept that builds upon the idea of bit-length, which is explained in Rule 4. Comprehension of bit-length (and the different between <em>value-based</em> and <em>set-based</em> bit-length) is prerequisite for understanding key-length.<br><br>
+        
+          In its essence, Key-length is a narrowed application of <em><u>set-based</u></em> bit-length specific to the bit-length of the <em>key of a cryptosystem</em>. It is identical in every way to the set-based bit-length definition, except for the minute change of "set" to "keyspace":<br><br>
+          
+          The <strong>bit-length <u><em>of a keyspace</em></u></strong> is the # of bits necessary to represent the <em>number of values</em> within the keyspace. This value is known as the <strong>key-length</strong>.<br><br>
+          
+          <!--unnecessary over-elaboration: Key-length is like the cryptography-specific version of bit-length, though the more general set-based bit-length does occasionally come up for non-key aspects of cryptosystems - for an advanced example of bit-length being used in a cryptosystem, see Rule 28.-->
+          
+          <!--hyphen-maxxed sentence:-->
+          Set-based bit-length, and its particular use-case of key-length, will appear with some ubiquity in the Cryptographic Summary. Note how key-length is basically just a subtype <!--more specific/narrowed application-->of bit-length, just like how keybits (see definition) are a more specific type of bit. However, they can NOT be used interchangeably, for reasons outlined below.<br><br>
+            
+          In Cryptography, the key-length is only <strong>relevant/existent</strong> if the cryptosystem uses binary representation, as detailed in Rule 6. The number of bits necessary to represent each value of the keyspace is meaningless if there are no 'bits' involved in the cryptosystem, as is the case for the Shift Cipher (Rule 20), which has a keyspace of 26 but no meaningful key-length. Somewhat ironically, bit-length does not require a bit-based system to have a meaningful result, as it merely denotes the process of converting a value to its binary form.
+        
+        </div><br><br><br>
+        
+        
+      
+      
+      
+      
+      
+      <strong><a href="#KeybitsDef"><span class="mw-headline" id="KeybitsDef">#</span></a> <font color="#006400">Keybits</font></strong>: The binary bits in the key used in a cryptosystem. A key-length, for example, is composed of keybits. In Cryptography, a "256-keybit key-length" is regarded as secure against brute-force attacks (see Rule 8).
+      <br><br><br><br>
+        
+        
+        
+      <strong><a href="#BitsOfEntropyDef"><span class="mw-headline" id="BitsOfEntropyDef">#</span></a> <font color="#006400">Bits of Entropy/Key Entropy</font></strong>: A term frequently used<!--by those who are trying to sound smart by adding extra buzzwords as filler, when they are really just using a madeup-term that has effectively the same meaning as key-length, except now in slightly more obfuscated form to further separate the average reader from the actual information of a scientific article by inventing completely new bs jargon--> in cryptography, essentially just meaning a number that represents the degree of security a cryptosystem has with respect to its keyspace. It has the equation <strong>⌈log<sub>2</sub> 𝒦⌉</strong>, where 𝒦 is the keyspace of a cryptosystem (the number of possible keys). For example, if a cryptosystem has 2^100 keys, then that cryptosystem has 100 bits of entropy.<br><br>
+      
+      It really is just a term used to flex security against <u>brute-force attacks</u> (Rule 8), not in reference to anything tangible other than the size of the keyspace itself - it is a self-referential term, actively disguising useful information behind additional artificial buzzwords.<!--haters on r/cryptography kept using this term and now anyone who uses it is a fool in my book. (my book being hk).--><br><br>
+      
+      <!--using 'key-lengths' and 'bit-lengths' with a hyphen to distinguish more clearly from the non-hyphenated keyspace-->
+      It happens to share the same equation as the key-length (as detailed in Rule 6 below), but note that "bits of entropy" is not a term chained to any particular requirement and can thus be applied to any cryptosystem, while the concept of a key-length has several prerequisites that limit its usage. This is in spite of the fact that "bits of entropy" uses the word "bit" - it, like bit-length (but unlike key-length, as distinguished in Rule 5), can be reasonably applied in non-bit-based cryptosystems.
+      <br><br><br><br>
+      
+      
+      
+      
+      <!--My greatest masterpiece. The single most important Rule of the entire project - it took an incredible effort to produce and was edited, revised, and labored upon over the course of days, during which the complete basis for understanding cryptography and bits in this summary changed as a result of the complexity and confusion I had while creating it. The curse of the LCG is one of great benevolence.-->
+      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong><strong>Keyspace Mathematics</strong>:<br><br>
+        In Symmetric Cryptography, there is an inherent relation between the keyspace of a cryptosystem (|K| or 𝒦), and the key-length of the key (L) that the cryptosystem uses (which is dealt with in detail in Rule 5). It is fairly simple and intuitive, but has some key caveats.<br><br>
+        
+        If the algorithm uses a 168-bit key, then there are 2^168 possible keys. This is because the keyspace is the number of <em>possible values</em> that could be represented by the bits of the key-length - a key-length of 5 would have 32 possible values, i.e. every value between 00000 and 11111. Mathematically, this is represented using either of the following equations:<br><br>
+        <strong>𝒦 = 2ᴸ</strong><br>
+        <strong>L = ⌈log<sub>2</sub> 𝒦⌉</strong><br><br>
+        
+        These two equations are equivalent, with the second one derived by taking the log of both sides of the first (uncoincidentally forming <em>the</em> key-length equation as described in Rule 5). The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out a small number of symmetric cryptosystems with selective application of their keys/keybits<!--gives 2012 tumblr vibes idk-->, like DES - see Rule [[[.<!--[[[ update this when the thing with DES is completely done. it takes in 64 bits but only uses 56, which is why it has a keyspace of 2^56, as the other 8 are used for other purposes; parity tests.--><br><br>
+        
+        There are some limitations that narrow the applicability of this relation - in effect, it only really applies to <em>modern symmetric</em> cryptosystems (unless specified otherwise, like the aforementioned DES). First, all ciphers that do not explicitly <em>have</em> a key-length, such as those that operate on letters instead of bits (e.g., every historical cipher in Section II), do not qualify. A cipher must structure its keys in the form of <u>binary strings with fixed lengths</u> in order for the relation to be applicable.<br><br>
+        
+        <!--The professor continued with great emphasis: "-->
+        As stated in its definition, the very concept of a "<strong>keybit</strong>" is dependent on the fact that the cipher is using a key made from <em>binary bits</em> - any ciphers that do not meet that requirement are instantly null in regards to the given relation.<br><br>
+        
+        For example, the Shift Cipher (see Rule 20) has a keyspace of 26, but that in no way means that the "key-length" of the cipher is log<sub>2</sub> 26 (though it will indeed have log<sub>2</sub> 26 "bits of entropy"<!--, as stated in the definition of that term.-->). For non-bit cryptosystems, there is no real key-length, but these ciphers are outdated<!--unc--> nonsense cryptography that are not to be taken seriously anyways<!--just felt like airing that out there. the world needs to know-->.<br><br>
+        
+        Furthermore, this relation does not hold for asymmetric cryptography: There is a significant difference between symmetric keys and asymmetric keys: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key. For information as to why this is, see Rule [[[.<!--ended up getting rid of some brackets just to add more brackets. good idea for the future though, to illustrate why this is the way that it is.-->
+        
+        </div><br><br>
+      
+      
+      
+      
+        
         
         </article>
   	    <header class="articleHeader"><hr>
-  	      <h3><span class="mw-headline" id="AnalysisBasics">I.III Cryptanalysis Basics.</span></h3>
+  	      <h3><span class="mw-headline" id="AnalysisBasics">I.IV Cryptanalysis Basics.</span></h3>
   	    </header>
   	    <article>
   	    
@@ -309,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <font color="red">C. Rule <span class="rule-number"></span>.</font>
       </strong> There are multitudes of cryptanalysis techniques, and the crucial law is that <strong>if just one attack works, then the entire cryptosystem crumbles and fails, regardless of how secure it is against other attack types</strong>.<br><br>
       
-      For example, while a substitution cipher (see Rule 8) may be impenetrable to a brute-force attack with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 8).<br><br>
+      For example, while a substitution cipher (see Rule 10) may be impenetrable to a brute-force attack (Rule 8) with its 2^88 keyspace, it collapses against letter frequency analysis (also described in Rule 10).<br><br>
       
         In order for a cryptosystem to be considered secure, it must be resistant against every single type of attack. An attacker always looks for the weakest link in the cryptosystem. Thus, in addition to strong algorithms, safeguards against social engineering and implementation attacks (see definitions below) must be instituted.
         </div><br><br>
@@ -333,8 +470,9 @@ document.addEventListener("DOMContentLoaded", function (){
       Extraction of the key through '<strong>side-channel analysis</strong>'. By observing the behavior of the implementation of the cryptosystem in an IC or software, it is possible to deduce important information relating to the key.<br><br>
       
       For example: By looking at the electrical power consumption or electromagnetic radiation of a CPU running a cryptographic algorithm, a <STRONG>signal processing technique</STRONG> can be used to recover the key (see E.E. [[[[[<!--not one hundred percent sure, just certain that I want o have somewhere that foes over this topic. perhaps electric engineering may have something on the subject? in the far future? https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/pages/syllabus/-->). The runtime behavior can also indicate information regarding the key, which is why many cryptographers ensure constant runtimes in embedded cryptosystems.<br><br>
+      
       These attacks are most relevant when the attacker has physical access to a piece of hardware running the cryptosystem, such as a credit card.
-      <br><br><br>
+      <br><br><br><br>
 	    
 	    
 	    <strong><a href="#AttackVectorsDef"><span class="mw-headline" id="AttackVectorsDef">#</span></a> <font color="#006400">Attack Vectors</font></strong>: The many possible ways to attack a cryptosystem; the <em>types</em> of cryptanalysis that can be used, including (but not limited to) those shown in Fig. 2.
@@ -342,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.<br><br>
       
-      This is especially relevant for cryptanalysis requiring intensive computing power, such as brute-force attacks (see Rule 6 below).
+      This is especially relevant for cryptanalysis requiring intensive computing power, such as brute-force attacks (see Rule 8 below).
       <br><br><br><br>
       
       
@@ -368,7 +506,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
 	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span><br><br>
 	    
-	    As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all keybits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key, as noted in Rule [[[<!--3-->. For why this is, see Rule [[[.<!--Same as from Rule 3.-->
+	    As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all keybits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key, as noted in Rule 6. For why this is, see Rule [[[.<!--Same as from the end of Rule 6.-->
 
       </div><br><br>
       
@@ -379,16 +517,17 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Classical Attack #2: Analytical Attacks</strong>:<br><br>
 
-      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses that could enable reconstruction of the plaintext message, such as <u>Letter Frequency Analysis</u> (for the Substitution Cipher, see Rule 8) and <u>Differential Cryptanalysis</u> (for Block and Stream Ciphers, see Rule [[[[<!--an actual Rule fully going over differential cryptanalysis.-->).<br><br>
+      The intelligent counterpart to 'brute'-force, Analytical Attacks examine the internal characteristics of the encryption function and pick apart weaknesses that could enable reconstruction of the plaintext message, such as <u>Letter Frequency Analysis</u> (for the Substitution Cipher, see Rule 10) and <u>Differential Cryptanalysis</u> (for Block and Stream Ciphers, see Rule [[[[<!--an actual Rule fully going over differential cryptanalysis.-->).<br><br>
       
       There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
       </div><br><br>
 
 
 
+
     </article>
 	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="GenericAttacks">I.IV Generic Analytical Attacks.</span></h3>
+	      <h3><span class="mw-headline" id="GenericAttacks">I.V Generic Analytical Attacks.</span></h3>
 	    </header>
 	    <article>
 
@@ -440,7 +579,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 18 2025</span><br>
+      	<span class="tiny">Last Change: July 22 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

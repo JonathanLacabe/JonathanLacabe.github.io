@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
       </div>
 	  
-	  <div class="rules" data-start="8">
+	  <div class="rules" data-start="10">
 	  
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="Historical">II. Historical Ciphers & Modular Arithmetic.</span></h2>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	    <strong><a href="#HistoricalCipherDef"><span class="mw-headline" id="HistoricalCipherDef">#</span></a> <font color="#006400">Historical Cipher</font></strong>: A cipher that was used before the development of modern Cryptography, operating on letters instead of bits/bytes. Every one of these ciphers is easily crackable, from the Enigma Code to the Caesar Cipher.<br><br>
 	    
-	    Because these ciphers do not operate on bits (and thus do not have keys structured in the form of binary strings with fixed lengths), the relation between keyspace and keybit-length as detailed in Rule 3 does not apply to these ciphers does not apply to these ciphers.
+	    Because these ciphers do not operate on bits (and thus do not have keys structured in the form of binary strings with fixed lengths), the relation between keyspace and keybit-length as detailed in Rule 6 does not apply to these ciphers does not apply to these ciphers.
       <br><br><br>
 	    
 	    
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Since the different letters of the English alphabet have different frequencies of appearance (see the image below), and these frequencies are preserved even after scrambling (just different letters will <em>have</em> the frequencies), <strong>Letter Frequency Analysis</strong> can be conducted as an attack on the substitution cipher, making cracking the cipher rather simple.<br><br>
         
-        This is an example of a cipher/algorithm in which an Analytical Attack (see Rule 7) is most effective.<br><br>
+        This is an example of a cipher/algorithm in which an Analytical Attack (see Rule 9) is most effective.<br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/English_letter_frequency_(alphabetic).png"><img src="/cryptography/img/English_letter_frequency_(alphabetic).png" alt="A generalized distribution of letters in the english language. In substitution ciphers, the frequencies remain the same, with only the letters that represent them changing. Courtesy of Wikimedia." width=58%/></a></div>
 	    <span class="tiny"><em>A generalized distribution of letters in the english language. In substitution ciphers, the frequencies remain the same, with only the letters that represent them changing. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:English_letter_frequency_(alphabetic).svg">Wikimedia</a>.</em></span>
 	    
@@ -193,11 +193,11 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Since the bulk of cryptographic computations are performed in finite sets, special mathematical tools are needed. In particular, Modular Arithmetic is the basis for all modern cryptosystems, and many historical ones as well.<br><br>
         
-        Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. As shown in the mathematical definition, any chosen number greater than the modulus is rewritten using the <strong>modulus operator</strong> (a.k.a. the <strong>remainder operator</strong>) with respect to the difference between the number and any multiple (see Rule 10) of the modulus, known as the <em>remainder</em>.<br><br>
+        Modular arithmetic is a system of simplifying a number in terms of a given <strong>modulus</strong>, the highest number in a set. As shown in the mathematical definition, any chosen number greater than the modulus is rewritten using the <strong>modulus operator</strong> (a.k.a. the <strong>remainder operator</strong>) with respect to the difference between the number and any multiple (see Rule 12) of the modulus, known as the <em>remainder</em>.<br><br>
         
         The best example for understanding modular arithmetic is something most are already familiar with: time on a clock. On clocks, the highest number is 12, and going any higher just loops back to the beginning. In effect, a clock is a modular arithmetic system using a set of {1, 2, ... 12} with a modulus of 12. 13 hours, for example, would be represented as <strong>1 mod 12</strong>, using the modulus operator as specified in the mathematical definition.<br><br>
         
-        The process of finding the modular equivalent of a number (in relation to an already known modulus/set) is simple: divide the chosen number by the modulus, and find the remainder (see Rule 10). The remainder will then be placed as the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator. For example, the modular representation of 4 in the clock example (mod 12) is just 4.<br><br>
+        The process of finding the modular equivalent of a number (in relation to an already known modulus/set) is simple: divide the chosen number by the modulus, and find the remainder (see Rule 12). The remainder will then be placed as the coefficient in front of the modulus operator. All numbers smaller than the modulus are rendered ordinarily, without the mod operator. For example, the modular representation of 4 in the clock example (mod 12) is just 4.<br><br>
         
         Using modular representation is a bit jarring at first, as it effectively 'wraps' the chosen number around the modulus, but frequent use (as it is used in practically every cryptosystem) will make it second nature to the beginning cryptographer.
         
@@ -228,11 +228,11 @@ document.addEventListener("DOMContentLoaded", function (){
           <strong>m</strong> = The modulus, the highest possible number in the set.<br><br><br>
         
         <strong><u>Explanation:</u></strong><br><br>
-        To find the remainder in a modular arithmetic system (see Rule 9) when only the chosen number and the modulus (a and m) are known, there is an exact, algorithmic definition. Note that there are <em><strong>two</strong></em> unknown variables in this equation - the quotient and the remainder (q & r). As such, the quotient will have to be determined first in order to find the remainder.<br><br>
+        To find the remainder in a modular arithmetic system (see Rule 11) when only the chosen number and the modulus (a and m) are known, there is an exact, algorithmic definition. Note that there are <em><strong>two</strong></em> unknown variables in this equation - the quotient and the remainder (q & r). As such, the quotient will have to be determined first in order to find the remainder.<br><br>
         
-        Any integer will work for the quotient (as a result of equivalence classes, which will be discussed later in Rule 11), but the <em>preferred</em> quotient will be the one that produces the <em>preferred multiple</em> (once multiplied with m), which will then produce the <em>smallest positive remainder</em> (known as the <em>preferred</em> remainder).<br><Br>
+        Any integer will work for the quotient (as a result of equivalence classes, which will be discussed later in Rule 13), but the <em>preferred</em> quotient will be the one that produces the <em>preferred multiple</em> (once multiplied with m), which will then produce the <em>smallest positive remainder</em> (known as the <em>preferred</em> remainder).<br><Br>
         
-        This is just a complicated way of saying that there is a particular quotient value that, when multiplied by the modulus, will produce <u>a <!--particular-->remainder with the chosen value</u> that will allow for the modular representation (the Rule 9 equation with the modulus operator) to be in its most simplified form. The specificities of how this "preferred muliple" (formed by the quotient and the modulus) functions are elaborated upon below.<br><br><!--rewritten, parts move up and down, excessively belabored. I tried to be as simple and understandable as possible while minimizing bloat, but as usual, the bloat seems to have won.-->
+        This is just a complicated way of saying that there is a particular quotient value that, when multiplied by the modulus, will produce <u>a <!--particular-->remainder with the chosen value</u> that will allow for the modular representation (the Rule 11 equation with the modulus operator) to be in its most simplified form. The specificities of how this "preferred muliple" (formed by the quotient and the modulus) functions are elaborated upon below.<br><br><!--rewritten, parts move up and down, excessively belabored. I tried to be as simple and understandable as possible while minimizing bloat, but as usual, the bloat seems to have won.-->
         
         <!--an exceptionally rare triple emphasis on "preferred", with u, strong, and em all tagged simultaneously-->
         The <u><strong><em>preferred</em> multiple</strong></u> of the modulus for finding the remainder is <strong>the greatest multiple lower than the chosen number</strong>, allowing for the remainder to be as small as possible: 0 ≤ r &lt; m. Thus, the preferred multiple is mathematically the greatest (q × m) lower than a, which means finding the correct q given that m is a constant.<br><br>
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         For example, with a modulus of 12, 61 would be represented as 1 mod 12, since 61 has a remainder of 1 in relation to <u>60</u>, the highest multiple of 12 below 61 (meaning that 60 is the preferred multiple). With respect to a clock, this means that 61 hours after 12 A.M. would be either 1 A.M. or 1 P.M., exactly <em>which</em> can be determined by mod 2 of the remainder (0 for A.M.; 1 for P.M.).<!--stroke of genius--><br><br>
         
-        As stated before, any quotient/multiple of the modulus will work for the equation (if with a larger remainder) - see Rule 11, Equivalence Classes. The preferred multiple just allows for the most simplified version of a modular representation (see Rule 13), which will be the one used in practical applications of modular arithmetic. This preferred multiple is also the one that would be most easily determined by division, as described in Rule 9.
+        As stated before, any quotient/multiple of the modulus will work for the equation (if with a larger remainder) - see Rule 13, Equivalence Classes. The preferred multiple just allows for the most simplified version of a modular representation (see Rule 15), which will be the one used in practical applications of modular arithmetic. This preferred multiple is also the one that would be most easily determined by division, as described in Rule 11.
         
         </div><br><br>
 	  
@@ -252,13 +252,13 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Equivalence Classes</strong>:<br><br>
 
-        While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. Although these remainders may not be the <em>preferred</em> remainder of 3 (see Rule 10), they all still return true in the Modular Arithmetic formula (see Rule 9):<br><br>
+        While 12 ≡ 3 mod 9, it is equally true that 12 ≡ 21 mod 9, and that 12 ≡ -6 mod 9. Although these remainders may not be the <em>preferred</em> remainder of 3 (see Rule 12), they all still return true in the Modular Arithmetic formula (see Rule 11):<br><br>
         
         12 ≡ 3 mod 9, 3 is a valid remainder since 9|(12−3)<br>
         12 ≡ 21 mod 9, 21 is a valid remainder since 9|(12−21)<br>
         12 ≡ −6 mod 9, −6 is a valid remainder since 9|(12−(−6))<br><br>
         
-        The given remainder values can all be simplified down to their smallest possible positive number using the preferred multiple of the modulus, as detailed in Rule 10. Thus, all of these modular representations are inherently equal as they all have the same 'root' preferred remainder. The set of all remainder values that behave 'equivalently' for a particular modulus form what is known as an <strong>Equivalence Class</strong>, an infinite set/series of values.<br><br>
+        The given remainder values can all be simplified down to their smallest possible positive number using the preferred multiple of the modulus, as detailed in Rule 12. Thus, all of these modular representations are inherently equal as they all have the same 'root' preferred remainder. The set of all remainder values that behave 'equivalently' for a particular modulus form what is known as an <strong>Equivalence Class</strong>, an infinite set/series of values.<br><br>
         
         For 3 mod 9, the equivalence class of r values is an infinite set, a partial series of which is as follows:<br>
         {..., -24, -15, -6, 3, 12, 21, 30, ...}<br><br>
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class (see Rule 11) for your final answer. Whether for a homework/test answer or for 'in-the-field' cryptography work, it is convention to use the most simplified version of the class.<!--This smallest member is found using the preferred multiple, which is extensively discussed in Rule 10.-->
+        </strong> When getting a result in modular arithmetic, always simplify down to the smallest positive member of the equivalence class (see Rule 13) for your final answer. Whether for a homework/test answer or for 'in-the-field' cryptography work, it is convention to use the most simplified version of the class.<!--This smallest member is found using the preferred multiple, which is extensively discussed in Rule 12.-->
 	      </div><br><br>
 	  
 	  
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <article>
 	    
 	    
-  	    <strong><a href="#IntegerRingDef"><span class="mw-headline" id="IntegerRingDef">#</span></a> <font color="#006400">Integer Ring</font></strong>: A set of elements which can have basic arithmetic operations performed upon them, such as addition and multiplication, so that the natural properties expected of addition and multiplication all hold. There are ring definitions/interpretations of polynomials, matrixes, and modular arithmetic (see Rule 14). Rings are a fundamental part of Ring Theory, a field of Abstract Algebra (see Math section [[[[[). <!--It will go multivariable -> linear algebra -> abstract algebra, with the harvard lecture series forming the brunt of the final: https://www.youtube.com/watch?v=VdLhQs_y_E8&list=PLelIK3uylPMGzHBuR3hLMHrYfMqWWsmx5&index=2-->
+  	    <strong><a href="#IntegerRingDef"><span class="mw-headline" id="IntegerRingDef">#</span></a> <font color="#006400">Integer Ring</font></strong>: A set of elements which can have basic arithmetic operations performed upon them, such as addition and multiplication, so that the natural properties expected of addition and multiplication all hold. There are ring definitions/interpretations of polynomials, matrixes, and modular arithmetic (see Rule 16). Rings are a fundamental part of Ring Theory, a field of Abstract Algebra (see Math section [[[[[). <!--It will go multivariable -> linear algebra -> abstract algebra, with the harvard lecture series forming the brunt of the final: https://www.youtube.com/watch?v=VdLhQs_y_E8&list=PLelIK3uylPMGzHBuR3hLMHrYfMqWWsmx5&index=2-->
         <br><br><br>
 	    
 	  
@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <li>There is a <strong>multiplicative neutral element</strong>, 1: For all elements a ∈ <strong>ℤ</strong><sub>m</sub>, it holds that <strong>a × 1 ≡ a mod m</strong>. It is used to define the multiplicative inverse.</li><br>
         
-        <li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in the Inverse Rules - see Rule 15 & Rule 16.<br><br>
+        <li>The <strong>Multiplicative Inverse</strong> exists only for <u>some</u> elements: For a ∈ <strong>ℤ</strong>, the inverse a⁻¹ is defined such that <strong>a × a⁻¹ ≡ 1 mod m</strong>. The nature of most inverses and the reasons for their occasional nonexistence are outlined in the Inverse Rules - see Rule 17 & Rule 18.<br><br>
         
         If there exists an inverse for a, then, a rare usage of division in the modular ring becomes possible: the element a⁻¹ can be divided by, as a divisor, since <strong>b/a ≡ b × a⁻¹ mod m</strong>.</li>
         <br>
@@ -399,9 +399,9 @@ document.addEventListener("DOMContentLoaded", function (){
           <strong>a × a⁻¹ ≡ 1 mod m</strong>
           <br><br>
           
-          Though the multiplicative inverse of a is literally shown as a⁻¹, it is almost never the actual reciprocal of a. The reason for this is simple: All reciprocals other than -1 and 1 are not integers, and are thus not included in the set (under part 1 of the ring definition given in Rule 14).<br><br>
+          Though the multiplicative inverse of a is literally shown as a⁻¹, it is almost never the actual reciprocal of a. The reason for this is simple: All reciprocals other than -1 and 1 are not integers, and are thus not included in the set (under part 1 of the ring definition given in Rule 16).<br><br>
           
-          Take a = 5, for example. The supposed inverse '1/5' is incorrect in any context, because it is not included in the set. A different inverse must be found specific to the modulus. For example, if the modulus were 7, then (as the given values pass the multiplicative eligibility test of Rule 15) the true multiplicative inverse can be found:<br><br>
+          Take a = 5, for example. The supposed inverse '1/5' is incorrect in any context, because it is not included in the set. A different inverse must be found specific to the modulus. For example, if the modulus were 7, then (as the given values pass the multiplicative eligibility test of Rule 17) the true multiplicative inverse can be found:<br><br>
           <strong>5 × 5⁻¹ ≡ 1 mod 7</strong><br><br>
           <strong>5 × 3 ≡ 1 mod 7</strong><br><br>
           <strong>5⁻¹ = 3</strong><br><br>
@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function (){
     	  
     	  <strong><u>Explanation:</u></strong><br><br>
     	  
-    	  A simplified form or special case of the Substitution Cipher (Rule 8), the <strong>Shift Cipher</strong> (or <strong>Caesar Cipher</strong>) merely shifts every plaintext letter however many so positions rightward in the alphabet, wrapping around when it reaches the end (modular arithmetic!). This is occasionally known as the "ROT" Cipher (short for "rotate"), and the most well-known example is <a href="https://rot13.com/">ROT13</a>, which shifts rightward precisely halfway through the alphabet.<br><br>
+    	  A simplified form or special case of the Substitution Cipher (Rule 10), the <strong>Shift Cipher</strong> (or <strong>Caesar Cipher</strong>) merely shifts every plaintext letter however many so positions rightward in the alphabet, wrapping around when it reaches the end (modular arithmetic!). This is occasionally known as the "ROT" Cipher (short for "rotate"), and the most well-known example is <a href="https://rot13.com/">ROT13</a>, which shifts rightward precisely halfway through the alphabet.<br><br>
     
         As a generic example, with a key of 1, some shifts would be as follows:<br><br>
         a -> b<br>
@@ -460,7 +460,7 @@ document.addEventListener("DOMContentLoaded", function (){
         z -> a<br><br>
         As shown, once the alphabet reaches letter (26 - k) + 1, or the position in the ring <strong>ℤ</strong><sub>26</sub> (26 - k) (since the set begins at 0), the shift returns to the front of the alphabet.<br><br>
         
-        It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (previously explained in relation to Substitution Ciphers - see Rule 8) and brute-force attacks (see Rule 6).
+        It should be obvious to all this is an extremely unsecure cryptosystem, with a keyspace of only 26. It is vulnerable to both letter frequency analysis (previously explained in relation to Substitution Ciphers - see Rule 10) and brute-force attacks (see Rule 8).
         
         </div><br><br><br>
         
@@ -556,13 +556,13 @@ document.addEventListener("DOMContentLoaded", function (){
           
           The number of possible b values in the system is 26, as it is merely the shift parameter (as shown in the definition equations).<br><br>
           
-          The number of possible a values, as a result of the inverse in the decryption function, is limited by the condition explicated in the multiplicative inverse eligibility test of Rule 15, with m being 26: only when gcd(a, 26) = 1 is 'a' an inverse, and thus contributive to the number of possible values. Counting all possible values of a (1, 3, 5, 7, 9, ...), all odd numbers 1-26 other than 13, produces an end result of 12 possible 'a' values.<br><br>
+          The number of possible a values, as a result of the inverse in the decryption function, is limited by the condition explicated in the multiplicative inverse eligibility test of Rule 17, with m being 26: only when gcd(a, 26) = 1 is 'a' an inverse, and thus contributive to the number of possible values. Counting all possible values of a (1, 3, 5, 7, 9, ...), all odd numbers 1-26 other than 13, produces an end result of 12 possible 'a' values.<br><br>
           
-          The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to break using a brute-force attack (see Rule 6).<br><br> 
+          The keyspace, being (#a) × (#b), is therefore 312. This remains very easy to break using a brute-force attack (see Rule 8).<br><br> 
           
           Furthermore, letter frequency also remains preserved (since every instance of a particular plaintext character will be converted into the same corresponding ciphertext character, despite the minute differences in the encryption function), so a letter frequency analysis attack is also applicable.<br><br>
           
-          Though multiple encryption (i.e., running the ciphertext produced by encryption function <em>back into</em> the encryption function to encrypt it again) will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule 44).
+          Though multiple encryption (i.e., running the ciphertext produced by encryption function <em>back into</em> the encryption function to encrypt it again) will not increase the security of an affine cipher, it will for other ciphers, such as the Data Encryption Standard (see Rule 46).
           </div><br><br><br>
 
 	  
@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> Note: You can ALWAYS derive the decryption function from the encryption function of basic ciphers/algorithms. Just know that the encryption function is equal to y and the decryption function is equal to x, and you can simply isolate the appropriate variable to find whichever function you wish.<br><br>
         
-        In doing so, always recall that dividing by a variable (as can occur when dividing both sides as a part of the isolation process) makes that variable into its inverse, as foretold in the lesson of Rule 17 and as demonstrated in the mathematical definition of Rule 20.<br><br><!--EXTREMELY 2096 wording. This is the writing of the future.-->
+        In doing so, always recall that dividing by a variable (as can occur when dividing both sides as a part of the isolation process) makes that variable into its inverse, as foretold in the lesson of Rule 19 and as demonstrated in the mathematical definition of Rule 22.<br><br><!--EXTREMELY 2096 wording. This is the writing of the future.-->
         
         Know that when doing any algebra with an encryption/decryption equation, the mod operator will simply remain in place on whichever side it was on originally. The mod can be effectively ignored until the end of the isolation process, with it not playing a part in the moving of variables from side to side and whatnot. It will continue to act upon whichever variables are on its side of the equation.
         </div><br>
@@ -611,7 +611,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong>Historical Ciphers & Modular Arithmetic</strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 18 2025</span><br>
+      	<span class="tiny">Last Change: July 22 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

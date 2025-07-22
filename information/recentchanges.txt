@@ -3,6 +3,13 @@ CHANGE LOG
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+July 21st, 2025: Cryptographic Revisal completed! After a marathon session (during which I created two additional Rules out of a bloated definition), I finished the revisal of Sections I-IV of Cryptography. New content has begun being added, with Block Ciphers being the prime focus as of right now.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 48, 49.
+
+July 20th, 2025: An entirely new Subsection of Symmetric Cryptography (I.III) was created to handle the addition of new content, content created with the express purpose of explaining several concepts that were not previously gone over in depth, such as the difference between value-based and set-based bit-length.
+
+July 19th, 2025: Further Cryptographic revisal, though I was busy most of the day with other business.
+
 July 17th, 2025: The addition of an additional Rule to Symmetric Cryptography in order to tie up some lose ends that appear that later on. 
 Rules Added: Cryptography, Symmetric Cryptography - Rule 47.
 
@@ -10,7 +17,7 @@ July 16th, 2025: Revisals of Section III.II completed.
 
 July 15th, 2025: Revisals of Symmetric Cryptography Section II have been completed.
 
-July 14th, 2025: Further cryptography work, as well as on the math symbols page.
+July 14th, 2025: Further Cryptography work, as well as on the math symbols page.
 
 July 13th, 2025: Further Cryptography work. I expect revisals to finish tomorrow, and the addition of new content to begin as well.
 

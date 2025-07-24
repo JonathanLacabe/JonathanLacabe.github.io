@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
 		  <a href="/information/about.html">About</a><br>
 		  <hr><!--All Mirrors-->
+		  <a href="https://hkproject.org/">HKProject</a><br>
 		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
 		  <a href="https://humanknowledge.neocities.org/">Neocities</a><br>
 		</div>
@@ -2074,9 +2075,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         These tables will be akin to <em>compression</em> functions/compression boxes, as they will produce less output than input: Each table will output 4 bits from an input of 6, thus resulting in a net total of 32 bits, exactly what is needed.<br><br>
         
-        The Compression Algorithm works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given, 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a set, predetermined substitution table, the purposeful and exact design of which was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant <a href="/cryptography/symmetricFull#SBoxDesign">blue section</a> below.<br><br>
+        The Compression Algorithm works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given, 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a set, predetermined substitution table, the purposeful and exact design of which was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant <a href="/cryptography/symmetricFull.html#SBoxDesign">blue section</a> below.<br><br>
         
-        Note that <STRONG>EACH</STRONG> Substitution Table, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. [[[[[[ The S<sub>1</sub> table is shown below; the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250101005749id_/http://koclab.cs.ucsb.edu/teaching/ccs130h/2016/des/T03-Vertical.pdf">this here document</a>.<br><br>
+        Note that <STRONG>EACH</STRONG> Substitution Table, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. [[[[[[ The S<sub>1</sub> table is shown below; the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250724032842id_/https://ece.uprm.edu/~noack/crypto/textslides/109678-0136024858_ppt/StallingsPPT_0136024858/Tables/T03-Vertical.pdf">this here document</a>.<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof." width=62%/></a></div>
   	    <span class="tiny"><em>The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof.</em></span><br><br>
   
@@ -2199,10 +2200,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong>Complete Symmetric Cryptography</strong></article>
         <br>
-        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 22 2025</span><br>
+      	<span class="tiny">Last Change: July 23 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

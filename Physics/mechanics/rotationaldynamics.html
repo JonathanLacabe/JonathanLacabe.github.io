@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
 		  <a href="/information/about.html">About</a><br>
 		  <hr><!--All Mirrors-->
+		  <a href="https://hkproject.org/">HKProject</a><br>
 		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
 		  <a href="https://humanknowledge.neocities.org/">Neocities</a><br>
 		</div>
@@ -147,9 +148,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	  The moment of inertia of an entire system is just the summation of all of the individual moments of inertias of the objects within the system. To sum rotational inertias, literally just add them all together, even if they are of different types: if a system contains a particle and a thin rod, then add the particle rotational inertia equation to the thin rod rotational inertia, which has an already known alternate equation (see "Basic Rotational Inertias"). Note: This is only so long as the inertias are calculated around the same axis of rotation.<br><br>
 	  
-	  If you ever need to find the rotational inertia of a non-particle that doesn't have a <a href="/Physics/MechanicsFull3#InertiasEx">generalized inertia already known</a>, then you need to use either the rotational kinetic energy equation (if you know the value (see Rule 122)), or the net torque equation (which is equal to I × <span class="vecteur">α</span>, see Rule 125).<br><br>
+	  If you ever need to find the rotational inertia of a non-particle that doesn't have a <a href="/Physics/MechanicsFull3.html#InertiasEx">generalized inertia already known</a>, then you need to use either the rotational kinetic energy equation (if you know the value (see Rule 122)), or the net torque equation (which is equal to I × <span class="vecteur">α</span>, see Rule 125).<br><br>
 	  
-In essence, the equations for moment of inertia state that as the distance from the axis of rotation increases, so will the moment of inertia. For example - if you have a broom and you try to rotate it from the brush, it will not be too difficult since most of the mass is located by the brush, but if you were to try to rotate the broom from the top of the handle, it will be much more difficult as the bulk of the mass has dramatically increased in its distance from the center of the rotation.
+    In essence, the equations for moment of inertia state that as the distance from the axis of rotation increases, so will the moment of inertia. For example - if you have a broom and you try to rotate it from the brush, it will not be too difficult since most of the mass is located by the brush, but if you were to try to rotate the broom from the top of the handle, it will be much more difficult as the bulk of the mass has dramatically increased in its distance from the center of the rotation.
 	  
 	  <br><br><br><br>
 	  
@@ -219,7 +220,7 @@ In essence, the equations for moment of inertia state that as the distance from 
 	  <strong>θ</strong> = The angle between the direction of <span class="vecteur"><strong>r</strong></span> and the direction of <span class="vecteur"><strong>F</strong></span>.<br><br><br>
 
 	  <u><strong>Definition</strong></u>: The ability of a force to cause an <u>angular acceleration</u> in an object. Just as translational motion is caused by a net <em>force</em> (the ability to cause an acceleration in an object), <em>rotational</em> motion is caused by a net <strong>torque</strong>. Of course, torque is caused by a force.<br><br>
-	  The direction of torque, being a result of the cross product, requires only the traditional right-hand rule for determination, back in <a href="/Physics/MechanicsFull#VectorMultiplyVector">Subsection III.II</a>. Note that torque is in the same direction as the angular acceleration that it produces, which is also the same direction as the angular velocity or angular displacement, determined through the Rotational RHR (see Rule 51). Choose which one you use based on the parameters of the problem/situation. Either rule patently does <u>not</u> give you the direction of force - figure that out using vector decomposition or something else.
+	  The direction of torque, being a result of the cross product, requires only the traditional right-hand rule for determination, back in <a href="/Physics/MechanicsFull.html#VectorMultiplyVector">Subsection III.II</a>. Note that torque is in the same direction as the angular acceleration that it produces, which is also the same direction as the angular velocity or angular displacement, determined through the Rotational RHR (see Rule 51). Choose which one you use based on the parameters of the problem/situation. Either rule patently does <u>not</u> give you the direction of force - figure that out using vector decomposition or something else.
 	  
 	  <br><br><br><br>
 	    
@@ -313,7 +314,7 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
       <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3#InertiasEx">basic rotational inertias</a>.
+        </strong> There is a trend in Physics and Mathematics equations that you will see rather commonly: <strong>Lowercase</strong> letters are in reference to <u>variables</u>, like the 'r' and 'dm' of the integral equation of <a href="/Physics/MechanicsFull3.html#MomentOfInertiaDef">moment of inertia equations</a>. <strong>Uppercase</strong> letters, on the other hand, are in reference to <u>constants</u>, such as the 'R', 'M', and 'L''s of the <a href="/Physics/MechanicsFull3.html#InertiasEx">basic rotational inertias</a>.
       </div><br><br>
       
       
@@ -329,7 +330,7 @@ Note that it is impossible for the rotational inertia to be equal to zero so lon
 <strong>D</strong> = The distance from the center of mass to the new axis. This is NOT the distance from the old axis of rotation to the new one, it is the distance from the center of mass<u></u>.<br><br>
 
 
-This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3#InertiasEx">Basic Rotational Inertias</a>" from the first).
+This theorem is an easy way to determine the moment of inertia of a rigid body, rotating about an axis <u>parallel</u> to the true axis that runs through the center of mass of the rigid body. This theorem greatly simplifies the process of determining moment of inertia for various objects (given you already know the <a href="/Physics/MechanicsFull3.html#InertiasEx">parent one</a>), such as in determining the moment of inertia of a thin rod of length L about one of its ends, given you already know the moment of inertia of the rod rotating around its center of mass (e.g., you can determine the second value of "<a href="/Physics/MechanicsFull3.html#InertiasEx">Basic Rotational Inertias</a>" from the first).
       
       </div><br><br>
       
@@ -339,7 +340,7 @@ This theorem is an easy way to determine the moment of inertia of a rigid body, 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
         </strong> Do not forget how to correlate rotational and linear acceleration/velocity - you learned this before.<br><br>On a pulley system in which a string pull downward upon the circular pulley, pulling into centripetal motion, the pulley will be accelerating (angularly) at a proportional rate to the string (linearly), since the string can only move downward as the pulley/circular object moves with it. In these circumstances, remember that the string is moving at a tangential acceleration, which already has a proportionality defined for it:<br><br><strong>a<sub>t</sub> = r × α.</strong><br><br> Tangential Velocity is practically the same thing as well, just with angular velocity instead of acceleration.<br><br>
       
-      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq#V-I">here</a>.
+      Do not forget the basic equations of centripetal motion when doing problems involving torque and moment of inertia! Reflect and review the old equations <a href="/Physics/physicseq.html#V-I">here</a>.
       </div><br><br>
       
       
@@ -512,12 +513,12 @@ In problems involving Torque however, the location of the origin of the forces m
       <footer class="site">
       <br>
       <strong><a href="/Physics/Mechanics.html">Classical Mechanics</a></strong><br>
-        <article><strong><a href="/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong> → <strong><a href="/Physics/MechanicsFull2">Pt. 2: Dynamics</a></strong> → <strong><a href="/Physics/MechanicsFull3">Pt. 3: Dynamics (cont.)</a></strong></article>
+        <article><strong><a href="/Physics/MechanicsFull.html">Pt. 1: Kinematics</a></strong> → <strong><a href="/Physics/MechanicsFull2.html">Pt. 2: Dynamics</a></strong> → <strong><a href="/Physics/MechanicsFull3.html">Pt. 3: Dynamics (cont.)</a></strong></article>
         <br>
-        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational">Rotational Motion</a></strong> → <strong><a href="/Physics/mechanics/force">Force</a></strong> → <strong><a href="/Physics/mechanics/energy">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum">Momentum & Center of Mass</a></strong> → <strong>Rotational Dynamics</strong> → <strong><a href="/Physics/mechanics/gravitation">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong><a href="/Physics/mechanics/vectors.html">Vectors and Projectile Motion</a></strong> → <strong><a href="/Physics/mechanics/range.html">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational.html">Rotational Motion</a></strong>  → <strong><a href="/Physics/mechanics/force.html">Force</a></strong> → <strong><a href="/Physics/mechanics/energy.html">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum.html">Momentum & Center of Mass</a></strong> → <strong>Rotational Dynamics</strong> → <strong><a href="/Physics/mechanics/gravitation.html">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: June 23 2025</span><br>
+      	<span class="tiny">Last Change: July 23 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

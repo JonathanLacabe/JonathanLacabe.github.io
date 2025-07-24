@@ -128,22 +128,32 @@ nav {
 }
 
 .vecteur {
-  position: relative;
+    position: relative;
 }
 .vecteur::before {
-  content: "\2192";
-  position: absolute;
-  top: -0.55em;
-  left: -0.1em;
-  font-size: 1.2em;
+    content: "\2192";
+    position: absolute;
+    top: -0.55em;
+    left: -0.1em;
+    font-size: 1.2em;
 }
 
 var.vector {
-  font-style : normal;
+    font-style : normal;
 }
 var.vector span {
-  margin-left: -.55em;   /* shift the arrow back over the letter */
-  vertical-align : .2em; /* tune the arrow vertical position */
+    margin-left: -.55em;   /* shift the arrow back over the letter */
+    vertical-align : .2em; /* tune the arrow vertical position */
+}
+
+.spoiler {
+    color: #000000;
+    background: #000000;
+}
+
+.spoiler:hover {
+    color: #ffffff;
+    color: #eeeeee;
 }
 
 a:hover {

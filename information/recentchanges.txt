@@ -1,7 +1,9 @@
-CHANGE LOG
+CHANGE LOG.
 
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
+
+July 23rd, 2025: After several days of fiddling with the registrar and getting the SFTP functioning, an actual domain has finally been created for the Human Knowledge Project: hkproject.org. In setting the site up, I found that all links that didn't incorporate an ".html" produced a 404, since file-extensionless-linking is just a Neocities thing. I spent a little while fixing every page that had this type of linking, in order to have everything in working order across all three mirrors - Github, Neocities, and now Hkproject.org. I also removed and updated all "http" links so that the website would show as secure, avoiding https/http content mixing. Afterward, I added a little link to the new domain in the bottom of the lefthand sidebar on every page, putting all the mirrors (Github, Neocities, and now HKProject) all in one place. Additionally, the Algebra II logo was added today, and I am particularly happy with how this one came out - it mimics a New York City style subway sign.
 
 July 21st, 2025: Cryptographic Revisal completed! After a marathon session (during which I created two additional Rules out of a bloated definition), I finished the revisal of Sections I-IV of Cryptography. New content has begun being added, with Block Ciphers being the prime focus as of right now.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 48, 49.

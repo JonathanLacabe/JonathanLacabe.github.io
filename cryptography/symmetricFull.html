@@ -1144,6 +1144,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	  
 	  
+	  
+	  
 	  </article>
 	    <header class="articleHeader"><hr><hr>
 	    <h2><span class="mw-headline" id="StreamCiphers">III. Stream Ciphers.</span></h2>
@@ -1206,9 +1208,7 @@ document.addEventListener("DOMContentLoaded", function (){
       A cipher that encrypts bits individually, processing one bit after another in a sequence. This is opposed to a Block Cipher (see Section IV), which takes in large numbers of bits all at once.<br><br>
       
       
-      Using the modular 2 operation (see Rule 24), the encryption and decryption functions of the basic stream cipher can be depicted as shown:<br><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/StreamDiagram.png"><img src="/cryptography/img/StreamDiagram.png" alt="A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function." width=73%/></a></div>
-	    <span class="tiny"><em>A simple diagram displaying how a simple Stream Cipher (abiding by the encryption and decryption functions defined) would work. Note the usage of the XOR gate, or modulus 2 function.</em></span><br><br>
+      Using the modular 2 operation (see Rule 24), the encryption and decryption functions of the basic stream cipher can be depicted as shown in Fig. 4.<br><br>
 
         The central complexity of the Stream Cipher is the generation of the "Keystream", e.g. the stream of bits with which the plaintext is encrypted. This generation must be performed through <em>Random Numbers</em> - see Rule 26.<br><br>
         
@@ -1222,11 +1222,17 @@ document.addEventListener("DOMContentLoaded", function (){
         -->
 	      </div><br><br><br>
 	      
+	      
+	      
+	      <strong><a href="#Fig4"><span class="mw-headline" id="Fig4">#</span></a> Fig. 4. - Practical Stream Ciphers:</strong><br>
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/PracticalStream.png"><img src="/cryptography/img/PracticalStream.png" alt="A diagram of how all practical stream ciphers should function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed." width=79%/></a></div>
+    	    <span class="tiny"><em>A diagram of how all <em>practical</em> stream ciphers (abiding by the encryption and decryption functions defined in Rule 25) function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed. Note that the key distribution is not depicted.</em></span><br><br><br><br>
+	      
 	  
 	  
 	      <strong><a href="#KeyStreamDef"><span class="mw-headline" id="KeyStreamDef">#</span></a> <font color="#006400">Keystream</font></strong>: A <u><em>stream</em></u> of characters that is combined with the plaintext to produce the ciphertext in a Stream Cipher, or, in the case of asynchronous stream ciphers, combined with a previous ciphertext to produce a new ciphertext.<br><br>
 
-        The keystream is derived from the <u><em>key</em></u> and the <u><em>seed</em></u>. Generally, the keystream is denoted as "s<sub>i</sub>", while the seed itself is s<sub>0</sub>, the initial position/keybit of the stream from which all recursive stream ciphers evolve from in their encryption functions. <br><br>
+        The keystream is derived from the <u><em>key</em></u> and the <u><em>seed</em></u>. Generally, the keystream is denoted as "s<sub>i</sub>", while the seed itself is s<sub>0</sub>, the initial position/keybit of the stream from which all recursive stream ciphers evolve from in their encryption functions. Inherently, the number of possible seeds is the same as the <strong>keyspace</strong>, since the number of seeds dictates how many keys there can be.<br><br>
         
         The creation of a keystream (both key and seed) involves random number generators, which are detailed in Subsection III.II. The seed, for example, may be created using an actual True Random Number Generator (see Rule 26), while the rest of the key will be deterministically generated <em>from</em> that seed using a PRNG (also Rule 26).<br><!--I was just like, what the hell do I do with all of these parentheticals that are ruining the flow of the thing? asterixize them, of course!-->
         
@@ -1256,11 +1262,11 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> <strong>Random Number Generators (RNG)</strong>:<br><br> The means with which a system can generate random numbers, for the purposes of constructing/filling a keystream with random bits, are split into three main mechanisms:<br><br>
 
         <ol>
-          <li> <strong>True Random Number Generators (TRNGs)</strong>: "True" random numbers stem from random physical processes that cannot be reproduced. <Br><br>
+          <li> <strong>True Random Number Generators (TRNGs)</strong>: "True" random numbers stem from random physical processes that cannot be reproduced. Such <em>natural</em> sources of entropy include flipping a coin, rolling a die, thermal noise, mouse movement, and keystroke timing.<br><br>
           
-          Such <em>natural</em> sources of entropy include flipping a coin, rolling a die, thermal noise, mouse movement, and keystroke timing.<br><br>
+          Hardware and cryptographic systems have tried a lot of different techniques over the years to create a TRNG by analyzing/recording internal characteristics of the computer. Most modern CPU's have a TRNG within a TPM  (trusted platform module) on the motherboard.<br><br>
           
-          Hardware and cryptographic systems have tried a lot of different techniques over the years to create a TRNG by analyzing/recording internal characteristics of the computer. Most modern CPU's have a TRNG within a TPM  (trusted platform module) on the motherboard.
+          An example of a cipher that <em>completely</em> uses TRNGs (not just for one element like the seed, but for the <u><em>entire keystream</em></u>) is the One Time Pad, detailed in Rule [[[.
           
           </li><br><br>
           
@@ -1269,14 +1275,13 @@ document.addEventListener("DOMContentLoaded", function (){
           
           Often, PRNG's are computed with the following function:<br><br>
           
-          <strong> s<sub>i+1</sub> = f(s<sub>i</sub>)
-          </strong><br><br>
+          <strong> s<sub>i+1</sub> = f(s<sub>i</sub>)</strong><br><br>
           
           <strong>s<sub>0</sub></strong> = The initial seed value, which may be an actual TRNG.<br>
           <strong>f(s<sub>i</sub>)</strong> = The 'randomizer' function, which performs whatever upon the seed
           in order to computationally randomize it.<br><br>
           
-          This recursive generation is the form taken by the Linear Congruential Generator (see Rule 28). <br><br>
+          This recursive generation is the form taken by the Linear Congruential Generator, an example of a cryptosystem utilizing a PRNG (see Rule 28). <br><br>
           The rand() function in C is a PRNG and uses a seed of 12345, with the following function as the randomizer: <br>S<sub>i+1</sub> = ((1103515245 × s<sub>i</sub>) + 12345) mod 2³¹.
           </li><br><br>
           
@@ -1285,13 +1290,13 @@ document.addEventListener("DOMContentLoaded", function (){
           
           Given n output keybits (s<sub>i</sub>, s<sub>i+1</sub>, ..., s<sub>i+(n-1)</sub>), it is computationally infeasible to construct s<sub>i+n</sub>.<br><br>
           
-          While in most applications (read: the world outside cryptography), PRNG systems are perfectly fine and suited to create 'random' numbers for whatever purpose, they form very unsecure cryptosystems due to their inherently deterministic nature, and thus in Cryptography, the additional property of unpredictability is required.
+          While in most applications (read: the world outside cryptography), PRNG systems are perfectly fine and suited to create 'random' numbers for whatever purpose, they form very unsecure cryptosystems due to their inherently deterministic nature, and thus in Cryptography, the additional property of unpredictability is required. An example of a commonly-used CPRNG in the real world is the [[[.
           
           
           </li>
         
         </ol>
-        </div><br>
+        </div><br><br>
 
 
         <strong><a href="#UnconditionalSecurityDef"><span class="mw-headline" id="UnconditionalSecurityDef">#</span></a> <font color="#006400">Unconditional Security</font></strong>: A cipher is "unconditionally secure" (or "information-theoretically secure") if it cannot be broken even with <u>infinite</u> computing resources. <br><br>
@@ -1309,25 +1314,21 @@ document.addEventListener("DOMContentLoaded", function (){
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>One Time Pad (OTP)</strong><br><br>
-          The <strong>One Time Pad</strong> (also referred to as the "<strong>Vernam cipher</strong>") is the unconditionally secure, perfect encryption algorithm, unbreakable in any meaningful way. The OTP is a stream cipher with the following properties:<br><br>
-          1) The Keystream bits s<sub>i</sub> must originate from a TRNG.<br><br>
+          The <strong>One Time Pad</strong> (also referred to as the "<strong>Vernam cipher</strong>") is an example of a TRNG-based cryptosystem. It is <em>the</em> unconditionally secure, totally unbreakable, perfect encryption algorithm. The OTP is a stream cipher with the following properties:<br><br>
+          1) The Keystream bits s<sub>i</sub> must originate from a True Random Number Generator (a 'TRNG', see Rule [[[, 1.).<br><br>
           2) Each Keystream bit must be used only once.<br><br>
           
           Knowledge of the Keystream must be exclusively limited to the involved parties, of course. At the end of the data transfer, the party that received the data must destroy the key so that it cannot be used by another party to decrypt the message after the fact. This is the same reason why reusing keys is extremely risky and nullifies the security benefits of the OTP.<br><br>
           
           The security of cryptosystem draws from the fact that, without knowledge of the keystream, even a brute-force attack would be futile, because any two text strings are equally as probable to be a particular word in the plaintext: if a four letter word were to be encrypted, it is equally probable for it to be "when", "stop", or "abcd".<br><br>
           
-          There is one fundamental drawback of the OTP, however, that prevents its universal application: since keystream bits cannot be reused, <strong>the key has to be as long as the plaintext</strong>. A 400MB file, 8 bits to the byte, would entail a 3.2GB key.
-          </div><br><br><br>
+          There is one fundamental drawback of the OTP, however, that prevents its universal application: since keystream bits cannot be reused, <strong>the key has to be as long as the plaintext</strong>. A 400MB file, 8 bits to the byte, would entail a 3.2GB key. As such, the One Time Pad is not the be-all-end-all of Cryptography (at least in terms of application), and other types of CPRNGS are still relevant.
+          </div><br><br><br><br>
           
-
-	  
-    	    <strong><a href="#Fig4"><span class="mw-headline" id="Fig4">#</span></a> Fig. 4. - Practical Stream Ciphers:</strong><br>
-          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/PracticalStream.png"><img src="/cryptography/img/PracticalStream.png" alt="A diagram of how all practical stream ciphers should function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed." width=79%/></a></div>
-    	    <span class="tiny"><em>A diagram of how all <em>practical</em> stream ciphers should function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed.</em></span><br><br><br>
-  	    
-	      
-	      
+          
+          
+          
+          
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
@@ -1335,63 +1336,61 @@ document.addEventListener("DOMContentLoaded", function (){
 
           <strong><u>Mathematical Definition</u></strong>:<br><br>
           
-          <em>
-          (A, B, i, S<sub>i</sub>) ∈ <strong>ℤ</strong><sub>m</sub><br>
-          i > 0<br>
-          Key K = (A, B)<Br><br>
+            <em>
+            (A, B, i, S<sub>i</sub>) ∈ <strong>ℤ</strong><sub>m</sub><br>
+            i > 0<br>
+            Key K = (A, B)<Br><br>
+            
+            <strong>S<sub>i + 1</sub> ≡ ((A × S<sub>i</sub>) + B) mod m</strong>
+            
+            </em><br><br><br>
+            
+            <strong>S<sub>0</sub></strong> = The initial seed value, which may have been created using a TRNG. Of course, it is not depicted in the equation as the equation only refers to i > 0. The seed value is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below. <br>
+            
+            <strong>S<sub>i</sub></strong> = The Keystream at index i, where i > 0. It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below. <br>
+            
+            <strong>S<sub>i + 1</sub></strong> = The following value in the keystream, which is recursively calculated using the value of the previous bit in the keystream (along with the key). It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below.<br>
+            
+            <strong>A</strong> = The multiplied value of the key. It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below. <br>
+            
+            <strong>B</strong> = The "shift parameter" value of the key, only used for the addition operation. It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below.<br>
+            
+            <strong><strong>ℤ</strong><sub>m</sub></strong> = A ring of m integers. See Subsection II.III for an explanation of rings.<br>
+            
+            <strong>mod m</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
+            <br><br><br>
           
-          <strong>S<sub>i + 1</sub> ≡ ((A × S<sub>i</sub>) + B) mod m</strong>
-          
-          </em><br><br><br>
-          
-          <strong>S<sub>0</sub></strong> = The initial seed value, which may have been created using a TRNG. Of course, it is not depicted in the equation as the equation only refers to i > 0. The seed value is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below. <br>
-          
-          <strong>S<sub>i</sub></strong> = The Keystream at index i, where i > 0. It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below. <br>
-          
-          <strong>S<sub>i + 1</sub></strong> = The following value in the keystream, which is recursively calculated using the value of the previous bit in the keystream (along with the key). It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below.<br>
-          
-          <strong><strong>ℤ</strong><sub>m</sub></strong> = A ring of m integers. See Subsection II.III for an explanation of rings.<br>
-          
-          <strong>A</strong> = The multiplied value of the key. It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below. <br>
-          
-          <strong>B</strong> = The "shift parameter" value of the key, only used for the addition operation. It is exactly ⌈log<sub>2</sub> m⌉ bits long, explained below.<br>
-          
-          <strong>mod m</strong> = The modulus/remainder operator, which represents the usage of modular arithmetic, with all numbers represented by their remainder with respect to m.
-          <br><br><br>
           
           <strong><u>Explanation:</u></strong><br><br>
           
-          The LCG is a means of generating a unique keystream using the PRNG system, based on the attributes of the key and the seed. It is an example of a non-cryptographically secure PRNG, the 2nd type of RNG detailed in Rule 26. This makes it more practical a system than the One Time Pad, but much easier to break (see Rule 29). The keystream is deterministically created using a recursive function originating at S<sub>0</sub> (the seed), which itself may be created using a TRNG.<br><br>
+          The LCG is a PRNG-based keystream generator, using the attributes of the key and the seed as its base components. It is an example of a non-cryptographically secure PRNG, the 2nd type of RNG detailed in Rule 26. This makes it more practical a system than the One Time Pad (see Rule [[[), but much easier to break (see Rule 29). The keystream is deterministically created using a recursive function originating at S<sub>0</sub> (the seed), which itself may be created using a TRNG.<br><br>
           
           Of course, separate from the nature of the function/equation itself, note that there are no "Encryption" or "Decryption" functions, because the given equation is merely for composing the keystream (PRNG-style - see Rule 26), while the equation for the Stream <em>Cipher</em> itself remains the same (see Rule 25).<br><br>
           
           The Linear Congruential Generator bears many similarities to the Affine Cipher (Rule 22), in particular how the key is split into multiple parameters (in the case of the LCG, the key used to generate the key<em>stream</em>). However, the <em>length</em> of the parameters greatly differs between the two - while affine ciphers have a set, immutable value for their keyspace, LCG variables derive their length from the modulus itself.<!--I left this sentence as essentially a stream-of-consciousness placeholder to revise later, basically just setting down my ideas so I could polish them later, only to find that it exactly conveyed the point I was trying to get across, in pretty good diction as well. Didn't change a word.--><br><br> 
 
-          	Note that because the modulus represents a set/ring, <strong>ℤ</strong><sub>m</sub>, m qualifies for the set-based bit-length (as detailed in Rule 4). As such, the fact that variables A, B, and S<sub>i</sub> are all ⌈log<sub>2</sub> m⌉ bits long means that they are as long as the bit-length of the modulus.<br><br>
+          	Note that because the modulus represents a set/ring, <strong>ℤ</strong><sub>m</sub>, m qualifies for the set-based bit-length (as detailed in Rule 4). As such, the fact that variables A, B, and S<sub>i</sub> are all ⌈log<sub>2</sub> m⌉ bits long means that <strong>they are as long as the bit-length of the modulus</strong>.<br><br>
           
           Of course, since m is not the keyspace, ⌈log<sub>2</sub> m⌉ is only in reference to a set-based bit-length and not to the key-length. As such, no determination regarding the keyspace of the LCG can be made from ⌈log<sub>2</sub> m⌉, as the equation for finding it using a set-based bit-length (as extensively discussed in Rule 6) specifically requires the <em>key-length</em>. As a bit-based cryptosystem, the LCG <em>does</em> have a key-length (considering it literally generates keys), just not one equal to the bit-length of m.<br><br>
           
           <!--essentially an alternate version of the intro to the previous paragraph. the specification as to how the confusion lies in how the keylength equation is used much more than the set-based bit-length one would have to be worked in to make it functional, but the current one is pretty good anyways:
           Thus, the usage of the equation with m in the usual place of the keyspace does <u>not</u> mean that m is literally the keyspace - this is the fool's conclusion from a cursory glance of the equation.-->
           
-           ⌈log<sub>2</sub> m⌉, as the set-based bit-length of m, merely represents the total number of bits required to represent a variable who can have any value between 0 and m-1. To say that A, B, and Si all have a length of ⌈log2 m⌉ bits does not mean that they are all the same value, but just that they all use the same number of bits to represent their values. For example, 00001 and 11111 represent different values in binary, but both have a bit-length of 5.<br><br>
+           ⌈log<sub>2</sub> m⌉, as the set-based bit-length of m, merely represents the total number of bits required to represent a variable who can have any value between 0 and m-1. To say that A, B, and Si all have a length of ⌈log2 m⌉ bits does not mean that they are all the same value, but just that they all use the same number of bits to represent their values. For example, 00001 and 11111 represent different values in binary, but both have a bit-length of 5.<br><br><br>
           
-          The exact reasonings behind <em>why</em> each variable has a bit-length of m, and how things like the key-length and keyspace are calculated, are subject to the designs choices of the Linear Congruential Generator itself. As LCGs are PRNGs, understanding the intricacies of these design choices and the exact purpose behind each part of this particular system is irrelevant to learning Cryptography.<br><br>
+          The exact reasonings behind <em>why</em> each variable has a bit-length of m, and how things like the key-length and keyspace are calculated, are subject to the design choices of the Linear Congruential Generator itself. As LCGs are PRNGs, understanding the intricacies of these design choices and the exact purpose behind each part of this particular system is irrelevant to learning Cryptography.<br><br>
           
           The decisions made in designing this RNG were not made from a cryptographic standpoint, and thus warrant no in-depth analysis as to aspects like key-length and keyspace size, as the LCG will never be used in a cryptographic context.<br><br>
           
-          The mathematics behind the logic for the aforementioned calculations are thorougly complex and higher-level, and to describe them in great detail would serve no purpose in a cryptography-focused course. Rather, LCGs are useful for their discussion of how PRNGs can be cracked relatively easily (see Rule 29).
+          The mathematics behind the logic for the aforementioned calculations are thoroughly complex and higher-level, and to describe them in great detail would serve no purpose in a cryptography-focused course. Rather, LCGs are useful for their discussion of how PRNGs can be cracked relatively easily (see Rule 29).
           
           <!--FINALLY. I had to add three additional Rules and an entire new Subsection to get to this point. In omnia scientia quaerere-->
-
 
           
           
           <!--Apparently, these things have the craziest mathematics behind their functioning, for the key-length and keyspace: LCG constraints often force 𝐴 A to lie in the multiplicative group modulo 𝑚 m, whose size is 𝜑 ( 𝑚 ) φ(m) (Euler’s totient).
-
-          mathematics that requires the consideration of the [[not tuple, but just breifly go overlyhthe comoplexity of the mathemtais, and how it is irrelevant anyway and will ont be gone over.]]
           
-          They are cryptologically insecure anyways, so whatever, but just note that this things are totally complex. Note what Paar said - there is a huge amount of research and textbooks discussing PRNGs for non-cryptographic purposes, but they are all irrelevant because they are not cryptographically secure. So this doesn't matter for jack with regard to Cryptography, and can be basically ignored as tangential to cryptography as a whole, useful for discussion of how it can be cracked relatively easily.-->
+          They are cryptologically insecure anyways, so whatever, but just note that this things are totally complex. Note what Paar said - there is a huge amount of research and textbooks discussing PRNGs for non-cryptographic purposes, but they are all irrelevant because they are not cryptographically secure.-->
 
 
 
@@ -1404,11 +1403,10 @@ document.addEventListener("DOMContentLoaded", function (){
           
           
           
-          
           <!--Easily the hardest rule(s) I have had to write so far in Cryptography, 26 & 27. Took several hours of total concentration and thinking power, requiring the rewriting of portions of past rules and definitions as well.-->
           
           <!--note: Several months after making these Rules, while in the revisal process, it was once again this section that had me go back and edit and create a bunch of earlier Rules in order to better explain the key concepts at play here. The curse of the LCG strikes again.-->
-	      </div><br><br>
+	      </div><br><br><br>
 	  
 	  
 	      <div class="rule"><strong>
@@ -1429,7 +1427,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong>B = (S<sub>1</sub> - (S<sub>0</sub> × (S<sub>1</sub> - S<sub>2</sub>) × (S<sub>0</sub> - S<sub>1</sub>)⁻¹)) mod m</strong><br><br>
         
-        After finding A and B, all that would be left to be done is to brute-force m as previously described, and the system would be cracked.
+        After finding A and B, all that would be left to be done is to brute-force m as previously described, and the system would be cracked. The full plaintext would be able to be decoded since every variable of the LCG would be known.
         
         </div><br><br>
 
@@ -1441,7 +1439,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <article>
 	    
 	    
-	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. In electrical engineering, CSE's are part of clocking subsystems and respond to Clock signals (see E.E. Rule [[[[[).
+	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. Think of it like a recording device built into the hardware of the computer, and it captures information at the moment a signal is sent to it (updating it to replace whatever information was in it previously).<br><Br><!--completely intuitive explanation that should make sense to anyone without an inkling of e.e. knowledge, I am very proud of this one-->
+	    
+	    In more explicitly electrical engineering terms, CSE's are part of <em>Clocking Subsystems</em> (see E.E. Rule [[[[[) and respond to Clock signals (see E.E. Rule [[[[[).
         <br><br><br>
 	    
 	  
@@ -1533,6 +1533,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, helps form an LFSR. 
         <br><br><br>
         
+        
         <strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: Also referred as the "<strong>initialization vector</strong>" of the LFSR in this context. The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
         
          Even without knowledge of the XOR positions, by pure knowledge of the first state, every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> of LFSRs (see Rule 31).
@@ -1589,7 +1590,8 @@ document.addEventListener("DOMContentLoaded", function (){
     	  <strong><a href="#PrimitivePolyDef"><span class="mw-headline" id="PrimitivePolyDef">#</span></a> <font color="#006400">Primitive Polynomials</font></strong>: A form of irreducible polynomials, akin to a "prime" polynomial, with the only "factors" being 1 and the polynomial itself. [[[[[[[EXPLAIN IN A MORE COHESIVE AND FULLY ELABORATED MANNER[[[[[[[[.
         <br><br><br>
         
-	  
+	      
+	      
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
@@ -2203,7 +2205,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 23 2025</span><br>
+      	<span class="tiny">Last Change: July 24 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -3,7 +3,9 @@ CHANGE LOG.
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
-July 24th, 2025: Further Cryptography work.
+July 25th, 2025: Further work in Cryptography and the math symbols page. I completely overhalled the math symbols page, which was long overdue for linkings allowing each symbol to be referenced. As for the incomplete portion of the Constants section, I intend to finish that by the end of the summer. In working on Cryptography, I realized that my planned Subcategories for future work did not include Elliptic Curve Cryptography, and so I added the requisite pages and made edits as necessary (such as to the equations page, and to the bottom links of each subcategory page). In doing so, I also created the Cult of Jerry™ (see the source code of the Cryptography page).
+
+July 24th, 2025: Further Cryptography work. Additionally, the Single Variable Calculus logo was added.
 
 July 23rd, 2025: After several days of fiddling with the registrar and getting the SFTP functioning, an actual domain has finally been created for the Human Knowledge Project: hkproject.org. In setting the site up, I found that all links that didn't incorporate an ".html" produced a 404, since file-extensionless-linking is just a Neocities thing. I spent a little while fixing every page that had this type of linking, in order to have everything in working order across all three mirrors - Github, Neocities, and now Hkproject.org. I also removed and updated all "http" links so that the website would show as secure, avoiding https/http content mixing. Afterward, I added a little link to the new domain in the bottom of the lefthand sidebar on every page, putting all the mirrors (Github, Neocities, and now HKProject) all in one place. Additionally, the Algebra II logo was added today, and I am particularly happy with how this one came out - it mimics a New York City style subway sign.
 

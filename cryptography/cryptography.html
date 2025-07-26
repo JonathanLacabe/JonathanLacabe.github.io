@@ -60,22 +60,42 @@
 	 
 	    Every equation that I learned and used in my notes for Cryptography.
 	  </article>
-	  <hr><hr><!--"Cryptographers love tradition. If we were to use “Andy” and “Barbara” as the principals, no one would believe anything in this chapter."<em> - <strong>Andrew S. Tanenbaum</strong></em>-->
+	  <hr><hr><!--“Cryptographers love tradition. If we were to use “Andy” and “Barbara” as the principals, no one would believe anything in this chapter.”<em> - <strong>Andrew S. Tanenbaum</strong></em>-->
 	  
 	  
 	  <header class="articleHeader">
 	    <h2><a href="/cryptography/symmetry.html">Symmetric Cryptography</a> <span class="tiny"><span style="background-color: yellow;">INCOMPLETE</span></span></h2>
 	  </header>
 	  <article><br>
-	     "Anyone, from the most clueless amateur to the best cryptographer, can create an algorithm that he himself can't break."<em> - <strong>Bruce Schneier.</strong></em>
+	     “...so too will [this] seemingly minor discovery out of an arcane branch of mathematics come to be the wire clippers which dismantle the barbed wire around intellectual property. Arise, you have nothing to lose but your barbed wire fences!”<em> - <strong>Timothy C. May, the <a href="https://groups.csail.mit.edu/mac/classes/6.805/articles/crypto/cypherpunks/may-crypto-manifesto.html">Crypto Anarchist Manifesto</a>.</strong></em>
 	  </article><br>
-	  <hr><!--"Design all systems under the assumption that any new device will be immediately hand-delivered to the Kremlin."<em> - <strong>Steven M. Bellovin</strong>.</em>-->
+	  <hr><!--“Design all systems under the assumption that any new device will be immediately hand-delivered to the Kremlin.”<em> - <strong>Steven M. Bellovin</strong>.</em>
+	  
+	  “Anyone, from the most clueless amateur to the best cryptographer, can create an algorithm that he himself can't break.”<em> - <strong>Bruce Schneier.</strong></em>
+	  -->
 	  
 	  <header class="articleHeader">
 	    <h2><a href="/cryptography/publickey.html"></a>Public-Key Cryptography <span class="tiny"><!--<span style="background-color: #FF0800">NOT STARTED</span>--></span></h2>
 	  </header>
 	  <article><br>
-	    "I've been posting my public key for 15 years now, but no one has ever asked me for it or used it for anything as far as I can tell. Maybe I should try posting my <em>private key</em> instead."<em> - <strong><a href="https://www.xkcd.com/1553/">xkcd</a></strong>.</em>
+	    “I've been posting my public key for 15 years now, but no one has ever asked me for it or used it for anything as far as I can tell. Maybe I should try posting my <em>private key</em> instead.”<em> - <strong><a href="https://www.xkcd.com/1553/">xkcd</a></strong>.</em>
+	  </article><br>
+	  <hr>
+	  
+	  <header class="articleHeader">
+	    <h2><a href="/cryptography/elliptic.html"></a>Elliptic Curve Cryptography <span class="tiny"><!--<span style="background-color: #FF0800">NOT STARTED</span>--></span></h2>
+	  </header>
+	  <article><br>
+	    “SEED = SHA1("Give Jerry a raise")”<em></em><br><br> - <strong>One of the seeds (or rather, something similar as the originals are lost) that was <a href="https://saweis.net/posts/nist-curve-seed-origins.html">used to generate</a> the ECDSA elliptic curve standard the NIST developed in the '90s (specifically, FIPS 186-2).<!--The most widely-used E.C.C. standard in practice,--> A huge number of crypto-algorithms rely on this standard, such as the utterly ubiquitous X.509 certificates and even <a href="https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm">Bitcoin</a>. Simply put, Jerry is embedded within the infrastructure of the internet, and is likely to remain so until universal PQC adoption.</strong>
+	    
+	    <!--Felt inspired, formed the Cult of Jerry:
+
+        Every website you click, every move you make on the internet, is done with the veneration of Jerry at its core. From the first moment you ever laid a finger on a keyboard, everything you have ever done has been under Jerry's watchful, underpaid eyes. Every interaction forms but another contribution, another offering, another unheard demand aimed into the void, for the correcting of a great injustice against Jerry. Praise Be To Jerry. Give Jerry A Raise.
+        
+        Like Hartmann to Mussorgsky, I felt Jerry's penniless presence, his creative spirit in the depths of night
+        i need to go2sleep
+        -->
+	    
 	  </article><br>
 	  <hr>
 	  
@@ -83,28 +103,27 @@
 	    <h2><a href="/cryptography/digital.html"></a>Hash Functions & Digital Signatures <span class="tiny"><!--<span style="background-color: #FF0800">NOT STARTED</span>--></span></h2>
 	  </header>
 	  <article><br>
-	    "The next 120 seconds, are going to be very important for your life!"<em> <br>- <strong><a href="https://www.youtube.com/playlist?list=PL2jrku-ebl3H50FiEPr4erSJiJHURM9BX">Christof Paar</a>, inventor of Cryptography.</strong></em>
+	  “The unknown message is: It's time to move to a longer key length”<em></em><br><br> - <strong>The plaintext <a href="https://blogs.distributed.net/1997/10/22/00/00/bovine/">discovered by distributed.net</a> in the <a href="https://en.wikipedia.org/wiki/RC5">RC5-56</a> challenge, after 250 days of distributed brute-forcing through 34 quadrillion keys. This milestone, achieved on October 19, 1997, highlighted the limitations of 56-bit encryption and the power of distributed computing.</strong>
 	  </article><br>
-	  <hr><!--"[The Internet of Things and countless] protocols have given us the means to digitize and put online damn near everything in the world that we don’t eat, drink, wear, or dwell in."<em> - <strong>Edward Snowden</strong></em>-->
+	  <hr>
 	  
-	  <!--"ThiswasnotagooduseofyourtimeButthenagainitwasprobablynotagooduseofmytimeeith
-erAndyethereweareXOXOXOLetsLiveHereInThisTinySecretEncodedTextWorldForever=="<em> <br>- <strong>A decoded message, hidden within a well-known comic.</strong></em>-->
+	  <!--“ThiswasnotagooduseofyourtimeButthenagainitwasprobablynotagooduseofmytimeeitherAndyethereweareXOXOXOLetsLiveHereInThisTinySecretEncodedTextWorldForever==”<em> <br>- <strong>A decoded message, hidden within a well-known comic.</strong></em>-->
+	  <!-- If ever Cryptanalysis: “Cryptanalysis in action: His laptop's encrypted. Drug him and hit him with this $5 wrench until he tells us the password.” - xkcd -->
 	  
 	  <header class="articleHeader">
 	    <h2><a href="/cryptography/authentication.html"></a>Message Authentication <span class="tiny"><!--<span style="background-color: #FF0800">NOT STARTED</span>--></span></h2>
 	  </header>
 	  <article><br>
-	    "Trust, but verify."<em> - <strong>Russian proverb.</strong></em>
+	    “Trust, but verify.”<em> - <strong>Russian proverb.</strong></em>
 	  </article><br>
 	  <hr>
 	  
-	  <!-- If ever Cryptanalysis: "Cryptanalysis in action: His laptop's encrypted. Drug him and hit him with this $5 wrench until he tells us the password." - xkcd -->
 	  
 	  <header class="articleHeader">
 	    <h2><a href="/cryptography/keymanage.html"></a>Key Management <span class="tiny"><!--<span style="background-color: #FF0800">NOT STARTED</span>--></span></h2>
 	  </header>
-	  <article>
-	    <br>"The unknown message is: It's time to move to a longer key length"<em></em><br><br> - <strong>The plaintext <a href="https://blogs.distributed.net/1997/10/22/00/00/bovine/">discovered by distributed.net</a> in the <a href="https://en.wikipedia.org/wiki/RC5">RC5-56</a> challenge, after 250 days of distributed brute-forcing through 34 quadrillion keys. This milestone, achieved on October 19, 1997, highlighted the limitations of 56-bit encryption and the power of distributed computing.</strong>
+	  <article><br>
+	    “The next 120 seconds, are going to be very important for your life!”<em> <br>- <strong><a href="https://www.youtube.com/playlist?list=PL2jrku-ebl3H50FiEPr4erSJiJHURM9BX">Christof Paar</a>, inventor of Cryptography.</strong></em>
 	  </article><br>
 	  <hr>
 	  
@@ -112,14 +131,24 @@ erAndyethereweareXOXOXOLetsLiveHereInThisTinySecretEncodedTextWorldForever=="<em
 	    <h2><a href="/cryptography/PostQuantum.html"></a>Post-Quantum Cryptography <span class="tiny"><!--<span style="background-color: #FF0800">NOT STARTED</span>--></span></h2>
 	  </header>
 	  <article><br>
-	    "If computers that you build are quantum,<br>
-Then spies of all factions will want 'em.<br>
-Our codes will all fail,<br>
-And they'll read our email,<br>
-Till we've crypto that's quantum, and daunt 'em."<em><br> - <strong><a href="https://math.mit.edu/~shor/notapoet.html">Peter Shor, Scientist</a></strong>.</em>
+	    “If computers that you build are quantum,<br>
+      Then spies of all factions will want 'em.<br>
+      Our codes will all fail,<br>
+      And they'll read our email,<br>
+      Till we've crypto that's quantum, and daunt 'em.”<em><br> - <strong><a href="https://math.mit.edu/~shor/notapoet.html">Peter Shor, Scientist</a></strong>.</em>
 	  </article><br><!--These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space. - Bruce-->
 	  <!--<hr>
 -->
+
+
+  <!--if cryptocurrency: “I feel it's like a coal power plant bragging about sustainability because they use a calculator with a solar panel on one desk.” speedgoose, on Bitcoin using Eliptical Curve Cryptography to save resources.-->
+  
+  
+  <!--
+  
+  “The FBI provided documents taken from the files of the National Security Advisor and relevant NSC staff members, including messages from the PROF system between VADM Poindexter and LtCol North. The PROF messages were conversations by computer, written at the time events occurred and <strong>presumed by the writers to be protected from disclosure</strong>. In this sense, they provide a first-hand, contemporaneous account of events.”
+	—The Tower Commission Report to President Reagan on the Iran-Contra Affair, 1987
+  -->
 	</div>
 	
 	<div class="General links">
@@ -146,7 +175,7 @@ Till we've crypto that's quantum, and daunt 'em."<em><br> - <strong><a href="htt
 </div>
       <footer class="site">
       	<hr>
-      	<span class="tiny">Last Change: July 23 2025</span><br>
+      	<span class="tiny">Last Change: July 25 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

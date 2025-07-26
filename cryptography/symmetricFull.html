@@ -1171,7 +1171,7 @@ document.addEventListener("DOMContentLoaded", function (){
         With the smallest possible modulus that allows room for variation in the remainder<!--(since mod 1 produces straight 0s)-->, mod 2 operations are by and large the most popular application of modular arithmetic in cryptography. This is because their restriction of all numbers to be either 0s or 1s (by the very nature of a <em>modular operation</em>, see Rule 11) successfully emulates binary representation, making them extremely useful for bit-based computation (and in particular ciphers that intake streams of data, like stream ciphers (see Rule 25)).<br><br><!--Intake is a verb now. Jonathanization of the english language. 'atleast' and 'eachother' are also words now. -->
         <!--it has assumed a life almost detached from modular arithmetic-->
         
-        The modular 2 operation is used so often, it has its own symbol in cryptographic diagrams: <strong>a circle with a cross</strong>. See Rule 25 for an example. In electrical engineering, the mod 2 function is known as the XOR gate, a type of binary gate (see E.E. [[[[[), further showcasing the broader importance of modular 2 operations in science as a whole. <br><br>
+        The modular 2 operation is used so often, it has its own symbol in cryptographic diagrams: <strong>a circle with a cross</strong>. See Rule 25 for an example. In electrical engineering, the mod 2 function is known as the <strong>XOR gate</strong>, a type of binary gate (see E.E. [[[[[), further showcasing the broader importance of modular 2 operations in science as a whole. <br><br>
         
     	  Note that the listed properties do <STRONG>NOT</STRONG> extend to the modulus of any other number - only for two. See the Vigenère Cipher (see Rule 21), which works akin to a stream cipher, for proof using mod 26 (hint: the addition and subtraction operations produce different values).
     	  
@@ -1266,7 +1266,7 @@ document.addEventListener("DOMContentLoaded", function (){
           
           Hardware and cryptographic systems have tried a lot of different techniques over the years to create a TRNG by analyzing/recording internal characteristics of the computer. Most modern CPU's have a TRNG within a TPM  (trusted platform module) on the motherboard.<br><br>
           
-          An example of a cipher that <em>completely</em> uses TRNGs (not just for one element like the seed, but for the <u><em>entire keystream</em></u>) is the One Time Pad, detailed in Rule [[[.
+          An example of a cipher that <em>completely</em> uses TRNGs (not just for one element like the seed, but for the <u><em>entire keystream</em></u>) is the One Time Pad, detailed in Rule 27.
           
           </li><br><br>
           
@@ -1432,6 +1432,8 @@ document.addEventListener("DOMContentLoaded", function (){
         </div><br><br>
 
 	  
+	  
+	  
 	    </article>
 	    <header class="articleHeader"><hr>
 	      <h3><span class="mw-headline" id="LFSR">III.III Linear Feedback Shift Registers.</span></h3>
@@ -1442,7 +1444,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. Think of it like a recording device built into the hardware of the computer, and it captures information at the moment a signal is sent to it (updating it to replace whatever information was in it previously).<br><Br><!--completely intuitive explanation that should make sense to anyone without an inkling of e.e. knowledge, I am very proud of this one-->
 	    
 	    In more explicitly electrical engineering terms, CSE's are part of <em>Clocking Subsystems</em> (see E.E. Rule [[[[[) and respond to Clock signals (see E.E. Rule [[[[[).
-        <br><br><br>
+        <br><br><br><br>
 	    
 	  
 	      <div class="rule"><strong>
@@ -1450,28 +1452,35 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> A "<strong>Flip-flop</strong>" is a clocked storage element that stores a single bit. There is an input, an output, and a <strong>Clock Input</strong> that determines whether any inputted bit is to be stored or not.<br><br>
 
-        The general symbology used in diagrams for a flip-flop is as follows:<br><br>
+        The general symbology used in diagrams for a flip-flop (in which D is the input & Q is the output) is as follows:<br><br>
   	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-flip-flop-basics.png"><img src="/cryptography/img/D-flip-flop-basics.png" alt="A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of buildcircuitelectronics." width=53%/></a></div>
-  	    <span class="tiny"><em>A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of <a href="https://www.build-electronic-circuits.com/d-flip-flop/">buildcircuitelectronics</a>.</em></span><br><br>
+  	    <span class="tiny"><em>A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of <a href="https://www.build-electronic-circuits.com/d-flip-flop/">buildcircuitelectronics</a>.</em></span><br><br><br>
   
         And here is a diagram showing how the output relies on clock signals to accept an input change, if any:<br><br>
-  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-type_flip-flop_impulse_diagram.png"><img src="/cryptography/img/D-type_flip-flop_impulse_diagram.png" alt="A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of Wikipedia." width=58%/></a></div>
+  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-type_flip-flop_impulse_diagram.png"><img src="/cryptography/img/D-type_flip-flop_impulse_diagram.png" alt="A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of Wikipedia." width=60%/></a></div>
   	    <span class="tiny"><em>A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:D-type_flip-flop_impulse_diagram.png">Wikipedia</a>.</em></span>
   	  
-  	    </div><br><br>
+  	    </div><br><br><br>
   	  
   	  
-  	    <strong><a href="#ShiftRegisterDef"><span class="mw-headline" id="ShiftRegisterDef">#</span></a> <font color="#006400">Shift Register</font></strong>: A "shift register" is akin to a system, a concatentation of several individual flip-flops, each sending a signal to the next until the final flip-flop, which will produce each bit of the output. It is one half of an LFSR.<br><br>
+  	    <strong><a href="#ShiftRegisterDef"><span class="mw-headline" id="ShiftRegisterDef">#</span></a> <font color="#006400">Shift Register</font></strong>: A "shift register" is a concatentation of several individual flip-flops, each sending a signal to the next until the final flip-flop, which will produce each bit of the output. It is one half of an LFSR.<br><br>
   
         An example of a shift register, with three flip-flops, with every new value sent receiving a clock signal:<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag1.png"><img src="/cryptography/img/ShiftCipherDiag1.png" alt="A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and then each change is moved over until there are no more changes to be moved." width=53%/></a></div>
-  	    <span class="tiny"><em>A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and then each change is moved over until there are no more changes to be moved.</em></span>
-  	  
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag1.png"><img src="/cryptography/img/ShiftCipherDiag1.png" alt="A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and the Diagonal rule (detailed in Rule 31) is used to create the new data values for the latter flip-flops." width=53%/></a></div>
+  	    <span class="tiny"><em>A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves rightward as the result of a clock signal allowing each flip-flop to take in the data of the flip-flop to its left, and the Diagonal rule (detailed in Rule 31) becomes visible in how the data values effectively move diagonally to the right from their initial position.</em></span>
+  	    <!--and then each change is moved over until there are no more changes to be moved.-->
+        <br><br><br><br><br>
+	      
+	      
+	      
+	      <strong><font color="blue"><a href="#LFSRIntro"><span class="mw-headline" id="LFSRIntro">#</span></a> Introduction to Linear Feedback Shift Registers:</font></strong><br><br>
+        There is an inherent relationship between electrical engineering and Cryptography, specifically in how Cryptography developed: in the early days of the development of the Stream Cipher, the goal was to create a 'small' stream cipher, e.g. a stream cipher that could be implemented in hardware without using too much power.<br><br>
+        
+        Today, all stream ciphers fit one of two categories: ciphers optimized for <strong>software implementation</strong>, and ciphers optimized for <strong>hardware implementation</strong>. A prime example of the latter are "Shift Register-Based Stream Ciphers", in particular shift registers (see definition) with a feedback mechanism, better known as Linear Feedback Shift Registers.
+        
         <br><br><br>
-	  
-	  
-	  
-	  
+	      
+	      
 	      <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
@@ -1479,64 +1488,63 @@ document.addEventListener("DOMContentLoaded", function (){
 
         <strong><u>Mathematical Definition</u></strong>:<br><br>
         
-        <em>
-        The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in the LFSR Generalization (see Rule 32):<br><br>
-        
-        (S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
-        (i, j) ∈ <strong>ℤ</strong><sub>m</sub>
-        </em><br><br>
-        
-        $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
-        
-        <strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 34) of the output sequence.<br><br>
-        
-        <strong>i</strong> = The offset in the shift register, e.g., the number bit of the keystream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
-        
-        <strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
-        
-        <strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
-        
-        <strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
-        
-        <strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
-        
-        <strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
-        <br><br><br>
+          <em>
+          The equation depends on the specific characteristics of the LFSR. Specifically, the number of flip-flops, the number of mod 2 functions, and which flip-flops have mod 2 functions. The following formula applies to all LFSR's and is fully explained/derived in the LFSR Generalization (see Rule 32):<br><br><!--Looking back, I think I handled the problem of the equation well, since the equation is not explicitly explained or detailed in this Rule. For those wanting a refresher on the concept of the LFSR itself, this Rule is good, for those just needing the equation, this Rule is good, and those seeking to comprehend and understand the equation, this note is here to redirect them to the right place.-->
+          
+          (S<sub>i</sub>, P<sub>j</sub>) ∈ <strong>ℤ</strong><sub>2</sub><br>
+          (i, j) ∈ <strong>ℤ</strong><sub>m</sub>
+          </em><br><br>
+          
+          $$S_{m+1} \equiv \left( \sum_{j=0}^{m-1} S_{i+j} \times P_{j} \right) \mod 2$$<br>
+          
+          <strong>m</strong> = The number of flip-flops in the LFSR. This number determines both the length of the state register and the <em>period</em> (see Rule 34) of the output sequence.<br><br>
+          
+          <strong>i</strong> = The offset in the shift register, e.g., the number bit of the keystream that is being found. This is why it is ∈ <strong>ℤ</strong><sub>m</sub> - it can go no greater than value m.<br><br>
+          
+          <strong>j</strong> = The index variable for each individual flip-flop, which have the <em>potential</em> to contribute to the feedback path, as determined by the feedback coefficient.<br><br>
+          
+          <strong>S<sub>m + 1</sub></strong> = The next output bit into the keystream produced by the LFSR after shifting.<br><br>
+          
+          <strong>S<sub>i + j</sub></strong> = The bit held by a particular flip-flop j, at a specific offset in the shift register i. This is the value being inputted into the multiplier function from the flip-flop.<br><br>
+          
+          <strong>P<sub>j</sub></strong> = The feedback coefficient of flip-flop j. Either 0 or 1.<br><br>
+          
+          <strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality.
+          <br><br><br>
         
         <!--On God this is the best explanation of each variable. Human Knowledge is the greatest learning resource known to mankind, better than Wikipedia, better than any Alien knowledgebase.-->
   
         <strong><u>Explanation:</u></strong><br><br>
         
-        There is an inherent relationship between electrical engineering and Cryptography, specifically in how Cryptography developed: in the early days of the development of the Stream Cipher, the goal was to create a 'small' stream cipher, e.g. a stream cipher that could be implemented in hardware without using too much power.<br><br>
+        Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are yet another PRNG-based keystream generator, and are thus crackable with some effort (see Rule 38).<br><br>
         
-        Today, all stream ciphers fit one of two categories: ciphers optimized for <strong>software implementation</strong>, and ciphers optimized for <strong>hardware implementation</strong>. A prime example of the latter are "Shift Register-Based Stream Ciphers", in particular shift registers with feedback, better known as Linear Feedback Shift Registers.<br><br>
+        Many ciphers, such as the A51 cipher (see Rule [[[<!--potentially a Rule going over the cipher, or maybe just a detailing later on about how A51 ciphers are standard technology in phones and other technological appliances, if the Rule gets scrapped.-->), consist of multiple LFSRs (in the case of A51, 3), which greatly enhance the security of the cipher and validates the usage of LFSR's for legitimate cryptographic purposes (see Rule [[[<!--potentially some Rule using the lfsr multiple times, but if it is super far ahead, then it would still be good to have a little explanation here detailing how adding more lfsr's increases the security by any means-->).<br><br>
         
-        Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are algorithms of keystream generation that utilize yet another PRNG, and are thus crackable with some effort (see Rule 38).<br><br>
+        LFSR's incorporate a standard Shift Register with a <strong>feedback mechanism/path</strong>, generating fresh input for the first flip-flop using some output data. This is done by a modular 2 addition function (a.k.a. an XOR gate, detailed in Rule 24), which can be performed between the value from the final flip-flop (by virtue of it being the beginning of the feedback path) and atleast one other in the shift register. Multiple XOR-gates can be added along the feedback path, complicating the structure of the LFSR and enraging Oscar.<br><br>
         
-        Many ciphers, such as the A51 cipher, consist of multiple LFSRs (in the case of A51, 3), which greatly enhance the security of the cipher and validate the usage of LFSR's for legitimate cryptographic purposes ([[[[[[[[[ how?).<br><br>
-        
-        LFSR's incorporate a standard Shift Register with a <strong>feedback mechanism/path</strong>, generating fresh input for the first flip-flop using some output data. This is done by a modular 2 addition function (an XOR gate), which can be performed between the value from the final flip-flop and any other located in the shift register. Multiple mod2 functions can be added in fact, complicating the structure of the LFSR.<br><br> The mod 2 calculation is first performed in the initial state of the shift register, before the first clock cycle, pre-computing the value that will be used as input for the first flip-flop <u>on</u> the first clock cycle.<br><br>
+        The mod 2 calculation is first performed in the initial state of the shift register, before the first clock cycle, pre-computing the value that will be used as input for the first flip-flop <u>on</u> the first clock cycle.<br><br>
         
         <strong>Remember:</strong> The feedback mechanism that the outputs take uses a mod2 function, but the actual input into the first flip-flop itself is without any special system - it is directly taking in the given number.<br><br>
   
   
         Very important to notice in the progress of an LFSR is that there will be a distinct pattern that holds in each calculated value (placed below the flip-flops on a diagram), known as the <strong>Diagonal Rule</strong>: each bit value will be translated diagonally to the right, for as many flip-flops as there are to the right, continually. Note this pattern in the diagram below:<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag2.png"><img src="/cryptography/img/ShiftCipherDiag2.png" alt="A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete keystream." width=78%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag2.png"><img src="/cryptography/img/ShiftCipherDiag2.png" alt="A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete keystream." width=75%/></a></div>
   	    <span class="tiny"><em>A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete keystream.</em></span><br><br><br>
   
         The specific mathematical formula of the key produced by the LFSR depicted is:<br> <strong>S<sub>i+3</sub> ≡ (s<sub>i+1</sub> + s<sub>i</sub>) mod 2</strong>.
+        
         
         </div><br><br>
 
 
 
-        <strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, helps form an LFSR. 
+        <strong><a href="#FeedbackDef"><span class="mw-headline" id="FeedbackDef">#</span></a> <font color="#006400">Feedback Path/Feedback Mechanism</font></strong>: The path in which all the XOR gates (or other operations) are located, streaming back to the first flip-flop for the new input. This mechanism, when combined with a shift register, forms the basis of an LFSR. 
         <br><br><br>
         
         
-        <strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: Also referred as the "<strong>initialization vector</strong>" of the LFSR in this context. The bits of the flip-flops at a particular shift register offset. Given knowledge of an LFSR state and the XOR-positions/feedback path, the following state, produced through another shift register offset, can be determined.<br><Br>
+        <strong><a href="#LFSRStateDef"><span class="mw-headline" id="LFSRStateDef">#</span></a> <font color="#006400">State (in regard to LFSR's)</font></strong>: The bits of the flip-flops at a particular row-position in the shift register, also referred to as the "<strong>initialization vector</strong>"<!--[[[[[[[explain in detail.--> of the LFSR. Given knowledge of an LFSR state and the XOR-positions/feedback path, every following row of bits can be determined.<br><Br>
         
-         Even without knowledge of the XOR positions, by pure knowledge of the first state, every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> of LFSRs (see Rule 31).
+         Even without knowledge of the XOR positions, by pure knowledge of the first state, almost every flip-flop bit in the following state (except for the first F.F., the recipient of the input of the feedback state) can be determined, as a result of the <u>diagonal rule</u> of LFSRs (see Rule 31).
         <br><br><br>
 
 
@@ -2205,7 +2213,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 24 2025</span><br>
+      	<span class="tiny">Last Change: July 25 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

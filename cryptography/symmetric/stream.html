@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#StreamIntro">III.I Intro to Stream Ciphers.</a>
         </div>
         <div class="toc-column">
-          <a href="#LFSR">III.III L.F.S.R.'s.</a>
+          <a href="#LFSR">III.IV LFSRs.</a>
         </div>
       </div>
       
@@ -112,7 +112,17 @@ document.addEventListener("DOMContentLoaded", function (){
         </div>
         
         <div class="toc-column">
-          <a href="#AltSecureStream">III.IV Alt. Secure Stream Ciphers.</a>
+          <a href="#AltSecureStream">III.V Alt. Secure Stream Ciphers.</a>
+        </div>
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#LFSRFundamentals">III.III Fundamentals of LFSRs.</a>
+        </div>
+        
+        <div class="toc-column">
+          <!--<a href="#AltSecureStream">III.VI Alt. Secure Stream Ciphers.</a>-->
         </div>
       </div>
       
@@ -401,17 +411,23 @@ document.addEventListener("DOMContentLoaded", function (){
         After finding A and B, all that would be left to be done is to brute-force m as previously described, and the system would be cracked. The full plaintext would be able to be decoded since every variable of the LCG would be known.
         
         </div><br><br>
-
-	  
-	  
-	  
-	    </article>
+      
+      
+      
+      
+      </article>
 	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="LFSR">III.III Linear Feedback Shift Registers.</span></h3>
+	      <h3><span class="mw-headline" id="LFSRFundamentals">III.III Fundamentals of Linear Feedback Shift Registers.</span></h3>
 	    </header>
 	    <article>
 	    
-	    
+	    <strong><font color="blue"><a href="#LFSRTerminology"><span class="mw-headline" id="LFSRTerminology">#</span></a> LFSR Terminology:</font></strong><br><br>
+      There is a large amount of terminology used with Linear Feedback Shift Registers (LFSRs) that obfuscates the readability and coherency of any text describing them. Worse, some phrases/terms are more selectively applied than others and/or share meanings.<br><br>
+
+      As such, to better adumbrate<!--:^)--> LFSRs to the beginning Cryptographer, all known LFSR-specific terminologies are described in detail within Subsections III.III & III.IV (alongside all prerequisite E.E. knowledge for LFSRs), legible for both straight-through reading (as you would approach a standard textbook) and for the 'ctrl-f'ing Cryptographer who encountered an unfamiliar term in the field. <!--All information is presented assuming knowledge of only the information that was previously explained.-->
+      
+      <br><br><br>
+	  
 	    <strong><a href="#CSEDef"><span class="mw-headline" id="CSEDef">#</span></a> <font color="#006400">Clocked Storage Element (CSE)</font></strong>: A storage container that captures information at a specific moment in time, storing it until needed. Think of it like a recording device built into the hardware of the computer, and it captures information at the moment a signal is sent to it (updating it to replace whatever information was in it previously).<br><Br><!--completely intuitive explanation that should make sense to anyone without an inkling of e.e. knowledge, I am very proud of this one-->
 	    
 	    In more explicitly electrical engineering terms, CSE's are part of <em>Clocking Subsystems</em> (see E.E. Rule [[[[[) and respond to Clock signals (see E.E. Rule [[[[[).
@@ -440,7 +456,15 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag1.png"><img src="/cryptography/img/ShiftCipherDiag1.png" alt="A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and the Diagonal rule (detailed in Rule 31) is used to create the new data values for the latter flip-flops." width=53%/></a></div>
   	    <span class="tiny"><em>A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves rightward as the result of a clock signal allowing each flip-flop to take in the data of the flip-flop to its left, and the Diagonal rule (detailed in Rule 31) becomes visible in how the data values effectively move diagonally to the right from their initial position.</em></span>
   	    <!--and then each change is moved over until there are no more changes to be moved.-->
-        <br><br><br><br><br>
+        <br><br><br>
+        
+        
+	  
+  	    </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="LFSR">III.IV Linear Feedback Shift Registers.</span></h3>
+  	    </header>
+  	    <article>
 	      
 	      
 	      
@@ -709,7 +733,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	    </article>
 	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="AltSecureStream">III.IV Alternate Secure Stream Ciphers.</span></h3>
+	      <h3><span class="mw-headline" id="AltSecureStream">III.V Alternate Secure Stream Ciphers.</span></h3>
 	    </header>
 	    <article>
 	  
@@ -790,7 +814,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	<div class="General links">
 		links
 		<hr>
-		Programming
+		Programming<br>
 		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
 		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
 		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
@@ -817,7 +841,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong>Stream Ciphers</strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 25 2025</span><br>
+      	<span class="tiny">Last Change: July 26 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -156,13 +156,18 @@ var.vector span {
     color: #eeeeee;
 }
 
-a:hover {
-    outline: 2px dotted blue;
-}
-
 a {
     color: green;
     text-decoration: none;
+    display: inline-block;
+}
+
+a img {
+    display: block;
+}
+
+a:hover {
+    outline: 2px dotted blue;
 }
 
 .tiny {

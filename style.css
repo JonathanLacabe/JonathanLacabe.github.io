@@ -157,17 +157,23 @@ var.vector span {
 }
 
 a {
-    color: green;
-    text-decoration: none;
-    display: inline-block;
+  color: green;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out, outline 0.1s ease-in-out;
 }
 
 a img {
-    display: block;
+  display: inline-block; /* ensures margin/padding & box-model */
 }
 
-a:hover {
-    outline: 2px dotted blue;
+a:not(.imglink):hover, a:not(.imglink):focus {
+  color: #006500;
+  outline: 2px dotted blue;
+}
+
+a.imglink:hover img, a.imglink:focus img {
+  outline: 2px dotted blue;
+  transition: color 0.1s ease-in-out, outline 0.1s ease-in-out;
 }
 
 .tiny {

@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  <article><br>
 	  
 	    <strong><a href="#Fig1"><span class="mw-headline" id="Fig1">#</span></a> Fig. 1. - Cybersecurity Classification Hierarchy:</strong><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 7, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/cryptog1.png" class="imglink"><img src="/cryptography/img/cryptog1.png" alt="A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 7, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself." width=61%/></a></div>
 	    <span class="tiny"><em>A Classification Hierarchy of the major components of Cryptology. For a further classification of Cryptanalysis, see Rule 7, and III.I for Symmetric Cryptography. The work of the mastermind Jonathan Lacabe himself.</em></span><br><br><br> 
 	    
 	    
@@ -219,14 +219,14 @@ document.addEventListener("DOMContentLoaded", function (){
 
       Say <strong>Alice</strong> and <strong>Bob</strong> connect through the internet (which is an open channel due to the potential of package rerouting/interception) and transfer data. An opponent, <strong>Oscar</strong>, can read their communications by intercepting the data before it reaches Bob.<br><br>
 
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/alicebobunsecure.png"><img src="/cryptography/img/alicebobunsecure.png" alt="A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar." width=90%/></a></div>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/alicebobunsecure.png" class="imglink"><img src="/cryptography/img/alicebobunsecure.png" alt="A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing how communications between Alice and Bob, when passing through an insecure channel unencrypted, can be intercepted by the attacker Oscar.</em></span><br><br> 
 	    
 	    To stop Oscar from reading the message, an encryption algorithm can be established, converting the plaintext message (x) into a ciphertext message (y), and then sending it through the insecure channel. Oscar would only see a stream of random characters/bits as a result of the encryption. Bob, using a decryption function, would convert the ciphertext back into plaintext, thus completing the data transfer without interception.<br><br>
 
       In order for Bob to not simply decrypt the ciphertext immediately using the decryption function (which, counterintuitively, should actually be made publicly available - see Rule 3), a <strong>Key</strong> only known to Alice and Bob (sent through a secure, impenetrable channel) must be used as a parameter in both the encryption and decryption functions.<br><br>The key must be inputted into the encryption function to influence the manner in which the plaintext is encrypted into cyphertext. Thus, only with the key will Bob be able to decrypt the Ciphertext. Oscar, who doesn't know the key, will be unable to decrypt the message, even if the decryption algorithm is public.<br><br>
 
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/AliceBobSecure.png"><img src="/cryptography/img/AliceBobSecure.png" alt="A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions." width=90%/></a></div>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/AliceBobSecure.png" class="imglink"><img src="/cryptography/img/AliceBobSecure.png" alt="A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions." width=90%/></a></div>
 	    <span class="tiny"><em>A diagram showcasing a symmetric cryptosystem, complete with a key sent through a secure channel and encryption/decryption functions.</em></span><br><br> 
 	    
 	    <strong>x</strong> = Plaintext message - the unadulterated, original content of the message.<br><br>
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Thus, all parties intercepting/eavesdropping will be unable to read or manipulate the message, even if they control any of the base stations the message goes through.<br><br>
         
-        	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/e2eediagram.png"><img src="/cryptography/img/e2eediagram.png" alt="An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme." width=82%/></a></div>
+        	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/e2eediagram.png" class="imglink"><img src="/cryptography/img/e2eediagram.png" alt="An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme." width=82%/></a></div>
         	    <span class="tiny"><em>An example of how communications between Alice and Bob would occur under a end-to-end encryption scheme.</em></span>
         <br><br><br>
         
@@ -438,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function (){
   	    
   	    
 	    <strong><a href="#Fig2"><span class="mw-headline" id="Fig2">#</span></a> Fig. 2. - Cybersecurity Classification Hierarchy:</strong><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptanhier.png" class="imglink"><img src="/cryptography/img/cryptanhier.png" alt="A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography." width=66%/></a></div>
         <span class="tiny"><em>A Classification hierarchy of Cryptanalysis. There are two main branches of Classical Cryptanalysis, Brute-force and Analytical Cryptanalysis. See Subsection I.I for the full classification and III.I for Symmetric Cryptography.</em></span><br><br><br>
         
     
@@ -504,7 +504,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <br><br>
       
       As shown in the illustration below, different keyspaces take different amounts of time to crack using brute-force. As such, only algorithms with a sufficiently large keyspace can be considered secure against brute-force, though not necessarily against any other form of attack.<br><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyLength.png" class="imglink"><img src="/cryptography/img/KeyLength.png" alt="A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack." width=67%/></a></div>
 	    <span class="tiny"><em>A chart of the time it would take to crack keyspaces of various lengths using a brute-force attack.</em></span><br><br>
 	    
 	    As of 2010 (very recent), the largest keyspace that can be searched in a relatively reasonable amount of time is 2^60. However, not all keybits are created equally: a 128-bit symmetric key provides roughly the same security as a 3072-bit RSA (asymmetric algorithm) key, as noted in Rule 6. For why this is, see Rule [[[.<!--Same as from the end of Rule 6.-->
@@ -566,9 +566,9 @@ document.addEventListener("DOMContentLoaded", function (){
 		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
 		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
 		<hr>
-		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
-		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
-		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+		<a href="https://ocw.mit.edu/" class="imglink"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation" class="imglink"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate" class="imglink"><img src="/_other/internetarchive.gif" width=60%></a>
 	</div>
       
 </div>
@@ -580,7 +580,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 26 2025</span><br>
+      	<span class="tiny">Last Change: July 28 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><u>Explanation:</u></strong><br><br>
         
         A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm used to encrypt data. Widely used among block ciphers (though not in the AES), several ciphers developed more optimized versions of the network, such as the DES. The original, standard, unadorned version of the Feistel Network is depicted below, while the DES-enhanced version can be seen in Rule 46.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 46 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=50%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 46 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=50%/></a></div>
   	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 46 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
         
         
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><u>Explanation:</u></strong><br><br>
         
         The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return, through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, under the known elements of best-practice block ciphers (see Rule 44).<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
         	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key.</em></span><br><br>
         
         The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6), highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in DES for the Feistel Network are only 48 bits - see Rule [[[[ for why that is.
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function (){
       IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>: the bits are scrambled and assigned to different placements in the data than they were before. This just the algorithmic term for a crosswiring. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x), cancelling eachother out.<br><br>
       
       The purpose of the DES bit permutation functions is simple: while serving no cryptographic purpose (since the attacker can simply take the permutation into account, and because it is undone anyway), when DES was designed in 1974, the application of the cipher into hardcare necessitated cross-wiring (physical bit permutation) just to allow the data to enter the chip. The specific bit permutations used for the initial and final permutations (both depicted below) are done in order to, according to leading experts on the issue, "arrange the plaintext and ciphertext bits in a bytewise manner to make data fetches easier for 8-bit data buses", widely used in the '70s.<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutations in the DES cipher." width=54%/></a></div>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png" class="imglink"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutations in the DES cipher." width=54%/></a></div>
       	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
       Thus, the bit permutations were merely placed in the DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
       
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
 
       The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to the a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche. Below are the complete contents of the f function:<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=48%/></a></div>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=48%/></a></div>
 	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network.</em></span><br><br>
 
       <ol>
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function (){
         The first operation that will be performed will solely involve the first parameter: R<sub>i-1</sub>. In order to account for the differences in length between the right tranche and the subkey, the right tranche will be expanded from 32 bits to 48 bits, using the special <strong>"Expansion function"</strong> or <strong>"Expansion box"</strong>, also referred to as simply the "<strong>E-box</strong>". Notably, this function will provide <em>diffusion</em> to the cipher, as its effects (as described below) will increase the significance & influence of each individual bit of the plaintext with every additional round of encryption.<br><br>
         
         While the E-box also performs a basic permutation on the inputted bits, it differs from a standard bit permutation in that <u>some</u> of the inputted bits are connected to <em>two</em> bit positions, creating values for an expanded table. With the initial 32-bit string of the right tranche, 16 bits of data will be connected only once, while the other 16 bits will be connected twice. An example of how this can be done is seen below.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/EBoxDiag.png"><img src="/cryptography/img/EBoxDiag.png" alt="The complete E-box operation of the DES-specific Feistel Network." width=63%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/EBoxDiag.png" class="imglink"><img src="/cryptography/img/EBoxDiag.png" alt="The complete E-box operation of the DES-specific Feistel Network." width=63%/></a></div>
         	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network.</em></span>
         
         </li><br>
@@ -361,7 +361,7 @@ document.addEventListener("DOMContentLoaded", function (){
         The Compression Algorithm works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given, 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a set, predetermined substitution table, the purposeful and exact design of which was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant <a href="/cryptography/symmetricFull.html#SBoxDesign">blue section</a> below.<br><br>
         
         Note that <STRONG>EACH</STRONG> Substitution Table, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. [[[[[[ The S<sub>1</sub> table is shown below; the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250724032842id_/https://ece.uprm.edu/~noack/crypto/textslides/109678-0136024858_ppt/StallingsPPT_0136024858/Tables/T03-Vertical.pdf">this here document</a>.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof." width=62%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png" class="imglink"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof." width=62%/></a></div>
   	    <span class="tiny"><em>The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof.</em></span><br><br>
   
         In order to read the table, you must take the 6-bit value and examine it as follows:<br><br>
@@ -451,9 +451,9 @@ document.addEventListener("DOMContentLoaded", function (){
 		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
 		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
 		<hr>
-		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
-		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
-		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+		<a href="https://ocw.mit.edu/" class="imglink"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation" class="imglink"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate" class="imglink"><img src="/_other/internetarchive.gif" width=60%></a>
 	</div>
       
 </div>
@@ -465,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 26 2025</span><br>
+      	<span class="tiny">Last Change: July 28 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  <article>
 	  
 	  <strong><a href="#Fig3"><span class="mw-headline" id="Fig3">#</span></a> Fig. 3. - Symmetric Cryptography Hierarchy:</strong><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 7 for Cryptanalysis." width=58%/></a></div>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/cryptog.png" class="imglink"><img src="/cryptography/img/cryptog.png" alt="A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 7 for Cryptanalysis." width=58%/></a></div>
 	    <span class="tiny"><em>A Classification hierarchy of Symmetric Cryptography. There are two major branches of Symmetric Cryptography, Block Ciphers and Stream Ciphers. See Subsection I.I for the full tree, and see Rule 7 for Cryptanalysis.</em></span><br><br><br><br>
 	  
 	  
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	      
 	      
 	      <strong><a href="#Fig4"><span class="mw-headline" id="Fig4">#</span></a> Fig. 4. - Practical Stream Ciphers:</strong><br>
-          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/PracticalStream.png"><img src="/cryptography/img/PracticalStream.png" alt="A diagram of how all practical stream ciphers should function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed." width=79%/></a></div>
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <a href="/cryptography/img/PracticalStream.png" class="imglink"><img src="/cryptography/img/PracticalStream.png" alt="A diagram of how all practical stream ciphers should function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed." width=79%/></a></div>
     	    <span class="tiny"><em>A diagram of how all <em>practical</em> stream ciphers (abiding by the encryption and decryption functions defined in Rule 25) function, with the modular 2 addition highlighted and the keystream generator (which varies from cipher to cipher) displayed. Note that the key distribution is not depicted.</em></span><br><br><br><br>
 	      
 	  
@@ -440,11 +440,11 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> A "<strong>Flip-flop</strong>" is a clocked storage element that stores a single bit. There is an input, an output, and a <strong>Clock Input</strong> that determines whether any inputted bit is to be stored or not.<br><br>
 
         The general symbology used in diagrams for a flip-flop (in which D is the input & Q is the output) is as follows:<br><br>
-  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-flip-flop-basics.png"><img src="/cryptography/img/D-flip-flop-basics.png" alt="A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of buildcircuitelectronics." width=53%/></a></div>
+  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-flip-flop-basics.png" class="imglink"><img src="/cryptography/img/D-flip-flop-basics.png" alt="A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of buildcircuitelectronics." width=53%/></a></div>
   	    <span class="tiny"><em>A diagram of the basic functions of the flip-flop electrical component. D is the input, Q is the output. Ignore the Q with the line for now. Courtesy of <a href="https://www.build-electronic-circuits.com/d-flip-flop/">buildcircuitelectronics</a>.</em></span><br><br><br>
   
         And here is a diagram showing how the output relies on clock signals to accept an input change, if any:<br><br>
-  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-type_flip-flop_impulse_diagram.png"><img src="/cryptography/img/D-type_flip-flop_impulse_diagram.png" alt="A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of Wikipedia." width=60%/></a></div>
+  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/D-type_flip-flop_impulse_diagram.png" class="imglink"><img src="/cryptography/img/D-type_flip-flop_impulse_diagram.png" alt="A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of Wikipedia." width=60%/></a></div>
   	    <span class="tiny"><em>A diagram detailing how the clock signal will influence what data from the input is stored and produced in the output. As shown, the flip-flop will only store the first event captured in the input when the clock signal becomes active, regardless of whether the input changes while the clock signal is still active. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:D-type_flip-flop_impulse_diagram.png">Wikipedia</a>.</em></span>
   	  
   	    </div><br><br><br>
@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", function (){
   	    <strong><a href="#ShiftRegisterDef"><span class="mw-headline" id="ShiftRegisterDef">#</span></a> <font color="#006400">Shift Register</font></strong>: A "shift register" is a concatentation of several individual flip-flops, each sending a signal to the next until the final flip-flop, which will produce each bit of the output. It is one half of an LFSR.<br><br>
   
         An example of a shift register, with three flip-flops, with every new value sent receiving a clock signal:<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag1.png"><img src="/cryptography/img/ShiftCipherDiag1.png" alt="A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and the Diagonal rule (detailed in Rule 31) is used to create the new data values for the latter flip-flops." width=53%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag1.png" class="imglink"><img src="/cryptography/img/ShiftCipherDiag1.png" alt="A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves over once, and the Diagonal rule (detailed in Rule 31) is used to create the new data values for the latter flip-flops." width=53%/></a></div>
   	    <span class="tiny"><em>A shift register, complete with three flip-flops, and a starting value of 1-0-0. Data moves rightward as the result of a clock signal allowing each flip-flop to take in the data of the flip-flop to its left, and the Diagonal rule (detailed in Rule 31) becomes visible in how the data values effectively move diagonally to the right from their initial position.</em></span>
   	    <!--and then each change is moved over until there are no more changes to be moved.-->
         <br><br><br>
@@ -523,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function (){
   
   
         Very important to notice in the progress of an LFSR is that there will be a distinct pattern that holds in each calculated value (placed below the flip-flops on a diagram), known as the <strong>Diagonal Rule</strong>: each bit value will be translated diagonally to the right, for as many flip-flops as there are to the right, continually. Note this pattern in the diagram below:<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag2.png"><img src="/cryptography/img/ShiftCipherDiag2.png" alt="A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete keystream." width=75%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ShiftCipherDiag2.png" class="imglink"><img src="/cryptography/img/ShiftCipherDiag2.png" alt="A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete keystream." width=75%/></a></div>
   	    <span class="tiny"><em>A Linear Feedback Shift Register, complete with three flip-flops and a full period of values, which compose one complete keystream.</em></span><br><br><br>
   
         The specific mathematical formula of the key produced by the LFSR depicted is:<br> <strong>S<sub>i+3</sub> ≡ (s<sub>i+1</sub> + s<sub>i</sub>) mod 2</strong>.
@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", function (){
         First, the number of flip-flops in the register can be generalized to an arbitrary 'm' number of times, which is the simplest generalization to be made.<br><br>
         
         It is possible for any of the flip-flops to have an XOR gate, and for there to be as many XOR gates as flip-flops, minus one. Since all of the flip-flops have a chance at being part of the feedback path, a <strong>multiplier function</strong> must be added after each flip-flop, between the path after the flip-flop and any possible XOR gate above on the feedback path. Thus, the multiplier controls the way to the XOR gate, and essentially acts as an on-or-off switch.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/GeneralizedLFSR.png"><img src="/cryptography/img/GeneralizedLFSR.png" alt="A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation." width=82%/></a></div>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/GeneralizedLFSR.png" class="imglink"><img src="/cryptography/img/GeneralizedLFSR.png" alt="A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation." width=82%/></a></div>
   	    <span class="tiny"><em>A generalized LFSR, with every possible link between a flip-flop and the feedback path having a multiplier function, serving as the 'switch' determining whether that flip-flop is included as a part of the XOR operation.</em></span><br><br><br>
   
         The <strong>multiplier function</strong> works by multiplying the value of the flip-flop (the Input value I) by the internal P-value, which is determined by whether the flip-flop actually has an XOR gate or not (see below). The p-value can only be a binary value: <strong>p<sub>i</sub> ∈ ℤ<sub>2</sub></strong>.<br><br>
@@ -670,7 +670,7 @@ document.addEventListener("DOMContentLoaded", function (){
     
           Below is a table showcasing an example primitive polynomial for each m value 2-128. Note that there are multitudes of primitive polynomials for any given m value, too many to produce a complete list. There are 6.92 × 10⁷ primitive polynomials for an LFSR of m 31.<br><br>
           In the table below, take the values as representing the degrees in reverse order: x^0 + x^1 + x^2, for example. This ensures the +1, a necessary component of any LFSR polynomial as explained in Rule 36.<br><br>
-          <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/LFSRTable.png"><img src="/cryptography/img/LFSRTable.png" alt="A table showcasing an example primitive polynomial for each m value 2-128." width=78%/></a></div>
+          <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/LFSRTable.png" class="imglink"><img src="/cryptography/img/LFSRTable.png" alt="A table showcasing an example primitive polynomial for each m value 2-128." width=78%/></a></div>
     	    <span class="tiny"><em>A table showcasing an example primitive polynomial for each m value 2-128.</em></span>
     
           </div><br><br>
@@ -827,9 +827,9 @@ document.addEventListener("DOMContentLoaded", function (){
 		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
 		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
 		<hr>
-		<a href="https://ocw.mit.edu/"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
-		<a href="https://www.eff.org/issues/innovation"><img src="/_other/eff.png" width=90%></a>
-		<a href="https://archive.org/donate"><img src="/_other/internetarchive.gif" width=60%></a>
+		<a href="https://ocw.mit.edu/" class="imglink"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
+		<a href="https://www.eff.org/issues/innovation" class="imglink"><img src="/_other/eff.png" width=90%></a>
+		<a href="https://archive.org/donate" class="imglink"><img src="/_other/internetarchive.gif" width=60%></a>
 	</div>
       
 </div>
@@ -841,7 +841,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong>Stream Ciphers</strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 26 2025</span><br>
+      	<span class="tiny">Last Change: July 28 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

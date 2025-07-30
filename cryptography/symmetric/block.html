@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </div>-->
       </div>
       
-      <div class="rules" data-start="43">
+      <div class="rules" data-start="44">
 	  
 	  <header class="articleHeader"><hr>
 	    <h2><span class="mw-headline" id="BlockCiphers">IV. Block Ciphers.</span></h2>
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit would be a stream cipher). Thus, the encryption of any plaintext bit in the block depends on the nature of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy.<br><br>
         
-        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule 46 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
+        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule 47 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
         
         Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
         
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table</font></strong>: A Substitution table - an algorithm in which every input is paired with a particular value/address, and has that value outputted. It is not a requirement that the number of output bits match the number of inputted bits - in the DES Feistel cipher, for example, table S<sub>1</sub> produces 4 output bits from 6 input bits.
         <br><br><br>
         
-        <strong><a href="#ProductCipherDef"><span class="mw-headline" id="ProductCipherDef">#</span></a> <font color="#006400">Product Cipher</font></strong>: A generic term used to describe any cipher that utilizes/concatenates the methods of permutation and repeated encryption (in "rounds") to create the element of "diffusion" (see Rule 44) necessary for any block cipher.
+        <strong><a href="#ProductCipherDef"><span class="mw-headline" id="ProductCipherDef">#</span></a> <font color="#006400">Product Cipher</font></strong>: A generic term used to describe any cipher that utilizes/concatenates the methods of permutation and repeated encryption (in "rounds") to create the element of "diffusion" (see Rule 45) necessary for any block cipher.
         <br><br><br>
 
 
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong>R<sub>i-1</sub></strong> = The right tranche of the round prior to the current one, used by the <em>f</em> function (see below).<br><br>
         
-        <strong>f</strong> = The mysterious encryption function, the central part of the entire Feistel scheme. Uses the right tranche and the subkey of a particular round to make an encryption. Explained in Rule 49.<br><br>
+        <strong>f</strong> = The mysterious encryption function, the central part of the entire Feistel scheme. Uses the right tranche and the subkey of a particular round to make an encryption. Explained in Rule 50.<br><br>
         
         <strong>k<sub>i</sub></strong> = The specific subkey used in the round. Each subkey is derived from the main key, explained (for DES) in Rule [[[[[.<br><br>
         
@@ -216,9 +216,9 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Explanation:</u></strong><br><br>
         
-        A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm used to encrypt data. Widely used among block ciphers (though not in the AES), several ciphers developed more optimized versions of the network, such as the DES. The original, standard, unadorned version of the Feistel Network is depicted below, while the DES-enhanced version can be seen in Rule 46.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 46 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=50%/></a></div>
-  	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 46 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
+        A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm used to encrypt data. Widely used among block ciphers (though not in the AES), several ciphers developed more optimized versions of the network, such as the DES. The original, standard, unadorned version of the Feistel Network is depicted below, while the DES-enhanced version can be seen in Rule 47.<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 47 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=50%/></a></div>
+  	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 47 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
         
         
         The bulk of the modern ciphers currently in use were built using feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (see Rule [[[[[[[[). In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and requires a key, instead of merely producing the key (like the LFSR).<bR><BR>
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <article>
 
 
-        <strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (see Rule 46), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 44): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits.
+        <strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (see Rule 47), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 45): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits.
         <br><br><br>
 
 
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Explanation:</u></strong><br><br>
         
-        The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return, through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, under the known elements of best-practice block ciphers (see Rule 44).<br><br>
+        The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return, through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, under the known elements of best-practice block ciphers (see Rule 45).<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
         	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key.</em></span><br><br>
         
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
-      The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 46) is that the operation undergone by data travelling through the cipher is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
+      The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 47) is that the operation undergone by data travelling through the cipher is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
       
       IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>: the bits are scrambled and assigned to different placements in the data than they were before. This just the algorithmic term for a crosswiring. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x), cancelling eachother out.<br><br>
       
@@ -465,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 28 2025</span><br>
+      	<span class="tiny">Last Change: July 30 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

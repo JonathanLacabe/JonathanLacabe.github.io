@@ -3,6 +3,8 @@ CHANGE LOG.
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+July 30th, 2025: Further Cryptography work.
+
 July 29th, 2025: More Cryptography work, adding more explanations to the terminologies of Linear Feedback Shift Registers. I added a new Rule in the process.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 50.
 

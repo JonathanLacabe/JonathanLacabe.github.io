@@ -3,6 +3,8 @@ CHANGE LOG.
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+July 31st, 2025: Marathon Cryptography work day. Some Rules I didn't get to revise previously (in stream ciphers) were gone over, excising a huge amount of nonsense and dramatically improving the readability and usability of the summary, as well as removing some minor errors/typos. Additionally, I split the Complete Symmetric Cryptography page into 2 parts in order to deal with the huge amount of content in the page, in much the same manner I split the Full Physics notes pages (Classical Mechanics and Electromagnetism) into multiple parts to improve browser speed. The 2nd part will cover the entirety of Block Ciphers, which is an utterly massive subject I will focus on over the coming few days.
+
 July 30th, 2025: Further Cryptography work.
 
 July 29th, 2025: More Cryptography work, adding more explanations to the terminologies of Linear Feedback Shift Registers. I added a new Rule in the process.

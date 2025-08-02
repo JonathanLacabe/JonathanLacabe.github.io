@@ -1,136 +1,143 @@
-All pages as of June 19 2025.
+All pages as of August 1 2025.
 
-Home                                                 - https://humanknowledge.neocities.org/
-~Recent Changes                                      - https://humanknowledge.neocities.org/information/recentchanges.txt
-~Color Code                                          - https://humanknowledge.neocities.org/information/color
-~Logos                                               - https://humanknowledge.neocities.org/information/art
-~About                                               - https://humanknowledge.neocities.org/information/about
-~~OpenCourseWare Courses                             - https://humanknowledge.neocities.org/information/opencourse.txt
-
-
-
-Physics                                              - https://humanknowledge.neocities.org/Physics/physics
-~List of Physics Equations                           - https://humanknowledge.neocities.org/Physics/physicseq
-
--Classical Mechanics                                 - https://humanknowledge.neocities.org/Physics/Mechanics
---Classical Mechanics Table of Contents              - https://humanknowledge.neocities.org/Physics/toc
---Full Classical Mechanics, Part 1: Kinematics       - https://humanknowledge.neocities.org/Physics/MechanicsFull
----Velocity, Speed, Acceleration                     - https://humanknowledge.neocities.org/Physics/mechanics/velspaccel
----Free Fall                                         - https://humanknowledge.neocities.org/Physics/mechanics/freefall
----Vectors and Projectile Motion                     - https://humanknowledge.neocities.org/Physics/mechanics/vectors
----Range & Relative Motion                           - https://humanknowledge.neocities.org/Physics/mechanics/range
----Rotational Motion                                 - https://humanknowledge.neocities.org/Physics/mechanics/rotational
---Full Classical Mechanics, Part 2: Dynamics         - https://humanknowledge.neocities.org/Physics/MechanicsFull2
----Force                                             - https://humanknowledge.neocities.org/Physics/mechanics/force
----Energy and Work                                   - https://humanknowledge.neocities.org/Physics/mechanics/energy
---Full Classical Mechanics, Part 3: Dynamics (cont.) - https://humanknowledge.neocities.org/Physics/MechanicsFull3
----Momentum & Center of Mass                         - https://humanknowledge.neocities.org/Physics/mechanics/momentum
----Rotational Dynamics                               - https://humanknowledge.neocities.org/Physics/mechanics/rotationaldynamics
----Gravitation                                       - https://humanknowledge.neocities.org/Physics/mechanics/gravitation
----Oscillations                                      - https://humanknowledge.neocities.org/Physics/mechanics/oscillations
-
--Electromagnetism                                    - https://humanknowledge.neocities.org/Physics/Electromagnetism
---Electromagnetism Table of Contents                 - https://humanknowledge.neocities.org/Physics/EMtoc
---Full Electromagnetism, Part 1: Electrostatics      - https://humanknowledge.neocities.org/Physics/ElectroFull
----Law of Electric Force                             - https://humanknowledge.neocities.org/Physics/electromagnetism/LawElectric
----Electric Fields                                   - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricFields
----Electric Flux                                     - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricFlux
----Electric Potential                                - https://humanknowledge.neocities.org/Physics/electromagnetism/ElectricPotential
----Capacitance                                       - https://humanknowledge.neocities.org/Physics/electromagnetism/Capacitance
---Full Electromagnetism, Part 2: Electrodynamics     - https://humanknowledge.neocities.org/Physics/ElectroFull2
----Current and Resistance                            - https://humanknowledge.neocities.org/Physics/electromagnetism/CurrentResist
----Circuitry                                         - https://humanknowledge.neocities.org/Physics/electromagnetism/Circuitry
+Home                                                 - https://hkproject.org/
+~Recent Changes                                      - https://hkproject.org/information/recentchanges.txt
+~Color Code                                          - https://hkproject.org/color.html
+~Logos                                               - https://hkproject.org/art.html
+~About                                               - https://hkproject.org/about.html
+~~OpenCourseWare Courses                             - https://hkproject.org/opencourse.txt
 
 
 
+Physics                                              - https://hkproject.org/Physics/physics.html
+~List of Physics Equations                           - https://hkproject.org/Physics/physicseq.html
 
-Mathematics                                          - https://humanknowledge.neocities.org/math/mathematics
-~Mathematical Symbols                                - https://humanknowledge.neocities.org/math/mathsymbols
-~List of Math Equations                              - https://humanknowledge.neocities.org/math/matheq
+-Classical Mechanics                                 - https://hkproject.org/Physics/Mechanics.html
+--Classical Mechanics Table of Contents              - https://hkproject.org/Physics/Mechtoc.html
+--Full Classical Mechanics, Part 1: Kinematics       - https://hkproject.org/Physics/MechanicsFull.html
+---Velocity, Speed, Acceleration                     - https://hkproject.org/Physics/mechanics/velspaccel.html
+---Free Fall                                         - https://hkproject.org/Physics/mechanics/freefall.html
+---Vectors and Projectile Motion                     - https://hkproject.org/Physics/mechanics/vectors.html
+---Range & Relative Motion                           - https://hkproject.org/Physics/mechanics/range.html
+---Rotational Motion                                 - https://hkproject.org/Physics/mechanics/rotational.html
+--Full Classical Mechanics, Part 2: Dynamics         - https://hkproject.org/Physics/MechanicsFull2.html
+---Force                                             - https://hkproject.org/Physics/mechanics/force.html
+---Energy and Work                                   - https://hkproject.org/Physics/mechanics/energy.html
+--Full Classical Mechanics, Part 3: Dynamics (cont.) - https://hkproject.org/Physics/MechanicsFull3.html
+---Momentum & Center of Mass                         - https://hkproject.org/Physics/mechanics/momentum.html
+---Rotational Dynamics                               - https://hkproject.org/Physics/mechanics/rotationaldynamics.html
+---Gravitation                                       - https://hkproject.org/Physics/mechanics/gravitation.html
+---Oscillations                                      - https://hkproject.org/Physics/mechanics/oscillations.html
 
--Algebra 2                                           - https://humanknowledge.neocities.org/math/algebraII
---Full Algebra 2                                     - https://humanknowledge.neocities.org/math/algebraIIFull
----Quadratic Translation                             - https://humanknowledge.neocities.org/math/algebraII/quadtranslation
----Factoring Pt. 1                                   - https://humanknowledge.neocities.org/math/algebraII/factoring
----Polynomial Functions                              - https://humanknowledge.neocities.org/math/algebraII/polyfunctions
----Long Division                                     - https://humanknowledge.neocities.org/math/algebraII/longdivision
----Factoring Pt. 2                                   - https://humanknowledge.neocities.org/math/algebraII/factoring2
----Rules of Exponents                                - https://humanknowledge.neocities.org/math/algebraII/exponentrules
-
--Precalulus                                          - https://humanknowledge.neocities.org/math/precalculus
---Full Precalulus                                    - https://humanknowledge.neocities.org/math/precalculusfull
----Rational Equations                                - https://humanknowledge.neocities.org/math/precalculus/rational
----Domain and Symmetricality                         - https://humanknowledge.neocities.org/math/precalculus/symmetricality
----Parents, Composition, and Inverse                 - https://humanknowledge.neocities.org/math/precalculus/pci
-
--Single-Variable Calculus                            - https://humanknowledge.neocities.org/math/singlevarcalculus
---Full Differential Calculus                         - https://humanknowledge.neocities.org/math/calculuspart1
----Limits                                            - https://humanknowledge.neocities.org/math/singlevarcalculus/limits
----Continuity                                        - https://humanknowledge.neocities.org/math/singlevarcalculus/continuity
----Derivatives                                       - https://humanknowledge.neocities.org/math/singlevarcalculus/derivatives
----Particle Motion                                   - https://humanknowledge.neocities.org/math/singlevarcalculus/particlemotion
----Inverses                                          - https://humanknowledge.neocities.org/math/singlevarcalculus/inverses
----Chain Rule                                        - https://humanknowledge.neocities.org/math/singlevarcalculus/chainrule
----Extreme Values                                    - https://humanknowledge.neocities.org/math/singlevarcalculus/extremevalues
---Full Integral Calculus                             - https://humanknowledge.neocities.org/math/calculuspart2
-
--Multivariable Calculus                              - https://humanknowledge.neocities.org/math/multivariable
---Full Multivariable Calculus                        - https://humanknowledge.neocities.org/math/multivariablefull
+-Electromagnetism                                    - https://hkproject.org/Physics/Electromagnetism.html
+--Electromagnetism Table of Contents                 - https://hkproject.org/Physics/EMtoc.html
+--Full Electromagnetism, Part 1: Electrostatics      - https://hkproject.org/Physics/ElectroFull.html
+---Law of Electric Force                             - https://hkproject.org/Physics/electromagnetism/LawElectric.html
+---Electric Fields                                   - https://hkproject.org/Physics/electromagnetism/ElectricFields.html
+---Electric Flux                                     - https://hkproject.org/Physics/electromagnetism/ElectricFlux.html
+---Electric Potential                                - https://hkproject.org/Physics/electromagnetism/ElectricPotential.html
+---Capacitance                                       - https://hkproject.org/Physics/electromagnetism/Capacitance.html
+--Full Electromagnetism, Part 2: Electrodynamics     - https://hkproject.org/Physics/ElectroFull2.html
+---Current and Resistance                            - https://hkproject.org/Physics/electromagnetism/CurrentResist.html
+---Circuitry                                         - https://hkproject.org/Physics/electromagnetism/Circuitry.html
 
 
 
 
-Cryptography                                         - https://humanknowledge.neocities.org/cryptography/cryptography
-~List of Cryptography Equations                      - https://humanknowledge.neocities.org/cryptography/cryptoeq
+Mathematics                                          - https://hkproject.org/math/mathematics.html
+~Mathematical Symbols                                - https://hkproject.org/math/mathsymbols.html
+~List of Math Equations                              - https://hkproject.org/math/matheq.html
 
--Symmetric Cryptography                              - https://humanknowledge.neocities.org/cryptography/symmetry.html
---Full Symmetric Cryptography                        - https://humanknowledge.neocities.org/cryptography/symmetricFull.html
----Introductions                                     - https://humanknowledge.neocities.org/cryptography/symmetric/intro.html
----Historical Ciphers & Modular Arithmetic           - https://humanknowledge.neocities.org/cryptography/symmetric/historical.html
----Stream Ciphers                                    - https://humanknowledge.neocities.org/cryptography/symmetric/stream.html
----Block Ciphers                                     - https://humanknowledge.neocities.org/cryptography/symmetric/block.html
+-Algebra 2                                           - https://hkproject.org/math/algebraII.html
+--Full Algebra 2                                     - https://hkproject.org/math/algebraIIFull.html
+---Quadratic Translation                             - https://hkproject.org/math/algebraII/quadtranslation.html
+---Factoring Pt. 1                                   - https://hkproject.org/math/algebraII/factoring.html
+---Polynomial Functions                              - https://hkproject.org/math/algebraII/polyfunctions.html
+---Long Division                                     - https://hkproject.org/math/algebraII/longdivision.html
+---Factoring Pt. 2                                   - https://hkproject.org/math/algebraII/factoring2.html
+---Rules of Exponents                                - https://hkproject.org/math/algebraII/exponentrules.html
 
--Public-Key Cryptography                             - https://humanknowledge.neocities.org/cryptography/publickey
---Full Public-Key Cryptography                       - https://humanknowledge.neocities.org/cryptography/publickeyFull
+-Precalulus                                          - https://hkproject.org/math/precalculus.html
+--Full Precalulus                                    - https://hkproject.org/math/precalculusfull.html
+---Rational Equations                                - https://hkproject.org/math/precalculus/rational.html
+---Domain and Symmetricality                         - https://hkproject.org/math/precalculus/symmetricality.html
+---Parents, Composition, and Inverse                 - https://hkproject.org/math/precalculus/pci.html
 
--Hash Functions & Digital Signatures                 - https://humanknowledge.neocities.org/cryptography/digital
---Full Hash Functions & Digital Signatures           - https://humanknowledge.neocities.org/cryptography/digitalFull
+-Single-Variable Calculus                            - https://hkproject.org/math/singlevarcalculus.html
+--Full Differential Calculus                         - https://hkproject.org/math/calculuspart1.html
+---Limits                                            - https://hkproject.org/math/singlevarcalculus/limits.html
+---Continuity                                        - https://hkproject.org/math/singlevarcalculus/continuity.html
+---Derivatives                                       - https://hkproject.org/math/singlevarcalculus/derivatives.html
+---Particle Motion                                   - https://hkproject.org/math/singlevarcalculus/particlemotion.html
+---Inverses                                          - https://hkproject.org/math/singlevarcalculus/inverses.html
+---Chain Rule                                        - https://hkproject.org/math/singlevarcalculus/chainrule.html
+---Extreme Values                                    - https://hkproject.org/math/singlevarcalculus/extremevalues.html
+--Full Integral Calculus                             - https://hkproject.org/math/calculuspart2.html
 
--Message Authentication                              - https://humanknowledge.neocities.org/cryptography/authentication
---Full Message Authentication                        - https://humanknowledge.neocities.org/cryptography/authenticationFull
-
--Key Management                                      - https://humanknowledge.neocities.org/cryptography/keymanage
---Full Key Management                                - https://humanknowledge.neocities.org/cryptography/keymanageFull
-
--Post-Quantum Cryptography                           - https://humanknowledge.neocities.org/cryptography/PostQuantum
---Full Post-Quantum Cryptography                     - https://humanknowledge.neocities.org/cryptography/PostQuantumFull
-
-
-
-
-Electrical Engineering                               - https://humanknowledge.neocities.org/engineering/electric
-~Electrical Symbols                                  - https://humanknowledge.neocities.org/engineering/electrik/symbols
-~List of Electrical Engineering Equations            - https://humanknowledge.neocities.org/engineering/electrik/electriceq
-
-
-
-
-Astronomy                                            - https://humanknowledge.neocities.org/astronomy/astronomy
--Classical Astronomy                                 - https://humanknowledge.neocities.org/astronomy/classical
---Full Classical Astronomy                           - https://humanknowledge.neocities.org/astronomy/classicalFull
----Introduction/General Terms                        - https://humanknowledge.neocities.org/astronomy/classical/intro
----Ancient Astronomy                                 - https://humanknowledge.neocities.org/astronomy/classical/ancient
----Astrology                                         - https://humanknowledge.neocities.org/astronomy/classical/pseudoscience
----Origin of Modern Astronomy                        - https://humanknowledge.neocities.org/astronomy/classical/modern
+-Multivariable Calculus                              - https://hkproject.org/math/multivariable.html
+--Full Multivariable Calculus                        - https://hkproject.org/math/multivariablefull.html
 
 
 
 
-Aeronautic & Astronautic Engineering                 - https://humanknowledge.neocities.org/engineering/aeronautics
+Cryptography                                         - https://hkproject.org/cryptography/cryptography.html
+~List of Cryptography Equations                      - https://hkproject.org/cryptography/cryptoeq.html
+
+-Symmetric Cryptography                              - https://hkproject.org/cryptography/symmetry.html
+--Symmetric Cryptography Table of Contents           - https://hkproject.org/cryptography/Symmtoc.html
+--Full Symmetric Cryptography, Part 1: Intro & St... - https://hkproject.org/cryptography/symmetricFull.html
+---Introductions                                     - https://hkproject.org/cryptography/symmetric/intro.html
+---Historical Ciphers & Modular Arithmetic           - https://hkproject.org/cryptography/symmetric/historical.html
+---Stream Ciphers                                    - https://hkproject.org/cryptography/symmetric/stream.html
+--Full Symmetric Cryptography, Part 2: Block Ciphers - https://hkproject.org/cryptography/symmetricFull2.html
+---Block Ciphers                                     - https://hkproject.org/cryptography/symmetric/block.html
+
+-Public-Key Cryptography                             - https://hkproject.org/cryptography/publickey.html
+--Full Public-Key Cryptography                       - https://hkproject.org/cryptography/publickeyFull.html
+
+-Elliptic Curve Cryptography                         - https://hkproject.org/cryptography/elliptic.html
+--Full Elliptic Curve Cryptography                   - https://hkproject.org/cryptography/ellipticFull.html
+
+-Digital Signatures & Hash Functions                 - https://hkproject.org/cryptography/digital.html
+--Full Digital Signatures & Hash Functions           - https://hkproject.org/cryptography/digitalFull.html
+
+-Message Authentication                              - https://hkproject.org/cryptography/authentication.html
+--Full Message Authentication                        - https://hkproject.org/cryptography/authenticationFull.html
+
+-Key Management                                      - https://hkproject.org/cryptography/keymanage.html
+--Full Key Management                                - https://hkproject.org/cryptography/keymanageFull.html
+
+-Post-Quantum Cryptography                           - https://hkproject.org/cryptography/PostQuantum.html
+--Full Post-Quantum Cryptography                     - https://hkproject.org/cryptography/PostQuantumFull.html
 
 
 
 
-Nuclear Engineering                                  - https://humanknowledge.neocities.org/engineering/nuclear
+Electrical Engineering                               - https://hkproject.org/engineering/electric.html
+~Electrical Symbols                                  - https://hkproject.org/engineering/electrik/symbols.html
+~List of Electrical Engineering Equations            - https://hkproject.org/engineering/electrik/electriceq.html
+
+
+
+
+Astronomy                                            - https://hkproject.org/astronomy/astronomy.html
+~List of Astronomy Equations                         - https://hkproject.org/astronomy/astroeq.html
+
+-Classical Astronomy                                 - https://hkproject.org/astronomy/classical.html
+--Full Classical Astronomy                           - https://hkproject.org/astronomy/classicalFull.html
+---Introduction/General Terms                        - https://hkproject.org/astronomy/classical/intro.html
+---Ancient Astronomy                                 - https://hkproject.org/astronomy/classical/ancient.html
+---Astrology                                         - https://hkproject.org/astronomy/classical/astrology.html
+---Origin of Modern Astronomy                        - https://hkproject.org/astronomy/classical/modern.html
+
+
+
+
+Aeronautic & Astronautic Engineering                 - https://hkproject.org/engineering/aeronautics.html
+
+
+
+
+Nuclear Engineering                                  - https://hkproject.org/engineering/nuclear.html
 
 

@@ -129,19 +129,16 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Block Ciphers</strong>:<br><br>
 
-        A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit would be a stream cipher). Thus, the encryption of any plaintext bit in the block depends on the nature of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy.<br><br>
+        A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit at a time would be a stream cipher). These ciphers are both deterministic and hyper-unpredictable: the encryption of any plaintext bit in a block depends on the value of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy. A one bit difference between two blocks of plaintext will produce two <u><eM>completely</eM> different</u> ciphertexts.<br><br>
         
-        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule 47 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
+        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule 48 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
         
         Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
         
-        </div><br><br>
+        </div><br><br><br>
         
         
-        <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table</font></strong>: A Substitution table - an algorithm in which every input is paired with a particular value/address, and has that value outputted. It is not a requirement that the number of output bits match the number of inputted bits - in the DES Feistel cipher, for example, table S<sub>1</sub> produces 4 output bits from 6 input bits.
-        <br><br><br>
-        
-        <strong><a href="#ProductCipherDef"><span class="mw-headline" id="ProductCipherDef">#</span></a> <font color="#006400">Product Cipher</font></strong>: A generic term used to describe any cipher that utilizes/concatenates the methods of permutation and repeated encryption (in "rounds") to create the element of "diffusion" (see Rule 45) necessary for any block cipher.
+        <strong><a href="#ProductCipherDef"><span class="mw-headline" id="ProductCipherDef">#</span></a> <font color="#006400">Product Cipher</font></strong>: A generic term used to describe any cipher that utilizes<!--/concatenates--> the methods of permutation (see definition) and repeated encryption (in "rounds") to create the element of "diffusion" necessary for any block cipher (see Rule 45).
         <br><br><br>
 
 
@@ -155,21 +152,19 @@ document.addEventListener("DOMContentLoaded", function (){
         <ol>
         
           <li><strong>Confusion:<br>
-          The relationship between the plaintext and ciphertext must be obscured.</strong> Any cipher that scrambles its characters thoroughly enough that the plaintext and ciphertext bare no resemblance to one another, passes this requirement.<br><br>
-          
-          However, the sole utilization of this requirement and the abandonment of the second, as was done with the Substitution and Shift Ciphers, will produce a very unsecure cipher.
+          The relationship between the plaintext and ciphertext must be obscured.</strong> Any cipher that scrambles its characters thoroughly enough that the plaintext and ciphertext bare no resemblance to one another, passes this requirement. An example of this is the substitution table, which maps one input bit to a particular output bit the bears no relation to it (see definition).
           
           </li><br><br>
           
           <li><strong>Diffusion:<br>
-          The influence of each plaintext bit is spread over many ciphertext bits.</strong> In systems making good use of diffusion, changing one bit of plaintext results in an average change of half of the total output bits, known as the <strong>Avalanche effect</strong> and akin to chaos theory.<!--One slide: Parallels in Mathematics, chaos theory, also referred to as the "Butterfly Effect" in popular culture--> Example: Permutations of an encryption method to make a cryptosystem more secure.<br><br>
+          The influence of each plaintext bit is spread over many ciphertext bits.</strong> In systems making good use of diffusion, changing one bit of plaintext results in an average change of half of the total output bits, known as the <strong>Avalanche effect</strong> which works akin to chaos theory.<!--One slide: Parallels in Mathematics, chaos theory, also referred to as the "Butterfly Effect" in popular culture--> Example: Permutations of an encryption method to make a cryptosystem more secure (see Rule 49).<br><br>
           This element is impossible under stream ciphers, since each bit is processed and encrypted individually.
           
           </li>
         
         </ol>
         
-        In order to make a truly "secure" cryptosystem using block ciphers, you need to combine both confusion & diffusion elements into the algorithm many times over, in the form of a product cipher.
+        The sole utilization of Confusion and the abandonment of Diffusion, as was done with the Substitution and Shift Ciphers, will produce a very unsecure cipher. In order to make a truly "secure" cryptosystem using block ciphers, you need to combine both confusion & diffusion elements into the algorithm many times over, in the form of a product cipher. 
         
         </div><br><br>
 
@@ -199,13 +194,15 @@ document.addEventListener("DOMContentLoaded", function (){
         
         </em><br><br><br>
         
-        <strong>i</strong> = The particular round, minus 1, that the left and right tranches of the data are at. L<sub>0</sub>, for example, would be in the first round of the cipher. Since i has a minimum value of 1, the first round that can have the equations utilized on is round 2, since there is no past round data to feed into round 1.<br><br>
+        <strong>i</strong> = The particular round that the left and right tranches of the data were created in. The first round produces the tranches L<sub>1</sub> & R<sub>1</sub>, for example.<br><br>
         
-        <strong>L<sub>i</sub></strong> = The left tranche as it is in round i-1. If not in the first round, it will inherit the unencrypted form of the previous right tranche as its starting value in the round.<br><br>
+        <strong>L<sub>i</sub></strong> = The left tranche as it is in round i. It will inherit the unencrypted form of the previous right tranche as its starting value in the round.<br><br>
         
-        <strong>R<sub>i</sub></strong> = The right tranche as it is in round i-1. If not in the first round, it will inherit the XOR-ing of the left tranche of the previous round with the encrypted right tranche of the previous round as its starting position.<br><br>
+        <strong>L<sub>i-1</sub></strong> = The left tranche of the round prior to the current one, used by the <em>f</em> function (see below). If i is 1, then it will be L<sub>0</sub>, the left tranche of the initial input (32 bits of plaintext).<br><br>
         
-        <strong>R<sub>i-1</sub></strong> = The right tranche of the round prior to the current one, used by the <em>f</em> function (see below).<br><br>
+        <strong>R<sub>i</sub></strong> = The right tranche as it is in round i. It will inherit the XOR-ing of the left tranche of the previous round with the encrypted right tranche of the previous round as its starting position.<br><br>
+        
+        <strong>R<sub>i-1</sub></strong> = The right tranche of the round prior to the current one, used by the <em>f</em> function (see below). If i is 1, then it will be R<sub>0</sub>, the right tranche of the initial input (32 bits of plaintext).<br><br>
         
         <strong>f</strong> = The mysterious encryption function, the central part of the entire Feistel scheme. Uses the right tranche and the subkey of a particular round to make an encryption. Explained in Rule 50.<br><br>
         
@@ -216,51 +213,54 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Explanation:</u></strong><br><br>
         
-        A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm used to encrypt data. Widely used among block ciphers (though not in the AES), several ciphers developed more optimized versions of the network, such as the DES. The original, standard, unadorned version of the Feistel Network is depicted below, while the DES-enhanced version can be seen in Rule 47.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 47 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=50%/></a></div>
-  	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, almost totally unadorned of any additional characteristics specific to the DES system - see Rule 47 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
+        A Feistel Cipher/Feistel Network/Feistel Structure is a round-based algorithm used to encrypt data. The original, standard, unadorned version of the Feistel Network is depicted below, while the DES-enhanced version can be seen in Rule 48.<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, totally unadorned of any additional characteristics specific to the DES system - see Rule 48 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=57%/></a></div>
+  	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, totally unadorned of any additional characteristics specific to the DES system - see Rule 48 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
         
+        Widely used among block ciphers (though not in the AES, see Rule [[[), several ciphers like DES developed their own, more optimized versions of the network. The bulk of all modern ciphers currently in use were built using Feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (i.e. going about the rounds in reverse; see Rule [[[[[[[[).<!---[[[perhaps can have a little explanation here of what it entails once the basics are all laid out?--><br><br>
         
-        The bulk of the modern ciphers currently in use were built using feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (see Rule [[[[[[[[). In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and requires a key, instead of merely producing the key (like the LFSR).<bR><BR>
+        In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and <em>requires</em> a key, instead of merely producing the key (like the LFSR). It is just at the same level of ubiquity in block ciphers that LFSRs have for stream ciphers.<bR><BR>
         
-        Devoid of the more specialized characteristics (particular those relating to DES, described in Subsection IV.III), the system by which the "standard", unadorned Feistel Cipher encrypts data is simple:
+        Devoid of the more specialized characteristics (particularly those relating to DES, described in Subsection IV.III), the process by which a standard Feistel Cipher encrypts data is simple:
         
         <ol>
         
-          <li>The data path will be split into two parts: a Left and a Right tranche, L<sub>0</sub> and R<sub>0</sub> respectively. For a 64 bit cipher (like DES), each part will have 32 bits.
+          <li>The data path will be split into two parts: a Left and a Right tranche, L<sub>0</sub> and R<sub>0</sub> respectively. For a 64 bit cipher (like DES), each tranche will have 32 bits.
           
           </li><br>
           
           <li>The Right tranche will have its bits fed into the <em>f</em> function, which is the actual encryption function of the entire operation.<br><br>
-          Additionally, a <strong>subkey</strong> will also be fed into the f function: In each round of encryption, a new subkey derived from the main key is used, thus keeping the process deterministic and replicable, but complicating the process so much that discovery of the plaintext from knowledge of the ciphertext is made (most likely) impossible.<br><br>
-          In the DES cipher, which differs from the more generalized standard feistel network described here and shown in the graphic, the subkey is created using a key schedule. See Rule [[[[[ for an explanation of how this is carried out.
-          <br><br>
           
-          The length of the subkey does not have to be exactly as long as tranche - in the DES, the subkey is 48 bits long, the purpose of which is explained in Rule [[[[[[[.
+            Additionally, a <strong>subkey</strong> will also be fed into the f function: In each round of encryption, a new subkey derived from the main key is used, thus keeping the process deterministic and replicable, but complicating the process so much that discovery of the plaintext from knowledge of the ciphertext is made (most likely) impossible.<br><br>
+            
+            In the DES cipher, which differs from the more generalized standard Feistel network described here and shown in the graphic, the subkey is created using a key schedule. See Rule [[[[[ for an explanation of how this is carried out.<br><br>
+            
+            The length of the subkey does not have to be exactly as long as either tranche - in the DES, the subkey is 48 bits long, the purpose of which is explained in Rule [[[[[[[.
           
           </li><br>
           
           
-          <li>The output of the encryption of the right tranche will then be XOR'd with the left tranche (which had gone untouched until now).
+          <li>The output of the encryption of the right tranche will then be XOR'd bit-by-bit with the left tranche (which had gone untouched until now).
           
           </li><br>
           
           
           <li> For each round, the output of the previous round is fed in as input to the next<!--cryptographic centipede--> round. The trick at this juncture is that the tranches will switch their positions in the new round: the right tranche will become the new left tranche (L<sub>1</sub>), and the left tranche will become the new right tranche (R<sub>1</sub>). <!--This has the unintended side-effect of making Feistel Networks have the funniest diagram of all cryptosystems. ....yet! stay tuned-->
-          <br><br>
-          <STRONG>IMPORTANT NOTE:</STRONG> The Right tranche is sent to the left tranche of the next round in its <em>unencrypted form</em>. The Right tranche passes through unaltered to the left tranche; since the Left tranche of the first round got XOR'd with the encrypted version of the Right tranche, <strong><em>IT</em></strong> is the one being "encrypted" or simply changed in any meaningful way, not the right tranche. 
+            <br><br>
+          
+          <STRONG>IMPORTANT NOTE:</STRONG> The Right tranche is sent to the left tranche of the next round in its <em>unencrypted form</em>, while the right tranche of the next round is sent the encrypted output of steps 2-3. Since the Left tranche of the first round got XOR'd with the encrypted version of the Right tranche, the <strong><em>LEFT</em></strong> tranche is the one being "encrypted" during any particular round, not the right tranche. Although an encrypted <em>version</em> of the Right tranche is used to encrypt the Left tranche, the encrypted version of the right tranche is not used for any other purpose than to change the left tranche, since it is the <em>unaltered</em> version of the right tranche that gets sent to the next round. 
           
           </li>
         
-        </ol></div>
-          <!--
-          Unfinished part I decided was unnecessary.
-          
-          The nature of the Feistel Network is such that the only distinguishing characteristic between it and a standard stream cipher (in format, since the "f" function has the internal mechanisms of the block cipher) is the 
-          
-          -->
+        </ol><br>
+        
+        
+        Each round takes in the tranches produced by the previous round (or, in the case of round 1, the inputted plaintext tranches) and converts them algorithmically into new tranches. Thus, each encryption round extends from the tranches above the encryption algorithm to the end-result tranches below it: round 1 takes in tranches L<sub>0</sub> and R<sub>0</sub> and outputs L<sub>1</sub> and R<sub>1</sub>.
 
-
+        </div><br><br>
+        
+        
+        
 
 
       </article>
@@ -268,15 +268,33 @@ document.addEventListener("DOMContentLoaded", function (){
 	      <h3><span class="mw-headline" id="DES">IV.III Data Encryption Standard.</span></h3>
 	    </header>
 	    <article>
+	    
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>History of the Data Encryption Standard (DES):</strong><br><br>
 
-
-        <strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (see Rule 47), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 45): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits.
+          Proposed in 1974 by IBM (in coordination with the NSA), DES was the cryptographic standard for the U.S. government between 1977 and 1998, making it the most studied cipher in the world.<br><br>
+          
+          The DES was the first "secure" cryptosystem ever made public by a national government under the postulate of Kerckhoffs's principle (see Rule 3).<br><br>
+          
+          Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to its short key-length (56 bits), 3DES has a very long key, and as such is immune to such attacks. For information on 3DES, see Rule [[[.
+          
+          </div><br><br><br>
+          
+	    
+	    
+        <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table/Substitution Table</font></strong>: An algorithm in which every input is paired with a particular value/address, and has that value outputted. It is not a requirement that the number of output bits match the number of inputted bits - in the DES Feistel cipher, for example, table S<sub>1</sub> produces 4 output bits from 6 input bits.
         <br><br><br>
-
-
-
-
-
+        
+        
+        <strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (see Rule 48), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 45): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits (since the ciphertext bit mapped to by a particular plaintext bit will change if any other plaintext bit in the block is altered).
+        <br><br><br>
+        
+        
+        
+        
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
@@ -288,11 +306,35 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Explanation:</u></strong><br><br>
         
-        The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return, through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, under the known elements of best-practice block ciphers (see Rule 45).<br><br>
+        The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, following the known elements of best-practice block ciphers (see Rule 45).<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
         	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key.</em></span><br><br>
         
-        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6), highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in DES for the Feistel Network are only 48 bits - see Rule [[[[ for why that is.
+        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule [[[[ for why that is.
+        
+        </div><br><br>
+        
+        
+        
+        <strong><a href="#BitPermutationDef"><span class="mw-headline" id="BitPermutationDef">#</span></a> <font color="#006400">Bit Permutation/Bitwise Permutation</font></strong>: The algorithmic term for a crosswiring. The process in which bits are scrambled and assigned to different placements in the data than they were before. See Rule 49 how this can be carried out in an actual cryptosystem (and why).
+        <br><br><br>
+        
+        
+
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
+        The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 48) is that the first operation undergone by data being processed by the cipher, even before it is split into tranches, is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
+        
+        IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>, detailed in the definition above. Essentially, IP(x) just scrambles the bits and places them in different parts of the 64-bit sequence. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x) at the end of the cipher (after all the bits have been fully encrypted), cancelling eachother out.<br><br>
+        
+        The purpose of the DES bit permutation functions is simple: while serving no cryptographic purpose (since the attacker can simply take the permutation into account, and because it is undone anyway), when DES was designed in 1974, the application of the cipher into hardcare necessitated cross-wiring (physical bit permutation) just to allow the data to enter the chip. The specific bit permutations used for the initial and final permutations (both depicted in the illustration below) are done in order to, according to leading experts on the issue, "arrange the plaintext and ciphertext bits in a bytewise manner to make data fetches easier for the 8-bit data buses [widely used in the '70s]."<br><br>
+        
+        Below are the specific bit permutation tables hand-selected for the DES cipher. For any value in either box, look for the value in the other box whose position-value is the first value - this will determine what the first value maps to. For example, the value '58' in the IP box maps to '1' in the IP⁻¹ box, since 1 is in the 58th position in IP⁻¹.  Likewise, '1' in the IP⁻¹ box maps to 58 in the IP box since 58 is in the 1st position. Note that these values represent the <em>bits</em> at these positions in the 64-bit sequence being mapped to other bits.<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png" class="imglink"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutations in the DES cipher." width=57%/></a></div>
+        	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
+        Thus, the bit permutations were merely placed in the DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
         
         </div><br><br>
 
@@ -300,41 +342,13 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>History of the Data Encryption Standard (DES):</strong><br><br>
-
-          Proposed in 1974 by IBM (in coordination with the NSA), DES was the cryptographic standard for the U.S. government between 1977 and 1998, making it the most studied cipher in the world.<br><br>
-          
-          The DES was the first ever "secure" cryptosystem made public by a national government under the postulate of Kerckhoffs's principle (see Rule 3).<br><br>
-          
-          Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to the short length of its key (56 bits), 3DES has a very long key, and as such is immune to such attacks.
-          
-          </div><br><br>
-
-
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
-      The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 47) is that the operation undergone by data travelling through the cipher is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
-      
-      IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>: the bits are scrambled and assigned to different placements in the data than they were before. This just the algorithmic term for a crosswiring. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x), cancelling eachother out.<br><br>
-      
-      The purpose of the DES bit permutation functions is simple: while serving no cryptographic purpose (since the attacker can simply take the permutation into account, and because it is undone anyway), when DES was designed in 1974, the application of the cipher into hardcare necessitated cross-wiring (physical bit permutation) just to allow the data to enter the chip. The specific bit permutations used for the initial and final permutations (both depicted below) are done in order to, according to leading experts on the issue, "arrange the plaintext and ciphertext bits in a bytewise manner to make data fetches easier for 8-bit data buses", widely used in the '70s.<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png" class="imglink"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutations in the DES cipher." width=54%/></a></div>
-      	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
-      Thus, the bit permutations were merely placed in the DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
-      
-      </div><br><br>
-
-
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
 
-      The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to the a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche. Below are the complete contents of the f function:<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=48%/></a></div>
-	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network.</em></span><br><br>
+      The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche (encrypt in quotations because this encrypted version will only be used to XOR the left tranche, while the unencrypted right tranche will move on to the next round, as detailed in Rule 46).<br><br>
+      
+      R<sub>i-1</sub> is the tranche created in the <em>previous round</em> (since each round creates its tranches using the tranches of the previous round; see Rule 46), while k<sub>i</sub> is the subkey for that particular round (see step 2). Below are the complete contents of the f function, with each step labeled (each individually described at length further below):<br><br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=56%/></a></div>
+	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network, with each step labeled.</em></span><br><br>
 
       <ol>
 
@@ -345,11 +359,13 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/EBoxDiag.png" class="imglink"><img src="/cryptography/img/EBoxDiag.png" alt="The complete E-box operation of the DES-specific Feistel Network." width=63%/></a></div>
         	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network.</em></span>
         
-        </li><br>
+        </li><br><br>
+        
         
         <li>
         With the newly 48-bit right tranche, an XOR operation can be performed between the tranche and the <em>subkey</em> (which has its own special means of derivation, explained in Rule [[[[[[). This produces a 48-bit string that incorporates data from both parameters, and now all that is left to be done is to shrink the string back down to 32 bits so that it can be XOR'd later on with the data from the left tranche (outside of the f function).
-        </li><br>
+        </li><br><br>
+        
   
         <li>
         After the XOR, the most important part, the <em>heart</em> of the f function, is performed: the <strong>S boxes</strong>. Complementary to the <em>diffusion</em> of the E-box, the S-box will provide the <em>confusion</em>.<br><br>
@@ -371,10 +387,11 @@ document.addEventListener("DOMContentLoaded", function (){
         All that needs to be done to find the 4-bit output (represented in decimal in the given table image, and all others) is to locate it on the table using the known column and row values.
         The value returned from properly finding the value from the specific column and row values.
         
-        </li><br>
+        </li><br><br>
+        
         
         <li>
-        All that remains within the f function is a simple bit permutation, in the same fashion (though different permutation patterns) as the one at the top and bottom of the DES cipher (described in Rule [[[[[).
+        All that remains within the f function is a simple bit permutation, in the same fashion (though using different permutation patterns) as the one at the top and bottom of the DES cipher (described in Rule 49).
         
         </li>
       
@@ -465,7 +482,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: July 31 2025</span><br>
+      	<span class="tiny">Last Change: August 1 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

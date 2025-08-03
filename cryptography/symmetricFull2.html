@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	  <article><center><strong><h3>Table Of Contents</h3></strong></center></article>
 	  
           
-      <article><center><a href="#BlockCiphers">IV. Block Ciphers.</a></center></article>
+      <article><center><a href="#BlockCiphers">IV. Block Ciphers: Intro & DES.</a></center></article>
         
       <div class="toc-container">
         <div class="toc-column">
@@ -361,37 +361,37 @@ document.addEventListener("DOMContentLoaded", function (){
 
       The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche (encrypt in quotations because this encrypted version will only be used to XOR the left tranche, while the unencrypted right tranche will move on to the next round, as detailed in Rule 46).<br><br>
       
-      R<sub>i-1</sub> is the tranche created in the <em>previous round</em> (since each round creates its tranches using the tranches of the previous round; see Rule 46), while k<sub>i</sub> is the subkey for that particular round (see step 2). Below are the complete contents of the f function, with each step labeled (each individually described at length further below):<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=56%/></a></div>
+      R<sub>i-1</sub> is the tranche created in the <em>previous round</em> (since each round creates its tranches using the tranches of the previous round; see Rule 46), while k<sub>i</sub> is the subkey for that particular round (see step 2). Below are the complete contents of the f function, with each step labeled (and each individually described at length further below):<br><br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=76%/></a></div>
 	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network, with each step labeled.</em></span><br><br>
 
       <ol>
 
         <li>
-        The first operation that will be performed will solely involve the first parameter: R<sub>i-1</sub>. In order to account for the differences in length between the right tranche and the subkey, the right tranche will be expanded from 32 bits to 48 bits, using the special <strong>"Expansion function"</strong> or <strong>"Expansion box"</strong>, also referred to as simply the "<strong>E-box</strong>". Notably, this function will provide <em>diffusion</em> to the cipher, as its effects (as described below) will increase the significance & influence of each individual bit of the plaintext with every additional round of encryption.<br><br>
+        The first operation that will be performed will solely involve the first parameter: R<sub>i-1</sub>. In order to account for the differences in length between the right tranche and the subkey, the right tranche will be expanded from 32 bits to 48 bits, using the special <strong>"Expansion function"</strong> or <strong>"Expansion box"</strong>, also referred to as simply the "<strong>E-box</strong>".<br><br>
         
-        While the E-box also performs a basic permutation on the inputted bits, it differs from a standard bit permutation in that <u>some</u> of the inputted bits are connected to <em>two</em> bit positions, creating values for an expanded table. With the initial 32-bit string of the right tranche, 16 bits of data will be connected only once, while the other 16 bits will be connected twice. An example of how this can be done is seen below.<br><br>
+        The <strong>E-box</strong> is a non-bijective variation of the standard bit permutation (see definition), in that <u>some</u> of the inputted bits are connected to <em>two</em> bit positions, creating values for an expanded table. With the initial 32-bit string of the right tranche, 16 bits of data will be connected only once, while the other 16 bits will be connected twice. An example of how this can be done is seen in the illustration below.<br><br>
+        
+        Notably, this function will provide <em>diffusion</em> to the cipher, as its effects will increase the significance & influence of each individual bit of the plaintext with every additional round of encryption.<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/EBoxDiag.png" class="imglink"><img src="/cryptography/img/EBoxDiag.png" alt="The complete E-box operation of the DES-specific Feistel Network." width=63%/></a></div>
-        	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network.</em></span>
+        	    <span class="tiny"><em>The permutation performed by the Expansion box.</em></span>
         
         </li><br><br>
         
         
         <li>
-        With the newly 48-bit right tranche, an XOR operation can be performed between the tranche and the <em>subkey</em> (which has its own special means of derivation, explained in Rule [[[[[[). This produces a 48-bit string that incorporates data from both parameters, and now all that is left to be done is to shrink the string back down to 32 bits so that it can be XOR'd later on with the data from the left tranche (outside of the f function).
+        With the newly 48-bit right tranche, an XOR operation can be performed between the tranche and the <em>subkey</em> (which has its own special means of derivation, explained in Rule [[[[[[). This produces a 48-bit string that successfully alters the data using a key.
         </li><br><br>
         
   
         <li>
-        After the XOR, the most important part, the <em>heart</em> of the f function, is performed: the <strong>S boxes</strong>. Complementary to the <em>diffusion</em> of the E-box, the S-box will provide the <em>confusion</em>.<br><br>
+        After the XOR, the string must be shrunk back down to 32 bits so that it can be XOR'd later on with the data from the left tranche (outside of the f function). This requires the uses of the <strong>S boxes</strong>, arguably the most important part of the f function. Complementary to the <em>diffusion</em> of the E-box, the S-box will provide the <em>confusion</em> element of the cipher.<br><br>
         
-        The pattern the S-box follows is simple, and is shown in the complete diagram above: The newly-created 48-bit string will be split into 8 tranches of 6 bits. Each tranche will be sent to a Substitution Table, <strong>S<sub>1</sub></strong> through <strong>S<sub>8</sub></strong>.<br><br>
+        The pattern the S-box follows is simple, and is shown in the complete f function diagram further above: The newly-created 48-bit string will be split into 8 sub-tranches of 6 bits. Each sub-tranche will be sent to a <u>Substitution Table</u> (see definition), <strong>S<sub>1</sub></strong> through <strong>S<sub>8</sub></strong>. These tables will work akin to <strong>compression functions</strong>/<strong>compression boxes</strong> in the exact opposite manner to the E-box, as they produce less output than input: Each table will output 4 bits from an input of 6, thus resulting in a net total of 32 bits, exactly what is needed.<br><br>
         
-        These tables will be akin to <em>compression</em> functions/compression boxes, as they will produce less output than input: Each table will output 4 bits from an input of 6, thus resulting in a net total of 32 bits, exactly what is needed.<br><br>
+        The <strong>Compression Algorithm</strong> works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a predetermined substitution table. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant "Design of DES S-Boxes" <a href="/cryptography/symmetricFull.html#SBoxDesign">blue section</a> below.<br><br>
         
-        The Compression Algorithm works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given, 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a set, predetermined substitution table, the purposeful and exact design of which was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant <a href="/cryptography/symmetricFull.html#SBoxDesign">blue section</a> below.<br><br>
-        
-        Note that <STRONG>EACH</STRONG> Substitution Table, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. [[[[[[ The S<sub>1</sub> table is shown below; the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250724032842id_/https://ece.uprm.edu/~noack/crypto/textslides/109678-0136024858_ppt/StallingsPPT_0136024858/Tables/T03-Vertical.pdf">this here document</a>.<br><br>
+        Note that <STRONG>EACH</STRONG> S-box, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. While the S<sub>1</sub> table is shown below, the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250724032842id_/https://ece.uprm.edu/~noack/crypto/textslides/109678-0136024858_ppt/StallingsPPT_0136024858/Tables/T03-Vertical.pdf">this document here</a>.<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png" class="imglink"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof." width=62%/></a></div>
   	    <span class="tiny"><em>The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof.</em></span><br><br>
   
@@ -399,19 +399,19 @@ document.addEventListener("DOMContentLoaded", function (){
         For the <strong>Column Select</strong>, take the middle 4 values (the internal, non-edge values) and find their individual value in binary, separate from the rest of the string. This will give you a value 0-15.<br><br>
         For the <strong>Row Select</strong>, simply combine the left and right edge values of the 6-bit value in a single binary number, 0-3. This will serve as the row value.<br><br>
         
-        All that needs to be done to find the 4-bit output (represented in decimal in the given table image, and all others) is to locate it on the table using the known column and row values.
-        The value returned from properly finding the value from the specific column and row values.
+        All that needs to be done to find the 4-bit output (represented in decimal in the given table and in all others) is to locate it on the table using the known column and row values.
+        The binary representation of the located value is then concatenated with the results from all the S-boxes, forming a 32-bit string that passes onto the final step.
         
         </li><br><br>
         
         
         <li>
-        All that remains within the f function is a simple bit permutation, in the same fashion (though using different permutation patterns) as the one at the top and bottom of the DES cipher (described in Rule 49).
+        All that is left to be done within the f function is a simple bit permutation, in the same fashion as the one at the top and bottom of the DES cipher (described in Rule 49), though using different permutation patterns.
         
         </li>
       
       </ol>
-      </div><br>
+      </div><br><br><br>
 
 
 
@@ -423,8 +423,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    
 	    
 	    <strong><font color="blue"><a href="#SBoxDesign"><span class="mw-headline" id="SBoxDesign">#</span></a> Design of DES S-Boxes:</font></strong><br><br>
-
-      The design of the S-boxes in the DES cipher, both the mechanism for determining the output and the tables of outputs themselves, was done by the NSA and IBM under the following specific criteria, ranging from the obvious to the esoteric:<br><br>
+      The purposeful and exact design of the S-boxes in the DES cipher was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. The design of both the mechanism for determining the output and the tables of outputs themselves was done by the NSA and IBM under the following specific criteria, ranging from the obvious to the esoteric:<br><br>
       
       <ol>
       
@@ -523,10 +522,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/cryptography/symmetry.html">Symmetric Cryptography</a></strong><br>
         <article><strong><a href="/cryptography/symmetricFull.html">Pt. 1: Intro & Stream Ciphers</a></strong> → <strong>Pt. 2: Block Ciphers</strong></article>
         <br>
-        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers: Intro & DES</a></strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 1 2025</span><br>
+      	<span class="tiny">Last Change: August 2 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

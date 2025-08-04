@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Primitives</u></strong> are the basic cryptographic functions (building blocks of an algorithm), <strong><u>Ciphers</u></strong> are the implementation of an encryption scheme, and <strong><u>Algorithms</u></strong> are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br>
         
-        For example, a well-formed algorithm may incorporate the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
+        For example, a well-formed algorithm may incorporate the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule 51) to assist in both encrypting and decrypting the data.
       </div><br><br>
       
       
@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong>𝒦 = 2ᴸ</strong><br>
         <strong>L = ⌈log<sub>2</sub> 𝒦⌉</strong><br><br>
         
-        These two equations are equivalent, with the second one derived by taking the log of both sides of the first (uncoincidentally forming <em>the</em> key-length equation as described in Rule 5). The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out a small number of symmetric cryptosystems with selective application of their keys/keybits<!--gives 2012 tumblr vibes idk-->, like DES - see Rule [[[.<!--[[[ update this when the thing with DES is completely done. it takes in 64 bits but only uses 56, which is why it has a keyspace of 2^56, as the other 8 are used for other purposes; parity tests.--><br><br>
+        These two equations are equivalent, with the second one derived by taking the log of both sides of the first (uncoincidentally forming <em>the</em> key-length equation as described in Rule 5). The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out any symmetric cryptosystem with selective application of its keys/keybits<!--gives 2012 tumblr vibes idk-->.<br><br><!--I no longer have any examples, because DES turned out to fit the relation perfectly. Perhaps one day I shall return-->
         
         There are some limitations that narrow the applicability of this relation - in effect, it only really applies to <em>modern symmetric</em> cryptosystems (unless specified otherwise, like the aforementioned DES). First, all ciphers that do not explicitly <em>have</em> a key-length, such as those that operate on letters instead of bits (e.g., every historical cipher in Section II), do not qualify. A cipher must structure its keys in the form of <u>binary strings with fixed lengths</u> in order for the relation to be applicable.<br><br>
         
@@ -1305,7 +1305,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>One Time Pad (OTP)</strong><br><br>
           The <strong>One Time Pad</strong> (also referred to as the "<strong>Vernam cipher</strong>") is an example of a TRNG-based cryptosystem. It is <em>the</em> unconditionally secure, totally unbreakable, perfect encryption algorithm. The OTP is a stream cipher with the following properties:<br><br>
-          1) The Keystream bits s<sub>i</sub> must originate from a True Random Number Generator (a 'TRNG', see Rule [[[, 1.).<br><br>
+          1) The Keystream bits s<sub>i</sub> must originate from a True Random Number Generator (a 'TRNG', see Rule 26, 1.).<br><br>
           2) Each Keystream bit must be used only once.<br><br>
           
           Knowledge of the Keystream must be exclusively limited to the involved parties, of course. At the end of the data transfer, the party that received the data must destroy the key so that it cannot be used by another party to decrypt the message after the fact. This is the same reason why reusing keys is extremely risky and nullifies the security benefits of the OTP.<br><br>
@@ -1353,7 +1353,7 @@ document.addEventListener("DOMContentLoaded", function (){
           
           <strong><u>Explanation:</u></strong><br><br>
           
-          The LCG is a PRNG-based keystream generator, using the attributes of the key and the seed as its base components. It is an example of a non-cryptographically secure PRNG, the 2nd type of RNG detailed in Rule 26. This makes it more practical a system than the One Time Pad (see Rule [[[), but much easier to break (see Rule 29). The keystream is deterministically created using a recursive function originating at S<sub>0</sub> (the seed), which itself may be created using a TRNG.<br><br>
+          The LCG is a PRNG-based keystream generator, using the attributes of the key and the seed as its base components. It is an example of a non-cryptographically secure PRNG, the 2nd type of RNG detailed in Rule 26. This makes it more practical a system than the One Time Pad (see Rule 27), but much easier to break (see Rule 29). The keystream is deterministically created using a recursive function originating at S<sub>0</sub> (the seed), which itself may be created using a TRNG.<br><br>
           
           Of course, separate from the nature of the function/equation itself, note that there are no "Encryption" or "Decryption" functions, because the given equation is merely for composing the keystream (PRNG-style - see Rule 26), while the equation for the Stream <em>Cipher</em> itself remains the same (see Rule 25).<br><br>
           
@@ -1464,7 +1464,7 @@ document.addEventListener("DOMContentLoaded", function (){
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
         </strong> <strong>Shift Registers</strong>:<br><br> 
         
-        A "shift register" is a concatentation of several individual flip-flops. Each flip-flop has a starting bit-value, which it then uses to send a signal to each following flip-flop until the final one, which will produce each bit of the output. The combined bits taken from the final flip-flop form a keystream, as depicted in the diagram below. The shift register is one half of an LFSR (see Rule [[[).<br><br>
+        A "shift register" is a concatentation of several individual flip-flops. Each flip-flop has a starting bit-value, which it then uses to send a signal to each following flip-flop until the final one, which will produce each bit of the output. The combined bits taken from the final flip-flop form a keystream, as depicted in the diagram below. The shift register is one half of an LFSR (see Rule 32).<br><br>
   	    
   	    Very important to notice in the progress of the bits of a shift register towards the output, is that there is a distinct pattern that holds for each bit-value (placed below the flip-flops on the diagram), known as the <strong>Diagonal Rule</strong>: each bit-value will be translated diagonally rightward and downward, for as many flip-flops as there are to the right. Note this pattern in the diagram below:<br><Br>
   
@@ -1532,7 +1532,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Occasionally referred to as cryptographic "<em>linear recurrences</em>" by various demented individuals, <u><strong>Linear Feedback Shift Registers</strong></u> are yet another PRNG-based keystream generator, and are thus crackable with some effort (see Rule 39).<br><br>
         
-        However, unlike other PRNGS like Linear Congruential Generators (see Rule [[[) which have no function in real cryptography due to their absurd unsecurity, the LFSR finds application in many ciphers due to its usefulness as a <u>primitive</u><!--, a building block-->. These ciphers use multiple LFSRs to achieve greater security: the A51 cipher (see Rule [[[<!--potentially a Rule going over the cipher, or maybe just a detailing later on about how A51 ciphers are standard technology in phones and other technological appliances, if the Rule gets scrapped.-->), for example, consists of 3. This greatly enhances the security of the cipher and validates the usage of LFSRs for legitimate cryptographic purposes (see Rule [[[<!-- ", as a result of how [[[[" and then briefly describe why adding more is so effcetive, with the Rule going over the entire reason in full detail. potentially some Rule abour a cipher that uses the lfsr multiple times, but if it is super far ahead, then it would still be good to have a little explanation here detailing how adding more lfsrs increases the security by any means-->).<br><br>
+        However, unlike other PRNGS like Linear Congruential Generators (see Rule 28) which have no function in real cryptography due to their absurd unsecurity, the LFSR finds application in many ciphers due to its usefulness as a <u>primitive</u><!--, a building block-->. These ciphers use multiple LFSRs to achieve greater security: the A51 cipher (see Rule [[[<!--potentially a Rule going over the cipher, or maybe just a detailing later on about how A51 ciphers are standard technology in phones and other technological appliances, if the Rule gets scrapped.-->), for example, consists of 3. This greatly enhances the security of the cipher and validates the usage of LFSRs for legitimate cryptographic purposes (see Rule [[[<!-- ", as a result of how [[[[" and then briefly describe why adding more is so effective, with the Rule going over the entire reason in full detail. potentially some Rule abour a cipher that uses the lfsr multiple times, but if it is super far ahead, then it would still be good to have a little explanation here detailing how adding more lfsrs increases the security by any means-->).<br><br>
         
         LFSRs incorporate a standard Shift Register (as detailed in Rule 31) alongside a <strong>feedback mechanism/path</strong>, generating fresh input for the first flip-flop using some output data. The feedback path extends from the output of the rightmost flip-flop (which, as known from the shift register analysis in Rule 31, is the flip-flop whose bits form the keystream) and inputs into the first flip-flop.<br><br>
         
@@ -1963,7 +1963,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers: Intro & DES</a></strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 2 2025</span><br>
+      	<span class="tiny">Last Change: August 3 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

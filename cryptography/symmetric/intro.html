@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Primitives</u></strong> are the basic cryptographic functions (building blocks of an algorithm), <strong><u>Ciphers</u></strong> are the implementation of an encryption scheme, and <strong><u>Algorithms</u></strong> are the combined procedures of primitives and ciphers to create the greater cryptosystem.<br><br>
         
-        For example, a well-formed algorithm may incorporate the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule [[[) to assist in both encrypting and decrypting the data.
+        For example, a well-formed algorithm may incorporate the AES cipher (see Rule [[[), which uses the key schedule primitive (see Rule 51) to assist in both encrypting and decrypting the data.
       </div><br><br>
       
       
@@ -413,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong>𝒦 = 2ᴸ</strong><br>
         <strong>L = ⌈log<sub>2</sub> 𝒦⌉</strong><br><br>
         
-        These two equations are equivalent, with the second one derived by taking the log of both sides of the first (uncoincidentally forming <em>the</em> key-length equation as described in Rule 5). The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out a small number of symmetric cryptosystems with selective application of their keys/keybits<!--gives 2012 tumblr vibes idk-->, like DES - see Rule [[[.<!--[[[ update this when the thing with DES is completely done. it takes in 64 bits but only uses 56, which is why it has a keyspace of 2^56, as the other 8 are used for other purposes; parity tests.--><br><br>
+        These two equations are equivalent, with the second one derived by taking the log of both sides of the first (uncoincidentally forming <em>the</em> key-length equation as described in Rule 5). The ceiling function (which rounds to the closest <em>greater</em> number) is applied to the logarithm to ensure that the key-length is an integer. Of course, the relation only holds insofar that all keys of length L are valid and equally likely to occur, which rules out any symmetric cryptosystem with selective application of its keys/keybits<!--gives 2012 tumblr vibes idk-->.<br><br><!--I no longer have any examples, because DES turned out to fit the relation perfectly. Perhaps one day I shall return-->
         
         There are some limitations that narrow the applicability of this relation - in effect, it only really applies to <em>modern symmetric</em> cryptosystems (unless specified otherwise, like the aforementioned DES). First, all ciphers that do not explicitly <em>have</em> a key-length, such as those that operate on letters instead of bits (e.g., every historical cipher in Section II), do not qualify. A cipher must structure its keys in the form of <u>binary strings with fixed lengths</u> in order for the relation to be applicable.<br><br>
         
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers: Intro & DES</a></strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 2 2025</span><br>
+      	<span class="tiny">Last Change: August 3 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

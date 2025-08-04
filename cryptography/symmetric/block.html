@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit at a time would be a stream cipher). These ciphers are both deterministic and hyper-unpredictable: the encryption of any plaintext bit in a block depends on the value of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy. A one bit difference between two blocks of plaintext will produce two <u><eM>completely</eM> different</u> ciphertexts.<br><br>
         
-        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as the DES and 3DES (see Rule 48 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
+        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as DES and 3DES (see Rule 48 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
         
         Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
         
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong>f</strong> = The mysterious encryption function, the central part of the entire Feistel scheme. Uses the right tranche and the subkey of a particular round to make an encryption. Explained in Rule 50.<br><br>
         
-        <strong>k<sub>i</sub></strong> = The specific subkey used in the round. Each subkey is derived from the main key, explained (for DES) in Rule [[[[[.<br><br>
+        <strong>k<sub>i</sub></strong> = The specific subkey used in the round. Each subkey is derived from the main key, explained (for DES) in Rule 51.<br><br>
         
         <strong>mod 2</strong> = The modulus/remainder operator with respect to 2. Numbers can only be 0 or 1 in this reality - see Rule 24 for a full treatise.<br><br><br>
         
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, totally unadorned of any additional characteristics specific to the DES system - see Rule 48 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=57%/></a></div>
   	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, totally unadorned of any additional characteristics specific to the DES system - see Rule 48 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
         
-        Widely used among block ciphers (though not in the AES, see Rule [[[), several ciphers like DES developed their own, more optimized versions of the network. The bulk of all modern ciphers currently in use were built using Feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (i.e. going about the rounds in reverse; see Rule [[[[[[[[).<!---[[[perhaps can have a little explanation here of what it entails once the basics are all laid out?--><br><br>
+        Widely used among block ciphers (though not in the AES, see Rule [[[), several ciphers like DES developed their own, more optimized versions of the network. The bulk of all modern ciphers currently in use were built using Feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (i.e. generating the subkeys needed for each round in reverse; see Rule [[[[[[[[).<!---[[[perhaps can have a little explanation here of what it entails once the basics are all laid out?--><br><br>
         
         In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and <em>requires</em> a key, instead of merely producing the key (like the LFSR). It is just at the same level of ubiquity in block ciphers that LFSRs have for stream ciphers.<bR><BR>
         
@@ -234,9 +234,9 @@ document.addEventListener("DOMContentLoaded", function (){
           
             Additionally, a <strong>subkey</strong> will also be fed into the f function: In each round of encryption, a new subkey derived from the main key is used, thus keeping the process deterministic and replicable, but complicating the process so much that discovery of the plaintext from knowledge of the ciphertext is made (most likely) impossible.<br><br>
             
-            In the DES cipher, which differs from the more generalized standard Feistel network described here and shown in the graphic, the subkey is created using a key schedule. See Rule [[[[[ for an explanation of how this is carried out.<br><br>
+            In the DES cipher, which differs from the more generalized standard Feistel network described here and shown in the graphic, the subkey is created using a key schedule. See Rule 51 for an explanation of how this is carried out.<br><br>
             
-            The length of the subkey does not have to be exactly as long as either tranche - in the DES, the subkey is 48 bits long, the purpose of which is explained in Rule [[[[[[[.
+            The length of the subkey does not have to be exactly as long as either tranche - in DES, the subkey is 48 bits long, the purpose of which is explained in Rule 51, step 4.
           
           </li><br>
           
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
           Proposed in 1974 by IBM (in coordination with the NSA), DES was the cryptographic standard for the U.S. government between 1977 and 1998, making it the most studied cipher in the world.<br><br>
           
-          The DES was the first "secure" cryptosystem ever made public by a national government under the postulate of Kerckhoffs's principle (see Rule 3).<br><br>
+          DES was the first "secure" cryptosystem ever made public by a national government under the postulate of Kerckhoffs's principle (see Rule 3).<br><br>
           
           Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to its short key-length (56 bits), 3DES has a very long key, and as such is immune to such attacks. For information on 3DES, see Rule [[[.
           
@@ -286,12 +286,18 @@ document.addEventListener("DOMContentLoaded", function (){
           
 	    
 	    
-        <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table/Substitution Table</font></strong>: An algorithm in which every input is paired with a particular value/address, and has that value outputted. It is not a requirement that the number of output bits match the number of inputted bits - in the DES Feistel cipher, for example, table S<sub>1</sub> produces 4 output bits from 6 input bits.
-        <br><br><br>
+        <strong><a href="#LookupDef"><span class="mw-headline" id="LookupDef">#</span></a> <font color="#006400">Look-up Table/Substitution Table</font></strong>: An algorithm in which every input is paired with a particular value/address, and has that value outputted. Occasionally, when used in the context of a Permutation (see definition), they will be called <strong>Permutation Tables</strong>.<br><br>
+        
+        Almost all substitution tables (including permutation tables) are read in terms of position and value. Each value in the table represents a position that the bit at the position of its position-value is moving toward. Seriously. The table illustrated below, for example, is moving the 1st bit to position 16, and the 2nd bit to position 7, and so on for all 32 bits. Of course, the bits <em>at</em> positions 16 and 7 are also moving into positions 1 & 2, respectively. The bits swap.<!--explaining it seemed weird, so I added an example from a permutation table that I already had.--><br><br>
+
+        Examples of tables read like this can be found in Rule 49 and in Rule 50, step 4. An exception to this format of interpreting substitution tables is the DES S-box, which uses its own weird system detailed in Rule 50, step 3. The S-boxes are also a rare exception in which the number of output bits does not match the number of inputted bits - each table produces 4 output bits from 6 input bits.<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/PermutationTable.png" class="imglink"><img src="/cryptography/img/PermutationTable.png" alt="An example of a permutation table in the standard reading format, shamelessly lifted from Rule 50, step 4." width=31%/></a></div>
+        	    <span class="tiny"><em>An example of a permutation table in the standard reading format, shamelessly lifted from Rule 50, step 4.</em></span><br><br>
+        <br><br>
         
         
-        <strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. The DES (see Rule 48), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 45): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits (since the ciphertext bit mapped to by a particular plaintext bit will change if any other plaintext bit in the block is altered).
-        <br><br><br>
+        <strong><a href="#BijectionDef"><span class="mw-headline" id="BijectionDef">#</span></a> <font color="#006400">Bijection</font></strong>: The mapping of every possible input uniquely to exactly one output, and vice versa. DES (see Rule 48), for example, bijectively maps a 64-bit input block to a 64-bit output block using the principle of diffusion (see Rule 45): a difference in a single input bit will change the entire output block, thus making the blocks themselves bijectively mapped, but not the bits (since the ciphertext bit mapped to by a particular plaintext bit will change if any other plaintext bit in the block is altered).
+        <br><br><br><br>
         
         
         
@@ -307,17 +313,21 @@ document.addEventListener("DOMContentLoaded", function (){
         
         <strong><u>Explanation:</u></strong><br><br>
         
-        The Data Encryption Standard is a block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, following the known elements of best-practice block ciphers (see Rule 45).<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key." width=78%/></a></div>
-        	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key.</em></span><br><br>
+        The Data Encryption Standard is a 56-bit block cipher that encrypts 64 bits at a time, outputting 64 bits of ciphertext in return through bijective mapping (see definition). As a product cipher, DES uses 16 encryption rounds of an optimized form of the Feistel Network (depicted below) to thoroughly obfuscate and diffuse the impact of each bit, following the known elements of best-practice block ciphers (see Rule 45).<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key. On the right hand side is the key schedule, described in Rule 51." width=78%/></a></div>
+        	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key. On the right hand side is the key schedule, described in Rule 51.</em></span><br><br>
         
-        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule [[[[ for why that is.
+        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule 51, step 4 for why that is. Additionally, see Rule 51, step 1 for why DES is 56 bits.
+        <!--According to Cryptography Section IV, Subsection IV.III, Rule 54, step 1....
+        This is perfect. This is everything I've ever wanted.-->
         
         </div><br><br>
         
         
         
-        <strong><a href="#BitPermutationDef"><span class="mw-headline" id="BitPermutationDef">#</span></a> <font color="#006400">Bit Permutation/Bitwise Permutation</font></strong>: The algorithmic term for a crosswiring. The process in which bits are scrambled and assigned to different placements in the data than they were before. See Rule 49 how this can be carried out in an actual cryptosystem (and why).
+        <strong><a href="#BitPermutationDef"><span class="mw-headline" id="BitPermutationDef">#</span></a> <font color="#006400">Bit Permutation/Bitwise Permutation</font></strong>: The process in which bits are scrambled and assigned to different positions in the data than they were before. It's effectively the algorithmic term for a crosswiring. These operations require the use of a substitution table (see definition), which are known as <strong>permutation tables</strong> in this context. See Rule 49 how this can be carried out in an actual cryptosystem (and why).<br><br>
+        
+        Note that the verb form of permutation is not "permutate", but rather "<strong>permute</strong>".
         <br><br><br>
         
         
@@ -335,21 +345,21 @@ document.addEventListener("DOMContentLoaded", function (){
         Below are the specific bit permutation tables hand-selected for the DES cipher. For any value in either box, look for the value in the other box whose position-value is the first value - this will determine what the first value maps to. For example, the value '58' in the IP box maps to '1' in the IP⁻¹ box, since 1 is in the 58th position in IP⁻¹.  Likewise, '1' in the IP⁻¹ box maps to 58 in the IP box since 58 is in the 1st position. Note that these values represent the <em>bits</em> at these positions in the 64-bit sequence being mapped to other bits.<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png" class="imglink"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutations in the DES cipher." width=57%/></a></div>
         	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
-        Thus, the bit permutations were merely placed in the DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
+        Thus, the bit permutations were merely placed in DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
         
-        </div><br><br>
+        </div><br><br><br><br><br>
 
 
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br>
+        </strong> <strong>DES Internals #2 - The 'f' Function:</strong><br><br><!--No, I WON'T split this Rule into 4 easier-to-manage Rules for each specific step of the f function. I WILL reference each step in other Rules by saying "see Rule 50, step x".-->
 
-      The <em>f</em> function, the heart of the Feistel Network (and thus the DES), acts similarly to a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche (encrypt in quotations because this encrypted version will only be used to XOR the left tranche, while the unencrypted right tranche will move on to the next round, as detailed in Rule 46).<br><br>
+      The <em>f</em> function, the heart of the Feistel Network (and thus of DES), acts similarly to a PRNG, using the two input parameters R<sub>i-1</sub> (32 bits) and k<sub>i</sub> (48 bits) to "encrypt" the right tranche (encrypt in quotations because this encrypted version will only be used to XOR the left tranche, while the unencrypted right tranche will move on to the next round, as detailed in Rule 46).<br><br>
       
       R<sub>i-1</sub> is the tranche created in the <em>previous round</em> (since each round creates its tranches using the tranches of the previous round; see Rule 46), while k<sub>i</sub> is the subkey for that particular round (see step 2). Below are the complete contents of the f function, with each step labeled (and each individually described at length further below):<br><br>
-      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete F function of the DES-specific Feistel Network." width=76%/></a></div>
-	    <span class="tiny"><em>The complete F function of the DES-specific Feistel Network, with each step labeled.</em></span><br><br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/fFunctionDiag.png" class="imglink"><img src="/cryptography/img/fFunctionDiag.png" alt="The complete f function of the DES-specific Feistel Network." width=76%/></a></div>
+	    <span class="tiny"><em>The complete f function of the DES-specific Feistel Network, with each step labeled.</em></span><br><br>
 
       <ol>
 
@@ -366,16 +376,16 @@ document.addEventListener("DOMContentLoaded", function (){
         
         
         <li>
-        With the newly 48-bit right tranche, an XOR operation can be performed between the tranche and the <em>subkey</em> (which has its own special means of derivation, explained in Rule [[[[[[). This produces a 48-bit string that successfully alters the data using a key.
+        With the newly 48-bit right tranche, an XOR operation can be performed between the tranche and the <em>subkey</em> (which has its own special means of derivation, explained in Rule 51). This produces a 48-bit string that successfully alters the data using a key.
         </li><br><br>
         
   
         <li>
-        After the XOR, the string must be shrunk back down to 32 bits so that it can be XOR'd later on with the data from the left tranche (outside of the f function). This requires the uses of the <strong>S boxes</strong>, arguably the most important part of the f function. Complementary to the <em>diffusion</em> of the E-box, the S-box will provide the <em>confusion</em> element of the cipher.<br><br>
+        After the XOR, the string must be shrunk back down to 32 bits so that it can be XOR'd later on with the data from the left tranche (outside of the f function). This requires the uses of the <strong>S boxes</strong>, arguably the most important part of the f function. Complementary to the <em>diffusion</em> of the E-box, the S-box will provide the <em>confusion</em> element of the cipher (as well as more diffusion - see the "Design of DES S-Boxes" blue section).<br><br>
         
         The pattern the S-box follows is simple, and is shown in the complete f function diagram further above: The newly-created 48-bit string will be split into 8 sub-tranches of 6 bits. Each sub-tranche will be sent to a <u>Substitution Table</u> (see definition), <strong>S<sub>1</sub></strong> through <strong>S<sub>8</sub></strong>. These tables will work akin to <strong>compression functions</strong>/<strong>compression boxes</strong> in the exact opposite manner to the E-box, as they produce less output than input: Each table will output 4 bits from an input of 6, thus resulting in a net total of 32 bits, exactly what is needed.<br><br>
         
-        The <strong>Compression Algorithm</strong> works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a predetermined substitution table. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant "Design of DES S-Boxes" <a href="/cryptography/symmetricFull.html#SBoxDesign">blue section</a> below.<br><br>
+        The <strong>Compression Algorithm</strong> works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a predetermined substitution table. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant "Design of DES S-Boxes" blue section below.<br><br>
         
         Note that <STRONG>EACH</STRONG> S-box, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. While the S<sub>1</sub> table is shown below, the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250724032842id_/https://ece.uprm.edu/~noack/crypto/textslides/109678-0136024858_ppt/StallingsPPT_0136024858/Tables/T03-Vertical.pdf">this document here</a>.<br><br>
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png" class="imglink"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof." width=62%/></a></div>
@@ -392,24 +402,30 @@ document.addEventListener("DOMContentLoaded", function (){
         
         
         <li>
-        All that is left to be done within the f function is a simple bit permutation, in the same fashion as the one at the top and bottom of the DES cipher (described in Rule 49), though using different permutation patterns.
+        All that is left to be done within the f function after the compression from the S-boxes of step 3 is a simple <strong>bit permutation</strong>, which works in a different fashion to the IP(x) and IP(x)⁻¹ described in the Rule 49.<br><br>
+
+        <em>This</em> permutation has a legitimate cryptographic purpose: the collective output bits of the S-boxes from step 3 are scrambled in such a way that the individual bits are positioned to affect more S-boxes in the following round. If even a single bit is flipped in the input, it will progressively affect more S-boxes each round and will eventually change the entire output. Thus, this permutation hastens the avalanche effect and contributes further diffusion to the cipher.<br><br>
+        
+        Each round uses the same permutation table, seen below. Of course, as before in Rule 49, it must be read in terms of both position and value - the 1st bit is moved to position 16, while the 2nd is moved to position 7, and so on.<!--I feel that this is pretty intuitive, and just giving a little example like that is enough for complete comprehension--><br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/PermutationTable.png" class="imglink"><img src="/cryptography/img/PermutationTable.png" alt="The permutation table/substitution table used in each round of the f function to move the bits around the sequence." width=32%/></a></div>
+  	    <span class="tiny"><em>The permutation table/substitution table used in each round of the f function to move the bits around the sequence.</em></span>
         
         </li>
       
       </ol>
-      </div><br><br><br>
+      </div><br><br><br><br>
 
 
 
       <strong><a href="#MSBDef"><span class="mw-headline" id="MSBDef">#</span></a> <font color="#006400">Most Significant Bit (MSB)</font></strong>: The leftmost bit in a binary number - the largest value representation in the binary place value system. This varies from system to system.
       <br><br><br>
       
-      <strong><a href="#LSBDef"><span class="mw-headline" id="LSBDef">#</span></a> <font color="#006400">Least Significant Bit (LSB)</font></strong>: The rightmost bit in a binary number (1, from 2^0) - the smallest value representation in the binary place value system.
+      <strong><a href="#LSBDef"><span class="mw-headline" id="LSBDef">#</span></a> <font color="#006400">Least Significant Bit (LSB)</font></strong>: The rightmost bit in a binary number (2^0) - the smallest value representation in the binary place value system.
       <br><br><br>
 	    
 	    
 	    <strong><font color="blue"><a href="#SBoxDesign"><span class="mw-headline" id="SBoxDesign">#</span></a> Design of DES S-Boxes:</font></strong><br><br>
-      The purposeful and exact design of the S-boxes in the DES cipher was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. The design of both the mechanism for determining the output and the tables of outputs themselves was done by the NSA and IBM under the following specific criteria, ranging from the obvious to the esoteric:<br><br>
+      The purposeful and exact design of the S-boxes in the DES cipher was done to ensure protection against Differential Cryptanalysis ([[[[[[[[), which researchers at IBM discovered decades before the academics of the late '80s. The design of both the mechanism for ensuring diffusion in the output and of the substitution tables themselves was performed by the NSA and IBM under the following specific criteria, ranging from the obvious to the esoteric:<br><br>
       
       <ol>
       
@@ -417,36 +433,125 @@ document.addEventListener("DOMContentLoaded", function (){
         </li><br>
         
         
-        <li>No single output bit should be too close to a <u>linear combination</u> (Linear Algebra - [[[[[[) of the input bits.
+        <li>No single output bit should be too close to a <u>linear combination</u> (Linear Algebra - Math Rule [[[[[[) of the input bits.
         </li><br>
         
         
-        <li>If the lowest and the highest bits of the input are "fixed" (e.g., constant while the four middle values cycle through all possible incarnations) and the four middle bits are varied, each of the possible 4-bit output values must occur exactly once.
+        <li>If the lowest and the highest bits of the input are "fixed" (i.e., constant) and the four middle bits are varied (i.e., <em>nonconstant</em> and cycling through every possible value), each of the possible 4-bit output values must occur exactly once.
         </li><br>
         
-        <li> "For any nonzero 6-bit difference between inputs<!--(e.g., the 6-bit value produced by XOR-ing those inputs)-->, no more than 8 of the 32 pairs of inputs exhibiting that difference <!--(pairs of inputs that produce that exact same value when XOR'd together)--> may result in the same output difference." <br><br>
+        <li> For any nonzero 6-bit difference between inputs into a substitution table (like 101001 and 010110), no more than 8 of the 32 pairs of inputs exhibiting that 6-bit difference may result in the same output difference. Thus, for all 32 possible pairs of 6-bit differences (pairs that when XOR'd together, produce 111111), a maximum of 8 can have the same number of bits differing between their outputted 4-bit strings. This is a <em>really</em> esoteric requirement that demonstrates the precision of the requirements to maximize diffusion, and how narrow the conditions for success were for defense against differential cryptanalysis.<!--, and the extent to which the cryptographers who designed DES suffered.-->
+        
+        <!--everyone's a bum nobody helped me. this was here for like 8 months.
+        
         <strong><font color="red">If you know what the above words mean, since they seem (atleast to me) to be complete and utter nonsense, please contact me at <a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a>. You will be credited (if you wish) on this page.</font></strong>
+        
+        -->
         </li><br>
         
-        <li> A collision (identical output values, known as a "<strong>Zero Difference</strong>" (since XOR-ing the values = 0)) of the outputs of the eight S-boxes must only be possible for a <u>maximum</u> of three adjacent S-boxes. Two adjacent colliding S-boxes would thus be fair game.<br><br>
+        <li> A <em>collision</em> (identical S-box outputs, known as a "<strong>Zero Difference</strong>") of the outputs of the eight S-boxes must only be possible for a <u>maximum</u> of three adjacent S-boxes. Two adjacent colliding S-boxes would thus be fair game.<br><br>
         If it were possible for all 8 boxes to have a zero difference, then the S-box design would have a highly predictable structure.
-        </li><br><br>
+        </li><br>
         
-        <strong>Diffusion Requirements:</strong><br><br>
-        
-        <li> DIFFUSION: If two inputs to an S-box differ by exactly one bit, their outputs must differ by atleast two bits.
+        <li> If two inputs to an S-box differ by exactly one bit, their outputs must differ by atleast two bits.
         </li><br>
         
         
-        <li> DIFFUSION: If two inputs to an S-box differ in two middle bits, their outputs must differ by atleast two bits.
+        <li> If two inputs to an S-box differ in two middle bits, their outputs must differ by atleast two bits.
         </li><br>
         
         
-        <li> DIFFUSION: If two inputs to an S-box differ in their first two bits, but are identical in their last two bits, the two outputs must be different.
+        <li> If two inputs to an S-box differ in their first two bits, but are identical in their last two bits, the two outputs must be different.
         </li>
         
+      </ol><br>
       
-      </ol><br><br>
+      The design of all eight of the substitution tables incorporates both the need for being differential cryptanalysis proof, and all of the diffusion-specific requirements above. This is why the S-boxes are the heart of the f function, and by extension the heart of the Feistel Network, and thus the heart of DES.
+      <br><br><br><br><br>
+    
+	     <!--[[[perhaps howerver so long down the line a little explanation down here of what particular sections of this are combatting differential cryptanalysis, and a little referencer to the Rule itself in greater detail. and the difcryp Rule should reference this section as well anyway-->
+	    
+	    
+	    
+	     
+	    
+	    <!--Several months overdue, but still back and as good as ever.-->
+	    <!--After completing this Rule, I was able to remove 9 to-do brackets. I referenced this Rule tons of times in advance, so it was easily one of the most "awaited" Rules in the enire summary.-->
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> 
+        <strong>DES Internals #3 - Key Schedule:</strong><br><br>
+        
+        A <strong>Key Schedule</strong> is an algorithm used to generate the subkey for every round of a product cipher, working almost like a mini-DES using its own permutations and round system to supply the subkeys. While every cipher has its own variation on how the key schedule will exactly work, the general form is practically always the same. The following Rule will detail how the DES Key Schedule works in particular, which is the simplest, most bare-bones, non-mathematical version of the key schedule you can get. In discussions of other ciphers, deviations from the DES standard with be noted rather than rederiving the wheel, and knowledge of the DES key schedule will be assumed as a basis to build off of.<br><br><!--I like the way I laid it out here.-->
+        
+        In DES, using a series of fairly simple operations, the key schedule is able to shrink the inputted key from 64-bits to 56-bits, and then from there into sixteen 48-bit subkeys. The reason that DES doesn't just use 64-bit subkeys (adjusting the E-box and S-box's appropriately) is because <strong><u>[REDACTED]</u></strong>.<!--why?????????????? email me at jdlacabe@gmail.com if you know the reason--><br><br>
+        
+        
+        A 64-bit key is inputted into the key schedule and goes through a series of operations before <em>16</em> subkeys (k<sub>1</sub> through k<sub>16</sub>) are derived from it to supply each of the 16 encryption rounds, each subkey consisting of 48 bits. Each operation in this process is described in the paragraphs, in the order that the bits travel from entry into the key schedule to the creation of the final subkey. The illustrations below depict the placement of the Key Schedule in relation to the rest of the DES cipher, as well as the internal details of the Key Schedule and their steps.<br><br>
+        
+        <!--I was laughing my ass off when I made this. Let laughter inform your professional decisions. It also makes it more interesting for the people learning the subject: stops people from being bored out of their minds when they see something absurd like this. Just what I said about knowledge in the about page (or somewhere else), the best thing you can do for education after making it accessible is to make it interesting to encourage people to continue learning once they've started. It is very difficult to study something you find mind-numbingly boring-->
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeySchedule.png" class="imglink"><img src="/cryptography/img/KeySchedule.png" alt="The DES Feistel network, with the Key Schedule circled in red so you don't miss it." width=77%/></a></div>
+  	    <span class="tiny"><em>The DES Feistel network, with the Key Schedule circled in red so you don't miss it.</em></span><br><br><br>
+  	    
+  	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/KeyScheduleSteps.png" class="imglink"><img src="/cryptography/img/KeyScheduleSteps.png" alt="A closeup of the Key Schedule, with the finer details of the Transforms shown. Each step is described in detail in the paragraphs below." width=77%/></a></div>
+  	    <span class="tiny"><em>A closeup of the Key Schedule, with the finer details of the Transforms shown. Each step is described in detail in the paragraphs below.</em></span><br><br>
+
+        <ol>
+
+          <li>
+  	      The first operation the 64-bit key will pass through in the key schedule is the "PC–1" box, which stands for "Permuted Choice One". It serves to both remove every 8th bit to shorten the key, and to perform a simple permutation on the remaining bits.<br><br>
+  
+          Many cryptographic textbooks describe the PC-1 box as removing "<strong>parity bits</strong>" from the string. But that is cop-out: the usage of parity bits in electrical engineering (see E.E. [[[[[) is completely irrelevant to cryptography. As such, let it be known without the obfuscation of additional E.E. terminology: <strong>PC-1 removes every 8th bit from the key.</strong> 8, 16, 24... all removed for the simple reason of <strong><u>[REDACTED]</u></strong>, which is also the reason why DES doesn't just accept 56-bit keys.<!--These are not the missing content brackets. I am literally leaving these here to let the masses know that this information is literally unknown, and even the textbooks shrug when they get to this part--><br><br>
+  
+  	      After the culling of those eight poor bits, the other 56 bits undergo a simple permutation (see definition), scrambling the bits using the permutation table found <a href="https://en.wikipedia.org/wiki/DES_supplementary_material#Permuted_choice_1_(PC-1)">here</a>.<br><br>
+  	      
+  	      This is why DES is said to have a key-length of 56 - each 48-bit subkey (the final versions of which are created in step 4) is derived from these 56 bits. While it is true that the 56 bits were originally derived from the 64 bits, each of the 56 bits is used in atleast <em>one</em> of the 16 subkeys (as shown in step 3), while the 8 culled bits of the initial 64-bit key are lost forever and thus irrelevant to the cipher as a whole. <strong>Thus, the key-length of DES is 56 bits.</strong>
+          
+          </li><br><br>
+          
+          
+          <li>
+          The key in its new 56-bit form will then be evenly split into the C<sub>0</sub> and D<sub>0</sub> tranches, each with a length of 28. This is the final pre-transform step, and just serves to get the data<!--don't change unless can think of something absolutely better--> into position before it enters into the most important stage of the schedule (see step 3).
+  
+          </li><br><br>
+          
+  
+          <li>After this, the key schedule proper can begin, with every step before step 3 essentially being set-up for the great subkey generator: the "<strong><eM>Transform</em></strong>". The transform is the part of the key schedule that is repeated for each round of the Feistel Network, generating and supplying a new subkey to the f function of each round (see the illustration of Rule 48). Each transform is, in and of itself, composed of 4 steps in which the subkey is generated before moving onto the next transform to generate the <em>next</em> subkey.<br><br>
+    
+        	The first step of the transform is what is known as the <strong>Left Shift</strong>, or <strong>Left Rotate</strong> (represented as <strong>LS<sub>i</sub></strong>), which literally just cyclically shifts every bit in each tranche <em>leftward</em> by a set number of places. This works a bit like modular arithmetic in reverse, with each bits that moves to the left of the first position being moved to the very end of the sequence. Both tranches will have their bits move the same number of places.<br><br>
+        
+        	What is most interesting about this rather simplistic process is that the number of places each bit moves leftward <u>differs</u> depending on <strong>which round</strong> the transform is at. LS<sub>i</sub>, i being the particular round, is governed by the following rule:<br><br>
+        
+          For the rounds <strong>1, 2, 9, & 16</strong>, the leftward shift is by <u>one</u> bit.<br><br>
+          
+          For all rounds <strong>OTHER than 1, 2, 9, & 16</strong>, the leftward shift is by <u>two</u> bits.<br><br>
+          
+          
+          While rounds 1, 2, 9, & 16 were arbitrarily chosen to be one-bit rotations, the reason for the difference in the number of shifts is so that the total number of rotations will reach 28 by round 16: (4 × 1) + (12 × 2) = 28. Therefore, by the final round, the leftward shifts will have accumulated enough to make the 16th subkey tranches (C<sub>16</sub> & D<sub>16</sub>) identical to the subkey tranches produced before the 1st round (C<sub>0</sub> & D<sub>0</sub>). This is of the utmost utility for when the time comes to decrypt, which, as detailed in Rule [[[, entails going through the key schedule in reverse.
+          
+          The reason the leftward shifts are being bothered with at all is also rather simple:<!--I was 90% sure I was gonna have to put a redacted here - pleasantly surprised. I should not get into the habit of doing that though; only when necessary--> it is just a kind of lazy way of creating different subkeys, like the least effort way of doing so. It literally just shifts everything over by a bit or two.<br><br>
+          
+          The end result of this shift operation will be two shifted tranches whose index matches their transform - in the key schedule illustration, for example, it can be seen that the tranches C<sub>1</sub> & D<sub>1</sub> were created in Transform 1 by performing a left rotation on the starting tranches of C<sub>0</sub> & D<sub>0</sub>. Thus, each transform uses a left rotation on the tranches of the previous transform to create its own tranches.<br><br>
+          
+          Since the final step of the bit permutation of step 4 uses the same table for each subkey, the leftward shift is really the only thing that differentiates one subkey from another, though the scrambling of the bit permutation (and the culling of another eight bits) renders the end-result subkeys totally unrecognizable from one another.
+                  
+          </li><br><br>
+          
+          
+          <li> The final step of the transform before the subkey gets shipped off to the f function to get XOR'd (see Rule 50, step 2) is to perform another bit permutation/culling operation, basically identical to step 1 in every way except this time going from 56 bits to 48 bits (making it the same size as the post E-box right tranche that it is going to be XOR'd with in the f function - see Rule 50, steps 1 & 2). The tranches are combined in order to do this.<br><Br>
+  
+          This operation, represented as <strong>PC-2</strong> on the diagram ("permuted choice 2"), removes eight bits and then scrambles those remaining using the permutation table found <a href="https://en.wikipedia.org/wiki/DES_supplementary_material#Permuted_choice_2_(PC-2)">here</a>. After this, the subkey (now finally granted the title of "k<sub>i</sub>" for its round) is sent to its final destination: an XOR gate in the f function.
+          
+          <br><br>
+          
+          Note on the diagram how only the unpermuted version of the tranches passes on to the next transform - the 48-bit permuted subkey goes off on its own adventure to the f function, while the more serious 56-bit unpermuted tranches stay to complete the rest of the subkeys for the remaining rounds.
+  
+          </li>
+      
+      </ol>
+      
+      </div><br><br><br><br>
 	  
 	    </article>
 	  </div>
@@ -482,7 +587,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers: Intro & DES</strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 2 2025</span><br>
+      	<span class="tiny">Last Change: August 3 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

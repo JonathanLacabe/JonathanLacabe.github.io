@@ -3,6 +3,9 @@ CHANGE LOG.
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+August 3, 2025: Cryptography work, additions. The long awaited DES Key Schedule Rule was completed, with a total of 9 bracketed referencers being cleared with its addition.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 51.
+
 August 2, 2025: Further Cryptography work. A new section, "V. Block Ciphers: AES" was added to account for new content. I was also able to add resized Mathematics and Algebra II logos that take up less space (and load much faster on slower browsers). These images were ridiculously large pngs that took up, no exaggeration, 40% of the site. Since the site is composed mostly of text, I expect to never reach the 1 GB limit on Neocities, let alone the 20 GB limit for the hkproject domain.
 
 August 1, 2025: I was so busy yesterday that I forgot that it was the 1 year anniversary of the project. In celebration, I spent the day working on Cryptography. Perhaps I will plan something more exciting next year. Today, I updated the sitemap. Further work on Cryptography, of course, densely concentrated in Block Ciphers.

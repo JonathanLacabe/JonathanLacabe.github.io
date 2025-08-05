@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/UnadornedFeistel.png" class="imglink"><img src="/cryptography/img/UnadornedFeistel.png" alt="A diagram of an individual round of the Feistel Network, totally unadorned of any additional characteristics specific to the DES system - see Rule 48 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient." width=57%/></a></div>
   	    <span class="tiny"><em>A diagram of an individual round of the Feistel Network, totally unadorned of any additional characteristics specific to the DES system - see Rule 48 for that. The given values and lengths, such as the 48-bit subkey, are all specific to the DES varient.</em></span><br><br>
         
-        Widely used among block ciphers (though not in the AES, see Rule [[[), several ciphers like DES developed their own, more optimized versions of the network. The bulk of all modern ciphers currently in use were built using Feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, simply using a reversed key schedule (i.e. generating the subkeys needed for each round in reverse; see Rule [[[[[[[[).<!---[[[perhaps can have a little explanation here of what it entails once the basics are all laid out?--><br><br>
+        Widely used among block ciphers (though not in the AES, see Rule [[[), several ciphers like DES developed their own, more optimized versions of the network. The bulk of all modern ciphers currently in use were built using Feistel ciphers and their varients. A particular advantage of the Feistel Network is that decryption and encryption are almost the same operation, with decryption simply being encryption performed in reverse (done using a reversed key schedule to generate the subkeys backwards; see Rule 53).<br><br>
         
         In terms of importance/usage in the cipher structure, Feistel Networks are the block cipher equivalent of the LFSR, although it actually <em>encrypts</em> the data and <em>requires</em> a key, instead of merely producing the key (like the LFSR). It is just at the same level of ubiquity in block ciphers that LFSRs have for stream ciphers.<bR><BR>
         
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         <strong><u>Mathematical Definition</u></strong>:<br><br>
         
-        [[[[[<br><br>
+        There is no overarching equation that describes DES as a whole - the algorithm is too complex and has too many interlinking parts to be cohesively represented mathematically. The closest thing to an equation for DES is the proof that the decryption and encryption functions use the same operations, derived and explained in Rule 52.<br><br>
         
         <strong><u>Explanation:</u></strong><br><br>
         
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key. On the right hand side is the key schedule, described in Rule 51." width=78%/></a></div>
         	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key. On the right hand side is the key schedule, described in Rule 51.</em></span><br><br>
         
-        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule 51, step 4 for why that is. Additionally, see Rule 51, step 1 for why DES is 56 bits.
+        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. See Rule [[[ for information regarding the brute-forcing of DES. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule 51, step 4 for why that is. Additionally, see Rule 51, step 1 for why DES is 56 bits.
         <!--According to Cryptography Section IV, Subsection IV.III, Rule 54, step 1....
         This is perfect. This is everything I've ever wanted.-->
         
@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">C. Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>DES Internals #1 - Bit Permutation:</strong><br><br>
+        </strong> <strong>DES Internals #1 - Initial & Final Bit Permutations:</strong><br><br>
         The first characteristic one may note about the DES Feistel Cipher (as depicted in the graphic of Rule 48) is that the first operation undergone by data being processed by the cipher, even before it is split into tranches, is <strong>IP(x)</strong>, the <strong>Initial Permutation</strong> function. Undepicted is the very last operation in the encryption process, at the bottom of the cipher (which is 16 rounds deep), where the <strong>IP(x)⁻¹</strong>, the <strong>Final Permutation</strong>, would be located.<br><br>
         
         IP(x) and IP(x)⁻¹ are simple <strong>bit permutations</strong>, or <strong>bitwise permutations</strong>, detailed in the definition above. Essentially, IP(x) just scrambles the bits and places them in different parts of the 64-bit sequence. IP(x)⁻¹, being the inverse of IP(x), perfectly undoes the scrambling of IP(x) at the end of the cipher (after all the bits have been fully encrypted), cancelling eachother out.<br><br>
@@ -343,9 +343,13 @@ document.addEventListener("DOMContentLoaded", function (){
         The purpose of the DES bit permutation functions is simple: while serving no cryptographic purpose (since the attacker can simply take the permutation into account, and because it is undone anyway), when DES was designed in 1974, the application of the cipher into hardcare necessitated cross-wiring (physical bit permutation) just to allow the data to enter the chip. The specific bit permutations used for the initial and final permutations (both depicted in the illustration below) are done in order to, according to leading experts on the issue, "arrange the plaintext and ciphertext bits in a bytewise manner to make data fetches easier for the 8-bit data buses [widely used in the '70s]."<br><br>
         
         Below are the specific bit permutation tables hand-selected for the DES cipher. For any value in either box, look for the value in the other box whose position-value is the first value - this will determine what the first value maps to. For example, the value '58' in the IP box maps to '1' in the IP⁻¹ box, since 1 is in the 58th position in IP⁻¹.  Likewise, '1' in the IP⁻¹ box maps to 58 in the IP box since 58 is in the 1st position. Note that these values represent the <em>bits</em> at these positions in the 64-bit sequence being mapped to other bits.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png" class="imglink"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutations in the DES cipher." width=57%/></a></div>
-        	    <span class="tiny"><em>The Initial and Final Permutations in the DES cipher.</em></span><br><br>
-        Thus, the bit permutations were merely placed in DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/InitialFinalPermut.png" class="imglink"><img src="/cryptography/img/InitialFinalPermut.png" alt="The Initial and Final Permutation Tables in the DES cipher." width=57%/></a></div>
+        	    <span class="tiny"><em>The Initial and Final Permutation Tables in the DES cipher.</em></span><br><br>
+        Thus, the bit permutations were merely placed in DES for practical, electrical engineering purposes, devoid of cryptographic meaning. DES was initially designed purely for hardware, and the electrical engineering-devised permutation (no gates or special operations) made it very easy to be fabricated in hardware form, but somewhat tedious and more time-consuming in software.<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FinalPermutation.png" class="imglink"><img src="/cryptography/img/FinalPermutation.png" alt="The Final Permutation in the DES cipher." width=29%/></a></div>
+        	    <span class="tiny"><em>The Final Permutation in the DES cipher.</em></span><br><br>
+        
+        Note that the tranches of the Feistel Network (see Rule 46) are switched for the final time at IP(x)⁻¹, which is very important to know for the decryption function (see Rule 52).
         
         </div><br><br><br><br><br>
 
@@ -483,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> 
         <strong>DES Internals #3 - Key Schedule:</strong><br><br>
         
-        A <strong>Key Schedule</strong> is an algorithm used to generate the subkey for every round of a product cipher, working almost like a mini-DES using its own permutations and round system to supply the subkeys. While every cipher has its own variation on how the key schedule will exactly work, the general form is practically always the same. The following Rule will detail how the DES Key Schedule works in particular, which is the simplest, most bare-bones, non-mathematical version of the key schedule you can get. In discussions of other ciphers, deviations from the DES standard with be noted rather than rederiving the wheel, and knowledge of the DES key schedule will be assumed as a basis to build off of.<br><br><!--I like the way I laid it out here.-->
+        A <strong>Key Schedule</strong> is an algorithm used to generate the subkey for every round of a product cipher, working almost like a mini-DES using its own permutations and round system to supply the subkeys. While every cipher has its own variation on how the key schedule will exactly work, the general form is practically always the same. The following Rule will detail how the DES Key Schedule works in particular, which is the simplest, most bare-bones, non-mathematical version of the key schedule you can get. In discussions of other ciphers, deviations from the DES standard with be noted rather than rederiving the wheel, and knowledge of the DES key schedule will be assumed as a basis to build off of. A detailed description of how a Reversed Key Schedule can be used in decrypting DES can be found in Rule 53.<br><br><!--I like the way I laid it out here.-->
         
         In DES, using a series of fairly simple operations, the key schedule is able to shrink the inputted key from 64-bits to 56-bits, and then from there into sixteen 48-bit subkeys. The reason that DES doesn't just use 64-bit subkeys (adjusting the E-box and S-box's appropriately) is because <strong><u>[REDACTED]</u></strong>.<!--why?????????????? email me at jdlacabe@gmail.com if you know the reason--><br><br>
         
@@ -528,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function (){
           For all rounds <strong>OTHER than 1, 2, 9, & 16</strong>, the leftward shift is by <u>two</u> bits.<br><br>
           
           
-          While rounds 1, 2, 9, & 16 were arbitrarily chosen to be one-bit rotations, the reason for the difference in the number of shifts is so that the total number of rotations will reach 28 by round 16: (4 × 1) + (12 × 2) = 28. Therefore, by the final round, the leftward shifts will have accumulated enough to make the 16th subkey tranches (C<sub>16</sub> & D<sub>16</sub>) identical to the subkey tranches produced before the 1st round (C<sub>0</sub> & D<sub>0</sub>). This is of the utmost utility for when the time comes to decrypt, which, as detailed in Rule [[[, entails going through the key schedule in reverse.
+          While rounds 1, 2, 9, & 16 were arbitrarily chosen to be one-bit rotations, the reason for the difference in the number of shifts is so that the total number of rotations will reach 28 by round 16: (4 × 1) + (12 × 2) = 28. Therefore, by the final round, the leftward shifts will have accumulated enough to make the 16th subkey tranches (C<sub>16</sub> & D<sub>16</sub>) identical to the subkey tranches produced before the 1st round (C<sub>0</sub> & D<sub>0</sub>). This is of the utmost utility for when the time comes to decrypt, which, as detailed in Rule 53, entails going through the key schedule in reverse.
           
           The reason the leftward shifts are being bothered with at all is also rather simple:<!--I was 90% sure I was gonna have to put a redacted here - pleasantly surprised. I should not get into the habit of doing that though; only when necessary--> it is just a kind of lazy way of creating different subkeys, like the least effort way of doing so. It literally just shifts everything over by a bit or two.<br><br>
           
@@ -552,6 +556,76 @@ document.addEventListener("DOMContentLoaded", function (){
       </ol>
       
       </div><br><br><br><br>
+      
+      <!--
+      The Answer To Every Question About The Design of DES
+
+      Q: "Why was the [] in DES designed that way?"
+      
+      A: yeah
+      
+      [REDACTED]
+      
+      also it was 1978 they didn't know what they were doing
+      -->
+	   
+	   
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Decryption (Feistel Network)</strong>:<br><br>
+        
+        One of the most useful features of the Feistel Nework, particularly taken advantage of by DES, is the simplicity of the decryption function. It stands that for any Feistel-based cipher, <strong>the decryption function is just the encryption in reverse</strong>. Every attribute except for the general structure of the Feistel Network is done in reverse - the decryption versions of both the Feistel network (described below) and the key schedule (described in Rule 53) look identical to the encryption version, except with different variables and (for the key schedule) some different operations perfomed. While the ciphertext can just be fed in as normally into the Feistel Network (for reasons outlined below), the <em>Key Schedule</em> must be altered to incorporate a Right Rotation rather than a Left Rotation, described in detail below.<br><br>
+
+          Of course, all the other annoying little ornaments of DES need to be accounted for as well, such as the initial and final permutations (IP(x) & IP(x)⁻¹) detailed in Rule 49. IP(x)⁻¹<sub>e</sub> is the IP(x)<sub>d</sub> of the decryption function, and vice versa.<br><br>
+          
+          It is useful to think of the decryption function as merely being the encryption function flipped on its head. For each decryption round F<sub>i</sub><sup>d</sup> and each encryption round F<sub>i</sub><sup>e</sup>, F<sub>1</sub><sup>d</sup> will reverse F<sub>16</sub><sup>e</sup>, F<sub>2</sub><sup>d</sup> will reverse F<sub>15</sub><sup>e</sup>, and so until F<sub>16</sub><sup>d</sup> reverses F<sub>1</sub><sup>e</sup> and you are left with (after the final permutation) the <strong>plaintext</strong>.<br><br>
+          
+          Tranchewise, because of how the left and right tranches are swapped when they enter the Final Permutation (see Rule 49), and because the final permutation of the encryption function is equal to the <em>initial</em> permutation of the decryption function (which does NOT swap the tranches), the initial left and right tranches of the decryption function are equal to the final <em>right and left</em> tranches of the encryption function: L<sub>0</sub><sup>d</sup> = R<sub>16</sub><sup>e</sup>, while R<sub>0</sub><sup>d</sup> = L<sub>16</sub><sup>e</sup>.<br><br>
+          
+          It can hence be mathematically proven that every following L<sub>i</sub><sup>d</sup> is equal to R<sub>16-i</sub><sup>e</sup>, and that every R<sub>i</sub><sup>d</sup> is equal to L<sub>16-i</sub><sup>e</sup>. The following proof is simplified <a href="/math/mathsymbols.html#WLOGExp">WLOG</a> to the first round decryption, the same process of which can be applied to <em><u>any</u></em> round of the decryption:<br><br><br>
+          
+          1. <strong>L<sub>1</sub><sup>d</sup> = R<sub>15</sub><sup>e</sup></strong> <br>
+          2. <strong>R<sub>1</sub><sup>d</sup> = L<sub>0</sub><sup>d</sup> ⊕ f(k<sub>1</sub><sup>d</sup>, R<sub>0</sub><sup>d</sup>) </strong><br>
+          3. <strong>R<sub>1</sub><sup>d</sup> = L<sub>15</sub><sup>e</sup> ⊕ f(k<sub>16</sub><sup>e</sup>, R<sub>15</sub><sup>e</sup>) ⊕ f(k<sub>1</sub><sup>d</sup>, R<sub>0</sub><sup>d</sup>) </strong><br>
+          4. <strong>R<sub>1</sub><sup>d</sup> = L<sub>15</sub><sup>e</sup> ⊕ f(k<sub>16</sub><sup>e</sup>, R<sub>15</sub><sup>e</sup>) ⊕ f(k<sub>16</sub><sup>e</sup>, R<sub>15</sub><sup>e</sup>)</strong><br>
+          5. <strong>R<sub>1</sub><sup>d</sup> = L<sub>15</sub><sup>e</sup></strong><br><br>
+          
+          
+          The <strong>1st step</strong> originates from the fact that for each round of a Feistel Network, the right tranche moves unaltered to the left tranche of the next round (depicted and described in Rule 46). For the decryption function, this means that L<sub>1</sub><sup>d</sup> is equal to R<sub>0</sub><sup>d</sup>. As noted above, the swap into the final permutation of the encryption function (and the <em>lack</em> of a swap in the first permutation of the decryption function) makes it so that R<sub>0</sub><sup>d</sup> is equal to L<sub>16</sub><sup>e</sup>, which itself, again as a left tranche, is equal to R<sub>15</sub><sup>e</sup>, the right tranche of the previous round.<br><br>
+          
+          The <strong>2nd step</strong> is more straightforward: the right tranche of the first round of the decryption is equal to the XOR'ing of the subkey for that round with the left tranche of the 0th round (the initial tranches).<br><br>
+          
+          <strong>Step 3</strong> entails more substitutions: Because L<sub>0</sub><sup>d</sup>, using the final permutation, is equal to R<sub>16</sub><sup>e</sup>, it can be substituted out for the XOR that represents R<sub>16</sub><sup>e</sup> in the encryption equation. This creates <em>two</em> f function XOR gates, and cancelling them will succeed in the end goal of an isolated L<sub>15</sub><sup>e</sup>.<br><br>
+          
+          To cancel out the two XOR'd f functions shown in step 3, it must be shown that they are equal to eachother, since a value XOR'd by itself equals 0. Crucial to <strong>Step 4</strong> is the fact that same subkey (K<sub>16</sub>) is used for both the 16th round of the encryption function and the first round of decryption function, which is ensured using a reversed Key Schedule (see Rule 53). Furthermore, as previously established in step 1, <strong>R<sub>0</sub><sup>d</sup> is equal to R<sub>15</sub><sup>e</sup></strong>, and performing both substitutions proves that the two f functions are indeed equal to one another.<br><br>
+          
+          <strong>Step 5</strong>: Finally, since L<sub>15</sub><sup>e</sup> XOR'd by 0 is just L<sub>15</sub><sup>e</sup>, the proof is q.e.d. and completed. The process can be repeated for any round i of the decryption function to prove that its tranches are equivalent to the tranches at round 16-i of the encryption function (with the left tranche of one being the right tranche of the other, of course).
+          
+          </div><br><br><br><br>
+	    
+	    
+	    
+	      
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Reversed Key Schedule</strong>:<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/ReverseKeySchedule.png" class="imglink"><img src="/cryptography/img/ReverseKeySchedule.png" alt="The Reversed DES Key Schedule. Note that each round, each subkey subscript, corresponds to the reversed Feistel network." width=62%/></a></div>
+  	    <span class="tiny"><em>The Reversed DES Key Schedule. Note that each round, each subkey subscript, corresponds to the reversed Feistel network.</em></span><br><br>
+        
+        The <strong>Reversed Key Schedule</strong> (depicted above) is the regular Key Schedule (see Rule 51), except generated in reverse order for the decryption function of DES (described in Rule 52).
+
+        The Reversed Key Schedule has every subkey generated from the original 64-bit key, and at first runs exactly the same as the original key schedule (see Rule 51) - the key is shortened to 56-bits in the PC-1 box, and procedes to be divided into two tranches.<br><br>
+        
+        However, the first major difference appears immediately afterward: Instead of having the rotation performed <em>before</em> the subkey is sent off to the Feistel f function, it is now done <em>afterwards</em>. This is done for the purposes of having the subkeys generated in the exact reverse order to how they are done in the encryption function: since round 16 of the encryption key schedule is the original, unshifted subkey (as a result of being shifted 28 times over the previous 16 rounds, as explained in Rule 51), there <em>shouldn't</em> be a shift going into the first subkey. Furthermore, every following round can have its shift accounted for beforehand through a rightward rotation: the Left Rotate is replaced with a <strong>Right Rotate</strong>, essentially moving backward and undoing each leftward shift for each round of the encryption key schedule so that the subkeys can be generated in reverse.<br><br>
+        
+        This is what enables the reversed key schedule subkeys to reversely match the regular key schedule subkeys, akin to the Feistel tranches. As depicted in the illustration, the subkeys generated by the reversed key schedule are not differentiated from the regular key schedule ones using <sup>d</sup> & <sup>e</sup> superscripts. The simplicity of the key schedule does not necessitate doing so - they both generate the same thing, just in different orders. Therefore, Decryption Round 1 corresponds to Transform 16, Round 16 corresponds to Transform 1, and everything in between.<br><br>
+        
+        In order for the subkeys to match up <em>every single time</em> during the reverse generation, the rounds in which the tranches are shifted by one bit rightward instead of two bits rightward must be perfectly calibrated. As known from the regular key schedule, only rounds 1, 2, 9, & 16 have their bits shifted by only one placement (see Rule 51, step 3). However, that is looking at the rounds going in the direction of the encryption. Going in the direction of the <em>decryption</em>, i.e. generating the subkeys backwards, accounts for these special rounds relative to their position in the reversed key schedule: Since, as explained before (and as shown in the illustration), there is no rotation before the very first subkey tranche, the key is not rotated whatsoever in decryption round 1 (transform 16). The rest of the information remains the same - <strong>the subkey tranches are rotated rightward by one place on rounds 2, 9, & 16 (<u>not transforms, <em>rounds</em></u>) and is rotated by two places on all other rounds except 1</strong>.
+        
+        </div><br><br><br>
 	  
 	    </article>
 	  </div>
@@ -587,7 +661,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers: Intro & DES</strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 3 2025</span><br>
+      	<span class="tiny">Last Change: August 4 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

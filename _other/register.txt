@@ -3,9 +3,7 @@ REGISTER OF LEARNING IMPORTANCE/PRIORITY
 
 HIGH-PRIORITY:
 Cryptography ->
-                Symmetric Ciphers, specifically Stream Ciphers.
-
-Remainder of 2nd Semester Calculus.
+                Symmetric Ciphers, specifically AES in Block Ciphers.
          
              
 Physics -> 
@@ -26,7 +24,8 @@ All of the existing Calculus notes.
 
 LOW-PRIORITY
 Salsa20, ChaCha, and Trivium content for Symmetric Cryptography.
+3DES for Block Ciphers.
 
 Astronomy
 
-All unestablished pages: Nuclear Engineering, Aerospace Engineering, etc.
+All unestablished subjects: Nuclear Engineering, Aerospace Engineering, etc.

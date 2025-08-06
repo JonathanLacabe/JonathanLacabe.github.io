@@ -3,7 +3,11 @@ CHANGE LOG.
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+August 5, 2025: Further Cryptography work, alongside the addition of a reserved Rule for 3DES.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 54, 55, 56.
+
 August 4, 2025: Further Cryptography work, making additions to the Math Symbols page in the process.
+Rules Added: Cryptography, Symmetric Cryptography - Rule 52, 53.
 
 August 3, 2025: Cryptography work, additions. The long awaited DES Key Schedule Rule was completed, with a total of 9 bracketed referencers being cleared with its addition.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 51.

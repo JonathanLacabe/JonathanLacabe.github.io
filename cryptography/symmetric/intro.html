@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", function (){
       
       <strong><a href="#MooresLawDef"><span class="mw-headline" id="MooresLawDef">#</span></a> <font color="#006400">Moore’s Law</font></strong>: The computing power of the strongest computers (e.g., the number of transistors in an integrated circuit) will double every 18-24 months while the price will remain constant. This means that computing power, growing exponentially over time, will continually pose more and more of a threat to modern cryptographic systems and to antiquated ones still in use, as it becomes cheaper and faster to break them.<br><br>
       
-      This is especially relevant for cryptanalysis requiring intensive computing power, such as brute-force attacks (see Rule 8 below).
+      This is especially relevant for cryptanalysis requiring intensive computing power, such as brute-force attacks (see Rule 8 below). See Rule 55 for an example of how Moore's Law made feasible a brute-force attack on a keylength that was previously considered secure against keysearch attacks.
       <br><br><br><br>
       
       
@@ -493,7 +493,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
       <strong><u>Mathematical Definition</u></strong>:<br><br>
       
-      <em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub> } be the keyspace of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
+      <em>Let (x, y) denote the pair of plaintext and ciphertext, and let K = {k<sub>1</sub> ,..., k<sub>κ</sub>} be the keyspace of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether d<sub>k<sub>i</sub></sub> == x.<br><br>
       
       If the equality holds, a possible correct key is found; if not, proceed with the next key.
       </em>
@@ -523,10 +523,10 @@ document.addEventListener("DOMContentLoaded", function (){
       
       There is no 'equation' for Analytical Attacks, because they are specific and unique to every cryptosystem (though some common characteristics can emerge between similar cryptosystems).
       </div><br><br>
-
-
-
-
+      
+      
+      
+    
     </article>
 	    <header class="articleHeader"><hr>
 	      <h3><span class="mw-headline" id="GenericAttacks">I.V Generic Analytical Attacks.</span></h3>
@@ -541,7 +541,7 @@ document.addEventListener("DOMContentLoaded", function (){
       <strong><a href="#KnownPlaintextDef"><span class="mw-headline" id="KnownPlaintextDef">#</span></a> <font color="#006400">Known-plaintext Attack</font></strong>: In addition to the ciphertext, the adversary also knows some pieces of the plaintext (e.g., header information of an encrypted file or email).
       <br><br><br>
       
-      <strong><a href="#ChosenPlaintextDef"><span class="mw-headline" id="ChosenPlaintextDef">#</span></a> <font color="#006400">Chosen-plaintext Attack</font></strong>: An attack in which the adversary can choose the plaintext that is being encrypted and also has access to the corresponding ciphertext, found through possession of the decryption function (whether aware of its internal workings or not).
+      <strong><a href="#ChosenPlaintextDef"><span class="mw-headline" id="ChosenPlaintextDef">#</span></a> <font color="#006400">Chosen-plaintext Attack</font></strong>: An attack in which the adversary can choose the plaintext that is being encrypted and also has access to the corresponding ciphertext, found through possession of the decryption function (whether the attacker is aware of its internal workings or not). This attack is primarily used to find a key that is being reused in a communication, so that further ciphertexts encrypted with the key can be decrypted<!--discretely-->.
       <br><br><br>
       
       <strong><a href="#ChosenCiphertextDef"><span class="mw-headline" id="ChosenCiphertextDef">#</span></a> <font color="#006400">Chosen-ciphertext Attack</font></strong>: An attack in which the adversary can choose ciphertexts and obtain the corresponding plaintexts, the goal being (typically) to recover the secret key.
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong>Introductions</strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers: Intro & DES</a></strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 3 2025</span><br>
+      	<span class="tiny">Last Change: August 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         A cipher that encrypts a block of 'b' plaintext bits all at the same time, where b is greater than one (since one bit at a time would be a stream cipher). These ciphers are both deterministic and hyper-unpredictable: the encryption of any plaintext bit in a block depends on the value of every other plaintext bit in the block, like the positions of celestial bodies in a galaxy. A one bit difference between two blocks of plaintext will produce two <u><eM>completely</eM> different</u> ciphertexts.<br><br>
         
-        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as DES and 3DES (see Rule 48 & Rule [[[[, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
+        Most block ciphers have a block length of 128 bits (16 bytes), such as the AES (see Rule [[[[[), or 64 bits (8 bytes), such as DES and 3DES (see Rule 48 & Rule 56, respectively). For each input, a block cipher will produce an equivalent amount of output data: in the case of DES, this will be another 64 bits.<br><br>
         
         Block Ciphers are more commonly used than Stream Ciphers in modern computer encryption schemes, due to the stream cipher mass extinction event caused by relentless attacks by cryptanalysts in the '90s, and the mass adoption of block ciphers that followed.
         
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function (){
           
           DES was the first "secure" cryptosystem ever made public by a national government under the postulate of Kerckhoffs's principle (see Rule 3).<br><br>
           
-          Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to its short key-length (56 bits), 3DES has a very long key, and as such is immune to such attacks. For information on 3DES, see Rule [[[.
+          Today, there are still some varients of DES that see application: notably, 3DES, which was used in Firefox until 2021. While the original DES, as developed in 1974, is unsecure from Brute-Force attacks due to its short key-length (56 bits), 3DES has a very long key, and as such is immune to such attacks. For information on 3DES, see Rule 56.
           
           </div><br><br><br>
           
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/FeistelNetworkDiag.png" class="imglink"><img src="/cryptography/img/FeistelNetworkDiag.png" alt="A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key. On the right hand side is the key schedule, described in Rule 51." width=78%/></a></div>
         	    <span class="tiny"><em>A diagram of an individual round of the DES-specific optimized version of the Feistel Network, complete with a representation of how the subkey is formed from a transform of the main key. On the right hand side is the key schedule, described in Rule 51.</em></span><br><br>
         
-        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES ([[[[[) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. See Rule [[[ for information regarding the brute-forcing of DES. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule 51, step 4 for why that is. Additionally, see Rule 51, step 1 for why DES is 56 bits.
+        The key-length of DES is 56 bits (and thus has a keyspace of only 2^56 under the relation given in Rule 6) and highly crackable, and so it is not in popular use today - it has been largely replaced by other ciphers with longer keys, such as 3DES (Rule 56) and AES ([[[[[). Still, it remains useful and neccesary to study the design of DES, which is modern Cryptography in its embryonic state. See Rule 55 for information regarding the brute-forcing of DES and its feasibility. The subkeys used in each round of the DES Feistel Network are only 48 bits each - see Rule 51, step 4 for why that is. Additionally, see Rule 51, step 1 for why DES is 56 bits.
         <!--According to Cryptography Section IV, Subsection IV.III, Rule 54, step 1....
         This is perfect. This is everything I've ever wanted.-->
         
@@ -392,8 +392,8 @@ document.addEventListener("DOMContentLoaded", function (){
         The <strong>Compression Algorithm</strong> works as follows: Since each table accepts 6 bits, which are read in their combined, binary form, the table is simply taking the given 6-bit value (0-63) and replacing it with a 4-bit value (0-15). The chosen 4-bit replacement value for each possible 6-bit value is assigned according to a predetermined substitution table. For information as to what exact criteria the S-boxes were designed with in mind, see the relevant "Design of DES S-Boxes" blue section below.<br><br>
         
         Note that <STRONG>EACH</STRONG> S-box, S<sub>1</sub> through S<sub>8</sub>, has its own, individual, substitution table. While the S<sub>1</sub> table is shown below, the rest of the tables can be found on page 3 of <a href="https://web.archive.org/web/20250724032842id_/https://ece.uprm.edu/~noack/crypto/textslides/109678-0136024858_ppt/StallingsPPT_0136024858/Tables/T03-Vertical.pdf">this document here</a>.<br><br>
-        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png" class="imglink"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof." width=62%/></a></div>
-  	    <span class="tiny"><em>The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof.</em></span><br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/cryptography/img/S1BoxTable.png" class="imglink"><img src="/cryptography/img/S1BoxTable.png" alt="The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof (see 'Design of DES S-Boxes')." width=62%/></a></div>
+  	    <span class="tiny"><em>The specific, exact table used in the first S-Box to replace the 6 bit string with a (max) 4 bit one. Chosen by IBM & the NSA to be differential cryptanalysis-proof (see "Design of DES S-Boxes").</em></span><br><br>
   
         In order to read the table, you must take the 6-bit value and examine it as follows:<br><br>
         For the <strong>Column Select</strong>, take the middle 4 values (the internal, non-edge values) and find their individual value in binary, separate from the rest of the string. This will give you a value 0-15.<br><br>
@@ -626,6 +626,104 @@ document.addEventListener("DOMContentLoaded", function (){
         In order for the subkeys to match up <em>every single time</em> during the reverse generation, the rounds in which the tranches are shifted by one bit rightward instead of two bits rightward must be perfectly calibrated. As known from the regular key schedule, only rounds 1, 2, 9, & 16 have their bits shifted by only one placement (see Rule 51, step 3). However, that is looking at the rounds going in the direction of the encryption. Going in the direction of the <em>decryption</em>, i.e. generating the subkeys backwards, accounts for these special rounds relative to their position in the reversed key schedule: Since, as explained before (and as shown in the illustration), there is no rotation before the very first subkey tranche, the key is not rotated whatsoever in decryption round 1 (transform 16). The rest of the information remains the same - <strong>the subkey tranches are rotated rightward by one place on rounds 2, 9, & 16 (<u>not transforms, <em>rounds</em></u>) and is rotated by two places on all other rounds except 1</strong>.
         
         </div><br><br><br>
+        
+        <!--oh my god I am only doing short Rules from now on. this has been hell.-->
+        
+        
+        
+        
+        
+        </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="DESAttacks">IV.IV Attacking DES.</span></h3>
+	    </header>
+	    <article>
+        
+        
+        
+        <strong><font color="blue"><a href="#AttacksIntro"><span class="mw-headline" id="AttacksIntro">#</span></a> Attacks Intro:</font></strong><br><br>
+        The art of Attacking DES is a cherished pastime in Cryptography. An untold number of manhours was dedicated to pushing DES into obsolescence, into proving it had some security lapse or flaw that would render it unsecure for general usage.<br><br>
+
+        As shown in Fig. 2. (Subsection I.IV), the two main families of attacks in Classical Cryptanalysis are Brute-Force Attacks (Rule 8), which perform a simple exhaustive keysearch, and Analytical Attacks (Rule 9), which more intelligently analyzes the cipher for a weakness that would allow the plaintext to be cracked faster than brute-force.<br><br>
+        
+        Attacks from both families (though mainly advances in brute-forcing capabilities) would decapitate DES before the turn of the millenium, and fostered entirely new forms of Cryptanalysis that had widespread implications across the entire field of Cryptography. Details about how these two types of attacks were levied against DES can be found in Rule 54 & Rule 55, respectively.
+        
+      <br><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>DES Analytical Attacks</strong>:<br><br>
+        
+        In 1990, decades after DES became the Cryptographic standard for the NSA (see Rule 47), a paper was published by two Israeli scientists detailing <strong>Differential Cryptanalysis</strong>, a new form of cryptanalysis that could be applied to any block cipher (see Rule [[[ for an in-depth treatment of the attack). However, it was discovered that DES, and in particular the supposedly arbitrarily chosen permutation tables of the S-boxes (see "Design of DES S-Boxes"), was specifically designed to be resistant to differential cryptanalysis, as researchers at IBM had discovered the attack decades before and had already factored protection against it into the design of DES. Thus, though DES-like ciphers with Feistel Networks could be attacked and destroyed using differential cryptanalysis, DES was still secure.<br><br>
+
+          The foresight of protecting DES against this attack staved off the irrelevancy of DES for another seven years (1991-1998), at which point it was superseded by 3DES (see 56) and later by AES (see [[[).<br><br>
+          
+          Differential Cryptanalysis and all other analytical attacks devised against DES amounted to little more than slightly improved brute-force techniques. For Brute-Force, the attacker would need to scan through 2^56 keys in order to find a plaintext. For Differential Cryptanalysis, the attacker would only need <strong>2^47</strong> plaintext-ciphertext pairs in a chosen plaintext attack (see definition, Subsection I.V) to find a single key.<br><br>
+          
+          A later advancement by the name of <strong>Linear Cryptanalysis</strong> (described in detail in Rule [[[) fared only slightly better, reducing the number of plaintext-ciphertext pairs to <strong>2^43</strong>.<br><br>
+          
+          Both of these attacks are extremely modest improvements over sheer brute-force, and are still wholly impractical for the purposes of any actual attacker because they requires trillion of known plaintexts and ciphertexts for a single key, and if the key is ever changed before obtaining 2^47 or 2^43 pairs, then the process has to restart.<br><br>
+          
+          Note that although neither differential nor linear cryptanalysis posed a significant threat to DES, they totally destroyed other block ciphers, like FEAL (see [[[) and GDES (see [[[), and as a whole created a much more secure and technically advanced field.
+        
+        </div><br><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Brute-Forcing DES</strong>:<br><br>
+
+        <strong><u>Mathematical Definition</u></strong>:<br><br>
+        
+        <em>
+          i ∈ <strong>ℤ</strong><sub>2<sup>56</sup></sub><br><br>
+  
+          Let (x, y) denote a plaintext/ciphertext pair, and let K = {k<sub>0</sub> ,..., k<sub>2<sup>56</sup> - 1</sub>} be the keyspace of all possible keys k<sub>i</sub>. A brute-force attack now checks for every k<sub>i</sub> ∈ K whether <strong>DES<sup>-1</suP><sub>k<sub>i</sub></sub>(y) == x</strong>.<br><br>
+          
+          If the equality holds, a possible correct key is found; if not, proceed with the next key.
+          </em>
+        <br><br><br>
+        
+        <strong><u>Explanation:</u></strong><br><br>
+  
+        Because the key-length of DES is 56-bits (for reasons described in Rule 51, step 1), then as a result of the key-length/keyspace relationship described in Rule 6, the keyspace of DES is 2^56 keys. As should be evident, the given mathematical definition is just the original Brute-Force definition given in Rule 8 altered to fit the particulars of DES (DES⁻¹ representing the decryption function of DES).<br><br>
+        
+        While the mathematics behind brute-forcing DES are fairly straightforward, the actual application it is much more difficult: in order to compute every possible key in the keyspace, a huge amount of processing power must be dedicated to performing such a number of key tests, which the computers of the '80s and early '90s were not equipped to do (even the NSA). 
+        
+        However, there is no greater example of the relevance of Moore’s Law (see definition, Subsection I.IV) to Cryptography than the case of DES. After DES was first invented in 1977, the computing powers and processing capabilities of computer hardware only grew and became more affordable, until it reached the point in 1998 where it became not only economically feasible for an independent civilian organization to crack DES, but to do so in a manner of days.<br><br>
+        
+        DES was murdered in cold blood by the Electronic Frontier Foundation on July 15, 1998. Using a budget of $250,000, the EFF built the <strong>Deep Crack</strong> machine, which performed the given brute-force attack on DES (combing though all 72 quadrillion possible keys) in under 56 hours. From this point onward, it was clear that DES was no longer the secure, universal standard that it had once been. In 1999, it was replaced by 3DES (see 56) as the federal standard, which itself was replaced with AES (see [[[) in 2002.
+        
+        </div><br><br>
+        
+        
+        
+        
+        </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="3DES">IV.V 3DES.</span></h3>
+	    </header>
+	    <article>
+        <!--I only think that it will take one Rule and maybe a few definitions to get a full summary of 3DES out. I looked it over, I think that it would really just be a bunch of referencers to DES on top of a small amount of new material explaining what makes 3DES unique. Either way, I'm busy doing things that matter one day - but I shall return, one day, eventually. [[[.-->
+        <!--Also, I just kind of wanted to clear up all the ugly brackets referencing this Rule (5, to be exact). I'll still the see the brackets for it here when I go looking through what needs to be accomplished, but that is just goals for the future, clearing up every single bracket everywhere. It is low priority-->
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">C. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>3DES</strong>:<br><br>
+        
+        <!--DES's rump replacement, capturing only a fraction of the ubiquity that DES once had.<br>
+        
+        Most simply, 3DES is just DES performed 3 times over. Like how DES uses 16 rounds of the Feistel Network, 3DES uses 3 rounds of DES (and thus 48 rounds of the Feistel Network), tripling the length of the key.-->
+        
+        [[[[[Reserved for Future Usage. If additional rules are needed, then the <a href="/information/color.html#WoO">WoO system</a> will be used.[[[[[<br><br>
+  	  
+        	  [[[[[To be completed at a later date. I have determined this topic: <strong>"3DES"</strong>, to be non-essential to the learning and understanding of the major fundamentals of <strong>Cryptography</strong>, and so it has been placed in the <a href="/_other/register.txt">low-priority learning register</a>.[[[[[
+        </div><br>
 	  
 	    </article>
 	  </div>
@@ -661,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong>Block Ciphers: Intro & DES</strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 4 2025</span><br>
+      	<span class="tiny">Last Change: August 5 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

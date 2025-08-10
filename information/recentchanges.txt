@@ -3,6 +3,14 @@ CHANGE LOG.
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
 
+August 9, 2025: I updated the links bar for probably the first time this year. I added two link aggregators that I've used for a few years, and that may be of interest to the more internet-inclined users. Furthermore, I added links on every "Art by Shoaib Pasha" label underneath each logo to redirect users to the complete art page.
+
+August 8, 2025: Cryptography work. A sizable amount of work was done in the Galois Fields section.
+
+August 7, 2025: A small amount of work in the Galois fields section of Block Ciphers in Cryptography.
+
+August 6, 2025: Minimal work: I was out on business most of the day. A small amount of Cryptography revision was performed.
+
 August 5, 2025: Further Cryptography work, alongside the addition of a reserved Rule for 3DES.
 Rules Added: Cryptography, Symmetric Cryptography - Rule 54, 55, 56.
 

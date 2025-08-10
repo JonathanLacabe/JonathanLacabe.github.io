@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 <img src="/_other/logos/Symmetric_Encryption.png" width=36%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
-      	<span><em>Art by Shoaib Pasha.</em></span><hr>
+      	<span><em><a href="/information/art.html">Art by Shoaib Pasha.</a></em></span><hr>
       </header>
 
       <div class="inner">
@@ -796,15 +796,26 @@ document.addEventListener("DOMContentLoaded", function (){
     	    <h2><span class="mw-headline" id="BlockCiphersAES">V. Block Ciphers: AES.</span></h2>
     	    <h3><span class="mw-headline" id="GaloisFields">V.I Galois Fields.</span></h3>
     	  </header>
-    	  <article><br>
+    	  <article>
     	  
     	  
     	  
+    	  <strong><font color="blue"><a href="#GaloisJustification"><span class="mw-headline" id="GaloisJustification">#</span></a> Justification for Galois Theory:</font></strong><br><br>
+        The AES is the most important Cryptographic cipher in the world, but before it can be discussed at depth, the beginning Cryptographer must be initiated into the prerequisite Galois Theory.<br><br>
+        <!--capitalize when referring to the learner, the promise they show, lowerfase in all other cases-->
+        
+        Galois Theory is a mathematical discipline of Abstract Algebra, which is also the field where previously discussed concepts like Rings (see Subsection II.III) come from. Inherent to the intricacies of AES is Galois Theory, as demonstrated in Rule [[[ & Rule [[[.<!--maybe there are multiple Rules, maybe there aren't--><br><br>
+        
+        While Galois Theory is also described in greater detail in Abstract Algebra Section [[[[ (described as a part of a greater mathematical curriculum), in the following subsection only the attributes of Galois Theory most relevant to Cryptography (alongside a general introduction) will be presented, as to not burden the reader with learning Abstract Algebra material that may not even be relevant to the confines of a Crypography course (though the reader should always strive to learn it at some point).
+        
+        <br><br><br><br>
     	  
     	  
+    	  <strong><a href="#BinaryOperationDef"><span class="mw-headline" id="BinaryOperationDef">#</span></a> <font color="#006400">Binary Operation</font></strong>: A binary operation is the simplification of all generic mathematical operations (addition, subtraction, multiplication, etc.) into their most rudimentary form: two elements (known as operands) are combined in some way to form another element. Binary Operations are commonly represented using the '<strong>∘</strong>' character: <strong>a ∘ b = c</strong>.<br><br>
     	  
-    	  
-    	  
+    	  Inherently, any binary operation performed upon two operands within a set will produce another element also within the set. This is the basis behind Modular Arithmetic and Integer Rings, as detailed in Subsections II.II and II.III, as well as Groups and Fields as defined below.
+
+    	    <br><br><br><br>
     	  
     	  
     	  
@@ -820,8 +831,30 @@ document.addEventListener("DOMContentLoaded", function (){
   	    </header>
   	    <article>
     	  
+    	  <!--
     	  
     	  
+    	  AES is not only the most used block cipher, but the most used symmetric cipher (i.e. across all of the Sections I to [[[) in the world. It is the modern DES (see [[[), with the same universal application and level of examination for possible weaknesses. It remains that no known attack has been able to improve upon brute-force.<br><br>
+    	  
+        Galoisian Warning
+
+        All internal operations of AES are based on finite fields. This unique mathematical concept is described in detail in Subsection V.I, and it is highly reccomended that the reader obtain a good understanding of the core tenets of Galois Theory before continuing.
+
+    	  
+    	  -->
+    	  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
 	  <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   
@@ -849,18 +882,22 @@ document.addEventListener("DOMContentLoaded", function (){
 	<div class="General links">
 		links
 		<hr>
-		Programming<br>
+		<strong>Programming</strong><br>
 		<a href="https://www.youtube.com/watch?v=8jLOx1hD3_o">Short C++ Tutorial</a><br>
 		<a href="https://codeforces.com/blog/entry/125639">Code</a><a href="https://www.youtube.com/@tmwilliamlin168/videos">forces</a><br>
 		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP">Arduino Tutorial</a><br>
 		<a href="https://www.youtube.com/playlist?list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5">MicroPython</a><br>
 		<a href="https://matplotlib.org/cheatsheets/">2D Python Plots</a><br><br>
-		MIDI<br>
+		<strong>MIDI</strong><br>
 		<a href="https://www.anvilstudio.com/">Anvil Studio</a><br>
 		<a href="https://meme.institute/gxscc/">GXSCC</a><br><br>
-		Physics<br>
+		<strong>Physics</strong><br>
 		<a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Feynman Lectures</a><br>
-		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br>
+		<a href="https://www.youtube.com/@FlippingPhysics/playlists">Physics Intro.</a><br><br>
+		<strong>Aggregators</strong><br>
+		<a href="https://news.ycombinator.com/news">Hacker News</a><br>
+		<a href="https://webcurios.co.uk/all-curios/">Web Curios</a><br>
+		<a href="https://waxy.org/category/links/">Waxy</a><br>
 		<hr>
 		<a href="https://ocw.mit.edu/" class="imglink"><img src="/_other/ocw_logo_orange.202255b67af1a72a1f52.png" width=90%></a>
 		<a href="https://www.eff.org/issues/innovation" class="imglink"><img src="/_other/eff.png" width=90%></a>
@@ -876,7 +913,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/cryptography/symmetric/intro.html">Introductions</a></strong> → <strong><a href="/cryptography/symmetric/historical.html">Historical Ciphers & Modular Arithmetic</a></strong> → <strong><a href="/cryptography/symmetric/stream.html">Stream Ciphers</a></strong> → <strong><a href="/cryptography/symmetric/block.html">Block Ciphers: Intro & DES</a></strong><br> → <strong><a href="/cryptography/symmetric/block2.html">Block Ciphers: AES</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 5 2025</span><br>
+      	<span class="tiny">Last Change: August 9 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2025</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

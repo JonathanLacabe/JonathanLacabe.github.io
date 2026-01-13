@@ -2,6 +2,7 @@ CHANGE LOG.
 
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
+January 12, 2026: RESURRECTION: It has been some time! My college applications have concluded and I now have the ability to dedicate my creative energies to this project once more. My focus will remain on Cryptography, of course, though I intend to undertake revisals of Physics and Mathematics... eventually. Physics has only been fully revised up to the 2nd Section, while the state of Mathematics leaves much to be desired. As for what was done today, I updated all the pages to reflect the New Year, and updated that terrible photo of me in the FAQ with a better one.
 
 August 9, 2025: I updated the links bar for probably the first time this year. I added two link aggregators that I've used for a few years, and that may be of interest to the more internet-inclined users. Furthermore, I added links on every "Art by Shoaib Pasha" label underneath each logo to redirect users to the complete art page.
 

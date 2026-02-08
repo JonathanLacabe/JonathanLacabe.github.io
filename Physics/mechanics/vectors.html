@@ -134,52 +134,93 @@ document.addEventListener("DOMContentLoaded", function (){
 	  </header>
 	  <article>
 	  
-	    <strong><a href="#VectorDef"><span class="mw-headline" id="VectorDef">#</span></a> <font color="#006400">Vector</font></strong>: A quantity with both magnitude & direction. Examples include Displacement, Velocity, Acceleration, Force, Torque, Momentum. Vectors cannot be negative - their magnitude must always be positive by the virtue of their existence. Their direction is what can make them seem 'negative', meaning that they are in the opposite direction of another vector, potentially resulting in a smaller resultant vector (see Rule 16). It is all relative.
-	    <br><br>
+	    <strong><a href="#VectorDef"><span class="mw-headline" id="VectorDef">#</span></a> <font color="#006400">Vector</font></strong>: A quantity with both magnitude & direction. Examples include displacement, velocity, acceleration, force, torque, and momentum. Graphically, vectors can be represented as arrows, using their magnitude as length and their direction as direction - see Rule 17 for an example. Mathematically, vectors are represented by writing an arrow over a variable: <span class="vecteur"><strong>x</strong></span>, <span class="vecteur"><strong>y</strong></span>, <span class="vecteur"><strong>z</strong></span>.<br><br>
 	    
-	    <strong><a href="#ScalarDef"><span class="mw-headline" id="ScalarDef">#</span></a> <font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density. Inherently, every magnitude is a scalar.
-	    <br><br><br>
+	    A vector's value must be written to convey magnitude & direction as concisely as possible. For example, a velocity vector can be written as <span class="vecteur"><strong>v</strong></span> = 12 m/s @ 25.0° <strong>E</strong> of <strong>N</strong>. See Rule 16 for how to read cardinal directions.<br><br>
+	    
+	    <u>The magnitude of a vector is always positive</u>. If a vector value has a negative sign, like -23 m/s NW, it does not literally mean a negative magnitude, but instead movement in a direction opposite to the indicated direction. While a vector <em>itself</em> cannot be negative, its directional inverse can be construed as such, given that its main direction is arbitrarily chosen to be the "positive" direction. <!-- A vector can be <em>relatively</em> "negative" if its direction is opposite to an arbitrarily chosen "positive" direction. --><br><br>
+	    
+	    An important perspective to hold when working with vectors is that all directions are created equal - there is no 'correct' direction, only relativeness. Direction supersedes negativity. This concept is how Vector Subtraction works, detailed in a blue-section below.<br><br><br><br>
+	     
+	     
+	    <strong><a href="#ScalarDef"><span class="mw-headline" id="ScalarDef">#</span></a> <font color="#006400">Scalar</font></strong>: A quantity that has magnitude only. Examples include distance, speed, time, volume, and density. Unlike vectors, no special symbol is needed to denote a scalar.<br><br>
+	    
+	    Inherently, <strong>every magnitude is a scalar</strong>. Note, however, that the term "Scalar" is not interchangeable with "magnitude", because scalar is used as a <em>type/category</em> denotation (in the same fashion as vectors), rather than an attribute of the quantity itself. For example, time is a scalar, and the magnitude of time can be something like 12.5 seconds. Finding the "scalar" of time is nonstand nonsense.
+	    <br><br><br><br>
+	    
+	    <!--~{~{~LINE OF [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[BELOW IS UNREVIS3ED[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[~__~_~_~_~;~P:~{~::~-->
+	    
 	    
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> Introductory <strong>Tip-to-Tail Vector Addition</strong>:<br>
-	    Vector addition is not simply adding the magnitude of the vectors together, but using the pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip. This tells you the <strong>resultant vector</strong>.<br><br> If the vectors are in perfect cardinal direction, as is the example below, then of course pythagorean theorem can be quickly applied. Otherwise, using vector decomposition (see Rule 18) is the easiest way to create a right triangle for use in the pythagorean theorem, unless you want to use the Law of Cosines.<br>
-	    Here are two vectors utilizing the vector symbols:<br><br>
+        </strong> <strong>Cardinal Directions:</strong><br><Br>
+        
+        Cardinal Directions, superimposed over a graph as shown below, are the most commonly used means of describing the direction of a vector. This  use absolute directions in relation to one another to create a more exact direction, known as <strong>directional concatenation</strong>.<bR>
+	    
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/angles2.png" class="imglink"><img src="/Physics/img/vectors/angles2.png" alt="A graph with the cardinal directions at 45° filled in." width=30%/></a></div>
+	    <span class="tiny"><em>A graph with the cardinal directions at 45° filled in.</em></span><br><br>
+	    
+	    
+	    Using this format, an example vector's direction can be described as 25.0° <strong>E</strong> of <strong>N</strong>.<!-- 
+	    
+	    Additionally, the cardinal directions at perfect 45° angles would be as follows:<br>
+	    
+	    
+	    The graph above als
+	    -->
+	    
+	    <!--When reading cardinal directions, start at the absolute direction of the second value, North (+y) in this case; from that starting direction and the origin, create a 25 degree angle by moving in the direction of the first value to create a second line. This second line will be the the direction of the vector, as shown below.-->
+	    <!--
+	    "NW, NE, SW, SE". However, these directions are only to be used when a vector is <em>exactly</em> in that direction. Directional concatenation using these half-angles, like "12o E of NE" is irregular nonstand balderdash--><!--I lowkey just like using words-->.
+	    
+	    <!--
+	    Although it is convention to limit an angle to 45o in any direction   (for  example, using 44o W of N instead of 46o N of W), it is possible to see questions<!--and online textbook writers--><!-- that ignore this convention altogether and do whatever they want. You should not bend to their idiocratic influence: abide by the &lt;45o convention for the simplicity of reviewing your own work, and for the ease of whoever is grading you, if you are in school.-->
+	    </div><br><br><br>
+	    
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">P. Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Introductory Tip-to-Tail Vector Addition</strong>:<br><br>
+	    When adding magnitudes, like five kilograms and then another five kilograms, the process is a simple summation: 10 kilograms. However, because vectors incorporate direction, <em>vector</em> addition is not simply adding the magnitude of the vectors together. Instead, the process of vector addition entails using the Pythagorean theorem to find the line that connects the given vectors when they are placed tail-to-tip on a graph. This tells you the <strong>resultant vector</strong>.<br><br> 
+	    
+	    The '<strong>tip-to-tail</strong>' aspect pertains to how the vectors are placed on a graph, and is purely done for the benefit of visualization. The vectors can be placed tail-to-tip with either vector being the tail/tip; etiher way produces the same resultant vector.<br><br>
+	    
+	    If the vectors are in perfect cardinal directions, as in the example below, then the vectors are already in a right-triangle format and the Pythagorean theorem can be quickly applied to find the magnitude. Otherwise, "vector decomposition" (see Rule 18) must be performed to create a right triangle for use in the Pythagorean theorem, unless you want to use the Law of Cosines. Either way, trigonometry must be performed afterward to find the angle of the resultant vector.<br><br><br>
+	    
 	    <span class="vecteur"><strong>A</strong></span> = 49 (mm/s) North<br>
 	    <span class="vecteur"><strong>B</strong></span> = 42 (mm/s) East <br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/firstone.gif" class="imglink"><img src="/Physics/img/vectors/firstone.gif" alt="An empty graph with two vectors being added and their resultant vector." width=30%/></a></div>
-	    In order to solve for the resultant vector, some geometry would need to be performed:<br>
-	    a² + b² = c²<br>
-	    <span class="vecteur"><strong>C</strong></span>² = <span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²<br>
-	    ||<span class="vecteur"><strong>C</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;"><span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²</span></span><br>
-	    ||<span class="vecteur"><strong>C</strong></span>|| = 65 mm/s.<br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/addition.png" class="imglink"><img src="/Physics/img/vectors/addition.png" alt="An empty graph with two vectors being added and their resultant vector." width=30%/></a></div>
+	    In order to add these vectors and solve for the resultant vector, some geometry needs to be performed:<br>
+	    <span class="vecteur"><strong>R</strong></span>² = <span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²<br>
+	    ||<span class="vecteur"><strong>R</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;"><span class="vecteur"><strong>A</strong></span>² + <span class="vecteur"><strong>B</strong></span>²</span></span><br>
+	    ||<span class="vecteur"><strong>R</strong></span>|| = 65 mm/s.<br><br>
 	    Since a vector has direction, we need to find it trigonometrically:<br>
 	    tanθ = (O / A) = (<span class="vecteur"><strong>B</strong></span> / <span class="vecteur"><strong>A</strong></span>) = (42 / 49)<br>
-	    θ = tan⁻¹(42/49) = 40.601° = East of North (see Rule 17).<br>
-	    Thus, the object is moving at a resultant vector of 65 mm/s East of North.
-	    </div><br><br>
+	    θ = tan⁻¹(42/49) = 40.601°<br><br>
+	    
+	    Since the angle found is on the inside of the triangle, between <span class="vecteur"><strong>A</strong></span> and <span class="vecteur"><strong>R</strong></span>, the cardinal direction (see Rule 16) can be established as East of North.<br><br>
+	    <strong><span class="vecteur">R</span> = 65 mm/s @ 40.601° E of N</strong>
+	    </div><br><br><br>
+	    
+	    <!--When performing vector operations, as will be described in Rules [[[[+, you may find the described vectors floating on the graph, detached from the x or y-axes. This is fine and occassionally necessary, such as when the vectors point exactly in a cardinal direction (like the north and east vectors shown in rule [[[), which would overlap with the axes if placed starting at the origin. Just know that any angle found for the resultant vector is relative to x or y-axes when described using cardinal directions. Unless told otherwise, assume every vector (after addition/subtraction and independent from every other vector) starts at the origin, essentially.-->
+	    
+	    <!--It is always a wise move to draw out a graph when a problem asks you to adding or subtracting vectors so that you know what you are dealing with. Note that these concepts will come up constantly outside of a perfect graphical environment, and that the junior physicist must be prepared to recognize vectors in the wild and to know how to add, subtract, and multiply them without the gracious assistance of a graph being spoonfed to you by the problem. Questions may hide t of a 'tip-to-tail' -->
 	    
 	    
-	    <strong><font color="blue"><a href="#VectorSubtraction"><span class="mw-headline" id="VectorSubtraction">#</span></a> Vector subtraction:</font></strong><br>
+	    <!--Why is it a blue section? My past self decided so, and I don't feel fit to argue with the old man.-->
+	    <strong><font color="blue"><a href="#VectorSubtraction"><span class="mw-headline" id="VectorSubtraction">#</span></a> Vector Subtraction:</font></strong><br>
 	    Vector subtraction is similar to addition. <span class="vecteur"><strong>A</strong></span> - <span class="vecteur"><strong>B</strong></span> = <span class="vecteur"><strong>A</strong></span> + (-<span class="vecteur"><strong>B</strong></span>). Thus, all that would need to be done for vector subtraction is to put <span class="vecteur"><strong>B</strong></span> in the opposite direction and discover the resultant vector from there. This, indeed, can be a different resultant vector from vector addition - gander:
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/subtraction.png" class="imglink"><img src="/Physics/img/vectors/subtraction.png" alt="An illustration of the differences between vector addition and subtraction. Courtesy of Sciencing." width=40%/></a></div>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/subtraction.jpg" class="imglink"><img src="/Physics/img/vectors/subtraction.jpg" alt="An illustration of the differences between vector addition and subtraction. Courtesy of Sciencing." width=40%/></a></div>
 	    <span class="tiny"><em>An illustration of the differences between vector addition and subtraction. Courtesy of <a href="https://sciencing.com/how-to-add-subtract-vectors-w-diagrams-13720223.html">Sciencing</a>.</em></span>
 	    <br><br>
 	    <br><br>
 	    
-	    <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> Cardinal directions in Vectors are as follows:<br>
 	    
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/cardinaldirections.png" class="imglink"><img src="/Physics/img/vectors/cardinaldirections.png" alt="A graph with most of the cardinal directions of vectors filled in. Courtesy of Flipping Physics." width=30%/></a></div>
-	    <span class="tiny"><em>A graph with most of the cardinal directions of vectors filled in. Courtesy of <a href="https://www.flippingphysics.com/cardinal-directions.html">Flipping Physics</a>.</em></span><br><br>
 	    
-	    Additionally, the cardinal directions at perfect 45° angles would be as follows:<br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/angles.png" class="imglink"><img src="/Physics/img/vectors/angles.png" alt="A graph with the cardinal directions at 45° filled in." width=30%/></a></div>
-	    <span class="tiny"><em>A graph with the cardinal directions at 45° filled in.</em></span><br><br>
-	    </div><br>
+	    
 	    
 	    
 	    <div class="rule"><strong>
@@ -196,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <br><br>sinθ = (O / H) = (<span class="vecteur"><strong>d<sub>y</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>y</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>sinθ = 90sin(32) = 47.693 ≈ 48cm.<br><br>
 	    
 	    cosθ = (A / H) = (<span class="vecteur"><strong>d<sub>x</sub></strong></span> / <span class="vecteur"><strong>d</strong></span>)<br><span class="vecteur"><strong>d<sub>x</sub></strong></span> = <span class="vecteur"><strong>d</strong></span>cosθ = 90cos(32) = 76.324 ≈ 76cm.<br><br>
-	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.<br><br> The COMPONENTS of a VECTOR are <strong>ALSO VECTORS</strong>. There are just in a single direction, represented in unit vectors like so: [0i&#x302; + 5j&#x302;] or [5i&#x302; + 0j&#x302;] (see Rule 20).
+	    Decomposing a vector is also called "breaking" or "resolving" the vector. The information of the original vector can be derived from the component vectors as well, using inverse tangent and the Pythagorean theorem, known as 'recomposition'. If you are having problems with re-forming the resultant vector from the component vectors, remember that the resultant vector can be represented as the diagonals of a rectangle that has the components as its sides. This will strongly help with visualization.<br><br> The COMPONENTS of a VECTOR are <strong>ALSO VECTORS</strong>. There are just in a single direction, represented in unit vectors like so: [0i&#x302; + 5j&#x302;] or [5i&#x302; + 0j&#x302;] (see Rule 20).
 	    
 	    </div><br><br>
 	    
@@ -213,8 +254,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	    <span class="tiny"><em>The initial vector, going from 60 cm West, to 50 cm North, to 40 cm SouthWest.</em></span><br><br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector2.gif" class="imglink"><img src="/Physics/img/vectors/vector2.gif" alt="Through the transposition of the associative property, two sides of the right triangle (of which the hypotenuse is displacement) have been found in terms of vector decompositions." width=30%/></a></div>
 	    <span class="tiny"><em>Through the transposition of the associative property, two sides of the right triangle (of which the hypotenuse is displacement) have been found in terms of vector decompositions.</em></span><br><br>
-	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector3.gif" class="imglink"><img src="/Physics/img/vectors/vector3.gif" alt="The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the pythagorean theorem." width=30%/></a></div>
-	    <span class="tiny"><em>The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the pythagorean theorem.</em></span><br><br>
+	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/vector3.gif" class="imglink"><img src="/Physics/img/vectors/vector3.gif" alt="The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the Pythagorean theorem." width=30%/></a></div>
+	    <span class="tiny"><em>The two decomposed vector variables have been replaced with their values found through trigonometry. Now, all that would need to be done to find the displacement is the Pythagorean theorem.</em></span><br><br>
     <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  the roof is &#x302;   -->
 	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up.-->
 	    </div><br>
@@ -248,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function (){
   	    
   	    ∆<span class="vecteur"><strong>r</strong></span> = <span class="vecteur"><strong>r<sub>2</sub></strong></span> - <span class="vecteur"><strong>r<sub>1</sub></strong></span>
   	    <br><br>
-  	    You do not need to move either of the original vectors to find the distance between them - you simply need to create a new vector that bridges their endpoints. Then, find the length of that vector by using the pythagorean strategies taught before - see Rule 17 and Rule 18. The vectors may look similar to this:<br><br>
+  	    You do not need to move either of the original vectors to find the distance between them - you simply need to create a new vector that bridges their endpoints. Then, find the length of that vector by using the Pythagorean strategies taught before - see Rule 17 and Rule 18. The vectors may look similar to this:<br><br>
   	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/pablo1.png" class="imglink"><img src="/Physics/img/vectors/pablo1.png" alt="A graph with two vectors with no other information." width=18%/></a></div>
   	    <span class="tiny"><em>A graph with two vectors with no other information. Courtesy of <a href="https://www.flippingphysics.com/r-position-velocity-acceleration.html">Flipping Physics</a>.</em></span><br><br>
   	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/PABLO2.png" class="imglink"><img src="/Physics/img/vectors/PABLO2.png" alt="A graph with two vectors with no other information, except now with the connecting vector created." width=18%/></a></div>
@@ -289,6 +330,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <span class="vecteur"><strong>&#916;r</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>v</strong></span><sub>average</sub> & <strong>d<span class="vecteur">r</span></strong>/dt = <span class="vecteur"><strong>v</strong></span><sub>instantaneous</sub><br>
         <span class="vecteur"><strong>&#916;v</strong></span>/<strong>&#916;t</strong> = <span class="vecteur"><strong>a</strong></span><sub>average</sub> & <strong>d<span class="vecteur">v</span></strong>/dt = <span class="vecteur"><strong>a</strong></span><sub>instantaneous</sub>
         </div><br><br>
+        
+        
+        
+        
 
 
 
@@ -309,138 +354,138 @@ document.addEventListener("DOMContentLoaded", function (){
 	    If you were to rotate the axes (but not the vector <span class="vecteur"><strong>a</strong></span>)  through an angle ϕ as shown below, the components would have new values, <span class="vecteur"><strong>a'<sub>x</sub></strong></span> and <span class="vecteur"><strong>a'<sub>y</sub></strong></span>. Since there are an infinite number of choices of ϕ, there are an infinite number of different pairs of components for <span class="vecteur"><strong>a</strong></span>:<br>
 	    <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/tiltedvector.png" class="imglink"><img src="/Physics/img/vectors/tiltedvector.png" alt="The coordinate axes of vector a having been tilted and afforded new component vectors." width=36%/></a></div>
 	    <span class="tiny"><em>The coordinate axes of vector <span class="vecteur"><strong>a</strong></span> having been tilted and afforded new component vectors.</em></span><br><br>
-||<span class="vecteur"><strong>a</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(<span class="vecteur"><strong>aₓ</strong></span>)² + (<span class="vecteur"><strong>aᵧ</strong></span>)²</span></span><br><br>
-||<span class="vecteur"><strong>a</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(<span class="vecteur"><strong>a'ₓ</strong></span>)² + (<span class="vecteur"><strong>a'ᵧ</strong></span>)²</span></span><br><br>
-Also,<br><br>
-θ = θ′ + ϕ<br><br>The relations among vector do not depend on the location of the origin nor on the orientation of the axes.
-	    <br><br><br>
-	    <h3><a href="#VectorMultiply"><span class="mw-headline" id="VectorMultiply">#</span></a> <strong>==Multiplying Vectors==</strong></h3>
-
-There are three types of vector muliplication. The first type is multiplying a vector by a scalar, which gives a vector. The other two multiply a vector by a vector, of which you have two choices: Taking the 'dot product' of two vectors gives a scalar answer, while taking the 'cross product' gives a new vector that is perpendicular to the original two, the direction of which can be determined using the right-hand rule.<br><br>
-The best way to understand the difference between dot product and cross product beyond their scalar/vector nature is to consider when their products are minimized or maximized (described in each section). As a simple memorization tool, always remember that <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>a</strong></span> = (|<span class="vecteur"><strong>a</strong></span>|)², or the magnitude of <span class="vecteur"><strong>a</strong></span> squared, while <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>a</strong></span> = 0. The reasons for this are obvious once you analyze each multiplication tool in full.<br> 
-<br><br>
-
-<strong><font color="blue"><a href="#VectorMultiplyScalar"><span class="mw-headline" id="VectorMultiplyScalar">#</span></a> Multiplying a Vector by a Scalar:</font></strong><br><br>
-The product of the scalar <em>s</em> and a vector <span class="vecteur"><strong>v</strong></span> is a new vector whose magnitude is sv, and whose direction is the same as that of <span class="vecteur"><strong>v</strong></span> if <em>s</em> is positive, and opposite that of <span class="vecteur"><strong>v</strong></span> if <em>s</em> is negative. To divide <span class="vecteur"><strong>v</strong></span> by <em>s</em>, multiply <span class="vecteur"><strong>v</strong></span> by 1/<em>s</em>.
-<br><br><br>
-
-<strong><font color="blue"><a href="#VectorMultiplyVector"><span class="mw-headline" id="VectorMultiplyVector">#</span></a> Multiplying a Vector by a Vector:</font></strong><br><br><br>
-
-
-<strong><a href="#DotPRODUCT"><span class="mw-headline" id="DotPRODUCT">#</span></a> <font color="purple">P. WoO "Vector by Vector"-1: DOT PRODUCT</font></strong>: SCALAR.<br><br>
-<u>Equation</u>:<br><br>
-
-<strong><span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = abcosϕ</strong>
-
-<br><br><br>
-<strong>a, b</strong> = The magnitudes of <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>, respectively. 
-<br><br>
-<strong>cosϕ</strong> = The angle <u>between</u> <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>. Because the dot product uses cosine, which is an even trig. function (cos(-ϕ) = cos(ϕ)), dot product is commutative: <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = <span class="vecteur"><strong>b</strong></span> · <span class="vecteur"><strong>a</strong></span>. This is not true with the cross product, which uses sine, an odd function.
-
-<br><br><br>
-
-<u>Definition</u>:<br>
-The value given by Dot Product is a scalar, and you can see this through how each term on the right side of the equation is a directionless scalar value. <br><br>
-
-
-If <strong>ϕ &lt; 90°</strong>, then the result of the dot product is <u><em>positive</em></u>.<br><br>
-
-If <strong>ϕ = 90°</strong>, then the result of the dot product is <u><em></em>0</u>.<br><br>
-
-If <strong>ϕ > 90°</strong>, then the result of the dot product is <u><em>negative</em></u>.<br><br>
-
-
-If the angle ϕ is 0°, then the component of one vector is at a maximum, and thus also is the dot product of the vectors.
-<br><br>
-
-If, instead, ϕ is 90°, the component of one vector along the other is zero, and so is the dot product. <br><br>
-
-If ϕ is 180° (the vectors are parallel) dot product is maximized, and if vectors are perpendicular (90°), the result is zero. Cross product is the opposite.<br><br>
-<br><br><br><br>
-
-
-
-<strong><a href="#DotPRODUCTtriple"><span class="mw-headline" id="DotPRODUCTtriple">#</span></a> <font color="purple">P. WoO "Vector by Vector"-2: DOT PRODUCT - TRIPLE VECTORS</font></strong>: SCALAR.<br><br>
-If either or both of the vectors are 3-dimensional, you must utilize unit-vector notation. In this state, their dot product would be <br><br>
-<span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = (<span class="vecteur"><strong>aₓ</strong></span>i&#x302; + <span class="vecteur"><strong>aᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>a<sub>z</sub></strong></span>k&#x302;) · (<span class="vecteur"><strong>bₓ</strong></span>i&#x302; + <span class="vecteur"><strong>bᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>b<sub>z</sub></strong></span>k&#x302;)<br><br>
-
-<span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = 
-<span class="vecteur"><strong>aₓ</strong></span><span class="vecteur"><strong>bₓ</strong></span> + <span class="vecteur"><strong>aᵧ</strong></span><span class="vecteur"><strong>bᵧ</strong></span> + <span class="vecteur"><strong>a<sub>z</sub></strong></span><span class="vecteur"><strong>b<sub>z</sub></strong></span>
-
-<br><br> This will give THE EXACT SAME ANSWER as the original equation if you are only using two-dimensions, and will save you a lot of time if you are very lazy. Ignore the fact that we are not really 'distributing' the terms as you normally do with the distributive law. Unit Vectors are unique.
-<br><br><br><br>
-
-
-
-<strong><a href="#CrossProduct"><span class="mw-headline" id="CrossProduct">#</span></a> <font color="purple">P. WoO "Vector by Vector"-3: CROSS PRODUCT</font></strong>: VECTOR.<br><br>
-<u>Equation</u>:<br><br>
-Finding the magnitude for vector product is similar to that of dot product: <br><br>
-<strong><span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = absinϕ</strong>
-
-<br><br><br>
-
-
-<strong>a, b</strong> = The magnitudes of <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>, respectively. 
-<br>
-<strong>sinϕ</strong> = The angle <u>between</u> <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>. Because the cross product uses sine, an odd trig function, cross product is <STRONG>NOT</STRONG> commutative: <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = -(<span class="vecteur"><strong>b</strong></span> × <span class="vecteur"><strong>a</strong></span>). This is the opposite of the dot product, which uses an even function.
-
-<br><br><br>
-<u>Definition</u>:<br>
-Finding the magnitude of the resultant vector of a cross product is easy - Finding the angle/direction is easy with extra steps.<br><br>
-
-If <strong>ϕ = 90°</strong>, then the cross product is <u><em></em>maximized</u>.<br><br>
-
-If <strong>ϕ = 0° or 180°</strong>, then the cross product is <u><em>0</em></u>.<br><br>
-
-If <strong>0 &lt; ϕ &lt; 180°</strong> or if <strong>-360° &lt; ϕ &lt; -180°</strong>, then the cross product is <u><em>positive</em></u>.<br><br>
-
-If <strong>180° &lt; ϕ &lt; 360°</strong> or if <strong>-180° &lt; ϕ &lt; 0</strong>, then the cross product is <u><em>negative</em></u>.<br><br><br>
-
-
- If the vectors are parallel or antiparallel, then the cross product results in a zero vector.<br><br>
- 
- The magnitude of <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>, which can be written as |<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>|, is maximum when <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span> are perpendicular to eachother.<br><br>
-
-If the vector is parallel, the resultant magnitude is 0, and if it is perpendicular, the result is maximized. Dot product is the opposite.<br><br>
-<br><br><br><br>
-
-<strong><a href="#CrossProductDirection"><span class="mw-headline" id="CrossProductDirection">#</span></a> <font color="purple">P. WoO "Vector by Vector"-4: CROSS PRODUCT - DIRECTION.</font></strong><br><br>
-
-The direction of cross product is pointing in the n&#x302; direction, where n&#x302; ⊥ a&#x302; and n&#x302; ⊥ b&#x302;.
-You can easily determine the direction of a cross product, perpendicular to the two vectors, using the <strong>"Right-hand Rule"</strong>:<br><br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Right-hand_rule_for_cross_product.png" class="imglink"><img src="/Physics/img/Right-hand_rule_for_cross_product.png" alt="A demonstration of the right hand rule. Courtesy of Wikimedia." width=36%/></a></div>
-	    <span class="tiny"><em>A demonstration of the right hand rule. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Right-hand_rule_for_cross_product.png">Wikimedia</a>.</em></span><br><br>
-The easiest way to think about it is this: Use the positioning of the right hand as shown in the images below and above. Do not forget that the cross product is non-commutative, and so it 100% matters which vectors you assign your fingers. Middle finger is A, pointer finger is B, thumb is C. If you were to do this same thing on your left hand, you would get B × A instead of A × B - it just works backwards.<br><br> Twist your hand so that your fingers are pointing in the correct <u>direction</u> of the vectors - this does not mean that your fingers have to look exactly like the graph, only that they must be in the correct direction as their respective vectors. Your thumb, resultant vector <span class="vecteur"><strong>c</strong></span>, will be pointing in the direction of the cross product.
-<br><br>
-You can use this system for visualizing the x, y, and z directions as well. The Right-hand uses a right coordinate system, as opposed to a left coordinate system, which would necessitate using the left hand. These systems are merely different visualizations of the x-y-z plane.<br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/handrules.png" class="imglink"><img src="/Physics/img/vectors/handrules.png" alt="The difference between the Left and Right-hand Rules, and how to visualize them on the x-y-z plane." width=36%/></a></div>
-	    <span class="tiny"><em>The difference between the Left and Right-hand Rules, and how to visualize them on the x-y-z plane.</em></span><br><br><br><br>
-
-
-<strong><a href="#CrossProductTriple"><span class="mw-headline" id="CrossProductTriple">#</span></a> <font color="purple">P. WoO "Vector by Vector"-5: CROSS PRODUCT - TRIPLE VECTORS</font></strong>: VECTOR.<br><br>
-If either or both of the vectors are 3-dimensional, you must utilize unit-vector notation. In this state, their cross product would be <br><br>
-
-<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = (<span class="vecteur"><strong>aₓ</strong></span>i&#x302; + <span class="vecteur"><strong>aᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>a<sub>z</sub></strong></span>k&#x302;) · (<span class="vecteur"><strong>bₓ</strong></span>i&#x302; + <span class="vecteur"><strong>bᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>b<sub>z</sub></strong></span>k&#x302;)
-
-<br><br>But we do not simplify to isolate every x, y, and z coefficient as we did with Dot Product. Instead, we are going to use a matrix, or rather a 3x3 determinant ([[[[[[[[). <br>
-<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/MATRIX.png" class="imglink"><img src="/Physics/img/MATRIX.png" alt="A matrix in which the vector components of a and b are multiplied and subtracted from one another." width=66%/></a></div>
-	    <span class="tiny"><em>A matrix in which the vector components of a and b are multiplied and subtracted from one another.</em></span>
-<br><br>
-Starting from the unit vectors on top, the variables in green are multiplied, and those in red are subtracted from the ones in green, all within the specific unit vector they are attached to. Thus, from this matrix (WHICH SHOULD EASILY BE SET TO MEMORY FOR FUTURE REFERENCE) we can discern the following equation:<br><br>
-<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = 
-
-(<span class="vecteur"><strong>aᵧ</strong></span><span class="vecteur"><strong>b<sub>z</sub></strong></span> - <span class="vecteur"><strong>bᵧ</strong></span><span class="vecteur"><strong>a<sub>z</sub></strong></span>)i&#x302; 
-
-+ (<span class="vecteur"><strong>a<sub>z</sub></strong></span><span class="vecteur"><strong>bₓ</strong></span> - <span class="vecteur"><strong>b<sub>z</sub></strong></span><span class="vecteur"><strong>aₓ</strong></span>)j&#x302; 
-
-+ (<span class="vecteur"><strong>aₓ</strong></span><span class="vecteur"><strong>bᵧ</strong></span> - <span class="vecteur"><strong>bₓ</strong></span><span class="vecteur"><strong>aᵧ</strong></span>)k&#x302;
-<!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
-	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
-	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
-	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
-	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-
-<br><br><br>
+      ||<span class="vecteur"><strong>a</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(<span class="vecteur"><strong>aₓ</strong></span>)² + (<span class="vecteur"><strong>aᵧ</strong></span>)²</span></span><br><br>
+      ||<span class="vecteur"><strong>a</strong></span>|| = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">(<span class="vecteur"><strong>a'ₓ</strong></span>)² + (<span class="vecteur"><strong>a'ᵧ</strong></span>)²</span></span><br><br>
+      Also,<br><br>
+      θ = θ′ + ϕ<br><br>The relations among vector do not depend on the location of the origin nor on the orientation of the axes.
+      	    <br><br><br>
+      	    <h3><a href="#VectorMultiply"><span class="mw-headline" id="VectorMultiply">#</span></a> <strong>==Multiplying Vectors==</strong></h3>
+      
+      There are three types of vector muliplication. The first type is multiplying a vector by a scalar, which gives a vector. The other two multiply a vector by a vector, of which you have two choices: Taking the 'dot product' of two vectors gives a scalar answer, while taking the 'cross product' gives a new vector that is perpendicular to the original two, the direction of which can be determined using the right-hand rule.<br><br>
+      The best way to understand the difference between dot product and cross product beyond their scalar/vector nature is to consider when their products are minimized or maximized (described in each section). As a simple memorization tool, always remember that <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>a</strong></span> = (|<span class="vecteur"><strong>a</strong></span>|)², or the magnitude of <span class="vecteur"><strong>a</strong></span> squared, while <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>a</strong></span> = 0. The reasons for this are obvious once you analyze each multiplication tool in full.<br> 
+      <br><br>
+      
+      <strong><font color="blue"><a href="#VectorMultiplyScalar"><span class="mw-headline" id="VectorMultiplyScalar">#</span></a> Multiplying a Vector by a Scalar:</font></strong><br><br>
+      The product of the scalar <em>s</em> and a vector <span class="vecteur"><strong>v</strong></span> is a new vector whose magnitude is sv, and whose direction is the same as that of <span class="vecteur"><strong>v</strong></span> if <em>s</em> is positive, and opposite that of <span class="vecteur"><strong>v</strong></span> if <em>s</em> is negative. To divide <span class="vecteur"><strong>v</strong></span> by <em>s</em>, multiply <span class="vecteur"><strong>v</strong></span> by 1/<em>s</em>.
+      <br><br><br>
+      
+      <strong><font color="blue"><a href="#VectorMultiplyVector"><span class="mw-headline" id="VectorMultiplyVector">#</span></a> Multiplying a Vector by a Vector:</font></strong><br><br><br>
+      
+      
+      <strong><a href="#DotPRODUCT"><span class="mw-headline" id="DotPRODUCT">#</span></a> <font color="purple">P. WoO "Vector by Vector"-1: DOT PRODUCT</font></strong>: SCALAR.<br><br>
+      <u>Equation</u>:<br><br>
+      
+      <strong><span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = abcosϕ</strong>
+      
+      <br><br><br>
+      <strong>a, b</strong> = The magnitudes of <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>, respectively. 
+      <br><br>
+      <strong>cosϕ</strong> = The angle <u>between</u> <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>. Because the dot product uses cosine, which is an even trig. function (cos(-ϕ) = cos(ϕ)), dot product is commutative: <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = <span class="vecteur"><strong>b</strong></span> · <span class="vecteur"><strong>a</strong></span>. This is not true with the cross product, which uses sine, an odd function.
+      
+      <br><br><br>
+      
+      <u>Definition</u>:<br>
+      The value given by Dot Product is a scalar, and you can see this through how each term on the right side of the equation is a directionless scalar value. <br><br>
+      
+      
+      If <strong>ϕ &lt; 90°</strong>, then the result of the dot product is <u><em>positive</em></u>.<br><br>
+      
+      If <strong>ϕ = 90°</strong>, then the result of the dot product is <u><em></em>0</u>.<br><br>
+      
+      If <strong>ϕ > 90°</strong>, then the result of the dot product is <u><em>negative</em></u>.<br><br>
+      
+      
+      If the angle ϕ is 0°, then the component of one vector is at a maximum, and thus also is the dot product of the vectors.
+      <br><br>
+      
+      If, instead, ϕ is 90°, the component of one vector along the other is zero, and so is the dot product. <br><br>
+      
+      If ϕ is 180° (the vectors are parallel) dot product is maximized, and if vectors are perpendicular (90°), the result is zero. Cross product is the opposite.<br><br>
+      <br><br><br><br>
+      
+      
+      
+      <strong><a href="#DotPRODUCTtriple"><span class="mw-headline" id="DotPRODUCTtriple">#</span></a> <font color="purple">P. WoO "Vector by Vector"-2: DOT PRODUCT - TRIPLE VECTORS</font></strong>: SCALAR.<br><br>
+      If either or both of the vectors are 3-dimensional, you must utilize unit-vector notation. In this state, their dot product would be <br><br>
+      <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = (<span class="vecteur"><strong>aₓ</strong></span>i&#x302; + <span class="vecteur"><strong>aᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>a<sub>z</sub></strong></span>k&#x302;) · (<span class="vecteur"><strong>bₓ</strong></span>i&#x302; + <span class="vecteur"><strong>bᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>b<sub>z</sub></strong></span>k&#x302;)<br><br>
+      
+      <span class="vecteur"><strong>a</strong></span> · <span class="vecteur"><strong>b</strong></span> = 
+      <span class="vecteur"><strong>aₓ</strong></span><span class="vecteur"><strong>bₓ</strong></span> + <span class="vecteur"><strong>aᵧ</strong></span><span class="vecteur"><strong>bᵧ</strong></span> + <span class="vecteur"><strong>a<sub>z</sub></strong></span><span class="vecteur"><strong>b<sub>z</sub></strong></span>
+      
+      <br><br> This will give THE EXACT SAME ANSWER as the original equation if you are only using two-dimensions, and will save you a lot of time if you are very lazy. Ignore the fact that we are not really 'distributing' the terms as you normally do with the distributive law. Unit Vectors are unique.
+      <br><br><br><br>
+      
+      
+      
+      <strong><a href="#CrossProduct"><span class="mw-headline" id="CrossProduct">#</span></a> <font color="purple">P. WoO "Vector by Vector"-3: CROSS PRODUCT</font></strong>: VECTOR.<br><br>
+      <u>Equation</u>:<br><br>
+      Finding the magnitude for vector product is similar to that of dot product: <br><br>
+      <strong><span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = absinϕ</strong>
+      
+      <br><br><br>
+      
+      
+      <strong>a, b</strong> = The magnitudes of <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>, respectively. 
+      <br>
+      <strong>sinϕ</strong> = The angle <u>between</u> <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span>. Because the cross product uses sine, an odd trig function, cross product is <STRONG>NOT</STRONG> commutative: <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = -(<span class="vecteur"><strong>b</strong></span> × <span class="vecteur"><strong>a</strong></span>). This is the opposite of the dot product, which uses an even function.
+      
+      <br><br><br>
+      <u>Definition</u>:<br>
+      Finding the magnitude of the resultant vector of a cross product is easy - Finding the angle/direction is easy with extra steps.<br><br>
+      
+      If <strong>ϕ = 90°</strong>, then the cross product is <u><em></em>maximized</u>.<br><br>
+      
+      If <strong>ϕ = 0° or 180°</strong>, then the cross product is <u><em>0</em></u>.<br><br>
+      
+      If <strong>0 &lt; ϕ &lt; 180°</strong> or if <strong>-360° &lt; ϕ &lt; -180°</strong>, then the cross product is <u><em>positive</em></u>.<br><br>
+      
+      If <strong>180° &lt; ϕ &lt; 360°</strong> or if <strong>-180° &lt; ϕ &lt; 0</strong>, then the cross product is <u><em>negative</em></u>.<br><br><br>
+      
+      
+       If the vectors are parallel or antiparallel, then the cross product results in a zero vector.<br><br>
+       
+       The magnitude of <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>, which can be written as |<span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span>|, is maximum when <span class="vecteur"><strong>a</strong></span> and <span class="vecteur"><strong>b</strong></span> are perpendicular to eachother.<br><br>
+      
+      If the vector is parallel, the resultant magnitude is 0, and if it is perpendicular, the result is maximized. Dot product is the opposite.<br><br>
+      <br><br><br><br>
+      
+      <strong><a href="#CrossProductDirection"><span class="mw-headline" id="CrossProductDirection">#</span></a> <font color="purple">P. WoO "Vector by Vector"-4: CROSS PRODUCT - DIRECTION.</font></strong><br><br>
+      
+      The direction of cross product is pointing in the n&#x302; direction, where n&#x302; ⊥ a&#x302; and n&#x302; ⊥ b&#x302;.
+      You can easily determine the direction of a cross product, perpendicular to the two vectors, using the <strong>"Right-hand Rule"</strong>:<br><br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/Right-hand_rule_for_cross_product.png" class="imglink"><img src="/Physics/img/Right-hand_rule_for_cross_product.png" alt="A demonstration of the right hand rule. Courtesy of Wikimedia." width=36%/></a></div>
+      	    <span class="tiny"><em>A demonstration of the right hand rule. Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Right-hand_rule_for_cross_product.png">Wikimedia</a>.</em></span><br><br>
+      The easiest way to think about it is this: Use the positioning of the right hand as shown in the images below and above. Do not forget that the cross product is non-commutative, and so it 100% matters which vectors you assign your fingers. Middle finger is A, pointer finger is B, thumb is C. If you were to do this same thing on your left hand, you would get B × A instead of A × B - it just works backwards.<br><br> Twist your hand so that your fingers are pointing in the correct <u>direction</u> of the vectors - this does not mean that your fingers have to look exactly like the graph, only that they must be in the correct direction as their respective vectors. Your thumb, resultant vector <span class="vecteur"><strong>c</strong></span>, will be pointing in the direction of the cross product.
+      <br><br>
+      You can use this system for visualizing the x, y, and z directions as well. The Right-hand uses a right coordinate system, as opposed to a left coordinate system, which would necessitate using the left hand. These systems are merely different visualizations of the x-y-z plane.<br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/vectors/handrules.png" class="imglink"><img src="/Physics/img/vectors/handrules.png" alt="The difference between the Left and Right-hand Rules, and how to visualize them on the x-y-z plane." width=36%/></a></div>
+      	    <span class="tiny"><em>The difference between the Left and Right-hand Rules, and how to visualize them on the x-y-z plane.</em></span><br><br><br><br>
+      
+      
+      <strong><a href="#CrossProductTriple"><span class="mw-headline" id="CrossProductTriple">#</span></a> <font color="purple">P. WoO "Vector by Vector"-5: CROSS PRODUCT - TRIPLE VECTORS</font></strong>: VECTOR.<br><br>
+      If either or both of the vectors are 3-dimensional, you must utilize unit-vector notation. In this state, their cross product would be <br><br>
+      
+      <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = (<span class="vecteur"><strong>aₓ</strong></span>i&#x302; + <span class="vecteur"><strong>aᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>a<sub>z</sub></strong></span>k&#x302;) · (<span class="vecteur"><strong>bₓ</strong></span>i&#x302; + <span class="vecteur"><strong>bᵧ</strong></span>j&#x302; + <span class="vecteur"><strong>b<sub>z</sub></strong></span>k&#x302;)
+      
+      <br><br>But we do not simplify to isolate every x, y, and z coefficient as we did with Dot Product. Instead, we are going to use a matrix, or rather a 3x3 determinant ([[[[[[[[). <br>
+      <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/Physics/img/MATRIX.png" class="imglink"><img src="/Physics/img/MATRIX.png" alt="A matrix in which the vector components of a and b are multiplied and subtracted from one another." width=66%/></a></div>
+      	    <span class="tiny"><em>A matrix in which the vector components of a and b are multiplied and subtracted from one another.</em></span>
+      <br><br>
+      Starting from the unit vectors on top, the variables in green are multiplied, and those in red are subtracted from the ones in green, all within the specific unit vector they are attached to. Thus, from this matrix (WHICH SHOULD EASILY BE SET TO MEMORY FOR FUTURE REFERENCE) we can discern the following equation:<br><br>
+      <span class="vecteur"><strong>a</strong></span> × <span class="vecteur"><strong>b</strong></span> = 
+      
+      (<span class="vecteur"><strong>aᵧ</strong></span><span class="vecteur"><strong>b<sub>z</sub></strong></span> - <span class="vecteur"><strong>bᵧ</strong></span><span class="vecteur"><strong>a<sub>z</sub></strong></span>)i&#x302; 
+      
+      + (<span class="vecteur"><strong>a<sub>z</sub></strong></span><span class="vecteur"><strong>bₓ</strong></span> - <span class="vecteur"><strong>b<sub>z</sub></strong></span><span class="vecteur"><strong>aₓ</strong></span>)j&#x302; 
+      
+      + (<span class="vecteur"><strong>aₓ</strong></span><span class="vecteur"><strong>bᵧ</strong></span> - <span class="vecteur"><strong>bₓ</strong></span><span class="vecteur"><strong>aᵧ</strong></span>)k&#x302;
+      <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &    ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+      	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+      	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
+      	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
+      	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
+      
+      <br><br><br>
 
 
 
@@ -505,7 +550,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">P. Rule <span class="rule-number"></span>.</font>
-        </strong> When you need to find the final velocity of an object in projectile motion, you need to find the velocity in the y direction and the velocity in the x direction. Then, you must realize that since you have the x and y components of an objects movement, that you have the decomposed vector and now need to find the vector itself, the hypotenuse of the triangle through the pythagorean theorem.<br><br>NEVER FORGET to find the direction at the end - you just have to do the sine inverse (or cosine inverse depending on which theta you need, though the theta should always be on the tail of the vector/hypotenuse) using the x and y decomposed vectors. This will give you the angle that, if you don't have any particular directions to work off of at the beginning, can just be said to be 'in front of the negative y-axis' if the object is moving rightward and downward, changing this as needed. <br>Remember that angles also must follow sig. fig. rules no matter what. <br>Vectors always require direction in addition to magnitude, a + or - will not do.
+        </strong> When you need to find the final velocity of an object in projectile motion, you need to find the velocity in the y direction and the velocity in the x direction. Then, you must realize that since you have the x and y components of an objects movement, that you have the decomposed vector and now need to find the vector itself, the hypotenuse of the triangle through the Pythagorean theorem.<br><br>NEVER FORGET to find the direction at the end - you just have to do the sine inverse (or cosine inverse depending on which theta you need, though the theta should always be on the tail of the vector/hypotenuse) using the x and y decomposed vectors. This will give you the angle that, if you don't have any particular directions to work off of at the beginning, can just be said to be 'in front of the negative y-axis' if the object is moving rightward and downward, changing this as needed. <br>Remember that angles also must follow sig. fig. rules no matter what. <br>Vectors always require direction in addition to magnitude, a + or - will not do.
 	    </div><br><br>
 	    
 	    
@@ -719,7 +764,7 @@ Starting from the unit vectors on top, the variables in green are multiplied, an
         <article><strong><a href="/Physics/mechanics/velspaccel.html">Velocity, Speed, Acceleration</a></strong> → <strong><a href="/Physics/mechanics/freefall.html">Free Fall</a></strong> → <strong>Vectors and Projectile Motion</strong> → <strong><a href="/Physics/mechanics/range.html">Range & Relative Motion</a></strong> → <strong><a href="/Physics/mechanics/rotational.html">Rotational Motion</a></strong>  → <strong><a href="/Physics/mechanics/force.html">Force</a></strong> → <strong><a href="/Physics/mechanics/energy.html">Energy and Work</a></strong> → <strong><a href="/Physics/mechanics/momentum.html">Momentum & Center of Mass</a></strong> → <strong><a href="/Physics/mechanics/rotationaldynamics.html">Rotational Dynamics</a></strong> → <strong><a href="/Physics/mechanics/gravitation.html">Gravitation</a></strong> → <strong><a href="/Physics/mechanics/oscillations.html">Oscillations</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 9 2025</span><br>
+      	<span class="tiny">Last Change: February 7 2025</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -2,6 +2,21 @@ CHANGE LOG.
 
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
+
+February 7, 2026: In revising Physics section III, I swapped Rules 16 & 17 and fixed all referencers accordingly.
+
+February 5, 2026: Additional Physics revisal, concentrated in Subsection III.I. Additionally, an egregious error on the About page was fixed.
+
+February 4, 2026: Further Physics revisal. I think I will be mainly processing old Physics content right now, as I've found a number of errors and other strange things that need correcting. I also did some other changes across multiple pages, like capitalizing names that I previously forgot about. I have also begun replacing honestly terrible drawings that have remained on the Physics page for too damn long.
+
+February 3, 2026: Considerable progress on Physics section III revisal. This continues the Physics revisal sessions I started last summer, which totally revised Sections I and II. The earlier Physics sections, I feel, pale in comparison to the later sections. Furthermore, much of the Mathematics category (which) I feel is in disarray, while Astronomy is a loss. Cryptography, by a mile, is the best formatted and written part of the site, largely because it has already been revised in its entirety. Progress will largely consist of adding new Mathematics rules from my notes, adding new, higher-quality Physics and Cryptography content in addition to revising the Physics content. There remain some gaps in the Physics content that I hope to clear, as a general "[[[" removal drive. I have some ideas for greater site-wide improvements, in particular a more accessible rss feed, but I do not have any immediate plans to start working on them when there is so much to be done with the actual content.
+
+February 2, 2026: Calculus Work.
+Rule Added: Mathematics, Single Variable Calculus - Rule 181, 182, 183.
+
+January 21, 2026: Calculus Work. I'm considering restarting the "one calculus Rule per day" strategy I had earlier last year, as a means of maintaining consistent additions even when I'm unable to add content in newer subjects, since with mathematics I'm only transcribing my notes.
+Rule Added: Mathematics, Single Variable Calculus - Rule 178, 179, 180.
+
 January 12, 2026: RESURRECTION: It has been some time! My college applications have concluded and I now have the ability to dedicate my creative energies to this project once more. My focus will remain on Cryptography, of course, though I intend to undertake revisals of Physics and Mathematics... eventually. Physics has only been fully revised up to the 2nd Section, while the state of Mathematics leaves much to be desired. As for what was done today, I updated all the pages to reflect the New Year, and updated that terrible photo of me in the FAQ with a better one.
 
 August 9, 2025: I updated the links bar for probably the first time this year. I added two link aggregators that I've used for a few years, and that may be of interest to the more internet-inclined users. Furthermore, I added links on every "Art by Shoaib Pasha" label underneath each logo to redirect users to the complete art page.

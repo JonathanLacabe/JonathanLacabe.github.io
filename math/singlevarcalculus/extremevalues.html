@@ -290,7 +290,12 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> To find the extrema points, first plug in the endpoints to the function, make a line graph with endpoints and the Critical Points, and plug in the numbers in between to find whether the Critical Point is a maimum or minumum. The endpoints can be compared to find which is the global minimum/maximum and which is the local.
+        </strong> To find the <strong>Extrema Points</strong>, first plug in the endpoints to the function, make a line graph with endpoints and the Critical Points, and plug in the numbers in between to find whether the Critical Point is a maximum or minumum. The endpoints can be compared to find which is the global minimum/maximum and which is the local.<br><br>
+        
+        Plug in the #'s into the derivative function, and the Critical Points into the regular function.<!--look at later on, was in the form of an addendum totally separated--><br><br>
+        
+        Although a function's extreme points can only exist at a function's critical points or endpoints, not every critical point or endpoint signals the presence of an extreme value. If both sides of a critical point on a line graph are positive or negative, then the critical point is not a min or max.<!--the content of Rule 178, placed here due to the horrors of analog Rule writing.-->
+        
         
         </div><br><br>
         
@@ -298,7 +303,60 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> The numerator determines the zeroes, the denominator determines where the function is not defined.</div><br><br>
+        </strong> In quadratic fractions, the numerator determines the zeroes, and the denominator determines where the function is not defined.</div><br><br>
+        
+        
+        <!--R.I.P. to the original Rule 178. I accidentally included two Rule 179's, and to prevent the ordering and everything else from being destroyed and annoying altered, I removed the Rule and combined its content into Rule 176. A symbol of the stupidity that engrossed the original, v0.1, "base" content of the Mathematics section, the nonsense of my 9-10th grades notes merely transcribed instead of adapted and improved upon, making Mathematics one of the least coherent parts of the projects, perhaps only ahead of Astronomy.
+        -->
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To find the derivative of a piecewise function, just take the derivative of the equations and keep the "x > 1" stuff the same. This can be used in the same pattern as the reuglar method seen in Rule 176.</div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Mean Value Theorem</strong>:<br><bR>
+        If y = f(x) is continuous at every point of a closed interval [a, b] and differentiable at every point of its interval (a, b), then there is atleast one point c in (a, b) at which the instantaneous rate of change equals the mean rate of change:<br><br>
+        
+        $$f'(x) = \frac{f(b) - f(a)}{b - a}$$
+        
+        </div><br><br>
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The way to show an equation satisfies the Mean Value Theorem is to first find the y-values for the endpoints of the interval and plug them into the slope formula (Rule 179): (f(b) - f(a)) / (b - a). Then, find the derivative of the equation and set it equal to the previously found value. If it is between the endpoints, it satisfies the Mean Value Theorem.</div><br><br>
+        
+        
+        <strong><a href="#AntiderivativeDef"><span class="mw-headline" id="AntiderivativeDef">#</span></a> <font color="#006400">Antiderivative</font></strong>: A function F(x) is an antiderivative of a function f(x) if F'(x) = f(x) for all x in the domain of f. To find the antiderivative for the most simple functions (those that involve only a variable and its exponent, x & n), use the following equation:<br>
+        
+        $$\frac{x^{n+1}}{n+1} + C$$
+        
+        The "+ c" is a value that is added to all antiderivatives, to account for the possibility that an additional constant could have been part of F(x), and that by taking the derivative, it was reduced to zero (as stated in Law 1 of the Laws of Differentiation, Rule 142). "+ c" is the degree of uncertainty of the antiderivative, and can be found through mathematical tricks learned later on (see Rule [[[)<br><br>
+        
+        The concept of an antiderivative will eventually evolve into that of the <em>integral</em> (see section [[[), which is basically just finding the antiderivatives of different functions, something that becomes surprisingly more complicated over the course of more and more difficult functions. Derivatives are extraordinarily easier.
+	    <br><br><br>
+	    
+	    
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Notice that f may have local extrema at some critical points while failing to have them at others. When f has a min f' &lt; 0 on on the left of the Critical Point, and f' &gt; 0 on the right, there is a minimum. Vice versa for the max. If the derivative changes sign at the critical point, there is a min. or a max.</div><br><br>
+	  
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For the simplified MVT proof, like the speeding trucker, you can just divide the distance by the time & say that MVT states that the average speed must equal instantaneous speed at some point.</div><br><br>
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> To get the antiderivative, you need to use the equation listed in the antiderivative definition (see above), with the X<sup>n+1</sup> / n+1 and whatnot, and then plug in the point into the antiderivative function (if known) to get c.</div><br><br>
 	    
 	    
 	    
@@ -342,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong> → <strong>Extreme Values</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: August 9 2025</span><br>
+      	<span class="tiny">Last Change: February 2 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@gmail.com">jdlacabe@gmail.com</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

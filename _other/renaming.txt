@@ -2,25 +2,12 @@ From a pedagogical standpoint, I hate everyone. I hate the usage of scientist na
 
 Every Tom, Dick, & Harry who ever waltzed into a Physics laboratory and did anything or picked their nose has some nonsense named after them. Laws that are named after people only obfuscate the actual nature of the law, rendering Physics into a sport of vanity and diluting its beyond-human purpose, in additiion to worsening the experience for the student. Although it could be argued that learning the names of all of the great scientists/mathematicians throughout history could have an inspirational effect on the student, it is of absolutely no benefit if it impairs their ability to learn the material itself. Maintaining interest and conviction in the value of what you are doing and of your own abilities is essential to the morale of the scientist; any unnecessary confusion in learning the material is detrimental to this morale.
 
-
-Furthermore, I believe that 
-
-presenting science as something beyond a history of individual efforts, rather 
-and instead for what it is as a whole (the set of rules governing the universe)
-
-trather than seeing science as the collective sum of many individual efforts
-
-by focusing on the past of science and by seeing it as a history of people and individual efforts, you lose sight of the bigger picture, the 
-
-
-
-
-removes the mystique and inherently beyond-human nature of science, regardless of whether our understanding of it is a human construct. Science exists, whether people understand it or not, whether our current laws match it or not. Viewing it as something with a mystical non-human element to it is beneficial to the mystique and intrigue of science. Where humans are ephemeral, science is permanent and absolute and only mutable with extraordinary evidence. 
-
-
+Furthermore, I believe that by focusing on the past of science and by seeing it as a history of people and individual efforts, rather than presenting it for what it is as a whole (the set of rules governing the universe), you lose sight of the bigger picture and remove the mystique and inherently beyond-human nature of science. This is regardless of whether our understanding of science is a human construct; Science exists, whether people understand it or not, whether our current laws match it or not. Viewing it as something with a mystical non-human element to it is beneficial to the mystique and intrigue of science. Where humans are ephemeral, science is permanent and absolute and only mutable with extraordinary evidence. 
 
 Thus, in all possible instances, I have dehumanized Physics. Constants and Units I've found stubbornly immutable (so keep your damn Newtons and Farads), but every principle and law possible, I have renamed. The worst offenders are those that are too deeply ingrained into the fabric of science to rename easily - things like the aforementioned units (Newtons, Volts) and fundamental entities like Bosons. With these, the ephemeralists win.
-Of course, there are several quotes on the project that have named attributions. These quotes exist outside of the main content (the "knowledge" as it were), in a sort of inter-project space. They exist within the medium (the website and its organization) with which the knowledge is disclosed, but are not a part of the knowledge itself - this is a far cry from the outright interference in the knowledge that the named laws and principles have. In any case, I like well-written prose, and the quotes imbue a sort of mystique or profound nature (excuse Carlin) that is perfectly suited to the philosophy of the project, and so the quotes will remain forever. I am not outright anti-humanist - rather, only in relation to scientific pursuits.
+
+Of course, there are several quotes on the project that have _named_ attributions. These quotes exist outside of the main content (the "knowledge" as it were), in a sort of inter-project space. They exist within the medium (the website and its organization) within which the knowledge is made available, but are not a part of the knowledge itself. This is miles better than the outright interference in the knowledge caused by the named laws and principles. In any case, I like well-written prose, and the quotes imbue a sort of mystique or profound nature (excuse Carlin) that is perfectly suited to the philosophy of the project, and so the quotes will remain forever. While some quote are from the perspective of the teacher (like that for Linear Algebra) and relate specifically to pedagogy, most fit perfectly for the student. I try to find the foundational quote that can be referred to for inspiration/consolation (see Multivariable Calculus) while learning that particular subject; it must always be something very profound and interesting to reflect upon.
+
 
 As "True greatness is when your name is spelled with a lower case letter", Units named after individuals will begrudgingly be used, and always Capitalized.
 
@@ -38,4 +25,4 @@ Ohm's Law -> VCR Law (it encapsulates the three things relevant to the law, and 
 
 
 
-There will very sadly never be a Lacabe's Law, but this is a sacrifice I'm willing to make.
+Because of my fanaticism, there will very sadly never be a Lacabe's Law, but this is a sacrifice I'm willing to make.

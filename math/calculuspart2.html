@@ -32,6 +32,35 @@ rainbow {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function (){
+    //Loop through Rule containers
+    let ruleContainers = document.querySelectorAll(".rules");
+    ruleContainers.forEach(container =>{
+        //Get starting Rule number, use 1 if unspecified.
+        let startNumber = parseInt(container.getAttribute("data-start")) || 1;
+        let rules = container.querySelectorAll(".rule");
+        rules.forEach((rule, index) =>{
+            let ruleNumber = startNumber + index;
+
+            //Assign dynamic id to Rule container -> anchor link targets it
+            rule.id = "Rule" + ruleNumber;
+
+            //Update all elements displaying Rule #
+            let numberElements = rule.querySelectorAll(".rule-number");
+            numberElements.forEach(el => {
+                el.textContent = ruleNumber;
+            });
+
+            //Update the href to target correct id, while preserving '#'.
+            let ruleLink = rule.querySelector("a");
+            if(ruleLink){
+                ruleLink.href = "#Rule" + ruleNumber;
+            }
+        });
+    });
+});
+</script>
 <img src="/_other/logos/SingleVariableCalculus.png" width=69%><!--ALSO SPRACH ZARATHUSTRA.-->
 <hr>
       	<span><em><a href="/information/art.html">Art by Shoaib Pasha.</a></em></span><hr>
@@ -74,99 +103,99 @@ rainbow {
 	  <article><center><strong>Table Of Contents</strong></center></article>
       <div class="toc-container">
         <div class="toc-column">
-          <a href="#Limits">?. [[[[.</a>
+          <a href="#LocalLinearity">?. Local Linearity.</a>
         </div>
         <div class="toc-column">
-          <a href="#PCI">[[[[[[[[[</a>
+          <!--<a href="#PCI">[[[[[[[[[</a>-->
         </div>
 
       </div>
       
+      <div class="rules" data-start="192">
+      
 	  <header class="articleHeader"><hr>
-	    <h2><span class="mw-headline" id="Limits">?. [[[[[[[[.</span></h2>
+	    <h2><span class="mw-headline" id="LocalLinearity">?. Local Linearity.</span></h2>
 	  </header>
 	  <article><br>
 	  
 	  
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> If you continuously zoom in at the value pi/2, you can see the graph flatten until it becomes a line. The line represents the slope of the tangent line at that point. WE can use the tangent line at that point to approximate the value of y = sin(x) for points near x = pi/2. This is called <strong>linearization</strong>.</div><br><br>
 	      
 	      
+	      
+	      <strong><a href="#LinearApproxDef"><span class="mw-headline" id="LinearApproxDef">#</span></a> <font color="#006400">Linear Approximation</font></strong>: If f is differentiable at x=a, then the equation of the tangent line, L(x) = f(a) + f'(a)(x-a), defines the linearization of f at a. The approximation is called the <strong>Linear Approximation</strong> of f at the point x=a is the <strong>center of approximation</strong>.
+	    <br><br><br>
+	      
+	      <!--next will be 194 in the book, 193 in here for now before it fixes itself because of my genius past mistakes.-->
+	      
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Finding the Local Linearization is easy as hell. All you need is the base function that will be the f(x), generally the parent function of the value you are trying to approximate such as <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> for <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">51</span></span> and cos(x) for cos(1.75), and the value you are using to compare, serving as a.<br><br>
+        
+        The formula is L(x) = f(a) + f'(a)(x-a). Usually, they will straight up give you the value they want you to compare to but a lot of the time you will have to make it up for yourself, something like the closest known perfect value associated with the parent function.
+        
+        </div><br><br>
+	      
+	      
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Derivatives calculate slopes of tanent lines and instantaneous Rates of Change, but in order to describe how these things accumulate over time, we need integral calculus to find the areas under curves.</div><br><br>
+	      
+	      
+	      <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>RIEMANN SUMS:</STRONG><BR><BR> 
+        
+        The most rudimentary (non-calculus) form of finding the area under a curve on a graph (like y = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>) is as follows:<br><br>
+        
+        Partition the area under the curve into vertical strips. If the strips are narrow enough, they are indistinguishable from rectangles, and then by summing all the individual areas of the rectangles you get the area under the curve.
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> A particle's total distance traveled is given by the srea under the <u>VELOCITY</u> curve!!!!!! Change it as needs be.</div><br><br><!--emphasis in the original writing-->
+        
+        
+        
+	      
+	      <!--
+	      </article>
+	    <header class="articleHeader"><hr>
+	      <h3><span class="mw-headline" id="OptimizationRates">?. Optimization & Related Rates.</span></h3>
+	    </header>
+	    <article>
+	      -->
 	     
 	     
 	     
-	     <!--Continue onward through the rest of the nonlinear inequalities and checking inverses, and then when you get to Logarithms create a new section.-->
 	     
-	    <!--
-	    
-	    <strong><a href="#Rule106"><span class="mw-headline" id="Rule106">#</span></a> <font color="red">Rule 106.</font></strong> <br><br><br>
-	    <strong><a href="#Rule107"><span class="mw-headline" id="Rule107">#</span></a> <font color="red">Rule 107.</font></strong> <br><br><br>
-	    <strong><a href="#Rule108"><span class="mw-headline" id="Rule108">#</span></a> <font color="red">Rule 108.</font></strong> <br><br><br>
-	    <strong><a href="#Rule109"><span class="mw-headline" id="Rule109">#</span></a> <font color="red">Rule 109.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule110"><span class="mw-headline" id="Rule110">#</span></a> <font color="red">Rule 110.</font></strong> <br><br><br>
-	    <strong><a href="#Rule111"><span class="mw-headline" id="Rule111">#</span></a> <font color="red">Rule 111.</font></strong> <br><br><br>
-	    <strong><a href="#Rule112"><span class="mw-headline" id="Rule112">#</span></a> <font color="red">Rule 112.</font></strong> <br><br><br>
-	    <strong><a href="#Rule113"><span class="mw-headline" id="Rule113">#</span></a> <font color="red">Rule 113.</font></strong> <br><br><br>
-	    <strong><a href="#Rule114"><span class="mw-headline" id="Rule114">#</span></a> <font color="red">Rule 114.</font></strong> <br><br><br>
-	    <strong><a href="#Rule115"><span class="mw-headline" id="Rule115">#</span></a> <font color="red">Rule 115.</font></strong> <br><br><br>
-	    <strong><a href="#Rule116"><span class="mw-headline" id="Rule116">#</span></a> <font color="red">Rule 116.</font></strong> <br><br><br>
-	    <strong><a href="#Rule117"><span class="mw-headline" id="Rule117">#</span></a> <font color="red">Rule 117.</font></strong> <br><br><br>
-	    <strong><a href="#Rule118"><span class="mw-headline" id="Rule118">#</span></a> <font color="red">Rule 118.</font></strong> <br><br><br>
-	    <strong><a href="#Rule119"><span class="mw-headline" id="Rule119">#</span></a> <font color="red">Rule 119.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule120"><span class="mw-headline" id="Rule120">#</span></a> <font color="red">Rule 120.</font></strong> <br><br><br>
-	    <strong><a href="#Rule121"><span class="mw-headline" id="Rule121">#</span></a> <font color="red">Rule 121.</font></strong> <br><br><br>
-	    <strong><a href="#Rule122"><span class="mw-headline" id="Rule122">#</span></a> <font color="red">Rule 122.</font></strong> <br><br><br>
-	    <strong><a href="#Rule123"><span class="mw-headline" id="Rule123">#</span></a> <font color="red">Rule 123.</font></strong> <br><br><br>
-	    <strong><a href="#Rule124"><span class="mw-headline" id="Rule124">#</span></a> <font color="red">Rule 124.</font></strong> <br><br><br>
-	    <strong><a href="#Rule125"><span class="mw-headline" id="Rule125">#</span></a> <font color="red">Rule 125.</font></strong> <br><br><br>
-	    <strong><a href="#Rule126"><span class="mw-headline" id="Rule126">#</span></a> <font color="red">Rule 126.</font></strong> <br><br><br>
-	    <strong><a href="#Rule127"><span class="mw-headline" id="Rule127">#</span></a> <font color="red">Rule 127.</font></strong> <br><br><br>
-	    <strong><a href="#Rule128"><span class="mw-headline" id="Rule128">#</span></a> <font color="red">Rule 128.</font></strong> <br><br><br>
-	    <strong><a href="#Rule129"><span class="mw-headline" id="Rule129">#</span></a> <font color="red">Rule 129.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule130"><span class="mw-headline" id="Rule130">#</span></a> <font color="red">Rule 130.</font></strong> <br><br><br>
-	    <strong><a href="#Rule131"><span class="mw-headline" id="Rule131">#</span></a> <font color="red">Rule 131.</font></strong> <br><br><br>
-	    <strong><a href="#Rule132"><span class="mw-headline" id="Rule132">#</span></a> <font color="red">Rule 132.</font></strong> <br><br><br>
-	    <strong><a href="#Rule133"><span class="mw-headline" id="Rule133">#</span></a> <font color="red">Rule 133.</font></strong> <br><br><br>
-	    <strong><a href="#Rule134"><span class="mw-headline" id="Rule134">#</span></a> <font color="red">Rule 134.</font></strong> <br><br><br>
-	    <strong><a href="#Rule135"><span class="mw-headline" id="Rule135">#</span></a> <font color="red">Rule 135.</font></strong> <br><br><br>
-	    <strong><a href="#Rule136"><span class="mw-headline" id="Rule136">#</span></a> <font color="red">Rule 136.</font></strong> <br><br><br>
-	    <strong><a href="#Rule137"><span class="mw-headline" id="Rule137">#</span></a> <font color="red">Rule 137.</font></strong> <br><br><br>
-	    <strong><a href="#Rule138"><span class="mw-headline" id="Rule138">#</span></a> <font color="red">Rule 138.</font></strong> <br><br><br>
-	    <strong><a href="#Rule139"><span class="mw-headline" id="Rule139">#</span></a> <font color="red">Rule 139.</font></strong> <br><br><br>
-	    
-	    <strong><a href="#Rule140"><span class="mw-headline" id="Rule140">#</span></a> <font color="red">Rule 140.</font></strong> <br><br><br>
-	    <strong><a href="#Rule141"><span class="mw-headline" id="Rule141">#</span></a> <font color="red">Rule 141.</font></strong> <br><br><br>
-	    <strong><a href="#Rule142"><span class="mw-headline" id="Rule142">#</span></a> <font color="red">Rule 142.</font></strong> <br><br><br>
-	    <strong><a href="#Rule143"><span class="mw-headline" id="Rule143">#</span></a> <font color="red">Rule 143.</font></strong> <br><br><br>
-	    <strong><a href="#Rule144"><span class="mw-headline" id="Rule144">#</span></a> <font color="red">Rule 144.</font></strong> <br><br><br>
-	    <strong><a href="#Rule145"><span class="mw-headline" id="Rule145">#</span></a> <font color="red">Rule 145.</font></strong> <br><br><br>
-	    <strong><a href="#Rule146"><span class="mw-headline" id="Rule146">#</span></a> <font color="red">Rule 146.</font></strong> <br><br><br>
-	    <strong><a href="#Rule147"><span class="mw-headline" id="Rule147">#</span></a> <font color="red">Rule 147.</font></strong> <br><br><br>
-	    <strong><a href="#Rule148"><span class="mw-headline" id="Rule148">#</span></a> <font color="red">Rule 148.</font></strong> <br><br><br>
-	    <strong><a href="#Rule149"><span class="mw-headline" id="Rule149">#</span></a> <font color="red">Rule 149.</font></strong> <br><br><br>
-	    
-	    -->
-	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ∞  ∪  ±  ×  π  ∆  ⁻  θ  °  ≈  ≤,  ≥  ∘  ÷, the roof is &#x302; -->
-	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp;-->
+	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ ° ≠ ≈  ≤,  ≥   ÷, the roof is &#x302; -->
+	    <!-- alt-0178 for superscript 2, 0179 for 3. Others are further up. &nbsp; &thinsp; &hairsp; ²³-->
+	    <!-- https://lingojam.com/SuperscriptGenerator -->
 	    <!--<span class="vecteur"><strong>r</strong></span> VECTOR-->
+	    <!--<div title="me inm">bango</div> secret text for hovering over-->
 	    <!--<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>--><!--cube is &#8731;, 4th is &#8732;,  -->
 	    <!--<span style="border-right: 1px black solid; border-radius: 0px 0px 10px 0px">divisor </span><span style="border-top: 1px black solid; ">&thinsp;dividend&thinsp;</span>-->
-	    <!--
-	    <strong><a href="#Rule10"><span class="mw-headline" id="Rule10">#</span></a> <font color="red">Rule 10.</font></strong> <br><br><br>
-	    <strong><a href="#Rule11"><span class="mw-headline" id="Rule11">#</span></a> <font color="red">Rule 11.</font></strong> <br><br><br>
-	    <strong><a href="#Rule12"><span class="mw-headline" id="Rule12">#</span></a> <font color="red">Rule 12.</font></strong> <br><br><br>
-	    <strong><a href="#Rule13"><span class="mw-headline" id="Rule13">#</span></a> <font color="red">Rule 13.</font></strong> <br><br><br>
-	    <strong><a href="#Rule14"><span class="mw-headline" id="Rule14">#</span></a> <font color="red">Rule 14.</font></strong> <br><br><br>
-	    <strong><a href="#Rule15"><span class="mw-headline" id="Rule15">#</span></a> <font color="red">Rule 15.</font></strong> <br><br><br>
-	    <strong><a href="#Rule16"><span class="mw-headline" id="Rule16">#</span></a> <font color="red">Rule 16.</font></strong> <br><br><br>
-	    <strong><a href="#Rule17"><span class="mw-headline" id="Rule17">#</span></a> <font color="red">Rule 17.</font></strong> <br><br><br>
-	    <strong><a href="#Rule18"><span class="mw-headline" id="Rule18">#</span></a> <font color="red">Rule 18.</font></strong> <br><br><br>
-	    <strong><a href="#Rule19"><span class="mw-headline" id="Rule19">#</span></a> <font color="red">Rule 19.</font></strong> <br><br><br>
-	    -->
+	    
+    <!--
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> </div><br><br>
+	  -->
 	  </article>
 	  
-	  
+	  </div>
 	</div>
 	
 	<div class="General links">
@@ -200,10 +229,10 @@ rainbow {
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong>Integral Calculus & Calculus 2</strong></article>
         <br>
-        <article><strong><a href="/math/singlevarcalculus/limits.html">Limits</a></strong> → <strong><a href="/math/singlevarcalculus/continuity.html">Continuity</a></strong> → <strong><a href="/math/singlevarcalculus/derivatives.html">Derivatives</a></strong> → <strong><a href="/math/singlevarcalculus/particlemotion.html">Particle Motion</a></strong> → <strong><a href="/math/singlevarcalculus/inverses.html">Inverses</a></strong> → <strong><a href="/math/singlevarcalculus/chainrule.html">Chain Rule</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 2 2026</span><br>
+      	<span class="tiny">Last Change: April 13 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

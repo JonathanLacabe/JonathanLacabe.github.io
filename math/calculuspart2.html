@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#LocalLinearity">?. Local Linearity.</a>
         </div>
         <div class="toc-column">
-          <!--<a href="#PCI">[[[[[[[[[</a>-->
+          <a href="#DefiniteIntegrals">?. Definite Integrals.</a>
         </div>
 
       </div>
@@ -166,17 +166,99 @@ document.addEventListener("DOMContentLoaded", function (){
         </strong> A particle's total distance traveled is given by the srea under the <u>VELOCITY</u> curve!!!!!! Change it as needs be.</div><br><br><!--emphasis in the original writing-->
         
         
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Remember that if the rate of change is constant and the function is linear, then you can solve just with geometry: most of the time, using a trapezoid (or rather a bottom rectangle combined with a triangle) will do the trick.</div><br><br>
         
 	      
-	      <!--
+	      
+	      
+	      
 	      </article>
 	    <header class="articleHeader"><hr>
-	      <h3><span class="mw-headline" id="OptimizationRates">?. Optimization & Related Rates.</span></h3>
+	      <h3><span class="mw-headline" id="DefiniteIntegrals">?. Definite Integrals.</span></h3>
 	    </header>
 	    <article>
-	      -->
+	    
+	    
+	    
+	    <strong><font color="blue"><a href="#IntegralSymbol"><span class="mw-headline" id="IntegralSymbol">#</span></a> Integral Symbol:</font></strong><br><br>
+       $$\int_a^b f(x)$$ 
+        
+        a = lower limit (with respect to the axis of the variable of integration)<br>
+        b = upper limit (with respect to the axis of the variable of integration)<br>
+        f(x) = Integrand, function<br>
+        dx = Variable of Integration
+        
+        <br><br><br><br>
 	     
 	     
+	     
+	     
+	     <strong><a href="#DefiniteIntegralDef"><span class="mw-headline" id="DefiniteIntegralDef">#</span></a> <font color="#006400">Definite Integral</font></strong>: If y = f(x) is nonnegative & integrable over a closed interval [a, b], then the area under the curve y = f(x) from a to b is the <u><em>integral</em></u> of f from a to b.<br>
+	     $$A = \int_a^b f(x)\,dx$$
+	     'a' and 'b' are the lower and upper x-bounds of the curve, the x-ness of which is given by the 'dx' at the end of the equation.<br><br>
+	     
+	     This definition works both ways. Integrals can be used to calculate Area AND you can find area to calculate integrals.
+	     
+	     
+	    <br><br><br>
+	    
+	    
+	    
+	    <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Rules for Definite Integrals</strong>:<br><br>
+        
+        <ol>
+        
+          <li>$$\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx$$<br> The NEGATIVE Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^a f(x)\,dx = 0$$<br> The LINE Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^b cf(x)\,dx = c\int_a^b f(x)\,dx$$<br> Constant Multiple Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^b f(x)±g(x)\,dx = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx$$<br> The SUM Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^b f(x)\,dx + \int_b^c f(x)\,dx = \int_a^c f(x)\,dx$$<br> The RECOMBINATION Rule.
+          
+          </li><br>
+          
+          <li>The Max/Min rule is just like the squeeze theorem. <!--[[  min(f)(b-a) ≤  integral a b f(x) dx  ≤ max(f)(b-a)           LRAM ≤ integral a b f(x) dx  ≤ RRAM    -->
+          
+          </li><br>
+        
+        
+        </ol>
+        
+        </div><br><br>
+	    
+	    
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> The derivative of an integral is the original function. The integral is the antiderivative of f. If F is an antiderivative  of f, then:
+        
+        
+        $$\int_a^x f(t)\,dt = F(x) + c$$
+        
+        where c is some constant. By setting x = a,
+        
+        $$\int_a^x f(t)\,dt = F(a) + c = 0$$
+        $$-F(a) = c$$
+        
+        
+        </div><br><br>
 	     
 	     
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ ° ≠ ≈  ≤,  ≥   ÷, the roof is &#x302; -->
@@ -229,10 +311,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong>Integral Calculus & Calculus 2</strong></article>
         <br>
-        <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong><a href="/math/singlevarcalculus/defintegrals.html">Definite Integrals</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 13 2026</span><br>
+      	<span class="tiny">Last Change: April 16 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

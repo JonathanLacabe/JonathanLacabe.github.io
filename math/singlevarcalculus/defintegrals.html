@@ -2,7 +2,7 @@
 <html>
   <head>
   	<meta charset="UTF-8" />
-    <title>Local Linearity (Integral Calculus)</title>
+    <title>Definite Integrals (Integral Calculus)</title>
     <link href="/style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico">
   </head>
@@ -94,74 +94,99 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 	<div class="content">
 	  <header class="articleHeader">
-	    <h2>Summary of Local Linearity (Integral Calculus)</h2>
+	    <h2>Summary of Definite Integrals (Integral Calculus)</h2>
 	  </header>
 	  <hr>
 	  <article>
-	    <p>These are my complete notes for Local Linearity in Integral Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a>.</p>
+	    <p>These are my complete notes for Definite Integrals in Integral Calculus. <br><br>I color-coded my notes according to their meaning - for a complete reference for each type of note, see <a href="/information/color.html">here</a> (also available in the sidebar). All of the knowledge present in these notes has been filtered through my personal explanations for them, the result of my attempts to understand and study them from my classes and online courses. In the unlikely event there are any egregious errors, contact me at <a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a>.</p>
 	  </article>
 	  <hr>
 	    
-	    <div class="rules" data-start="192">
+	    <div class="rules" data-start="198">
 	    
 	    <header class="articleHeader"><hr>
-	    <h2><span class="mw-headline" id="LocalLinearity">?. Local Linearity.</span></h2>
+	    <h2><span class="mw-headline" id="DefiniteIntegrals">?. Definite Integrals.</span></h2>
 	  </header>
 	  <article><br>
 	      
 	      
 	      
+	    <strong><font color="blue"><a href="#IntegralSymbol"><span class="mw-headline" id="IntegralSymbol">#</span></a> Integral Symbol:</font></strong><br><br>
+       $$\int_a^b f(x)$$ 
+        
+        a = lower limit (with respect to the axis of the variable of integration)<br>
+        b = upper limit (with respect to the axis of the variable of integration)<br>
+        f(x) = Integrand, function<br>
+        dx = Variable of Integration
+        
+        <br><br><br><br>
+	     
+	     
+	     
+	     
+	     <strong><a href="#DefiniteIntegralDef"><span class="mw-headline" id="DefiniteIntegralDef">#</span></a> <font color="#006400">Definite Integral</font></strong>: If y = f(x) is nonnegative & integrable over a closed interval [a, b], then the area under the curve y = f(x) from a to b is the <u><em>integral</em></u> of f from a to b.<br>
+	     $$A = \int_a^b f(x)\,dx$$
+	     'a' and 'b' are the lower and upper x-bounds of the curve, the x-ness of which is given by the 'dx' at the end of the equation.<br><br>
+	     
+	     This definition works both ways. Integrals can be used to calculate Area AND you can find area to calculate integrals.
+	     
+	     
+	    <br><br><br>
+	    
+	    
+	    
 	    <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> If you continuously zoom in at the value pi/2, you can see the graph flatten until it becomes a line. The line represents the slope of the tangent line at that point. WE can use the tangent line at that point to approximate the value of y = sin(x) for points near x = pi/2. This is called <strong>linearization</strong>.</div><br><br>
-	      
-	      
-	      
-	      <strong><a href="#LinearApproxDef"><span class="mw-headline" id="LinearApproxDef">#</span></a> <font color="#006400">Linear Approximation</font></strong>: If f is differentiable at x=a, then the equation of the tangent line, L(x) = f(a) + f'(a)(x-a), defines the linearization of f at a. The approximation is called the <strong>Linear Approximation</strong> of f at the point x=a is the <strong>center of approximation</strong>.
-	    <br><br><br>
-	      
-	      <!--next will be 194 in the book, 193 in here for now before it fixes itself because of my genius past mistakes.-->
-	      
-	      
-	      <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> Finding the Local Linearization is easy as hell. All you need is the base function that will be the f(x), generally the parent function of the value you are trying to approximate such as <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> for <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">51</span></span> and cos(x) for cos(1.75), and the value you are using to compare, serving as a.<br><br>
+        </strong> <strong>Rules for Definite Integrals</strong>:<br><br>
         
-        The formula is L(x) = f(a) + f'(a)(x-a). Usually, they will straight up give you the value they want you to compare to but a lot of the time you will have to make it up for yourself, something like the closest known perfect value associated with the parent function.
+        <ol>
+        
+          <li>$$\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx$$<br> The NEGATIVE Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^a f(x)\,dx = 0$$<br> The LINE Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^b cf(x)\,dx = c\int_a^b f(x)\,dx$$<br> Constant Multiple Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^b f(x)±g(x)\,dx = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx$$<br> The SUM Rule.
+          
+          </li><br>
+          
+          <li>$$\int_a^b f(x)\,dx + \int_b^c f(x)\,dx = \int_a^c f(x)\,dx$$<br> The RECOMBINATION Rule.
+          
+          </li><br>
+          
+          <li>The Max/Min rule is just like the squeeze theorem. <!--[[  min(f)(b-a) ≤  integral a b f(x) dx  ≤ max(f)(b-a)           LRAM ≤ integral a b f(x) dx  ≤ RRAM    -->
+          
+          </li><br>
+        
+        
+        </ol>
         
         </div><br><br>
-	      
-	      
-	      
-	      <div class="rule"><strong>
+	    
+	    
+	     <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> Derivatives calculate slopes of tanent lines and instantaneous Rates of Change, but in order to describe how these things accumulate over time, we need integral calculus to find the areas under curves.</div><br><br>
-	      
-	      
-	      <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> <strong>RIEMANN SUMS:</STRONG><BR><BR> 
-        
-        The most rudimentary (non-calculus) form of finding the area under a curve on a graph (like y = <span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>) is as follows:<br><br>
-        
-        Partition the area under the curve into vertical strips. If the strips are narrow enough, they are indistinguishable from rectangles, and then by summing all the individual areas of the rectangles you get the area under the curve.
-        </div><br><br>
+        </strong> The derivative of an integral is the original function. The integral is the antiderivative of f. If F is an antiderivative  of f, then:
         
         
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> A particle's total distance traveled is given by the srea under the <u>VELOCITY</u> curve!!!!!! Change it as needs be.</div><br><br><!--emphasis in the original writing-->
+        $$\int_a^x f(t)\,dt = F(x) + c$$
+        
+        where c is some constant. By setting x = a,
+        
+        $$\int_a^x f(t)\,dt = F(a) + c = 0$$
+        $$-F(a) = c$$
         
         
-        <div class="rule"><strong>
-            <a href="#Rule"><span class="hash">#</span></a> 
-            <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> Remember that if the rate of change is constant and the function is linear, then you can solve just with geometry: most of the time, using a trapezoid (or rather a bottom rectangle combined with a triangle) will do the trick.</div><br>
+        </div><br>
         
 	    
 	      </article>
@@ -200,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong><a href="/math/calculuspart2.html">Integral Calculus & Calculus 2</a></strong></article>
         <br>
-        <article><strong>Local Linearity</strong> → <strong><a href="/math/singlevarcalculus/defintegrals.html">Definite Integrals</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong>Definite Integrals</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
       	<span class="tiny">Last Change: April 16 2026</span><br>

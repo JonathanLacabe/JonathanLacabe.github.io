@@ -211,7 +211,94 @@ document.addEventListener("DOMContentLoaded", function (){
         
         </ol>
         
+        </div><br><br>
+        
+        
+        
+        <!--Reallly bizzare form, excited to revise this within the millenium.-->
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <STRONG>FUNDAMENTAL THEOREM OF CALCULUS:</STRONG><BR><BR>
+        This theorem presents the connection between integration and differentiation. Most important discovery in math:<br><br>
+        
+        <ol>
+        <li>
+        If f is continuous on [a,b], then the function
+        $$F(x) = \int_a^x f(t)\,dt$$
+        has a derivative at every point x in [a,b] and
+        $$\frac{dt}{dx} = \frac{d}{dx} \int_a^x f(t)\,dt = f(x)$$<br>
+        No product rule is used, and so you just replace the integrand variable and use the chain rule. For ex.,
+        $$y = \int_1^{x^2} \cos(t)\,dt$$
+        $$\frac{dy}{dt} = \cos(x^2)\,2x$$
+        <br><br>
+        Always remember to incorporate other integral rules in weird problems. To go from derivative to function, like with<br> 
+        $$\frac{dy}{dx} = \tan(x)$$
+        where
+        $$ f(3) = 5 $$
+        <br>
+        
+        , just make x<sub>1</sub> the lower limit and add y<sub>1</sub> to the function:<br>
+        $$ y = \int_3^x \tan(t)\,dt + 5 $$
+        <br>
+        
+        </li><bR>
+        <li> If f is continuous on [a,b], and F is any antiderivative of f on [a,b], then
+        $$ \int_a^b f(x)\,dx = F(b) - F(a) $$
+        <br>
+        This part of the Fundamental Theorem of Calculus allows us to evaluate definite integrals directly from their antiderivatives.
+        
+        </li>
+        </ol>
+        
+        
+        </div><br><br>
+        
+        
+        <!--[[[[[needs to have a section before definite integrals for lram and rram, starting with the thing for how this is effectively the non-calculus, intuitive way to vfind the area inder a curve, and though is practically obseletized by calculus, is required knowledge in the beginning but less important later on. earlier calculus classes require this information, important to remember for that reason alone in addition to how it is the predesccor and basic toy model of what will soon be learned blah blah blah  with the analogy rerferncing how more rectangles creates a more accurate summation of the area under the square, but the absolute summation is avoiding rectangles altogether and taking the area of the whole using integrals, in the same way guitars become more microtonal the more frets you add, but the ultimate microtonal guitar is fretless (thank you angine)
+        4-19, in the morning on an empty stomach (satieian method)
+        deathjamz, 20202020202026
+        -dave weren't
+        https://www.youtube.com/watch?v=pkcJEvMcnEg&list=OLAK5uy_nN3UV5AlNbRP9di-cmgC-ACgL8JLK6jGk&index=5&pp=8AUB
+        -->
+        
+        
+        <strong><font color="blue"><a href="#AreaTrapezoid"><span class="mw-headline" id="AreaTrapezoid">#</span></a> Area of a Trapezoid:</font></strong><br><br><!--[[[[[add diagram of trapezoid when time comes, don't make peolpe imagine this shit-->
+       
+       The area of a trapezoid is
+       $$A = \frac{h}{2}(b_1 + b_2)$$
+       , where b<sub>1</sub> and b<sub>2</sub> are the lengths of the parallel bases and h is the height.
+        
+        <br><br><br>
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Although LRAM, MRAM, & RRAM all approach the same limit, you may have noticed that for a smaller # of partitions MRAM was more efficient. Trapezoidal approximations are even more efficient than MRAM and are very useful to integrate data where no function is known. Here is how it works:
+        <!--[[[[[[add a little diagram of the trapezoidal method here, use redbook for reference-->
+        $$T(x) = \frac{h_1}{2}(y_0 + y_1) + \frac{h_2}{2}(y_1 + y_2) + \dots + \frac{h_k}{2}(y_{k-1} + y_k)$$
+        $$h_1 = x_1 - x_0,\space\space h_2 = x_2 - x_1, \space\space\dots,\space\space h_n = x_n - x_{n-1}$$
+        
+        
+        
+        </div><br><br>
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In the special case of the Trapezoid Rule where h is a constant: The Trapezoid Rule can be simplified to
+        $$T = \frac{h}{2}(y_0 + 2y_1 + 2y_2 + \dots + 2y_{n-1} + y_n)$$
+        where [a,b] is partitioned into n subintervals of equal length h = (b-a)/n.
+        
         </div><br>
+        
+        
+        
+        
         
 	    
 	      </article>
@@ -253,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong>Definite Integrals</strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 17 2026</span><br>
+      	<span class="tiny">Last Change: April 20 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

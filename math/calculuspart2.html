@@ -106,9 +106,19 @@ document.addEventListener("DOMContentLoaded", function (){
           <a href="#LocalLinearity">?. Local Linearity.</a>
         </div>
         <div class="toc-column">
-          <a href="#DefiniteIntegrals">?. Definite Integrals.</a>
+          <a href="#USubstitution">?. U-Substitution.</a>
         </div>
 
+      </div>
+      
+      <div class="toc-container">
+        <div class="toc-column">
+          <a href="#DefiniteIntegrals">?. Definite Integrals.</a>
+        </div>
+        <div class="toc-column">
+          <a href="#SeparableApplications">?. Separable Equations & Applications.</a>
+        </div>
+        
       </div>
       
       <div class="rules" data-start="192">
@@ -357,14 +367,26 @@ document.addEventListener("DOMContentLoaded", function (){
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
-        </strong> Although LRAM, MRAM, & RRAM all approach the same limit, you may have noticed that for a smaller # of partitions MRAM was more efficient. Trapezoidal approximations are even more efficient than MRAM and are very useful to integrate data where no function is known. Here is how it works:
-        <!--[[[[[[add a little diagram of the trapezoidal method here, use redbook for reference-->
+        </strong> Although LRAM, MRAM, & RRAM all approach the same limit, you may have noticed that for a smaller # of partitions MRAM was more efficient. Trapezoidal approximations are even more efficient than MRAM and are very useful to integrate data where no function is known. Here is how it works:<br><br><!--note the difference between mram and trapezoidal approx[[[-->
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/image002.png" class="imglink"><img src="/math/img/image002.png" alt="An example trapezoidal approximation of a function f(x), notated by each x interval. Courtesy of Paul's Online Notes." width=38%/></a></div>
+	      <span class="tiny"><em>An example trapezoidal approximation of a function f(x), notated by each x interval. Courtesy of <a href="https://tutorial.math.lamar.edu/classes/calcii/approximatingdefintegrals.aspx">Paul's Online Notes</a>.</em></span><br><br>
         $$T(x) = \frac{h_1}{2}(y_0 + y_1) + \frac{h_2}{2}(y_1 + y_2) + \dots + \frac{h_k}{2}(y_{k-1} + y_k)$$
         $$h_1 = x_1 - x_0,\space\space h_2 = x_2 - x_1, \space\space\dots,\space\space h_n = x_n - x_{n-1}$$
         
         
-        
         </div><br><br>
+        
+        
+        
+        <!--Image for MRAM when the rule is created down the line[[[[[[:
+        same source as for trapezoidal approx
+        
+        https://tutorial.math.lamar.edu/classes/calcii/ApproximatingDefIntegrals_Files/image001.png
+        
+        
+        
+        -->
+        
         
         
         <div class="rule"><strong>
@@ -400,6 +422,228 @@ document.addEventListener("DOMContentLoaded", function (){
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
         </strong> DEFINITE INTEGRALS HAVE UPPER AND LOWER LIMITS AND REPRESENT THE AREA UNDER THE CURVE. Indefinite integrals just have the integrand with no limits, and they find the family of functions with a common derivative. That's why indefinite integrals have +c and definite integrals don't.</div><br><br>
+        
+        
+        
+        
+        <strong><a href="#IndefIntProps"><span class="mw-headline" id="IndefIntProps">#</span></a> <font color="#006400">PROPERTIES OF INDEFINITE INTEGRALS</font></strong>:<br><br>
+        $$\int k \cdot f(x) dx = k \int f(x) dx$$
+        , where k is some constant.<br><br>
+        
+        $$\int (f(x) \pm g(x)) dx = \int f(x) dx \pm \int g(x) dx$$
+        
+        
+        <br><br>
+        
+        
+        
+        
+        
+        
+        <strong>POWER FORMULAS</STRONG>:<BR><BR>
+        
+        $$\int u^n du = \frac{u^{n+1}}{n+1} + c$$
+        , where n ≠ -1.<br><br>
+        
+        $$\int u^-1 du = \int \frac{1}{u} du = \ln|u| + c$$
+        
+        <br><br>
+        
+        
+        
+        
+        
+        
+        <strong>TRIG. FORMULAS</STRONG>:
+        
+        $$\int \cos(u) du = \sin(u) + c$$
+        $$\int \sin(u) du = -\cos(u) + c$$
+        $$\int \sec^2(u) du = \tan(u) + c$$
+        $$\int \csc^2(u) du = -\cot(u) + c$$
+        $$\int \sec(u)\tan(u) du = \sec(u) + c$$
+        $$\int \csc(u)\cot(u) du = -\csc(u) + c$$
+        
+        <br><br>
+        
+        
+        
+        
+        
+        
+        <STRONG>EXPONENTIAL FORMULAS</STRONG>:
+        $$\int e^u \, du = e^u + c$$
+        $$\int a^u du = \frac{a}{\ln(a)} + c$$
+        
+        <br><br>
+        
+        
+        
+        
+        
+        
+        <STRONG>LOGARITHMIC FORMULAS</STRONG>:
+        
+        $$\int \ln(u) = u\ln(u) - u +c$$
+        $$\int \log_a(u)\,du = \frac{1}{\ln(a)} \int \ln(u)\,du = \frac{u\ln|u|-u}{\ln(a)} + C$$
+        
+	     
+	      <br><br><br>
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When a problem requires you to 'verify' an antiderivative, what you want to do is start from the side that doesn't have an integral (the <em>antiderivative</em>), and take the derivative of it. That's all. </div><br><br>
+        
+        
+        
+        
+        
+        
+        
+         </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="USubstitution">?. U-Substitution.</span></h3>
+  	    </header>
+  	    <article>
+	    
+	    
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Whenever you have an indefinite integral with a variable of integration different from the variable in the expression, you just have to plug in whatever value u or x is equal to into the expression to make it <em>agree</em><!--emphasis to justify using the same phrase twice in the sentence. now that I think about it, I think I got a lot better at splitting my sentences into multiple thoughts as my writing improved, which may be why the later rules (calc 3) are way better than the original, just as matter of becoming a better writer in a ddition to caring more for the reader--> with the variable of integration. For example, where u = x²:<br><br>
+        
+        $$\int (u^3 + 1)dx = \int (x^6 + 1) dx$$
+        
+        </div><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Sometimes you don't want to plug in the value for u and you actually want to replace the variable of integration (the dx or du). The move here is to take the value of u, u=2x for example, and take the derivative of both sides: du/dx = 2. Then, multiply by dx or du, where du = 2dx, and then isolate dx. dx = du/2. Finally, plug that in for the dx in the thing.</div><br><br>
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For the substitution -u business, you'll generally want u to be the exponent or wahtever makes the equation 'weird' (as in, the aspect that complicates the equation the most to not fit into one of the basic "PROPERTIES OF INDEFINITE INTEGRALS" molds). From there, take the derivative and do everything necessary to isolate dx so that the front expression can all be one variable. Then, take the antidervative as normal (since it should now have been converted into the basic molds showcased in the properties), and when you have completed it, substitute back in the value you set for u.
+        
+        </div><br><br>
+        <!--strategy: replace every use of "shit" in the notebook with "business" in the transcribed version, for the sake of having any chance of being taken seriously. The best developed sections, like Cryptography, can have more leeway - decrepit sections like single-var calc do not.-->
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> As a final addendum to u-sub's, take into consideration how they are meant to remove as much as possible from the expression in the name of u, so how du and dx are isolated can be messed around with to be whatever. If you see anything outside of the u (which is just anything that looks chain-ruled), you can warp the middle du/dx equation to reflect what you went to take out: &frac16;du = x²dx.</div><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When the x-variable in the integral are to the same degree, you must solve for x. When creating u, instead of taking the derivative right away, isolate x. For example, in a definite integral like
+        
+        $$\int x \sqrt{3x+2} dx$$
+        , where u = 3x+2, you can establish that u-2=3x.<br><br>
+        
+        From there, (u-2) / 3 = x. You now have what u is equal to, so you can carry on with the rest of the substitution as normal: (du / 3) = dx. By distributing u in the expression, you will create multiple expressions in the solutions. 
+        
+        </div><br><br>
+        
+        
+        
+        
+        
+        
+        
+         </article>
+  	    <header class="articleHeader"><hr>
+  	      <h3><span class="mw-headline" id="SeparableApplications">?. Separable Equations & Applications.</span></h3>
+  	    </header>
+  	    <article>
+	    
+        
+        
+        <strong><a href="#SeparableDEDef"><span class="mw-headline" id="SeparableDEDef">#</span></a> <font color="#006400">Separable Differentiable Equations</font></strong>: A differential equation of the form (dy/dx) = f(y)g(x) is called <em><strong>separable</strong></em>. We separate the variables using the form (1 / f(y)) dy = g(x)dx.<br><br>
+        
+        The solution is found by antiderivating both sides.
+	     
+	    <br><br><br><br>
+        
+        
+        
+        <strong><font color="blue"><a href="#SolveSeparableEqs"><span class="mw-headline" id="SolveSeparableEqs">#</span></a> How To Solve All Separable Equations:</font></strong><br><br>
+         Step 1: Get all "y" terms on one side.<br>
+         Step 2: Get the "dx" on both sides.<br>
+         Step 3: Integrate both sides in respect to each variable.<br>
+         Step 4: Solve for "c" if possible.
+        
+        <br><br><br><br>
+        
+        
+        
+         <strong><a href="#ExponentialChangeDef"><span class="mw-headline" id="ExponentialChangeDef">#</span></a> <font color="#006400">Exponential Change</font></strong>: Exponential Change occurs when the rate of change is proportional to the amount present. This is when you can multiply the amount by a factor each time to get a new amount:<br><br>
+         
+         y = k * x<br>
+         (dy/dt) = k * y
+	     
+	    <br><br><br><br>
+        
+        
+        
+        <strong><font color="blue"><a href="#CompoundInterest"><span class="mw-headline" id="CompoundInterest">#</span></a> Compound Interest:</font></strong><br><br>
+          $$A(t) = A_0 (1+\frac{r}{k})^{kt}$$
+          <strong>A<sub>0</sub></strong> = amount invested (initial condition).<br>
+          <strong>r</strong> = interest rate (decimal rate).<br>
+          <strong>k</strong> = # of times per year compounded.<br>
+          <strong>t</strong> = time in years (or whichever time is specified by the question)
+        
+        <br><br><br><br>
+        
+        
+        <strong><a href="#GrowthAltBaseDef"><span class="mw-headline" id="GrowthAltBaseDef">#</span></a> <font color="#006400">Modeling Growth with Other Bases</font></strong>:
+        
+        $$y = y_0 b^{\frac{-t}{n}}$$
+        
+        <strong>y<sub>0</sub>b</strong> = the desired growth.<br>
+          <strong>n</strong> = the amount of time until the value is multiplied by b, i.e. the length of one growth cycle.<br>
+          <strong>t</strong> = time in years (or whichever time is specified by the question)
+        
+        
+	    <br><br><br><br>
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For the most distilled understanding of separable equations possible, A is just going to represent moving x and y to either side any way you can. If there is no x or y, pretend it exists. For EXPONENTIAL CHANGE, the equation is:
+        
+        $$y = y_0 e^{rt}$$
+        
+        , where y is the total after time t, r is the rate, and y<sub>0</sub> is the initial amount. To determine any equation, you just need to know y (generally always either y<sub>0</sub> doubled or in 30 years), and two of either r, t, or y<sub>0</sub>. The irregular compound is the (1 + r/k) one described in the "Compound Interest" Blue Section, where r is always a decimal.<br><br>
+        
+        
+        The half-life form is
+        $$y = y_0 e^{-kt}$$
+        , with the half-life itself being ½y<sub>0</sub>.
+        
+        </div><br><br>
+        
+        
+        
+        
         
 	     
 	     
@@ -453,10 +697,10 @@ document.addEventListener("DOMContentLoaded", function (){
         <strong><a href="/math/singlevarcalculus.html">Single Variable Calculus</a></strong><br>
         <article><strong><a href="/math/calculuspart1.html">Differential Calculus</a></strong> → <strong>Integral Calculus & Calculus 2</strong></article>
         <br>
-        <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong><a href="/math/singlevarcalculus/defintegrals.html">Definite Integrals</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
+        <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong><a href="/math/singlevarcalculus/defintegrals.html">Definite Integrals</a></strong> → <strong><a href="/math/singlevarcalculus/usub.html">U-Substitution</a></strong> → <strong><a href="/math/singlevarcalculus/separableapplic.html">Separable Equations & Applications</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: April 21 2026</span><br>
+      	<span class="tiny">Last Change: May 11 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

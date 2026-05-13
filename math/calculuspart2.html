@@ -644,6 +644,79 @@ document.addEventListener("DOMContentLoaded", function (){
         
         
         
+        <strong><font color="blue"><a href="#TrigAntiderivs"><span class="mw-headline" id="TrigAntiderivs">#</span></a> Trigonometric Antiderivatives:</font></strong><br><br>
+          $$\int \sec(x) dx = \ln(|\sec(x) + \tan(x)) + c$$
+          $$\int \csc(x) dx = \ln(|\csc(x) - \cot(x)|) + c$$
+          $$\int \tan(x) dx = \ln(|\sec(x)|) + c$$
+          $$\int \cot(x) dx = \ln(|\sin(x)|) + c$$
+          $$\int \tan^2(x) dx = -x + \tan(x) + c$$
+          $$\int \cot^2(x) dx = -x-\cot(x)+c$$
+        <br><br><br>
+        
+        
+        
+        
+        
+        <!--Area Under Curves-->
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Integrating velocity gives displacement. Displacement is the net area between the velocity curve and the time x-axis.<br><br>
+        
+        Integrating the absolute value of velocity gives total distance traveled. Total distance is the total area between the velocity curve and the time x-axis.<br><br>
+        
+        When you want to find the position of a particle, you can integrate the v(t) using t as the upper limit and with the initial position, you just add the ∆s displacement (the definite integral of the integral of f(x) from 0 (or whatever) to t, added to the initial position): s(0) + ∆s. Given an integral, equation, and initial position, you just follow s(0) + ∆s, where ∆s is the integral, and you find the Displacement.
+        
+        </div><br><br>
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> In finding the total distance, remember you are finding the total ground covered. Total Distance is
+        
+        $$\int_a^b |v(t)| dt$$
+        
+        If necessary to do by hand, find where y=0 and use that as the splitter for two definite integrals. Then solve.
+        
+        </div><br><br>
+        
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>Area Between Curves</strong>:
+        
+        If f and are continuous functions with f(x) ≥ g(x) on [a,b], then the area between the curves y = f(x) and y = g(x) from a to b is the integral of [f-g] from a to b:
+        
+        $$\int_a^b (f(x) - g(x)) dx$$
+        $$\int_a^b \text{“top - bottom”}\,dx$$
+        <br>
+        
+        For example, if a question asked you to determine the area of the region between y = sec²(x) and y = sin(x) on [0, π/4], you would solve as follows:<br>
+        Step 1: Graph the curves to find their relative positions in the plane.<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/image002.png" class="imglink"><img src="/math/img/image002.png" alt="The positions of y = sec²(x) and y = sin(x) between 0 and π/4. Courtesy of Paul's Online Notes." width=38%/></a></div>
+	      <span class="tiny"><em>The positions of y = sec²(x) and y = sin(x) between 0 and π/4. Courtesy of <a href="https://tutorial.math.lamar.edu/classes/calcii/approximatingdefintegrals.aspx">Paul's Online Notes</a>.</em></span><br><br>
+        
+        Step 2: Write an integral and solve.
+        $$A = \int_a^b f(x) - g(x) dx$$
+        $$A = \int_0^{\frac{\pi}{4}} \sec^2(x)-\sin(x)dx$$
+        
+        Reminder that f(x) will always be the one above the g(x).
+        
+        
+        
+        
+        
+        </div><br><br>
+        
+        
         
 	     
 	     
@@ -700,7 +773,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong><a href="/math/singlevarcalculus/defintegrals.html">Definite Integrals</a></strong> → <strong><a href="/math/singlevarcalculus/usub.html">U-Substitution</a></strong> → <strong><a href="/math/singlevarcalculus/separableapplic.html">Separable Equations & Applications</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: May 11 2026</span><br>
+      	<span class="tiny">Last Change: May 12 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>

@@ -2,6 +2,10 @@ CHANGE LOG.
 
 All changes to any page on the Human Knowledge project will described here. For a complete difference comparison of the exact changes made on a particular day, find that date on the commits page of the Github mirror: https://github.com/JonathanLacabe/JonathanLacabe.github.io/commits/main/
 
+
+May 12, 2026: I think I am going to start updating the mirrors with the additions of the previous day in the morning - it is a lot more consistent to do it in the monring since there could be a million things interfering with adding it during the night (parties, events), and even then, the night is prime studying time for a lot of people, so wiping half the website when it is needed the most is lwk not the move. The morning, on the other half, generally involves a lot less cramming, and would probably have less activity and more importantly less _urgent_ activity immediately before tests, especially if its early-ish in the morning (~7 A.M. west coast time). Also, continued calculus work, though less than before as I retain focused on the new multvariable notes for my class.
+Rules Added: Mathematics, Single Variable Calculus - Rule 212, 213, 214.
+
 May 11, 2026: Day of Calculus Work. Every old rule added makes me more excited for the infinitely higher-quality multivariable rules to come.
 Rules Added: Mathematics, Single Variable Calculus - Rule 205, 206, 207, 208, 209, 210, 211.
 

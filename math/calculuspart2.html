@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function (){
 		  <a href="/engineering/aeronautics.html">Aero.</a><br>
 		  <a href="/engineering/nuclear.html">Nuclear</a><br>
 		  <hr><!--Internal Pages-->
-		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
-		  <a href="/information/color.html">Color Code</a><br>
-		  <a href="/information/art.html">Logos</a><br>
-		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Will link to a section within the about page-->
 		  <a href="/information/about.html">About</a><br>
+		  <a href="/information/about.html#FAQ">FAQ</a><br><!--Links to a section within the about page-->
+		  <a href="/information/art.html">Logos</a><br>
+		  <a href="/information/color.html">Color Code</a><br>
+		  <a href="/information/recentchanges.txt">Recent Changes</a><br>
 		  <hr><!--All Mirrors-->
 		  <a href="https://hkproject.org/">HKProject</a><br>
 		  <a href="https://github.com/JonathanLacabe/JonathanLacabe.github.io">GitHub</a><br>
@@ -657,7 +657,11 @@ document.addEventListener("DOMContentLoaded", function (){
         
         
         
-        <!--Area Under Curves-->
+        <!--[[[[[[Area & Volume-->
+        
+        
+        
+        
         
         
         <div class="rule"><strong>
@@ -688,6 +692,11 @@ document.addEventListener("DOMContentLoaded", function (){
         
         
         
+        
+        
+        
+        
+        
         <div class="rule"><strong>
             <a href="#Rule"><span class="hash">#</span></a> 
             <font color="red">Rule <span class="rule-number"></span>.</font>
@@ -710,14 +719,122 @@ document.addEventListener("DOMContentLoaded", function (){
         
         Reminder that f(x) will always be the one above the g(x).
         
+        </div><br><br>
+        
+        
+        
+        
+        
+        <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> Areas enclosed by intersecting curves: When a region is enclosed by intersecting curves, the points of intersection give the limits of integration. You can find the individual zeroes by setting the functiosn equal to zero, but setting the functions equal to eachother will proivde the intersection points.<br><br> 
+        
+        For example: Determine the area of the region enclosed by the Parabola y = 2-x² and the line y = -x.<br><br>
+        
+        Step 1: Graph the curves (determine f(x) & g(x)).<br><br>
+        
+        Step 2: Determine the intersection either algebraically or using a calculator. Set the functions equal to eachother and solve:<br>
+        2-x² = -x<br>
+        0 = x² - x + 2<br>
+        0 = (x - 2)(x + 1)<br>
+        <strong>x = 2, x = -1</strong><br><br>
+        
+        These values represent the limits of the integral.<br><br>
+        
+        Step 3: Set up using integral & solve:
+        $$\int_{-1}^2 (2-x^2-(-x)) dx$$
+        $$= \int_{-1}^2 (2+x-x^2) dx$$
+        $$\left[2x + \frac{x^2}{2} - \frac{x^3}{3}\right]_{-1}^{2}$$
+        $$= 4 + 2 - \frac{8}{3} - (-2 + \frac{1}{2} - \frac{-1}{3})$$
+        $$= \frac{18}{3} - \frac{8}{3} - (\frac{-7}{6})$$
+        $$= \frac{20}{6} + \frac{7}{6}$$
+        $$\boxed{ \int_{-1}^{2} (2+x-x^2)\,dx = \frac{27}{6} \space \text{units}^2}$$
+        
+        
+        </div><br><br>
+	     
+	     
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For those issues where part of the graph isn't touching the second function and part is (i.e., separate bounds for different parts of the full area, like the shape given by y=0, y=<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>, & y=x-2), just set the second function equal to zero to find the zeroes and integrate each side separately.<!--See the example above.[[[put a full explantatory example here using the one given in the book.--></div><br><br>
+	     
+	     
+	     
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> When you have to choose to integrate with respect to x or y, choose whichever one is easier and doesn't require a ±.</div><br><br>
+	     
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> <strong>VOLUME OF A SOLID</strong>:<br><br>
+        The volume of a solid of a known integrable cross-section of area A(x) from x=a to x=b is the integral of A from a to b. Here is the method to find it:<br><br>
+        
+        Method:<br>
+        <ol>
+          <li>Sketch the solid and cross-section A(x).
+          </li><br>
+          
+          <li>Determine a formula for f(x) = area of cross-section.
+          </li><br>
+          
+          <li>Determine limits of integration (a and b).
+          </li><br>
+          
+          <li> Integrate A(x) to determine volume.
+          </li>
+        
+        </ol><br>
+        
+        For an example of a square cross-section: A pyramid 3 m high has congruent trinagular sides and a square base that is 3m on each side. Each cross-section of the pyramid parallel to the base is a square. Determine the volume of the pyramid.<br>
+        <ol>
+          <li>Sketch/Visualize:<br><br>
+        <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <a href="/math/img/pyramidcross.png" class="imglink"><img src="/math/img/pyramidcross.png" alt="A semi-3-dimensional graph of the described pyramid under the given bounds, with the vertex at the origin and an example cross-section. Courtesy of West Shore School District." width=38%/></a></div>
+	      <span class="tiny"><em>TA semi-3-dimensional graph of the described pyramid under the given bounds, with the vertex at the origin and an example cross-section. Courtesy of <a href="https://www.wssd.k12.pa.us/Downloads/83%20cross%20section.pdf">West Shore School District</a>.</em></span><br><br>
+          </li><br>
+          
+          <li>A(x) = area of cross-section, where each cross-section is a square. Thus, the equation for A(x) = (x)(x) = <strong>x²</strong>
+          </li><br>
+          
+          <li> Limits of Integration: We are taking cross-sections as we move up the height of the pyramid, so the limits are 0 ≤ x ≤ 3.
+          </li><br>
+          
+          <li>Integrate:
+          $$\int_0^3 x^2 dx$$
+          $$= \left[ \frac{x^3}{3} \right]_{0}^{3}$$
+          $$\boxed{ = \frac{27}{9} = 9}$$
+          
+          </li>
+        
+        </ol>
+        
+        </div><br><br>
+	     
+	     
+	     
+	     
+	     <div class="rule"><strong>
+            <a href="#Rule"><span class="hash">#</span></a> 
+            <font color="red">Rule <span class="rule-number"></span>.</font>
+        </strong> For many volume-integration problems, the variables will be coded into the question: "The solid lies between planes perpendicular to the x-axis at x=-1 and x=1". The two numbers given here will be your limits of integration.<br><br>
+        
+        "...run from y=-<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span> to y=<span style="white-space: nowrap">&radic;<span style="text-decoration:overline;">x</span></span>". These are the functions that will serve as the bounds for the cross-section.<br><br>
+        
+        There are several caveats here: if the text before says the shape, use that in the mathematics. 
         
         
         
         
         </div><br><br>
-        
-        
-        
+	     
+	     
+	     
 	     
 	     
 	    <!-- ┗ ┛ ┏ ┓ ┳  ┃ ━  ┳ ┻ ┣ ┫  ╋  ← → ↑ ↓ ↖ ↗ ↘ ↙   &lt; is <, &gt; is >, &amp; is &  ½  ₁₂  ∞  ∪ · ∘  ±  ×  π  ∆  μ ⁻  θ  α ω  τ ° ≠ ≈  ≤,  ≥   ÷, the roof is &#x302; -->
@@ -773,7 +890,7 @@ document.addEventListener("DOMContentLoaded", function (){
         <article><strong><a href="/math/singlevarcalculus/locallinearity.html">Local Linearity</a></strong> → <strong><a href="/math/singlevarcalculus/defintegrals.html">Definite Integrals</a></strong> → <strong><a href="/math/singlevarcalculus/usub.html">U-Substitution</a></strong> → <strong><a href="/math/singlevarcalculus/separableapplic.html">Separable Equations & Applications</a></strong><!-- → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong> → <strong><a href=""></a></strong>--></article>
       	<br>
       	<hr>
-      	<span class="tiny">Last Change: May 12 2026</span><br>
+      	<span class="tiny">Last Change: June 15 2026</span><br>
       	<span class="tiny">Jonathan Lacabe 2026</span><br>
       	<span class="tiny"><a href="mailto:jdlacabe@berkeley.edu">jdlacabe@berkeley.edu</a></span><br>
       	<img src="/_other/with_love%20(1).gif" width=9%>
